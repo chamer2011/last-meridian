@@ -1,0 +1,42 @@
+{
+  "title": "The Commodore's Letters",
+  "kind": "dilemma",
+  "places": ["ghostlight", "bastion"],
+  "minLevel": 4,
+  "after": "out_ghostlight_court_martial",
+  "people": ["dorn", "okonkwo", "dain", "corvane", "halm"],
+  "factions": ["remnant", "hegemony", "fleet"],
+  "lead": "Commodore Lucan Dorn asks for a private word in a storage locker, holding a data chip in his hand as if it might bite him. Three thousand sailors, thirty days of food and an Admiral who won't read his reports. He isn't asking you to betray anyone, he says. He'd just like you to read something and tell him if he's a traitor.",
+  "anyone": "Commodore Lucan Dorn has been seen holding a data chip as if it might bite him. Three thousand sailors, thirty days of food and an Admiral who won't read his reports. He's looking for someone to read something, and tell him if he's a traitor.",
+  "gm": {
+    "truth": "Dorn has been negotiating a surrender to the Hegemony, by letter, through his old friend Commandant Dain Halloran at Bastion Nine. The terms are food, amnesty for the crews and a quiet ending. The price is written on that chip: the squadron's anchorage and the Remnant's Concord command codes. He isn't taking a single credit. He's read the annex to the Project Harbor file and knows that the Admiral's great destination is a looted fuel dump. \"A fine plan, Admiral. Only, it's a fuel dump.\" He's told her, and she's put it down to nerves. The letters go from Halloran, who loathes it, to Legate Corvane, and here's the turn for a captain who traces them: Corvane's desk is also where Speaker Halm's private channel ends. The Hegemony is negotiating two surrenders at once. Neither party knows about the other, and in Corvane's files they're on the same page, under the heading of the same project. And Dorn doesn't know what the Hegemony does with people it doesn't need: the transports, clause 41(c). The sailors he's trying to save would go aboard the unmarked ships within a year. If someone showed him a better option, he'd take it tonight. If the Admiral found out, she'd have him shot, and he'd understand, and he'd walk there himself.",
+    "beats": [
+      "The locker. Dorn is courteous, exhausted and exact. He tells the captain everything, because he's desperately hoping someone will talk him out of it, or tell him he's right.",
+      "Thirty days of food: a visit to the Remnant's mess, where the ration is honest and tiny, and a young sailor salutes the captain with a hand that shakes from hunger. The anthem plays at six.",
+      "Following the letters. A trip to Bastion Nine, Halloran's gallery, and a desk turned to face the wall. He gives the captain the correspondence without being asked, and he tells them to read the other file too.",
+      "The two surrenders, side by side. Corvane, if confronted, is charming and very frightened. It's also possible to learn here where the unmarked ships go, if the player hasn't, and what Dorn would really be delivering his sailors to.",
+      "Dorn, a chip and a decision, and a very short time left. Does the captain expose him, help him, stop him, or give him something better?"
+    ],
+    "routes": [
+      "Find out everything: hacking and stealth on the Remnant's traffic and Bastion's archives, and lore to read what clause 41(c) really means for a surrendered crew.",
+      "Give him another way: commerce, leadership and persuasion to find three thousand people food and a purpose, by bringing the Remnant into the fleet, with or without its Admiral.",
+      "Use it: deception to feed false terms down the chain and take the Hegemony by surprise, or composure and persuasion to go straight to the Admiral, and accept what happens next."
+    ],
+    "checks": [
+      "hacking:hard to read the letter chain without being noticed",
+      "stealth:moderate to get to Halloran's gallery unseen",
+      "lore:hard to work out what the amnesty clause would really do",
+      "commerce:very_hard to feed three thousand extra people",
+      "deception:very_hard to send a false anchorage through Corvane's own desk",
+      "persuasion:hard to tell Lucan Dorn what he's really selling, and be believed"
+    ],
+    "fights": ["remnant_marine if the Admiral's loyalists catch wind of a meeting, and remnant_commando if it's the ones who'd do it quietly. An honest explanation to an honest marine goes a long way."],
+    "outcomes": [
+      "If Dorn goes through with it, three thousand sailors and six warships pass into Hegemony hands, and with them the fleet's only legal rival. Within a year the first of them are on a manifest. If the captain knew and let it happen, they'll have to live with that.",
+      "If the Admiral is told, she has him shot, or she tries to. He walks there himself. Half the Remnant's officers refuse to give the order, and the squadron starts to come apart in very good discipline.",
+      "If the Remnant comes into the fleet, the fleet gets six warships, three thousand trained sailors and a huge new food problem, and Dorn gets to stop writing letters. Okonkwo-Reyes isn't dead or gone unless the player has earned that. She's still their Admiral to many of them.",
+      "If the captain shows Halm and Corvane's files to the fleet, or to Halm alone, that's a very big event. fleet_arrest_us and main_the_generous_offer can both hang on it. The fact remains that the captain now holds both surrender papers, and everyone who signed them would like them back."
+    ],
+    "rewards": "remnant_codes if Dorn gives them up to the captain, a data_chip of the two surrender files, Dorn's lifelong loyalty, and a big swing in remnant, hegemony and fleet standing."
+  }
+}

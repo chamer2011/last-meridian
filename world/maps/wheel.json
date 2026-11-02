@@ -1,0 +1,406 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "The Gilded Wheel",
+  "start": "docks",
+  "levels": {
+    "docks": {
+      "name": "The Ticket Docks",
+      "aliases": [
+        "ticket docks",
+        "the docks",
+        "docks",
+        "the lost ships",
+        "the gallery of ships"
+      ],
+      "desc": "A long gallery of ships lost at the tables, each with a brass tag on its airlock. A few of them still have their crews on board, paying rent.",
+      "floor": ".",
+      "colors": {
+        "floor": "#423b37",
+        "walls": "#8a7a60",
+        "scenery": "#e0c080",
+        "writing": "#fff0c0"
+      },
+      "plan": [
+        "###########################################################################",
+        "#<=====>t...<=====>....<=====>....<=======>....<=====>....<=====>...<=====#",
+        "#<=====>....<=====>....<=====>....<=======>....<=====>....<=====>...<=====#",
+        "#.........................................................................#",
+        "#.........................................................................#",
+        "#.......@.................................................................#",
+        "#......................................................c..................#",
+        "#.........................................................................#",
+        "#<=====>....<=====>....<=======>....<=====>s...<=====>....<=====>...<=====#",
+        "#<=====>....<=====>....<=======>....<=====>....<=====>....<=====>...<=====#",
+        "################################1##########################################"
+      ],
+      "writing": [
+        [4, 0, "NOTHING HERE WAS STOLEN. IT WAS ALL WAGERED."]
+      ],
+      "labels": [
+        {
+          "text": "THE TICKET DOCKS",
+          "at": [28, 4]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "great",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "t": {
+          "name": "A brass tag",
+          "look": "Stamped on the airlock in very good brass: LOST AT THE WHEEL, then a date, then the name of the man who'd staked it. The ship's still got its old name on its hull. It's clean. There's a new name on order.",
+          "use": "I read the brass tag, and I ask whatever happened to the man who lost this ship."
+        },
+        "s": {
+          "name": "A crew paying rent",
+          "look": "A freighter's whole crew, sitting on the ramp with their dinner. They lost her four years ago. They rent her back by the week from the House, and they're paid up. They'd very much like to tell you that they're nearly clear.",
+          "use": "I sit down on the ramp and ask how close they are to buying her back."
+        },
+        "c": {
+          "name": "A Remnant officer's locker",
+          "item": "remnant_codes",
+          "look": "A pinnace, with old Concord lines, staked and lost by somebody who outranked anyone in this room. Her locker's open, and the recognition codes are still in it. The House doesn't know what they're worth yet.",
+          "use": "I look through the locker on the Concord pinnace, and I wonder who I'd have to ask."
+        }
+      }
+    },
+    "great": {
+      "name": "The Great Wheel",
+      "aliases": [
+        "great wheel",
+        "the wheel",
+        "wheel",
+        "the gaming deck",
+        "gaming decks",
+        "the gaming decks",
+        "the board"
+      ],
+      "desc": "A gilded wheel forty meters across, spun once a day for whatever's on the board. It's completely honest, and it's been checked, and that's what brings them in.",
+      "floor": ",",
+      "colors": {
+        "floor": "#4e3921",
+        "walls": "#b08840",
+        "scenery": "#ffd050",
+        "writing": "#fff4c0"
+      },
+      "plan": [
+        "        ####1######################################################         ",
+        "   ########,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,########   ",
+        "#####,,,,,,,,,,,,,,,,,,,.-=-=-=-=-=-=-=-=-=-=-.,,,,,,,,,,,,,,,,,,,,,,,,#####",
+        "###,,,,,,,,,,,,,,,,,,,./ \\  |  |  |  |  |  / \\.,,,,,,,,,,,,,,,,,,,,,,,,,,###",
+        "##,,,,,,,,,,,,,,,,,,,,|-----\\ |  |  |  | /-----|,,,,,,,,,,,,,,,,,,,,,,,,,,##",
+        "2,,,,,,,,,,,,,,,,,,,,,|------(==========)------|w,,,,,,,,,,,,,,,,,,,,,,,,,,3",
+        "##,,,,,,,,,,,,,,,,,,,,|-----/ |  |  |  | \\-----|,,,,,,,,,,,,,,,,,,,,,,,,,,##",
+        "###,,,,,,,,,,,,,,,,,,,,\\ /  |  |  |  |  |  \\ /,,,,,,,,,,,,,,,,,,,,,,,,,,,###",
+        "#####,,,,,,,,,,,,,,,,,,,'-=-=-=-=-=-=-=-=-=-=-',,,,,,,,,,,,,,,,,,,,,,,,#####",
+        "########,,,,,,,,,,,,,,,@,,,,,K,,,,,,,,,,,,,,,,,,,,,,,,,,,b,,,,,,,,,,########",
+        "     ##################################4###############################     "
+      ],
+      "writing": [
+        [45, 0, "ALL WAGERS WITNESSED"]
+      ],
+      "labels": [
+        {
+          "text": "THE GREAT WHEEL",
+          "at": [5, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "docks",
+          "via": "1"
+        },
+        "2": {
+          "to": "exchange",
+          "via": "1"
+        },
+        "3": {
+          "to": "cellars",
+          "via": "1"
+        },
+        "4": {
+          "to": "velvet",
+          "via": "1",
+          "closed": {
+            "look": "A lift with a brass grille, and an attendant who's a head taller than you and very pleasant. Invitations to the Velvet Deck are made in person, and no one's ever worked out how to decline one. No one's ever got in without one, either.",
+            "use": "I tell the attendant at the brass lift that I'd like Madame Ao-Dess to know I'm here."
+          }
+        }
+      },
+      "people": {
+        "K": {
+          "id": "kit",
+          "label": "Kit",
+          "asks": [
+            "How much do you owe, and to whom?",
+            "What's the game you're really playing?"
+          ]
+        }
+      },
+      "things": {
+        "w": {
+          "name": "The Wheel",
+          "look": "Forty meters of gold, and quite silent. It's completely honest. It's been checked by people who badly wanted it not to be. Once a day everybody on the station stops and watches it, and there's no clock anywhere.",
+          "use": "I watch the Wheel, and I ask a dealer what's riding on today's spin."
+        },
+        "b": {
+          "name": "The board",
+          "look": "Today's stakes, chalked in a beautiful hand: a ship, a year of somebody's life, a Senate seat, a recipe. Anything a witness can describe. There's room at the bottom. A witness is standing by, in a very good suit.",
+          "use": "I read the board, and I ask what I could put on it."
+        }
+      }
+    },
+    "exchange": {
+      "name": "The Marker Exchange",
+      "aliases": [
+        "marker exchange",
+        "the exchange",
+        "the trading floor",
+        "the markers"
+      ],
+      "desc": "A hushed trading floor where debts are bought and sold in small brass tokens. If you hold someone's marker, you hold them, and it's all perfectly legal, for what that's worth out here.",
+      "floor": "_",
+      "colors": {
+        "floor": "#423b36",
+        "walls": "#88705c",
+        "scenery": "#d8b080",
+        "writing": "#fff0dc"
+      },
+      "plan": [
+        "####################################################################",
+        "#__________________________________________________________________#",
+        "#___[=====]___[=====]___[=====]___[=====]___[=====]___[=====]______#",
+        "#__________________________________________________________________#",
+        "1__________________________________________________________________#",
+        "#___[=====]___[=====]___[=====]m__[=====]___[=====]___[=====]______#",
+        "#__________________________________________________________________#",
+        "#________@_________________________________________________________#",
+        "#___[=====]___[=====]l__[=====]___[=====]___[=====]___[=====]______#",
+        "#___________________________________________________b______________#",
+        "####################################################################"
+      ],
+      "writing": [
+        [8, 0, "PLEASE KEEP YOUR VOICE DOWN. SOMEONE HERE OWNS YOU."]
+      ],
+      "labels": [
+        {
+          "text": "THE MARKER EXCHANGE",
+          "at": [22, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "great",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "m": {
+          "name": "A tray of markers",
+          "item": "wheel_marker",
+          "look": "Small gilded chips, in rows, on green felt. Each is somebody. A broker slides one across with one finger, and somebody on the far side of the room goes rather pale.",
+          "use": "I ask the broker what's for sale in the tray, and I ask whose they are."
+        },
+        "l": {
+          "name": "A ledger on a chain",
+          "item": "ledger_of_favors",
+          "look": "An old worn book of favors, chained to a desk, so that brokers can look up who owes whom from here to Kessara. It's been left open at the page you least want to see. It isn't a coincidence.",
+          "use": "I read the page the ledger's been left open at."
+        },
+        "b": {
+          "name": "The price board",
+          "look": "A silent board of names and sums. No one ever calls out. It's being updated in real time by a very small person on a very tall ladder. You see a name you recognize go up, and then another.",
+          "use": "I watch the board, and I look for anyone I know."
+        }
+      }
+    },
+    "cellars": {
+      "name": "The Cellars",
+      "aliases": [
+        "cellars",
+        "service decks",
+        "the service decks",
+        "the debtors' decks",
+        "below stairs"
+      ],
+      "desc": "The service decks, where debtors work off what they owe as cleaners, dealers and waiters. Everyone's terribly polite, and everyone's got a number of years they can tell you without looking.",
+      "floor": ":",
+      "colors": {
+        "floor": "#3b3b46",
+        "walls": "#6c6c80",
+        "scenery": "#a8a8c8",
+        "writing": "#eaeaff"
+      },
+      "plan": [
+        "########################################################",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::==========:::::==========:::::==========:::::======:#",
+        "1::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::==========:::::==========:::::==========:::::======:#",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::::@:::::::::::::[==]y:::::::::::::::::::s:::::::::::#",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::==========:::::==========:::::==========d::::======:#",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "########################################################"
+      ],
+      "writing": [
+        [4, 0, "A CLEAN DEBT IS A HAPPY DEBT"]
+      ],
+      "labels": [
+        {
+          "text": "THE CELLARS",
+          "at": [32, 1]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "great",
+          "via": "3"
+        }
+      },
+      "people": {},
+      "things": {
+        "y": {
+          "name": "The years board",
+          "look": "Each worker's name, and a number, chalked up in the staff canteen. It's said in here the way another crew would give you their rank: SIX YEARS, SIR. NINETEEN. They've got very good manners. The number goes up when they break a glass.",
+          "use": "I read the years board, and I ask someone what they staked."
+        },
+        "s": {
+          "name": "A dealer scrubbing a floor",
+          "look": "She used to own a shipping line. She's got a very straight back and a very good brush. She looks up and she recognizes you, or she recognizes what you are. She'd like some news of anywhere at all.",
+          "use": "I crouch down beside the woman scrubbing the floor, and I give her some news."
+        },
+        "d": {
+          "name": "A chip in a laundry bag",
+          "item": "data_chip",
+          "look": "A data chip, sewn into the lining of a guest's dress shirt, in the bottom of a laundry bag. A debtor's found it. They've brought it to you, because you don't work here, and they've got eleven years left.",
+          "use": "I ask the debtor where they found the chip, and what they want for it."
+        }
+      }
+    },
+    "velvet": {
+      "name": "The Velvet Deck",
+      "aliases": [
+        "velvet deck",
+        "the salon",
+        "madame's salon",
+        "oriel's salon",
+        "the velvet room"
+      ],
+      "desc": "Madame Ao-Dess's own salon, furnished for someone seven feet tall. Invitations are made in person.",
+      "floor": "'",
+      "colors": {
+        "floor": "#5c2e3f",
+        "walls": "#99556e",
+        "scenery": "#e890a8",
+        "writing": "#ffe0ea"
+      },
+      "plan": [
+        "            #####################################             ",
+        "  #######'''''''''''''''''''''''''''''''''''''''''''#######   ",
+        "####''''''[=====]''''''''''''''''''''''[=====]''''''''''''####",
+        "1'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''##",
+        "##''''''''''''''''''''''''''''''''''''''''''''''''''''''''''##",
+        "##'''@'''''''''(      )c''''''''''''''''O'''''''''''''''''''##",
+        "##''''''''''''''''''''''''''''''''''''''''''''''''''''''''''##",
+        "##'''''''''''''''''''''''''''''''[======]g''''''''''''''''''##",
+        "####''''''[=====]''''''''''''''''''''''[=====]''''''''''''####",
+        "  #######'''''''''''''''''''''''''''''''''''''''''''#######   ",
+        "            #####################################             "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE VELVET DECK",
+          "at": [20, 4]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "great",
+          "via": "4"
+        }
+      },
+      "people": {
+        "O": {
+          "id": "oriel",
+          "label": "Madame Ao-Dess",
+          "asks": [
+            "What did you want to see me about, Madame?",
+            "What would you stake against what I've got?"
+          ]
+        }
+      },
+      "things": {
+        "c": {
+          "name": "A very tall chair",
+          "look": "It's upholstered in dark velvet, and your feet don't reach the floor. You didn't know until now that sitting down could make you feel like you were seven years old. That was the idea.",
+          "use": "I climb up into the very tall chair, and I wait to be spoken to."
+        },
+        "g": {
+          "name": "A game, half played",
+          "look": "A low table with a board on it, in a game you don't recognize, and it's been left in the middle of a move. It's your turn. It says so on a small card, with your name on it, in very good handwriting.",
+          "use": "I sit down at the board and make my move."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Guest plan",
+    "plan": [
+      "       .-----------------------------.       ",
+      "   .':::::::::::::::::::::::::::::::::::'.   ",
+      "  .':::::::::::::::::::::::::::::::::::::'.  ",
+      "|-------------------------------------------|",
+      "|,,,,,,,,,,,,,,,,,,,,,,,,|;;;;;;;;;;;;;;;;;;|",
+      "|,,,,,,,,,,,,,,,,,,,,,,,,|;;;;;;;;;;;;;;;;;;|",
+      "|-------------------------------------------|",
+      "|\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"|'''''''''''''''''''''|",
+      "  '.\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"|'''''''''''''''''''.'  ",
+      "    '-----------------------------------'    ",
+      "   <==> <==> <==> <==> <==> <==> <==> <==>   "
+    ],
+    "floors": {
+      ":": "velvet",
+      ",": "great",
+      ";": "exchange",
+      "\"": "cellars",
+      "'": "docks"
+    },
+    "rooms": [
+      {
+        "level": "velvet",
+        "at": [16, 1],
+        "text": "THE VELVET DECK"
+      },
+      {
+        "level": "great",
+        "at": [6, 4],
+        "text": "THE GREAT WHEEL"
+      },
+      {
+        "level": "exchange",
+        "at": [26, 5],
+        "text": "THE MARKER EXCHANGE"
+      },
+      {
+        "level": "cellars",
+        "at": [5, 7],
+        "text": "THE CELLARS"
+      },
+      {
+        "level": "docks",
+        "at": [24, 8],
+        "text": "THE TICKET DOCKS"
+      }
+    ]
+  }
+}

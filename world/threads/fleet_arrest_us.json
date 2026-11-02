@@ -1,0 +1,59 @@
+{
+  "title": "The Speaker Holds Out His Wrists",
+  "kind": "politics",
+  "places": [
+    "meridian",
+    "fleet",
+    "haven"
+  ],
+  "minLevel": 5,
+  "after": null,
+  "people": [
+    "halm",
+    "corvane",
+    "grann",
+    "garrick",
+    "voss"
+  ],
+  "factions": [
+    "fleet",
+    "hegemony"
+  ],
+  "lead": "Speaker Halm walks onto your bridge with the whole council behind him, holds out his wrists and says that we would like you to arrest us now, please, while everyone's watching. He has brought the evidence himself.",
+  "anyone": "Speaker Halm walked onto the Meridian's bridge with the whole council behind him, held out his wrists and asked to be arrested, in front of everyone. He brought the evidence himself, and the whole fleet's talking about it.",
+  "gm": {
+    "truth": "Halm has been negotiating with Legate Corvane over the fleet's surrender, and he knows the captain's people are getting close. So he's getting ahead of it. He confesses in public and hands over every letter, and all nine hundred pages of the offer. It's a trap, and a good one. The first pages read wonderfully: food, medicine, safe berths, a temporary service obligation. Garrick Fenn received a copy an hour ago. If the captain arrests Halm, they're a tyrant jailing the civil government for trying to feed people. If they don't, the talks become legitimate. And Halm isn't lying about the medicine: he has guessed something close to Aduro's number. The fine print: one adult in four conscripted at Bastion Nine, all Resonants and synthetics handed over, and on page 614 clause 41(c), which lets the Regency \"remit the bearer's service to an external obligation\". Halm has read that page and doesn't understand it. There's also a schedule Corvane hasn't shown anyone, the first remittance from the fleet, which means the unmarked ships. Halm's own name is on it. Corvane is terrified, and would sell that page for a way out.",
+    "beats": [
+      "The wrists, the crowd, the recorders. Nobody on the bridge has been this quiet since the Fall. Voss looks at the captain and waits.",
+      "The terms go out on Fenn's channel. By morning people are queuing to read them. Half the fleet reads \"food\" and the other half reads \"one adult in four\". Nobody has got as far as page 614.",
+      "Legate Corvane sends his warmest regards, and mentions an unfortunate possibility: the offer expires in five days.",
+      "The council moves to put it to a vote. Steward Tull hasn't said anything at all, and that's the one thing that makes Halm nervous.",
+      "The vote, the arrest or the annex, whichever the captain gets to first."
+    ],
+    "routes": [
+      "Decline the trap: persuasion and lore. Don't arrest him. Thank him, and read the whole thing aloud with him on Fenn's channel, all nine hundred pages if that's what it takes. Concord treaty law requires a vote of all citizens, not the council, which buys time and takes it out of his hands.",
+      "Get the schedule: streetwise and deception at Haven, or persuasion aimed at a frightened Corvane. That page could end this, if anyone believes it's genuine.",
+      "Arrest him anyway: intimidation and tactics, martial law and holding the ships that object. It works, at a price.",
+      "Make a better offer: commerce and leadership. Find the food and medicine somewhere else, with Grann Tull's help, and make the fleet's own offer look like an offer."
+    ],
+    "checks": [
+      "lore:moderate to find the citizens' vote in Concord treaty law",
+      "persuasion:hard to win that reading against the best speaker in the fleet",
+      "streetwise:hard to find out there's a schedule at all",
+      "deception:hard to get the schedule out of Corvane's office",
+      "intimidation:moderate to hold the council in their seats",
+      "tactics:hard to keep forty-one ships in line under martial law"
+    ],
+    "fights": [
+      "mutineer squads on civilian ships if martial law is declared",
+      "hegemony_trooper escort if the captain goes for the schedule at Haven"
+    ],
+    "outcomes": [
+      "Arrested: Halm is a martyr in a comfortable cell, where he's very kind to his guards. A third of the civilian ships stop answering the Meridian. He says \"we did warn you\", and he means it gently.",
+      "Vote held, terms refused: the captain's legitimacy is higher than it has ever been, and Bastion Nine closes to fleet ships. The fleet has chosen to starve free, and it will remember whose idea that was.",
+      "Vote held, terms accepted by enough ships: the fleet splits. Perhaps a third go to Bastion with Halm's blessing. It's not the end, and the captain may one day hear what happened to them.",
+      "Schedule exposed: Halm reads his own name on it and says nothing, for the first time in living memory. He breaks the channel. He isn't an ally, but he's a different kind of opponent now, and he owes someone the rest of his life."
+    ],
+    "rewards": "Fleet standing either way, a data_chip of the terms, and possibly Corvane's terrified debt."
+  }
+}

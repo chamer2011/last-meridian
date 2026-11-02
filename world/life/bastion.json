@@ -1,0 +1,69 @@
+{
+  "_help": "The days of the people here. The instructions are at the top of meridian.json.",
+  "people": {
+    "dain": [
+      { "at": "06:00", "doing": "reading the night's reports", "go": "post" },
+      { "at": "10:30", "doing": "inspecting the new conscripts", "go": "@parade" },
+      { "at": "11:30", "doing": "signing what's put in front of him", "go": "post" },
+      { "at": "16:00", "doing": "walking the Contract Hall", "go": "@hall" },
+      { "at": "17:00", "doing": "looking down at the Line", "go": "post" },
+      { "at": "22:30", "doing": "on the way to his quarters", "go": ">gallery", "hidden": true }
+    ],
+    "severa": [
+      { "at": "07:00", "doing": "at window six", "go": "post" },
+      { "at": "12:30", "doing": "eating alone, very quickly", "go": "@hall" },
+      { "at": "13:00", "doing": "at window six", "go": "post" },
+      { "at": "18:30", "doing": "working late at window six", "go": "post" },
+      { "at": "21:00", "doing": "on the way home", "go": ">hall", "hidden": true }
+    ],
+    "jaska": [
+      { "at": "07:00", "doing": "inspecting a ship's papers", "go": "post" },
+      { "at": "11:00", "doing": "asking one more question", "rounds": ["@line", "@hall"], "stop": 40 },
+      { "at": "15:00", "doing": "inspecting a ship's papers", "go": "post" },
+      { "at": "20:00", "doing": "on the way to her bunk", "go": ">anchorage", "hidden": true }
+    ]
+  },
+  "crowd": [
+    {
+      "names": [["Lusia", 0], ["Tamrat", 20], ["Old Ferro", 45], ["Kezia", 70], ["Dov", 90], ["Nadezhda", 120]],
+      "day": [
+        { "at": "06:30", "doing": "eating hot soup in the lane", "go": "@line" },
+        { "at": "09:00", "doing": "listening for a number", "go": "@line" },
+        { "at": "13:00", "doing": "waiting at a clerk's window", "go": "@hall" },
+        { "at": "15:00", "doing": "listening for a number", "go": "@line" },
+        { "at": "17:00", "doing": "watching the drill through the glass", "go": "@parade" },
+        { "at": "18:00", "doing": "listening for a number", "go": "@line" },
+        { "at": "22:00", "doing": "asleep in the chalked lane", "go": "@line", "asleep": true }
+      ]
+    },
+    {
+      "names": [["Clerk Toma", 0], ["Clerk Vinh", 15], ["Clerk Arno", 30]],
+      "day": [
+        { "at": "07:00", "doing": "reading a contract aloud", "go": "@hall" },
+        { "at": "12:30", "doing": "eating at a desk", "go": "@hall" },
+        { "at": "13:00", "doing": "reading a contract aloud", "go": "@hall" },
+        { "at": "19:00", "doing": "on the way home", "go": ">hall", "hidden": true }
+      ]
+    },
+    {
+      "names": [["Conscript Aldo", 0], ["Conscript Renn", 0], ["Sergeant Hale", 0]],
+      "day": [
+        { "at": "05:30", "doing": "drilling", "go": "@parade" },
+        { "at": "12:00", "doing": "eating, in step", "go": "@parade" },
+        { "at": "12:45", "doing": "drilling", "go": "@parade" },
+        { "at": "18:00", "doing": "allowed ten minutes at the glass", "go": "@parade" },
+        { "at": "18:30", "doing": "cleaning a rifle", "go": "@parade" },
+        { "at": "22:00", "doing": "lights out", "go": ">parade", "hidden": true }
+      ]
+    },
+    {
+      "names": [["Skipper Oona", 0], ["Deckhand Mika", 60]],
+      "day": [
+        { "at": "07:00", "doing": "waiting for a permit", "go": "@anchorage" },
+        { "at": "12:00", "doing": "tending something green in a cargo net", "go": "@anchorage" },
+        { "at": "18:00", "doing": "waiting for a permit", "go": "@anchorage" },
+        { "at": "22:00", "doing": "asleep aboard", "go": "@anchorage", "asleep": true }
+      ]
+    }
+  ]
+}

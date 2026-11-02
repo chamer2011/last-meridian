@@ -1,0 +1,47 @@
+{
+  "_help": "The days of the people here. The instructions are at the top of meridian.json.",
+  "people": {
+    "okonkwo": [
+      { "at": "06:00", "doing": "standing for the anthem", "go": "post", "exact": true },
+      { "at": "06:30", "doing": "going over the fleet's readiness", "go": "post" },
+      { "at": "20:00", "doing": "inspecting the line", "go": "post" },
+      { "at": "23:00", "doing": "gone to her cabin", "go": ">battle", "hidden": true }
+    ],
+    "dorn": [
+      { "at": "07:00", "doing": "buying what the Remnant needs", "go": "post" },
+      { "at": "12:00", "doing": "reporting to the Admiral", "go": "@battle" },
+      { "at": "14:00", "doing": "buying what the Remnant needs", "go": "post" },
+      { "at": "20:00", "doing": "writing letters by hand", "go": "@battle" },
+      { "at": "23:00", "doing": "gone to his cabin", "go": ">battle", "hidden": true }
+    ]
+  },
+  "crowd": [
+    {
+      "names": [["Rating Caro", 0], ["Rating Nkemi", 0], ["Bosun Elway", 0], ["Rating Sten", 0]],
+      "day": [
+        { "at": "06:00", "doing": "standing for the anthem", "go": "@battle", "exact": true },
+        { "at": "06:30", "doing": "polishing something already polished", "go": "@battle" },
+        { "at": "12:00", "doing": "eating cold rations", "go": "@battle" },
+        { "at": "13:00", "doing": "on watch in the cold", "go": "@battle" },
+        { "at": "22:00", "doing": "asleep in a coat", "go": "@battle", "asleep": true }
+      ]
+    },
+    {
+      "names": [["Lamp-Hand Ysolde", 0], ["Bell-Ringer Ott", 30], ["Trader Mazur", 60], ["Trader Quick", 90]],
+      "day": [
+        { "at": "09:00", "doing": "haggling by lamp-code", "go": "@market" },
+        { "at": "13:00", "doing": "walking the rope to the next ship", "go": "@market" },
+        { "at": "16:00", "doing": "out checking lamp-buoys", "go": "@lanes" },
+        { "at": "19:00", "doing": "haggling by lamp-code", "go": "@market" },
+        { "at": "23:30", "doing": "asleep beside a heater", "go": "@market", "asleep": true }
+      ]
+    },
+    {
+      "names": [["Old Hulme", 0]],
+      "day": [
+        { "at": "08:00", "doing": "mending a dead ship with its lights on", "go": "@drift" },
+        { "at": "22:00", "doing": "asleep in the dead ship", "go": "@drift", "asleep": true }
+      ]
+    }
+  ]
+}

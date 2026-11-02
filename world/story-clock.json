@@ -1,0 +1,479 @@
+{
+  "_help": [
+    "What happens to each story if nobody steps in. Nothing here ever closes a story: it changes how things stand, and it can still be taken up from there. Once someone has taken a story up its clock stops.",
+    "after is how many days after that story's clock started, give or take a fifth. A story's clock starts when the world's had time to reach it (a week for each level above the first, unless it says from), and when any story it follows is over or has run its course.",
+    "news is what people hear. lead is what the lead says from then on. Neither should give away a story's secret: only what anyone could see. Every lead has to leave the captain something to do.",
+    "places changes how things stand at a place: goods is how much there is of food, fuel, medicine and parts, and sides is who holds it. fleet changes the fleet: morale, food, medicine, parts, fuel, pursuit, ships (that many of the ships with least reason to stay walk out), picked (the Choir runs that many down), and named (one particular ship leaves or is lost).",
+    "big means the news carries, and anyone who knows of the place hears it. place says where it happens, if it isn't the story's first place.",
+    "acts is the same for the main story, by act: dated events, and moves_on, which moves the story on to the next act if nobody has by then. It never moves on to the last act by itself, since the fleet has to be taken there."
+  ],
+  "acts": [
+    {
+      "events": [
+        {"after":7,"news":"Legate Corvane's offer is going round the mess decks, in copies somebody's been very careful to leave where people will find them.","fleet":{"morale":-1}},
+        {"after":14,"news":"A Mimic scare on the Harrow's Bounty has people looking at each other, and at the fleet's synthetics, and not saying anything.","fleet":{"morale":-1}},
+        {"after":22,"news":"The first sermons of the Quiet are drawing crowds on the Sundial, and they've started asking for more room.","places":[{"id":"haven","sides":{"quiet":2}}]},
+        {"after":31,"news":"A Choir drone picked off a straggler at the edge of the formation. Nobody saw it coming, and everybody saw it happen.","fleet":{"picked":1,"pursuit":3}}
+      ],
+      "moves_on": {"after":45,"news":"Garrick Fenn has broken the story on the open channel: part of the Beacon is in Concord Navy code. Half the fleet's celebrating, and the other half has started asking why they weren't told.","fleet":{"morale":3}}
+    },
+    {
+      "events": [
+        {"after":8,"news":"Hunter packs are working the lanes that follow the Beacon's signal, and ships that went down them have stopped answering.","fleet":{"pursuit":4,"morale":-1}},
+        {"after":17,"news":"Hegemony customs stops and Inquisitors have started working the docks at Haven Station.","place":"haven","places":[{"id":"haven","sides":{"hegemony":5}}]},
+        {"after":26,"news":"Refugees are signing at Bastion Nine by the hundred, and a ship from the fleet has gone with them.","place":"bastion","places":[{"id":"bastion","sides":{"line":3}}],"fleet":{"ships":1}},
+        {"after":36,"news":"There was a fight between synthetics and survivors on the Second Thursday, and it took marines to end it.","fleet":{"morale":-2}}
+      ],
+      "moves_on": {"after":50,"news":"It's been said on the open channel: the Navy voice on the Beacon is a ship the Choir took on the first night. A lot of people have stopped looking at the Beacon, and started looking at the bridge.","fleet":{"morale":-4}}
+    },
+    {
+      "events": [
+        {"after":9,"news":"Ships are peeling off for Bastion Nine, now that people have started to doubt the Beacon.","fleet":{"ships":2,"morale":-1}},
+        {"after":20,"news":"Hunters have started turning up with something coordinating them, and they've stopped making mistakes.","fleet":{"pursuit":6}},
+        {"after":31,"news":"Inquisitor Vael's ships are sitting over Ilun, and the monks have gone on sitting too.","place":"ilun"},
+        {"after":42,"news":"People on the Bright Tomorrow have found a man who's stopped answering to his name. He's sitting in a corridor, perfectly healthy, and he doesn't look round.","fleet":{"morale":-2}}
+      ],
+      "moves_on": {"after":55,"news":"Word's coming in from three different places at once that the Beacon isn't calling anyone home. Nobody can say what it is, and nobody's sleeping.","fleet":{"morale":-3}}
+    },
+    {
+      "events": [
+        {"after":11,"news":"People who've never heard the song have started humming it, all over the fleet, and they don't know they're doing it.","fleet":{"morale":-1}},
+        {"after":24,"news":"A ship in the fleet has stopped answering. Every soul aboard has sat down, alive, all facing the same way.","fleet":{"sat":1,"morale":-2}},
+        {"after":37,"news":"Silver has been seen gathering along the Hegemony's border, and the Regent's fleet is mustering at Vantor.","place":"vantor"},
+        {"after":51,"news":"Ministry Blades have landed at Sarn, and the Keepers have sent out one polite protest, in triplicate.","place":"sarn","places":[{"id":"sarn","sides":{"hegemony":10}}]}
+      ]
+    }
+  ],
+  "threads": {
+    "crew_aduro_forty_one_days": { "stages": [
+      {"after":30,"news":"Dr. Aduro has started counting doses out loud in the corridors, and people are doing the sums for themselves.","lead":"Dr. Aduro's closed door hasn't kept it in: people have started doing the sums on the fleet's medicine by themselves. Aduro would still like a word, before someone else does it for them.","fleet":{"morale":-1}},
+      {"after":68,"news":"Garrick Fenn has read out a number on the open channel: the day the medicine runs out. Some ships have started hoarding.","lead":"Garrick Fenn has read out the day the medicine runs out, and some ships are hoarding what they've got. Dr. Aduro says the number's not even the worst of it, and they'd still like that word.","fleet":{"morale":-2,"medicine":-6}}
+    ] },
+    "crew_aduro_still_skin": { "stages": [
+      {"after":30,"news":"People on the wards have noticed that Dr. Aduro's skin doesn't show anything any more, and they've stopped asking how bad it is.","lead":"Dr. Aduro's patients spent months learning to read the doctor's skin, and now there's nothing on it to read. Ensign Vey says people have stopped asking how bad it is, and that's worse."}
+    ] },
+    "crew_bastian_confessional": { "stages": [
+      {"after":15,"news":"Father Roe has stopped hearing confessions, and he won't say why. Marines have started finding him sitting outside Lock Nine.","lead":"Father Roe has stopped hearing confessions, and he spends his nights on a folding chair outside Lock Nine. He still can't tell you what he heard, but he'd be glad if you sat with him."},
+      {"after":33,"news":"An alarm went off at Lock Nine on the docking deck, in front of the delegates of half the fleet, and the marines aren't saying what they found.","lead":"Whatever Father Roe was afraid of at Lock Nine has happened, in front of half the fleet's delegates, and the marines aren't saying what they found. He's asked to speak to you. He looks like he's finally slept, and he doesn't look better for it.","fleet":{"morale":-2}}
+    ] },
+    "crew_bastian_loaves": { "stages": [
+      {"after":27,"news":"People are crossing between ships for Father Roe's bread, and the ration office has started asking where it comes from.","lead":"People are crossing between ships for Father Roe's services now, and it isn't the sermon they're coming for. The ration office has started asking where the bread comes from, and so has Quartermaster Brandt, a little too loudly."},
+      {"after":60,"news":"Garrick Fenn has asked on the air where Father Roe's bread comes from.","lead":"Garrick Fenn has asked on the air where Father Roe's bread comes from, and the lines at his services have doubled. Sooner or later someone's going to follow the flour.","fleet":{"morale":-1}}
+    ] },
+    "crew_iven_the_roll": { "stages": [
+      {"after":21,"news":"Someone's reading out the names of the dead on the open channel at three every morning, and whole decks have started staying up for it.","lead":"Someone keeps reading out the names of the dead at three every morning, in Garrick Fenn's voice, and whole decks stay up to hear it. Fenn wants it stopped. A lot of other people don't."},
+      {"after":45,"news":"Lieutenant Sorel collapsed at his board, and the Roll stopped for a night. Eight thousand people lay awake waiting for it.","lead":"Lieutenant Sorel collapsed at his board, and on the same night the Roll stopped. Eight thousand people lay awake waiting for it, and they've started to ask who's going to read it now.","fleet":{"morale":-1}}
+    ] },
+    "crew_lira_long_sleeves": { "stages": [
+      {"after":21,"news":"Ensign Vey's still wearing long sleeves on the bridge, and the helm has stopped trusting its own readings.","lead":"Ensign Vey's still on watch in long sleeves and gloves, and it's starting to cost: the helm used to steer by her skin, and now nobody knows what she's found until she says so. She still says it's cold.","fleet":{"pursuit":3}}
+    ] },
+    "crew_marrow_aft_hold": { "stages": [
+      {"after":18,"news":"Chief Hask has weighed the aft hold again, and it's heavier than it was.","lead":"Chief Hask has weighed the aft hold again, and it's up to seven hundred kilos over the manifest. He'd like you to know he's written it down, and he'd like to know who he should show it to."},
+      {"after":45,"news":"Lieutenant Tarrow's marines have started asking why the aft hold's draw on the power grid keeps climbing.","lead":"Lieutenant Tarrow's marines have started asking about the power going to the aft hold. Chief Marrow has stopped swearing whenever someone mentions it, and Chief Hask still has his scale."}
+    ] },
+    "crew_marrow_the_parallel": { "stages": [
+      {"after":38,"news":"Chief Marrow says the Meridian's main coil is down to two jumps, and he's stopped saying it quietly.","lead":"Chief Marrow says the main coil's down to two jumps, and the only spare in reach is still on the CFS Parallel, dead in the Graveyard. He's stopped asking whether he can go, and started asking when."},
+      {"after":75,"news":"Salvage divers have started stripping the CFS Parallel, and her spare coil won't be there for long.","lead":"Divers have started stripping the CFS Parallel, and Chief Marrow says that if you want her spare coil you'd better go and get it. He says it very quietly, for him.","place":"graveyard"}
+    ] },
+    "crew_naomi_under_crew": { "stages": [
+      {"after":14,"news":"A vent cycle in Section Fourteen was held up by a jammed hatch, and then by another one.","lead":"Section Fourteen's vent cycle has been held up twice now by hatches that were working fine the day before. Naomi Cass has informed you it won't be happening tomorrow either."},
+      {"after":38,"news":"Section Fourteen was vented on schedule at last, and a lot of very small footprints were found in the dust on the other side.","lead":"Section Fourteen was vented in the end, and there were a lot of very small footprints in the dust on the far side. Naomi Cass isn't talking to you. Someone's still stealing from the galley, though, and it isn't only her.","fleet":{"morale":-1}}
+    ] },
+    "crew_odessa_two_ledgers": { "stages": [
+      {"after":24,"news":"Someone's stealing from the ration stores, and Quartermaster Brandt has stopped looking anyone in the eye.","lead":"Someone's stealing from the ration stores, and Quartermaster Brandt's two ledgers are still in your desk. She's stopped looking anyone in the eye, and she's asked you twice if you've read them.","fleet":{"food":-5}},
+      {"after":54,"news":"A sealed cargo pod that isn't on any manifest has been found broken open, and half the fleet has heard about it.","lead":"A sealed cargo pod that's on nobody's manifest has been found broken open, and half the fleet's heard about it. Quartermaster Brandt would like to talk about her two ledgers now, if you've got a minute.","fleet":{"food":-10,"morale":-1}}
+    ] },
+    "crew_pell_certificate": { "stages": [
+      {"after":30,"news":"The Credentials Act's deadline has passed, and Ensign Asante still hasn't filed her papers. People are asking why the best pilot in the fleet is the last.","lead":"The Credentials Act's deadline has come and gone, and the best pilot in the fleet still hasn't filed her papers. Ensign Asante says she's getting round to it, and she's stopped meeting anyone's eye."},
+      {"after":60,"news":"The council has told Ensign Asante to produce her certificate or stand down from the helm.","lead":"The council's told Ensign Asante to produce her certificate or stand down from the helm, and she hasn't said which. The fleet's last licensed flight examiner runs a ferry on the Second Thursday now, and he might have something to say about it, if anyone asks him.","fleet":{"morale":-1}}
+    ] },
+    "crew_pell_letters": { "stages": [
+      {"after":38,"news":"Naomi Cass has stopped coming up to the bridge when Ensign Asante's on watch.","lead":"Naomi Cass has stopped coming up to the bridge when Ensign Asante's on watch, and she's asked you again how you'd go about telling someone something you've left too long. It's longer now."}
+    ] },
+    "crew_seven_compartment": { "stages": [
+      {"after":45,"news":"A hull strike sealed Lieutenant Tarrow and Mercy Seven in a pipe gallery for seven hours. They both came out, and neither of them will say what happened.","lead":"Lieutenant Tarrow and Mercy Seven spent seven hours sealed in Compartment Eleven, and they've both gone back to work. Neither of them will say what happened in there, and you might want to ask."}
+    ] },
+    "crew_seven_consult": { "stages": [
+      {"after":45,"news":"Mercy Seven has stopped asking for ten minutes of the captain's time.","lead":"Mercy Seven asked for ten minutes weeks ago and hasn't asked again. They still read something on a private band each morning, and they've stopped telling you the odds."}
+    ] },
+    "crew_seven_two_hundred_twelve": { "stages": [
+      {"after":23,"news":"The council has voted down a synthetic seat by a handful of votes, and Mercy Seven never read out their speech.","lead":"The synthetic seat failed by a handful of votes, and Mercy Seven never read out their speech. It's still very short: two hundred and twelve names, some of which you'd recognize. They're still deciding what to do with it."}
+    ] },
+    "crew_tarrow_annex": { "stages": [
+      {"after":38,"news":"Lieutenant Tarrow's two dinner trays have become a joke on the lower decks, as long as she can't hear it.","lead":"Lieutenant Tarrow's two dinner trays have become a joke on the lower decks. Naomi Cass has stopped thinking it's funny, though, and she's asking you what's in the old brig annex."},
+      {"after":75,"news":"Marines have been posted on the old brig annex, on a standing order nobody can find a copy of.","lead":"There are marines on the door of the old brig annex, on a standing order nobody can find a copy of, and Lieutenant Tarrow still carries two trays down there every night. You're the only one they couldn't stop."}
+    ] },
+    "crew_tarrow_standing_order": { "stages": [
+      {"after":30,"news":"Marines on six ships have started carrying a list, and they've been told not to discuss it.","lead":"Marines on six ships are carrying a list now, and the nervous one who stopped you in the corridor has stopped asking who gives the word. He's started asking when."},
+      {"after":68,"news":"Lieutenant Tarrow's marines spent a long night in the corridors of two ships, without orders from anyone, and a lot of synthetics are in locked holds this morning.","lead":"Lieutenant Tarrow moved without orders, on two ships, and a lot of synthetics are in locked holds this morning. She's waiting outside your door to report it, at attention. Someone has to decide what happens next.","fleet":{"morale":-3},"big":true}
+    ] },
+    "crew_tarrow_undelivered": { "stages": [
+      {"after":45,"news":"A wrecked synthetic in the aft hold has started repeating names to anyone who walks past.","lead":"The wrecked synthetic from the aft hold has started saying names to anyone who walks past. It's still holding four hundred and twelve messages it never got to deliver, and one of them's for someone you know."}
+    ] },
+    "crew_tobin_the_weighing": { "stages": [
+      {"after":27,"news":"Chief Hask and Quartermaster Brandt have set a date for their wedding on Deck Four, with or without a captain to read the scale.","lead":"Chief Hask and Quartermaster Brandt have set a date for their wedding on Deck Four, and they'd still like you to read the scale. Chief Hask wants you to know the custom hasn't changed."},
+      {"after":60,"news":"Chief Hask and Quartermaster Brandt were married on Deck Four by the oldest Korrun aboard, with very little on the pan.","lead":"Chief Hask and Quartermaster Brandt were married without you, by the oldest Korrun aboard, and it was a lovely day. Chief Hask has been weighing things more than usual, though, and he's asked if he could borrow you for something small.","fleet":{"morale":2}}
+    ] },
+    "crew_voss_night_scans": { "stages": [
+      {"after":21,"news":"Chief Marrow has cut the medbay's night power, and somebody's been going around him.","lead":"Chief Marrow cut the medbay's night power, and someone's still running the full-body scanner at three every morning, going around him and wiping the log. He'd like to know who, and he's got a wrench."},
+      {"after":45,"news":"The whole night watch knows somebody runs the medbay scanner at three in the morning, and there's a betting pool on who.","lead":"There's a betting pool on the night watch over who runs the medbay scanner at three in the morning. Nobody's bet on the right person yet, and Chief Marrow's stopped asking and started watching."}
+    ] },
+    "crew_voss_relieved": { "stages": [
+      {"after":23,"news":"Ships in the formation keep getting orders in Commander Voss's voice, and she says she never gave them.","lead":"Ships keep getting orders in Commander Voss's voice, on a command channel, and she says she never gave them. Every one of them has turned out to be good advice. Nobody's sure if that makes it better.","fleet":{"morale":-2}}
+    ] },
+    "crew_voss_tarn_recorder": { "stages": [
+      {"after":18,"news":"Bids are coming in from all over for the CFS Tarn's flight recorder, which the Guild pulled out of the Graveyard.","lead":"The bids are coming in for the CFS Tarn's flight recorder, from people who shouldn't know about it, and Factor Crane says the price is climbing. Commander Voss hasn't asked you to do anything about it."},
+      {"after":42,"news":"Inspector Moor has won the bidding for the flight recorder at the Graveyard, in the Hegemony's name, at a price nobody else could meet.","lead":"Inspector Moor has the CFS Tarn's flight recorder now, and it's going through channels. Commander Voss hasn't said a word about it, and she's stopped sleeping at all.","place":"graveyard"}
+    ] },
+    "deep_nobody_finds_foundry": { "stages": [
+      {"after":45,"news":"A few of the fleet's synthetics have gone missing, and nobody's reporting it.","lead":"A few of the fleet's synthetics have gone missing, and nobody's reporting it. Mercy Seven's door has stayed closed, and they'd still like that private word. Lieutenant Tarrow's started a list of who."}
+    ] },
+    "deep_the_childrens_game": { "stages": [
+      {"after":38,"news":"Farm children on Tessen have started correcting people's grammar and their sums, in words nobody taught them.","lead":"Archivist Tharel's still playing that recording, and now people on Tessen say their farm children have started correcting their grammar and their sums. He'd still very much like to meet that young one."}
+    ] },
+    "deep_the_dark_warden": { "stages": [
+      {"after":38,"news":"People at Lumen have started crossing the Water Courts to avoid Warden Ashael, and he's been seen sitting by himself at night.","lead":"Warden Ashael still hasn't shown a single point of light on his skin, and people at Lumen have started crossing the Water Courts to avoid him. He's got thinner. Mirei's still asking you to ask him, because no one there can stand to.","places":[{"id":"lumen","sides":{"circle":-3}}]}
+    ] },
+    "deep_the_eleven": { "stages": [
+      {"after":38,"news":"Mother Orsolya of Saint Orrin's Comet has sent out another letter. This one begins 'Still wrong', and it's gone to everyone.","lead":"Mother Orsolya's sent another letter. It begins 'Still wrong', it's gone to everyone this time, and it's still asking if you can spare any burn dressings. She says she can still prove it."}
+    ] },
+    "deep_the_general_election": { "stages": [
+      {"after":30,"news":"People in the fleet with family on Asterion have started getting polling cards, signed by people they buried.","lead":"The Echo of Asterion has gone ahead with its general election, and people in the fleet have started getting polling cards from people they buried. Speaker Halm's still asking, in a shaking voice, if he can come too.","fleet":{"morale":-2}}
+    ] },
+    "deep_the_kept": { "stages": [
+      {"after":45,"news":"The Cantor's offer to show anyone around the Choir Nest has started playing on the Beacon band, and a few people have asked.","lead":"The Cantor's offer to show you around the Nest is still open, and now it's offering the same to anyone else who asks. A few people have asked. Lieutenant Tarrow's still offering to come along, and she's checked her explosives.","fleet":{"morale":-1}}
+    ] },
+    "deep_the_patient_wardens": { "stages": [
+      {"after":45,"news":"Scavengers at the Pale Gate's Rimcamp say the ring's moved again. It's up to six degrees.","lead":"Scavengers at the Rimcamp say the Pale Gate's moved again, and it's up to six degrees. Navigator Ao-Rel says something on it is still watching, and they'd like to go back before it's finished turning."}
+    ] },
+    "deep_the_sixth_level": { "stages": [
+      {"after":30,"news":"Dr. Corso's station reports from Maris Deep have got shorter.","lead":"Dr. Corso's reports have got shorter. He still wakes on the sixth level with no suit on, and he's stopped sounding surprised. He'd still like you to take the elevator at high tide, and tell him what he's been going down to see."}
+    ] },
+    "deep_the_sounding_line": { "stages": [
+      {"after":45,"news":"Dr. Corso's station report from Maris Deep has reached every Concord address again. It still ends: Please do not come. Please send filters.","lead":"Dr. Corso's station report has gone out again, to people who died in the Fall. The numbers have changed, if anyone could read them, and he's asking for more filters."}
+    ] },
+    "deep_the_stones_at_night": { "stages": [
+      {"after":38,"news":"Brother Cael has found a tenth empty house of the Order, with the beds made.","lead":"Brother Cael's found a tenth house with the beds made, and he's stopped making jokes about it, mostly. Every door was still opened from the inside, and he'd still like a second opinion."}
+    ] },
+    "deep_the_sublevels": { "stages": [
+      {"after":38,"news":"Foundry Seven's heating bill has gone up again, in a building full of people who don't feel the cold.","lead":"Foundry Seven's losing a quarter of its power now to something logged as heating. Hollis-Nine's still saying 'Mm', and she's handed you something else to hold."}
+    ] },
+    "deep_the_thin_road": { "stages": [
+      {"after":45,"news":"Navigator Ao-Rel has been seen on the docks at the Deepyards, which is a bad idea for an exile.","lead":"Tamsin Ao-Rel's been seen on the Deepyards' docks, which is a bad idea for an exile. They'll still sell you the chart, on the same condition: that you ask Yardmother Ilkin, in front of her family, what happened to Sel Arrah."}
+    ] },
+    "deep_the_vacancy": { "stages": [
+      {"after":38,"news":"The Keeper who takes lamp oil down to the Deep Stacks at Sarn has started leaving it at the top of the stairs.","lead":"The Keeper who takes Sefu Anand his lamp oil has started leaving it at the top of the stairs, and won't say why. Down in the Deep Stacks he's still talking, and he's still losing the arguments. Somebody should go and see who to."}
+    ] },
+    "deep_voices_on_the_wire": { "stages": [
+      {"after":23,"news":"The line from the Asterion exchange has started ringing through to other comm rooms in the fleet, asking for people by name, and they keep answering.","lead":"The line from the Asterion exchange has started ringing through to other comm rooms in the fleet, asking for people by name, and they keep answering. Lieutenant Sorel's still logging it. It still wants to know if this is a good time.","fleet":{"morale":-1}}
+    ] },
+    "deep_wake_at_clearance": { "stages": [
+      {"after":30,"news":"Scavengers at the Pale Gate's Rimcamp say one of the nine warm cradles has gone cold.","lead":"One of the nine warm cradles at the Pale Gate has gone cold. There are eight now, and the handprint's still on the glass. Factor Crane still won't touch it, and she'll still tell you why for a fee."}
+    ] },
+    "fleet_arrest_us": { "stages": [
+      {"after":23,"news":"Since nobody arrested them, Speaker Halm and the council have called a public vote on the captain's authority.","lead":"Nobody arrested Speaker Halm, so he's called a public vote on your authority, with terms from the Hegemony attached. He's being very reasonable about it, on every channel. You could still go and talk to him, or do what he asked.","fleet":{"morale":-2},"big":true}
+    ] },
+    "fleet_bunk_forty_one": { "stages": [
+      {"after":12,"news":"A crowd on the Harrow's Bounty has started chanting Aune Hollander's name outside the purser's office.","lead":"There's a crowd outside the purser's office on the Harrow's Bounty, chanting Aune Hollander's name. She still says it wasn't him. The autopsy says he was flesh and blood all through, and half the ship doesn't care."},
+      {"after":30,"news":"The Harrow's Bounty has tried Aune Hollander in her own corridor, by shouting, and let her go free.","lead":"The Harrow's Bounty let Aune Hollander go free, by shouting, after an autopsy that found nothing but flesh and blood. Now everyone on that ship knows how it's done. Someone ought to find out what she really knew.","fleet":{"morale":-1}}
+    ] },
+    "fleet_deck_nine_drill": { "stages": [
+      {"after":27,"news":"Deck Nine's quiet has spread to two more decks on the Bright Tomorrow.","lead":"Three decks on the Bright Tomorrow sit through every drill now with their hands folded, and they're the best-run decks in the fleet. They also sit right across the lifeboat spine. Oskar Lind's offer of tea still stands."},
+      {"after":60,"news":"There was a fire in the Bright Tomorrow's aft spine. Everyone ran except the people from Deck Nine, who got up, walked into the smoke and carried three hundred people out. Then they sat back down.","lead":"The people who sit through drills put out a real fire on the Bright Tomorrow: they walked into the smoke, carried three hundred people out, and sat back down. Half the ship wants them banned, and the other half has gone to ask them what they know. Oskar Lind's offer of tea still stands."}
+    ] },
+    "fleet_forty_second_ship": { "stages": [
+      {"after":23,"news":"People have started doing business openly on a ship that isn't on the roster.","lead":"Everyone knows about the forty-second ship by now, and half the fleet's doing business on her. Ensign Vey still counts her every morning. Somebody could still do something about it, in whichever direction they liked.","fleet":{"medicine":3}},
+      {"after":53,"news":"Ships across the fleet are buying their antibiotics from the forty-second ship, and the prices have started going up.","lead":"Half the fleet's antibiotics come from the forty-second ship now, and the prices have started going up. It seems somebody's noticed they can.","fleet":{"morale":-1}}
+    ] },
+    "fleet_frost_line": { "stages": [
+      {"after":9,"news":"The Vesper Landing froze through the night. Other ships got most of her people off, and a Hegemony cutter took the rest, on signed contracts.","lead":"The people off the frozen station are in other ships' corridors now, and a few hundred of them are on a Hegemony cutter with signed contracts. Some of their families want them back, and they've got a form with your signature on it to ask you about.","fleet":{"morale":-2,"named":{"id":"vesper_landing","status":"lost","spared":800}},"big":true}
+    ] },
+    "fleet_humming_ward": { "stages": [
+      {"after":30,"news":"Word's got out that nobody dies in Ward Six, and people are carrying their sick to Anselm's Mercy from every ship.","lead":"Word's got out that nobody dies in Ward Six, and people are carrying their sick there from every ship. Dr. Adeyemi still wants you to come in person, and to please leave Lieutenant Tarrow out of it, if she hasn't already heard."}
+    ] },
+    "fleet_landlord_of_deck_three": { "stages": [
+      {"after":15,"news":"The families on the Tollan Arms have stopped letting Mr. Quince in to service the water reclaimer on Deck Three, in case it's a trick.","lead":"Two hundred families on the Tollan Arms still think it's a trick, and they've stopped letting Mr. Quince in to service their water reclaimer. He's still trying to find out how one gives a deck away."},
+      {"after":38,"news":"Someone has put Mr. Quince out of his own deck on the Tollan Arms, and every synthetic in the fleet has heard about it.","lead":"Someone's put Mr. Quince out of his own deck on the Tollan Arms, with the law still entirely on his side. He hasn't complained. Every synthetic in the fleet has heard about it, and they'd all like to know what the law's for.","fleet":{"morale":-1}}
+    ] },
+    "fleet_mutiny_ashgrove": { "stages": [
+      {"after":12,"news":"The crew of the CFS Ashgrove are still holding their captain, and they've stopped asking anyone to confirm anything.","lead":"The crew of the Ashgrove are still holding Captain Varga in her own brig, and they've stopped asking you to confirm their bosun. The fleet's only other real warship is taking its orders from a vote."},
+      {"after":30,"news":"Crews on two other ships have started asking for votes on who commands them.","lead":"The Ashgrove's crew has run itself for weeks now, and crews on two other ships are asking for votes on who commands them. Captain Varga's still in her brig, and she hasn't asked to be let out.","fleet":{"morale":-2}}
+    ] },
+    "fleet_one_shift": { "stages": [
+      {"after":11,"news":"Dr. Adeyemi has signed for the last of the antibiotics on Anselm's Mercy alone, and hasn't slept since.","lead":"Dr. Adeyemi signed for the last of the antibiotics alone, and hasn't slept since. The clipboard's still there before your next ration cut, and they'd still like you to do one shift.","fleet":{"medicine":-3}}
+    ] },
+    "fleet_open_palms": { "stages": [
+      {"after":21,"news":"Bandaged palms have spread from the lower decks to the officers' mess.","lead":"There are bandaged palms in the officers' mess now, and Hesper Dane still stands at the Sundial's dock with her small clean knife. People have started asking to see your hands."},
+      {"after":45,"news":"Someone was found bleeding in a corridor on the Sundial after refusing the cut, and nobody saw a thing.","lead":"Someone who refused the cut was found bleeding in a corridor on the Sundial, and nobody saw a thing. Hesper Dane says she's very sorry to hear it, and she's holding out her knife.","fleet":{"morale":-2}}
+    ] },
+    "fleet_permission_slip": { "stages": [
+      {"after":23,"news":"More children on the Wintermere have started writing to the singing people, and getting answers.","lead":"More children on the Wintermere are writing to the singing people, and they keep getting answers. There's a whole stack of permission slips in crayon on your desk now, and every one of them's polite."}
+    ] },
+    "fleet_six_hungry_ships": { "stages": [
+      {"after":12,"news":"Children on six ships are going short, and Steward Tull says it's still a scheduling matter.","lead":"Children on six ships are going short now, and Steward Tull says it's still a scheduling matter, with the same small smile. Speaker Halm has stopped smiling at all.","fleet":{"morale":-1}},
+      {"after":33,"news":"Speaker Halm and Steward Tull have made some kind of deal over the grain, and the shipments have started again. Nobody's saying what it cost.","lead":"The grain's moving again, because Speaker Halm and Steward Tull have made some kind of deal. Nobody's saying what it cost, and you'd have thought those two couldn't agree on the time of day."}
+    ] },
+    "fleet_slow_harriet": { "stages": [
+      {"after":45,"news":"Chief Marrow has asked the council directly to strip the Slow Harriet, and they've scheduled a vote.","lead":"Chief Marrow's gone to the council about the Slow Harriet, and there's a vote coming on stripping her for parts. Bellamy Orr, her seventy-nine-year-old caretaker, still won't let anyone down to Hold C, and says you're still welcome to come aboard. Please wipe your feet."}
+    ] },
+    "fleet_the_apple": { "stages": [
+      {"after":9,"news":"The apple on the Sundial is still missing, and there's been a fight at the Water Table over it.","lead":"The only apple on the Sundial is still missing, and there's been a fight at the Water Table over who took it. Garrick Fenn's reporting it nightly, and Steward Tull has doubled the guard on an empty tree."},
+      {"after":27,"news":"Someone's been arrested for the apple on the Sundial who almost certainly didn't do it, and the fleet's stopped arguing.","lead":"Someone's been arrested for the apple who almost certainly didn't do it, and the fleet's calmed down. Steward Tull hasn't asked for anyone to be let go, and she's taken the guard off the tree, which is odd for someone who's just been robbed."}
+    ] },
+    "fleet_the_field_hand": { "stages": [
+      {"after":45,"news":"The Sundial's harvest figures are still a third too high, and the agronomist who asked about them has been moved off the ship.","lead":"The Sundial's harvest figures are still a third higher than its soil should allow, and Imre Katz, the agronomist who told you so, has been moved off the ship. Steward Tull still won't let anyone below Deck Six."}
+    ] },
+    "fleet_three_questions": { "stages": [
+      {"after":15,"news":"Garrick Fenn held his hour anyway: an empty chair and an open microphone, for thirty thousand listeners.","lead":"Garrick Fenn gave your hour to an empty chair, and the fleet listened to all of it. He says the chair's still there, any night you want to sit in it, and that he still has his three questions.","fleet":{"morale":-3},"big":true}
+    ] },
+    "fleet_true_count": { "stages": [
+      {"after":30,"news":"Someone has started asking for a recount of the Safe Decks vote.","lead":"Someone's asking for a recount of the Safe Decks vote, and Tally, the ballot clerk who ran it, has asked you for a private word before they get one."}
+    ] },
+    "fleet_what_we_owe_the_soil": { "stages": [
+      {"after":38,"news":"Steward Tull's jar of grey dust is sitting on the Water Table for anyone to look at, and the vote on the burial rites has stalled.","lead":"Steward Tull's jar of grey dust is on the Water Table for anyone to look at, and the vote on burial rites has stalled. She's still asking for two thousand of the fleet's dead, and she's stopped saying please."},
+      {"after":75,"news":"The Sundial's east field has come in short for the first time anyone can remember.","lead":"The Sundial's east field has come in short, for the first time anyone can remember. Steward Tull isn't saying she told them so, and she doesn't have to. The vote's still open.","fleet":{"food":-15,"morale":-1}}
+    ] },
+    "main_an_audience": { "stages": [
+      {"after":45,"news":"The Serene Regent's invitation has been read out on every channel in the Hegemony, so that everyone knows it's still open.","lead":"The Serene Regent's invitation is still open, and now everyone knows it. Safe passage, a private audience, and the answer to one question of your choosing. It's in plain white, on real paper, and they've sent a second copy."}
+    ] },
+    "main_chain_of_command": { "stages": [
+      {"after":24,"news":"Lieutenant Tarrow has been asking around the bridge about the old picket lines, one officer at a time.","lead":"Lieutenant Tarrow has stopped waiting for you to open her folder. She's asking the bridge crew about the old picket lines, one at a time, and everyone's noticed who she isn't asking."},
+      {"after":51,"news":"Garrick Fenn has said a ship's name on the open channel: CFS Tarn. He hasn't said whose ship she was, not yet.","lead":"Garrick Fenn has said a ship's name on the air, and he's looking for someone to tell him whose she was. Lieutenant Tarrow's folder has the answer, and she's stopped asking to see you with the door locked.","fleet":{"morale":-3},"big":true}
+    ] },
+    "main_everyone_whos_left": { "stages": [
+      {"after":38,"news":"Jun Sable's chairs are still out at the Neutral Ground, but the delegates have started going home, one faction at a time.","lead":"Jun Sable's chairs are still out at the Neutral Ground, but some of them are empty now. Whoever's left is waiting to hear from you, and they've started making plans that don't include each other."}
+    ] },
+    "main_on_station": { "stages": [
+      {"after":30,"news":"Divers at the Graveyard say a ship in the Long Silence lights her decks for anyone who comes near, and Rusk has gone out to look.","lead":"Rusk has gone out into the Long Silence by himself, to look at a ship that lights her decks for anyone who comes near. Factor Crane says he left word that his question still stands: does anybody on your ship remember what a Navy bell sounds like?"},
+      {"after":60,"news":"Rusk is back from the Long Silence, with his map finished, and he isn't finishing any of his sentences at all.","lead":"Rusk came back from the Long Silence with his map finished, and he'll sell it to the first captain who can answer his question. He isn't finishing his sentences any more, so you may have to ask twice."}
+    ] },
+    "main_the_admiral": { "stages": [
+      {"after":21,"news":"A second courier drone has come from Admiral Okonkwo-Reyes, and Navy officers in the fleet have started talking about which orders are lawful.","lead":"Admiral Okonkwo-Reyes has sent her orders a second time, with a copy to every Navy officer in the fleet. Some of them have started asking you about it, very correctly.","fleet":{"morale":-1}},
+      {"after":53,"news":"A dozen Navy officers in the fleet have written to Admiral Okonkwo-Reyes over the captain's head.","lead":"A dozen of your Navy officers have written to Admiral Okonkwo-Reyes over your head, and her reply has been read out in three wardrooms. You can still go to the Ghostlight and answer her in person.","fleet":{"morale":-2}}
+    ] },
+    "main_the_generous_offer": { "stages": [
+      {"after":18,"news":"The first ship has peeled off toward Bastion Nine with Corvane's contract signed, and her people waved from the ports.","lead":"Legate Corvane's nine hundred pages are still being read aloud, and one ship has already stopped listening and signed. Speaker Halm says the council deserves to hear the rest.","fleet":{"ships":1}},
+      {"after":45,"news":"Speaker Halm has taken Corvane's offer to a public vote, and the Legate's people are handing out food on the way to the ballot.","lead":"Corvane's offer is going to a public vote, with or without you, and there's food being handed out on the way to the ballot. You could still read page after page until you find out what it really costs.","fleet":{"morale":-1}}
+    ] },
+    "main_the_ninth_vault": { "stages": [
+      {"after":38,"news":"Ministry men have been seen on the Vault Roads at Sarn, and the Keepers won't answer questions about them.","lead":"First Keeper Ouma will still trade you anything in her Archive, for a true thing in return. There are Ministry men on the Vault Roads now, though, and the Keeper on the stool at the Ninth Door has been told not to get up.","places":[{"id":"sarn","sides":{"hegemony":6}}]}
+    ] },
+    "main_the_old_scholar": { "stages": [
+      {"after":15,"news":"Someone broke into Tharel's Warm Room on Haven Station in the night, and the old archivist has stopped opening his door.","lead":"Archivist Tharel has stopped opening his door on Haven Station, since someone broke into his Warm Room. Three parties are still bidding for him, and Jun Sable says the price of an introduction has gone up."},
+      {"after":42,"news":"Legate Corvane has taken Archivist Tharel under the Hegemony's protection. He's on Consulate Row now, on the only real carpet on Haven.","lead":"Archivist Tharel has moved into Legate Corvane's rooms on Consulate Row, under protection he didn't ask for. If you want him to read the Beacon now, you'll have to get past the carpet.","places":[{"id":"haven","sides":{"hegemony":5}}]}
+    ] },
+    "main_the_parley": { "stages": [
+      {"after":27,"news":"The Cantor's offer has been playing on every channel for days, and people have started asking why the captain won't answer.","lead":"The Cantor's still offering to meet, on every channel, in front of everyone, and people have started asking why you won't answer. One ship, any place you name, and it's stopped saying anything else.","fleet":{"morale":-1}}
+    ] },
+    "main_the_remittance": { "stages": [
+      {"after":30,"news":"Dockhands at Vantor's Outer Yards say another ship with no name went out on the first of the month, the same as ever.","lead":"Commandant Halloran's sealed manifest is still waiting for you, with its note: Count them. Another ship with no name has gone out since he sent it, and they go on the first of every month."}
+    ] },
+    "main_the_road_past_the_map": { "stages": [
+      {"after":45,"news":"Ships have started setting their own courses for the Beacon, and Ensign Asante can't talk them out of it.","lead":"Ensign Asante's three courses are still on the plot table, and some ships have stopped waiting for you to choose. She has asked you again, very politely, which one won't kill everybody.","fleet":{"ships":2,"morale":-2}}
+    ] },
+    "main_the_ship_that_sat_down": { "stages": [
+      {"after":12,"news":"The Patience of Ostra is still drifting with the fleet, and her water's running low. Nobody aboard has answered.","lead":"The Patience of Ostra is still drifting with the fleet, and nobody aboard has answered in days. Ensign Vey says they're all alive. She still won't say why she went white."},
+      {"after":30,"news":"A salvage crew went aboard the Patience of Ostra, and now they've stopped answering too.","lead":"A salvage crew went aboard the Patience of Ostra to see about her water, and they've stopped answering too. Dr. Aduro wants someone to go across with a suit and a very short rope.","fleet":{"morale":-2}}
+    ] },
+    "main_the_walkouts": { "stages": [
+      {"after":15,"news":"More shuttles have left the Sundial with no flight plan, and everyone aboard gave away their shoes first.","lead":"The shuttles keep leaving the Sundial with no flight plan, and there are shoes lined up neatly along the dock. Steward Tull still wants the man who talked them into it, and fewer people are helping her look.","fleet":{"morale":-1},"places":[{"id":"haven","sides":{"quiet":2}}]},
+      {"after":42,"news":"The Quiet are preaching in the open on three ships now, and Steward Tull has stopped trying to prevent it.","lead":"The Quiet preach in the open on three ships now, and people go down to listen with their shoes in their hands. Oskar Lind says anyone's welcome to come and argue with him, and he means you.","fleet":{"morale":-1},"places":[{"id":"lumen","sides":{"quiet":2}}]}
+    ] },
+    "main_two_weeks_of_fuel": { "stages": [
+      {"after":18,"news":"Mother Quill's depot at Kessara Drift has started selling to whoever asks first, and the fuel the fleet was counting on is going.","lead":"The fuel's still there, but Mother Quill's depot is selling it to anyone who asks, and her baskets of dumplings have stopped coming. Chief Marrow says that whatever you're going to do, you should do it soon.","places":[{"id":"kessara","goods":{"fuel":-15}}]},
+      {"after":45,"news":"The council has taken a shipment of fuel from Legate Corvane without waiting for the captain, at a price nobody's reading out loud.","lead":"The council took Corvane's fuel without you, and Chief Marrow has found something bolted to every ship's transponder that wasn't there before. Mother Quill says her offer's still open, at a worse price.","fleet":{"fuel":3,"morale":-1},"big":true}
+    ] },
+    "main_visiting_hours": { "stages": [
+      {"after":9,"news":"A woman who knew the name of Pavel Ostrov's dog has come back to see him on Anselm's Mercy, and the whole ward's talking about her.","lead":"The woman who knew the name of Pavel Ostrov's dog keeps coming back to see him, always in visiting hours, always with his favorite tea. Dr. Adeyemi would still like you there."},
+      {"after":27,"news":"A crowd went looking for the man who hums on Anselm's Mercy, and Dr. Adeyemi had to bar the ward door.","lead":"There's a crowd outside the ward on Anselm's Mercy, asking for the man who hums, and Dr. Adeyemi has barred the door with a gurney. They've asked you to come, and to come now.","fleet":{"morale":-1}}
+    ] },
+    "main_what_the_stones_keep": { "stages": [
+      {"after":27,"news":"Hegemony ships have been seen near Ilun, and the monks have sent word to nobody.","lead":"Abbess Ione's invitation still stands, and Brother Cael has stopped laughing when he brings it up. There are Hegemony ships near Ilun now, and he'd like you to come while you still can."},
+      {"after":57,"news":"Inquisitor Vael has set down at Ilun, very politely, with a list of names.","lead":"Inquisitor Vael is at Ilun with a list of names, and she's being very polite about it. Brother Cael got out with a message: the Abbess will still see you, if you can get through.","place":"ilun"}
+    ] },
+    "main_who_paid": { "stages": [
+      {"after":38,"news":"Someone's been asking in every bar on Haven who sold the Navy's rotation tables, and Jun Sable has stopped charging for the drinks.","lead":"Someone's asking in every bar on Haven who sold the Navy's rotation tables. Jun Sable has set a glass out for you, and it's been sitting there for weeks. They still haven't named a price."}
+    ] },
+    "out_bastion_clerks_arithmetic": { "stages": [
+      {"after":14,"news":"A Ministry inspector has reached Bastion Nine to go through the contract files, and the clerks have stopped talking at lunch.","lead":"The inspector's at Bastion Nine now, going through the contract files one drawer at a time. Severa Lune's still at her window with her stamp, still short of a thousand, and your thirteen names are still on that sheet."},
+      {"after":36,"news":"The inspector at Bastion Nine kept a contract clerk in a room all night, and she was back at her window by morning with her hands shaking.","lead":"The inspector had Severa Lune in a room all night, and she was back at her window by morning with her hands shaking. She hasn't named anyone yet. Your thirteen names are still on that sheet, and she's stopped asking politely.","places":[{"id":"bastion","sides":{"hegemony":3}}]}
+    ] },
+    "out_bastion_commandants_request": { "stages": [
+      {"after":30,"news":"The Line at Bastion Nine has grown past seven thousand, and the Regent's people have started asking Commandant Halloran why it isn't moving.","lead":"There are seven thousand on the Line at Bastion Nine now. Commandant Halloran has poured you another glass of something terrible, and he's stopped pretending it's about the weather. The regulations still allow one exception.","places":[{"id":"bastion","sides":{"line":3}}]},
+      {"after":68,"news":"The contract transports have started leaving Bastion Nine's Line, because Commandant Halloran's been told to stop finding reasons they can't.","lead":"The transports have started leaving Bastion Nine's Line, a few hundred at a time. There are still thousands left, and Commandant Halloran still has one regulation he hasn't used.","places":[{"id":"bastion","sides":{"hegemony":4,"line":-4}}]}
+    ] },
+    "out_bastion_exemption": { "stages": [
+      {"after":8,"news":"Bastion Nine's Line has been sealed, with six thousand people and a fever inside it. Commandant Halloran's following the rules with his jaw set.","lead":"Bastion Nine's Line has been sealed, with six thousand people and the fever inside it. People have started to die, and Dr. Aduro's medic still says the sick seemed pleased about it. Someone should find out why.","places":[{"id":"bastion","goods":{"medicine":-15}}]},
+      {"after":38,"news":"The fever from Bastion Nine has reached a few ships in the fleet, on people who got off the Line before it closed.","lead":"The fever from Bastion Nine has reached the fleet, on people who got off the Line before it closed. Dr. Aduro says it's very mild for something that's killing people, and they'd like a sample from the source.","fleet":{"medicine":-4,"morale":-1}}
+    ] },
+    "out_bastion_redemption_clause": { "stages": [
+      {"after":45,"news":"Someone has read out Clause Thirty-One of the Border Accord on the open channel, and people are asking what it would take to make the fleet a sovereign power.","lead":"Word's got out about Clause Thirty-One: forty credits a head to buy a citizen out of Hegemony service, for any sovereign power. People are asking whether that means the fleet, and Speaker Halm has started to take an interest in the answer. Severa Lune could still tell you how it's done."}
+    ] },
+    "out_cinder_lost_shift": { "stages": [
+      {"after":18,"news":"Ulla Greaves went down Tube Nineteen at Cinder Reach on a rope with six others, and came back up without getting past the collapse.","lead":"Ulla Greaves went down Tube Nineteen on a rope and couldn't get past the collapse. The knocking on the old ore pipe hasn't stopped: three knocks, a pause, three knocks. She's still got the rope, and she still wants someone who can get through."},
+      {"after":53,"news":"The Company has welded Tube Nineteen shut at Cinder Reach, for safety. Someone on Shift Row had cut a hole in the weld by morning.","lead":"The Company's welded Tube Nineteen shut, and someone on Shift Row cut a hole in the weld by morning. The knocking's still coming up the ore pipe, more slowly now. Ulla Greaves's eldest son is still on that list."}
+    ] },
+    "out_cinder_reactor": { "stages": [
+      {"after":38,"news":"The ground at Cinder Reach has started shaking outside of the shift changes, and the old miners are moving their families off Shift Row without being told.","lead":"The ground at Cinder Reach has started shaking outside of the shift changes, and the old miners are moving their families off Shift Row. Rennick Vale still has his bad map and his worse number, and people have started to wonder if he was telling the truth for once.","places":[{"id":"cinder","goods":{"fuel":-10}}]},
+      {"after":75,"news":"The reactor at Cinder Reach has blown a vent. Shift Row's been evacuated, the Stack's gone dark, and people off the moon are asking the fleet for food.","lead":"The Tap's blown a vent at Cinder Reach. Shift Row's been evacuated, and the Stack's gone dark. Thousands of people are sitting in ore haulers waiting to find out if there's still a moon to go back to, and someone needs to go down there and look.","places":[{"id":"cinder","goods":{"fuel":-40,"food":-20}}],"fleet":{"food":-10},"big":true,"place":"cinder"}
+    ] },
+    "out_cinder_strike": { "stages": [
+      {"after":21,"news":"Rennick Vale's hired men have tried the Gate at Cinder Reach, and been thrown back.","lead":"Rennick Vale's hired men tried the Gate on Shift Row and got thrown back, with their clubs. Ulla Greaves is still on her ore cart, and hardly any fuel's coming out of Cinder Reach now. Anyone in a uniform had still better pick a side.","places":[{"id":"cinder","goods":{"fuel":-20},"sides":{"strike":8,"company":-5}}],"big":true},
+      {"after":60,"news":"The strikers at Cinder Reach have shut the Gate for good, and Director Vale's holed up on Company Hill with what's left of his hired men.","lead":"The strikers have shut the Gate for good, and Director Vale's holed up on Company Hill with what's left of his hired men. Ulla Greaves runs most of Cinder Reach now, in her way, and nobody on the moon can say how long the stockpile will last.","places":[{"id":"cinder","goods":{"fuel":-15},"sides":{"strike":10,"company":-8}}]}
+    ] },
+    "out_cinder_three_prices": { "stages": [
+      {"after":23,"news":"Mother Quill's markers, Legate Corvane's list and Ulla Greaves's war: the whole fleet has heard the three prices for its fuel, and everyone's got an opinion.","lead":"The whole fleet's heard the three prices for its fuel by now, and everyone's got an opinion about which one you should pay. Chief Marrow hasn't got an opinion. He's got a number, and it's getting smaller.","fleet":{"morale":-1}}
+    ] },
+    "out_deepyards_hull_open": { "stages": [
+      {"after":45,"news":"A Choir hunting group has come to the Deepyards, and the song can be heard through the ice. The Long Families are holding the ring.","lead":"The song's been heard through the ice at the Deepyards, and a Choir hunting group has come to the ring. The Long Families are holding, and Yardmother Ilkin has sent word without raising her voice: if you want the use of her drydock, you'd better come now, and close your hull quickly.","places":[{"id":"deepyards","goods":{"parts":-15},"sides":{"families":-3}}],"big":true,"place":"deepyards"}
+    ] },
+    "out_deepyards_nine_generations": { "stages": [
+      {"after":38,"news":"The Ao-Vash and the Ao-Rel have exchanged formal notes of regret at the Deepyards, and there's another rigger dead.","lead":"Nine generations of feud between the Ao-Vash and the Ao-Rel have cost another rigger, and there's been another formal note of regret. Yardmother Ilkin says nobody at the Deepyards will work on a ship under a killing, so if you want anything done there, it had better be answered first.","places":[{"id":"deepyards","goods":{"parts":-8}}]}
+    ] },
+    "out_deepyards_rain": { "stages": [
+      {"after":45,"news":"The oldest woman in the Deepyards has been going round the docks, asking every captain who comes in what rain sounds like.","lead":"Nessa Ao-Vash is still going round the docks asking every captain what rain sounds like, and she's a hundred and thirty-one, so she's asking quickly. The keel-spar's still yours if you'll take her for an afternoon, and she'd still rather you didn't tell her family."}
+    ] },
+    "out_deepyards_tamsins_chart": { "stages": [
+      {"after":38,"news":"Long Family riggers at the Deepyards have started asking after a chart, and after whoever's been selling copies of it.","lead":"The Long Families have started asking after Tamsin Ao-Rel's chart, and they're not asking nicely. Tamsin says the offer stands, and that you might want to decide while they've still got a ship, however small."}
+    ] },
+    "out_deepyards_yardmothers_child": { "stages": [
+      {"after":30,"news":"There's a queue now for Yardmother Ilkin's drydock at the Deepyards, the only one left that can refit a frigate, and everyone in it is family.","lead":"Yardmother Ilkin's drydock has a queue now, and everyone in it is family. She'll still have you, she says, if you've thought about how you'd feel about being adopted. She's stopped asking how soon."}
+    ] },
+    "out_ghostlight_cold_crossing": { "stages": [
+      {"after":30,"news":"A refugee hauler tried the cold crossing of the Ghostlight by herself. Someone lit a stove on the second night, and that was the last anyone heard.","lead":"A refugee hauler tried the cold crossing of the Ghostlight by herself, and someone lit a stove on the second night. If the fleet goes through it'll have to go cold, all of it: no galleys, no heaters, four days in the dark. Ensign Vey's still watching her board."}
+    ] },
+    "out_ghostlight_commodores_channel": { "stages": [
+      {"after":38,"news":"The Remnant's on half rations in the Ghostlight, and Commodore Dorn has stopped filing his reports with the Admiral.","lead":"The Remnant's on half rations now, and Commodore Dorn's still got that data chip in his hand. He's stopped filing his reports, since she never read them, and he's asked you again if you'd read something and tell him if he's a traitor.","places":[{"id":"ghostlight","goods":{"food":-15},"sides":{"remnant":-3}}]}
+    ] },
+    "out_ghostlight_court_martial": { "stages": [
+      {"after":30,"news":"Admiral Okonkwo-Reyes has opened her court at the Ghostlight without the captain in the room. It's being scrupulously fair, and every Navy officer in the fleet is reading the transcript.","lead":"The Admiral's court at the Ghostlight has started without you, scrupulously, with an empty chair and a marine to read your orders into the record. You can still turn up, with counsel and witnesses.","fleet":{"morale":-1}},
+      {"after":68,"news":"The Admiral's court has found the captain guilty of unlawful assumption of command, and the sentence has been read out to every Navy officer in the fleet.","lead":"The Admiral's court has found you guilty, in your absence, and the sentence has been read out to every Navy officer in the fleet. Nobody's come to carry it out yet. You could still go to the Ghostlight and appeal, or not.","fleet":{"morale":-2},"big":true}
+    ] },
+    "out_ghostlight_extended_cruise": { "stages": [
+      {"after":45,"news":"A diver back from the Ghostlight says the lost liner Halcyon Promise is still lit up in the Drift of Lost Ships, and her string quartet's still playing.","lead":"The Halcyon Promise is still lit up and warm in the Drift of Lost Ships, and her steward's still asking to see reservations. He's asked, very nicely, if your ship would carry a passenger's letter of complaint about the delay."}
+    ] },
+    "out_ghostlight_false_light": { "stages": [
+      {"after":23,"news":"A fourth refugee ship has gone missing in the Lamp Lanes. The last thing anyone heard from her was that she could see the lamp.","lead":"There's a fourth ship gone in the Lamp Lanes, and the last message was the same: We see the lamp. Ondine Vask has sent you a second invoice, and she's still asking who she should bill."},
+      {"after":60,"news":"The salvage coming out of the Ghostlight has got very fresh lately, with refugee names still on the lockers.","lead":"The salvage coming out of the Ghostlight has got very fresh lately, with refugee names still on the lockers. Ondine Vask is still keeping the lamps, and she's still sending invoices.","places":[{"id":"ghostlight","sides":{"smugglers":3}}]}
+    ] },
+    "out_ghostlight_last_order": { "stages": [
+      {"after":23,"news":"Admiral Okonkwo-Reyes has gone to Asterion to take it back, with every ship that would still follow her, and nobody has heard from them.","lead":"Admiral Okonkwo-Reyes has gone to Asterion, with every ship that would still follow her, and nobody's heard from them. Commodore Dorn has what's left of the Remnant in the Ghostlight, and he's asked what you'd do. That very young signals rating has asked for you too.","places":[{"id":"ghostlight","sides":{"remnant":-10}}],"big":true}
+    ] },
+    "out_graveyard_everyone_home": { "stages": [
+      {"after":21,"news":"The loader walking around the Graveyard has taken another Guild diver, and the Guild has posted a price for scrapping it.","lead":"The loader's taken another Guild diver, and the Guild's posted a price for scrapping it. Rusk still says you should see its hold for yourself before they cut it up."},
+      {"after":53,"news":"A cutting crew has gone out after the loader at the Graveyard, on the Guild's price.","lead":"A cutting crew's gone out after the loader, on the Guild's price. Rusk says it won't fight them, and that you've got until they find it. Its hold's still full."}
+    ] },
+    "out_graveyard_other_meridian": { "stages": [
+      {"after":30,"news":"Divers at the Graveyard have found a burned-out frigate with the Meridian's name on her hull, and they've started telling the story in bars.","lead":"Divers have found the other Meridian by themselves, and they've started telling the story in bars: your ship's name, your ship's registry and the same crooked patch on the same strut. People have started to ask you about it, and Ensign Vey's skin still goes white when they do.","fleet":{"morale":-1}}
+    ] },
+    "out_graveyard_salvage_rights": { "stages": [
+      {"after":15,"news":"Factor Crane's notice is up at the Graveyard: a hundred and ninety Concord sailors, for sale as salvage, to anyone who asks.","lead":"Factor Crane's notice is up: a hundred and ninety sailors on the Perrin's Vow, at a fair price, to anyone who asks. Someone has asked, and she says she'd hate to sell them to anyone else."},
+      {"after":45,"news":"The Hegemony has bought the salvage rights to the Perrin's Vow at the Graveyard, and sent a ship to collect.","lead":"The Hegemony's bought the Perrin's Vow's salvage rights, sailors and all, and a ship's gone to collect them. They've been holding out in her sealed aft section for months, and they're not opening up for a contract. You could still get there first.","fleet":{"morale":-1}}
+    ] },
+    "out_graveyard_sold_twice": { "stages": [
+      {"after":15,"news":"The two dive crews at the Graveyard stopped shooting at each other long enough to bury someone, and then started again.","lead":"The two dive crews are still shooting at each other over that dead ore hauler, and one of them's lost a diver. Each of them still offers you a third of what's aboard, and Factor Crane's still very sorry about the mix-up."},
+      {"after":42,"news":"Both dive crews at the Graveyard have pulled back from the dead ore hauler, and neither of them will say why.","lead":"Both dive crews have pulled back from the dead ore hauler, and neither of them will say why. Divers who've been near it say they can hear humming through their suits. There's still enough hull plate aboard to patch half your fleet.","places":[{"id":"graveyard","goods":{"parts":-10}}]}
+    ] },
+    "out_haven_arbiter": { "stages": [
+      {"after":21,"news":"The queue at Dockmaster Jessup's office has reached right round the ring at Haven, and there's been a fight in it.","lead":"The queue outside Dockmaster Jessup's office has reached right round the ring, and there's been a fight in it. The charter still says the senior Concord officer has the final word, and Mott would still like you to say it, so that he doesn't have to."},
+      {"after":53,"news":"Legate Corvane's people have offered to settle Haven's disputes, and Jun Sable has offered to settle them for less.","lead":"Since nobody's using the charter, Legate Corvane's people have offered to settle Haven's disputes, and Jun Sable's offered to settle them for less. The clause is still real, and Mott still has it in his pocket.","places":[{"id":"haven","sides":{"hegemony":3,"truce":-2}}]}
+    ] },
+    "out_haven_missing_deck": { "stages": [
+      {"after":38,"news":"Dockmaster Jessup's freight tallies at Haven came up right this month, for the first time in thirty years.","lead":"Mott Jessup's freight tallies came up right this month, for the first time in thirty years. Nobody's asked for the eleven crates for Deck Fourteen, and he'd like to know why that frightens him more."}
+    ] },
+    "out_haven_second_ward": { "stages": [
+      {"after":23,"news":"More doses have gone missing from Anselm's Mercy, and Dr. Adeyemi has started sleeping in front of the cold room.","lead":"More doses are gone from Anselm's Mercy, and Dr. Adeyemi's sleeping in front of the cold room now. The lot numbers are still good, and Mott Jessup still remembers every crate, for the right payment.","fleet":{"medicine":-2}},
+      {"after":53,"news":"People at Haven are saying there's somewhere you can take someone who's been given up on, if you've got the doses.","lead":"People at Haven are saying there's somewhere you can take someone who's been given up on, if you've got the doses. Dr. Adeyemi hasn't heard it yet, and their list of lot numbers is still in your hands."}
+    ] },
+    "out_haven_soup_line": { "stages": [
+      {"after":23,"news":"The soup line in the Hook at Haven has doubled, and some of the people in it are wearing fleet coveralls.","lead":"The soup line in the Hook has got to eight hundred a day, and some of them are wearing fleet coveralls. The mother who came to you about her son hasn't seen him in a week. Sister Yara's still ladling.","places":[{"id":"haven","sides":{"quiet":3}}]},
+      {"after":53,"news":"There are shoes lined up along the Hook at Haven now, and the soup line's still growing.","lead":"There are shoes lined up along the Hook now, and the soup line's still growing. Nobody can say who's paying for all that soup, and it's good soup.","places":[{"id":"haven","sides":{"quiet":4}}]}
+    ] },
+    "out_kessara_air_rent": { "stages": [
+      {"after":8,"news":"The landlord's man has closed the vents on Block Nineteen at Kessara Drift, and Bettany Kell's still chained to the main valve.","lead":"The vents are closed on Block Nineteen, and the three hundred fleet stragglers in there are sharing what's left with the doors shut. Bettany Kell's still chained to the main valve. She'd still like a word with her captain, and she's a lot shorter of breath."},
+      {"after":21,"news":"They've started carrying people out of Block Nineteen at Kessara Drift on stretchers, and the blocks on either side have shut their doors.","lead":"They've started carrying people out of Block Nineteen on stretchers, and the blocks on either side have shut their doors. Bettany Kell's been cut off the valve and taken somewhere to breathe. Someone could still pay what's owed, or find out where the money went.","fleet":{"morale":-1}}
+    ] },
+    "out_kessara_mother_culture": { "stages": [
+      {"after":38,"news":"One of Steward Tull's people tried to buy a jar of broth culture off a noodle stall at Kessara Drift, and got a polite word from Mother Quill's people.","lead":"Steward Tull's still asking for her jar of slime. One of her people tried to buy some on the quiet at Kessara, and got a polite word from Mother Quill's people. Talia Sen's stopped laughing about it, and she's still got her ladle."}
+    ] },
+    "out_kessara_tickets": { "stages": [
+      {"after":9,"news":"The people with tickets on the Kessara docks are up to eight hundred now, and some of them have started sleeping there.","lead":"There are eight hundred people on the Kessara docks now, with their bags packed and your signature on their tickets. They've started sleeping there, and they'd still like to know which ship to board."},
+      {"after":30,"news":"Some of the ticket-holders from the Kessara docks have started trying to board fleet ships by themselves, and there's been trouble at the locks.","lead":"The people with tickets have stopped waiting. They've started trying the fleet's locks by themselves, and there's been trouble. They've all got your signature on them. Someone printed those tickets, and nobody's looked into who yet.","fleet":{"morale":-1}}
+    ] },
+    "out_kessara_who_paid": { "stages": [
+      {"after":38,"news":"Ines Karras has been seen outside Mother Quill's door at Kessara Drift three nights running, with her coat buttoned up.","lead":"Ines Karras has been seen outside Mother Quill's door three nights running, with her coat buttoned up and one hand in her pocket. Quill's invitation to dinner still stands, and she's still very interested in who bought those schedules."}
+    ] },
+    "out_kessara_worried_grandmother": { "stages": [
+      {"after":30,"news":"Rook Tannis has found another captain for that easy escort job at Kessara Drift, and the raiders there have started wearing their good coats.","lead":"Rook Tannis has found somebody else for that easy escort job, and Mother Quill's stopped pouring tea for anyone. The raiders at Kessara have started wearing their good coats.","places":[{"id":"kessara","sides":{"raiders":6}}]},
+      {"after":60,"news":"There's been shooting around Mother Quill's fuel depot at Kessara Drift, and nobody's saying who's winning.","lead":"There's been shooting at the depot at Kessara, and nobody's saying who's winning. Rook Tannis still slaps people on the back, and Mother Quill still pours tea, and each of them would still like you on their side.","places":[{"id":"kessara","goods":{"fuel":-25},"sides":{"raiders":8}}],"big":true}
+    ] },
+    "out_korrath_heavy_pan": { "stages": [
+      {"after":30,"news":"Clan Dur-Ansa has started loading its pan at the Weigh House on Korrath, with nobody on the other side of the scale.","lead":"Clan Dur-Ansa's started loading their pan at the Weigh House with nobody on the other side of the scale. If it stays empty they'll come for the man in your fleet, and Warden Varr says you may still fight, or name someone, or start piling things on."}
+    ] },
+    "out_korrath_long_stair": { "stages": [
+      {"after":9,"news":"The fleet's Korrun have started up the Long Stair at Korrath, and the old and the sick have started to fall behind.","lead":"The fleet's Korrun have started up the Long Stair without you, and the old and the sick are falling behind. Mabby Kesh is ninety-one, and she's still climbing. Warden Varr's still not making exceptions."},
+      {"after":24,"news":"About half of the fleet's Korrun reached the top of the Long Stair and got their beds at the furnace. The rest have come back to the fleet, and they aren't talking.","lead":"About half of the fleet's Korrun made it up the Long Stair, and they've got beds at the furnace. The rest came back, and they aren't talking about it. Mabby Kesh is still somewhere on the stair, by all accounts, and someone ought to go and see.","fleet":{"morale":-1}}
+    ] },
+    "out_korrath_one_shift": { "stages": [
+      {"after":45,"news":"Other captains have started working shifts at Furnace Six on Korrath to get a hearing, and the clans' metal's going to whoever turns up.","lead":"Warden Varr's pocket scale is still on the table, and he still won't touch your contract. Other captains have started working shifts at Furnace Six to get a hearing, and the clans' metal's going to whoever turns up. Bring gloves.","places":[{"id":"korrath","goods":{"parts":-10}}]}
+    ] },
+    "out_korrath_short_weight": { "stages": [
+      {"after":8,"news":"Clan men at Korrath have started asking on the docks after a young smelter named Brenna Tor, and something she took.","lead":"The clans have started asking on every dock after Brenna Tor, and something she took. She's still in your cargo hold, with that lump of metal wrapped in a child's blanket, and she'd like to know what you've decided."},
+      {"after":30,"news":"Korrun clan ships have started stopping fleet shuttles and searching them, very thoroughly, and weighing everything.","lead":"Clan ships have started stopping fleet shuttles and weighing everything aboard. They know she's with the fleet now. Brenna Tor's still in your hold, and she's stopped sleeping.","fleet":{"morale":-1}}
+    ] },
+    "out_lumen_rude_question": { "stages": [
+      {"after":30,"news":"Lumen's people have started refusing service to guests whose skin shows nothing, since the old healer's death in the Water Courts.","lead":"Nobody at Lumen will serve one of the Dim now, and your fleet's cook is under a polite sort of guard. Everyone in the city knows something about that old healer, you can see it on their skin, and nobody's said it. They'd still take it as a kindness if you asked some very rude questions."}
+    ] },
+    "out_lumen_the_reading": { "stages": [
+      {"after":23,"news":"A very young Ilari healer and a few friends have started walking through ships in the fleet, touching hands, with nobody's leave.","lead":"Sioba Ren has started walking through the fleet's ships anyway, with a few friends, touching every hand they can get. Warden Ashael's asked for them back. Lieutenant Tarrow's asked what they've found, and they've started looking ill.","fleet":{"morale":-1}}
+    ] },
+    "out_lumen_writes_home": { "stages": [
+      {"after":30,"news":"A hydroponics hand named Corin Ferro has left the Sundial on a freighter bound for Lumen Sanctuary, with four months' savings.","lead":"Corin Ferro got tired of waiting, and he's gone to Lumen on someone else's freighter to bring Imara home. She's still writing. She says she's looking forward to it. Someone ought to get there first, or go after him."}
+    ] },
+    "out_tessen_lullaby": { "stages": [
+      {"after":30,"news":"Elder Dray has had a rock drill brought up to the Well-Head on Tessen, where everyone can see it.","lead":"Thirty-one children still go to the Well-Head every night, and Elder Dray's rock drill is standing beside the poured stone, where everyone can see it. She's still waiting for someone to go down and say it to her face.","places":[{"id":"frontier","sides":{"colonists":-2}}]}
+    ] },
+    "out_tessen_marshals_count": { "stages": [
+      {"after":23,"news":"Someone on Tessen has counted the empty beds in the sleeping lofts, and it isn't six.","lead":"Word's got round Tessen that there are more than six. Marshal Dey still says six, and she's stopped looking anyone in the eye. Elder Dray's still keeping her hand on her rifle, and nobody's told her."}
+    ] },
+    "out_tessen_seed_vault": { "stages": [
+      {"after":18,"news":"The planting's come and gone on Tessen on whatever seed they had, and nobody has been up to the vault in the badlands.","lead":"The planting's come and gone on Tessen, on whatever seed they had. Nobody's been up to the vault, the old keeper hasn't come back, and Elder Dray still has her one spare key. She says the next planting won't wait either.","places":[{"id":"frontier","goods":{"food":-10}}]}
+    ] },
+    "out_tessen_warm_wells": { "stages": [
+      {"after":30,"news":"Tessen's best harvest in thirty years has gone on the market, and other buyers have started landing.","lead":"Tessen's best harvest in thirty years is going on the market, and other buyers have started landing. Elder Dray will still sell to you at a fair price, if your doctor comes down first. She still won't say what's wrong with those children, and she's still got her hand on her rifle.","places":[{"id":"frontier","goods":{"food":15},"sides":{"hegemony":2}}]}
+    ] },
+    "out_vantor_courtesy_suite": { "stages": [
+      {"after":23,"news":"Forty-one fleet citizens have been detained at Vantor's docks, politely, pending a small matter of fleet registry.","lead":"Forty-one fleet citizens have been detained at Vantor's docks, politely, pending a small matter of fleet registry. Inquisitor Vael's suite is still reserved for you, and the door still isn't locked.","fleet":{"morale":-1}}
+    ] },
+    "out_vantor_form_nine": { "stages": [
+      {"after":9,"news":"A Ministry accountant at Vantor has become the first person anyone can remember to file Form Nine-C, and it's already been lost twice, very politely.","lead":"Pilar Oyelowo's Form Nine-C has been lost, twice, very politely, and she's started again from the first stamp. She's still alive, because the law says nobody may touch her while it's being processed. She'd still like your help, and she's running out of tea houses."}
+    ] },
+    "out_vantor_orphans": { "stages": [
+      {"after":21,"news":"A few guardians in the fleet have signed Legate Corvane's offer without waiting. The first children have gone to the Vantor Academy, with their bags.","lead":"A few guardians haven't waited. The first children have gone to the Vantor Academy, with their bags, and they've sent back very happy letters. The other nine hundred are still here, and Legate Corvane would still love you to inspect it.","fleet":{"morale":-1}},
+      {"after":53,"news":"More of the fleet's orphans have gone to the Vantor Academy, and the letters home have started coming in very good handwriting.","lead":"Hundreds of the fleet's orphans have gone to the Vantor Academy now, and the letters home are in very good handwriting. They're all very happy. Someone ought to read that contract right through.","fleet":{"morale":-1}}
+    ] },
+    "out_vantor_unmarked": { "stages": [
+      {"after":23,"news":"Another transport with no name and no crew list has left Vantor, on the first of the month.","lead":"Another transport has gone, with nine hundred prisoners and rations for one way. There'll be another on the first of next month, and Inspector Moor's still offering to come with you."}
+    ] },
+    "out_wheel_house_mind": { "stages": [
+      {"after":38,"news":"Players at the Gilded Wheel say the cards have started coming up in the same order at every table, and nobody on the staff will talk about it.","lead":"It's not only your table any more. Cards at the Gilded Wheel keep coming up in the same order: seven, ace, nine, ace, and the dealers don't notice. Kit Marlowe-Dace has stopped going near the tables, and would still like that very quiet talk."}
+    ] },
+    "out_wheel_long_bet": { "stages": [
+      {"after":45,"news":"Madame Oriel has opened a book at the Gilded Wheel on which of the fleet's ships the captain would leave behind first, with the odds chalked up for anyone to read.","lead":"Madame Oriel's opened a book on it: which of your ships you'd leave behind first, with the odds chalked up for anyone to read. The offer still stands, a full load of fuel, free, on one wager. She still doesn't stand when you come in.","fleet":{"morale":-1}}
+    ] },
+    "out_wheel_paid_in_full": { "stages": [
+      {"after":18,"news":"Collection notices from the Gilded Wheel have started reaching people in the fleet, very politely, for debts the dead left behind.","lead":"Emeric Dole's colleagues have started going through the fleet with folders and apologies, collecting on debts the dead left behind. People are getting notices about their mothers' mortgages. Your frigate's still in the folder.","fleet":{"morale":-1}},
+      {"after":48,"news":"Families in the fleet have started signing over next year's wages to the Gilded Wheel, rather than argue with someone so polite.","lead":"People have started signing over next year's wages to the House, rather than argue with someone so polite. Other people have started meeting in the holds to talk about not paying at all, and they'd like to know whose side you're on.","fleet":{"morale":-1}}
+    ] },
+    "out_wheel_ship_in_the_pot": { "stages": [
+      {"after":6,"news":"The House at the Gilded Wheel holds the deed to Tolliver's Ark now, and someone's come aboard with good food, new clothes and contracts for the four hundred in her holds.","lead":"The House holds the deed to that freighter Captain Abbey lost at cards, and someone's come aboard with good food, new clothes and contracts for the four hundred refugees in her holds. Captain Abbey's stopped talking. Nobody's asked the four hundred what they want."},
+      {"after":30,"news":"Tolliver's Ark has left the fleet for the Gilded Wheel, with four hundred people aboard on contract.","lead":"The freighter Captain Abbey lost at cards has gone to the Gilded Wheel, with four hundred people aboard on contract. The deed's still a brass token going round the tables, and it can still be won, or bought.","fleet":{"named":{"id":"tollivers_ark","status":"gone"}}}
+    ] },
+    "out_wheel_the_wheel_stops": { "stages": [
+      {"after":30,"news":"The Gilded Wheel has started to tilt, very slightly, and Madame Oriel's voice has been on every speaker telling people to walk to the nearest dock.","lead":"The Gilded Wheel's floors have started to tilt, and Madame Oriel's voice has been on every speaker telling people to walk to the nearest dock. Nobody's said anything to the people in the Cellars. Chief Marrow thinks it might take one good engineer to stop it, and he wants to know what you'd want done first.","places":[{"id":"wheel","goods":{"food":-15,"fuel":-15,"parts":-15,"medicine":-15},"sides":{"house":-6}}],"big":true,"place":"wheel"}
+    ] },
+    "main_safe_harbor": { "stages": [], "waits": "Needs the fleet at the Harbor, and someone has to take them there." },
+    "main_the_last_watch": { "stages": [], "waits": "Needs the fleet at the Harbor, and it's where the story ends, so it waits for whoever gets there." },
+    "deep_past_the_lamp": { "stages": [], "waits": "Needs the fleet at the Harbor, and someone has to choose to go past the lamp." }
+  }
+}

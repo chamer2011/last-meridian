@@ -1,0 +1,72 @@
+{
+  "name": "The Sundial",
+  "aliases": ["the Sundial", "The Sundial", "Sundial"],
+  "desc": "The fleet's farm ship, a converted ore hauler full of soil, grow-lamps and arguing families. Every ration in the fleet starts here.",
+  "market": ["ration_pack", "nutrient_gel", "refugee_coat", "work_suit", "tool_roll", "calm_tabs"],
+  "faction": "fleet",
+  "fleet": true,
+  "rest": false,
+  "dangerous": false,
+  "hidden": false,
+  "gm": {
+    "feel": "Wet soil, compost and tomato leaves hit you as the hatch opens, and grown officers have been known to stop and cry at the smell. A single huge lamp crawls along a rail on the roof of the old ore hold, making a slow false day over four thousand people and their strips of bean and barley. Everything is counted in kilos and water, and every family can recite exactly who took how much from whom, and when.",
+    "districts": [
+      { "name": "The Long Furrow", "desc": "The main hold: two kilometers of soil divided into family strips, marked out with string and old grudges. Thin children walk the rows hand-pollinating squash with paintbrushes." },
+      { "name": "The Water Table", "desc": "An actual table, a scarred steel slab at the foot of the pump tower, where each day's water is allotted out loud. It's the fleet's closest thing to a parliament, and it's a lot louder." },
+      { "name": "The Sun Rail", "desc": "A gantry along the hold's roof that carries the great lamp, tended by one woman who lives up there. When it stalls, a whole section bakes while the rest goes cold." },
+      { "name": "The Drowned Deck", "desc": "Hydroponics bays in warm blue half-light, with the sound of running water. It's the most peaceful place in the fleet, and it's where the Quiet come to sit." },
+      { "name": "Steward's Row", "desc": "Grann Tull's office, the seed room and the ledgers, behind a door with a tally of past harvests cut into it. There's no mark on that door for a harvest she's missed." }
+    ],
+    "people": ["grann", "oskar"],
+    "enemies": ["desperate_refugee", "quiet_zealot", "scrap_rat", "mutineer", "silent_one"],
+    "items": ["quiet_token", "ration_pack", "nutrient_gel", "calm_tabs"],
+    "complications": [
+      "The Sun Rail jams at noon, and one family's whole strip starts to scorch while the next one stays in the dark.",
+      "An argument at the Water Table turns into a shoving match, and both sides insist that the captain should settle it right now.",
+      "Blight has been found in a strip, and the family is hiding it, because a blighted strip is dug out and burned.",
+      "Grann Tull is refusing to release this week's grain until Speaker Halm apologizes for something he said twenty years ago.",
+      "A transport's hungry delegation has arrived to check the ledgers for themselves, and they've brought big friends.",
+      "The Quiet have sat down in silence across the main pump access, and nobody wants to be the one to move them."
+    ],
+    "secrets": [
+      "The soil is dying. Old ore dust in the hold is leaching metals upward, and yields will crash within four or five harvests. Grann Tull knows, and she's been quietly blending the grain so that nobody finds out until she has an answer.",
+      "Hold Six is listed in the ledger as fallow, and it isn't. Grann is growing a hidden reserve in there, enough to feed the Meridian for a month, so that nobody can ever starve her out of her job.",
+      "The pumps on the Drowned Deck were retuned by hand a few months back, so they run at a pitch that very nearly matches something on the long-range bands. People find it soothing. They sleep better here than anywhere in the fleet, and they keep coming back."
+    ]
+  },
+  "encounters": [
+    "It's Soil Day. People from other ships queue for hours for ten minutes barefoot in the Furrow. An old man has had his ten minutes, and he won't get off. He's quite calm, he says that he'd like to die here, and the queue behind him is getting ugly.",
+    "Steward Grann Tull gives you a large cabbage, wrapped in sacking, to carry to Speaker Halm with her compliments. Every farmer in earshot starts grinning. It's clearly the latest move in something that started twenty years ago, and you don't know what it means.",
+    "A woman goes into labor in a row of beans, and the midwife is three ships away. A crowd of aunts arrives from nowhere. When it's over, they hold the baby up and ask you to name it, because fleet babies are starting to be named by whoever's in charge, and they say it's luck.",
+    "Two families share a strip boundary marked by a piece of string. Each has been moving it a centimeter every night for months, and the string has now walked three meters. They want your ruling. Both have lost children, and neither of them is really talking about string.",
+    "The last beekeeper in the fleet carried a hive out of the Fall in a suit locker. He needs ten more square meters of flowers or the bees will die, and Tull says flowers are food-space. Without bees, the children keep pollinating by hand and stay out of school. He's brought a jar of honey for you. It's the only one.",
+    "Oskar Lind offers you tea on the Drowned Deck and fixes your water filter while you drink it. He doesn't mention the Quiet. He asks how you've been sleeping, and he listens as though he's got all day. When you look at the time, two hours have gone.",
+    "A little girl has grown one tomato all by herself, and she wants to present it to the captain. Everyone's watching. Her thin little brother is watching it too, like a dog watches a plate.",
+    "A respected old teacher has been caught stealing seed grain to feed the class he runs on a transport. Tull wants him off the Sundial, for good, and to make an example of him. His pupils are outside. They've made a sign, and they've spelled her name wrong.",
+    "The woman who tends the Sun Rail hasn't come down from the gantry in six months. She lowers a note on a string to you. It says she's the only one who knows how to free the lamp when it jams, and she doesn't want to come down any more, and she wants to know if that's allowed.",
+    "A family wants to bury their grandmother in their strip. The Steward's rule is that the dead go into the common compost, so everyone comes back as food, and it's a comfort to some. They can have an exception if they give up that strip's yield for a season, and the neighbors say they won't eat those beans either way.",
+    "A goat called Councilor has eaten the only copy of a land deed, and two brothers want to know whether its stomach counts as a legal archive. The goat is looking at you. So is everybody else, because this is the first thing anyone has laughed at all week.",
+    "A committee of farmers has elected a very nervous spokesman. They want a seat on the council, or they'll hold back the next harvest, and they want to tell you before they tell Halm. The spokesman's hands are shaking, and he's brought you a list of everyone who signed.",
+    "A synthetic soil tester has been banned from the Furrow, because people say their hands sour the crop. Their soil readings are the only ones anybody can trust, and the readings have started to look bad. They'd like you to read them, and they've been waiting at the hatch for eleven days.",
+    "A teenager from a strip family wants to marry someone from a transport, and under Furrow custom that means her family loses a share of the soil-right. Her grandfather is against it, her mother's for it, and they've both come to the captain with exactly the same smile.",
+    "A young irrigation tech shows you a controller box that's drawing more power than any pump should. Inside it is a small, neat transmitter and a list of names. She's brought this to you and not to Oskar Lind, because Oskar's friends were the ones who told her not to open that box.",
+    "You take a wrong turn at dusk and see the Steward going down into a root cellar, with a lamp and a book. You can hear her reading aloud. Among the seed trays sits a thin field hand who looks about fifty, and the file says he's twenty-two. She looks up at you, and for once in her life she has nothing to say.",
+    "Mila Ostrov, who's seven, asks you to carry a drawing to her father on Anselm's Mercy. It's a piano. She's been told that he's still asleep, so it's for when he wakes up. You've heard otherwise. So have most of the people watching you take it, and they all look down at their beans.",
+    "You find a stranger asleep between the rows in a navy officer's coat, with mud on his face and a look of perfect happiness. He's a gunner off your own ship, and he's been absent for four days. He wakes up, sees you, and asks you not to make him leave."
+  ],
+  "rumors": [
+    "Steward Tull's never missed a harvest and never forgiven a slight, and she keeps them both in the same ledger.",
+    "Stand in the Furrow barefoot and for ten minutes you can't hear the engines. I'd have given a kilo of anything. I did give a kilo of anything.",
+    "Tomatoes taste of iron this year. My wife says it's the ore in the hold. I say we're just tired. We've agreed to stop discussing it.",
+    "Oskar Lind fixed my pump and didn't say one word about the Quiet. He only asked if I was sleeping. Nobody has asked me that since Aurelis.",
+    "They put the dead in the compost here. It's the best beans in the fleet, too. Now you know why Speaker Halm always has a prior engagement at dinner.",
+    "Grain ration's getting cut by a fifth next month, I saw it in the ledger. Well, I saw somebody looking at the ledger, and they didn't look happy.",
+    "If that lamp ever stops for good, we've got about eleven days before everything's dead, and that's all of us, every ship. So be nice to the lady on the rail.",
+    "Hold Six is meant to be fallow. Funny thing, then, how much water goes through a pipe to nothing. Don't tell the Steward I can count.",
+    "Someone's been going round the squash at night with a paintbrush, doing the rows the children missed. Nobody knows who. Best thing that's happened here all year.",
+    "My sister on the Drowned Deck says she sleeps through the night there. First time since the Fall. She's stopped telling me what she dreams about, though, and she used to tell me everything.",
+    "There's a bloke on the Water Table who's selling a month of his family's water for a place on Anselm's Mercy. He's got no one sick. I asked him why, and he told me not yet.",
+    "Grann Tull and Speaker Halm were married once, you know. No? Well, it was something like that. Nobody hates like that over a zoning law.",
+    "The grain they brought in from Tessen last month sprouts if you look at it. Grows like nothing I've ever seen. The Steward keeps it in a separate bin, and she's stopped eating bread."
+  ]
+}

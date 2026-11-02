@@ -1,0 +1,37 @@
+{
+  "_help": "The days of the people here. The instructions are at the top of meridian.json.",
+  "people": {
+    "six": [
+      { "at": "00:00", "doing": "standing in a marked square", "go": "post" },
+      { "at": "12:00", "doing": "calling the day's vote", "go": "post", "exact": true },
+      { "at": "12:30", "doing": "standing in a marked square", "go": "post" },
+      { "at": "20:00", "doing": "among the names on the rack", "go": "@rack" },
+      { "at": "22:00", "doing": "standing in a marked square", "go": "post" }
+    ],
+    "hollis": [
+      { "at": "00:00", "doing": "building something", "go": "post" },
+      { "at": "03:00", "doing": "looking over the silent line", "go": "@line" },
+      { "at": "04:00", "doing": "building something", "go": "post" },
+      { "at": "17:00", "doing": "choosing a part from the rack", "go": "@rack" },
+      { "at": "18:00", "doing": "building something", "go": "post" }
+    ]
+  },
+  "crowd": [
+    {
+      "names": [["Watcher Tolliver", 0], ["Watcher Ninety", 0], ["Watcher Ash", 0]],
+      "day": [
+        { "at": "00:00", "doing": "standing perfectly still", "go": "@gate", "stays": true }
+      ]
+    },
+    {
+      "names": [["Ledger", 0], ["Tally-Two", 40], ["Quince-Four", 80], ["Arden Nine", 120], ["Bracket", 160]],
+      "day": [
+        { "at": "00:00", "doing": "walking the dark halls", "rounds": ["@floor", "@rack", "@line"], "stop": 60 },
+        { "at": "12:00", "doing": "voting, by standing in a square", "go": "@floor", "exact": true },
+        { "at": "12:30", "doing": "sorting the parts of the dead", "go": "@rack" },
+        { "at": "16:00", "doing": "arguing about the line, very politely", "go": "@line" },
+        { "at": "19:00", "doing": "walking the dark halls", "rounds": ["@floor", "@rack"], "stop": 60 }
+      ]
+    }
+  ]
+}

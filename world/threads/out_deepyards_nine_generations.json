@@ -1,0 +1,42 @@
+{
+  "title": "Nine Generations of Spite",
+  "kind": "faction",
+  "places": ["deepyards"],
+  "minLevel": 3,
+  "after": "out_deepyards_yardmothers_child",
+  "people": ["ilkin", "tamsin", "marrow"],
+  "factions": ["families", "fleet"],
+  "lead": "An Ao-Rel raider has cut the power to your drydock and left a formal note of regret. Nine generations of feud with the Ao-Rel, says your new mother, and now they've killed one of her riggers. If that isn't answered, the Meridian's refit stops, because nobody at the Deepyards will work on a ship under a killing.",
+  "anyone": "An Ao-Rel raider has cut the power to a drydock and left a formal note of regret. Nine generations of feud with the Ao-Rel, says Yardmother Ilkin, and now they've killed one of her riggers, and nobody at the Deepyards will work under a killing until it's answered.",
+  "gm": {
+    "truth": "The feud is theater, and has been for two hundred years. Under the Deepyards' oldest charter, two families at open feud can't be merged, taxed together or forced to share a yard, and if the feud ever ended, the rings would pass into one joint holding. So the Ao-Vash and the Ao-Rel have carefully hated each other for nine generations. The raids are scheduled. The insults are drafted by the same two elderly clerks, who have tea together every month, and they're very good at it. The notes of regret are sincere. Nobody has been hurt in living memory, and everybody in the top three levels of both families knows. Now a young rigger named Oris Ao-Vash is dead in a raid, truly dead, and both sides are terrified, because the crowd below them doesn't know it's theater, and it's about to become real. Someone broke the script. It wasn't Ao-Rel. Sennet Ao-Vash cut the safety line. Sennet's real target is the captain: a real feud means that adopted children can be called on to fight, and there's a very convenient accident waiting if they do. The exiled navigator Tamsin Ao-Rel grew up backstage of this and knows exactly how the theater works. They're Ilkin's own sister's grandchild, which should tell you how serious the hatred is.",
+    "beats": [
+      "The funeral: the body goes out through the ring with honors, and nine hundred Ao-Vash stand silent in vacuum suits. Young riggers are checking weapons, and they don't know any better.",
+      "A note from Ao-Rel: real fear in very good handwriting. Then, an unexpected invitation for tea with two very old clerks, one from each family, who ask the captain to sit down and shut the door.",
+      "Tamsin explains the whole farce, laughing until they stop. Everyone senior knows. Nobody can say so, or the rings pass to a joint holding and every yard contract is void, including the one on the Meridian.",
+      "The investigation. Someone cut a line. The cut's too clean for an Ao-Rel raider, and a rigger's log has been changed. The trail heads back into the captain's own new family.",
+      "The showdown, with the young riggers of both families about to do for real what their ancestors only pretended to do. What does the captain tell them? Who do they name?"
+    ],
+    "routes": [
+      "Investigate: awareness, hacking and void_ops at the place where the line was cut, to prove who did it.",
+      "Stage-manage: deception and lore with the old clerks to write one more scene, a grand formal reconciliation or a ritual duel that gives everyone a way to back down.",
+      "Tell the truth: leadership and persuasion to tell the young riggers of both families what's really been going on, and see whether they're angrier at each other or at their elders."
+    ],
+    "checks": [
+      "awareness:moderate to see that the line was cut from the inside",
+      "hacking:hard to recover the changed rigging log",
+      "void_ops:moderate to examine the cut in the ice ring's shadow",
+      "deception:hard to write a scene good enough to fool nine hundred people",
+      "persuasion:very_hard to stop young people who've just been to a funeral",
+      "melee:moderate to fight a ritual duel with blunted hooks, and lose or win convincingly enough to end it"
+    ],
+    "fights": ["drift_raider as Ao-Rel hired guns, or wreck_diver as angry riggers, if talking fails. A staged duel with blunted hooks or the old clerks' say-so can stop it."],
+    "outcomes": [
+      "If the feud is kept going as theater, with a new script and a scapegoat, the Meridian's refit goes on, the Families stay stable and the captain becomes one more person who knows. Oris Ao-Vash's mother doesn't.",
+      "If the truth comes out, the young riggers turn on their elders, the families fall into a messy new order and the rings pass into joint holding. The Deepyards will be more honest, and for a long while very bad at keeping contracts.",
+      "If Sennet is exposed, Ilkin handles it herself, very quietly, and the captain is now her heir in fact as well as law. She doesn't thank them for it.",
+      "If it turns into a real war, the yards burn, slowly. The refit stops and both families blame the planet-born captain, and Tamsin Ao-Rel says it's not the worst thing that could have happened."
+    ],
+    "rewards": "The refit restarted, a veshti_longrifle from Ilkin's own wall, standing with families, and either Sennet as a very quiet enemy or Tamsin as a friend who's finally been proved right."
+  }
+}

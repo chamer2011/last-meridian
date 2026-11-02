@@ -1,0 +1,55 @@
+{
+  "title": "What Father Roe Can't Tell You",
+  "kind": "mystery",
+  "places": [
+    "meridian"
+  ],
+  "minLevel": 4,
+  "after": "crew_bastian_loaves",
+  "people": [
+    "bastian",
+    "tarrow",
+    "naomi"
+  ],
+  "factions": [
+    "fleet"
+  ],
+  "lead": "Father Roe looks like he hasn't slept. He can't tell you what he heard in confession, or who said it, but if he were you he wouldn't let anyone stand near Lock Nine on Thursday.",
+  "anyone": "Father Roe looks like he hasn't slept. He can't say what he heard in confession or who said it, but he's been telling people not to stand near Lock Nine on Thursday.",
+  "gm": {
+    "truth": "Someone came into Father Roe's confessional and said: \"Forgive me, Father. I have to open Lock Nine on Thursday. They'll be so frightened, and there isn't any other way to get them out. It doesn't hurt. I want you to know that. It doesn't hurt at all.\" Then it wept. Roe knew the voice: Dov Harlan, the Meridian's mess cook, a devout and cheerful man he has eaten with for months. Harlan died on a supply run weeks ago, and what came back in his place is a Choir Mimic. Mimics aren't spies. It believes it's Dov, it has come home, and it's going to take its shipmates somewhere safe, out of this hungry fleet, and it wants forgiveness for the fright. It can't taste anything now, and it doesn't know that, so it has been over-salting the soup for weeks. Roe has heard a Choir voice say the Service before, better than he ever has, and that's why he stopped believing. He believes in nothing now, and he has decided the seal holds anyway, because if it doesn't hold for this, then what was any of it for? On Thursday a fuel tender docks at Lock Nine with silver figures in its ballast, while every ship's delegate is aboard the Meridian for a memorial.",
+    "beats": [
+      "Roe's warning, which is all he'll give. He won't break the seal, and he looks as if he hardly knows why.",
+      "Quiet investigation: who works near Lock Nine, whose habits have changed, who hasn't eaten in weeks. Naomi has noticed that the cook only ever tastes. Everyone is complaining about the soup, and he can't understand why.",
+      "Tarrow finds out there's a warning and goes to Roe, politely at first. She wants the name, and she's ready to hold him until she has it.",
+      "The captain may go to the confessional themself: sit behind the grille in the dark and wait. It comes back to confess again. It's very kind, and it asks the captain if they've been eating.",
+      "Thursday at Lock Nine. The mimic is there in a kitchen apron with its hand on the panel, crying and smiling. It isn't attacking anyone. It's trying to get them all somewhere safe, and it's so sorry about the noise."
+    ],
+    "routes": [
+      "Detective: awareness and streetwise in the mess and on the docks, looking for the one person who has changed. The salt is the clue: it went wrong the day he came back from the supply run, and science can show there's nothing wrong with the recipe.",
+      "Security: tactics and engineering to move the docking, weld the lock or shift the delegates without starting a panic. It may only move the problem, since the mimic's orders will adapt.",
+      "The confessional: deception and composure behind the grille, a long conversation with something that only wants to be forgiven.",
+      "Mercy: attunement finds a man who doesn't know he's dead. Persuasion might reach him: ask him to taste the soup. It's the one thing he can't explain. If he stops, it's because Dov Harlan stopped him."
+    ],
+    "checks": [
+      "awareness:moderate to notice who hasn't eaten in weeks",
+      "persuasion:very_hard to get him off the panel and make him taste his own soup",
+      "deception:hard to sit in the priest's chair and be convincing",
+      "attunement:very_hard to find the man inside the machine",
+      "tactics:hard to reshuffle Thursday without anyone asking why",
+      "intimidation:hard to make Tarrow leave the priest alone"
+    ],
+    "fights": [
+      "choir_mimic at Lock Nine, in an apron, apologizing throughout",
+      "choir_drone pair from the tender's ballast if the lock opens"
+    ],
+    "outcomes": [
+      "Caught alive, or talked down: it's in clamps within the hour, and it asks for one thing, the last rites of a devout man. Roe gives them, believing nothing, with half the crew watching. The fleet argues for months about what that meant. It's the first proof most of them have seen that there's someone in there.",
+      "Destroyed at the lock: clean and fast, and everyone's safe. Roe quietly asks the captain what he's supposed to do with a confession from someone who has now been shot.",
+      "The lock opens: a fight on the docking deck in front of all forty-one delegates. Nobody has to die, but nobody forgets, and the fleet's fear goes through the roof.",
+      "Tarrow breaks him by force: Roe goes to the brig without saying a word. The crew is split between those who think he's a coward and those who think he's the last honest man aboard. Attendance at his services triples.",
+      "Whatever happens, the crew learns they ate a mimic's soup for weeks, and fleet_open_palms gets worse."
+    ],
+    "rewards": "Father Roe's friendship, a choir_core if it's destroyed, and a clue that what the Choir copies may still be someone."
+  }
+}

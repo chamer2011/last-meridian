@@ -1,0 +1,40 @@
+{
+  "name": "Void Stalker",
+  "threat": 3,
+  "hp": 28,
+  "attack": 4,
+  "defense": 13,
+  "damage": [
+    4,
+    8
+  ],
+  "xp": 55,
+  "credits": [
+    0,
+    0
+  ],
+  "tags": [],
+  "motive": "hunger",
+  "desc": "A vacuum-born predator that hunts by heat.",
+  "weapon": "Claws",
+  "lines": {
+    "intro": [
+      "Something long and pale unfolds from the dark, turning its eyeless head toward the heat of your body."
+    ],
+    "hit": [
+      "Claws rake through your suit, and the cold comes in.",
+      "It hits you from a direction you weren't watching."
+    ],
+    "miss": [
+      "It lashes out at where you were, and it's already gone again.",
+      "Claws screech across the hull beside your head."
+    ],
+    "crit": [
+      "It gets its jaws around you and shakes."
+    ],
+    "defeated": [
+      "The stalker curls in on itself, and its pale skin goes dark."
+    ]
+  },
+  "art": "stalker"
+}

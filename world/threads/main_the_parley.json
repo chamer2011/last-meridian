@@ -1,0 +1,45 @@
+{
+  "title": "The Parley",
+  "kind": "main",
+  "places": ["haven", "graveyard", "nest"],
+  "minLevel": 5,
+  "after": "main_on_station",
+  "people": ["cantor", "voss", "sable", "tarrow", "cael"],
+  "factions": ["fleet"],
+  "lead": "The Cantor has asked for a meeting on the Beacon band, in front of everyone, and offered terms nobody believes: one ship, any place you name, and nothing will fire on you while you talk.",
+  "gm": {
+    "truth": "The Cantor keeps its word, because it has no idea how not to. It's honest, tender and patient, and it still means to collect everyone it can reach. It will meet anywhere, and the place is the captain's call. (The Neutral Ground at Haven is the best scene in the game if they dare: silver hands on the bar, Sable polishing a glass and naming a price for the drink, every faction in the room pretending not to stare.) It wears a different face to each person there. It doesn't explain itself unless that's earned, and it isn't keeping a secret: it has never occurred to it that anyone doesn't know, any more than you'd explain why you breathe. It will answer the question nobody has asked: who do you sing to? 'There is one we sing to. It has been asleep for longer than there have been stars to name. If we stop, it will turn over, and it will hear you.' It doesn't hate anyone. It doesn't know anyone exists. That's what the song is for. Those who aren't kept when it wakes will be as if they never were. So the Fall was triage, and the Choir follows the fleet because it can't bear watching them die out here where it can't reach them. It only knows what it has learned in seven months of being a person. It knows there's supposed to be a relief, and that nobody has come. It doesn't know the Roster. It has never heard of the Regent. It asks for one thing: to speak to the Commander. Meanwhile somebody on the captain's side will try to kill it: Tarrow has a bomb, or Okonkwo has a firing solution. Arc clues: who_it_sings_to, cantor_no_deal if asked about Vantor, silent_unwanted later.",
+    "beats": [
+      "Choosing the place and who comes. The fleet's reaction. Tarrow asks to go along, Voss says nothing at all, and Garrick Fenn wants to broadcast it. If it's Haven, Sable moves one chair.",
+      "It arrives. Everyone sees someone different. The captain's lost one, if they have one, says their name the way they used to. Then what does the captain say?",
+      "The test. If the captain demands, threatens or pleads, it answers gently and says nothing. If they ask something nobody has asked (who has the deck? who are you singing to? what do you need?) it goes very still, and then all of it talks at once.",
+      "Someone breaks the truce or tries to. If the captain stops it, the Cantor will remember. If it happens, the body comes apart into a Choir Shard, and the grief in its voices is worse than the fight.",
+      "The answer, and what it asks in return. The captain walks out knowing what the song is for. Nothing has changed, and nothing will ever look the same."
+    ],
+    "routes": [
+      "Talker: just ask. Patience, nerve and the right question (persuasion, composure, leadership). Watch language works best, if the captain has been aboard the Tarn.",
+      "Fighter: if they come to fight, a choir_cantor_shard can be beaten. The Cantor, unharmed elsewhere, then says: 'You have asked with your hands. We will answer one question.'",
+      "Hacker: bring a choir_core and a slate and ask it in its own protocol, in front of it (hacking). It lets you. It's been waiting to see if someone would. The answer arrives as a log.",
+      "Resonant: sing back (attunement, manifestation), as Cael has been doing in secret. It answers straight into the captain's head, at a cost in stress and in some of what they're sure of.",
+      "Scholar: address it in First Builder phrases from the Codex or the Tessen children's game (lore). It hasn't heard those words in a long time, and it isn't sure who is saying them."
+    ],
+    "checks": [
+      "composure:hard to hold a conversation with that face",
+      "persuasion:moderate to keep it talking once it has started",
+      "hacking:very_hard to open a session with a Choir core",
+      "attunement:hard to sing back and come out with your own thoughts",
+      "lore:hard to use the old words correctly",
+      "awareness:moderate to catch Tarrow's bomb or Okonkwo's firing solution in time"
+    ],
+    "fights": [
+      "choir_cantor_shard if the truce is broken"
+    ],
+    "outcomes": [
+      "If the truce holds and the question is answered, the player knows. The Cantor will take the captain's hail for the rest of the game, and it won't lie. The Hunters don't stop, but it will warn them once, as a courtesy.",
+      "If the captain's own people break the truce, the Cantor doesn't retaliate, which terrifies everyone. The trust is gone, the next answer costs far more, and if it happened at Haven, Sable bars the captain.",
+      "If the captain lets Voss speak to it, she says nothing for a long time, then asks for a status report. For a moment it sounds like one young woman. That can be used, much later, at the board.",
+      "If Cael is there, the Cantor greets him by name, as an old friend, and everyone hears. Ione will know. Tarrow wants him locked up, and he laughs at the wrong moment."
+    ],
+    "rewards": "Nothing you can hold. A choir_core, if the Shard is beaten or if the Cantor is simply asked for one. Standing shifts wildly with everyone who was watching."
+  }
+}

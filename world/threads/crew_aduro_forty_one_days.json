@@ -1,0 +1,54 @@
+{
+  "title": "A Number Nobody Asked For",
+  "kind": "dilemma",
+  "places": [
+    "meridian",
+    "anselm"
+  ],
+  "minLevel": 2,
+  "after": null,
+  "people": [
+    "aduro",
+    "odessa",
+    "wen",
+    "tobin",
+    "halm",
+    "tessaly"
+  ],
+  "factions": [
+    "fleet"
+  ],
+  "lead": "Dr. Aduro closes the door, calls you by your first name, and asks whether you'd rather know something terrible now, or in a month when it's too late to do anything but be angry about it.",
+  "anyone": "Dr. Aduro has been counting doses with the medbay door shut, and the notices about medicine don't match what's on the shelves. Someone who works down there could find out what the real number is.",
+  "gm": {
+    "truth": "Aduro's count says medical supplies run out in forty-one days. They've told no one, because they know what the council would do with it: Halm would use it to argue for surrender, Steward Tull for priority, and every ship would start hoarding. But the numbers have stopped adding up, which is why they've come to the captain now. There are three counts. Aduro's forty-one comes from Quartermaster Brandt's auditor books and the figures on Dr. Adeyemi's wall. Brandt's true book says twenty-six, because she's moved stock out of sight (see crew_odessa_two_ledgers). Dr. Adeyemi's count says fifty-eight, because Wen keeps three sets of numbers of their own: a padded one on the wall so the staff won't give up, a low one for the council so there's a reserve nobody can order spent, and a true one that assumes shipments Brandt knows aren't coming. Each of them lied to protect the fleet from the other two, and each is right about the other two. The real number, once all three books are open in one room, is thirty-one days if nobody panics, and nineteen if they do. Keep the count running in the story: this is a clock the player should feel.",
+    "beats": [
+      "Aduro's question, and the number. They ask for nothing except that the captain now carry it too.",
+      "Things don't add up: a shipment that doesn't exist, ward usage that doesn't match the manifest. Chief Hask's scale disagrees with every book on the ship, and he'll say so if asked.",
+      "Getting them in one room: Aduro, Odessa and Wen, three exhausted, decent liars who don't trust each other. Nobody raises their voice, and it's terrible.",
+      "The real number. Thirty-one if nobody panics, nineteen if they do. So telling the truth itself shortens the supply.",
+      "Someone else is getting close. Garrick Fenn is asking about ward usage. Speaker Halm has started saying \"we\" a lot about medicine."
+    ],
+    "routes": [
+      "The audit: commerce and science to rebuild the true figure from weights, ward charts and shipping slips, with Tobin's scale as the most trusted instrument on the ship.",
+      "The room: leadership or persuasion to get all three to open their books to each other. All three refuse at first, for good reasons.",
+      "The fix: work on the number, not the secret. Commerce or streetwise to buy medicine from Tessaly Marsh, or medicine to stretch what's left by changing who gets it, which Aduro will fight.",
+      "The announcement: leadership to tell thirty thousand people a number and make them believe the thirty-one instead of the nineteen."
+    ],
+    "checks": [
+      "medicine:moderate to see why ward usage doesn't match the manifest",
+      "commerce:hard to rebuild the real count from three sets of false books",
+      "persuasion:hard to get three honest liars to open their books",
+      "deception:moderate to keep Garrick Fenn off the story for another week",
+      "leadership:very_hard to announce the number and hold it at thirty-one"
+    ],
+    "fights": [],
+    "outcomes": [
+      "Told to the fleet: clinics are mobbed and some ships hoard, but private stocks also start arriving on Aduro's desk in paper bags with no names on them. Trust in the captain goes up, and the days go down.",
+      "Told to the council only: Halm uses it exactly as Aduro feared, gently and in public, as the reason to read the Hegemony's offer of medical aid. See fleet_arrest_us.",
+      "Kept secret: it holds at thirty-one until Fenn gets it, and then the question is who knew, and for how long.",
+      "Rationing by law: a formal order of who stops being treated first. It buys eleven days. Wen will write it if the captain signs it. Aduro won't sign, and may resign, which they have never threatened before."
+    ],
+    "rewards": "Aduro's trust, a trauma_kit or two from the reconciled stores, and a true number, which is rarer."
+  }
+}

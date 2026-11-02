@@ -1,0 +1,57 @@
+{
+  "name": "Choir Mimic",
+  "threat": 3,
+  "hp": 26,
+  "attack": 5,
+  "defense": 14,
+  "damage": [
+    4,
+    8
+  ],
+  "xp": 75,
+  "credits": [
+    0,
+    40
+  ],
+  "machine": true,
+  "tags": [
+    "choir",
+    "machines"
+  ],
+  "motive": "choir",
+  "desc": "A Choir machine that wears a face you trust, until it doesn't.",
+  "weapon": "Borrowed Hands",
+  "onHit": {
+    "stress": 3
+  },
+  "lines": {
+    "intro": [
+      "Someone you know walks toward you down the corridor and says your name, and then you notice that they haven't blinked.",
+      "A familiar voice asks if you're all right, and you're already turning to answer when you hear the humming under it."
+    ],
+    "hit": [
+      "It hits you with a hand you've shaken a hundred times, and the fingers are silver underneath.",
+      "It goes on talking to you in that familiar voice, about something you once told them, while it hurts you.",
+      "It catches you as if to steady you, and the grip keeps tightening."
+    ],
+    "miss": [
+      "The hand stops where your throat was, and the face gives you a small, apologetic smile.",
+      "You pull away, and it tilts its head, and tries a different expression on you.",
+      "It swings at you and misses, and says your name, hurt, as if you'd been the one to strike first."
+    ],
+    "crit": [
+      "The face leans close and says something only they could have known, and while you're hearing it, the silver goes in."
+    ],
+    "defeated": [
+      "The face slides and runs, and for a moment, before it's only silver, it looks at you with real surprise.",
+      "It drops, and the voice goes on for a little while, asking you whether you're all right."
+    ],
+    "joins": [
+      "{Enemy} comes in behind you wearing a face you'd have trusted, and you wish you hadn't looked."
+    ],
+    "stunned": [
+      "{Enemy} flickers through three faces, all of them looking at you, and can't settle on one."
+    ]
+  },
+  "art": "choir"
+}

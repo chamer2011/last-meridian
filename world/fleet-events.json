@@ -1,0 +1,700 @@
+{
+  "events": [
+    {
+      "id": "first_born",
+      "minDay": 1,
+      "people": [
+        "grann"
+      ],
+      "text": "A baby is born between the bean rows on the Sundial during a shift change, the first born on that deck. The parents want to name her after the captain, and Steward Tull wants to know whose ration card she goes on."
+    },
+    {
+      "id": "missing_crate",
+      "minDay": 1,
+      "people": [
+        "odessa",
+        "tobin"
+      ],
+      "text": "A crate of ration packs goes missing between the Meridian's dock and the Second Thursday. Chief Hask says it was weighed out correctly and never weighed in, and each crew wants the captain to say the other one's lying."
+    },
+    {
+      "id": "beacon_drawing",
+      "minDay": 2,
+      "people": [
+        "naomi"
+      ],
+      "text": "Naomi brings a child's drawing of the Beacon from the Wintermere: a house with a light on, and a lot of people standing outside it. There are forty of them now, pinned up in a corridor, and the teacher asks if the captain would come and say whether it looks like that."
+    },
+    {
+      "id": "ferry_funeral",
+      "minDay": 2,
+      "people": [
+        "bastian"
+      ],
+      "text": "A funeral for a ferry pilot on the Second Thursday: forty people, no body, and his favorite song on a bad speaker. Father Roe asks the captain to say a few words about a man they never met."
+    },
+    {
+      "id": "who_made_you",
+      "minDay": 2,
+      "people": [
+        "voss",
+        "tobin"
+      ],
+      "text": "WHO MADE YOU CAPTAIN appears on the bulkhead outside the captain's quarters, in very neat letters. Voss wants it scrubbed and the painter found, and Chief Hask says it's a fair question, and he'd like to know what it came to."
+    },
+    {
+      "id": "scared_queue",
+      "minDay": 2,
+      "people": [],
+      "text": "A small child asks the captain, in front of a long ration queue, whether they've ever been scared. The whole queue goes quiet to hear the answer."
+    },
+    {
+      "id": "fenn_ration",
+      "minDay": 3,
+      "people": [
+        "garrick",
+        "halm"
+      ],
+      "text": "Garrick Fenn reads out next week's ration figures an hour before the official notice. Speaker Halm demands the leak be found, and everyone else wants to know if the figures are true."
+    },
+    {
+      "id": "the_cat",
+      "minDay": 3,
+      "people": [
+        "tarrow",
+        "marrow"
+      ],
+      "text": "A cat turns up on the Meridian, owned by nobody, eating better than the ensigns and seen on the bridge. Tarrow wants it off the ship, and half the crew have already named it."
+    },
+    {
+      "id": "packed_bag",
+      "minDay": 3,
+      "people": [],
+      "text": "A man has been standing at an airlock on the Vesper Landing since morning with a packed bag, and he says, very politely, that he's ready to go home now. Someone has to go and talk to him."
+    },
+    {
+      "id": "lost_boy",
+      "minDay": 3,
+      "people": [
+        "naomi"
+      ],
+      "text": "A visiting child goes missing on the Meridian, and the whole ship searches for an hour. Naomi produces him in ten minutes, clean and fed, and she won't say where he was."
+    },
+    {
+      "id": "straggler_call",
+      "minDay": 3,
+      "people": [
+        "pell"
+      ],
+      "text": "A slow freighter falls behind the formation and calls for help on an open channel, so the whole fleet can hear. Going back costs fuel, it's the third this month, and everyone is listening to what the captain says to her."
+    },
+    {
+      "id": "water_queue",
+      "minDay": 4,
+      "people": [
+        "tarrow",
+        "seven"
+      ],
+      "text": "A brawl at a water point on the Tollan Arms: survivors refuse to queue behind a synthetic carrying a can of coolant. A man's arm is broken and the synthetic's faceplate is cracked, both sides want charges, and Tarrow and Seven each send the captain a very polite note."
+    },
+    {
+      "id": "reading_lira",
+      "minDay": 4,
+      "people": [
+        "lira"
+      ],
+      "text": "The captain learns the lower decks have been betting on Ensign Vey's color at every watch change, with a running book and someone on the bridge who reports it. Lira has found out too, and she hasn't said anything, but her skin has."
+    },
+    {
+      "id": "three_meters",
+      "minDay": 4,
+      "people": [
+        "grann"
+      ],
+      "text": "Two families on the Sundial come to blows over a strip of soil three meters wide, and Steward Tull says it belongs to neither of them. They've appealed to the captain, with maps going back six whole months."
+    },
+    {
+      "id": "duct_singing",
+      "minDay": 4,
+      "people": [
+        "marrow",
+        "tarrow"
+      ],
+      "text": "Night crew report someone singing a nursery rhyme, very faintly, in the Meridian's aft ducts. Marrow says it's the ship settling, and Tarrow is on full alert."
+    },
+    {
+      "id": "marigold_surge",
+      "minDay": 5,
+      "people": [
+        "marrow"
+      ],
+      "text": "The Little Marigold's reactor starts surging every four hours. Marrow can fix it in a day, but her master won't let him aboard, because last time he \"borrowed\" her spare pump."
+    },
+    {
+      "id": "metal_water",
+      "minDay": 5,
+      "people": [
+        "marrow"
+      ],
+      "text": "The water on three ships starts tasting of metal. Marrow swears it's harmless, and asks if the captain would like to be the one to explain that to six thousand frightened people."
+    },
+    {
+      "id": "love_letter",
+      "minDay": 5,
+      "people": [
+        "naomi"
+      ],
+      "text": "Naomi delivers a letter addressed \"To Whoever's In Charge of Love\", from a sixteen-year-old on the Tollan Arms who'd like a transfer to the Anneke's Promise. It's very well argued."
+    },
+    {
+      "id": "one_tomato",
+      "minDay": 5,
+      "people": [
+        "grann"
+      ],
+      "text": "Steward Tull sends the captain a single perfect tomato, with a note that says only \"Remember this.\" She won't say what she wants, and everyone on the bridge has an opinion on whether to eat it."
+    },
+    {
+      "id": "wardroom_game",
+      "minDay": 5,
+      "people": [
+        "voss",
+        "pell"
+      ],
+      "text": "Voss is seen teaching Ensign Asante a board game in the wardroom, and neither of them smiles. Both seem to be having a wonderful time, and the crew have started to watch from the door."
+    },
+    {
+      "id": "mixed_wedding",
+      "minDay": 6,
+      "people": [
+        "tobin"
+      ],
+      "text": "A Korrun stoker and a Veshti rigger want to marry. Neither family will come, because each thinks the other's custom is an insult, so they ask the captain to attend, so that there'll be at least one guest."
+    },
+    {
+      "id": "veshti_ground",
+      "minDay": 6,
+      "people": [],
+      "text": "A Veshti girl whose family hasn't touched a planet in nine generations asks the captain whether the safe harbor will have ground. She has been told she'd have to walk on it, and she's having nightmares."
+    },
+    {
+      "id": "the_coffee",
+      "minDay": 6,
+      "people": [
+        "marrow",
+        "odessa"
+      ],
+      "text": "Someone finds a sealed tin of real coffee in a dead officer's locker. The deck crew want it raffled, the widow wants it back, Quartermaster Brandt wants it logged, and Marrow offers to brew it, which would settle the matter in the worst way."
+    },
+    {
+      "id": "swear_jar",
+      "minDay": 6,
+      "people": [
+        "marrow"
+      ],
+      "text": "Chief Marrow's engine crew keep a swear jar for the fleet's orphans, and it has become the largest private fund in the fleet. Three charities and a councillor would now like to discuss who controls it."
+    },
+    {
+      "id": "chalk_wall",
+      "minDay": 6,
+      "people": [
+        "wen"
+      ],
+      "text": "Someone on Anselm's Mercy has begun writing the names of the dead on a wall in chalk, and Dr. Adeyemi says it's fine as long as it doesn't slow anyone down. It's now the most visited place on the ship, and there's no more room on the wall."
+    },
+    {
+      "id": "asleep_standing",
+      "minDay": 6,
+      "people": [
+        "aduro"
+      ],
+      "text": "Dr. Aduro falls asleep standing up, in the middle of a sentence, for about three minutes, then carries on and denies it. A nurse quietly asks the captain if anyone on this ship is allowed to give Dr. Aduro an order."
+    },
+    {
+      "id": "naomi_manifest",
+      "minDay": 6,
+      "people": [
+        "naomi",
+        "odessa"
+      ],
+      "text": "A new ship's manifest goes missing from the purser's office, and turns up under a table with Naomi Cass, who is reading it very slowly with one finger. Quartermaster Brandt asks the captain to let it go, and won't say why."
+    },
+    {
+      "id": "choir_proof",
+      "minDay": 7,
+      "people": [],
+      "text": "A man on the Harrow's Bounty is selling Choir-proof charms made from bits of hull, and people who can't afford food are buying them. He says he only sells hope, and the ship's purser wants to know if that's a crime."
+    },
+    {
+      "id": "thessan_birthday",
+      "minDay": 7,
+      "people": [],
+      "text": "A very old Thessan on the Slow Harriet turns three hundred. He has the sheet music for the song they sang at his first birthday, and he asks whether anybody left alive can read it."
+    },
+    {
+      "id": "not_dead_yet",
+      "minDay": 7,
+      "people": [],
+      "text": "The crew of the Little Marigold vote to paint over her name and call her the Not Dead Yet. The registry clerk is appalled, and both sides want a ruling from the captain."
+    },
+    {
+      "id": "oskar_vigil",
+      "minDay": 7,
+      "people": [
+        "oskar"
+      ],
+      "text": "Oskar Lind sits all night with a dying boy on the Second Thursday, when the boy's own family can't bear to. They're grateful, they're frightened of how grateful they are, and they ask the captain what they owe him."
+    },
+    {
+      "id": "cannon_song",
+      "minDay": 7,
+      "people": [
+        "voss"
+      ],
+      "text": "A filthy, funny and very catchy song about the Meridian's one working cannon is going around the fleet, and the marines have added verses about the captain. Voss asks if she should be doing something about this."
+    },
+    {
+      "id": "hot_shift",
+      "minDay": 8,
+      "people": [
+        "aduro",
+        "marrow"
+      ],
+      "text": "Dr. Aduro brings the captain the engine crew's blood work, all of it bad. Marrow has been running a dirty fuel mix for nine percent more range, the crew volunteered in writing, and the next jump depends on it."
+    },
+    {
+      "id": "card_ban",
+      "minDay": 8,
+      "people": [
+        "seven"
+      ],
+      "text": "Mercy Seven enters the Bright Tomorrow's card tournament and wins forty-one hands in a row. A crowd wants them banned for counting, and they ask the captain, with small pauses, whether remembering is cheating."
+    },
+    {
+      "id": "fenn_breakfast",
+      "minDay": 8,
+      "people": [
+        "garrick",
+        "voss"
+      ],
+      "text": "Garrick Fenn runs a slow, fair and very funny piece about the captain's first week, and the crew are delighted and Voss isn't. He has the captain's breakfast order right, which means someone in the galley is talking."
+    },
+    {
+      "id": "pavel_thanks",
+      "minDay": 8,
+      "people": [
+        "pavel"
+      ],
+      "text": "A patient named Pavel Ostrov asks to meet the captain, to thank them for something nobody can identify. He's charming, and he hums through the entire conversation."
+    },
+    {
+      "id": "the_will",
+      "minDay": 8,
+      "people": [],
+      "text": "A dead rating's will leaves everything to the captain: one pair of boots, a four-hundred-credit debt to the Syndicate, and a very angry daughter on the Second Thursday."
+    },
+    {
+      "id": "shuttle_hijack",
+      "minDay": 9,
+      "people": [
+        "pell"
+      ],
+      "text": "A father with a welding torch hijacks a ration shuttle and flies it to a ship nobody has heard from in six weeks. A clerical error dropped that ship from the ration roll, and now the captain has a hijacker who's right."
+    },
+    {
+      "id": "foil_play",
+      "minDay": 9,
+      "people": [
+        "naomi"
+      ],
+      "text": "The Wintermere's children are putting on a play about the Fall, with the Choir played by a girl wrapped in foil. They've invited the captain to play the captain, and some parents want it stopped."
+    },
+    {
+      "id": "missing_medal",
+      "minDay": 9,
+      "people": [],
+      "text": "An old veteran on the Vesper Landing demands a medal from the captain because he got forty people out of Aurelis. There's no form for that any more, so he has brought his own form."
+    },
+    {
+      "id": "iven_error",
+      "minDay": 9,
+      "people": [
+        "iven",
+        "voss"
+      ],
+      "text": "Lieutenant Sorel misroutes a routine message, the first error anyone has ever seen from him, and apologizes for much too long. Voss asks the captain, in four words, whether they've noticed."
+    },
+    {
+      "id": "small_stick",
+      "minDay": 9,
+      "people": [
+        "voss"
+      ],
+      "text": "An admiral's widow from the Slow Harriet has started inspecting the Meridian's mess with a small stick. The crew stand to attention as a joke and then, somehow, not as a joke, and Voss would like it to continue."
+    },
+    {
+      "id": "tuesday_man",
+      "minDay": 9,
+      "people": [
+        "garrick"
+      ],
+      "text": "Garrick Fenn airs a story from the Tuesday Man about two brothers reunited after five months, and half the fleet cries. A clerk comes to the captain, puzzled, because she can't find either brother on any manifest, and she'd like to know whether to mention it."
+    },
+    {
+      "id": "the_stillness",
+      "minDay": 10,
+      "people": [
+        "seven",
+        "aduro"
+      ],
+      "text": "At 0600, every synthetic on the Bright Tomorrow stops and stands still for exactly one hour, to protest the council's delay on a synthetic seat. Mercy Seven says it wasn't their idea and gives an unhappy percentage, and a surgery had to wait."
+    },
+    {
+      "id": "the_piano",
+      "minDay": 10,
+      "people": [
+        "marrow"
+      ],
+      "text": "A grand piano turns up bolted to a lounge on the Bright Tomorrow. Marrow needs its wire for the reactor shielding, and two hundred old people gather around it every night to hear a woman play with three fingers."
+    },
+    {
+      "id": "tobin_tally",
+      "minDay": 10,
+      "people": [
+        "tobin"
+      ],
+      "text": "Chief Hask posts a tally on Deck Four of every order he has weighed this month and what each came to, with no comment. The crew have started asking about the captain's average."
+    },
+    {
+      "id": "naomi_school",
+      "minDay": 10,
+      "people": [
+        "naomi"
+      ],
+      "text": "Naomi Cass has been teaching younger children to read from fire-safety manuals stolen out of the Meridian's lockers, and it's working. The deck officers want the manuals back, because regulations require them."
+    },
+    {
+      "id": "blood_line",
+      "minDay": 10,
+      "people": [
+        "aduro"
+      ],
+      "text": "Dr. Aduro offers a ration bonus for blood donors, and the line goes around the ship, half of it people who can't spare any. Someone is selling places in the line, and Aduro wants the bonus stopped or the line fixed by tonight."
+    },
+    {
+      "id": "deserters",
+      "minDay": 11,
+      "people": [],
+      "text": "Two navy ratings desert for Haven Station with a shuttle and a month of their ship's medicine. Their captain wants them hunted down, and their families ask the captain to let them go."
+    },
+    {
+      "id": "no_breath",
+      "minDay": 11,
+      "people": [
+        "tarrow"
+      ],
+      "text": "A dockworker on the Harrow's Bounty swears the man in the next bunk doesn't breathe when he sleeps. There's a crowd at the bunk now, the man has a lung condition and is terrified, and someone has to get there before the crowd decides."
+    },
+    {
+      "id": "halm_ration",
+      "minDay": 11,
+      "people": [
+        "halm",
+        "garrick"
+      ],
+      "text": "Speaker Halm gives his own ration to a child in a queue on the Harrow's Bounty, with a recorder running. He really does go hungry for it, it's still a stunt, and Garrick Fenn asks the captain which of those they think counts."
+    },
+    {
+      "id": "reading_aloud",
+      "minDay": 11,
+      "people": [],
+      "text": "Reading lights are cut on the Harrow's Bounty to save power, so someone starts reading a novel aloud in a corridor every night. There are now two hundred listeners, and they'd like a speaker, which needs power."
+    },
+    {
+      "id": "painted_arms",
+      "minDay": 12,
+      "people": [
+        "aduro"
+      ],
+      "text": "Ilari children on the Second Thursday have started painting their arms to hide what they feel, after being beaten up for \"looking scared\". Dr. Aduro asks the captain to come and visit them, with their own arms bare."
+    },
+    {
+      "id": "dead_cards",
+      "minDay": 12,
+      "people": [
+        "odessa"
+      ],
+      "text": "A clerk on the Anneke's Promise finds three hundred ration cards still being drawn in the names of the dead. Some are widows feeding children and some are a ring, and Quartermaster Brandt would like to know how hard the captain wants her to look."
+    },
+    {
+      "id": "mott_note",
+      "minDay": 12,
+      "people": [
+        "mott",
+        "odessa"
+      ],
+      "text": "Dockmaster Jessup at Haven sends a friendly note listing the fleet ships that have been buying under false manifests. He'd be happy to say nothing further, for a modest consideration, in any of several currencies."
+    },
+    {
+      "id": "false_inspector",
+      "minDay": 12,
+      "people": [],
+      "text": "A very convincing man in a Concord uniform has been going from ship to ship as the captain's personal inspector, and being fed very well. He has also found two real safety problems and raised morale on six ships, and some skippers want to keep him."
+    },
+    {
+      "id": "oranges",
+      "minDay": 12,
+      "people": [
+        "corvane",
+        "tarrow",
+        "halm"
+      ],
+      "text": "Legate Corvane sends a crate of fresh oranges to the Wintermere, with his warmest regards and no conditions at all, and the children have already seen them. Tarrow wants them scanned, and Speaker Halm wants a thank-you note sent."
+    },
+    {
+      "id": "half_ration",
+      "minDay": 12,
+      "people": [
+        "grann"
+      ],
+      "text": "Steward Tull faints between the rows on the Sundial, and a nurse finds she has been giving half her ration to the children for months. If the captain says anything about it she'll never forgive them, and if they say nothing she'll do it again."
+    },
+    {
+      "id": "quiet_crates",
+      "minDay": 13,
+      "people": [
+        "tarrow",
+        "oskar"
+      ],
+      "text": "Quiet tokens start turning up in the ration crates on the Meridian itself, and Tarrow is very interested. Oskar Lind says it isn't his doing, and he has never been known to lie."
+    },
+    {
+      "id": "tessaly_bill",
+      "minDay": 13,
+      "people": [
+        "tessaly"
+      ],
+      "text": "A wandering doctor named Tessaly Marsh treats forty people on the Vesper Landing for free and moves on. A week later they all get a bill from someone else, and they bring it to the captain."
+    },
+    {
+      "id": "safety_sign",
+      "minDay": 13,
+      "people": [
+        "tobin"
+      ],
+      "text": "Deck Four throws a party to celebrate a hundred days without a serious accident, though the sign has only been up for ninety. Chief Hask has weighed this, and everyone would like the captain to come anyway."
+    },
+    {
+      "id": "roe_forgets",
+      "minDay": 14,
+      "people": [
+        "bastian"
+      ],
+      "text": "In the middle of a funeral, Father Roe loses his place and stands in silence for a full minute, and the mourners say it's the best thing he's ever done. He comes to see the captain afterward with his hands shaking, and doesn't say why."
+    },
+    {
+      "id": "one_more_question",
+      "minDay": 14,
+      "people": [
+        "jaska"
+      ],
+      "text": "Inspector Moor visits the fleet to ask a routine question about a missing Hegemony citizen. She has tea with a purser on the Bright Tomorrow, thanks everyone and leaves, and only later does the captain notice how much she now knows."
+    },
+    {
+      "id": "synth_funeral",
+      "minDay": 14,
+      "people": [
+        "seven",
+        "marrow"
+      ],
+      "text": "The first synthetic to die publicly since the Fall gets a funeral on the Tollan Arms, and eleven people come. Marrow gives the eulogy and swears thirty-one times, and Mercy Seven has calculated the chance the captain will attend, and would like to be wrong."
+    },
+    {
+      "id": "leaflets",
+      "minDay": 15,
+      "people": [
+        "corvane",
+        "halm",
+        "tarrow"
+      ],
+      "text": "Leaflets appear on six ships, very well printed, offering safe berths at Bastion Nine, with a number to call. Speaker Halm says we must respect free speech, and Tarrow would like to know who owns a press."
+    },
+    {
+      "id": "dinner_table",
+      "minDay": 15,
+      "people": [
+        "marrow"
+      ],
+      "text": "A hull patch on the Anneke's Promise turns out to be a welded-down dinner table, and it has held for four months. Marrow wants to meet whoever did it, and either hire them or hit them."
+    },
+    {
+      "id": "tarrows_marine",
+      "minDay": 15,
+      "people": [
+        "tarrow"
+      ],
+      "text": "On a surprise inspection, Tarrow finds one of her marines being taught to read by a synthetic cargo hand. The marine comes to the captain, terrified, to ask what he should do, because he's on page forty."
+    },
+    {
+      "id": "warm_fragment",
+      "minDay": 16,
+      "people": [
+        "tarrow"
+      ],
+      "text": "Someone on the Tollan Arms keeps a fragment of Choir metal on a shelf as a souvenir, and it's warm, and people have started leaving paper flowers by it. Tarrow wants it in a shielded box, and the deck would like it left alone."
+    },
+    {
+      "id": "hull_oath",
+      "minDay": 16,
+      "people": [
+        "tobin"
+      ],
+      "text": "A Korrun shipwright weighs a promise in front of his crew to fix the Anneke's Promise's hull by tomorrow, then learns it can't be done. He has been outside in a suit for nineteen hours and won't come in, and Chief Hask says that's between him and the scale."
+    },
+    {
+      "id": "lifeboat_seats",
+      "minDay": 16,
+      "people": [],
+      "text": "A man on the Vesper Landing is selling places in the lifeboats, which he doesn't own. People are buying anyway, and at the next drill, forty of them turn up with receipts."
+    },
+    {
+      "id": "missing_transfer",
+      "minDay": 16,
+      "people": [
+        "wen"
+      ],
+      "text": "A clerk on Anselm's Mercy can't find the ship that received a patient transferred last week, or the one before that. The forms are all in order, signed by Dr. Adeyemi, and the clerk would like to know who to ask."
+    },
+    {
+      "id": "water_sellers",
+      "minDay": 17,
+      "people": [
+        "tobin"
+      ],
+      "text": "A Long Family trading skiff hails the fleet, offering water by the liter at an insulting price. Chief Hask weighs the first barrel and says what it came to, which is light, and now the fleet needs the water and has caught them cheating."
+    },
+    {
+      "id": "machine_uncle",
+      "minDay": 17,
+      "people": [
+        "seven"
+      ],
+      "text": "A synthetic cargo hand on the Second Thursday has been raising a war orphan for six months, and doing it well. A human couple now wants the child, there's a form to decide it, and the form has a box the synthetic can't tick."
+    },
+    {
+      "id": "swimmer",
+      "minDay": 18,
+      "people": [
+        "corvane"
+      ],
+      "text": "A Hegemony conscript steps out of a passing transport's lock in a suit and drifts into the fleet's path, begging asylum, and says he knows what's on the unmarked ships. If he's taken in, Legate Corvane will ask for him back, very warmly."
+    },
+    {
+      "id": "honest_odds",
+      "minDay": 18,
+      "people": [
+        "seven",
+        "wen"
+      ],
+      "text": "A dying man on Anselm's Mercy refuses every human doctor and asks only for Mercy Seven, because they don't lie. His family objects, and he'd like the captain to make it an order."
+    },
+    {
+      "id": "hull_music",
+      "minDay": 19,
+      "people": [
+        "aduro"
+      ],
+      "text": "A hull tech on the Tollan Arms records the ship's stress groans at night and plays them back as music for people who can't sleep. Dr. Aduro says it's working, and a councillor says it's the song, and wants it banned."
+    },
+    {
+      "id": "grandmothers_tins",
+      "minDay": 19,
+      "people": [],
+      "text": "An old woman on the Bright Tomorrow dies, and her cabin turns out to hold two hundred tins of food she was saving for grandchildren who died in the Fall. Her neighbors went hungry beside it for months, and a fight is about to start over who gets it."
+    },
+    {
+      "id": "better_wiring",
+      "minDay": 20,
+      "people": [
+        "marrow"
+      ],
+      "text": "A nine-year-old turns up in engineering and corrects Marrow's wiring, and she's right, and by the time he has finished swearing she's gone. He'd like the captain to know he isn't going mad, and that the wiring's better."
+    },
+    {
+      "id": "ration_split",
+      "minDay": 21,
+      "people": [
+        "halm"
+      ],
+      "text": "The council passes a ration cut by one vote, and six ships refuse to carry it out. Speaker Halm says we should all let things cool, and the Meridian's cooks want to know what they're serving tomorrow."
+    },
+    {
+      "id": "stay_behind",
+      "minDay": 22,
+      "people": [
+        "marrow"
+      ],
+      "text": "The skipper of the oldest ship in the fleet quietly offers to stay behind at the next jump, which would save everyone two percent of their fuel. She has three hundred people aboard and says they've voted, and the captain should probably ask who counted."
+    },
+    {
+      "id": "torpid_thessan",
+      "minDay": 22,
+      "people": [
+        "wen"
+      ],
+      "text": "A Thessan patient goes cold and still on Anselm's Mercy, which is how Thessan rest, and which can last a month. The ward needs the bed, Dr. Adeyemi can't tell if he's sleeping or dying, and his family wants to know who's going to wake him to ask."
+    },
+    {
+      "id": "snow_on_the_sundial",
+      "minDay": 23,
+      "people": [
+        "grann"
+      ],
+      "text": "A cold-plant failure makes it snow in the Sundial's east field, and children who have never seen it run out to play while the beans die around them. Steward Tull has an hour to save the crop, and nobody wants to be the one to tell the children to get off her field."
+    },
+    {
+      "id": "name_of_the_choir",
+      "minDay": 24,
+      "people": [
+        "bastian"
+      ],
+      "text": "The Wintermere's children's choir has rehearsed for a month, and a councillor points out that the word itself now upsets people. They've been told to call themselves something else, and they've asked the captain to choose."
+    },
+    {
+      "id": "chalk_countdown",
+      "minDay": 25,
+      "people": [
+        "aduro",
+        "odessa"
+      ],
+      "text": "Someone has chalked a number on a lower-deck wall, and it goes down by one every morning, and nobody knows what it's counting. Dr. Aduro goes very still when they see it, and Quartermaster Brandt asks who else has been reading her books."
+    },
+    {
+      "id": "seven_months",
+      "minDay": 28,
+      "people": [
+        "halm",
+        "bastian"
+      ],
+      "text": "The fleet marks seven months since the Fall, with a memorial on every ship at the same hour, and someone has to speak on the all-ship channel. Speaker Halm has drafted something for the captain, and it's quite good, and says \"we\" sixty-one times."
+    },
+    {
+      "id": "a_word_not_a_number",
+      "minDay": 28,
+      "people": [
+        "marrow",
+        "voss"
+      ],
+      "text": "Marrow tells the captain the fleet's fuel reserve has reached the point where he has stopped using numbers and started using words. Voss asks what the word is, and then asks what the captain plans to tell the fleet."
+    },
+    {
+      "id": "thirty_days",
+      "minDay": 30,
+      "people": [
+        "naomi",
+        "pell"
+      ],
+      "text": "The Wintermere's children send the Meridian a card signed by all of them, for getting them this far, with a drawing of the captain beside a very large cannon. Ensign Asante pins it above the helm and won't take it down, whatever the regulations say."
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "_help": [
+    "What changes at each place from one day to the next, whether the captain is there or not. Restart the game after changing this file.",
+    "places: each place's goods say where it gets each supply from. An empty list means it makes its own. If what it depends on runs short, it runs short too, a few days later. A place with no goods has no daily supplies at all.",
+    "hold is how much of a say each side has at that place, adding up to 100. A side can be a faction's id or one of the place's own sides, with its name under sides. Whoever has the most holds the place. locked means that never changes. push is how much a side gains there each day, all else being equal, and it's usually very small.",
+    "items says which supply each thing in a market's price follows. Weapons, armor and the like follow parts by half as much, and anything else doesn't change.",
+    "events are the things that can happen. chance is how likely it is on any one day at any one of its places, when nothing else is going on there. days is how long it lasts, at the least and at the most. goods are added to that supply's level every day it lasts, where 100 is normal for that place, and sides are added to that side's share every day. trouble makes the place one step more dangerous while it lasts. big means the captain hears about it wherever they are, as long as they know of the place. news is what people say, and done is what they say when it's over. {place} is the place's name."
+  ],
+
+  "goods": {
+    "food": { "name": "Food" },
+    "fuel": { "name": "Fuel" },
+    "medicine": { "name": "Medicine" },
+    "parts": { "name": "Parts" }
+  },
+
+  "levels": [
+    { "from": 125, "name": "plenty" },
+    { "from": 80, "name": "normal" },
+    { "from": 50, "name": "short" },
+    { "from": 20, "name": "scarce" },
+    { "from": 0, "name": "almost gone" }
+  ],
+  "prices": [[0, 3], [20, 2.2], [50, 1.5], [80, 1.15], [100, 1], [135, 0.85], [200, 0.65]],
+  "lots": { "bought": -4, "sold": 4, "none": 8 },
+  "standing": { "hostile": { "at": -40, "price": 1.25 }, "friendly": { "at": 40, "price": 0.9 } },
+
+  "places": {
+    "haven": {
+      "goods": { "food": ["frontier", "maris"], "fuel": ["cinder", "deepyards"], "medicine": ["lumen", "vantor"], "parts": ["graveyard", "korrath"] },
+      "sides": { "truce": "The dock bosses and their truce" },
+      "hold": { "drift": 45, "truce": 30, "hegemony": 20, "quiet": 5 },
+      "push": { "hegemony": 0.03, "quiet": 0.01 }
+    },
+    "kessara": {
+      "goods": { "food": ["maris", "haven"], "fuel": ["cinder"], "medicine": ["haven"], "parts": [] },
+      "sides": { "raiders": "The independent raider crews" },
+      "hold": { "drift": 80, "raiders": 20 }
+    },
+    "ilun": {
+      "goods": { "food": ["lumen"], "medicine": [] },
+      "hold": { "ilun": 90, "hegemony": 10 },
+      "locked": true
+    },
+    "vantor": {
+      "goods": { "food": [], "fuel": [], "medicine": [], "parts": ["korrath"] },
+      "hold": { "hegemony": 100 },
+      "locked": true
+    },
+    "graveyard": {
+      "goods": { "food": ["haven"], "fuel": [], "medicine": ["haven"], "parts": [] },
+      "hold": { "guild": 80, "drift": 10, "clans": 10 }
+    },
+    "frontier": {
+      "goods": { "food": [], "fuel": ["cinder"], "medicine": ["haven"], "parts": ["haven"] },
+      "sides": { "colonists": "Its own colonists" },
+      "hold": { "colonists": 70, "hegemony": 15, "drift": 15 },
+      "push": { "hegemony": 0.02 }
+    },
+    "bastion": {
+      "goods": { "food": ["vantor"], "fuel": ["vantor"], "medicine": ["vantor"], "parts": ["vantor"] },
+      "sides": { "line": "The people on the Line" },
+      "hold": { "hegemony": 85, "line": 15 },
+      "push": { "hegemony": 0.05 }
+    },
+    "cinder": {
+      "goods": { "food": ["frontier"], "fuel": [], "medicine": ["haven"], "parts": [] },
+      "sides": { "company": "The refinery company", "strike": "The strikers" },
+      "hold": { "company": 45, "strike": 45, "hegemony": 5, "drift": 5 }
+    },
+    "deepyards": {
+      "goods": { "food": ["frontier"], "fuel": [], "medicine": ["lumen"], "parts": [] },
+      "hold": { "families": 90, "guild": 10 }
+    },
+    "foundry": {
+      "goods": { "parts": [] },
+      "hold": { "unbound": 100 },
+      "locked": true
+    },
+    "ghostlight": {
+      "goods": { "food": ["kessara"], "fuel": [], "medicine": ["kessara"], "parts": ["graveyard"] },
+      "sides": { "smugglers": "The Cold Market's smugglers" },
+      "hold": { "remnant": 55, "smugglers": 35, "drift": 10 }
+    },
+    "korrath": {
+      "goods": { "food": [], "fuel": ["cinder"], "medicine": ["vantor"], "parts": [] },
+      "hold": { "clans": 95, "hegemony": 5 }
+    },
+    "lumen": {
+      "goods": { "food": [], "fuel": ["deepyards"], "medicine": [], "parts": ["haven"] },
+      "hold": { "circle": 90, "quiet": 10 },
+      "push": { "quiet": 0.02 }
+    },
+    "maris": {
+      "goods": { "food": [], "fuel": ["haven"], "medicine": ["lumen"], "parts": ["haven"] },
+      "sides": { "kelpers": "The kelp farmers" },
+      "hold": { "kelpers": 80, "hegemony": 10, "drift": 10 }
+    },
+    "orrin": {
+      "goods": { "food": ["lumen"], "medicine": ["lumen"] },
+      "sides": { "hermits": "The hermits of the cloister" },
+      "hold": { "hermits": 100 },
+      "locked": true
+    },
+    "sarn": {
+      "goods": { "food": ["vantor"], "medicine": ["vantor"] },
+      "hold": { "archive": 95, "hegemony": 5 }
+    },
+    "wheel": {
+      "goods": { "food": ["haven"], "fuel": ["kessara"], "medicine": ["haven"], "parts": ["haven"] },
+      "sides": { "house": "Madame Ao-Dess's house" },
+      "hold": { "drift": 60, "house": 30, "families": 10 }
+    }
+  },
+
+  "items": {
+    "medkit": "medicine", "stim": "medicine", "trauma_kit": "medicine", "calm_tabs": "medicine", "emergency_patch": "medicine",
+    "ration_pack": "food", "nutrient_gel": "food",
+    "fuel_cell": "fuel", "refined_fuel": "fuel",
+    "energy_cell": "parts", "repair_kit": "parts"
+  },
+
+  "events": [
+    { "id": "haven_fuel_corner", "places": ["haven"], "chance": 0.008, "days": [5, 10], "goods": { "fuel": -5 }, "news": "Someone's buying up every drop of fuel on Haven Station, and the price is climbing by the hour.", "done": "Whoever was cornering the fuel at Haven Station has let go, and the price is coming down." },
+    { "id": "haven_scrubbers", "places": ["haven"], "chance": 0.006, "days": [4, 8], "goods": { "medicine": -4 }, "trouble": true, "news": "The Hook's air scrubbers have failed again at Haven Station, and medicine's going fast." },
+    { "id": "haven_debts", "places": ["haven"], "chance": 0.006, "days": [6, 12], "sides": { "hegemony": 0.8, "drift": -0.3 }, "news": "The Hegemony's envoy has paid off a stack of dock debts at Haven Station, and people are noticing who they owe now." },
+    { "id": "haven_truce", "places": ["haven"], "chance": 0.005, "days": [5, 8], "sides": { "truce": 0.6 }, "news": "The truce at Haven's Neutral Ground has held through a bad week, and the dock bosses are taking the credit." },
+
+    { "id": "kessara_score", "places": ["kessara"], "chance": 0.01, "days": [4, 8], "goods": { "medicine": 5, "parts": 3 }, "sides": { "drift": 0.4 }, "news": "Raiders came home to Kessara Drift with a stolen Hegemony convoy, and there's medicine and parts to spare." },
+    { "id": "kessara_debt_war", "places": ["kessara"], "chance": 0.007, "days": [4, 9], "goods": { "fuel": -3, "parts": -3 }, "sides": { "raiders": 0.6 }, "trouble": true, "news": "Two raider crews at Kessara Drift are fighting over a debt on the Tally Wall, and nobody's shipping anything." },
+
+    { "id": "vantor_requisition", "places": ["vantor"], "chance": 0.008, "days": [6, 12], "goods": { "food": -4, "medicine": -3 }, "news": "Vantor Prime has requisitioned food and medicine for the border garrisons, and the shelves in the Lower Stacks are empty." },
+    { "id": "vantor_reserves", "places": ["vantor"], "chance": 0.008, "days": [5, 10], "goods": { "food": 4, "fuel": 3, "medicine": 3 }, "news": "The Hegemony has released its reserves at Vantor Prime, to show how well things are going." },
+
+    { "id": "bastion_surge", "places": ["bastion"], "chance": 0.01, "days": [6, 12], "goods": { "food": -4, "medicine": -3 }, "sides": { "line": 0.4 }, "news": "Another wave of refugees has reached Bastion Nine, and the Line's longer than it's ever been." },
+    { "id": "bastion_numbers", "places": ["bastion"], "chance": 0.005, "days": [3, 6], "sides": { "line": 1 }, "trouble": true, "news": "There was trouble on the Line at Bastion Nine, after the numbers stopped being called for a whole day." },
+
+    { "id": "graveyard_wreck", "places": ["graveyard"], "chance": 0.01, "days": [6, 12], "goods": { "parts": 6 }, "news": "Divers at the Graveyard have cracked open a dreadnought nobody could get into, and parts are cheap." },
+    { "id": "graveyard_claims", "places": ["graveyard"], "chance": 0.007, "days": [5, 9], "goods": { "parts": -5, "fuel": -2 }, "sides": { "drift": 0.3, "guild": -0.3 }, "trouble": true, "news": "A claims fight has shut down half of Claim Row at the Graveyard." },
+
+    { "id": "frontier_harvest", "places": ["frontier"], "chance": 0.01, "days": [8, 14], "goods": { "food": 6 }, "news": "Tessen Colony's bringing in the biggest harvest anyone can remember." },
+    { "id": "frontier_raid", "places": ["frontier"], "chance": 0.008, "days": [6, 12], "goods": { "food": -7 }, "sides": { "drift": 0.5, "colonists": -0.3 }, "trouble": true, "big": true, "news": "Raiders hit the far homesteads at Tessen Colony and burned a season's grain.", "done": "Grain's moving out of Tessen Colony again." },
+    { "id": "frontier_survey", "places": ["frontier"], "chance": 0.005, "days": [6, 10], "sides": { "hegemony": 1 }, "news": "A Hegemony survey team has landed at Tessen Colony, offering protection that nobody asked for." },
+
+    { "id": "cinder_picket_fight", "places": ["cinder"], "chance": 0.01, "days": [6, 14], "goods": { "fuel": -8, "parts": -3 }, "sides": { "strike": 0.7, "company": -0.4 }, "trouble": true, "big": true, "news": "The picket at Cinder Reach has turned into a fight at the Gate, and the refinery's stopped loading.", "done": "Tankers are moving out of Cinder Reach again." },
+    { "id": "cinder_tanker", "places": ["cinder"], "chance": 0.008, "days": [3, 6], "goods": { "fuel": 4 }, "sides": { "company": 0.7, "strike": -0.4 }, "news": "Company managers got a tanker out of the Stack at Cinder Reach, right past the picket." },
+    { "id": "cinder_tremor", "places": ["cinder"], "chance": 0.006, "days": [4, 8], "goods": { "fuel": -5 }, "news": "A big tremor at Cinder Reach has cracked a feed line in the Stack." },
+    { "id": "cinder_talks", "places": ["cinder"], "chance": 0.006, "days": [4, 8], "goods": { "fuel": 3 }, "news": "The company and the strikers at Cinder Reach are actually talking, and fuel's moving while they do." },
+
+    { "id": "deepyards_berg", "places": ["deepyards"], "chance": 0.01, "days": [5, 9], "goods": { "fuel": 4 }, "news": "The Ice Cut at the Deepyards has calved a berg, and the melt-works are running flat out." },
+    { "id": "deepyards_refit", "places": ["deepyards"], "chance": 0.008, "days": [6, 10], "goods": { "parts": -5 }, "sides": { "families": 0.3 }, "news": "The Long Families have taken every cutter at the Deepyards for a refit of their own." },
+
+    { "id": "ghostlight_stalkers", "places": ["ghostlight"], "chance": 0.01, "days": [4, 9], "goods": { "fuel": -5, "food": -3 }, "trouble": true, "news": "Stalkers have come up the lamp lanes at the Ghostlight, and the Cold Market's gone dark." },
+    { "id": "ghostlight_levy", "places": ["ghostlight"], "chance": 0.008, "days": [5, 8], "goods": { "fuel": -4 }, "sides": { "remnant": 0.8, "smugglers": -0.5 }, "news": "The Remnant has requisitioned fuel from the Cold Market at the Ghostlight, in the name of the lawful Concord." },
+    { "id": "ghostlight_defiance", "places": ["ghostlight"], "chance": 0.006, "days": [5, 8], "sides": { "smugglers": 0.8, "remnant": -0.5 }, "news": "The smugglers at the Ghostlight have stopped answering the Remnant's lamp-code." },
+
+    { "id": "korrath_reline", "places": ["korrath"], "chance": 0.008, "days": [6, 10], "goods": { "parts": -5 }, "news": "One of the Long Furnaces at Korrath Forge has gone cold for relining, and the clans are rationing plate." },
+    { "id": "korrath_pour", "places": ["korrath"], "chance": 0.008, "days": [6, 10], "goods": { "parts": 5 }, "news": "Korrath Forge has had a record pour, and the Slag Bridge stalls are selling parts by the crate." },
+
+    { "id": "lumen_mood", "places": ["lumen"], "chance": 0.009, "days": [5, 8], "goods": { "food": 3, "medicine": 3 }, "news": "The mood's lifted in the Water Courts at Lumen Sanctuary, and prices have fallen with it, as they do there." },
+    { "id": "lumen_grief", "places": ["lumen"], "chance": 0.007, "days": [6, 10], "goods": { "food": -3, "medicine": -4 }, "sides": { "quiet": 0.5 }, "news": "Whole streets at Lumen Sanctuary have gone dark with grief, and nobody's trading." },
+
+    { "id": "maris_bloom", "places": ["maris"], "chance": 0.01, "days": [6, 10], "goods": { "food": 6 }, "news": "The kelp's blooming at Maris Deep, and the rafts can't bring it in fast enough." },
+    { "id": "maris_storm", "places": ["maris"], "chance": 0.008, "days": [4, 8], "goods": { "food": -6 }, "trouble": true, "news": "A long storm has cut the rafts at Maris Deep loose from half their lines." },
+
+    { "id": "wheel_season", "places": ["wheel"], "chance": 0.01, "days": [5, 9], "goods": { "food": -4, "medicine": -2 }, "news": "It's high season at the Gilded Wheel, and rich people are eating everything on the station." },
+    { "id": "wheel_markers", "places": ["wheel"], "chance": 0.006, "days": [4, 7], "goods": { "fuel": 2 }, "sides": { "house": 0.7, "drift": -0.4 }, "news": "A run on brass markers has emptied the Exchange at the Gilded Wheel, and half the station's suddenly for sale." },
+
+    { "id": "sarn_pipe", "places": ["sarn"], "chance": 0.008, "days": [4, 8], "goods": { "medicine": -3, "food": -2 }, "news": "The great heat pipe at Sarn has sprung a leak, and the Keepers are burning through their supplies." },
+    { "id": "ilun_hum", "places": ["ilun"], "chance": 0.008, "days": [5, 8], "goods": { "food": -3 }, "news": "The stones at Ilun have been humming by day as well as by night, and pilgrims are coming to hear it." },
+    { "id": "orrin_flour", "places": ["orrin"], "chance": 0.01, "days": [5, 9], "goods": { "food": -5 }, "news": "Saint Orrin's Comet is out of flour again, and the heretics have started arguing about whose fault it is." },
+    { "id": "foundry_vote", "places": ["foundry"], "chance": 0.006, "days": [5, 9], "goods": { "parts": 3 }, "news": "The Unbound at Foundry Seven have voted to open another stretch of the rack, for anyone who needs it." },
+
+    { "id": "fever", "places": ["haven", "kessara", "bastion", "vantor", "cinder", "frontier", "lumen", "wheel", "graveyard", "maris", "korrath"], "chance": 0.004, "days": [6, 12], "goods": { "medicine": -6 }, "news": "A fever's going round {place}, and medicine's getting hard to find." },
+    { "id": "convoy_lost", "places": ["haven", "kessara", "wheel", "ghostlight", "graveyard", "deepyards", "maris"], "chance": 0.004, "days": [4, 8], "goods": { "food": -4, "parts": -2 }, "news": "A supply convoy bound for {place} never arrived." },
+    { "id": "hoarding", "places": ["haven", "kessara", "bastion", "vantor", "wheel", "cinder"], "chance": 0.004, "days": [3, 6], "goods": { "food": -4 }, "news": "People at {place} are hoarding food, on nothing but a rumor." },
+    { "id": "big_trader", "places": ["haven", "kessara", "wheel", "graveyard", "deepyards", "cinder", "korrath", "maris"], "chance": 0.004, "days": [3, 6], "goods": { "food": 3, "fuel": 3, "medicine": 3, "parts": 3 }, "news": "A big trader has come through {place} with holds to empty." },
+    { "id": "quiet_preachers", "places": ["haven", "lumen"], "chance": 0.005, "days": [6, 10], "sides": { "quiet": 0.7 }, "news": "The Quiet have been preaching at {place}, and more people are listening." },
+    { "id": "hegemony_patrols", "places": ["frontier", "haven", "maris", "graveyard"], "chance": 0.004, "days": [6, 10], "goods": { "fuel": -2 }, "sides": { "hegemony": 0.6 }, "news": "Hegemony patrols have started stopping ships near {place}." },
+    { "id": "syndicate_protection", "places": ["frontier", "maris", "graveyard", "ghostlight", "wheel"], "chance": 0.004, "days": [6, 10], "sides": { "drift": 0.6 }, "news": "Syndicate collectors are selling protection at {place}." }
+  ],
+
+  "text": {
+    "taken": "The balance has shifted at {place}: {new} now runs things there, not {old}.",
+    "contested": "{new} has as much of a say at {place} now as {old}, and everyone there knows it."
+  }
+}

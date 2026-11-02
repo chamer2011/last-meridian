@@ -1,0 +1,377 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "Saint Orrin's Comet",
+  "start": "melt",
+  "levels": {
+    "melt": {
+      "name": "The Long Melt",
+      "aliases": [
+        "long melt",
+        "the melt",
+        "the tunnels",
+        "the cells"
+      ],
+      "desc": "Cells and tunnels melted into the comet by generations of heretics, a little different each time round. Hermits live at the far ends, and some have been arguing through the same wall for forty years.",
+      "floor": ".",
+      "colors": {
+        "floor": "#384452",
+        "walls": "#7c94ac",
+        "scenery": "#c0e0f8",
+        "writing": "#f4fbff"
+      },
+      "plan": [
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%1%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+        "%%%%%%...........%%%%%%%%%%%%%%%%.......%%%%%%%%%%%%...........%%%%%%%%",
+        "%%%%%.............%%%%%%%%%%...............%%%%%%.................%%%%%",
+        "%%%%%....%%%%%.......%%%%....................%%%%....%%%%%%%%%.....%%%%",
+        "%%%%....%%%%%%%%%................%%%%%%%%.............%%%%%%%%%.....%%%",
+        "3.......%%%%%%%%%%%%%.....@.....%%%%%%%%%%%%%%....w....%%%%%%%%%%.....4",
+        "%%%%....%%%%%%%%%................%%%%%%%%.............%%%%%%%%%.....%%%",
+        "%%%%%....%%%%%.......%%%%....................%%%%....%%%%%%%%%.....%%%%",
+        "%%%%%.............%%%%%%%%%%...............%%%%%%.................%%%%%",
+        "%%%%%%..c........%%%%%%%%%%%%%%%%.......%%%%%%%%%%%%....f......%%%%%%%%",
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE LONG MELT",
+          "at": [22, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "pit",
+          "via": "1"
+        },
+        "3": {
+          "to": "ward",
+          "via": "1"
+        },
+        "4": {
+          "to": "hole",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "w": {
+          "name": "A wall with two voices",
+          "look": "There's a hermit on each side, and they've been arguing through this same wall for forty years, about one sentence. Neither has seen the other's face. Each of them is very rude, and one is coughing. The other's stopped to ask.",
+          "use": "I put my ear to the wall and take a side."
+        },
+        "c": {
+          "name": "A sign that's moved",
+          "look": "Someone's written THIS WAY TO THE PIT on the ice, with an arrow. The tunnel has shifted since then, a little more each orbit, and now the arrow points at a solid wall. Nobody's fixed it. People have started arguing with it.",
+          "use": "I add my opinion to the arrow on the ice."
+        },
+        "f": {
+          "name": "A sack of flour",
+          "look": "Dumped at a tunnel junction, with a note: FOR BEING WRONG ABOUT THE THIRD PROPOSITION, OUT LOUD, IN FRONT OF EVERYONE. Payment's taken here in flour, and in shame, and they're happy with either.",
+          "use": "I read the note on the flour, and I ask who was wrong."
+        }
+      }
+    },
+    "pit": {
+      "name": "The Disputation Pit",
+      "aliases": [
+        "disputation pit",
+        "the pit",
+        "the bowl",
+        "the chalk line"
+      ],
+      "desc": "A scooped-out bowl of ice with a bench around it and a very old chalk line. Anyone may challenge anyone on anything, the crowd judges, and the loser cooks.",
+      "floor": ",",
+      "colors": {
+        "floor": "#3a4a5c",
+        "walls": "#80a0c0",
+        "scenery": "#c8ecff",
+        "writing": "#ffffff"
+      },
+      "plan": [
+        "         ###################2###################         ",
+        "  #######,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#######  ",
+        "####,,,,,,,(((((((((((((((((((((((((((((((,,,,,,,,,,,####",
+        "###,,,,,,,((,,,,,,,,,,,,,,,,,,,,,,,,,,,,,((,,,,,,,,,,,###",
+        "##,,,,,,,((,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,((,,,,,,,,,,,##",
+        "##,,,,,,((,,,,,,,,,,,,,O,,,,,,,,,,,,,,,,,,,((,,,,,f,,,,##",
+        "##,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,##",
+        "##,,@,,,,,,,,,,,,,,,,,,,,,c,,,,,,,,,,,,,,,,,,,,,,,,,,,,##",
+        "##,,,,,,,((,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,((,,,,,,,,,,,##",
+        "###,,,,,,,((,,,,,,,,,,,,,,,,,,,,,,,,,,,,,((,,,,,,,,,,,###",
+        "####,,,,,,,((((((((((((((((((((((((((((((,,,,k,,,,,,,####",
+        "  #######,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#######  ",
+        "         ###################1###################         "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE DISPUTATION PIT",
+          "at": [20, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "melt",
+          "via": "1"
+        },
+        "2": {
+          "to": "loft",
+          "via": "1"
+        }
+      },
+      "people": {
+        "O": {
+          "id": "orsolya",
+          "label": "Mother Orsolya",
+          "asks": [
+            "What's the Order of Ilun got wrong?",
+            "What do I have to be wrong about to get a straight answer?"
+          ]
+        }
+      },
+      "things": {
+        "c": {
+          "name": "The chalk line",
+          "look": "It's very old and it's been redrawn on top of itself for a thousand years, and it's sunk into the ice like a scar. You stand on your side, and you say what you think. There's a smell of burnt toast.",
+          "use": "I step up to the chalk line and I challenge someone."
+        },
+        "f": {
+          "name": "A blade stuck in the ice",
+          "item": "focus_blade",
+          "look": "A focus blade, driven point-first into the rim, with a note tied to it: LOST ON A POINT OF ORDER. It's up for grabs for anyone who can win the argument it was lost in.",
+          "use": "I ask what the argument was, and I try to win the blade."
+        },
+        "k": {
+          "name": "The loser's pot",
+          "look": "A big scorched pot on a burner. Tonight's cook is a visiting scholar who was very confident this morning. He's making something grey. Everyone's being extremely encouraging, and very loud about it.",
+          "use": "I offer the scholar a hand with the pot, and I ask what he got wrong."
+        }
+      }
+    },
+    "loft": {
+      "name": "The Loft",
+      "aliases": [
+        "loft",
+        "the cage",
+        "the wire cage",
+        "the singer's cage"
+      ],
+      "desc": "A wire cage bolted to the surface, under the black sky and the long bright tail. One heretic is always up there, singing into the dark in shifts, and they've kept this up without a break for a thousand years.",
+      "floor": "=",
+      "colors": {
+        "floor": "#303c5a",
+        "walls": "#5a6c98",
+        "scenery": "#a0c0ff",
+        "writing": "#ffffff"
+      },
+      "plan": [
+        "*        .             *                 .          *            .    * ",
+        "    .          *              .                 *           .           ",
+        " .       *            .              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+        "#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/",
+        "#=====================================================================/ ",
+        "/=========@============================s=============================/  ",
+        "#=====================================================================# ",
+        "#=================t===================================================# ",
+        "#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/1/#/#/#/#/#/#/#/#/#/  "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE LOFT",
+          "at": [3, 4]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "pit",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "s": {
+          "name": "The singer",
+          "look": "A scarred woman in a scorched suit, with her helmet off, which shouldn't be possible. She's singing very badly into the dark. She doesn't stop for you. She nods at the next spot along.",
+          "use": "I stand next to the singer and I sing with her, as badly as I need to."
+        },
+        "t": {
+          "name": "A forked crystal on the wire",
+          "item": "resonance_tuner",
+          "look": "A resonance tuner, tied to the cage with a bit of wire, for the singers to check themselves against. It's been held in a lot of teeth, and it's got a lot of bite marks.",
+          "use": "I hold the forked crystal against my teeth and listen."
+        }
+      }
+    },
+    "ward": {
+      "name": "The Burn Ward",
+      "aliases": [
+        "burn ward",
+        "the ward",
+        "the warm cave",
+        "the low cave"
+      ],
+      "desc": "A warm low cave where singers who've stood too many shifts are looked after by the ones who haven't yet. Nobody's allowed to be alone in it, and it's full of terrible jokes.",
+      "floor": "_",
+      "colors": {
+        "floor": "#4f3632",
+        "walls": "#a07868",
+        "scenery": "#f0a890",
+        "writing": "#ffe8e0"
+      },
+      "plan": [
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+        "%%%%______________________________________________%%%%%%",
+        "%%__[=]__[=]__[=]__[=]__[=]__[=]__[=]__[=]__[=]_____%%%%",
+        "%%__________________________________________________%%%%",
+        "1_______________@_____________________________j_____%%%%",
+        "%%__________________________________________________%%%%",
+        "%%__[=]__[=]__[=]__[=]r_[=]__[=]__[=]__[=]__[=]_____%%%%",
+        "%%%%______________________________________________%%%%%%",
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE BURN WARD",
+          "at": [24, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "melt",
+          "via": "3"
+        }
+      },
+      "people": {},
+      "things": {
+        "j": {
+          "name": "The joke board",
+          "look": "A slab of ice, with jokes scratched into it in dozens of hands, each one worse than the last. Patients vote by groaning. The top one's about a Keeper, a Thessan and a very cold lavatory.",
+          "use": "I read the jokes, and then I add one."
+        },
+        "r": {
+          "name": "Spare robes on a cot",
+          "item": "adept_robes",
+          "look": "Scorched adept's robes, mended many times, drying on the end of a cot. They're for the next one who goes up. Whoever's in that cot is asleep, and is holding onto the sleeve in their sleep.",
+          "use": "I ask the orderly whether anyone could spare a set of those robes."
+        }
+      }
+    },
+    "hole": {
+      "name": "Orrin's Hole",
+      "aliases": [
+        "orrin's hole",
+        "the hole",
+        "the shaft",
+        "the dry shaft"
+      ],
+      "desc": "A dry shaft in the ice where the lost testament of Saint Orrin was supposedly found. Pilgrims leave burned gloves here, and Mother Orsolya uses it to keep her beer cold.",
+      "floor": ":",
+      "colors": {
+        "floor": "#2e3e4f",
+        "walls": "#6c8ca8",
+        "scenery": "#a8d0e8",
+        "writing": "#e8f8ff"
+      },
+      "plan": [
+        "         ########################         ",
+        "#####::::::::::::::::::::::::::::::::#####",
+        "###:::::::g::::::::::::::::::::::::::::###",
+        "##::::::::::::::.------.::::::::::::::::##",
+        "##:::::::::::::/        \\:::::::::::::::##",
+        "##:::::::::::::|        |b::::::::::::::##",
+        "##:::::::::::::\\        /:::::::::::::::##",
+        "##::::::::::::::'------'::::::::k:::::::##",
+        "###:::::@::::::::::::::::::::::::::::::###",
+        "#####::::::::::::::::::::::::::::::::#####",
+        "         ###############1########         "
+      ],
+      "writing": [
+        [17, 5, "DOWN"]
+      ],
+      "labels": [
+        {
+          "text": "ORRIN'S HOLE",
+          "at": [14, 1]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "melt",
+          "via": "4"
+        }
+      },
+      "people": {},
+      "things": {
+        "g": {
+          "name": "The burned gloves",
+          "look": "Hundreds of pairs, nailed to the ice, or left in heaps, each one scorched in the same way. Pilgrims have come a long way to leave these here. Nobody's sure that the Saint would have approved of them.",
+          "use": "I take off my gloves, and I look over the ones the pilgrims left."
+        },
+        "b": {
+          "name": "Mother Orsolya's beer",
+          "look": "A rope goes over the lip of the shaft, down to a net of bottles, in the most sacred hole in heretic theology. There's a label on the rope: THIS MEANS YOU, BROTHER ANDRE.",
+          "use": "I haul up a bottle, and I wait to be caught."
+        },
+        "k": {
+          "name": "A pale ring in the ice",
+          "item": "gate_key",
+          "look": "A fist-sized ring of seamless pale metal, frozen into the wall at about shoulder height. It's been there longer than the shaft. It's quite a lot heavier than it looks, and a chisel has been at the ice around it.",
+          "use": "I borrow a chisel, and I try to work the pale ring loose."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Map scratched in ice",
+    "plan": [
+      "*          .          ==========          .         *      .       *",
+      "       .                     |\"\"\"\"\"\"\"\"|                     .       ",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "%%%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,%%%%:::::::::::::::::::::::::::%%%%",
+      "%%%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,%%%%:::::::::::::::::::::::::::%%%%",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%:::::::::::::::::::::::::::%%%%",
+      "%%%;;;;;;;;;;;;;;;;%%%%%%%%%'''''''''''''''''''%%%%%%%%%%%%%%%%%%%%%",
+      "%%%;;;;;;;;;;;;;;;;%%%%%%%%%'''''''''''''''''''%%%%%%%%%%%%%%%%%%%%%",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+    ],
+    "floors": {
+      "\"": "loft",
+      ",": "pit",
+      ":": "melt",
+      ";": "ward",
+      "'": "hole"
+    },
+    "rooms": [
+      {
+        "level": "loft",
+        "at": [40, 1],
+        "text": "THE LOFT"
+      },
+      {
+        "level": "pit",
+        "at": [8, 3],
+        "text": "THE DISPUTATION PIT"
+      },
+      {
+        "level": "melt",
+        "at": [44, 4],
+        "text": "THE LONG MELT"
+      },
+      {
+        "level": "ward",
+        "at": [7, 6],
+        "text": "BURN WARD"
+      },
+      {
+        "level": "hole",
+        "at": [31, 7],
+        "text": "ORRIN'S HOLE"
+      }
+    ]
+  }
+}

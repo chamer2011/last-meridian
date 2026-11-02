@@ -1,0 +1,217 @@
+{
+  "_note": "The fleet: every ship, what the fleet starts with, the ration levels, what the work crews can do, and everything the fleet says in the story. You can change any of it, then restart the game. Changes reach new games, and ships you add or remove reach saved games too. A ship with \"story\": true is named in the story's files, so raids can hurt it but won't destroy it. Everything else can be lost.",
+
+  "start": { "food": 300, "medicine": 123, "parts": 90, "health": 70, "pursuit": 35 },
+
+  "supplies": {
+    "food": { "name": "Food", "unit": "t", "lot": 20, "perPerson": 0.001 },
+    "fuel": { "name": "Fuel", "unit": "", "lot": 1 },
+    "medicine": { "name": "Medicine", "unit": "crates", "lot": 5, "perPerson": 0.0001 },
+    "parts": { "name": "Parts", "unit": "crates", "lot": 5 }
+  },
+
+  "rations": {
+    "generous": { "name": "Generous", "food": 1.25, "morale": 74, "health": 84, "desc": "Full plates, and people remember what that was like." },
+    "standard": { "name": "Standard", "food": 1, "morale": 60, "health": 72, "desc": "Enough to work on, if nobody asks for seconds." },
+    "reduced": { "name": "Reduced", "food": 0.75, "morale": 42, "health": 58, "desc": "Three quarters of a meal, and a lot of arguments about whose quarter." },
+    "half": { "name": "Half", "food": 0.5, "morale": 24, "health": 38, "desc": "Half a meal. People get thin and quiet, and the captain eats what they eat." }
+  },
+
+  "crews": {
+    "upkeep": { "name": "General upkeep", "desc": "Everyone keeps doing their own job. Nothing's neglected, and nothing gets ahead." },
+    "farms": { "name": "Farm shifts", "desc": "Hands from every ship go to the farm decks. The engines get less of them.", "boost": { "food": 1.5 }, "gathers": "food", "wear": 1.5, "uses": { "parts": 0.41 } },
+    "fuel": { "name": "Fuel skimming", "desc": "Crews crack whatever they can reach into fuel. The plume can be seen a long way off.", "adds": { "fuel": 0.7 }, "gathers": "fuel", "pursuit": 1.25 },
+    "repairs": { "name": "Repair gangs", "desc": "Welders go to the worst ships first, and they get through a lot of parts.", "repairs": 1.5, "repairShips": 6, "partsRate": 1.75 },
+    "salvage": { "name": "Scrounging", "desc": "Work parties strip anything nearby that isn't bolted to somebody. It's hard, dangerous work.", "adds": { "parts": 2.5 }, "gathers": "parts", "morale": -4 },
+    "medical": { "name": "Clinic duty", "desc": "Anyone with steady hands works the wards and the stills, and the other jobs wait.", "boost": { "medicine": 1.5 }, "adds": { "medicine": 1 }, "gathers": "medicine", "health": 10, "output": 0.9 },
+    "silent": { "name": "Run silent", "desc": "Reactors low, lights off, nobody transmits. It's harder for anything to find you, and harder to get anything done.", "pursuit": 0.5, "output": 0.75, "morale": -6 },
+    "rest": { "name": "Stand down", "desc": "Sleep, a hot meal and a few hours with the kids. The work piles up.", "output": 0.7, "morale": 12, "health": 4, "wear": 1.25 }
+  },
+
+  "rules": {
+    "wear": 0.3,
+    "wearNoParts": 0.9,
+    "pursuitPerDay": 5,
+    "pursuitByDanger": [0.6, 0.8, 1, 1.4, 2],
+    "jumpShakes": { "1": 15, "2": 20, "3": 25 },
+    "evadeShakes": 15,
+    "warnAtDays": 5,
+    "moraleHitPerShip": 4,
+    "stressPerShip": 5,
+    "deadlyHealth": 30,
+    "peopleFloor": 3000,
+    "walkoutMorale": 15,
+    "walkoutDays": 4,
+    "climbFrom": 20,
+    "shortage": {
+      "food": { "morale": -25, "health": -45 },
+      "fuel": { "morale": -10, "health": -5, "output": 0.8 },
+      "medicine": { "morale": -15, "health": -25 },
+      "parts": { "morale": -5, "health": 0 }
+    }
+  },
+
+  "raid": {
+    "art": [
+      "                                .     *      .        ",
+      "   .        <===[M]>     .              /\\  /\\     .  ",
+      "      <=[]    <=[]>            *      <(  ><  )>      ",
+      "  <=[]=>   .      <=[]     .           \\/  \\/         ",
+      "     <=[]>      .       ))) ((( )))      .     /\\     ",
+      " .        <=[]>             .              <(  )>  *  ",
+      "                *                    .       \\/       "
+    ],
+    "responses": {
+      "jump": { "name": "Jump now", "desc": "Everyone jumps on the captain's mark. The fast ships make it, and whoever's slow is on their own.", "pursuitAfter": 45, "losses": 0.6, "fuel": 1, "morale": -2 },
+      "fight": { "name": "Stand and fight", "desc": "The Meridian and the escorts turn to face them, and the transports run for it. Whatever gets through hits you first.", "pursuitAfter": 20, "losses": 1.2, "hull": 9, "parts": 4, "stress": 6 },
+      "scatter": { "name": "Scatter and regroup", "desc": "Every ship runs its own way, with no fuel to spare and nobody to cover them. They meet up again later, those that can.", "pursuitAfter": 55, "losses": 1.4, "morale": -5, "hours": 24 }
+    }
+  },
+
+  "council": {
+    "_note": "What the officers and the council will do by themselves if nobody else does. when is what has to be true (days of a supply left, and so on), for at least wait days. every is the fewest days between two of the same decision. set is what they do: rations, crews, or a blind jump. The first one that's ready each day happens. respect is how many days an order of the captain's own stands before they'd change it. {who} is the person named, if they're still around, and otherwise whoever's in anyone.",
+    "wait": 2,
+    "respect": 4,
+    "anyone": "The council",
+    "free": "The officers and the council will act on their own again if something's gone wrong and you haven't dealt with it.",
+    "held": "You've told the officers and the council to wait for your word, whatever happens.",
+    "decisions": [
+      { "id": "half_rations", "when": { "foodBelow": 3, "rations": ["generous", "standard", "reduced"] }, "wait": 1, "set": { "rations": "half" }, "who": "halm", "name": "Speaker Halm", "text": "There's about three days of food left, and nobody was answering. {who} has put the whole fleet on half rations." },
+      { "id": "cut_rations", "when": { "foodBelow": 7, "rations": ["generous", "standard"] }, "set": { "rations": "reduced" }, "who": "odessa", "name": "Quartermaster Brandt", "text": "{who} has checked the food count twice, and cut rations to three quarters without waiting for the captain." },
+      { "id": "run", "when": { "pursuitAbove": 88, "fuelAtLeast": 4 }, "wait": 1, "every": 30, "set": { "jump": true }, "who": "voss", "name": "Commander Voss", "text": "{who} ordered a blind jump to shake off whatever's been following. It's in the log, for the captain to read." },
+      { "id": "farm_shifts", "when": { "foodBelow": 6, "rations": ["reduced", "half"], "crews": ["upkeep", "rest", "silent", "repairs"] }, "set": { "crews": "farms" }, "who": "grann", "name": "Steward Tull", "text": "{who} has called hands from every ship onto the farm decks, and nobody's said otherwise." },
+      { "id": "clinic", "when": { "medicineBelow": 5, "crews": ["upkeep", "rest", "silent", "salvage"] }, "set": { "crews": "medical" }, "who": "aduro", "name": "Dr. Aduro", "text": "{who} has pulled anyone with steady hands onto clinic duty, and sent the captain a note about it afterward." },
+      { "id": "scrounge", "when": { "partsBelow": 5, "crews": ["upkeep", "rest", "silent"] }, "set": { "crews": "salvage" }, "who": "marrow", "name": "Chief Marrow", "text": "{who} has sent work parties out to strip whatever isn't bolted to somebody. There's an apology promised for later, and nobody's expecting it." },
+      { "id": "skim", "when": { "fuelBelow": 3, "crews": ["upkeep", "rest", "silent"] }, "set": { "crews": "fuel" }, "who": "marrow", "name": "Chief Marrow", "text": "{who} has the crews skimming fuel. The plume can be seen a long way off, and everyone knows it." },
+      { "id": "repair_gangs", "when": { "worstShipBelow": 15, "partsAbove": 8, "crews": ["upkeep", "rest"] }, "set": { "crews": "repairs" }, "who": "tobin", "name": "Chief Hask", "text": "{who} has weighed the worst hulls in the fleet, and sent the welders to them first." },
+      { "id": "stand_down", "when": { "moraleBelow": 25, "foodAbove": 7, "medicineAbove": 5, "crews": ["upkeep"] }, "wait": 3, "set": { "crews": "rest" }, "who": "bastian", "name": "Father Roe", "text": "{who} has spoken for half the ships' captains, and the whole fleet is standing down for a while, whether the captain likes it or not." },
+      { "id": "feast", "when": { "moraleBelow": 30, "foodAbove": 25, "rations": ["standard"] }, "wait": 2, "every": 20, "set": { "rations": "generous" }, "who": "halm", "name": "Speaker Halm", "text": "{who} has talked the council into generous rations for a while, since it's cheaper than losing ships." },
+      { "id": "feast_over", "when": { "theirRations": true, "rations": ["generous"], "moraleAbove": 50 }, "set": { "rations": "standard" }, "who": "odessa", "name": "Quartermaster Brandt", "text": "{who} has put the fleet back on standard rations, now that people have stopped talking about leaving." },
+      { "id": "more_food", "when": { "foodAtStandard": 20, "rations": ["reduced", "half"], "moraleBelow": 55 }, "set": { "rations": "standard" }, "who": "grann", "name": "Steward Tull", "text": "{who} says the Sundial can stand it, and the fleet's back on standard rations." },
+      { "id": "back_to_work", "when": { "theirCrews": true, "foodAbove": 8, "medicineAbove": 8, "partsAbove": 8, "fuelAbove": 4, "moraleAbove": 30, "worstShipAbove": 20 }, "set": { "crews": "upkeep" }, "who": "voss", "name": "Commander Voss", "text": "{who} says the worst of it's over, and the crews have gone back to general upkeep." }
+    ]
+  },
+
+  "chair": {
+    "_note": "Who runs the fleet if the player isn't the captain. One of captains is chosen for each game, and each has a file in world/characters and a day in world/life/meridian.json. moveAt is how few days of a supply they'll let it come to before leaving to get more, stockTo is how many days of it they buy up to, runAt is how close the Choir gets before they jump just to get away, restDays is the fewest days between jumps, risk is the most dangerous place they'll take the fleet (see world/starmap.json), and fightGuns is the share of the fleet's guns they need to want to fight a raid, so 0 always fights and more than 1 never does. funds is what they start with to buy supplies, and income is what comes in each day. repairBelow is how badly a ship has to be hurt before the crews are sent to mend it. fuelReserve is the fuel they try to carry, fuelLow is when they go and get more whatever else is happening, and desperate is how few days of anything will make them jump again straight away. ports are the places a fleet like this would go.",
+    "funds": 1800,
+    "income": 200,
+    "lotsAtOnce": 6,
+    "buyEvery": 3,
+    "crewsEvery": 5,
+    "repairBelow": 25,
+    "fuelReserve": 8,
+    "fuelLow": 3,
+    "desperate": 3,
+    "ports": ["haven", "kessara", "graveyard", "frontier", "cinder", "deepyards", "korrath", "lumen", "maris", "wheel", "ghostlight"],
+    "crews": { "food": "farms", "fuel": "fuel", "medicine": "medical", "parts": "salvage" },
+    "captains": {
+      "reddick": { "name": "Captain Reddick", "moveAt": 12, "stockTo": 25, "runAt": 70, "restDays": 9, "risk": 1, "fightGuns": 2 },
+      "marchetti": { "name": "Captain Marchetti", "moveAt": 8, "stockTo": 22, "runAt": 95, "restDays": 11, "risk": 3, "fightGuns": 0 },
+      "lund": { "name": "Captain Lund", "moveAt": 9, "stockTo": 22, "runAt": 85, "restDays": 10, "risk": 2, "fightGuns": 0.5 }
+    }
+  },
+
+  "text": {
+    "chairJumped": "{who} has taken the fleet to {place}, {why}.",
+    "chairWhy": { "food": "to get food", "fuel": "to find fuel", "medicine": "to find medicine", "parts": "to find parts", "run": "with the Choir close behind" },
+    "chairLeft": "The Refugee Fleet has left {from} for {place}.",
+    "chairCame": "The Refugee Fleet has arrived at {place}: every ship that's left of it, and everyone who's hungry.",
+    "chairBought": "{who} has bought {what} for the fleet at {place}.",
+    "chairCrews": "{who} has put the crews on {work}.",
+    "chairHit": "The Choir has hit the Refugee Fleet{at}, and {lost} gone.",
+    "waitOther": "You let {days} go by. It's now {clock}.",
+    "chairTook": "{who} has the chair. Rations, jumps and raids are for {who} to answer, and you're not the one they ask.",
+    "jumpLineOther": "The fleet jumps on the captain's mark, in a ragged line.",
+    "fightLineOther": "The Meridian turns into them with the escorts on her wings, and the one working cannon speaks for all of them.",
+    "walkoutOther": "The {ship} has slipped out of the formation in the night with {aboard} people aboard. Nobody's calling it desertion yet. People have stopped believing anyone can get them there.",
+    "medicineOutOther": "The fleet is out of medicine. Health will fall, and the sick are starting to die of things that used to be easy.",
+    "raidIntro": [
+      "Ensign Vey's board lights up all at once. Hunters, dropping out of jump on the far side of the formation, and the song comes through every open channel a half-second before they do.",
+      "The slowest ships scream first. Silver shapes have come in behind them, in perfect step, and they're not in any hurry at all.",
+      "Every speaker in the fleet picks up the same chord. Then the pickets stop answering, one after another, from the outside in.",
+      "They've found the trail. A pack of Hunters is closing on the fleet's rear, and the third-shift helm is already asking for orders in a very small voice."
+    ],
+    "raidAlarm": "Choir raid! Hunters have found the fleet, and every ship is waiting for the captain's order.",
+    "jumpLine": "The fleet jumps on your mark, in a ragged line.",
+    "fightLine": "The Meridian turns into them with the escorts on her wings, and the one working cannon speaks for all of you.",
+    "scatterLine": "The fleet breaks in every direction, and comes back together a long, frightening day later.",
+    "noLoss": "Every ship came through. Nobody on the channel says anything for a while, and then somebody starts to laugh.",
+    "shipLost": "The {ship} is gone. {dead} of the {aboard} aboard are dead, and the rest got off in whatever could fly.",
+    "shipCrippled": "The {ship} is badly hit, and she's only just flying.",
+    "shipDamaged": "Damaged: {ships}.",
+    "foodLow": "Food is down to about {days} days. Quartermaster Brandt has started checking the count twice.",
+    "fuelLow": "Fuel is down to about {days} days. Chief Marrow has stopped rounding up.",
+    "medicineLow": "Medicine is down to about {days} days, and Dr. Aduro has started counting doses out loud.",
+    "partsLow": "Parts are down to about {days} days. Crews are starting to patch their patches.",
+    "foodOut": "The fleet is out of food. People are getting what the Sundial grows that day, and it isn't enough. Morale and health will fall fast.",
+    "fuelOut": "The fleet is out of fuel. Nobody can jump, ships are cutting heat to the lower decks, and the crews work slower in the cold.",
+    "medicineOut": "The fleet is out of medicine. Health will fall, and the sick are starting to die of things that used to be easy. Your own wounds will heal slower too.",
+    "partsOut": "The fleet is out of parts. Ships are wearing out three times as fast, and some of them won't last.",
+    "foodBack": "There's food again. The queues are still long, but people are standing up straighter.",
+    "fuelBack": "There's fuel in the tanks again, and heat in the lower decks.",
+    "medicineBack": "There's medicine again. Dr. Aduro sleeps for six hours straight, and denies it.",
+    "partsBack": "There are parts again, and the crews stop patching their patches.",
+    "foodStill": "Day {days} with no food stores. People are starving.",
+    "fuelStill": "Day {days} with no fuel. Ships are getting cold, and they can't run.",
+    "medicineStill": "Day {days} with no medicine, and the wards are getting quieter in the wrong way.",
+    "partsStill": "Day {days} with no parts, and ships are coming apart at the seams.",
+    "deaths": "{dead} more people have died of hunger and sickness.",
+    "shipFailed": "The {ship} has broken down for good. Her {aboard} people have been taken off, and she's been left behind.",
+    "shipLimping": "The {ship} has broken down, and has to be towed.",
+    "shipSat": "The {ship} has stopped answering. All {aboard} people aboard are alive, sitting down, and facing the same way. She's been left behind, because nobody will go and get them.",
+    "walkout": "The {ship} has slipped out of the formation in the night with {aboard} people aboard. Nobody's calling it desertion yet. People have stopped believing you can get them there.",
+    "underfed": "You've been eating what everyone else is eating, and it's starting to show.",
+    "strip": "The {ship} has been stripped for {gain}. Her {aboard} people have been packed onto other ships, and they watch her drift away from the portholes.",
+    "evade": "The fleet makes a short blind jump to shake off anything following. Fuel left: {fuel}. It's now {clock}.",
+    "wait": "The fleet holds position for {days}. It's now {clock}.",
+    "bought": "Bought {amount} of {supply} for the fleet, for {price} credits.",
+    "sold": "Sold {amount} of the fleet's {supply}, for {price} credits.",
+    "raidReport": "A Choir raid hit the fleet. {response} {result} The fleet is now {ships} ships and {people} people."
+  },
+
+  "ships": [
+    { "id": "meridian", "name": "CFS Meridian", "place": "meridian", "aliases": ["the Meridian", "The Meridian", "Meridian"], "class": "Concord frigate", "role": "Flagship", "captain": "You", "aboard": 900, "condition": 70, "guns": 3, "story": true, "produces": {}, "uses": { "parts": 0.14, "fuel": 0.02 }, "note": "Built for three hundred crew and carrying nine hundred. Medbay, mess hall, one working cannon." },
+    { "id": "sundial", "name": "The Sundial", "place": "sundial", "aliases": ["the Sundial", "The Sundial", "Sundial"], "class": "Converted ore hauler", "role": "Farm ship", "captain": "Steward Grann Tull", "aboard": 4000, "condition": 74, "story": true, "produces": { "food": 14 }, "uses": { "parts": 0.2, "fuel": 0.02 }, "note": "Every ration in the fleet starts here, under one huge lamp on a rail." },
+    { "id": "anselm", "name": "Anselm's Mercy", "place": "anselm", "aliases": ["Anselm's Mercy", "the Mercy", "The Mercy"], "class": "Converted bulk freighter", "role": "Hospital ship", "captain": "Dr. Wen Adeyemi", "aboard": 3000, "condition": 66, "story": true, "produces": { "medicine": 0.6 }, "uses": { "parts": 0.14, "fuel": 0.01 }, "note": "Built for four hundred patients, holding almost three thousand. Hope is rationed here." },
+    { "id": "ashgrove", "name": "CFS Ashgrove", "aliases": ["the Ashgrove", "The Ashgrove"], "class": "Concord frigate", "role": "Escort", "captain": "Captain Ines Varga", "aboard": 600, "condition": 68, "guns": 2, "story": true, "produces": {}, "uses": { "parts": 0.14, "fuel": 0.02 }, "note": "The fleet's only other real warship, with a marine detachment aboard." },
+    { "id": "harrows_bounty", "name": "Harrow's Bounty", "aliases": ["the Harrow's Bounty", "The Harrow's Bounty", "the Bounty"], "class": "Container hauler", "role": "Dock and cargo transport", "captain": "Captain Sefton Oyelaran", "aboard": 2400, "condition": 58, "story": true, "produces": {}, "uses": { "parts": 0.1, "fuel": 0.01 }, "note": "Dockworkers and their families, packed in between the containers. Reading lights are cut at night to save power." },
+    { "id": "second_thursday", "name": "Second Thursday", "aliases": ["the Second Thursday", "The Second Thursday"], "class": "Commuter liner", "role": "Passenger transport", "captain": "Captain Maud Teller", "aboard": 2100, "condition": 62, "story": true, "produces": {}, "uses": { "parts": 0.1, "fuel": 0.01 }, "note": "Once ran the workers' shift between two moons, and got her name from the timetable." },
+    { "id": "tollan_arms", "name": "Tollan Arms", "aliases": ["the Tollan Arms", "The Tollan Arms"], "class": "Residential ring ship", "role": "Housing", "captain": "Captain Rurik Sandoval", "aboard": 2600, "condition": 60, "story": true, "produces": {}, "uses": { "parts": 0.1, "fuel": 0.01 }, "note": "A floating apartment block. Whole decks of her are still owned by people who've died." },
+    { "id": "bright_tomorrow", "name": "Bright Tomorrow", "aliases": ["the Bright Tomorrow", "The Bright Tomorrow"], "class": "Cruise liner", "role": "Passenger transport", "captain": "Captain Lucan Abara", "aboard": 2000, "condition": 64, "story": true, "produces": {}, "uses": { "parts": 0.1, "fuel": 0.02 }, "note": "A holiday liner with a lounge, a card room and a grand piano, and most of her synthetics stayed at their posts." },
+    { "id": "annekes_promise", "name": "Anneke's Promise", "aliases": ["the Anneke's Promise", "The Anneke's Promise"], "class": "Bulk carrier", "role": "Passenger transport", "captain": "Captain Hedda Marsh-Oyin", "aboard": 1700, "condition": 52, "story": true, "produces": {}, "uses": { "parts": 0.1, "fuel": 0.01 }, "note": "Held together with whatever came to hand. One of her hull patches is a dinner table." },
+    { "id": "wintermere", "name": "The Wintermere", "aliases": ["the Wintermere", "The Wintermere", "Wintermere"], "class": "Old passenger liner", "role": "School ship", "captain": "Captain Elias Vance", "aboard": 1300, "condition": 66, "story": true, "produces": {}, "uses": { "parts": 0.07, "fuel": 0.01 }, "note": "Most of the fleet's unaccompanied children, with their teachers. Her corridors are papered with drawings." },
+    { "id": "vesper_landing", "name": "Vesper Landing", "aliases": ["the Vesper Landing", "The Vesper Landing", "the Landing"], "class": "Orbital transfer station", "role": "Passenger transport", "captain": "Stationmaster Inge Dufresne", "aboard": 1100, "condition": 50, "story": true, "produces": {}, "uses": { "parts": 0.1, "fuel": 0.01 }, "note": "A transfer station that was never meant to jump, with a heat plant that hates it." },
+    { "id": "slow_harriet", "name": "Slow Harriet", "aliases": ["the Slow Harriet", "The Slow Harriet"], "class": "Old bulk carrier", "role": "Passenger transport", "captain": "Caretaker Bellamy Orr", "aboard": 900, "condition": 55, "slow": true, "story": true, "produces": {}, "uses": { "parts": 0.1, "fuel": 0.05 }, "note": "Burns more fuel than any two ships in the fleet, and nobody's sure why. Please wipe your feet." },
+    { "id": "tollivers_ark", "name": "Tolliver's Ark", "aliases": ["the Tolliver's Ark", "The Ark"], "class": "Freighter", "role": "Refugee transport", "captain": "Captain Lorne Abbey", "aboard": 400, "condition": 48, "slow": true, "story": true, "produces": {}, "uses": { "parts": 0.05, "fuel": 0.01 }, "note": "Four hundred people asleep in her holds, on short rations." },
+    { "id": "widows_lantern", "name": "Widow's Lantern", "aliases": ["the Widow's Lantern", "The Widow's Lantern"], "class": "Old freighter", "role": "Refugee transport", "captain": "Skipper Agnes Tolland", "aboard": 300, "condition": 40, "slow": true, "story": true, "produces": {}, "uses": { "parts": 0.05, "fuel": 0.01 }, "note": "The oldest ship in the fleet, and always the last one through the jump." },
+    { "id": "patience_of_ostra", "name": "Patience of Ostra", "aliases": ["the Patience of Ostra", "The Patience of Ostra", "the Patience"], "class": "Freighter", "role": "Refugee transport", "captain": "Master Corin Valdez", "aboard": 200, "condition": 56, "slow": true, "story": true, "produces": {}, "uses": { "parts": 0.04, "fuel": 0.01 }, "note": "A quiet ship with a quiet crew, who never ask anyone for anything." },
+    { "id": "little_marigold", "name": "Little Marigold", "aliases": ["the Little Marigold", "The Little Marigold", "the Marigold"], "class": "Small freighter", "role": "Cargo runner", "captain": "Master Odile Renke", "aboard": 150, "condition": 44, "story": true, "produces": {}, "uses": { "parts": 0.04, "fuel": 0.01 }, "note": "Her reactor surges and her master won't let Chief Marrow near it, on account of a borrowed pump." },
+
+    { "id": "dandelion", "name": "The Dandelion", "aliases": ["the Dandelion"], "class": "Seed barge", "role": "Small farm ship", "captain": "Skipper Pia Holloran", "aboard": 180, "condition": 62, "strip": { "parts": 8, "fuel": 1 }, "produces": { "food": 1.5 }, "uses": { "parts": 0.05, "fuel": 0.01 }, "note": "A long thin barge of hydroponic racks, and proud that she feeds more people than she carries." },
+    { "id": "copper_kettle", "name": "The Copper Kettle", "aliases": ["the Copper Kettle"], "class": "Ship's tender", "role": "Galley and food plant", "captain": "Master Ewan Sato", "aboard": 240, "condition": 58, "strip": { "parts": 9, "fuel": 1 }, "produces": { "food": 1.5 }, "uses": { "parts": 0.07, "fuel": 0.01 }, "note": "She turns what the Sundial can't use into something you can nearly call soup." },
+    { "id": "hollow_oak", "name": "The Hollow Oak", "aliases": ["the Hollow Oak"], "class": "Colony lander", "role": "Housing, with a garden deck", "captain": "Captain Yusra Bell", "aboard": 420, "condition": 54, "strip": { "parts": 11, "fuel": 1 }, "produces": { "food": 1 }, "uses": { "parts": 0.07, "fuel": 0.01 }, "note": "Built to land once, on a world nobody will ever see now. She grows beans in the cargo bay." },
+    { "id": "ember_road", "name": "The Ember Road", "aliases": ["the Ember Road"], "class": "Fuel tanker", "role": "Fuel cracker", "captain": "Captain Dag Ferreira", "aboard": 90, "condition": 60, "strip": { "parts": 8, "fuel": 3 }, "produces": { "fuel": 0.05 }, "uses": { "parts": 0.08, "fuel": 0.01 }, "note": "A tanker with a cracking plant she was never licensed for. Nobody's asking for the license now." },
+    { "id": "deepwater_grace", "name": "Deepwater Grace", "aliases": ["the Deepwater Grace"], "class": "Fuel tanker", "role": "Fuel cracker", "captain": "Skipper Lena Ibekwe", "aboard": 110, "condition": 57, "strip": { "parts": 8, "fuel": 3 }, "produces": { "fuel": 0.04 }, "uses": { "parts": 0.08, "fuel": 0.01 }, "note": "She runs half empty, and her crew sleep beside the tanks because it's the only warm place." },
+    { "id": "cartwrights_folly", "name": "Cartwright's Folly", "aliases": ["the Cartwright's Folly"], "class": "Repair ship", "role": "Machine shop", "captain": "Chief Bram Cartwright", "aboard": 260, "condition": 65, "strip": { "parts": 18, "fuel": 1 }, "produces": { "parts": 1.2 }, "uses": { "parts": 0.07, "fuel": 0.01 }, "note": "A fabrication plant somebody bolted to an engine. It makes most of the fleet's spare parts, and all of its bad jokes." },
+    { "id": "stubborn_mule", "name": "The Stubborn Mule", "aliases": ["the Stubborn Mule"], "class": "Salvage tug", "role": "Salvage and towing", "captain": "Skipper Nell Ostrander", "aboard": 60, "condition": 61, "strip": { "parts": 6, "fuel": 1 }, "produces": { "parts": 0.3 }, "uses": { "parts": 0.03, "fuel": 0.01 }, "note": "Small and filthy, and she's towed half the fleet at one time or another." },
+    { "id": "aunt_margit", "name": "Aunt Margit", "aliases": ["the Aunt Margit"], "class": "Ore tug", "role": "Salvage and towing", "captain": "Master Teo Halvorsen", "aboard": 70, "condition": 59, "strip": { "parts": 6, "fuel": 1 }, "produces": { "parts": 0.1 }, "uses": { "parts": 0.03, "fuel": 0.01 }, "note": "Named after someone nobody on board has ever met, and treated with the same respect." },
+    { "id": "iron_psalm", "name": "The Iron Psalm", "aliases": ["the Iron Psalm"], "class": "Korrun ore carrier", "role": "Heavy cargo and smelter", "captain": "Forge-Master Hadda Brun", "aboard": 260, "condition": 70, "strip": { "parts": 14, "fuel": 1 }, "produces": { "parts": 0.2 }, "uses": { "parts": 0.07, "fuel": 0.01 }, "note": "A Korrun crew who sing while they smelt, and weigh out what they owe you." },
+    { "id": "gray_heron", "name": "The Gray Heron", "aliases": ["the Gray Heron"], "class": "Passenger liner", "role": "Hospital annex", "captain": "Dr. Sabine Achterberg", "aboard": 340, "condition": 60, "strip": { "parts": 9, "fuel": 1 }, "produces": { "medicine": 0.2 }, "uses": { "parts": 0.05, "fuel": 0.01 }, "note": "Where Anselm's Mercy sends the patients who'll get better if they're left alone." },
+    { "id": "small_mercies", "name": "Small Mercies", "aliases": ["the Small Mercies"], "class": "Ship's tender", "role": "Pharmacy and still", "captain": "Apothecary Jun Sayers", "aboard": 120, "condition": 63, "strip": { "parts": 7, "fuel": 1 }, "produces": { "medicine": 0.2 }, "uses": { "parts": 0.04, "fuel": 0.01 }, "note": "Brews antibiotics in old beer tanks, and the beer was better." },
+    { "id": "cfs_reckoner", "name": "CFS Reckoner", "aliases": ["the Reckoner", "The Reckoner"], "class": "Concord corvette", "role": "Escort", "captain": "Lt. Cmdr. Tomas Adler", "aboard": 140, "condition": 64, "guns": 1, "strip": { "parts": 10, "fuel": 2 }, "produces": {}, "uses": { "parts": 0.07, "fuel": 0.01 }, "note": "Half her guns work, and she's always first to turn back for a straggler." },
+    { "id": "cfs_lark", "name": "CFS Lark", "aliases": ["the Lark", "The Lark"], "class": "Concord picket", "role": "Scout", "captain": "Lt. Aiyana Reyes", "aboard": 60, "condition": 66, "guns": 1, "strip": { "parts": 6, "fuel": 1 }, "produces": {}, "uses": { "parts": 0.04, "fuel": 0.01 }, "note": "A fast little picket, out at the edge of the formation, listening." },
+    { "id": "fair_exchange", "name": "Fair Exchange", "aliases": ["the Fair Exchange"], "class": "Trade hauler", "role": "Cargo", "captain": "Factor Milo Dunmore", "aboard": 230, "condition": 55, "strip": { "parts": 9, "fuel": 1 }, "produces": {}, "uses": { "parts": 0.05, "fuel": 0.01 }, "note": "She still keeps a price list, and her skipper still thinks somebody's going to pay it." },
+    { "id": "merchants_regret", "name": "Merchant's Regret", "aliases": ["the Merchant's Regret"], "class": "Freighter", "role": "Cargo and housing", "captain": "Skipper Anton Keele", "aboard": 310, "condition": 49, "slow": true, "strip": { "parts": 10, "fuel": 1 }, "produces": {}, "uses": { "parts": 0.05, "fuel": 0.01 }, "note": "Bought cheap, and it's easy to see why." },
+    { "id": "mother_of_pearl", "name": "Mother of Pearl", "aliases": ["the Mother of Pearl"], "class": "Passenger ferry", "role": "Passenger transport", "captain": "Captain Ione Keating", "aboard": 480, "condition": 57, "strip": { "parts": 10, "fuel": 1 }, "produces": {}, "uses": { "parts": 0.05, "fuel": 0.01 }, "note": "An island ferry with white rails, and laundry on them now." },
+    { "id": "morning_bell", "name": "The Morning Bell", "aliases": ["the Morning Bell"], "class": "Passenger liner", "role": "Passenger transport", "captain": "Captain Rafe Nakamura", "aboard": 620, "condition": 56, "strip": { "parts": 12, "fuel": 1 }, "produces": {}, "uses": { "parts": 0.07, "fuel": 0.01 }, "note": "Rings an actual bell at shift change. There have been complaints." },
+    { "id": "sparrows_rest", "name": "Sparrow's Rest", "aliases": ["the Sparrow's Rest"], "class": "Retirement cruiser", "role": "Housing", "captain": "Captain Dorothea Pike", "aboard": 640, "condition": 53, "slow": true, "strip": { "parts": 12, "fuel": 1 }, "produces": {}, "uses": { "parts": 0.07, "fuel": 0.01 }, "note": "Full of the very old, who've seen worse, and who'd like to tell you about it." },
+    { "id": "seventh_winter", "name": "Seventh Winter", "aliases": ["the Seventh Winter"], "class": "Bulk carrier", "role": "Housing", "captain": "Skipper Gwen Astley", "aboard": 460, "condition": 51, "slow": true, "strip": { "parts": 11, "fuel": 1 }, "produces": {}, "uses": { "parts": 0.07, "fuel": 0.01 }, "note": "Grain bins with bunks welded in. Everybody aboard smells faintly of barley." },
+    { "id": "tin_cathedral", "name": "The Tin Cathedral", "aliases": ["the Tin Cathedral"], "class": "Old pilgrim liner", "role": "Housing and chapel", "captain": "Canon Isidore Faye", "aboard": 390, "condition": 50, "slow": true, "strip": { "parts": 11, "fuel": 1 }, "produces": {}, "uses": { "parts": 0.07, "fuel": 0.01 }, "note": "Pressed-metal saints on every bulkhead, and always room for one more at the service." },
+    { "id": "long_reach", "name": "The Long Reach", "aliases": ["the Long Reach"], "class": "Long-range hauler", "role": "Cargo and housing", "captain": "Captain Sunniva Rowe", "aboard": 280, "condition": 59, "strip": { "parts": 10, "fuel": 2 }, "produces": {}, "uses": { "parts": 0.05, "fuel": 0.01 }, "note": "Built for runs nobody makes any more, with the best quartermaster in the fleet, ask anyone aboard." },
+    { "id": "cold_comfort", "name": "Cold Comfort", "aliases": ["the Cold Comfort"], "class": "Ice hauler", "role": "Water carrier", "captain": "Skipper Bo Sandhu", "aboard": 70, "condition": 58, "slow": true, "strip": { "parts": 8, "fuel": 1 }, "produces": {}, "uses": { "parts": 0.05, "fuel": 0.01 }, "note": "A big, slow block of ice with a very small crew, and half the fleet's drinking water." },
+    { "id": "ninefold", "name": "The Ninefold", "aliases": ["the Ninefold"], "class": "Bulk carrier", "role": "Cargo and housing", "captain": "Captain Ferro Quist", "aboard": 330, "condition": 54, "slow": true, "strip": { "parts": 10, "fuel": 1 }, "produces": {}, "uses": { "parts": 0.05, "fuel": 0.01 }, "note": "Nine cargo sections on one long spine, and the back three don't talk to the front three." },
+    { "id": "kittiwake", "name": "The Kittiwake", "aliases": ["the Kittiwake"], "class": "Courier", "role": "Mail and messages", "captain": "Pilot Ama Dresner", "aboard": 20, "condition": 72, "strip": { "parts": 4, "fuel": 1 }, "produces": {}, "uses": { "parts": 0.03, "fuel": 0.01 }, "note": "Fast and small, and she carries the fleet's mail between ships that aren't speaking." },
+    { "id": "ao_tenne", "name": "The Ao-Tenne", "aliases": ["the Ao-Tenne"], "class": "Veshti family ship", "role": "Scout and housing", "captain": "Matriarch Silas Ao-Tenne", "aboard": 170, "condition": 67, "strip": { "parts": 9, "fuel": 1 }, "produces": {}, "uses": { "parts": 0.04, "fuel": 0.01 }, "note": "A Veshti family who've lived aboard her for six generations, and would rather you asked before coming over." }
+  ]
+}

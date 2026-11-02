@@ -1,0 +1,42 @@
+{
+  "title": "The Exemption",
+  "kind": "survival",
+  "places": ["bastion"],
+  "minLevel": 2,
+  "after": null,
+  "people": ["dain", "tessaly", "aduro"],
+  "factions": ["hegemony", "fleet"],
+  "lead": "Bastion Nine's Line is running a fever, and Commandant Halloran gives you forty-eight hours before procedure seals six thousand people in with it. Dr. Aduro sends a medic to help, and the medic comes back puzzled. The sick, she says, seem awfully pleased about it.",
+  "anyone": "Bastion Nine's Line is running a fever, and Commandant Halloran has forty-eight hours before procedure seals six thousand people in with it. The sick, the medics say, seem awfully pleased about it.",
+  "gm": {
+    "truth": "Anyone with an active fever is medically exempt from conscription for thirty days. Tessaly Marsh came through a year ago and left a gift behind: a mild, harmless fever in a small glass vial, passed hand to hand and sold for almost nothing, which lets people fail their medical over and over. The Line calls it the Exemption. People give it to their children on purpose, and it has kept hundreds out of uniform. Six months of overcrowding later, it has changed. Most people still get a week of sweats. The very old and the very young have started to die, and nobody wants to say so, because the Exemption is the only thing that has ever beaten the Hegemony. If the captain cures it, everyone who recovers goes straight on the conscription list. If they report it, the Commandant has to seal the hangar, and his medical officer, who has been signing the certificates for a year with a straight face, goes to prison. Tessaly comes back as soon as she hears. For the first time anyone has seen, she looks old.",
+    "beats": [
+      "The Line. Chalked lanes of fevered people on numbered mats, oddly cheerful, and a mother proudly showing the captain her son's temperature. Then a small covered shape being carried out at the far end.",
+      "The medic's puzzle. The samples don't look natural. Everyone goes quiet when the captain asks about the vials, and an old man with a very worn ticket asks them to please stop asking.",
+      "The fortress's medical officer, Sunniva Abara, breaks down, or Tessaly Marsh turns up with a bag and a confession, or a streetwise captain finds a vial being sold for a bowl of soup.",
+      "Commandant Halloran asks for a straight answer in the corridor, with the clock on the wall. He doesn't want to seal the Line. He has to, unless the captain gives him something he can write down.",
+      "The answer. A cure, a safer strain, a lie that holds, or the doors closing."
+    ],
+    "routes": [
+      "The lab: medicine and science, with Tessaly or Dr. Aduro, to breed a strain that gives the fever without the danger. That would be a very useful fraud to keep going.",
+      "The lanes: streetwise, persuasion and leadership, working through the Line Mothers, to stop people passing the old strain, and to get them to trust a stranger with the only thing that's ever worked for them.",
+      "The official route: lore, commerce and composure to give Halloran a quarantine plan he can sign, and buy time and medicine without sealing anyone in."
+    ],
+    "checks": [
+      "medicine:hard to isolate what the fever has become",
+      "science:very_hard to breed a safe strain in forty-eight hours",
+      "streetwise:moderate to find where the vials come from",
+      "persuasion:hard to talk the Line Mothers into giving up the old strain",
+      "lore:moderate to find what the quarantine rules really require",
+      "composure:moderate to work among sick children without letting it show"
+    ],
+    "fights": ["desperate_refugee if word gets around that the captain's here to take away the Exemption, and customs_marine if the Line is sealed in a hurry. Neither has to happen if people are told the truth in time."],
+    "outcomes": [
+      "If a safe strain goes out, the deaths stop, and the Exemption goes on working. The captain now shares in a fraud against the Hegemony, and the fleet has a new secret weapon that doesn't look like one.",
+      "If it's cured outright, thousands of healthy people go on the conscription list within the month, and the Line remembers who cured them.",
+      "If the Line is sealed, Halloran follows the rules with his jaw set. A few hundred die. The Exemption is finished, and so is any trust the Line ever had in anyone in a uniform.",
+      "If Tessaly's part comes out, she doesn't defend herself, and she doesn't run. What the Line does to her, or does for her, depends on who speaks up."
+    ],
+    "rewards": "A vial of the safe strain as a useful bargaining point, a surgeon_lens or trauma_kit from Tessaly, standing with the Line Mothers, and Commandant Halloran's lasting respect."
+  }
+}

@@ -1,0 +1,402 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "Bastion Nine",
+  "start": "anchorage",
+  "levels": {
+    "anchorage": {
+      "name": "The Long Anchorage",
+      "aliases": [
+        "long anchorage",
+        "anchorage",
+        "the refugee ships",
+        "the waiting ships"
+      ],
+      "desc": "A cloud of refugee ships parked in the fortress's shadow, waiting for permits to dock. Some have been out here so long that they've started growing things.",
+      "floor": "~",
+      "colors": {
+        "floor": "#2f3d51",
+        "walls": "#63728a",
+        "scenery": "#9fd08a",
+        "writing": "#dceeff"
+      },
+      "plan": [
+        " *        .         *            .         *              .          *   ",
+        "     <=====>            <===%%=>            <=====>          <=%%%==>    ",
+        "  ~~~~~~|~~~~~~~~~~~~~~~~~~~|~~~~~~~~~~~~~~~~~~|~~~~~~~~~~~~~~~~|~~~~~~  ",
+        "  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ",
+        "  ~~~~@~~~~~~~~~~~~~~~~~~~~~~~~~~~~J~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ",
+        "  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ",
+        "  ~~~~~~~~~~~~~~|~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~~~  ",
+        "  ~~~~~~~~<==%%%%==>f~~~~~~~~~~~<=======>g~~~~~~~~~~~~<==%%=>~~~~~~~~~~  ",
+        "  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ",
+        "#############################1###########################################"
+      ],
+      "writing": [
+        [42, 9, "ALL PERMITS ARE PENDING"]
+      ],
+      "labels": [
+        {
+          "text": "THE LONG ANCHORAGE",
+          "at": [4, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "line",
+          "via": "1"
+        }
+      },
+      "people": {
+        "J": {
+          "id": "jaska",
+          "label": "Moor",
+          "asks": [
+            "What are you inspecting today, Inspector?",
+            "How long does a permit really take?"
+          ]
+        }
+      },
+      "things": {
+        "f": {
+          "name": "A ship growing beans",
+          "look": "A rusted freighter with soil packed into its cargo ring, and bean vines through its antenna mast. They've named the bean. They've been waiting for a permit for three years.",
+          "use": "I hail the freighter with the beans and ask how long they've been out here."
+        },
+        "g": {
+          "name": "A skiff selling papers",
+          "item": "forged_papers",
+          "look": "A patched skiff moored just out of the fortress's line of sight, and a very polite person inside it with some very good paper.",
+          "use": "I tie up beside the skiff and ask what papers would get a ship in sooner."
+        }
+      }
+    },
+    "line": {
+      "name": "The Line",
+      "aliases": [
+        "line",
+        "the hangar",
+        "the lanes",
+        "the queue"
+      ],
+      "desc": "A vast hangar with chalked lanes, where refugees live, sleep and raise children in the order of their tickets. A calm recorded voice calls out one number every few minutes, day and night.",
+      "floor": ".-",
+      "colors": {
+        "floor": "#44444a",
+        "walls": "#8e8e98",
+        "scenery": "#bcbcc8",
+        "writing": "#ffffff"
+      },
+      "plan": [
+        "###############################1############################################",
+        "#..........................................................................#",
+        "#.-------------------------------------------------------------------------#",
+        "#...()..[]..()..()..[]..()..[]..()..()..[]..()..()..[]..()..[]..()..()..[].#",
+        "#.-------------------------------------------------------------------------#",
+        "#...[]..()..[]..()..()..[]..()..[]..()..[]..()..[]..()..()..[]..()..[]..().#",
+        "#.-------------------------------------------------------------------------#",
+        "2...........................@.................m............................#",
+        "#.-------------------------------------------------------------------------#",
+        "#...()..[]..()..[]..()..()..[]..t...[]..()..[]..()..[]..()..()..[]..()..().#",
+        "#.-------------------------------------------------------------------------#",
+        "#..........................................................................#",
+        "############3######################################################4########"
+      ],
+      "writing": [
+        [53, 0, "NOW SERVING: 41,207"]
+      ],
+      "labels": [
+        {
+          "text": "THE LINE",
+          "at": [3, 1]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "anchorage",
+          "via": "1"
+        },
+        "2": {
+          "to": "parade",
+          "via": "1"
+        },
+        "3": {
+          "to": "hall",
+          "via": "1"
+        },
+        "4": {
+          "to": "gallery",
+          "via": "1",
+          "closed": {
+            "look": "A steel stair up to the offices on the catwalk, with a sentry at the foot of it. He's very polite. He has a list, and you're not on it.",
+            "use": "I ask the sentry at the catwalk stair to tell the Commandant that I'd like to see him."
+          }
+        }
+      },
+      "people": {},
+      "things": {
+        "m": {
+          "name": "A Line Mother's table",
+          "look": "A folding table with a ledger, a bowl of soup and a stern elected woman. Lane disputes come here before they go anywhere official, and most of them end here.",
+          "use": "I sit down at the Line Mother's table and ask how the Line's doing."
+        },
+        "t": {
+          "name": "A patched coat on a line",
+          "item": "refugee_coat",
+          "look": "Warm and patched from three other coats, drying on a string between two bedrolls. It's for sale, like everything else that isn't a ticket.",
+          "use": "I ask whose patched coat this is, and what they'd want for it."
+        }
+      }
+    },
+    "hall": {
+      "name": "The Contract Hall",
+      "aliases": [
+        "contract hall",
+        "the clerks",
+        "the windows",
+        "contracts"
+      ],
+      "desc": "Forty clerks' windows under a white ceiling. Ten years of service buys papers for your family, and every word of the contract is read to you first, for as long as you can stay awake.",
+      "floor": "_",
+      "colors": {
+        "floor": "#505864",
+        "walls": "#a8b8c8",
+        "scenery": "#dce8f4",
+        "writing": "#ffffff"
+      },
+      "plan": [
+        "#########################1############################",
+        "#[=][=][=][=][=][=][=]_______[=][=][=][=][=][=][=][=]#",
+        "#____________________________________________________#",
+        "#____________________________________________________#",
+        "#____________S_______________________________________#",
+        "#_______________________[==========]k________________#",
+        "#____________________________________________________#",
+        "#____________________________________@_______________#",
+        "#_____________t______________________________________#",
+        "#____________________________________________________#",
+        "#[=][=][=][=][=][=][=][=][=][=][=][=][=][=][=]v[=][=]#",
+        "######################################################"
+      ],
+      "writing": [
+        [5, 11, "ALL OF THE CONTRACT WILL BE READ TO YOU"]
+      ],
+      "labels": [
+        {
+          "text": "THE CONTRACT HALL",
+          "at": [25, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "line",
+          "via": "3"
+        }
+      },
+      "people": {
+        "S": {
+          "id": "severa",
+          "label": "Severa",
+          "asks": [
+            "Which form do I actually need?",
+            "What does the contract really ask of them?"
+          ]
+        }
+      },
+      "things": {
+        "k": {
+          "name": "A contract, open on the desk",
+          "look": "It's four hundred pages long, and every word of it is fair. A clerk's finger is marking the place, partway down page nine, for a family that's fallen asleep.",
+          "use": "I read the contract through, carefully, looking for what it's really asking."
+        },
+        "t": {
+          "name": "A calm-tab dispenser",
+          "item": "calm_tabs",
+          "look": "Free, and refilled every morning, next to the windows. The Hegemony isn't cruel. It wants you calm when you sign.",
+          "use": "I take a calm tab from the dispenser and watch who else does."
+        },
+        "v": {
+          "name": "Window Thirty-Nine",
+          "look": "The clerk behind it has been reading the same paragraph to the same old man for an hour. Neither of them has any intention of stopping first.",
+          "use": "I wait at Window Thirty-Nine and listen."
+        }
+      }
+    },
+    "parade": {
+      "name": "The Parade Ground",
+      "aliases": [
+        "parade ground",
+        "training deck",
+        "the drill deck",
+        "the viewing window"
+      ],
+      "desc": "A training deck, with a long viewing window that looks onto the Line. New conscripts drill here, and their families can watch them from the other side of the glass, and that's on purpose.",
+      "floor": ":",
+      "colors": {
+        "floor": "#3e4a38",
+        "walls": "#7e9270",
+        "scenery": "#b0c890",
+        "writing": "#f0ffd8"
+      },
+      "plan": [
+        "####################################################################",
+        "1::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::::!:!:!:!:!:!::::::!:!:!:!:!:!::::::!:!:!:!:!:!::::::!:!:!:!::::#",
+        "#::::!:!:!:!:!:!::::::!:!:!:!:!:!::::::!:!:!:!:!:!::::::!:!:!:!::::#",
+        "#::::!:!:!:!:!:!::::::!:!:!:!:!:!::::::!:!:!:!:!:!::::::!:!:!:!::::#",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::::::@:::::::::::::::::::::::::::::::::::::::::::::::::[|||||]r::#",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#==========================w=======================================#",
+        "####################################################################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE PARADE GROUND",
+          "at": [25, 2]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "line",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "w": {
+          "name": "The viewing window",
+          "look": "On your side, conscripts in clean grey. On the other, mothers holding up children to see. The glass is very thick, and nobody on either side is waving any more.",
+          "use": "I stand at the viewing window and look at who's on the other side."
+        },
+        "r": {
+          "name": "The rifle rack",
+          "item": "service_rifle",
+          "look": "Service rifles in perfect order, oiled, counted and signed for. They're the same pattern the old navy used, because the Hegemony bought those up cheap.",
+          "use": "I ask the drill sergeant about the rifles on the rack."
+        }
+      }
+    },
+    "gallery": {
+      "name": "The Commandant's Gallery",
+      "aliases": [
+        "commandant's gallery",
+        "the catwalk",
+        "halloran's office",
+        "the commandant's office"
+      ],
+      "desc": "Offices on a catwalk above the Line, with a good view of every lane. The Commandant's window has a desk in it that's been turned to face the wall.",
+      "floor": "=",
+      "colors": {
+        "floor": "#34404c",
+        "walls": "#76889a",
+        "scenery": "#a8c0d8",
+        "writing": "#e0f0ff"
+      },
+      "plan": [
+        "##########################################################",
+        "#  [___]   [___]   [___]   [___]   [___]  |==============#",
+        "#  |   |   |   |   |   |   |   |   |   |  |====[--]d=====#",
+        "#--+---+---+---+---+---+---+---+---+---+--|---------+----#",
+        "#========================================================#",
+        "1=============@=========================D================#",
+        "#========================================================#",
+        "#|: : : : : : : : : : : : : :c: : : : : : : : : : : : : |#",
+        "#|: : : : : : : : : : : : : : : : : : : : : : : : : : : |#",
+        "##########################################################"
+      ],
+      "writing": [
+        [44, 1, "COMMANDANT"],
+        [18, 8, "THE LINE BELOW"]
+      ],
+      "labels": [
+        {
+          "text": "THE COMMANDANT'S GALLERY",
+          "at": [12, 4]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "line",
+          "via": "4"
+        }
+      },
+      "people": {
+        "D": {
+          "id": "dain",
+          "label": "Halloran",
+          "asks": [
+            "How do you sleep, Commandant?",
+            "What would it take to get my people through faster?"
+          ]
+        }
+      },
+      "things": {
+        "d": {
+          "name": "The desk that faces the wall",
+          "item": "data_chip",
+          "look": "A very good desk, turned away from the best view in the fortress, on purpose. There's a chip lying on the blotter, with no label on it.",
+          "use": "I ask why the desk faces the wall, and whose chip that is."
+        },
+        "c": {
+          "name": "The rail over the Line",
+          "look": "Every lane's in plain view, and from here you can read the tickets. It isn't a long drop. Someone has had a second rail put in, at about chest height.",
+          "use": "I lean on the rail and look down at the Line with whoever's here."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Fortress plan",
+    "plan": [
+      "*      .     <==>     .   ~~~~~~~~~~~~~~~~~~~~  *    <=>    .    *",
+      ".   <=>     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   .   <==>",
+      "##################################################################",
+      "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+      "##################################################################",
+      "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"#",
+      "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"#",
+      "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"#",
+      "##################################################################",
+      "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
+      "##################################################################"
+    ],
+    "floors": {
+      "~": "anchorage",
+      ":": "gallery",
+      ",": "line",
+      "\"": "parade",
+      ";": "hall"
+    },
+    "rooms": [
+      {
+        "level": "anchorage",
+        "at": [23, 1],
+        "text": "THE LONG ANCHORAGE"
+      },
+      {
+        "level": "gallery",
+        "at": [20, 3],
+        "text": "THE COMMANDANT'S GALLERY"
+      },
+      {
+        "level": "line",
+        "at": [18, 6],
+        "text": "THE LINE"
+      },
+      {
+        "level": "parade",
+        "at": [46, 6],
+        "text": "THE PARADE GROUND"
+      },
+      {
+        "level": "hall",
+        "at": [24, 9],
+        "text": "THE CONTRACT HALL"
+      }
+    ]
+  }
+}

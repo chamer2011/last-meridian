@@ -1,0 +1,46 @@
+{
+  "title": "Safe Harbor",
+  "kind": "main",
+  "places": ["harbor"],
+  "minLevel": 8,
+  "after": "main_the_road_past_the_map",
+  "people": ["aduro", "odessa", "naomi", "oskar", "halm", "grann", "tarrow"],
+  "factions": ["fleet", "quiet"],
+  "lead": "The water here is clean, the air is warm, and there's a berth for every ship in the fleet. Dr. Aduro has asked to see you about how well everyone is sleeping.",
+  "anyone": "The water here is clean, the air is warm, and there's a berth for every ship in the fleet. People have started sleeping very well, and Dr. Aduro has started asking about it.",
+  "gm": {
+    "truth": "The Beacon kept its promise. The Harbor is a First Builder crew station: miles of empty berths that fit every ship, warm halls, gardens still growing, clean water and power without end. It was built to keep relief crews alive for years, and it still does. The sick are healing, food is growing, and for the first time in seven months no one is hungry. The fights have stopped. Nobody has stolen anything in days. Odessa's two sets of books finally match. And people are sleeping wonderfully, all with their heads the same way, because this is the edge of the Shoal, where the song is loudest and the gaps in it are widest. Stay long enough and everyone will sit down, perfectly happy. Nobody's lying and nothing's broken. The fleet's just stopping. Naomi Cass has stopped running. That's the horror: a desperate people at the end of an impossible road have arrived at everything they were promised, and the captain is the one who has to tell them it isn't safe, and make them care. Arc clues: harbor_sleep, rota_board.",
+    "beats": [
+      "Arrival. Let it be wonderful, and let the player have it for a while: a real meal, a child swimming, Marrow speechless at a working engine room the size of a city. Grann Tull with both hands in real ground, not saying anything. Everyone wants to thank the captain.",
+      "Aduro's ward. Nobody's dying and nobody's in a hurry. Their skin is brighter than it has been since the Fall. They want to know why they've stopped being afraid, and they're very calm about wanting to know.",
+      "Small wrong notes: a council meeting with no arguments. Halm agreeing with Grann Tull. Tarrow cleaning her sidearm and forgetting to finish. Rows of people on the Long Quay, not talking much, all facing the same way, and it isn't toward the view. Oskar, if he turned, walking the halls and begging people to wake up. Naomi asleep in the middle of a corridor.",
+      "Someone important sits down. Getting them up is a matter of calling their name, and of finding something they're still angry about.",
+      "The captain has to stir them. Anger helps, grief helps and arguments help most of all. They may have to start a fight on purpose. And there are stairs that go up to a room with a board in it."
+    ],
+    "routes": [
+      "Leader: make them argue again (leadership, persuasion). Call a council and ask a question with no good answer. The fleet's quarrelsomeness has been its curse for seven months, and now it's the only thing keeping it alive.",
+      "Medical: find what keeps people awake (medicine, science): schedules, noise, work, each other. Aduro puts the fleet on watches. No one says why that works.",
+      "Scoundrel: start something. Steal something big, spread a rumor, pick a fight (deception, streetwise, intimidation). A good scandal saves lives here, and Kit or Tannis would be glad to help.",
+      "Resonant or steady hand: hold your own mind (composure, attunement) and walk through the halls calling people's names. Someone has to stay sharp. It's exhausting, and it feels like cruelty, because they were so happy.",
+      "Technical: find what's playing (engineering, hacking, science). The station's maintenance song runs through every pipe. Marrow can muffle a deck at a time, if he remembers to care."
+    ],
+    "checks": [
+      "composure:hard to notice that you feel fine, and do something about it",
+      "leadership:hard to make the council fight",
+      "medicine:moderate to see what's happening to the fleet",
+      "deception:moderate to start the scandal that wakes a deck",
+      "attunement:hard to find who's slipping and call them back",
+      "intimidation:moderate to pick a fight with someone too calm to want one"
+    ],
+    "fights": [
+      "silent_one if the seated are moved",
+      "hegemony_trooper or remnant_marine if someone else's ships have reached the docks"
+    ],
+    "outcomes": [
+      "If the fleet stirs, they stay awake, angry and frightened. They hate the captain a little for it. They're alive to choose.",
+      "If part of the fleet sits down, named people are among them. Some can be brought back with time, and the cost is heavy. Count them.",
+      "If the captain lets it happen, that's a kind of Join ending with no song at all, and it's the worst one: they aren't kept, they're just gone. It should only happen if the player truly abandons it. Offer one more chance, through Naomi, who wakes up long enough to ask if she's allowed to have a real bunk now."
+    ],
+    "rewards": "Everything the fleet ever needed, for free: ration_pack, medkit, fuel_cell. Nobody needs the money any more, which is what should worry them."
+  }
+}

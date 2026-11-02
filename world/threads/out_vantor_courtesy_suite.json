@@ -1,0 +1,41 @@
+{
+  "title": "The Courtesy Suite",
+  "kind": "survival",
+  "places": ["vantor"],
+  "minLevel": 3,
+  "after": null,
+  "people": ["vael", "jaska"],
+  "factions": ["hegemony", "fleet"],
+  "lead": "The invitation is handwritten. Inquisitor Sabine Vael requests the pleasure of your company at Vantor, to clear up a small matter of fleet registry, and she has reserved you a very nice suite. The door isn't locked. You may leave whenever you like, she says, and she appears to mean it.",
+  "gm": {
+    "truth": "The door really isn't locked. Nobody will stop the captain from leaving. But forty-one fleet citizens were detained at Vantor's docks this morning, \"pending the same matter\", and Vael lays out her terms over tea with total sincerity: for each hour the captain sits with her and answers honestly, she will sign one release. She apologizes for the arrangement. She wants what she always wants: names of the Resonants hiding in the fleet. She never asks for them directly. She simply talks, about the captain's crew, their childhood and how they sleep, and she listens to what isn't said. Every honest hour buys a person, and costs a little of what she's after. Lies can be spotted, and she'll gently cancel that hour. A captain with high awareness or attunement may notice two small things: the dampener-grey band under her white glove, and the way she goes very still a moment before someone with Resonance walks past the door. Nothing is said about it. She's the most dangerous person the captain has ever had a pleasant time with.",
+    "beats": [
+      "Arrival. Fresh flowers, a real bath and a meal better than anything the fleet has seen in six months. Vael enters, removes nothing, and asks if the captain slept well. The list of forty-one names is on the table.",
+      "The first hours. She's warm and well-read, and she knows a surprising amount. She signs the first release in front of the captain, and they watch from the window as a family walks out to the docks.",
+      "The middle of the night. Inspector Jaska Moor brings tea, and has just one more question. It's about a very small detail from hour two. The captain has to decide what they've already given away.",
+      "The hard hours. Hunger isn't the problem and neither is fear. It's being understood. The GM should use stress here. The fleet is calling on the comm about a crisis that needs its captain.",
+      "The captain stands up. Vael stands too, signs whatever she owes, and thanks them. She tells the captain, sincerely, one thing she learned that they didn't mean to tell her."
+    ],
+    "routes": [
+      "Sit and hold: composure to stay as long as possible and give her only what's harmless, buying as many people as they can stand.",
+      "Play her at it: deception and lore to feed her true things that don't matter and false things that sound like confessions, or to use Hegemony law to cut the terms short.",
+      "Change the game: persuasion to appeal to the sincerity under the manners. Awareness or attunement to learn what she's hiding. Or leave at once and free the forty-one in some other way, with hacking and stealth at the docks."
+    ],
+    "checks": [
+      "composure:hard for each long stretch of questioning",
+      "deception:very_hard to lie to Vael and have the hour count",
+      "awareness:hard to see the grey band under her glove",
+      "attunement:very_hard to feel what she goes still for",
+      "lore:moderate to know which of her terms the law actually supports",
+      "hacking:hard to get the detainees' dock records changed from outside"
+    ],
+    "fights": ["hegemony_trooper at the docks only if the captain tries to free people by force after leaving. Nobody in the Courtesy Suite will ever raise a hand."],
+    "outcomes": [
+      "If the captain stays long enough to free most of the forty-one, those people and their ships will follow the captain anywhere. Vael has also learned enough to pick out one real Resonant in the fleet, and an unmarked arrest attempt follows.",
+      "If the captain walks out early, the rest remain in custody, the fleet hears who was left, and Vael sends a courteous note saying the offer stands.",
+      "If the captain has learned what's under the glove, they hold the most dangerous secret at Vantor. It's far too early to use, and she may well have noticed them noticing.",
+      "If lies were caught, the hours count for nothing, and worse, she now knows which subjects the captain lies about."
+    ],
+    "rewards": "A few grateful families and their small ships, a boost to composure through hard practice with train_skill, and a real sense of what the Hegemony is. Possibly a sealed note from Jaska Moor that says only: Hour two. Be more careful."
+  }
+}

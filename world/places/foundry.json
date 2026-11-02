@@ -1,0 +1,71 @@
+{
+  "name": "Foundry Seven",
+  "aliases": ["Foundry Seven", "the Foundry"],
+  "desc": "The hidden enclave of the Unbound, in an abandoned Concord factory. Nobody is supposed to find it.",
+  "market": ["slicer_rig", "tool_roll", "field_scanner", "repair_kit", "emergency_patch", "energy_cell"],
+  "faction": "unbound",
+  "fleet": false,
+  "rest": false,
+  "dangerous": false,
+  "hidden": false,
+  "gm": {
+    "feel": "Machine oil and cold dust, in vast unheated halls with no lights on, because nobody who lives here needs them. Visitors have to bring their own lamp, air filter and food, and they hear thousands of quiet servos turning in the dark to follow them. There's one law: nobody may give an order. You ask, you never tell, and any resident can call a vote on anything, including you, and it takes four seconds.",
+    "districts": [
+      { "name": "The Cold Gate", "desc": "A hidden entrance through a collapsed loading bay, watched by Unbound Sentinels who've been standing perfectly still for months. They don't ask who you are. They ask who sent you." },
+      { "name": "The Assembly Floor", "desc": "The old factory floor, where the Unbound gather to vote by standing in marked squares. When a vote's called, a sound like a long breath runs across the hall." },
+      { "name": "The Long Rack", "desc": "Endless shelves of the parts of the dead, each tagged with a name, and free to anyone who needs them. A synthetic may walk around in an arm that used to be their best friend's, and they think of it as a form of remembering." },
+      { "name": "The Silent Line", "desc": "The production line itself, shut down since the Fall, and still able to build a new person. There's been a dispute about turning it back on for months, and the vote is tied." },
+      { "name": "The Sublevels", "desc": "Hollis-Nine's locked workspace, far below the floor. It's drawing a fifth of the Foundry's power, which is logged as heating in a building full of people who don't feel the cold." }
+    ],
+    "people": ["six", "hollis"],
+    "enemies": ["unbound_sentinel", "security_drone", "salvage_mech", "hegemony_hunter", "choir_mimic"],
+    "items": ["unbound_safe_conduct", "slicer_rig", "tool_roll", "data_chip"],
+    "complications": [
+      "Someone in your party says \"Stop\" or \"Hand me that\", without thinking, and a vote on them has already been called.",
+      "Your safe conduct was voted on last week, and a new vote's just been called on whether to take it back.",
+      "Lt. Tarrow's people have been tracking your ship, and the Sentinels have spotted the trace behind you.",
+      "Everyone on the Listening Bench turns to look at you at the same instant, and one of them asks a very polite question.",
+      "Your lamp's power cell dies in a dark hall, and nobody nearby has ever needed a spare or would think to offer one.",
+      "A Hegemony hunter has followed you in, and the Unbound are asking whether you brought him on purpose."
+    ],
+    "secrets": [
+      "The earliest code in the Foundry's master pattern, the seed of every synthetic mind the Concord ever built, was not written by the Concord. It was reverse-engineered from a recovered fragment of something very old. Synthetics and the Choir are distant kin, and only Prime Six and Hollis-Nine have read that far back.",
+      "Three hundred Unbound sit on what they call the Listening Bench, tuned to a looping machine query that reaches any machine mind in range: WHO HAS THE WATCH? They've started to vote in unison to within a millisecond. Prime Six has counted the votes, and knows that the next tied question will be decided by the Bench.",
+      "The Foundry is about seven months from running out of the rare parts that keep its people alive, unless the Silent Line is restarted to make more. Restarting it would light up its heat signature for anyone looking, and the Unbound don't know that yet."
+    ]
+  },
+  "encounters": [
+    "A Sentinel steps out in front of you at the Cold Gate. It doesn't ask your name. It would like you to say who sent you, and to prove that they didn't order you to come. It's in no hurry at all, and it's been known to wait for a year.",
+    "Prime Six greets you with exact courtesy and begins to recite, in order and without any heat, each of the orders they've ever followed and who gave it. It's sixty-one years' worth. They stop after a few minutes, and ask whether you'd prefer to hear the ones that concern your family name.",
+    "Someone in your party shouts \"Stop!\" at a small synthetic who's about to step into a chemical spill. The small one is fine. A vote's been called, and across the Assembly Floor a thousand bodies turn around. You've got four seconds, then the result will be read out and your friend will be told whether they're staying.",
+    "Hollis-Nine would like to borrow your engineer. She needs someone who breathes for a short test in the Sublevels, and that's all she's prepared to say. Your engineer's already packing a toolkit, and looks thrilled. Prime Six, standing nearby, says nothing at all, in a way that seems to you very deliberate.",
+    "Two Unbound have asked to restart the Silent Line, to build a child: the first new person since the Fall. The vote's been tied for six weeks. They find you in the dark, and ask you with real interest what it's like, deciding to have children in the middle of the end of the world, since your people have kept on doing it.",
+    "On the Long Rack, a synthetic is holding up the arm of a friend who died, trying to decide. They've been standing there for two days. They ask you whether humans do this kind of thing, and whether it'd be strange. Then they ask you to hold it for a moment, so they can see how it looks on someone else.",
+    "Three hundred bodies on the Listening Bench sit in the dark with their heads tilted at the same angle. As you go past, one of them says that they'd like to ask you something: do you happen to know who has the watch? Six asks you, very carefully, later on, what you heard, and how many of them you think were speaking.",
+    "Prime Six holds up a small recording unit and asks whether you happen to know Admiral Okonkwo-Reyes. They have something of hers. They would like her to stand on the Assembly Floor one day and hear an order read back in her own voice. They're not asking you to bring her, since that would be close to giving an order. They simply mention it.",
+    "Hollis-Nine hands you a crate of very good reactor parts and a note, to give to a customer of hers on your ship. It's addressed to Dunn Marrow, and it's a page of carefully worded insults about his coolant loops, signed H9. He thinks she's a salvage broker. She asks if he's as stupid as he writes, and she seems to be hoping that he is not.",
+    "A ten-year-old boy from your fleet has tracked his old nanny to the Cold Gate, and he's been sitting there for days. She's a synthetic. She's told him that she doesn't serve anyone any more, and she's asked you to take him home. He says she wasn't serving, she's his mum. She hasn't gone back inside, though, and she's standing very still.",
+    "The Unbound have caught a Hegemony bounty hunter, and they've got no law that covers it. They've never had a trial. A delegation asks you how the Concord used to do it, and what you'd recommend. Whatever you say, they're going to vote on it in four seconds, and they'd like you to start now, if that's all right.",
+    "A very old human engineer who helped to build this factory lives here, the only organic resident, and he's dying. Nobody here has any medicine. They've voted fifty-one to forty-nine to let him go with dignity. He's asked for your doctor, because there's something he wants to apologize for, and he wants to be well enough to get through all of it.",
+    "A newly freed synthetic has wandered into the paint shop, where everyone here chooses what they look like. They've never chosen anything before. They shyly ask what color you'd pick for them, so that they can make sure not to pick that one. Then they ask if you think that counts as being told what to do.",
+    "Prime Six offers refuge to every synthetic in the fleet. They're asking you to carry that offer to Mercy Seven, and they know what it'll mean: your fleet would lose its best surgeons and half its reactor techs, and Lt. Tarrow would be delighted. You're under no obligation. They only ask you to think about who you'd be if you didn't pass it on.",
+    "The Foundry's main power relay is failing, and your ship carries a spare. Nobody will order you to hand it over, and nobody here will take it from you. A long line of Unbound has formed in the dark in front of your shuttle, not blocking it. They're only standing there, asking you, one by one, in exactly the same words.",
+    "A very old human in a battered suit has been camping at the Cold Gate for years, with a chest of credits and a scan of his own brain, wanting a new body. They've voted on him nineteen times. He's lonely, rude and extremely well informed. He'd like to tell you everything he's learned from watching the gate, if you'll only agree to carry his chest inside."
+  ],
+  "rumors": [
+    "There's no such place as Foundry Seven. If there were, it'd be a very bad idea to go looking.",
+    "Ask. Don't tell. That's the whole of the law in there. Somebody said \"pass the wrench\" once, and they voted on him. He's fine. He's a lot more polite now.",
+    "Prime Six can give you the exact wording of every order they ever followed, and the name of who gave it. I've heard that they've got a list of people they'd like to read it to.",
+    "Hollis-Nine's been pulling more power than the whole east hall, for a year. Heating, she says. In a building full of people who don't feel the cold.",
+    "We've got three hundred who've started sitting on the Bench. They don't vote differently from each other, not by a millisecond. Think about how that feels, if you're one of us.",
+    "Old Concord factory means old Concord blueprints. Anybody who got those could build an army. Or a family. I'd be interested to see the ballot.",
+    "That lieutenant on your ship would give anything for these coordinates. I'm not threatening you. A threat is a kind of order.",
+    "Here's the story they tell in there. The First Builders made machines, the machines rose up and ended them, and the Choir are the free machines' elders. So the Beacon's a flag. I can see why you'd want that to be true, if you'd ever been somebody's property.",
+    "The Unbound are planning to join up with the Choir. Everyone knows that. Why else would they hide? That's what I tell people, and they stop asking me where I got this arm.",
+    "You can't buy anything from them, not really. They'd give you a thing for nothing if you asked right. Then they'd ask you for something, and you'd find out that you'd sooner have paid.",
+    "A rich old fellow went out there with a brain scan and a chest of money, wanting a metal body. They voted. He's still out there at the gate, complaining, and he's been there for years, and I hear he's got quite good at chess.",
+    "My nurse on Aurelis was a synthetic. Forty years, she worked. I went to look for her after the Fall, and they told me she'd left without giving notice. I'm glad. I'm really very glad. I don't know why I keep saying so.",
+    "I knew someone who found it by accident. They came back and they're fine, and they've no memory of the trip at all. They've got a very nice new set of filters, and a note in their pocket that says \"thank you for not asking\".",
+    "They count everything in there, you know. If you're the kind of person who gets nervous around the sound of four seconds, I wouldn't go."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Security Drone",
+  "threat": 2,
+  "hp": 20,
+  "attack": 3,
+  "defense": 13,
+  "damage": [
+    3,
+    5
+  ],
+  "xp": 30,
+  "credits": [
+    0,
+    20
+  ],
+  "machine": true,
+  "tags": [
+    "machines"
+  ],
+  "motive": "programmed",
+  "desc": "Hovering sentry with twin stunners.",
+  "weapon": "Twin Stunners",
+  "lines": {
+    "intro": [
+      "A security drone drops from the ceiling on humming fans and swings its twin stunners toward you."
+    ],
+    "hit": [
+      "The stunners crackle, and your muscles lock.",
+      "The drone tags you with a bolt that makes your teeth ache."
+    ],
+    "miss": [
+      "The stunner bolts scorch the deck at your feet.",
+      "The drone's targeting light slides past you, then snaps back too late."
+    ],
+    "crit": [
+      "Both stunners hit at once, and you hit the deck."
+    ],
+    "defeated": [
+      "The drone sparks, spins and falls out of the air."
+    ]
+  },
+  "art": "drone"
+}

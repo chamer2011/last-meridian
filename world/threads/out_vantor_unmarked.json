@@ -1,0 +1,42 @@
+{
+  "title": "Unmarked",
+  "kind": "exploration",
+  "places": ["vantor"],
+  "minLevel": 7,
+  "after": "out_vantor_form_nine",
+  "people": ["regent", "corvane", "jaska", "cantor"],
+  "factions": ["hegemony", "fleet"],
+  "lead": "The ledgers finally give you a date. On the first of every month a transport with no name and no crew list leaves Vantor with nine hundred prisoners, and rations for exactly one way. The next one leaves in three days, and Inspector Jaska Moor, off duty and out of uniform, says she'll come with you.",
+  "anyone": "On the first of every month a transport with no name and no crew list leaves Vantor with nine hundred prisoners, and rations for exactly one way. Inspector Jaska Moor, off duty and out of uniform, has been asking who'd come with her to see where it goes.",
+  "gm": {
+    "truth": "This is the handover seen up close: main_the_remittance covers the paper trail, and Mott Jessup's manifests or Severa Lune's copies can lead here as well as Pilar's ledgers. The ships refuel at Mott's back dock at Haven, go past the border to an empty point in space and cut their engines, and the Choir comes and takes the people aboard, gently and in good order. The Regent has done this for twenty-two years and calls it a tax, and in plain arithmetic it works: nine hundred people a month and rising, against two billion. Most are contract refugees now, with captured Resonants first, because they count for more. Jaska Moor's brother was on one of these ships. What the captain sees at the rendezvous is the part nobody could have guessed: it's orderly on both sides. The transport's automatic systems open the locks, the Choir files aboard and files out with its passengers, and before it goes, one silver figure sets something down on the empty deck, neatly: a small stack of worked silver discs, one for each person. A receipt. The Hegemony's archive must be full of them. The Choir has been keeping count too. If the captain has been noticed, a figure wearing a face from their past may turn and speak. \"You are early. Are you here to pay?\"",
+    "beats": [
+      "Following the transport: running cold on a course nobody charts, with a sensor shadow and an old nav beacon, and Jaska Moor saying very little.",
+      "Boarding or shadowing. Below decks, nine hundred people are quiet and politely fed, and they've been told they're being resettled. Most of them believe it. One is a very old man who taught at the Academy and has worked it out.",
+      "The rendezvous. Silver shapes in the dark, and the transport's locks cycling all on their own. The captain has minutes to decide whether to watch, intervene or run.",
+      "The receipt on the deck, and Jaska picking it up. She counts the discs, then counts again. For the first time she doesn't have one more question.",
+      "Now the captain knows. Everything depends on who else they tell, and the Regency will send a beautifully worded invitation very soon."
+    ],
+    "routes": [
+      "Watch and prove it: stealth, piloting and science to follow, record it all and get away unseen.",
+      "Save them: tactics, gunnery and engineering to take or disable the transport before the rendezvous and run with nine hundred people, with the Choir arriving to find nothing paid.",
+      "Talk: attunement, lore and composure to answer the figure that speaks, and learn what no one has ever stopped to ask it. It's the most dangerous route, and it might be the most useful."
+    ],
+    "checks": [
+      "navigation:hard to follow an uncharted course without being seen",
+      "stealth:very_hard to stay unnoticed at the rendezvous with the reactor down",
+      "piloting:hard to slip alongside the transport",
+      "gunnery:hard to disable the locks without opening the hull",
+      "attunement:very_hard to hear what the Choir is doing while it takes them",
+      "composure:hard to stand in front of that face and answer it"
+    ],
+    "fights": ["choir_drone and choir_chorister if the captain interferes at the rendezvous. Running is always possible, and the Choir doesn't pursue what it hasn't been promised.", "hegemony_trooper automated guards on the transport, which a good lie or a hacked order can stand down."],
+    "outcomes": [
+      "If the proof goes public, the Hegemony shakes. Riots start at Vantor, recruitment collapses, and refugees run. It's also possible that the Choir, once the tax stops, turns toward two billion people.",
+      "If the captain frees a shipment, nine hundred people join the fleet and the Regent simply sends two ships next month. The first time the Choir comes up short, the captain will learn what it does about it.",
+      "If the captain uses it as leverage, the fleet can have almost anything it wants from the Regency, Hegemony protection included. The captain then knows about the tax and is benefiting from it, and they'll be asked to help count.",
+      "If Jaska Moor lives through it, she does the most dangerous thing anyone has ever done in the Hegemony: she files a formal complaint, through channels, addressed to the Regency, with the discs attached. It will get her killed unless someone helps, and it could shake everything. The Serene Regent's own fate stays open and is only in play if the player earns it across the whole story."
+    ],
+    "rewards": "A small sack of silver discs and proof on a data_chip, major clues about what the Choir wants, a large swing in hegemony standing, and Jaska Moor's loyalty, which is worth a very great deal."
+  }
+}

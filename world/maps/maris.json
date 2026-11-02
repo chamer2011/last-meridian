@@ -1,0 +1,408 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "Maris Deep",
+  "start": "rafts",
+  "levels": {
+    "rafts": {
+      "name": "The Rafts",
+      "aliases": [
+        "rafts",
+        "the barges",
+        "kelp farms",
+        "the kelp farms",
+        "the raft town"
+      ],
+      "desc": "A town of kelp-farmers on tethered barges that rise and fall with the sea, three generations old. They're friendly, weathered, and very reluctant to talk about the station.",
+      "floor": "=",
+      "colors": {
+        "floor": "#2c4a44",
+        "walls": "#6c9c90",
+        "scenery": "#70c8a0",
+        "writing": "#e4fff0"
+      },
+      "plan": [
+        "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~",
+        " ~ ~ ~ ===================== ~ ~ ~ ~ ================== ~ ~ ~ ~ ========== ",
+        "~ ~ ~ ~=====|%%|%%|%%|=====~ ~ ~ ~ ~===|%%|%%|%%|=====~ ~ ~ ~ ~====t=====  ",
+        " ~ ~ ~ ===================== ~ ~ ~ ~ ================== ~ ~ ~ ~ ========== ",
+        "~ ~ ~ ~ ~ ~ = ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ = ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ = ~ ~  ",
+        "~ ~ ~ ~ ~ ~ = ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ = ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ = ~ ~  ",
+        "=======================================================================1   ",
+        "================@=============================k=========================   ",
+        "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ = ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ = ~ ~ ~ ~ ~ ~ ~ ~ ~  ",
+        "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ = ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ = ~ ~ ~ ~ ~ ~ ~ ~ ~  ",
+        "~ ~ ~ ~ ===================== ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ===================  ",
+        " ~ ~ ~ ~=====f=====w========~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~===================   ",
+        "~ ~ ~ ~ ===================== ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ===================  "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE RAFTS",
+          "at": [3, 6]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "station",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "k": {
+          "name": "The kelp racks",
+          "look": "Long lines of wet brown kelp, hauled up and hung to dry on racks that have been rebuilt by three generations. The farmers stop to look at the tide table, and they all move at once.",
+          "use": "I lend a hand with the kelp racks and ask how the farming's going."
+        },
+        "t": {
+          "name": "The tide table",
+          "look": "A board nailed to a post, and the only thing on the Rafts that nobody's allowed to touch. Forty meters, twice a day. Beside the times, someone has marked the station's lights: on at seven, off at ten.",
+          "use": "I read the tide table and ask what happens at the marker buoys."
+        },
+        "f": {
+          "name": "The food on the dock",
+          "look": "Each week, the farmers row out a basket and leave it on the station's dock, and they don't wait. They don't ask who takes it, and it's always gone. This week's is packed and ready to go.",
+          "use": "I ask who the basket of food is for, and how long they've been leaving it."
+        },
+        "w": {
+          "name": "A patched work suit",
+          "item": "work_suit",
+          "look": "Coveralls with padding at the joints, hung up to dry between jobs, and smelling strongly of iodine. They've got more patches than suit by now. The owner would part with them for a fair trade.",
+          "use": "I offer a trade for the patched work suit."
+        }
+      }
+    },
+    "station": {
+      "name": "Corso Station",
+      "aliases": [
+        "the station",
+        "station",
+        "the research station",
+        "research station",
+        "the stilts"
+      ],
+      "desc": "The research station, on great stilts above the water, with the lights still running on a timer. They come on at seven and go off at ten, and the coffee machine's been used.",
+      "floor": ":",
+      "colors": {
+        "floor": "#3c4048",
+        "walls": "#828a98",
+        "scenery": "#a8c8e8",
+        "writing": "#f4fbff"
+      },
+      "plan": [
+        "########################################################################",
+        "#::::::::::::::::::::::::::::::::::|:::::::::::::::::::::::::::::::::::#",
+        "#:[====]:::[====]:::[====]:d:::::::|:::[=======]:::[=======]:::::::::::#",
+        "#::::::::::::::::::::::::::::::::::|:::::::::::::::::::::::::::::::::::#",
+        "1::::::::::::::::::::::::::::::::::+:::::::::::::::::::::::::::::::::::#",
+        "#:::::::@::::::::::::::::::::::::::|:::::::::::::::::::::::::::::::::::#",
+        "#-------------------+------------------------------+-------------------#",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::::::[]c::::::::::::::::::::::::::::::::::::::::::::::l::::::::::::::#",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "###########2##########################################3#################",
+        "      |   |                                          |   |              ",
+        "      |   |                                          |   |              "
+      ],
+      "writing": [
+        [4, 0, "CORSO STATION. PLEASE SIGN THE VISITORS' BOOK"]
+      ],
+      "labels": [
+        {
+          "text": "CORSO STATION",
+          "at": [42, 4]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "rafts",
+          "via": "1"
+        },
+        "2": {
+          "to": "tides",
+          "via": "1"
+        },
+        "3": {
+          "to": "shaft",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "c": {
+          "name": "The coffee machine",
+          "look": "It's still warm. There's a clean mug beside it, and a dirty one in the sink, and a label on the machine in small tidy handwriting: PLEASE REPLACE THE FILTER. Somebody has replaced the filter.",
+          "use": "I check the coffee machine, and I look for anyone who's been using it."
+        },
+        "l": {
+          "name": "The light timer",
+          "look": "A plain grey box on the wall: ON 0700, OFF 2200. It runs everything on this level. The dust on it has been disturbed at some point, around the OFF switch, by somebody with very cold hands.",
+          "use": "I look over the light timer and try to see who's been at it."
+        },
+        "d": {
+          "name": "A chip in a report tray",
+          "item": "data_chip",
+          "look": "A row of labeled data chips, one for each week of the survey. They stop some months back, and then there's one more, in a different hand, labeled WHAT I MEANT TO SAY.",
+          "use": "I take the last data chip from the tray, and I look for something to read it on."
+        }
+      }
+    },
+    "tides": {
+      "name": "The Tide Levels",
+      "aliases": [
+        "tide levels",
+        "levels two to five",
+        "the lower levels",
+        "the flooded levels"
+      ],
+      "desc": "Station levels two to five, which flood and drain twice a day. Doors, desks and filing cabinets are slimed with weed, and there's always more moved around than the water could have done.",
+      "floor": "~",
+      "colors": {
+        "floor": "#21433e",
+        "walls": "#4c807c",
+        "scenery": "#80c8a8",
+        "writing": "#d0ffe8"
+      },
+      "plan": [
+        "####1##################################################################",
+        "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#",
+        "#~~@~~~~~[==]~~~~[==]~~~~~~~~~~~~[==]~~~~~~~~[==]~~~~~~~~[==]~~~~~~~~~#",
+        "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#",
+        "#~~~~~~~~~~~~~~~~~~~~~~~~~~~f~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#",
+        "#~~~~~~~[==]~~~~[==]~~~~~~~~~~~~~~~~~~~~[==]~~~~~~~~~~~[==]~~~~~~~~~~~#",
+        "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#",
+        "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~s~~~~~~~~~~~~~~~~~~~#",
+        "#~~~~~~~~~~~~~[==]~~~~~~~~~~~~[==]~~~~~~w~~~~~~~~~~~~~~[==]~~~~~~~~~~~#",
+        "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#",
+        "#######################################################################"
+      ],
+      "writing": [
+        [30, 0, "SLACK WATER ONLY. CHECK THE TABLE"]
+      ],
+      "labels": [
+        {
+          "text": "THE TIDE LEVELS",
+          "at": [22, 6]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "station",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "f": {
+          "name": "A filing cabinet",
+          "look": "A heavy steel cabinet, slimed with weed, that's been moved two meters from the rust stain where it used to stand. No tide did that. All its drawers have been opened and closed again, and the files are in a better order than they were.",
+          "use": "I open the filing cabinet that's been moved, and I see what's been kept."
+        },
+        "s": {
+          "name": "A scanner on a desk",
+          "item": "field_scanner",
+          "look": "A battered handheld scanner, in a sealed bag, on a desk with no chair. It's still logging. It's got four months of nothing, with one reading at every high tide, and it's the same reading.",
+          "use": "I take the field scanner out of its bag and look through the logs."
+        },
+        "w": {
+          "name": "The tide line",
+          "look": "A band of weed and silt along every wall, at the height of your chin. There's another line, a long way above that, faint and very old. There's a hand print in the silt, and the water's had hours to wash it out.",
+          "use": "I look closely at the handprint on the wall above the tide line."
+        }
+      }
+    },
+    "shaft": {
+      "name": "The Shaft",
+      "aliases": [
+        "shaft",
+        "the elevator",
+        "elevator",
+        "the service shaft",
+        "the lift"
+      ],
+      "desc": "An elevator and a service shaft, going straight down through the sea floor. The elevator is called from below, by nobody, at every high tide, and it waits for two minutes with its doors open.",
+      "floor": "_",
+      "colors": {
+        "floor": "#313c52",
+        "walls": "#5a6a8f",
+        "scenery": "#88a8e0",
+        "writing": "#e0ecff"
+      },
+      "plan": [
+        "###################################################",
+        "1_________________________________________________#",
+        "#_________________________________________________#",
+        "#____@_____________________________e______________#",
+        "#_________________________________________________#",
+        "#_______________[===============2=============]___#",
+        "#_______________|     ||                ||    |___#",
+        "#_________m_____|     ||                ||    |___#",
+        "#_______________|     ||                ||    |___#",
+        "#_______________|     ||                ||    |_l_#",
+        "#_______________|     ||                ||    |___#",
+        "#_______________|     ||                ||    |___#",
+        "#_______________|     ||                ||    |___#",
+        "###################################################"
+      ],
+      "writing": [
+        [21, 7, "DOWN  2,000 METERS"]
+      ],
+      "labels": [
+        {
+          "text": "THE SHAFT",
+          "at": [22, 2]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "station",
+          "via": "3"
+        },
+        "2": {
+          "to": "chamber",
+          "via": "1",
+          "closed": {
+            "look": "The elevator stands open, lit from inside, with nobody in it. There's one button, and it doesn't go up. It came for you from below, and it's going to wait for two minutes.",
+            "use": "I step into the elevator at high tide, and I press the button."
+          }
+        }
+      },
+      "people": {},
+      "things": {
+        "e": {
+          "name": "The call light",
+          "look": "A small amber lamp above the doors. At every high tide it comes on, with no one on the panel, and it stays on for exactly two minutes. The station log marks it every time, up until the log stops.",
+          "use": "I sit down and wait for the call light to come on."
+        },
+        "m": {
+          "name": "Depth marks",
+          "look": "Stenciled by the crew who drilled this, every hundred meters. Lower down someone's added a note in pen, in a nice clear hand, beside each one: STILL GOOD. STILL GOOD. STILL GOOD. BETTER.",
+          "use": "I read the depth marks all the way down as far as I can see."
+        },
+        "l": {
+          "name": "The service ladder",
+          "look": "A rusty ladder, going down the side of the shaft into the dark, for use if the elevator should fail. It would take days. The top rungs are very clean.",
+          "use": "I shine a light down the service ladder and listen."
+        }
+      }
+    },
+    "chamber": {
+      "name": "The Long Chamber",
+      "aliases": [
+        "long chamber",
+        "the chamber",
+        "the first builder hall",
+        "the hall under the sea",
+        "the drowned structure"
+      ],
+      "desc": "A vast dry First Builder hall, two kilometers under the sea, with breathable air and a clean floor. Nobody's found out who built the door, or why it seals itself from the inside.",
+      "floor": ".",
+      "colors": {
+        "floor": "#3a3c44",
+        "walls": "#868a98",
+        "scenery": "#d0d4e0",
+        "writing": "#ffffff"
+      },
+      "plan": [
+        "###########################################################################",
+        "#.........................................................................#",
+        "#.....||........||........||........||........||........||........||......#",
+        "#.........................................................................#",
+        "#.........................................................................#",
+        "1...............@...................................................s.....#",
+        "#...................................L.....................................#",
+        "#.........................................................................#",
+        "#.....||........||........||........||........||........||........||......#",
+        "#..............................................d..........................#",
+        "###########################################################################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE LONG CHAMBER",
+          "at": [3, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "shaft",
+          "via": "2"
+        }
+      },
+      "people": {
+        "L": {
+          "id": "lenn",
+          "label": "Corso",
+          "asks": [
+            "What happened here, Doctor?",
+            "Who are the messages really for?"
+          ]
+        }
+      },
+      "things": {
+        "d": {
+          "name": "The door",
+          "look": "Enormous, seamless, and not quite the right proportions for anyone. It seals from the inside. There's no handle on this side, and you'd have sworn that you came in by it.",
+          "use": "I walk up to the door and run my hand along the seam."
+        },
+        "s": {
+          "name": "A sealed core sample",
+          "item": "maris_core_sample",
+          "look": "A sealed tube, drilled from the floor of the chamber and labeled in careful handwriting. It's warm through your glove. It's been out of the ground for months now, and it hasn't cooled by a single degree.",
+          "use": "I pick up the sealed core sample."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Station chart",
+    "plan": [
+      "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~~",
+      ",,,,,,,,,,,,,,,,,,,,,,,,~~~~~~~:::::::::::::::::::::::::::::",
+      ",,,,,,,,,,,,,,,,,,,,,,,,~~~~~~~:::::::::::::::::::::::::::::",
+      "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~~;;;;;;;;;;;;;;;;;;;;;;;;",
+      "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~~;;;;;;;;;;;;;;;;;;;;;;;;",
+      "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~~~~~~~~~~~~~~|.......|~~~",
+      "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~~~~~~~~~~~~~~|.......|~~~",
+      "\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"",
+      "\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\""
+    ],
+    "floors": {
+      ",": "rafts",
+      ":": "station",
+      ";": "tides",
+      ".": "shaft",
+      "\"": "chamber"
+    },
+    "rooms": [
+      {
+        "level": "rafts",
+        "at": [6, 2],
+        "text": "THE RAFTS"
+      },
+      {
+        "level": "station",
+        "at": [38, 2],
+        "text": "CORSO STATION"
+      },
+      {
+        "level": "tides",
+        "at": [40, 4],
+        "text": "THE TIDE LEVELS"
+      },
+      {
+        "level": "shaft",
+        "at": [48, 6],
+        "text": "SHAFT"
+      },
+      {
+        "level": "chamber",
+        "at": [22, 8],
+        "text": "THE LONG CHAMBER"
+      }
+    ]
+  }
+}

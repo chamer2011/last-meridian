@@ -1,0 +1,63 @@
+{
+  "_help": "The days of the people here. The instructions are at the top of meridian.json.",
+  "people": {
+    "ashael": [
+      { "at": "07:00", "doing": "sitting at the top of the steps", "go": "post" },
+      { "at": "13:00", "doing": "walking the canals, unlit", "go": "@courts" },
+      { "at": "15:00", "doing": "sitting at the top of the steps", "go": "post" },
+      { "at": "22:00", "doing": "gone to his rooms", "go": ">steps", "hidden": true }
+    ],
+    "mirei": [
+      { "at": "07:30", "doing": "sitting in the cool, saying nothing", "go": "post" },
+      { "at": "12:00", "doing": "watching the market, in plain clothes", "go": "@courts" },
+      { "at": "14:00", "doing": "sitting in the cool, saying nothing", "go": "post" },
+      { "at": "20:00", "doing": "going somewhere quiet", "go": "@still", "hidden": true }
+    ]
+  },
+  "crowd": [
+    {
+      "names": [["Trader Sael", 0], ["Trader Oume", 20], ["Bath Keeper Lio", 40], ["Boatman Tev", 60]],
+      "day": [
+        { "at": "06:30", "doing": "opening a floating stall", "go": "@courts" },
+        { "at": "12:00", "doing": "bargaining for a slow count of ten", "go": "@courts" },
+        { "at": "17:00", "doing": "bathing in the warm water", "go": "@courts" },
+        { "at": "20:00", "doing": "selling by lamplight", "go": "@courts" },
+        { "at": "23:30", "doing": "gone home", "go": ">courts", "hidden": true }
+      ]
+    },
+    {
+      "names": [["Circle Member Aveni", 0], ["Circle Member Dhar", 30]],
+      "day": [
+        { "at": "09:00", "doing": "in the open meeting", "go": "@steps" },
+        { "at": "13:00", "doing": "walking the canals", "go": "@courts" },
+        { "at": "15:00", "doing": "in the open meeting", "go": "@steps" },
+        { "at": "21:00", "doing": "gone home", "go": ">steps", "hidden": true }
+      ]
+    },
+    {
+      "names": [["A Shawled Woman", 0], ["A Shawled Man", 40], ["A Shawled Child", 80]],
+      "day": [
+        { "at": "08:00", "doing": "sitting wrapped up to the eyes", "go": "@shade" },
+        { "at": "18:00", "doing": "walking home, not looking at anyone", "go": "@courts" },
+        { "at": "21:00", "doing": "sitting wrapped up to the eyes", "go": "@shade" },
+        { "at": "23:00", "doing": "asleep in the cool", "go": "@shade", "asleep": true }
+      ]
+    },
+    {
+      "names": [["Steward Naelis", 0]],
+      "day": [
+        { "at": "07:00", "doing": "handing out tell-bands", "go": "@terrace" },
+        { "at": "19:00", "doing": "gone home", "go": ">terrace", "hidden": true }
+      ]
+    },
+    {
+      "names": [["A Pilgrim from the Fleet", 0]],
+      "day": [
+        { "at": "09:00", "doing": "wearing a tell-band, badly", "go": "@terrace" },
+        { "at": "12:00", "doing": "getting lost on the canals", "go": "@courts" },
+        { "at": "17:00", "doing": "back at the Dim", "go": "@terrace" },
+        { "at": "22:00", "doing": "asleep in the Dim", "go": "@terrace", "asleep": true }
+      ]
+    }
+  ]
+}

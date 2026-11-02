@@ -1,0 +1,48 @@
+{
+  "title": "The Stones at Night",
+  "kind": "mystery",
+  "places": ["ilun"],
+  "minLevel": 3,
+  "after": null,
+  "people": ["cael", "ione", "yara"],
+  "factions": ["ilun", "hegemony"],
+  "lead": "Brother Cael has spent six months looking for the Order's lost novices and has found nine empty houses with the beds made. He'd like a second opinion, because nothing's broken and every door was opened from the inside.",
+  "anyone": "Brother Cael has spent six months looking for the Order's lost novices and has found nine empty houses with the beds made. He'd like a second opinion, because nothing's broken and every door was opened from the inside.",
+  "gm": {
+    "truth": "During the Fall the Order's monks weren't slaughtered. They got up in the same hour, across all the outlying houses, made their beds and walked out to meet the silver. They'd been told to. Ione sent the word through the stones, and all but the youngest and oldest obeyed: the song needs strong voices, and she had done the sums. Cael doesn't know. He was sent out looking in good faith, and partly to keep him away. Far down the Under-Stair, the walls are cut with the names of relief crews, by the century, up to 1,006 years ago, and then nothing, under a rule whose first line has been chiselled off every other copy: Those who sing shall be relieved. The stones that hum at night are a relay in the song, and a place where a strong Resonant can sing in and be heard, which is how the rotation tables were sent. Cael has been answering the song for months, in secret, and he's much better at it than he should be. Those who walked are still faintly audible. A very old monk, Sister Toma, ninety, too frail to go, has counted the hum slowing for sixty years, and she'll break if she's pressed, and she'd rather not. One novice turned round at the last moment, and she has been standing in a field near the ninth house ever since, facing away: Silent. And one of the names painted over the cell doors is Yara Solune, who walked out from an outlying priory, was half copied and let go, and is now on Haven, glowing. Cael has no idea she's the woman everyone talks about. Arc clues: novices_walked, codex_cut_pages, silent_bearing.",
+    "beats": [
+      "The ninth house: a tidy emptiness. Beds made, bowls washed and shoes gone. Cael laughs nervously and tells you how much he liked the cook.",
+      "Trail signs: hundreds of people walking the same way, unhurried, in the dark, without stopping to pick up anything they'd dropped. It ends on a landing field where the grass has been pressed flat by something very heavy and very careful. There's no blood.",
+      "The girl in the field. Alive, and facing away. Cael knows her name. He says it, and says it. Her head doesn't turn. The birds have stopped landing near her.",
+      "Back on Ilun, a night among the stones in the Listening Hall. They hum. If you sit long enough, you start to hear that it isn't a hum. It's a lot of people a long way off. Someone among them knows Cael's name. He answers before he can stop himself, his skin tells everyone, and he begs the captain not to tell the Abbess.",
+      "Far down the Under-Stair, on steps the wrong height for anyone, names by the hundred and that first line. Sister Toma catches the captain looking. 'You should ask her. She won't lie. We never do, you know. We just stop talking.'"
+    ],
+    "routes": [
+      "Tracker: read the ground at the empty houses (survival, awareness). Bodies leave one kind of trail, and orders leave another.",
+      "Talker: get Sister Toma to speak (persuasion), or be kind to Cael (leadership), who's carrying more than he knows. Intimidating a ninety-year-old monk will work, and you'll feel it.",
+      "Resonant: sit with the stones overnight (attunement). You can hear them, all of them. Manifestation can make a stone ring clearly, and the whole valley will hear it. So will others.",
+      "Scholar or hacker: the hum has a structure (science, hacking) with a period that matches the Beacon, and it's slowing. The lettering down the Under-Stair and the marks where it was chiselled (lore) tell their own story.",
+      "Fighter: a Hegemony search team is combing the same houses for Resonants who might have hidden (firearms, tactics). Protect Cael and whatever it is they've found."
+    ],
+    "checks": [
+      "survival:moderate to read the trail from the empty houses",
+      "science:moderate to measure how far the hum has slowed",
+      "persuasion:hard to make Sister Toma break her silence",
+      "attunement:moderate to hear who's in the hum",
+      "manifestation:moderate to make a stone ring, and be heard",
+      "lore:hard to read the walls of the Under-Stair"
+    ],
+    "fights": [
+      "silent_one if someone tries to move the girl in the field",
+      "hegemony_trooper and an inquisitor searching the same houses"
+    ],
+    "outcomes": [
+      "If the captain knows the monks walked, that's one more reason to ask Ione (main_who_paid). Telling Cael breaks his heart. Not telling him is a different thing that will also break it, later.",
+      "If Cael's secret is kept, he trusts the captain forever. If it's told to Ione, she isn't surprised. If it's told to Tarrow, he's in a cell.",
+      "If the girl in the field is brought along, she's the fleet's first Silent patient: an early warning and a hard thing to have aboard. She can be saved much later, with a Proctor's blade, and what she says then matters.",
+      "If the Under-Stair is shown to the Order's last monks, there's a quiet, terrible scene in a place where nobody raises their voice.",
+      "If anyone notices the name over the cell door, Cael gets on the next ship to Haven. Sister Yara looks at him and says: 'You are looking for me. It's all right.' He calls her by her novice name, and her glow flickers, once, the first thing that has moved it in seven months. Mirei will hear of it."
+    ],
+    "rewards": "adept_robes, Cael's loyalty, a focus_blade from the empty armory, and a bag of bitter herbs, which means they like you."
+  }
+}

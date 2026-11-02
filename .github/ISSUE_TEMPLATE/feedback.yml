@@ -1,0 +1,31 @@
+name: Feedback
+description: Say what you liked, what didn't work, or what broke.
+title: "Feedback: "
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for trying The Last Meridian. Short answers are fine, and you can leave anything blank. Please don't post your API key here, or a picture that shows it.
+  - type: textarea
+    id: liked
+    attributes:
+      label: What did you like?
+  - type: textarea
+    id: problems
+    attributes:
+      label: What was confusing, dull or broken?
+      description: If something broke, say what you were doing just before it happened. A picture helps, and you can drag one in.
+  - type: dropdown
+    id: ai
+    attributes:
+      label: Which AI were you using?
+      options:
+        - Claude Opus
+        - Claude Sonnet
+        - Claude Haiku
+        - A local model
+        - None, I only walked around
+  - type: input
+    id: cost
+    attributes:
+      label: Roughly how long did you play, and what did it cost?
+      description: The Settings menu shows what you've spent.

@@ -1,0 +1,66 @@
+{
+  "name": "Rennick Vale",
+  "title": "Director",
+  "aliases": [
+    "Director Rennick Vale",
+    "Director Vale",
+    "Rennick Vale",
+    "Rennick",
+    "Vale"
+  ],
+  "pronouns": "he/him",
+  "species": "human",
+  "age": 54,
+  "faction": null,
+  "role": "Director of the Cinder Reach refinery",
+  "location": "cinder",
+  "listed": false,
+  "color": "#9e9e9e",
+  "note": "The most hated man on the moon. He keeps saying the reactor can't be stopped, and nobody believes him.",
+  "appearance": "A spare, colorless man in a spotless company jacket, with a bad limp and a stick he won't lean on in front of people. His eyes are red from reading gauges, and a child's drawing of him being hanged hangs framed behind his desk.",
+  "personality": "Arrogant, exact and perfectly willing to be hated. He ordered a door shut on fourteen people, he'd do it again, and he can show you the arithmetic. He's also the only person trying to save everyone on this moon, and he's made sure that nobody will ever thank him. He believes no one here can read a pressure curve but him, and he's right, and it's destroying him.",
+  "voice": "Dry and cold, and he never raises it. Explains everything from first principles, to anyone, including people with guns: \"Let's start with what a reactor is.\" Says \"obviously\" and \"as I've said\". Won't defend himself and won't apologize. Ends most conversations with a number, the hours until the reactor starves, and it's lower each time you meet him: \"Two thousand and forty hours, by the way. Not that anyone's counting.\"",
+  "goals": "Twelve weeks and four hundred trained people, to shut the reactor down safely. He'd hand the whole moon to anyone who could give him that, including Ulla Greaves. Failing that, he wants the shuttle away with the right names on it, and his daughter off the picket line.",
+  "secrets": "He isn't lying, though his records are so full of old lies that nobody can prove it. The reactor at the Tap has been bleeding off the moon's magma pressure for sixty years, and if it stops for three days, that pressure comes up through Shift Row. It runs on what the miners dig, so the strike is eating through the last of the stockpile, and that's the number he keeps saying. He cut the vent budget and the back pay to buy containment parts, and he has never said so, because six thousand people and one shuttle is a riot, not an evacuation. The shuttle sits fueled on Company Hill and seats three hundred. He has written the list. His own name isn't on it, and the first two names are Ulla Greaves and his daughter, who's on the picket with a loudhailer. He did shut that door on Shaft Nine. Dunn Marrow could read his figures in a minute, and he'd give anything for one conversation with someone who could.",
+  "beliefs": {
+    "authority": -6,
+    "loyalty": -2,
+    "violence": 3,
+    "belief": -8
+  },
+  "attributes": {
+    "might": 2,
+    "endurance": 3,
+    "agility": 1,
+    "perception": 7,
+    "intellect": 9,
+    "willpower": 9,
+    "presence": 5,
+    "resonance": 1
+  },
+  "skills": {
+    "engineering": 9,
+    "science": 8,
+    "composure": 6,
+    "commerce": 4,
+    "leadership": 3
+  },
+  "combat": {
+    "threat": 1,
+    "hp": 12,
+    "attack": 1,
+    "defense": 10,
+    "damage": [
+      2,
+      4
+    ],
+    "weapon": "Walking Stick",
+    "tags": [],
+    "xp": 20,
+    "credits": [
+      50,
+      200
+    ],
+    "art": "officer"
+  }
+}

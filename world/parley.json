@@ -1,0 +1,431 @@
+{
+  "_help": "What you can do in a fight besides hitting someone. Each approach is a roll of 20 plus the player's skill and best stat, against a difficulty. The difficulty starts at 'difficulty' and moves up and down with why they're fighting (motives), how they feel about the player (feelings), and who's winning (strength). Higher is harder. In a motive, a number is how much harder it makes that approach, and null means it can't work at all. In an approach, 'hate' and 'strength' say how much those two count, where 1 is the usual amount, and 'stats' are the stats that can help, of which the player's best is used. A motive's 'stat' can also help with talking them down, and its 'names' can call an approach something else. 'fixed' means the story can't give this enemy another reason. 'surrender: false' means there's nobody to give up to. 'standing' is what it does to the player's standing with their faction. 'xp' is how much of the usual XP it's worth, if it isn't all of it. An enemy's file can have its own lines, under names like persuade_worked or lie_failed. Lines can use {enemy} and {Enemy}, and the texts about paying can use {price}.",
+
+  "difficulty": 16,
+  "lowest": 5,
+  "highest": 30,
+  "backing": { "leader": 3, "each": 1 },
+  "anger": { "each": 2, "most": 6 },
+  "pay": { "threat": 15, "perRank": 0.04, "lowest": 5 },
+  "machineShutdown": 4,
+  "strengthScale": 1.5,
+  "strengthMost": 6,
+
+  "feelings": [
+    { "from": 5, "says": "They want you dead." },
+    { "from": 3, "says": "They hate you." },
+    { "from": 1, "says": "They don't like you." },
+    { "from": 0, "says": "You're nobody to them." },
+    { "from": -2, "says": "They don't mind you." },
+    { "from": -6, "says": "They like you." }
+  ],
+
+  "strength": [
+    { "from": 4, "says": "You could finish this easily." },
+    { "from": 2, "says": "You're winning." },
+    { "from": -1, "says": "It could go either way." },
+    { "from": -3, "says": "You're losing." },
+    { "from": -6, "says": "You're losing badly." }
+  ],
+
+  "archetypes": {
+    "civilian": "desperate",
+    "soldier": "orders",
+    "officer": "orders",
+    "scoundrel": "greed",
+    "scholar": "cause",
+    "engineer": "paid",
+    "adept": "belief",
+    "machine": "programmed",
+    "beast": "hunger"
+  },
+
+  "motives": {
+    "desperate": {
+      "label": "Desperate",
+      "says": "They've run out of options.",
+      "stat": "perception",
+      "price": 0.5,
+      "persuade": -4,
+      "threaten": -2,
+      "pay": -4,
+      "lie": -2
+    },
+    "afraid": {
+      "label": "Afraid",
+      "says": "They're frightened, and it's making them dangerous.",
+      "stat": "willpower",
+      "price": 0.5,
+      "persuade": -4,
+      "threaten": -3,
+      "pay": -2,
+      "lie": -3
+    },
+    "paid": {
+      "label": "It's a job",
+      "says": "Someone's paying them to be here.",
+      "stat": "intellect",
+      "price": 1.5,
+      "persuade": 0,
+      "threaten": 0,
+      "pay": -4,
+      "lie": -1
+    },
+    "greed": {
+      "label": "After what you've got",
+      "says": "They want what you're carrying.",
+      "stat": "intellect",
+      "price": 1.25,
+      "persuade": 1,
+      "threaten": -1,
+      "pay": -5,
+      "lie": 0
+    },
+    "orders": {
+      "label": "Following orders",
+      "says": "They've been told to do this.",
+      "stat": "willpower",
+      "price": 3,
+      "persuade": 4,
+      "threaten": 3,
+      "pay": 5,
+      "lie": -1
+    },
+    "guarding": {
+      "label": "Guarding something",
+      "says": "You're somewhere they can't let you be.",
+      "stat": "intellect",
+      "price": 2,
+      "persuade": -1,
+      "threaten": 2,
+      "pay": 1,
+      "lie": -2
+    },
+    "cause": {
+      "label": "Sure they're right",
+      "says": "They're sure they're doing the right thing.",
+      "stat": "intellect",
+      "persuade": 2,
+      "threaten": 4,
+      "pay": null,
+      "lie": 2,
+      "refuses": { "pay": "they can't be bought" }
+    },
+    "belief": {
+      "label": "A true believer",
+      "says": "They believe in it completely.",
+      "stat": "willpower",
+      "persuade": 7,
+      "threaten": null,
+      "pay": null,
+      "lie": 5,
+      "refuses": { "threaten": "they aren't afraid of you", "pay": "they can't be bought" }
+    },
+    "grudge": {
+      "label": "It's personal",
+      "says": "It's personal.",
+      "stat": "willpower",
+      "price": 3,
+      "persuade": 6,
+      "threaten": 3,
+      "pay": 7,
+      "lie": 5
+    },
+    "honor": {
+      "label": "A matter of honor",
+      "says": "It's a matter of honor.",
+      "stat": "might",
+      "persuade": 3,
+      "threaten": null,
+      "pay": null,
+      "lie": 6,
+      "refuses": { "threaten": "that would only prove their point", "pay": "that would be an insult" }
+    },
+    "hunger": {
+      "label": "Hungry",
+      "says": "It's hungry, and you smell like food.",
+      "fixed": true,
+      "noFeelings": true,
+      "surrender": false,
+      "persuade": null,
+      "threaten": -1,
+      "pay": null,
+      "lie": null,
+      "calm": 0,
+      "names": { "threaten": "Scare it off" },
+      "refuses": { "any": "it's an animal" }
+    },
+    "programmed": {
+      "label": "Following its programming",
+      "says": "It's doing what it was built to do, and nothing else.",
+      "fixed": true,
+      "noFeelings": true,
+      "surrender": false,
+      "persuade": null,
+      "threaten": null,
+      "pay": null,
+      "lie": null,
+      "shutdown": 0,
+      "refuses": { "any": "it's a machine" }
+    },
+    "choir": {
+      "label": "The Choir",
+      "says": "It sings. Nobody knows what it wants.",
+      "fixed": true,
+      "noFeelings": true,
+      "surrender": false,
+      "persuade": null,
+      "threaten": null,
+      "pay": null,
+      "lie": null,
+      "shutdown": 8,
+      "refuses": { "any": "it isn't listening" }
+    }
+  },
+
+  "approaches": {
+    "persuade": {
+      "name": "Talk them down",
+      "skill": "persuasion",
+      "stats": ["presence"],
+      "hate": 1,
+      "strength": 1,
+      "standing": 2,
+      "out": "Talked down",
+      "done": "{Enemy} let you talk them out of it.",
+      "told": "{Enemy} was talked out of fighting by the player, and walked away.",
+      "lines": {
+        "worked": {
+          "any": [
+            "You keep your hands where {enemy} can see them, and you say the one thing that makes sense. It lands. {Enemy} steps back.",
+            "You talk, quietly and without hurrying, and somewhere in the middle of it {enemy} stops looking for an opening."
+          ],
+          "desperate": [
+            "You put your hands down and ask {enemy} when they last ate. It takes a long moment, and then the fight goes out of them.",
+            "You tell {enemy} you know where the soup line is, and that nobody needs to get hurt over this. They stare at you, and step back."
+          ],
+          "afraid": [
+            "You keep your voice low, and tell {enemy} that nobody has to die here. They want that to be true so badly that they believe you."
+          ],
+          "paid": [
+            "You ask {enemy} what they're being paid, and whether it covers a hospital. They do the sum and step back.",
+            "You point out that nobody pays the dead. {Enemy} thinks it over, and decides they've done enough for the money."
+          ],
+          "greed": [
+            "You tell {enemy} there's easier money than you, and you tell them where. They decide you're right."
+          ],
+          "orders": [
+            "You ask {enemy} who gave the order, and whether that person's here. The silence goes on too long, and the weapon comes down."
+          ],
+          "guarding": [
+            "You tell {enemy} you'll go back the way you came, and you mean it. They let you. It was all they wanted."
+          ],
+          "cause": [
+            "You take {enemy}'s argument seriously, which nobody's done in a while, and you find the hole in it. They stand there looking at it."
+          ],
+          "belief": [
+            "You ask {enemy} one question about what they believe, and you watch it go in. They stop, and they don't seem sure why they've stopped."
+          ],
+          "grudge": [
+            "You don't argue. You tell {enemy} they're right, and you keep your hands down. It's the last thing they expected, and it takes the heat out of the moment."
+          ],
+          "honor": [
+            "You name the terms of the thing aloud, the way the old forms require, and {enemy} is bound to answer them. They step back, with a stiff nod."
+          ]
+        },
+        "failed": {
+          "any": [
+            "You start to speak, and {enemy} isn't interested in anything you've got to say.",
+            "{Enemy} hears you out for about a second, and comes on."
+          ],
+          "desperate": [
+            "You tell {enemy} it's going to be all right. They've heard that before, from people with more food than you."
+          ],
+          "paid": [
+            "You talk sense. {Enemy} says they're paid for the job, not for a conversation."
+          ],
+          "orders": [
+            "{Enemy} recites the order back at you, word for word, and keeps coming."
+          ],
+          "cause": [
+            "{Enemy} has heard every argument you've got, from people they trusted more."
+          ],
+          "belief": [
+            "You might as well be talking to the bulkhead. {Enemy} looks almost sorry for you."
+          ],
+          "grudge": [
+            "You say their name, and it only makes it worse."
+          ],
+          "honor": [
+            "{Enemy} spits. This isn't a thing that can be talked away."
+          ]
+        }
+      }
+    },
+    "threaten": {
+      "name": "Threaten them",
+      "skill": "intimidation",
+      "stats": ["presence", "might"],
+      "hate": 0.5,
+      "strength": 1.5,
+      "standing": -3,
+      "out": "Backed off",
+      "done": "{Enemy} backed off.",
+      "told": "{Enemy} was frightened off by the player, and won't forget it.",
+      "lines": {
+        "worked": {
+          "any": [
+            "You tell {enemy}, quietly, exactly what happens next. They decide they have somewhere else to be.",
+            "You stop backing up and look {enemy} in the eye, and something in their face gives way. They back off, and they don't turn around until they're well clear."
+          ],
+          "orders": [
+            "You ask {enemy} whether the order said anything about dying for it. They look at you, then at their own hands, and they find a reason to fall back."
+          ],
+          "hunger": [
+            "You make yourself big and you make a lot of noise, and {enemy} decides you aren't worth it."
+          ]
+        },
+        "failed": {
+          "any": [
+            "You give {enemy} your best threat. They've heard better.",
+            "{Enemy} laughs at you, and that's a bad sign."
+          ],
+          "hunger": [
+            "You shout, and {enemy} only tilts its head and comes on."
+          ]
+        }
+      }
+    },
+    "pay": {
+      "name": "Pay them off",
+      "skill": "commerce",
+      "stats": ["presence"],
+      "hate": 0.5,
+      "strength": 0.5,
+      "xp": 0.5,
+      "out": "Paid off",
+      "done": "{Enemy} took {price} credits and left.",
+      "told": "{Enemy} took {price} credits from the player to walk away.",
+      "lines": {
+        "worked": {
+          "any": [
+            "You name a figure. {Enemy} looks at the credits, then at you, then takes the credits.",
+            "You ask what this is worth to them, and you pay it. {Enemy} counts it twice and goes."
+          ],
+          "desperate": [
+            "You hold out the credits. {Enemy} stares at them as if they might be a trick, then snatches them and runs."
+          ],
+          "orders": [
+            "You make it worth more than the order. {Enemy} pockets it, and decides they never saw you."
+          ]
+        },
+        "failed": {
+          "any": [
+            "You offer {enemy} money, and they take it as an insult. You keep your credits.",
+            "{Enemy} looks at what you're offering and shakes their head. You keep your credits."
+          ]
+        }
+      }
+    },
+    "lie": {
+      "name": "Lie to them",
+      "skill": "deception",
+      "stats": ["presence", "intellect"],
+      "hate": 0.5,
+      "strength": 0.5,
+      "out": "Fooled",
+      "done": "{Enemy} believed you.",
+      "told": "{Enemy} believed a lie the player told them and left, and may work it out later.",
+      "lines": {
+        "worked": {
+          "any": [
+            "You tell {enemy} there's a squad two minutes behind you, and you say it as if you're a little bored. They believe it, and they're gone.",
+            "You tell {enemy} they've got the wrong person, and you show them a name on a slate. It holds up for just long enough."
+          ],
+          "paid": [
+            "You tell {enemy} their employer's just been arrested, and nobody's paying for this any more. They swear, and leave to find out."
+          ],
+          "orders": [
+            "You quote a stand-down order that doesn't exist, in the right tone of voice, with a number on the end. {Enemy} stands down."
+          ],
+          "guarding": [
+            "You tell {enemy} you're the relief, and that you're late. They're so tired that they believe you."
+          ]
+        },
+        "failed": {
+          "any": [
+            "You try it on, and {enemy} watches you do it. They won't believe another word you say.",
+            "It sounded better in your head. {Enemy} doesn't buy any of it, and they won't again."
+          ]
+        }
+      }
+    },
+    "shutdown": {
+      "name": "Shut it down",
+      "skill": "hacking",
+      "stats": ["intellect"],
+      "hate": 0,
+      "strength": 0,
+      "out": "Shut down",
+      "done": "{Enemy} shut down.",
+      "told": "{Enemy} was shut down by the player's hacking. It isn't destroyed, and it could start up again.",
+      "lines": {
+        "worked": {
+          "any": [
+            "You find the maintenance channel and send the stand-down code, then send it again to be sure. {Enemy} settles and goes dark.",
+            "You pull its handshake up on your slate, and tell it in its own words that the job's finished. {Enemy} believes you."
+          ],
+          "choir": [
+            "For one moment you find the edge of the song, and you cut across it. {Enemy} stops moving, in the middle of a note."
+          ]
+        },
+        "failed": {
+          "any": [
+            "The handshake gets partway through, and {enemy} locks you out.",
+            "You're two commands from getting in when the channel slams shut."
+          ],
+          "choir": [
+            "You reach for its control channel, and something on the other end reaches back. You let go in a hurry."
+          ]
+        }
+      }
+    },
+    "calm": {
+      "name": "Back away slowly",
+      "skill": "survival",
+      "stats": ["endurance", "perception"],
+      "hate": 0,
+      "strength": 0.5,
+      "out": "Lost interest",
+      "done": "{Enemy} lost interest.",
+      "told": "{Enemy} lost interest in the player and wandered off.",
+      "lines": {
+        "worked": {
+          "any": [
+            "You stop moving, lower your eyes and back away, a slow step at a time. {Enemy} watches you go, and then loses interest.",
+            "You leave it the thing that smells most like food, and you move away from it. {Enemy} takes the easy meal."
+          ]
+        },
+        "failed": {
+          "any": [
+            "You back away slowly. {Enemy} comes forward just as slowly, and then not slowly.",
+            "You keep your eyes down and your feet quiet, and {enemy} isn't fooled for a moment."
+          ]
+        }
+      }
+    }
+  },
+
+  "holdFire": [
+    "Your side holds its fire, and gives you your chance."
+  ],
+
+  "surrender": {
+    "lines": [
+      "You drop what you're holding, and you put your hands where everyone can see them.",
+      "You've had enough. You say so, and you hope it counts for something."
+    ],
+    "over": "It's over, and you're at their mercy.",
+    "done": "You gave up to {enemy}."
+  }
+}

@@ -1,0 +1,412 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "Foundry Seven",
+  "start": "gate",
+  "levels": {
+    "gate": {
+      "name": "The Cold Gate",
+      "aliases": [
+        "cold gate",
+        "the gate",
+        "the loading bay",
+        "loading bay",
+        "the way in"
+      ],
+      "desc": "A hidden entrance through a collapsed loading bay, watched by still figures who've been standing here for months. Bring your own lamp. They won't ask who you are.",
+      "floor": ",",
+      "colors": {
+        "floor": "#373d45",
+        "walls": "#626a74",
+        "scenery": "#8a96a4",
+        "writing": "#c8d4e0"
+      },
+      "plan": [
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+        "%%%%%%%%%%%%%%%,,,,,,,,,%%%%%%%%%%%%%%%%,,,,,,,,,,,%%%%%%%%%%%%%",
+        "%%%%%%%%,,,,,,,,,,,,,,,,,,,,,,,%%%%,,,,,,,,,,,,,,,,,,,,,,%%%%%%%",
+        "%%%%,,,,,,,,,&,,,,,,,,,,,,,,,,,,,,,,,,,,,,,&,,,,,,,,,,,,,,,,%%%%",
+        "%%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,%%",
+        "%%,,,,@,,,,,,,,,,,,,,,,,,,s,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2",
+        "%%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,%%",
+        "%%%%,,,,,,,,,&,,,,,,,,,,,,,,,,,,,,,,,,,,,,,&,,,,,,,,t,,,,,,%%%%%",
+        "%%%%%%%%,,,,,,,,,,,,,,[=====]b,,,,,,,,,,,,,,,,,,,,,,,,,%%%%%%%%%",
+        "%%%%%%%%%%%%%%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,%%%%%%%%%%%%%%%%%",
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE COLD GATE",
+          "at": [18, 2]
+        }
+      ],
+      "exits": {
+        "2": {
+          "to": "floor",
+          "via": "1",
+          "closed": {
+            "look": "The way in, past the last of the still figures. It's turned its head to look at you, and the sound of that goes off down the dark in both directions. They don't ask who you are. They ask who sent you.",
+            "use": "I walk up to the Sentinel at the way in, and I tell it who sent me."
+          }
+        }
+      },
+      "people": {},
+      "things": {
+        "s": {
+          "name": "A still figure",
+          "look": "A synthetic in old Concord plating, dusted like furniture. It hasn't moved in months. When you step to one side, its eyes follow you, and nothing else does.",
+          "use": "I stop in front of the still figure and wait to see what it does."
+        },
+        "b": {
+          "name": "The collapsed bay door",
+          "look": "Thirty tons of fallen door, with one gap in it that's been very carefully left. There's no trace of any tool marks, and no trace of dust in the gap.",
+          "use": "I look over the collapsed door and how the gap's been kept clear."
+        },
+        "t": {
+          "name": "A tag on a wire",
+          "item": "unbound_safe_conduct",
+          "look": "A signed data tag, hung from a wire across the gap, at about the height of a hand. Someone's left it for someone. It's the kind that the sentries honor once, and only for the person it was given to.",
+          "use": "I ask the nearest Sentinel who that tag's been left for."
+        }
+      }
+    },
+    "floor": {
+      "name": "The Assembly Floor",
+      "aliases": [
+        "assembly floor",
+        "the factory floor",
+        "factory floor",
+        "the vote",
+        "voting floor"
+      ],
+      "desc": "The old factory floor, where the Unbound gather to vote by standing in marked squares. Nobody who lives here needs the lights on. There's one law: nobody may give an order.",
+      "floor": ".|-",
+      "colors": {
+        "floor": "#373c47",
+        "walls": "#666e7c",
+        "scenery": "#98a4b8",
+        "writing": "#d8e4f8"
+      },
+      "plan": [
+        "#############################################################################",
+        "1...........................................................................#",
+        "#.......|-------|-------|-------|-------|-------|-------|-------|...........#",
+        "#.......|.......|.......|.......|.......|.......|.......|.......|...........#",
+        "#.......|-------|-------|-------|-------|-------|-------|-------|...........#",
+        "#..@....|.......|.......|...S...|.......|.......|.......|.......|...........#",
+        "#.......|-------|-------|-------|-------|-------|-------|-------|...........2",
+        "#.......|.......|.......|.......|.......|.......|.......|.......|...........#",
+        "#.......|-------|-------|-------|-------|-------|-------|-------|...........#",
+        "#..............l.......................................v....................#",
+        "###################################3#########################################"
+      ],
+      "writing": [
+        [40, 0, "YOU ASK. YOU NEVER TELL."]
+      ],
+      "labels": [
+        {
+          "text": "THE ASSEMBLY FLOOR",
+          "at": [22, 1]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "gate",
+          "via": "2"
+        },
+        "2": {
+          "to": "rack",
+          "via": "1"
+        },
+        "3": {
+          "to": "line",
+          "via": "1"
+        }
+      },
+      "people": {
+        "S": {
+          "id": "six",
+          "label": "Prime Six",
+          "asks": [
+            "Would you be willing to tell me how the vote stands?",
+            "May I ask what the Unbound need from the fleet?"
+          ]
+        }
+      },
+      "things": {
+        "l": {
+          "name": "Someone's dropped lamp",
+          "look": "A visitor's hand lamp, still lit, standing on the floor where it was set down. Nobody here needs it. Nobody has moved it either, because nobody's voted to.",
+          "use": "I pick up the lamp and ask whose it was."
+        },
+        "v": {
+          "name": "The voting squares",
+          "look": "Painted squares, worn through to the metal where feet have stood. When a vote's called, thousands of servos turn at once, and it sounds like a long breath across the hall.",
+          "use": "I stand in one of the voting squares, and I ask what it would mean if I stayed there."
+        }
+      }
+    },
+    "rack": {
+      "name": "The Long Rack",
+      "aliases": [
+        "long rack",
+        "the rack",
+        "the shelves",
+        "the parts"
+      ],
+      "desc": "Endless shelves of the parts of the dead, each tagged with a name, and free to anyone who needs them. A synthetic may walk around in an arm that used to be their best friend's.",
+      "floor": ":",
+      "colors": {
+        "floor": "#3e3c37",
+        "walls": "#72685c",
+        "scenery": "#b8a890",
+        "writing": "#f0e4cc"
+      },
+      "plan": [
+        "##################################################################",
+        "1::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::[=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=]:::#",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::[=|=|=|=|=|=|=|=|=|=|=a|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=]::#",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::[=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|t|=|=|=|=|=|=|=|=|=]:#",
+        "#:::::::@::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::[=|=|=|=|=|=|=s=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=]:#",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::[=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=]:#",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "##################################################################"
+      ],
+      "writing": [
+        [30, 0, "TAKE WHAT YOU NEED. KEEP THE TAG."]
+      ],
+      "labels": [
+        {
+          "text": "THE LONG RACK",
+          "at": [40, 1]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "floor",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "a": {
+          "name": "An arm with a name tag",
+          "look": "A left arm, carefully cleaned, with a paper tag in small square letters: VERA-ELEVEN, GOOD WITH CHILDREN. There's an empty peg beside it with a tag that says TAKEN, WITH THANKS.",
+          "use": "I read the tags on the shelf with the arm, and I ask someone who Vera-Eleven was."
+        },
+        "t": {
+          "name": "A tool roll on the shelf",
+          "item": "tool_roll",
+          "look": "Somebody's tools, tagged like everything else. Well kept, with the handles worn to fit a hand that's gone. It's free, if you need it, and you're expected to know whether you do.",
+          "use": "I ask if I may take the tool roll, and I say what it's for."
+        },
+        "s": {
+          "name": "An intrusion rig in a tray",
+          "item": "slicer_rig",
+          "look": "A Kessara-built cracking deck, with a name tag on it like everything else here. Its owner died of something that doesn't usually kill machines.",
+          "use": "I ask whose intrusion rig this was, and whether I may use it."
+        }
+      }
+    },
+    "line": {
+      "name": "The Silent Line",
+      "aliases": [
+        "silent line",
+        "the production line",
+        "production line",
+        "the line"
+      ],
+      "desc": "The production line itself, shut down since the Fall, and still able to build a new person. There's been a dispute about turning it back on for months.",
+      "floor": "_=",
+      "colors": {
+        "floor": "#323e43",
+        "walls": "#5e7a84",
+        "scenery": "#80d0d8",
+        "writing": "#d8ffff"
+      },
+      "plan": [
+        "#########1################################################################",
+        "#________________________________________________________________________#",
+        "#____/|\\_____/|\\_____/|\\_____/|\\_____/|\\_____/|\\_____/|\\_____/|\\_________#",
+        "#____||______||______||______||______||______||______||______||__________#",
+        "#==========================================================b=============#",
+        "#==========================================================[#]===========#",
+        "#________________________________________________________________________#",
+        "#__@_____________________________[======]v_______________________________#",
+        "#________________________________________________________________________#",
+        "#_______________d____________________________________________________q___#",
+        "##############################################2###########################"
+      ],
+      "writing": [
+        [31, 0, "VOTE ON RESTART: 2,114 FOR. 2,114 AGAINST."]
+      ],
+      "labels": [
+        {
+          "text": "THE SILENT LINE",
+          "at": [53, 1]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "floor",
+          "via": "3"
+        },
+        "2": {
+          "to": "sublevels",
+          "via": "1",
+          "closed": {
+            "look": "A heavy door to the sublevels, with a keypad and a very new lock. The cable running under it is as thick as your arm, and it's warm. Knocking would at least be polite.",
+            "use": "I knock at the door to the sublevels and ask whether Hollis-Nine would be willing to see me."
+          }
+        }
+      },
+      "people": {},
+      "things": {
+        "b": {
+          "name": "The last unfinished body",
+          "look": "It stopped on the belt the day of the Fall: a frame, half skinned, with its hands completed and nothing else. Its face is blank. Someone's folded a blanket over its shoulders.",
+          "use": "I look at the body that was left on the line, and I ask who put the blanket there."
+        },
+        "v": {
+          "name": "The restart board",
+          "look": "A plain lever behind a glass panel, and a tally on a slate beside it. The vote's been tied for months. Each side is very polite about it, and neither side will ever be the one to break the glass.",
+          "use": "I read the vote on the restart board and ask each side what they want."
+        },
+        "d": {
+          "name": "A chip in the belt housing",
+          "item": "data_chip",
+          "look": "An unlabeled data chip, wedged in the belt housing, with thin dust on it. It might be a final calibration. It might be the first thing a new person was going to know.",
+          "use": "I work the data chip out of the belt housing."
+        },
+        "q": {
+          "name": "A row of empty chargers",
+          "look": "A long line of charging frames, set out for the people this line was going to make. One of them's been kept polished. There's no tag on it.",
+          "use": "I ask who keeps that one charger polished."
+        }
+      }
+    },
+    "sublevels": {
+      "name": "The Sublevels",
+      "aliases": [
+        "sublevels",
+        "hollis's workshop",
+        "hollis's workspace",
+        "the workshop",
+        "the locked workspace"
+      ],
+      "desc": "A locked workspace far below the factory floor, hot with power, with one engineer in it. It's the only warm place in the building.",
+      "floor": "~",
+      "colors": {
+        "floor": "#573421",
+        "walls": "#a06a40",
+        "scenery": "#ffa850",
+        "writing": "#ffe4c0"
+      },
+      "plan": [
+        "#############################################################",
+        "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#",
+        "#~~~~====================================================~~~#",
+        "#~~~~|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~#",
+        "#~~~~|~~~~~.---------------------------------.~~~~~~~~~~|~~~#",
+        "#~~~~|~~~~~|%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|m~~~~~~~~~|~~~#",
+        "#~~~~|~~~~~|%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|~~~~~~~~~~|~~~#",
+        "#~~~~|~~~~~'---------------------------------'~~~~~~~~~~|~~~#",
+        "#~~~~~~~~~~~~~~~~~~~H~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~p~~~~~~~#",
+        "1~~~~~~~~~~~~~~~~~~~~~@~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#",
+        "#############################################################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE SUBLEVELS",
+          "at": [3, 1]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "line",
+          "via": "2"
+        }
+      },
+      "people": {
+        "H": {
+          "id": "hollis",
+          "label": "Hollis-Nine",
+          "asks": [
+            "Would you tell me what you're building?",
+            "Who else knows about this?"
+          ]
+        }
+      },
+      "things": {
+        "m": {
+          "name": "Whatever's under the tarps",
+          "look": "It's the size of a shuttle, and it's been covered with care. The tarps have been stitched together from a lot of smaller things. You can hear something ticking over, very slowly.",
+          "use": "I ask Hollis-Nine if I may lift the tarps."
+        },
+        "p": {
+          "name": "The power meter",
+          "look": "A plain meter bolted to the wall, and a logbook hanging from it on a string. The log says HEATING, every day, for months, in a very neat hand. It's a great deal of heating.",
+          "use": "I read the power log, and I ask what all that heating's for."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Factory plan",
+    "plan": [
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "%%%'''''''''''''''%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "##############################################################",
+      "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#::::::::::::::::::::::::::::#",
+      "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#::::::::::::::::::::::::::::#",
+      "#============================================================#",
+      "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
+      "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
+      "##############################################################",
+      "%%%%%%%%%%%%%%%%%%%%%~~~~~~~~~~~~~~~~~~~~%%%%%%%%%%%%%%%%%%%%%",
+      "%%%%%%%%%%%%%%%%%%%%%~~~~~~~~~~~~~~~~~~~~%%%%%%%%%%%%%%%%%%%%%"
+    ],
+    "floors": {
+      "'": "gate",
+      ",": "floor",
+      ":": "rack",
+      ";": "line",
+      "~": "sublevels"
+    },
+    "rooms": [
+      {
+        "level": "gate",
+        "at": [3, 1],
+        "text": "THE COLD GATE"
+      },
+      {
+        "level": "floor",
+        "at": [7, 4],
+        "text": "THE ASSEMBLY FLOOR"
+      },
+      {
+        "level": "rack",
+        "at": [40, 4],
+        "text": "THE LONG RACK"
+      },
+      {
+        "level": "line",
+        "at": [22, 7],
+        "text": "THE SILENT LINE"
+      },
+      {
+        "level": "sublevels",
+        "at": [23, 10],
+        "text": "THE SUBLEVELS"
+      }
+    ]
+  }
+}

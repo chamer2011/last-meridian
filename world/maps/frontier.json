@@ -1,0 +1,418 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "Tessen Colony",
+  "start": "commons",
+  "levels": {
+    "commons": {
+      "name": "The Commons",
+      "aliases": [
+        "commons",
+        "the square",
+        "the meeting barn",
+        "meeting barn",
+        "the marshal's office",
+        "marshal's office",
+        "the grain sheds",
+        "grain sheds"
+      ],
+      "desc": "The grain sheds, the meeting barn and the marshal's one-room office, around a square of packed dirt, under a real sky that makes fleet people dizzy.",
+      "floor": ".",
+      "colors": {
+        "floor": "#5a4a30",
+        "walls": "#a08850",
+        "scenery": "#e8c878",
+        "writing": "#fff8d8"
+      },
+      "plan": [
+        "    ~    ~        ~         ~      ~           ~        ~      ~       ",
+        "   /=========\\        /==================\\          /=========\\        ",
+        "  /===========\\      /====================\\        /===========\\       ",
+        "  |           |      |                    |        |           |       ",
+        "  |_______r___|      |________++__________|        |___________|       ",
+        "1......................................................................",
+        ".......................................................................",
+        ".................................................................@.....",
+        "..........................D...........[====]t..........................",
+        ".......................................................................",
+        ".......................................................................",
+        "   .--------.......................S...................................",
+        "   |        k..........................................................",
+        "   '--------'..........................................................",
+        "=====================2===========================3====================="
+      ],
+      "writing": [
+        [5, 3, "GRAIN"],
+        [26, 3, "MEETING BARN"],
+        [54, 3, "GRAIN"],
+        [4, 11, "MARSHAL"]
+      ],
+      "labels": [
+        {
+          "text": "THE COMMONS",
+          "at": [30, 6]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "fields",
+          "via": "1"
+        },
+        "2": {
+          "to": "school",
+          "via": "1"
+        },
+        "3": {
+          "to": "homesteads",
+          "via": "1"
+        }
+      },
+      "people": {
+        "D": {
+          "id": "dray",
+          "label": "Elder Dray",
+          "asks": [
+            "What would you take for the grain, Elder?",
+            "What's the problem nobody here will say out loud?"
+          ]
+        },
+        "S": {
+          "id": "sorrel",
+          "label": "Marshal Dey",
+          "asks": [
+            "Is everything under control, Marshal?",
+            "When did the raiders last come through?"
+          ]
+        }
+      },
+      "things": {
+        "t": {
+          "name": "The feed trough",
+          "look": "Upturned, and worn smooth in one spot. Elder Dray holds council on it. Nobody's ever built her anything better, and when someone offered, she asked him what was wrong with it.",
+          "use": "I sit down on the ground by the feed trough and ask to be heard."
+        },
+        "r": {
+          "name": "Sacks of ration grain",
+          "item": "ration_pack",
+          "look": "Grain sacks stacked for the next barter, each with a mark burned into the tie. There's a price, but it comes out in bushels and a handshake once they've decided about you.",
+          "use": "I offer a day's work for a sack of grain, and I ask who to see."
+        },
+        "k": {
+          "name": "An old iron key",
+          "item": "tessen_seed_vault_key",
+          "look": "A big iron key on a nail, just inside the marshal's door, where anybody could take it and nobody would. It's for the seed vault. It's the whole of the colony's future, hanging on a nail.",
+          "use": "I ask the marshal about the iron key on the nail."
+        }
+      }
+    },
+    "fields": {
+      "name": "The Long Fields",
+      "aliases": [
+        "long fields",
+        "the fields",
+        "fields",
+        "the grain",
+        "the north section",
+        "north section"
+      ],
+      "desc": "Forty kilometers of grain on land no one thought would ever grow any, and the best yields in thirty years, for the last two years.",
+      "floor": ".",
+      "colors": {
+        "floor": "#54442a",
+        "walls": "#8a7a48",
+        "scenery": "#d8c040",
+        "writing": "#fff4b0"
+      },
+      "plan": [
+        "   ~      ~           ~         ~        ~          ~          ~        ~    ",
+        "|||||||||||||||||||||||||.|||||||||||||||||||||||||||||.|||||||||||||||||||| ",
+        "|||||||||||||||||||||||||.|||||||||||||||||||||||||||||.|||||||||||||||||||| ",
+        "............................................................................ ",
+        "1...............@.................................h.........................2",
+        "............................................................................ ",
+        "|||||||||||||||||||||||||.|||||||||||||||||||||n|||||||.|||||||||||||||||||| ",
+        "|||||||||||||||||||||||||.|||||||||||||||||||||||||||||.|||||||||||||||||||| ",
+        "|||||||||||||||||||||||||.|||||||||||||||||||||||||||||.|||||||||||||||||||| ",
+        "............................................................................ ",
+        ".................s.......................................................... ",
+        "|||||||||||||||||||||||||.|||||||||||||||||||||||||||||.|||||||||||||||||||| ",
+        "|||||||||||||||||||||||||.|||||||||||||||||||||||||||||.|||||||||||||||||||| "
+      ],
+      "writing": [
+        [56, 0, "NORTH SECTION"]
+      ],
+      "labels": [
+        {
+          "text": "THE LONG FIELDS",
+          "at": [28, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "commons",
+          "via": "1"
+        },
+        "2": {
+          "to": "well",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "n": {
+          "name": "Tall grain",
+          "look": "This strip is a hand taller than the one beside it, with heavier heads. The farmers are very proud of it, and none of them will tell you what changed two years ago.",
+          "use": "I rub a head of the tall grain between my palms and ask why it's growing like this."
+        },
+        "h": {
+          "name": "A harvest post",
+          "look": "A post with a notch cut for each year's yield. The notches climb gently for thirty years, and then the last two jump.",
+          "use": "I read the notches on the harvest post, and I ask about the last two."
+        },
+        "s": {
+          "name": "A scarecrow",
+          "look": "An old Concord uniform stuffed with straw, medals and all. Somebody's given it a very stern expression. The birds don't come near this end anyway, and nobody remembers when they stopped.",
+          "use": "I ask who dressed the scarecrow, and why the birds stay away."
+        }
+      }
+    },
+    "well": {
+      "name": "The Well-Head",
+      "aliases": [
+        "well-head",
+        "the well",
+        "the new well",
+        "well head",
+        "the capped well"
+      ],
+      "desc": "A new well in the north section, capped in poured stone and fenced off, with a sign on the fence.",
+      "floor": ":",
+      "colors": {
+        "floor": "#4c4a3c",
+        "walls": "#8c8870",
+        "scenery": "#c8c0a0",
+        "writing": "#fffce8"
+      },
+      "plan": [
+        "    .       ~           .            ~            .           ~       .",
+        "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||     ",
+        "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||     ",
+        "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::     ",
+        "1:::::::::::::::::::::::+-------------------+::::::::::::::::::::      ",
+        "::::::::::::::::::::::::|                   |::::::::::::::::::::      ",
+        "::::::::::@:::::::::::::|      .-----.      f::::::::::::::::::::      ",
+        "::::::::::::::::::::::::|      | (=) |      w::::::::::::::::::::      ",
+        "::::::::::::::::::::::::|      '-----'      |::::::::::::::::::::      ",
+        "::::::::::::::::::::::::|                   |::::::::::::::::::::      ",
+        "::::::::::::::::::::::::+-------------------+::::::::::::::::::::      ",
+        ":::::::::::::p::::::::::::::::::::::::::::::::::::::::::::::::::::     "
+      ],
+      "writing": [
+        [29, 9, "DRY"]
+      ],
+      "labels": [
+        {
+          "text": "THE WELL-HEAD",
+          "at": [46, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "fields",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "f": {
+          "name": "The fence and its sign",
+          "look": "Good straight fence, better than any of the others, with one word painted on the sign: DRY. The paint's been touched up more often than you'd expect for a dry well.",
+          "use": "I read the sign and ask who keeps painting it."
+        },
+        "w": {
+          "name": "The poured stone cap",
+          "look": "It's a long reach over the fence. There's frost on every post around you, and there's none on the stone, and when you lean close you can feel it on your face.",
+          "use": "I climb the fence and put my hand on the stone cap."
+        },
+        "p": {
+          "name": "Boot prints",
+          "look": "A worn path through the stubble, from the Commons to the fence and back. It's one person's boots, over and over. They come out here a lot, for a dry well.",
+          "use": "I follow the boot prints back the way they came."
+        }
+      }
+    },
+    "school": {
+      "name": "The Schoolhouse",
+      "aliases": [
+        "schoolhouse",
+        "the school",
+        "school",
+        "the classroom"
+      ],
+      "desc": "Forty-one children and one tired teacher, in a building that smells of chalk and boots.",
+      "floor": "_",
+      "colors": {
+        "floor": "#584838",
+        "walls": "#a88a68",
+        "scenery": "#d8b890",
+        "writing": "#ffffff"
+      },
+      "plan": [
+        "##############################1###########",
+        "#[=====================]b________________#",
+        "#________________________________________#",
+        "#____[]__[]__[]__[]__[]__[]__[]__[]______#",
+        "#________________________________________#",
+        "#____[]__[]__[]__[]__d___[]__[]__[]______#",
+        "#________________________________________#",
+        "#____[]__[]__[]__[]__[]__[]__[]__[]______#",
+        "#___________@____________________________#",
+        "#________________________________g_______#",
+        "##########################################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE SCHOOLHOUSE",
+          "at": [25, 1]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "commons",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "b": {
+          "name": "The blackboard",
+          "look": "Sums, the names of the old Concord worlds, and a sentence to copy out: We are the ones who stayed. A child's hand has drawn a little circle in the corner, and it's been wiped, and it's been drawn again.",
+          "use": "I read what's on the blackboard and ask the teacher about the little circle."
+        },
+        "d": {
+          "name": "The drawing under the desks",
+          "look": "A shape in chalk on the floorboards, running under a whole row of desks. It's been scrubbed so hard the wood has gone pale. It's back. It's very neat, for a child.",
+          "use": "I crouch down and look at the drawing under the desks."
+        },
+        "g": {
+          "name": "A tin of nutrient gel",
+          "item": "nutrient_gel",
+          "look": "The school's lunch, for the ones who come in hungry from the far farms. The teacher has a ledger for it, with no prices in it.",
+          "use": "I ask the teacher if the school needs anything, and I take a look at what's in the tin."
+        }
+      }
+    },
+    "homesteads": {
+      "name": "The Far Homesteads",
+      "aliases": [
+        "far homesteads",
+        "homesteads",
+        "the homesteads",
+        "the outlying farms",
+        "the far farms"
+      ],
+      "desc": "Isolated farms a day's ride out, where people are stubborn, armed, and often the last to hear anything. Raiders hit these first.",
+      "floor": ",",
+      "colors": {
+        "floor": "#4a4630",
+        "walls": "#807a50",
+        "scenery": "#c0b070",
+        "writing": "#f0ecc0"
+      },
+      "plan": [
+        "   ~            .     ~                ~         .      ~            ~    ",
+        "  /^^^^\\  ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+        "  |    |p,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+        ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,/####\\,,,,,,,,,,,,,,,,,,,,,,,",
+        "1,,,,,,,,,,,,,,,,@,,,,,,,,,,,,,,,,,,,,,,,,,,,|####|b,,,,,,,,,,,,,,,,,,,,,,",
+        ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+        ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+        ",,,,,,,,,,,,,,,,,/^^^^\\,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+        ",,,,,,,,,,,,,,,,,|    |,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,w,,,,,,,,,,,,,,,,,,,",
+        ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE FAR HOMESTEADS",
+          "at": [22, 6]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "commons",
+          "via": "3"
+        }
+      },
+      "people": {},
+      "things": {
+        "p": {
+          "name": "A pistol on the porch rail",
+          "item": "slug_thrower",
+          "look": "An antique powder pistol, cleaned that morning, and set where a hand can reach it from the rocking chair. The old woman in the chair nods to you and doesn't get up.",
+          "use": "I tip my head to the old woman on the porch and ask about the pistol."
+        },
+        "b": {
+          "name": "A burned barn",
+          "look": "The walls are black and the roof's gone. It's been raked out neatly and the stones are already being reused. They'll have another up by harvest, and nobody's talking about who did it.",
+          "use": "I walk through the burned barn and ask who came through."
+        },
+        "w": {
+          "name": "A windpump",
+          "look": "It creaks round and round over a good deep well, the old-fashioned kind, with a dipper on a chain. Here, the water tastes of iron and nothing else.",
+          "use": "I drink from the dipper at the windpump."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Colony map",
+    "plan": [
+      "~   ~      ~    ~   ~     ~      ~  ~     ~    ~      ~   ~~~",
+      ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::::::::::::",
+      ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::::::::::::",
+      ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::::::::::::",
+      "-------------------------------------------------------------",
+      ".......................|;;;;;;;;;;;;;;;;|''''''''''''''''''''",
+      ".......................|;;;;;;;;;;;;;;;;|''''''''''''''''''''",
+      ".......................|;;;;;;;;;;;;;;;;|''''''''''''''''''''",
+      "~  ~    ~     ~   ~      ~    ~    ~     ~     ~     ~    ~~~"
+    ],
+    "floors": {
+      ",": "fields",
+      ":": "well",
+      ".": "commons",
+      ";": "school",
+      "'": "homesteads"
+    },
+    "rooms": [
+      {
+        "level": "fields",
+        "at": [14, 2],
+        "text": "THE LONG FIELDS"
+      },
+      {
+        "level": "well",
+        "at": [47, 2],
+        "text": "THE WELL-HEAD"
+      },
+      {
+        "level": "commons",
+        "at": [6, 6],
+        "text": "THE COMMONS"
+      },
+      {
+        "level": "school",
+        "at": [26, 6],
+        "text": "SCHOOLHOUSE"
+      },
+      {
+        "level": "homesteads",
+        "at": [43, 6],
+        "text": "FAR HOMESTEADS"
+      }
+    ]
+  }
+}

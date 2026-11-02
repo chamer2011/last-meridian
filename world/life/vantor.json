@@ -1,0 +1,75 @@
+{
+  "_help": "The days of the people here. The instructions are at the top of meridian.json.",
+  "people": {
+    "regent": [
+      { "at": "07:30", "doing": "receiving the day's reports", "go": "post" },
+      { "at": "22:00", "doing": "not seen by anyone", "go": ">palace", "hidden": true }
+    ],
+    "vael": [
+      { "at": "07:30", "doing": "reviewing a list of names", "go": "post" },
+      { "at": "11:00", "doing": "paying a very polite visit", "rounds": ["@mile", "@stacks"], "stop": 50 },
+      { "at": "15:00", "doing": "reviewing a list of names", "go": "post" },
+      { "at": "21:00", "doing": "gone for the evening", "go": ">steps", "hidden": true }
+    ],
+    "jaska": [
+      { "at": "07:00", "doing": "checking a manifest", "go": "post" },
+      { "at": "12:00", "doing": "asking one more question", "rounds": ["@line", "@stacks"], "stop": 40 },
+      { "at": "16:00", "doing": "checking a manifest", "go": "post" },
+      { "at": "21:00", "doing": "on the way home", "go": ">yards", "hidden": true }
+    ]
+  },
+  "crowd": [
+    {
+      "names": [["Citizen Aubrey", 0], ["Citizen Lennart", 5], ["Citizen Merit", 10], ["Citizen Sol", 15]],
+      "day": [
+        { "at": "07:10", "doing": "on the tram, on time", "go": "@line" },
+        { "at": "08:00", "doing": "walking to the Ministry, smiling", "go": "@mile" },
+        { "at": "12:00", "doing": "lunch at a fountain", "go": "@mile" },
+        { "at": "17:10", "doing": "on the tram, on time", "go": "@line" },
+        { "at": "18:00", "doing": "home in the Lower Stacks", "go": "@stacks" },
+        { "at": "21:40", "doing": "home before the last chime", "go": ">stacks", "hidden": true }
+      ]
+    },
+    {
+      "names": [["Resident Danil", 0], ["Resident Yuki", 20], ["Young Anneke", 40]],
+      "day": [
+        { "at": "07:00", "doing": "cleaning the Lower Stacks", "go": "@stacks" },
+        { "at": "12:00", "doing": "learning the anthem", "go": "@stacks" },
+        { "at": "16:00", "doing": "waiting for a form", "go": "@steps" },
+        { "at": "19:00", "doing": "cleaning the Lower Stacks", "go": "@stacks" },
+        { "at": "21:40", "doing": "home before the last chime", "go": ">stacks", "hidden": true }
+      ]
+    },
+    {
+      "names": [["Mother of Ticket 212", 0], ["Father of Ticket 340", 30]],
+      "day": [
+        { "at": "08:00", "doing": "waiting on a bench, with tea", "go": "@steps" },
+        { "at": "17:00", "doing": "going home with no news", "go": ">steps", "hidden": true }
+      ]
+    },
+    {
+      "names": [["Courtesy Escort Bel", 0], ["Courtesy Escort Ward", 30]],
+      "day": [
+        { "at": "07:30", "doing": "offering a courtesy escort", "go": "@mile" },
+        { "at": "13:00", "doing": "offering a courtesy escort", "go": "@mile" },
+        { "at": "20:00", "doing": "off duty, still smiling", "go": ">mile", "hidden": true }
+      ]
+    },
+    {
+      "names": [["Yardman Cole", 0], ["Yardman Fisk", 20], ["Crane Hand Ola", 40]],
+      "day": [
+        { "at": "06:00", "doing": "lining ships up in rows", "go": "@yards" },
+        { "at": "12:30", "doing": "eating, facing forward", "go": "@yards" },
+        { "at": "13:00", "doing": "lining ships up in rows", "go": "@yards" },
+        { "at": "20:00", "doing": "on the way home", "go": ">yards", "hidden": true }
+      ]
+    },
+    {
+      "names": [["Palace Attendant Une", 0]],
+      "day": [
+        { "at": "07:00", "doing": "polishing with lemon", "go": "@palace" },
+        { "at": "19:00", "doing": "gone home", "go": ">palace", "hidden": true }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,415 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "Korrath Forge",
+  "start": "cradles",
+  "levels": {
+    "cradles": {
+      "name": "The Cradles",
+      "aliases": [
+        "cradles",
+        "the slips",
+        "the shipyard",
+        "the tether",
+        "the tether foot",
+        "orbital tether"
+      ],
+      "desc": "Huge slips where the clans build hulls in pieces, for lifting up the orbital tether. Half the Concord's old navy was born here, and the shipwrights still know each of them by name.",
+      "floor": ".",
+      "colors": {
+        "floor": "#46403a",
+        "walls": "#8e8478",
+        "scenery": "#d8b080",
+        "writing": "#fff0d8"
+      },
+      "plan": [
+        "##################################################################||########",
+        "#.................................................................||.......#",
+        "#..______________.....______________.....______________...........||.......#",
+        "#./              \\.../              \\.../              \\..........||.......#",
+        "#.|              |...|              |...|              |..........||.......#",
+        "#.|______________|...|______________|...|______________|..........||.t.....#",
+        "#..........................................................................#",
+        "#.....@....................................................................#",
+        "#.......................................n...........................h......#",
+        "#..........................................................................#",
+        "#..........................................................................#",
+        "##############################1#############################################"
+      ],
+      "writing": [
+        [3, 4, "HULL 41"],
+        [24, 4, "HULL 42"],
+        [43, 4, "HULL 43"]
+      ],
+      "labels": [
+        {
+          "text": "THE CRADLES",
+          "at": [8, 9]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "bridge",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "t": {
+          "name": "The tether foot",
+          "look": "A cable as wide as a house, going straight up through the cloud and out of sight. Your knees ache just looking at it. Things leave Korrath on this, and they're lifted very slowly.",
+          "use": "I watch a section of hull go up the tether, and ask where it's bound."
+        },
+        "n": {
+          "name": "A name on an old slip",
+          "look": "A brass plate, worn down by thumbs: CFS MERIDIAN, KEEL LAID HERE. The shipwright beside you takes off a very large glove. He wants to know how she's handling.",
+          "use": "I tell the shipwright how the Meridian's handling."
+        },
+        "h": {
+          "name": "A harness on a stand",
+          "item": "korrun_harness",
+          "look": "Load-bearing plate, built to hold a body up under crushing weight, on a stand made for somebody half again your width. The fitter looks at your shoulders and sighs.",
+          "use": "I ask the fitter if a Korrun harness can be cut down for someone my size."
+        }
+      }
+    },
+    "bridge": {
+      "name": "Slag Bridge",
+      "aliases": [
+        "the bridge",
+        "the slag river",
+        "the market",
+        "the duelists"
+      ],
+      "desc": "A broad black span over the main slag river, lined with stalls and duelists. The railings are too hot to touch, and it's the only market on Korrath where you're allowed to haggle.",
+      "floor": "_",
+      "colors": {
+        "floor": "#4a3833",
+        "walls": "#83625a",
+        "scenery": "#ff7a30",
+        "writing": "#ffd8a0"
+      },
+      "plan": [
+        "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+        "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+        "=======================================================================",
+        "1______[==]_____[==]_____[==]_____[==]a____[==]_____[==]_____[==]_____2",
+        "_______________________________________________________________________",
+        "_______________________________________________________________________",
+        "______@_______________________________(  d  )__________________________",
+        "_______________________________________________________________________",
+        "_______________________________________________________________________",
+        "3______[==]_____[==]_____[==]_____[==]_____[==]_____[==]_____[==]______",
+        "=======================r===============================================",
+        "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+        "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "SLAG BRIDGE",
+          "at": [12, 7]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "cradles",
+          "via": "1"
+        },
+        "2": {
+          "to": "weigh",
+          "via": "1"
+        },
+        "3": {
+          "to": "furnaces",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "a": {
+          "name": "An axe stall",
+          "item": "boarding_axe",
+          "look": "Boarding axes, forged to cut hatch seals, laid out by weight. The stallholder's the first person on Korrath who's offered you a price without having seen you work. It's a terrible price.",
+          "use": "I haggle over a boarding axe with the stallholder."
+        },
+        "d": {
+          "name": "The duelists' ring",
+          "look": "A chalk circle, drawn fresh every morning, with two very large people in it arguing about a measurement. The crowd's mostly here for the math.",
+          "use": "I stop by the duelists' ring and ask what they're fighting about."
+        },
+        "r": {
+          "name": "The railing",
+          "look": "Black iron, ticking with heat, and worn by nobody. Below it, the slag runs orange. They tell a story here about a clerk who leaned on it. It's mostly about the clerk's arithmetic.",
+          "use": "I go to the railing, not too close, and I look down at the slag."
+        }
+      }
+    },
+    "weigh": {
+      "name": "The Weigh House",
+      "aliases": [
+        "weigh house",
+        "the great scale",
+        "the public scale",
+        "hall of weights",
+        "the hall of weights",
+        "the long debt"
+      ],
+      "desc": "A great iron hall with a public scale taller than a Korrun, where contracts are spoken, weighed in iron tokens and kept for ever. In the inner Hall of Weights hangs a far older scale, with one sealed pan.",
+      "floor": ":",
+      "colors": {
+        "floor": "#3c3c3e",
+        "walls": "#7c7c80",
+        "scenery": "#c8b070",
+        "writing": "#fff0c0"
+      },
+      "plan": [
+        "         ###############################################          ",
+        "  #######:::::::::::::::::::::::::::::::::::::::::::::::#######   ",
+        "####::::::::::::::::::::::::::::::::::::::::::::::::::::::::::####",
+        "1::::::::::::::::::::::|=================|::::::::::::::::::::::##",
+        "##:::::::::::::::::::::|                 |::::::::::::::::::::::##",
+        "##::::::::::::::(===)::|                 |::(===)s::::::::::::::##",
+        "##::::::::::::::::::::::::::::::::::::::::::::::::::::::::::H:::##",
+        "##:::@::::::::::::::::::::::::::::::::::::::::::::::::::::::::::##",
+        "##::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::##",
+        "####:::::::::::[=======]c:::::::::::::::::::::::::::::::::::::####",
+        "  #######::::::::::::::::::::::::::::::::::::::l::::::::#######   ",
+        "         ###################2###########################          "
+      ],
+      "writing": [
+        [20, 0, "WHAT IS SPOKEN HERE IS OWED"]
+      ],
+      "labels": [
+        {
+          "text": "THE WEIGH HOUSE",
+          "at": [24, 7]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "bridge",
+          "via": "2"
+        },
+        "2": {
+          "to": "halls",
+          "via": "2"
+        }
+      },
+      "people": {
+        "H": {
+          "id": "hesk",
+          "label": "Varr",
+          "asks": [
+            "What would it take to deal with the clans, Warden?",
+            "How did my last promise weigh?"
+          ],
+          "side": "left"
+        }
+      },
+      "things": {
+        "s": {
+          "name": "The public scale",
+          "look": "Taller than a Korrun, with pans you could park a skiff in. A clerk's on a ladder, calling out what a promise came to, and the whole street stops to listen. It's nobody's idea of private.",
+          "use": "I step up to the public scale and speak my promise out loud."
+        },
+        "c": {
+          "name": "The clerk's desk",
+          "look": "A clerk with a voice like a shipping horn and a book of iron tokens. Everything said over this scale goes in the book, and the first page is older than the Concord.",
+          "use": "I ask the clerk what's in the book under my name, or the fleet's."
+        },
+        "l": {
+          "name": "The Long Debt",
+          "look": "Through an inner door, in the Hall of Weights: an older scale, with one sealed pan, hanging quite still. Nobody weighs anything on it. People lower their voices when they go by, and they don't tell you why.",
+          "use": "I go through to the Hall of Weights and stand in front of the old scale."
+        }
+      }
+    },
+    "furnaces": {
+      "name": "The Long Furnaces",
+      "aliases": [
+        "long furnaces",
+        "the furnaces",
+        "furnaces",
+        "the smelters",
+        "the shovel line"
+      ],
+      "desc": "Eleven kilometers of roaring smelters. Every outsider who wants to do business with the clans starts here, with a shovel, under the eye of a bored foreman who's seen a lot of visitors faint.",
+      "floor": ".",
+      "colors": {
+        "floor": "#5c321e",
+        "walls": "#a05a30",
+        "scenery": "#ff9030",
+        "writing": "#ffe090"
+      },
+      "plan": [
+        "######################################################################",
+        "#(****)(****)(****)(****)(****)(****)(****)(****)(****)(****)(****)f.#",
+        "#(****)(****)(****)(****)(****)(****)(****)(****)(****)(****)(****)..#",
+        "#....................................................................#",
+        "1....................................................................#",
+        "#.........@.......................................B..................#",
+        "#....................................................................#",
+        "#...........[][][][]s..................................u[====].......#",
+        "#....................................................................#",
+        "#(****)(****)(****)(****)(****)(****)(****)(****)(****)(****)(****)..#",
+        "#(****)(****)(****)(****)(****)(****)(****)(****)(****)(****)(****)..#",
+        "######################################################################"
+      ],
+      "writing": [
+        [20, 0, "EVERYBODY STARTS WITH A SHOVEL"]
+      ],
+      "labels": [
+        {
+          "text": "THE LONG FURNACES",
+          "at": [28, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "bridge",
+          "via": "3"
+        }
+      },
+      "people": {
+        "B": {
+          "id": "brenna",
+          "label": "Brenna",
+          "asks": [
+            "What does the sky look like, from where you are?",
+            "How long did you last, your first shift?"
+          ]
+        }
+      },
+      "things": {
+        "f": {
+          "name": "The foreman's mark",
+          "look": "A big bored Korrun with a slate, and on the slate, a column of names. Nearly every one's got a little drawing of somebody lying down. He looks at you and he picks up the chalk.",
+          "use": "I ask the foreman to put my name on the slate, and I pick up a shovel."
+        },
+        "s": {
+          "name": "A heap of shovels",
+          "look": "Worn at the grip, by hands much larger than yours. It weighs what an anchor weighs. You don't have to prove you can lift it. Only that you'll keep trying.",
+          "use": "I pick up a shovel and I start."
+        },
+        "u": {
+          "name": "The refined fuel tanks",
+          "item": "refined_fuel",
+          "look": "The furnaces throw off refined fuel as a kind of afterthought, and it's stored in tanks that look like somebody's idea of a joke about tanks. It's yours, at a fair weight, once you've worked for it.",
+          "use": "I ask how many shifts a load of refined fuel would cost me."
+        }
+      }
+    },
+    "halls": {
+      "name": "The Low Halls",
+      "aliases": [
+        "low halls",
+        "the halls",
+        "family homes",
+        "the family halls",
+        "the wall of tools"
+      ],
+      "desc": "Family homes dug deep into the rock, with ceilings low enough to make a human stoop. Every hall has a wall of the tools of its dead, melted down and recast for the next apprentice.",
+      "floor": ",",
+      "colors": {
+        "floor": "#483a30",
+        "walls": "#806a54",
+        "scenery": "#c89860",
+        "writing": "#ffe8c0"
+      },
+      "plan": [
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%2%%%%%%%%%%%%%%%%%%%%",
+        "%%%%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,%%%%%",
+        "%%,,,,,[/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|/|]w,,,,,,,,,,,%%",
+        "%%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,%%",
+        "%%,,,,,,@,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,%%",
+        "%%,,,,,,,,,,,,,,,,,,,,,,,[=====]h,,,,,,,,,,,,,,,,,,,,,,,,%%",
+        "%%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,%%",
+        "%%%%,,,,,,,,(____)b,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,%%%%%",
+        "%%%%%%%%%%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,%%%%%%%%%%%",
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE LOW HALLS",
+          "at": [38, 7]
+        }
+      ],
+      "exits": {
+        "2": {
+          "to": "weigh",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "w": {
+          "name": "The wall of tools",
+          "look": "Hammers, tongs and chisels hung in order, with the newest at the end. The oldest have been melted and recast so often that they're only the idea of a tool, in iron that's been in nine families.",
+          "use": "I ask whose tools are on the wall, and I listen for as long as it takes."
+        },
+        "h": {
+          "name": "A hammer on the table",
+          "item": "forge_hammer",
+          "look": "A Korrun smith's hammer, freshly recast, for an apprentice who's about to get it. It's balanced for an arm that was built on a heavy world. The family's watching you look at it.",
+          "use": "I ask the family about the hammer, and who it was before."
+        },
+        "b": {
+          "name": "Bread on the furnace wall",
+          "look": "Flat loaves slapped straight onto the hot brick, the way they've done it for eleven hundred years. A very large child brings you one. It weighs about what a brick weighs, and it's wonderful.",
+          "use": "I eat the bread, and I stay to hear what the family wants to tell me."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Clan map",
+    "plan": [
+      "  ||                     ~   ~   ~   ~   ~   ~   ~   ~       ~   ",
+      "||.........................~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+      "||.......................~~~~~~~,,,,,,,,,,,,,,~~~~~~~~~~~~~~~~~~~",
+      "||.......................~~~~~~~,,,,,,,,,,,,,,~~~~~~~~~~~~~~~~~~~",
+      "||:::::::::::::::::::::::::::::::,,,,,,,,,,,,''''''''''''''''''''",
+      ":::::::::::::::::::::::::::::::,,,,,,,,,,,,''''''''''''''''''''''",
+      ":::::::::::::::::::::::::::::::,,,,,,,,,,,,''''''''''''''''''''''",
+      ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''''''''''",
+      ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''''''''''"
+    ],
+    "floors": {
+      ".": "cradles",
+      ",": "bridge",
+      ":": "furnaces",
+      "'": "weigh",
+      ";": "halls"
+    },
+    "rooms": [
+      {
+        "level": "cradles",
+        "at": [6, 2],
+        "text": "THE CRADLES"
+      },
+      {
+        "level": "bridge",
+        "at": [32, 3],
+        "text": "SLAG BRIDGE"
+      },
+      {
+        "level": "furnaces",
+        "at": [6, 5],
+        "text": "THE LONG FURNACES"
+      },
+      {
+        "level": "weigh",
+        "at": [46, 5],
+        "text": "THE WEIGH HOUSE"
+      },
+      {
+        "level": "halls",
+        "at": [12, 7],
+        "text": "THE LOW HALLS"
+      }
+    ]
+  }
+}

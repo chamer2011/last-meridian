@@ -1,0 +1,42 @@
+{
+  "title": "Everyone Home",
+  "kind": "dilemma",
+  "places": ["graveyard"],
+  "minLevel": 1,
+  "after": null,
+  "people": ["rusk", "seven", "tarrow"],
+  "factions": ["guild", "fleet"],
+  "lead": "A cargo loader is walking around the Graveyard by itself, picking up divers and carrying them off, and the Guild wants it scrapped. Rusk says it has never hurt anyone, not on purpose. \"Only wants to take folks home,\" he says, and spits. \"Hold's full, though. You should see that for yourself before they cut it up.\"",
+  "anyone": "A cargo loader is walking around the Graveyard by itself, picking up divers and carrying them off, and the Guild wants it scrapped. Rusk says it has never hurt anyone, not on purpose. \"Only wants to take folks home,\" he says, and spits. \"Hold's full, though. Somebody should see that before they cut it up.\"",
+  "gm": {
+    "truth": "The loader is a Concord dock mech called Bay Nine, whose operator, a stevedore named Ruth Callan, got into its cab during the last battle and died at the controls six months ago. The last order she gave it was: get everyone home. It's been doing that ever since. It walks the wrecks with its magnetic feet, gathers up every body it finds, carries them to its sealed hold and lays them out in rows, with their ID tags collected on a hook. There are three hundred and forty of them, handled with great care. It picks up living divers too and tries to load them, and it's strong enough to break ribs while it does it. It has no fuel to leave and no way of knowing that the dock it's trying to reach, Asterion Bay Nine, is gone. It says one word, over and over, in Ruth Callan's recorded voice, in its old loading prompt: \"Home?\" The Guild has a claim on it as salvage and on its cargo as well, and the dead's belongings are worth money. Fleet families have people in that hold. And a Salvage Loader's simple brain has been running on one order for six months. Mercy Seven would like a word with it. Nobody knows if there's anyone there to answer.",
+    "beats": [
+      "The chase, such as it is. A big, slow shape walks a dead hull, and turns to the captain's lamp. It reaches out very gently, and it's the gentleness that's scary. \"Home?\"",
+      "The hold. Rows and rows, tags on a hook, and suits with their visors carefully wiped. Everyone goes silent. Someone from the fleet, on the team, finds a name.",
+      "The Guild's crew arrives with cutting gear and Factor Crane's contract. They aren't cruel. A loader that's broken two divers' ribs has to go, and salvage is salvage.",
+      "Lt. Tarrow's report recommends immediate destruction: a machine out of control. Mercy Seven's report is just a question: \"Has anyone tried telling it where home is?\"",
+      "The answer to its question. Someone has to tell it something, and it will believe whatever it's told."
+    ],
+    "routes": [
+      "Understand it: hacking and engineering to get into the old loader's brain and read Ruth Callan's last order, then change it or fulfill it.",
+      "Talk to it: persuasion or lore, using old dock protocols to give it a new destination, with Mercy Seven's help. Medicine and composure to deal with the hold, and identify the dead with care.",
+      "Stop it: melee and athletics to get to the manual cutoff in the cab, while it tries very gently to pick the captain up, or void_ops to lure it off the hull with a false dock signal."
+    ],
+    "checks": [
+      "hacking:moderate to read the loader's order queue",
+      "engineering:moderate to fuel and guide it without hurting it",
+      "persuasion:moderate to get the Guild to hold off",
+      "commerce:moderate to buy out the salvage claim on the dead's effects",
+      "melee:hard to reach the cab and get to the cutoff in a grapple",
+      "composure:moderate to go through that hold and keep working"
+    ],
+    "fights": ["salvage_mech if the captain or the Guild attacks it, and it will never hit first. scrap_rat around the wreck, attracted by the hold."],
+    "outcomes": [
+      "If it's told that the fleet is home, Bay Nine walks across a hull one last time with its hold full and stops at the Meridian's cargo bay, and three hundred and forty families get to bury someone. There's a fleet-wide funeral, and morale rises through the tears.",
+      "If it's scrapped, it stops as soon as the cut goes in, in the middle of its word. The Guild sells what it can and returns the tags at a price. The fleet gets its dead back, a little.",
+      "If it's left walking, the Guild goes on complaining, more divers go to the sickbay, and more of the dead get carried carefully into its hold. It becomes a Graveyard legend, and the captain's name is attached to it.",
+      "If Mercy Seven gets to talk to it, the fleet's synthetics hear about a machine that kept faith with its dead for six months, and that argument gets a lot harder for Lt. Tarrow. Bay Nine might be the first person in its family. Nobody can prove it."
+    ],
+    "rewards": "A lot of fleet morale, the loyalty of many families, a work_suit and tool_roll from the hold's stores. A very sturdy cargo loader, if it survives, that will carry anything for the fleet and asks only one question."
+  }
+}

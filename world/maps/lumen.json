@@ -1,0 +1,400 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "Lumen Sanctuary",
+  "start": "terrace",
+  "levels": {
+    "terrace": {
+      "name": "The Stranger's Terrace",
+      "aliases": [
+        "stranger's terrace",
+        "strangers terrace",
+        "the terrace",
+        "the dim",
+        "guest quarters",
+        "the guest quarters"
+      ],
+      "desc": "Guest quarters for non-Ilari, called the Dim. Visitors are offered a tell-band that shows the wearer's pulse in light, and nothing bad happens if they refuse, apart from how everyone looks at them.",
+      "floor": ":",
+      "colors": {
+        "floor": "#3f3856",
+        "walls": "#807ca8",
+        "scenery": "#d0a0ff",
+        "writing": "#f4e8ff"
+      },
+      "plan": [
+        "######################################################################",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::[===]::::[===]::::[===]::::[===]::::[===]::::[===]r:::::::::::::::#",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "1::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::::::::@::::::::::::::::::::::::::::[====]b::::::::::::::::::::::::#",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::2",
+        "#|: : : : : : : : : : : : : v : : : : : : : : : : : : : : : : : : : |#",
+        "#|~ ' ~ ' ~ ' ~ ' ~ ' ~ ' ~ ' ~ ' ~ ' ~ ' ~ ' ~ ' ~ ' ~ ' ~ ' ~ ' ~ |#",
+        "######################################################################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE STRANGER'S TERRACE",
+          "at": [22, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "steps",
+          "via": "1"
+        },
+        "2": {
+          "to": "courts",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "b": {
+          "name": "A tray of tell-bands",
+          "look": "Thin bracelets of Ilari glass that glow with the wearer's pulse. Nobody will insist. The attendant holds out the tray and lowers their eyes. All of their long sleeves have gone a little pink.",
+          "use": "I take a tell-band from the tray and put it on."
+        },
+        "r": {
+          "name": "Guest robes",
+          "item": "adept_robes",
+          "look": "Soft robes, long in the sleeve, folded on a rail. Wearing them is a courtesy here. Ilari adepts wear something very like them, and people will assume things.",
+          "use": "I ask the attendant what wearing these robes would say about me."
+        },
+        "v": {
+          "name": "The view over the city",
+          "look": "The lamps are low, because the people are the lights. A whole street below you changes color as a piece of news goes down it, the way wind crosses a field of grain.",
+          "use": "I stand at the rail and watch the news go down the streets."
+        }
+      }
+    },
+    "steps": {
+      "name": "The Open Steps",
+      "aliases": [
+        "open steps",
+        "the steps",
+        "the amphitheatre",
+        "the circle's steps",
+        "the amphitheater"
+      ],
+      "desc": "A wide amphitheatre where the Circle holds every meeting in public, under the eyes of thousands. The Warden sits at the top of it, unlit, and it's very hard not to stare.",
+      "floor": "=_",
+      "colors": {
+        "floor": "#303f4e",
+        "walls": "#6a88a4",
+        "scenery": "#80e0d0",
+        "writing": "#e0fff8"
+      },
+      "plan": [
+        "      #############################################      ",
+        "########=========================================########",
+        "#####================A==============================#####",
+        "###===================================================###",
+        "##=====================================================##",
+        "##_____________________________________________________##",
+        "##=====================================================##",
+        "##_____________________________________________________##",
+        "##=====================================================##",
+        "##_____________________________________________________##",
+        "1___________________________________@__________________##",
+        "###_________________s_________________________________###",
+        "       ##############################w###########        "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE OPEN STEPS",
+          "at": [21, 5]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "terrace",
+          "via": "1"
+        }
+      },
+      "people": {
+        "A": {
+          "id": "ashael",
+          "label": "Ashael",
+          "asks": [
+            "What happened to your light, Warden?",
+            "How does the Circle feel about the fleet?"
+          ]
+        }
+      },
+      "things": {
+        "s": {
+          "name": "A seat on the steps",
+          "look": "Thousands of people, and all of them are lit. A decision's being made, and you can see it being made, spreading across the crowd in slow waves. They're politely not looking at you. They all know.",
+          "use": "I sit down among the crowd and let them see what I feel."
+        },
+        "w": {
+          "name": "The speaker's mark",
+          "look": "A worn place at the foot of the steps, where anyone can stand. You'll be heard, and more than that, you'll be seen, because a deal isn't done until both sides' colors match for a slow count of ten.",
+          "use": "I stand on the speaker's mark and ask to address the Circle."
+        }
+      }
+    },
+    "courts": {
+      "name": "The Water Courts",
+      "aliases": [
+        "water courts",
+        "the canals",
+        "the baths",
+        "the floating market",
+        "the courts"
+      ],
+      "desc": "Warm canals, floating stalls and public baths. Prices actually fall when the market's mood is good, and they rise when it's sad, and traders here will tell you that's only fair.",
+      "floor": "_",
+      "colors": {
+        "floor": "#2a4450",
+        "walls": "#5c98a8",
+        "scenery": "#70e0e8",
+        "writing": "#dcfeff"
+      },
+      "plan": [
+        "##########################################################################",
+        "1________________________________________________________________________#",
+        "#________________________________________________________________________#",
+        "#~~~~~~~~~~~~~__~~~~~~~~~~~~~~~__~~~~~~~~~~~~~~~__~~~~~~~~~~~~~~~__~~~~~~#",
+        "#~~~<==>~~~~~~__~~~~<==>~~~~~~l__~~~~~<==>~~~~~~~__~~~~<==>~~~~~~~__~~~~~#",
+        "#~~~~~~~~~~~~~__~~~~~~~~~~~~~~~__~~~~~~~~~~~~~~~__~~~~~~~~~~~~~~~__~~~~~~#",
+        "#________________________________________________________________________#",
+        "#___________@__________________________________p_________________________#",
+        "#________________________________________________________________________#",
+        "#~~~~~~~~~~~~~__~~~~~~~~~~~~~~~__~~~~~~~~~~~~~~~__~~~~~~~~~~~~~~~__~~~~~~#",
+        "#~~~<==>~~~~~~__~~~~~~~<==>~~~~__~~~~~<==>~~~~~~~__~~~~~<==>~~~~~~__~~~~~#",
+        "#~~~~~~~~~~~~~__~~~~~~~~~~~~~~~__~~~~~~~~~~~~~~~__~~~~~~~~~~~~~~~__~~~~~~#",
+        "#______________________________b_________________________________________#",
+        "#########################################################2################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE WATER COURTS",
+          "at": [28, 8]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "terrace",
+          "via": "2"
+        },
+        "2": {
+          "to": "shade",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "l": {
+          "name": "A stall of glass lenses",
+          "item": "lumen_lens",
+          "look": "Discs of Ilari glass, floating past on a stall the size of a door. Hold one up and you can see what anyone's feeling, as if they had Ilari skin. The stall holder's color shifts slightly when you touch it.",
+          "use": "I call the stall over, and I ask about a Lumen lens."
+        },
+        "p": {
+          "name": "The mood board",
+          "look": "Prices are chalked up and rubbed out as the water-sellers' faces change. Today's rate is a little high. Somebody on the far bank has had bad news, and the bread's gone up.",
+          "use": "I ask what's made the bread go up today."
+        },
+        "b": {
+          "name": "The public baths",
+          "look": "Warm water and low voices, and a hundred people, each of them glowing softly, and no one looking. It's the most relaxed anyone's been around you in months. Your own skin isn't saying anything at all.",
+          "use": "I take my boots off and get into the public baths."
+        }
+      }
+    },
+    "shade": {
+      "name": "The Shade Houses",
+      "aliases": [
+        "shade houses",
+        "the shade",
+        "the dark houses",
+        "the cool houses"
+      ],
+      "desc": "Cool, dark, quiet buildings where people go when they can't stand to feel the rest of the city any more. Most of them are full now, and people sit wrapped up to the eyes on the steps outside.",
+      "floor": "'",
+      "colors": {
+        "floor": "#333d4a",
+        "walls": "#5d6b7c",
+        "scenery": "#7890a8",
+        "writing": "#c0d4e8"
+      },
+      "plan": [
+        "###########################1###################################",
+        "#'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+        "#''%%%%%%%%%%%%%''''%%%%%%%%%%%%%''''%%%%%%%%%%%%%''''%%%%%%''#",
+        "#''%%%%%%%%%%%%%''''%%%%%%%%%%%%%''''%%%%%%%%%%%%%''''%%%%%%''#",
+        "#''%%%%%%+%%%%%%''''%%%%%%+%%%%%%''''%%%%%%+%%%%%%''''%%%+%%''#",
+        "#'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+        "#'''!'!'!'!'''''!'!'!'''''''''M'''''!'!'!'!''''''''!'!'!'''s''#",
+        "#'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+        "#''''''@'''''''''''''''''''''''''''''''''''''''''''''c''''''''#",
+        "#'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''2",
+        "###############################################################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE SHADE HOUSES",
+          "at": [22, 1]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "courts",
+          "via": "2"
+        },
+        "2": {
+          "to": "still",
+          "via": "1",
+          "closed": {
+            "look": "A windowless house behind the Circle's archive, with a plain door and an old woman on a stool beside it. Children sometimes go in. The Circle doesn't discuss it. The old woman's face has no expression on it at all, and on Lumen, that isn't a small thing.",
+            "use": "I ask the old woman at the door of the Still Rooms what happens in there, and whether I can see."
+          }
+        }
+      },
+      "people": {
+        "M": {
+          "id": "mirei",
+          "label": "Mirei",
+          "asks": [
+            "How do you keep your skin so still?",
+            "What do people here not say to each other?"
+          ]
+        }
+      },
+      "things": {
+        "s": {
+          "name": "The people on the steps",
+          "look": "Wrapped up to the eyes in long shawls, not touching, not speaking. There's a soft dim glow leaking through the cloth. There's a lot more of them than there were, someone tells you, since the Fall.",
+          "use": "I sit down on the steps, a polite distance from them, and I wrap my coat around me."
+        },
+        "c": {
+          "name": "A jar of calm tabs",
+          "item": "calm_tabs",
+          "look": "A big jar by the door, and a sign in Ilari script that means something between PLEASE and DON'T. The tabs are the only thing in the city that nobody's asked to pay for.",
+          "use": "I take a calm tab from the jar by the door."
+        }
+      }
+    },
+    "still": {
+      "name": "The Still Rooms",
+      "aliases": [
+        "still rooms",
+        "the still house",
+        "the windowless house",
+        "the quiet house"
+      ],
+      "desc": "A windowless house behind the Circle's archive. It's very clean, and very quiet, and nothing in it is lit.",
+      "floor": ".",
+      "colors": {
+        "floor": "#3c3c44",
+        "walls": "#696977",
+        "scenery": "#888898",
+        "writing": "#d8d8e4"
+      },
+      "plan": [
+        "####################################",
+        "#..................................#",
+        "#..[ ]..[ ]..[ ]..[ ]..[ ]..[ ]....#",
+        "#..................................#",
+        "#..................................#",
+        "#.......[==========]b..............#",
+        "#......@.....................d.....#",
+        "#..................................#",
+        "#.....t............................#",
+        "#..................................#",
+        "1..................................#",
+        "####################################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE STILL ROOMS",
+          "at": [10, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "shade",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "b": {
+          "name": "A low bench of small shoes",
+          "look": "A long row of children's shoes, placed neatly, in sizes that go up as you walk along them. Each pair's been polished, and each has a tag. Nobody's come to collect these.",
+          "use": "I read the tags on the small shoes."
+        },
+        "d": {
+          "name": "A little door",
+          "look": "It's a child's door, into a child's room. Through the crack you can see a small figure sitting in a chair, with a face like still water. It turns very slowly and looks at you, and that's all.",
+          "use": "I knock very quietly on the little door."
+        },
+        "t": {
+          "name": "A forked crystal",
+          "item": "resonance_tuner",
+          "look": "A resonance tuner on a shelf, in a padded case, with a long series of dates on its lid. Whoever's used it has done so at very regular intervals. You can feel it in your teeth from across the room.",
+          "use": "I lift the forked crystal out of its case."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "City map",
+    "plan": [
+      "~  *  ~  *  ~  *  ~  *  ~  *  ~  *  ~  *  ~  *  ~  *  ~  *  ~~",
+      ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:::::::::::::::::::::::::::",
+      ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:::::::::::::::::::::::::::",
+      ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:::::::::::::::::::::::::::",
+      "======~~~~~~======~~~~~~======~~~~~~======~~~~~~======~~~~~~==",
+      ".................................;;;;;;;;;;;;;;;;;;'''''''''''",
+      ".................................;;;;;;;;;;;;;;;;;;'''''''''''",
+      ".................................;;;;;;;;;;;;;;;;;;'''''''''''",
+      "~  *  ~  *  ~  *  ~  *  ~  *  ~  *  ~  *  ~  *  ~  *  ~  *  ~~"
+    ],
+    "floors": {
+      ",": "steps",
+      ":": "terrace",
+      ".": "courts",
+      ";": "shade",
+      "'": "still"
+    },
+    "rooms": [
+      {
+        "level": "steps",
+        "at": [10, 2],
+        "text": "THE OPEN STEPS"
+      },
+      {
+        "level": "terrace",
+        "at": [37, 2],
+        "text": "THE STRANGER'S TERRACE"
+      },
+      {
+        "level": "courts",
+        "at": [8, 6],
+        "text": "THE WATER COURTS"
+      },
+      {
+        "level": "shade",
+        "at": [36, 6],
+        "text": "SHADE HOUSES"
+      },
+      {
+        "level": "still",
+        "at": [51, 6],
+        "text": "STILL ROOMS"
+      }
+    ]
+  }
+}

@@ -1,0 +1,370 @@
+{
+  "service_rifle": {
+    "name": "Service Rifle",
+    "type": "weapon",
+    "damage": [
+      5,
+      9
+    ],
+    "stat": "perception",
+    "skill": "firearms",
+    "price": 250,
+    "desc": "The old navy's standard long gun, easy to find now that so few are left to carry one: 5 to 9 damage, using Perception and Firearms."
+  },
+  "slug_thrower": {
+    "name": "Powder Pistol",
+    "type": "weapon",
+    "damage": [
+      2,
+      6
+    ],
+    "stat": "agility",
+    "skill": "firearms",
+    "price": 80,
+    "desc": "An antique pistol that fires real metal, loud and cheap to feed: 2 to 6 damage, using Agility and Firearms."
+  },
+  "shock_baton": {
+    "name": "Shock Baton",
+    "type": "weapon",
+    "damage": [
+      3,
+      6
+    ],
+    "stat": "might",
+    "skill": "melee",
+    "price": 90,
+    "desc": "A dockside baton with a charge in the grip and a smell of burned air: 3 to 6 damage, using Might and Melee."
+  },
+  "boarding_axe": {
+    "name": "Boarding Axe",
+    "type": "weapon",
+    "damage": [
+      4,
+      9
+    ],
+    "stat": "might",
+    "skill": "melee",
+    "price": 200,
+    "desc": "Forged to cut hatch seals, and it doesn't mind what's behind them: 4 to 9 damage, using Might and Melee."
+  },
+  "forge_hammer": {
+    "name": "Forge Hammer",
+    "type": "weapon",
+    "damage": [
+      6,
+      10
+    ],
+    "stat": "might",
+    "skill": "melee",
+    "price": 450,
+    "desc": "A Korrun smith's hammer, balanced for arms built on a heavy world: 6 to 10 damage, using Might and Melee."
+  },
+  "veshti_longrifle": {
+    "name": "Veshti Longrifle",
+    "type": "weapon",
+    "damage": [
+      7,
+      12
+    ],
+    "stat": "perception",
+    "skill": "firearms",
+    "price": 900,
+    "desc": "A rifle nearly as long as its Veshti owner, made for shots across open vacuum: 7 to 12 damage, using Perception and Firearms."
+  },
+  "ministry_saber": {
+    "name": "Ministry Saber",
+    "type": "weapon",
+    "damage": [
+      7,
+      13
+    ],
+    "stat": "agility",
+    "skill": "melee",
+    "price": 1100,
+    "restricted": true,
+    "desc": "The thin dueling blade of Vantor's secret police, and people will ask how you got it: 7 to 13 damage, using Agility and Melee."
+  },
+  "work_suit": {
+    "name": "Work Suit",
+    "type": "armor",
+    "defense": 1,
+    "price": 80,
+    "desc": "Patched dock coveralls with padding at the joints: +1 defense."
+  },
+  "refugee_coat": {
+    "name": "Refugee Coat",
+    "type": "armor",
+    "defense": 0,
+    "price": 30,
+    "desc": "Warm and patched from three other coats, it stops nothing, but nobody in a crowd looks at it twice: +1 on checks in crowds while carried.",
+    "fx": {
+      "context": {
+        "crowd": 1
+      }
+    }
+  },
+  "korrun_harness": {
+    "name": "Korrun Harness",
+    "type": "armor",
+    "defense": 3,
+    "price": 700,
+    "desc": "Load-bearing plate from the Korrath forges, built to hold a body up under crushing weight: +3 defense, and +2 on checks in heavy gravity while carried.",
+    "fx": {
+      "context": {
+        "heavy_gravity": 2
+      }
+    }
+  },
+  "veshti_skin": {
+    "name": "Veshti Skin",
+    "type": "armor",
+    "defense": 2,
+    "price": 500,
+    "desc": "The thin pressure layer the Long Families wear under everything: +2 defense, and +2 on checks in vacuum while carried.",
+    "fx": {
+      "context": {
+        "vacuum": 2
+      }
+    }
+  },
+  "remnant_plate": {
+    "name": "Remnant Plate",
+    "type": "armor",
+    "defense": 4,
+    "price": 1600,
+    "restricted": true,
+    "desc": "Concord assault armor kept like new by people who won't admit the war is over, and people still salute it: +4 defense, and +1 on Leadership checks while carried.",
+    "fx": {
+      "skills": {
+        "leadership": 1
+      }
+    }
+  },
+  "trauma_kit": {
+    "name": "Trauma Kit",
+    "type": "consumable",
+    "effect": {
+      "hp": 30
+    },
+    "price": 140,
+    "desc": "Restores 30 health, plus your Medicine rank."
+  },
+  "ration_pack": {
+    "name": "Ration Pack",
+    "type": "consumable",
+    "effect": {
+      "hp": 4
+    },
+    "price": 15,
+    "desc": "Restores 4 health, plus your Medicine rank."
+  },
+  "calm_tabs": {
+    "name": "Calm Tabs",
+    "type": "consumable",
+    "effect": {
+      "energy": 2
+    },
+    "price": 40,
+    "desc": "Restores 2 energy, but does nothing for stress."
+  },
+  "nutrient_gel": {
+    "name": "Nutrient Gel",
+    "type": "consumable",
+    "effect": {
+      "hp": 6,
+      "energy": 1
+    },
+    "price": 30,
+    "desc": "Restores 6 health, plus your Medicine rank, and 1 energy."
+  },
+  "emergency_patch": {
+    "name": "Emergency Hull Patch",
+    "type": "consumable",
+    "effect": {
+      "hull": 8
+    },
+    "price": 60,
+    "desc": "Restores 8 ship hull, plus twice your Engineering rank."
+  },
+  "refined_fuel": {
+    "name": "Refined Fuel",
+    "type": "consumable",
+    "effect": {
+      "fuel": 5
+    },
+    "price": 170,
+    "desc": "Adds 5 fuel to the ship."
+  },
+  "signal_scrambler": {
+    "name": "Signal Scrambler",
+    "type": "gadget",
+    "price": 250,
+    "desc": "A pocket jammer that smears your trace on anyone's sensors: +2 on Stealth checks while carried.",
+    "fx": {
+      "skills": {
+        "stealth": 2
+      }
+    }
+  },
+  "slicer_rig": {
+    "name": "Intrusion Rig",
+    "type": "gadget",
+    "price": 500,
+    "desc": "A Kessara-built cracking deck, illegal everywhere that still has laws: +3 on Hacking checks while carried, and one spoof to shake off a trace in the Intrusion Console.",
+    "fx": {
+      "skills": {
+        "hacking": 3
+      }
+    }
+  },
+  "surgeon_lens": {
+    "name": "Surgeon's Lens",
+    "type": "gadget",
+    "price": 300,
+    "desc": "A jeweler's eyepiece rebuilt for field surgery: +2 on Medicine checks while carried.",
+    "fx": {
+      "skills": {
+        "medicine": 2
+      }
+    }
+  },
+  "field_scanner": {
+    "name": "Field Scanner",
+    "type": "gadget",
+    "price": 350,
+    "desc": "A battered handheld scanner, still in calibration: +2 on Awareness checks and +1 on Science checks while carried.",
+    "fx": {
+      "skills": {
+        "awareness": 2,
+        "science": 1
+      }
+    }
+  },
+  "tool_roll": {
+    "name": "Tool Roll",
+    "type": "gadget",
+    "price": 220,
+    "desc": "A canvas roll of well-kept tools that someone once trusted with their life: +2 on Engineering checks while carried.",
+    "fx": {
+      "skills": {
+        "engineering": 2
+      }
+    }
+  },
+  "nav_slate": {
+    "name": "Nav Slate",
+    "type": "gadget",
+    "price": 300,
+    "desc": "A scratched slate of jump tables, with corrections in four different hands: +2 on Navigation checks while carried.",
+    "fx": {
+      "skills": {
+        "navigation": 2
+      }
+    }
+  },
+  "resonance_tuner": {
+    "name": "Resonance Tuner",
+    "type": "gadget",
+    "price": 700,
+    "desc": "A forked crystal from the old monasteries that you hold against your teeth to hear the field: +2 on Attunement checks while carried.",
+    "fx": {
+      "skills": {
+        "attunement": 2
+      }
+    }
+  },
+  "ledger_of_favors": {
+    "name": "Ledger of Favors",
+    "type": "gadget",
+    "price": 450,
+    "desc": "A worn book of who owes whom from here to Kessara: +2 on Commerce checks and +1 on Streetwise checks while carried, and the Commerce bonus also improves market prices.",
+    "fx": {
+      "skills": {
+        "commerce": 2,
+        "streetwise": 1
+      }
+    }
+  },
+  "old_concord_medal": {
+    "name": "Old Concord Medal",
+    "type": "gadget",
+    "price": 200,
+    "desc": "A service medal from the old navy, and people still straighten up when they see it: +2 on Leadership checks while carried.",
+    "fx": {
+      "skills": {
+        "leadership": 2
+      }
+    }
+  },
+  "pilot_gloves": {
+    "name": "Pilot's Gloves",
+    "type": "gadget",
+    "price": 280,
+    "desc": "Worn flight gloves with the fingertips rewired for feel: +2 on Piloting checks while carried.",
+    "fx": {
+      "skills": {
+        "piloting": 2
+      }
+    }
+  },
+  "quiet_token": {
+    "name": "Quiet Token",
+    "type": "story",
+    "price": 0,
+    "desc": "A smooth silver disc that the Quiet press into the hands of the frightened, and people who carry one sleep very well."
+  },
+  "remnant_codes": {
+    "name": "Remnant Codes",
+    "type": "story",
+    "price": 0,
+    "desc": "Recognition codes for the Concord Remnant's warships, good until someone notices they've gone missing."
+  },
+  "gate_key": {
+    "name": "Gate Key",
+    "type": "story",
+    "price": 0,
+    "desc": "A fist-sized ring of pale, seamless metal that grows heavier the closer it gets to the Pale Gate."
+  },
+  "ninth_vault_index": {
+    "name": "Ninth Vault Index",
+    "type": "story",
+    "price": 0,
+    "desc": "A brittle handwritten list of what's sealed in the Ninth Vault of Sarn, and the First Keeper would very much like it back."
+  },
+  "asterion_voice_recording": {
+    "name": "Asterion Recording",
+    "type": "story",
+    "price": 0,
+    "desc": "Eleven minutes of voices pulled off the dead wires of Asterion, and every time you play it, it runs a little longer."
+  },
+  "unbound_safe_conduct": {
+    "name": "Unbound Safe-Conduct",
+    "type": "story",
+    "price": 0,
+    "desc": "A signed data tag from the Unbound that their sentries will honor once, and only for the person it was given to."
+  },
+  "wheel_marker": {
+    "name": "Wheel Marker",
+    "type": "story",
+    "price": 40,
+    "desc": "A gilded chip that records a debt at the Gilded Wheel, and the House always remembers who holds it."
+  },
+  "lumen_lens": {
+    "name": "Lumen Lens",
+    "type": "story",
+    "price": 0,
+    "desc": "A disc of Ilari glass from Lumen Sanctuary that shows the feelings of whoever you look at through it, as if they had Ilari skin."
+  },
+  "maris_core_sample": {
+    "name": "Maris Core Sample",
+    "type": "story",
+    "price": 0,
+    "desc": "A sealed tube of material drilled out of the drowned structure at Maris Deep, and it won't cool down."
+  },
+  "tessen_seed_vault_key": {
+    "name": "Tessen Seed Vault Key",
+    "type": "story",
+    "price": 0,
+    "desc": "The old iron key to Tessen Colony's seed vault, which holds enough to plant a world and the whole of the colony's future."
+  }
+}

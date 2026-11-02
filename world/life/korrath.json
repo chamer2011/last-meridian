@@ -1,0 +1,60 @@
+{
+  "_help": "The days of the people here. The instructions are at the top of meridian.json.",
+  "people": {
+    "hesk": [
+      { "at": "05:00", "doing": "working a shift at the furnaces", "go": "@furnaces" },
+      { "at": "07:30", "doing": "hearing what things came to", "go": "post" },
+      { "at": "12:30", "doing": "eating bread off the furnace wall", "go": "@furnaces" },
+      { "at": "13:30", "doing": "hearing what things came to", "go": "post" },
+      { "at": "19:00", "doing": "at the family hall", "go": "@halls" },
+      { "at": "21:30", "doing": "asleep in the low halls", "go": "@halls", "asleep": true }
+    ],
+    "brenna": [
+      { "at": "06:00", "doing": "on a shift at the furnaces", "go": "post" },
+      { "at": "14:00", "doing": "eating bread off the furnace wall", "go": "post" },
+      { "at": "14:30", "doing": "on a shift at the furnaces", "go": "post" },
+      { "at": "18:00", "doing": "asking off-worlders about the sky", "go": "@bridge" },
+      { "at": "20:30", "doing": "fixing someone else's bad weld", "go": "@cradles" },
+      { "at": "22:00", "doing": "asleep in the low halls", "go": "@halls", "asleep": true }
+    ]
+  },
+  "crowd": [
+    {
+      "names": [["Smelter Goh", 0], ["Foreman Ruk", 0], ["Smelter Drenn", 480], ["Smelter Uma", 960]],
+      "day": [
+        { "at": "06:00", "doing": "on a shift at the furnaces", "go": "@furnaces" },
+        { "at": "12:00", "doing": "eating bread off the furnace wall", "go": "@furnaces" },
+        { "at": "12:30", "doing": "on a shift at the furnaces", "go": "@furnaces" },
+        { "at": "14:00", "doing": "off shift, at the family hall", "go": "@halls" },
+        { "at": "17:00", "doing": "arguing on the Slag Bridge", "go": "@bridge" },
+        { "at": "21:00", "doing": "asleep in the low halls", "go": "@halls", "asleep": true }
+      ]
+    },
+    {
+      "names": [["Shipwright Arn", 0], ["Shipwright Bel", 20], ["Rigger Ohm", 40]],
+      "day": [
+        { "at": "06:30", "doing": "building a hull in pieces", "go": "@cradles" },
+        { "at": "13:00", "doing": "eating on the slip", "go": "@cradles" },
+        { "at": "14:00", "doing": "building a hull in pieces", "go": "@cradles" },
+        { "at": "19:00", "doing": "at the family hall", "go": "@halls" },
+        { "at": "22:00", "doing": "asleep in the low halls", "go": "@halls", "asleep": true }
+      ]
+    },
+    {
+      "names": [["Stallkeeper Dorrit", 0], ["Duelist Yorn", 30], ["Duelist Kerr", 60]],
+      "day": [
+        { "at": "09:00", "doing": "selling on the Slag Bridge", "go": "@bridge" },
+        { "at": "16:00", "doing": "settling something the old way", "go": "@bridge" },
+        { "at": "20:00", "doing": "hearing what it came to", "go": "@weigh" },
+        { "at": "22:00", "doing": "asleep in the low halls", "go": "@halls", "asleep": true }
+      ]
+    },
+    {
+      "names": [["Scale Clerk Ibb", 0]],
+      "day": [
+        { "at": "07:00", "doing": "calling out what it came to", "go": "@weigh" },
+        { "at": "19:00", "doing": "on the way home", "go": ">weigh", "hidden": true }
+      ]
+    }
+  ]
+}

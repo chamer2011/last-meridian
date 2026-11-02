@@ -1,0 +1,32 @@
+{
+  "_help": "The days of the people here. The instructions are at the top of meridian.json.",
+  "people": {
+    "cantor": [
+      { "at": "00:00", "doing": "waiting", "go": "post" }
+    ]
+  },
+  "crowd": [
+    {
+      "names": [["Spar Drone Ael", 0], ["Spar Drone Ibis", 0], ["Spar Drone Oro", 0]],
+      "day": [
+        { "at": "00:00", "doing": "moving along the spars", "go": "@lattice" },
+        { "at": "08:00", "doing": "moving along the spars", "go": "@lattice" },
+        { "at": "16:00", "doing": "moving along the spars", "go": "@lattice" }
+      ]
+    },
+    {
+      "names": [["A Grieving Drone", 0], ["A Broken Drone", 0]],
+      "day": [
+        { "at": "00:00", "doing": "rebuilding the same spar", "go": "@failing", "stays": true }
+      ]
+    },
+    {
+      "names": [["A Copied Neighbor", 0], ["A Copied Cook", 20], ["A Copied Child", 40]],
+      "day": [
+        { "at": "07:00", "doing": "watering a plant that doesn't grow", "go": "@waiting" },
+        { "at": "12:00", "doing": "laying a table for someone", "go": "@waiting" },
+        { "at": "19:00", "doing": "calling someone in for dinner", "go": "@waiting" }
+      ]
+    }
+  ]
+}

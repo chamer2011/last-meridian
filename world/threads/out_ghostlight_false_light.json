@@ -1,0 +1,42 @@
+{
+  "title": "The False Light",
+  "kind": "job",
+  "places": ["ghostlight"],
+  "minLevel": 2,
+  "after": null,
+  "people": ["tamsin", "quill", "pell", "garrick"],
+  "factions": ["drift", "fleet"],
+  "lead": "Three refugee ships came into the Ghostlight following the Lamp Lanes and were never heard from again, and the last message from one of them read: \"We see the lamp.\" A small sharp old woman named Ondine Vask, who has kept the lamps here for forty years, sends you an invoice for a safe crossing, and asks who she should bill now that the Concord's gone.",
+  "anyone": "Three refugee ships came into the Ghostlight following the Lamp Lanes and were never heard from again, and the last message from one of them read: \"We see the lamp.\" A small sharp old woman named Ondine Vask has kept the lamps here for forty years, and she sends an invoice for everything.",
+  "gm": {
+    "truth": "Ondine Vask is a wrecker. For forty years she's kept the lamp-buoys that are the only way through the Ghostlight, paid by the Syndicate, and for forty years she's also moved one of them a little, now and then, to put a rich ship on the rocks of the Drift of Lost Ships. She strips what she likes and leaves the rest. She's not cruel. She's a hundred kilos of gristle and spite who has never met anyone she cared about. She wrecked three refugee ships this year, with about nine hundred people aboard, because nobody told her the rules had changed, and because they came through without paying. The twist: since the Fall she's also been doing something else, on her own, for reasons she finds hard to explain. When a Choir ship noses into the cloud she moves the whole line of lamps and leads it into the Burn. She's done that nineteen times. The drones go blind in here, and they follow lamps. It's why the Choir has stopped coming into the Ghostlight, it's why the Remnant has been left alive, and nobody knows but her. The most effective Choir-killer in known space is an unpleasant old woman in a patched suit, who's also responsible for the deaths of nine hundred of the captain's people. And the fleet can't cross the cloud without her.",
+    "beats": [
+      "The invoice. It's itemized. A relative of someone on one of the lost ships comes to the captain with the last message, and asks if anyone's looking.",
+      "Into the Lamp Lanes, buoy by buoy, with Ensign Asante's knuckles white. A navigator who compares the buoys to Tamsin Ao-Rel's old chart sees that one of them is a few degrees off. And it wasn't off last week.",
+      "The Drift of Lost Ships. One of the refugee ships, the Kindly Hour, lies crumpled against an older wreck, with someone's careful salvage marks all over her. There are survivors, a few, and they've been living on what she left them. She's left them a little. She comes by to check.",
+      "Ondine's lamp-tender, full of other people's belongings, and a kettle. She admits it all immediately. Then she points to a list on the wall: nineteen tally marks with dates, and each date matches a Choir contact in the fleet's logs.",
+      "The reckoning. What's nineteen Choir ships worth against nine hundred people? And who's going to keep the lamps if she doesn't?"
+    ],
+    "routes": [
+      "Catch her at it: navigation and piloting to read the false buoy and fly the real line, and gunnery or engineering to disable the lamp-tender without killing the only person who knows the Lanes.",
+      "Find her out: lore, awareness and streetwise at the Cold Market, to learn who's been paying her, what the Syndicate knows, and what those tally marks mean.",
+      "Deal with her: persuasion, intimidation or commerce to turn her to the fleet's use, or leadership to bring the survivors and the families into the room and let them decide."
+    ],
+    "checks": [
+      "navigation:moderate to see that the lamp line has moved",
+      "piloting:hard to fly a false lane by hand and get out",
+      "gunnery:moderate to put a shot across the lamp-tender's bow without hitting her",
+      "lore:moderate to match her tally marks to the Choir's movements",
+      "intimidation:hard to scare a woman who hasn't been frightened in forty years",
+      "persuasion:very_hard to get her to care"
+    ],
+    "fights": ["void_stalker near the Drift if someone comes in with their heater on, and drift_raider if the Syndicate turns up to protect its investment. Neither has to happen if the captain goes quietly."],
+    "outcomes": [
+      "If she's tried and hanged, nine hundred families get justice and the Lamp Lanes go dark. Within weeks the Choir's drones start to find their way into the Ghostlight, with bad results for everyone hiding there.",
+      "If she's put to work for the fleet, she's the most hated and most useful person the captain has ever employed, and a few more Choir ships die. The families learn about it. Lt. Tarrow surprises everyone by wanting to shake her hand.",
+      "If she's left alone in return for a safe passage, the fleet crosses cleanly and she goes on as before, with the fleet's blessing, and Garrick Fenn finds out exactly what the captain agreed to.",
+      "If her method is taught to someone else, with a list of lamps and a very old book, the fleet has a way to lead the Choir astray for ever. She won't give that up for anything less than a seat at a table where someone says thank you, and she'd hate every minute of it."
+    ],
+    "rewards": "A nav_slate with the true Lamp Lanes, survivors from the lost ships, a cache of salvage worth up to 400 credits, and a very unusual ally. Standing with drift shifts if the Syndicate's arrangement comes to light."
+  }
+}

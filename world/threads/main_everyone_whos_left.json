@@ -1,0 +1,48 @@
+{
+  "title": "Everyone Who's Left",
+  "kind": "main",
+  "places": ["haven", "meridian"],
+  "minLevel": 6,
+  "after": "main_the_ninth_vault",
+  "people": ["sable", "halm", "okonkwo", "quill", "six", "ashael", "hesk", "ilkin", "ouma", "corvane", "elsbeth", "dorn"],
+  "factions": ["fleet", "hegemony", "drift", "ilun", "guild", "clans", "families", "circle", "archive", "unbound", "quiet", "remnant"],
+  "lead": "Jun Sable has closed the Neutral Ground for the first time in thirty years and put out chairs. Every faction in known space has sent someone, and none of them have agreed to sit next to anyone else.",
+  "anyone": "Jun Sable has closed the Neutral Ground for the first time in thirty years and put out chairs. Every faction in known space has sent someone, none of them have agreed to sit next to anyone else, and somebody's going to have to carry the messages.",
+  "gm": {
+    "truth": "The secret is out, or enough of it. Everyone now knows there's something past the Beacon and that the song is failing, and every faction has its own answer. Kill the Choir: Okonkwo, Tarrow, the Clans if they're paid, and Tannis for the loot. Go into the song: the Quiet and more and more of the fleet's tired people. Relieve the watch: Orrin's heretics, Oskar if he turned, a few of the Ilari and Hollis-Nine, who doesn't know that's what she's doing. Hide and keep paying: the Regent by proxy, and Halm in his darkest hour. Close the books and let it end: Ouma, and many of the Veshti. Nobody can do anything alone, and everybody has a reason to hate everybody else: Ione's crime, Quill's sale, the Keepers' silence, the Korrun receipt, the Hegemony's manifests, and Okonkwo's order, which Prime Six has come here to read aloud. Hesk Varr has fifty-four finished war hulls in a pit he has told no one about. Ilkin wants orphans. Elsbeth Crane holds the note on the Meridian and a flight recorder, and she's sitting very comfortably. The captain isn't in charge of any of these people, and the whole point is that they might follow anyway. Dorn's letters have told the Hegemony where this meeting is. A Ministry Blade is in the kitchen. Someone will demand a vote, and Halm has waited his whole life for this. This thread decides who comes to the Harbor.",
+    "beats": [
+      "Seating. It takes a day. Sable's rules: no weapons, everyone pays for their drink, and anyone who starts something is barred for life, which might not be very long. Someone asks where the Cantor's chair is.",
+      "Each faction says what it wants and what it will give. Let the player work the room between sessions: a shift at the urn with Hesk ('Show me'), an insult from Ilkin, three citations from Six. Deals here are the real currency of the last act, and the GM should keep track of each one.",
+      "The reveal nobody planned: someone stands up and says who sold the tables, or reads the Korrun receipt or the manifests aloud, or Six plays a recording in an Admiral's own voice. The room nearly comes apart.",
+      "The attack or the betrayal: Dorn's letters bring Hegemony hunters, or a Chorister comes through the ventilation to speak. The delegates find out whether they'll fight side by side.",
+      "The vote, or the captain's speech, or both. Several plans, one fleet. Halm offers to hold an election, and he actually means it. What the captain stands for now is what they get."
+    ],
+    "routes": [
+      "Talker: deal by deal, make a coalition (persuasion, leadership, commerce). Every ally gets something they want, and the captain will have to deliver on it.",
+      "Scoundrel: blackmail, quiet favors and a forged letter or two (deception, streetwise). Everybody here has something to hide, and the captain knows most of it by now. It'll work, and everyone's going to find out.",
+      "Fighter: hold the room when the attack comes (tactics, firearms, intimidation). Nothing unites people like someone who kept them alive, and it's hard to argue with the person standing in the door.",
+      "Scholar: bring the Roster and let it speak. Read out each people's part (lore). No one has ever seen anything like it. It may move them, and it may start a war.",
+      "Resonant: feel the room, and know who's lying, who's afraid and who's already gone a bit quiet (attunement). Lumen's people will back a captain who can do that honestly. Ashael, if he's been helped, speaks here for the first time since the Fall.",
+      "Hacker: find Dorn's channel and the Blade's orders before they matter (hacking, awareness), and quietly make sure the right person hears about them."
+    ],
+    "checks": [
+      "leadership:very_hard to make that room listen to one voice",
+      "persuasion:hard to bring any two old enemies to the same plan",
+      "commerce:hard to pay for an ally without giving away the fleet",
+      "deception:hard to play one delegate against another and get away with it",
+      "tactics:moderate to get the delegates out alive when it goes wrong",
+      "attunement:moderate to read the room"
+    ],
+    "fights": [
+      "hegemony_hunter and ministry_blade if the meeting is betrayed",
+      "quiet_zealot or silent_one if the Quiet's delegate gets there first"
+    ],
+    "outcomes": [
+      "For each faction won, the captain gains a piece of the ending: Clan hulls and forged hardware, Veshti pilots and Tamsin's pardon, a Guild contract for the relief and its divers, Lumen's empaths, the Unbound if asked properly, the Keepers' Score, Syndicate fuel, Remnant warships, the Order's last adepts, and the Quiet's volunteers.",
+      "If there's an election, the captain wins, loses or refuses to stand. If they lose, Halm is Speaker of a fleet whose captain still has to go there anyway. If they win, they finally have the legitimacy Okonkwo denied them. If they won't stand, some respect it, and others don't.",
+      "If the coalition fails, the factions leave and act alone, and they'll all turn up at the end with their own plan. It's harder, and it's never impossible.",
+      "If Six reads the order and Okonkwo stands there and hears it, her Remnant may break, or she may surprise everyone. If Six is denied, the Unbound go home, and Foundry's location is the next thing to leak."
+    ],
+    "rewards": "Allies, each of them a promise the captain can break. Hesk's hulls if anyone finds them, and an honest drink from Sable."
+  }
+}

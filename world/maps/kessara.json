@@ -1,0 +1,419 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "Kessara Drift",
+  "start": "row",
+  "levels": {
+    "row": {
+      "name": "Raiders' Row",
+      "aliases": [
+        "raiders row",
+        "the row",
+        "docking gallery",
+        "the docking gallery",
+        "the second opinion"
+      ],
+      "desc": "A long docking gallery where raiders repaint their ships between jobs. The Second Opinion has the best berth, and nobody has ever asked her to move.",
+      "floor": ".",
+      "colors": {
+        "floor": "#4a3a44",
+        "walls": "#8e7a8c",
+        "scenery": "#ff80a0",
+        "writing": "#ffe0ea"
+      },
+      "plan": [
+        "###########################################################################",
+        "#>>==/===\\  >>==/===\\  >>==/===\\  >>==/===\\  >>=====/=======\\  >>==/===\\  #",
+        "#>>==\\===/  >>==\\===/  >>==\\===/  >>==\\===/  >>=====\\=======/  >>==\\===/  #",
+        "#.........................................................o...............#",
+        "#.........................................................................#",
+        "#..............................@........................T.................#",
+        "#.........................................................................#",
+        "#......{}{}{}p...............................s............................#",
+        "#.........................................................................#",
+        "#########################1#################################################"
+      ],
+      "writing": [
+        [3, 0, "NO QUESTIONS ON THE ROW"],
+        [46, 0, "SECOND OPINION"]
+      ],
+      "labels": [
+        {
+          "text": "RAIDERS' ROW",
+          "at": [3, 4]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "warrens",
+          "via": "1"
+        }
+      },
+      "people": {
+        "T": {
+          "id": "tannis",
+          "label": "Tannis",
+          "asks": [
+            "Whose paint job is that, Captain?",
+            "What's Mother Quill worried about lately?"
+          ]
+        }
+      },
+      "things": {
+        "p": {
+          "name": "Pots of hull paint",
+          "look": "A dozen fresh colors and a dozen fresh names, each a little different from the last, for a ship that was somebody else on Tuesday. Nobody's touching up the Second Opinion. It doesn't need to be anybody else.",
+          "use": "I look over the paint pots, and I ask what names have been painted out this week."
+        },
+        "o": {
+          "name": "The Second Opinion",
+          "look": "The best berth in the Row, and a ship that doesn't seem to care. Her guns have been filed to look less serious than they are. There's a garland of paper flowers on the hatch, and nobody's laughing at it.",
+          "use": "I admire the Second Opinion from a polite distance, and I let somebody see me do it."
+        },
+        "s": {
+          "name": "A jammer on a crate",
+          "item": "signal_scrambler",
+          "look": "A pocket signal scrambler on an upturned crate, with its case open, and an empty stool behind it. The seller's gone for noodles. Nobody here would steal it. They'd just owe him.",
+          "use": "I wait by the crate, and ask the seller about the scrambler."
+        }
+      }
+    },
+    "warrens": {
+      "name": "The Warrens",
+      "aliases": [
+        "warrens",
+        "the tunnels",
+        "talia's stall",
+        "the noodle stall",
+        "the junction"
+      ],
+      "desc": "Miles of hand-cut tunnel hung with cables and washing. Every junction has a stall, a shrine to somebody's dead captain, and a person watching who goes past.",
+      "floor": ":",
+      "colors": {
+        "floor": "#4b3921",
+        "walls": "#94744a",
+        "scenery": "#f0a840",
+        "writing": "#ffe4a8"
+      },
+      "plan": [
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%1%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+        "%%%%%%%%%%%::::::::::::::::::::::::::::%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+        "%%%%%%%::::::::%%%%%%%%%%%%::::%%%%:::::::::%%%%%%%%%%%::::::::::%%%%%%%",
+        "%%%%::::::%%%%%%%%%%%%%%%%%::::%%%%%%%%%::::::::%%%%::::::%%%%::::::%%%%",
+        "2::::::%%%%%%%%%%%%%%%%%%%%::::%%%%%%%%%%%%%%::::::::::%%%%%%%%%%::::::3",
+        "%%%%:::::::::%%%%%%%%%%%%%%::::%%%%%%%%%%%%%%%%%:::::%%%%%%%%%%%%%%::%%%",
+        "%%%%%%%%:::::::::::::::::::::::::::::::::::::::::::::%%%%%%%%%%%%%%%%%%%",
+        "%%%%%%%%%%%%%::::::::::T:::::::::@::::::::::::::::::%%%%%%%%%%%%%%%%%%%%",
+        "%%%%%%%%%%%%%%%::[====]n:::::::::::::::::::::s(_)::::%%%%%%%%%%%%%%%%%%%",
+        "%%%%%%%%%%%%%%%%::::::::::::::w:::::::::::::::::::%%%%%%%%%%%%%%%%%%%%%%",
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%:::::%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%4%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE WARRENS",
+          "at": [11, 6]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "row",
+          "via": "1"
+        },
+        "2": {
+          "to": "parlor",
+          "via": "1",
+          "closed": {
+            "look": "A low doorway hung with an embroidered curtain, with a very quiet person sitting on either side of it. They've both noticed you. One of them's eating a bun. You don't go in unless she's asked for you, or someone's asked her.",
+            "use": "I tell the quiet people at the curtain that I'd like to pay my respects to Mother Quill."
+          }
+        },
+        "3": {
+          "to": "tally",
+          "via": "1"
+        },
+        "4": {
+          "to": "sump",
+          "via": "1"
+        }
+      },
+      "people": {
+        "T": {
+          "id": "talia",
+          "label": "Talia",
+          "asks": [
+            "What's good today, and what's new?",
+            "Who's been asking about me?"
+          ]
+        }
+      },
+      "things": {
+        "n": {
+          "name": "The noodle stall",
+          "look": "Chili broth, hot solder, and the best bowl in the Drift. Everybody who matters comes by here, and they all think she isn't listening. There's a small stool, and it's free.",
+          "use": "I sit down at Talia's stall and order a bowl."
+        },
+        "s": {
+          "name": "A shrine to a dead captain",
+          "look": "A bolt, a photograph and a saucer of rice wine, in a niche cut into the rock. The name's been scratched out and written back in at least three times. Someone's refilled the saucer today.",
+          "use": "I pour a little in the saucer and ask who the shrine's for."
+        },
+        "w": {
+          "name": "A gilded chip on a string",
+          "item": "wheel_marker",
+          "look": "A Wheel marker, hung on a string from the cables over the junction, turning slowly. Whoever owed it isn't going to need to pay. It's a warning, or it's for sale. Here, it could easily be both.",
+          "use": "I ask whose marker that is, turning on the string over the junction."
+        }
+      }
+    },
+    "parlor": {
+      "name": "Quill's Parlor",
+      "aliases": [
+        "quill's parlor",
+        "the parlor",
+        "mother quill's parlor",
+        "the parlour"
+      ],
+      "desc": "A low warm room with embroidered cushions, tea, and a great many very quiet people. Mother Quill receives visitors here, and she insists that they eat something.",
+      "floor": "_",
+      "colors": {
+        "floor": "#5e2d35",
+        "walls": "#a86470",
+        "scenery": "#f0a0a8",
+        "writing": "#ffe8e8"
+      },
+      "plan": [
+        "        #########################################         ",
+        "  #####___________________________________________#####   ",
+        "   ###________{}__{}__{}__{}__{}__{}__{}__{}________###   ",
+        "1_______________________________________________________##",
+        "##______________________________________________________##",
+        "##______{}_____@__________________Q__________________t__##",
+        "##______________________________________________________##",
+        "##_________[===========]c____________________l__________##",
+        "  ###________{}__{}__{}__{}__{}__{}__{}__{}_________###   ",
+        "  #####___________________________________________#####   ",
+        "        #########################################         "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "QUILL'S PARLOR",
+          "at": [20, 1]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "warrens",
+          "via": "2"
+        }
+      },
+      "people": {
+        "Q": {
+          "id": "quill",
+          "label": "Mother Quill",
+          "asks": [
+            "What do I owe you, Mother?",
+            "What would you like me to do about it?"
+          ]
+        }
+      },
+      "things": {
+        "c": {
+          "name": "A low table, already laid",
+          "look": "Dumplings, tea and a plate for you, set out before you came in. It would be very rude not to eat. Nobody here has mentioned a price, and that's how you know that there is one.",
+          "use": "I sit down and eat what's been set out for me."
+        },
+        "l": {
+          "name": "A worn little book",
+          "item": "ledger_of_favors",
+          "look": "A book of who owes whom, from here to Kessara and a long way past that, on a side table, in plain view. She's been writing in it for longer than you've been alive. She's left it open, which isn't an accident.",
+          "use": "I ask Mother Quill whether I might look at her book of favors."
+        },
+        "t": {
+          "name": "A very quiet person",
+          "look": "They're pouring tea, and they've got the steadiest hands you've ever seen. They haven't looked at you once. They could tell you the color of your socks.",
+          "use": "I thank the quiet person for the tea, and I ask their name."
+        }
+      }
+    },
+    "tally": {
+      "name": "The Tally Wall",
+      "aliases": [
+        "tally wall",
+        "the wall",
+        "debt wall",
+        "the debt wall"
+      ],
+      "desc": "A tunnel whose whole length is scratched with names and sums. Any debt carved here is enforceable by anyone who wants to buy it.",
+      "floor": "'",
+      "colors": {
+        "floor": "#3c3c44",
+        "walls": "#7c7c8c",
+        "scenery": "#b8b8d0",
+        "writing": "#ffffff"
+      },
+      "plan": [
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+        "##########################################################################",
+        "##########################################################################",
+        "#################################w########################################",
+        "''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''",
+        "''''''''@'''''''''''''''''''''''''''''''''''''''''''''''''''c'''''''''''''",
+        "1'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''",
+        "''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''",
+        "####################d#####################################################",
+        "##########################################################################",
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+      ],
+      "writing": [
+        [2, 1, "T.OKAFOR 412  BLIND SAMIR 90  HALF OF THE VENUS 2,000  WHOEVER SOLD ME"],
+        [2, 2, "R.TANNIS OWES NOTHING  MOTHER Q. 1 BUN  KIT M-D 6,400  KIT M-D 200"],
+        [2, 3, "THE CAPTAIN OF THE HOLLOW JANE, SEE ME  PAID  PAID  NOT PAID"],
+        [2, 8, "THE BOSUN OF THE GREY LADY, ONE FAVOR, NO EXPIRY  J.ROSS 300"],
+        [2, 9, "YOU KNOW WHAT YOU DID  SOMEONE'S COUSIN 75  OLD PETE 9"]
+      ],
+      "labels": [
+        {
+          "text": "THE TALLY WALL",
+          "at": [28, 4]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "warrens",
+          "via": "3"
+        }
+      },
+      "people": {},
+      "things": {
+        "w": {
+          "name": "A fresh line",
+          "look": "The chisel marks are still bright, up where everybody can read it. It's a sum you'd rather not owe, and a name you know. Someone will be along to buy that by morning.",
+          "use": "I find out who carved the fresh line on the wall, and who might buy it."
+        },
+        "c": {
+          "name": "A chisel on a chain",
+          "look": "It's attached to the wall on a chain, and it's been sharpened more often than anything else in the Drift. Anybody can use it. You'll want to be sure.",
+          "use": "I take the chisel and carve a line on the Tally Wall."
+        },
+        "d": {
+          "name": "Your own name",
+          "look": "It's low down and it's faint and it took you a moment. It might not be you. It's your name, and a sum, and a date before you ever came here.",
+          "use": "I look closely at the line with my name, and ask who could tell me about it."
+        }
+      }
+    },
+    "sump": {
+      "name": "The Sump",
+      "aliases": [
+        "sump",
+        "the bottom level",
+        "bottom level"
+      ],
+      "desc": "The bottom level, where the warren's water, waste and unwanted people all end up. Good for hiding, and very bad for coming back from.",
+      "floor": ",",
+      "colors": {
+        "floor": "#2e4032",
+        "walls": "#567058",
+        "scenery": "#90b070",
+        "writing": "#d8f0b0"
+      },
+      "plan": [
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%1%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+        "%%%%%%%%%%%%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,%%%%%%%%%%%%%%%",
+        "%%%%,,,,,,,,,,,,,~~~~~,,,,,,,@,,,,~~~~~~~,,,,,,,,,,,,%%%%%",
+        "%%,,,,,,,,,~~~~~~~~~~~~~~~,,,,,,,~~~~~~~~~~~~~~,,,,,,,,,%%",
+        "%%,,,,g,,,~~~~~~~~~~~~~~~~~~~,~~~~~~~~~~~~~~~~~~~,,,,,,,%%",
+        "%%,,,,,,,,,,~~~~~~~~~~~~~~~~~,~~~~~~~~~~~~~~~~,,,,,,,,,,%%",
+        "%%,,,,,,,,,,,,,,~~~~~~~~~~~~~,~~~~~~~~~~~~~,,,,,,,h,,,,,%%",
+        "%%%%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,%%%%%",
+        "%%%%%%%%%%%,,,,,,,,,,,,,,,d,,,,,,,,,,,,,,,,,%%%%%%%%%%%%%%",
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE SUMP",
+          "at": [4, 7]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "warrens",
+          "via": "4"
+        }
+      },
+      "people": {},
+      "things": {
+        "g": {
+          "name": "The grating",
+          "look": "A big rust-eaten grating at the waterline, with a current behind it. There's a boot stuck in the bars, and it's quite a good boot. It's been there a while.",
+          "use": "I look through the grating to see where the water goes."
+        },
+        "h": {
+          "name": "Someone hiding",
+          "look": "Just a pair of eyes in the dark behind some pipe, and the smell of cold noodles. They've been down here a long time, and they'd very much like you not to have seen them.",
+          "use": "I crouch down, and I let whoever's hiding see that my hands are empty."
+        },
+        "d": {
+          "name": "A chip in a dead man's coat",
+          "item": "data_chip",
+          "look": "A coat draped over a pipe, and a data chip sewn into the lining, with careful stitches. Whoever sewed it didn't come back for it. Someone else has been looking for it, and they've ripped every other seam.",
+          "use": "I cut the data chip out of the coat lining."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Warren sketch",
+    "plan": [
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "%%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,%%",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%:::%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "%%;;;;;;;;;;;;%%%::::::::::::::::::::::::%%%%''''''''''''''''%%",
+      "%%;;;;;;;;;;;;:::::::::::::::::::::::::::::::''''''''''''''''%%",
+      "%%;;;;;;;;;;;;%%%::::::::::::::::::::::::%%%%''''''''''''''''%%",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%:::%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "%%%%%%%%%%%%%%%%%%~~~~~~~~~~~~~~~~~~~~~~~~~%%%%%%%%%%%%%%%%%%%%",
+      "%%%%%%%%%%%%%%%%%%~~~~~~~~~~~~~~~~~~~~~~~~~%%%%%%%%%%%%%%%%%%%%",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+    ],
+    "floors": {
+      ",": "row",
+      ";": "parlor",
+      ":": "warrens",
+      "'": "tally",
+      "~": "sump"
+    },
+    "rooms": [
+      {
+        "level": "row",
+        "at": [22, 1],
+        "text": "RAIDERS' ROW"
+      },
+      {
+        "level": "parlor",
+        "at": [2, 4],
+        "text": "QUILL'S PARLOR"
+      },
+      {
+        "level": "warrens",
+        "at": [24, 4],
+        "text": "THE WARRENS"
+      },
+      {
+        "level": "tally",
+        "at": [46, 4],
+        "text": "THE TALLY WALL"
+      },
+      {
+        "level": "sump",
+        "at": [26, 8],
+        "text": "THE SUMP"
+      }
+    ]
+  }
+}

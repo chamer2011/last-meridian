@@ -1,0 +1,47 @@
+{
+  "title": "The Admiral in the Cloud",
+  "kind": "main",
+  "places": ["ghostlight", "meridian"],
+  "minLevel": 2,
+  "after": "main_the_old_scholar",
+  "people": ["okonkwo", "dorn", "voss", "pell", "halm"],
+  "factions": ["remnant", "fleet"],
+  "lead": "A courier drone has reached the Meridian with orders, signed and sealed, from Admiral Amara Okonkwo-Reyes. They relieve you of command and instruct you to bring the fleet to the Ghostlight Nebula.",
+  "anyone": "Admiral Okonkwo-Reyes has sent a courier to the Meridian, with orders relieving her captain and bringing the fleet to the Ghostlight. Navy people everywhere are working out which side of that they're on.",
+  "gm": {
+    "truth": "Okonkwo-Reyes is hiding in the sensor-dead Ghostlight with six warships, fuel for two jumps and thirty days of food. She outranks everyone alive, and under Concord law she's right: the captain is under her command. She has heard the Navy format on the Beacon. A fleet recall can only come from the Admiralty, and she holds a real classified file, Project Harbor, a fallback plan she signed herself, so she's convinced the Concord's government survived there. She wants the fleet's fuel and people to reach it, then to take back Asterion. She's wrong. Project Harbor was a fuel and spares cache, looted years ago, and the name is a coincidence. She's also not what she seems. In the last battle she ordered every Synthetic in the line to power down, the line broke, and an hour before it fell she took her squadron out and logged it as a tactical withdrawal, and her crews have been told a dead superior gave the order. Rusk's chart shows it, Elsbeth Crane holds the flagship's recorder, and Prime Six holds the order. Commodore Dorn has read the file's annex, knows the base is a dead end, and is quietly arranging a surrender to the Hegemony to save his three thousand crew. He'd help the captain undermine her, with respect. Voss came up under the Admiral. She says almost nothing through all of this, and she goes very still when the Admiral asks for the old picket rosters. Arc clues: project_harbor, hull_number.",
+    "beats": [
+      "The orders, and the argument on the bridge. Voss: 'They're valid, Captain.' Halm: a civil government doesn't answer to admirals. Tarrow would follow her in a heartbeat.",
+      "Crossing the Ghostlight: dead sensors, smugglers' lamp-buoys and things that hunt by heat, so the heaters stay down and frost grows inside the hull. Pell flies it by feel, and by the color of Lira's arm. The cloud muffles the song, so anyone who's been hearing it suddenly sleeps through the night. Iven wakes up in a panic, because he has stopped hearing his sister.",
+      "The flagship: six spotless ships full of hungry, disciplined people. A formal hearing on the captain's right to command, with an actual clerk. The Admiral is magnificent and terrifying: 'That's insubordinate, Lieutenant. You were a commander a moment ago.' She might be the best chance the fleet has.",
+      "Dorn finds the captain alone and offers them the code books and a quiet word about the file's annex. 'A fine plan of the Admiral's, quite so. Only, it's a fuel dump.' He doesn't ask for anything, which should be worrying.",
+      "Terms: serve, share, defy or run. Whichever it is, someone leaves with remnant_codes and a way to read the overlay's call sign."
+    ],
+    "routes": [
+      "Talker: win the hearing (leadership, persuasion, lore on Navy regulations). A battlefield appointment confirmed by a surviving civil authority has standing, though Halm's council has to back it, and that has its own price. She respects anyone who doesn't flinch.",
+      "Scoundrel or hacker: take Dorn's offer, or steal the code books outright (stealth, hacking, deception), and find the annex showing Project Harbor is a looted cache. Using it in public would break her.",
+      "Fighter: the old Navy right of trial at arms, a formal bout with a remnant_marine, or a live gunnery contest between crews (melee, gunnery, tactics). Her crews have had nothing to cheer for in months. Win well, and they'll cheer for you.",
+      "Pilot: earn it by flying. Bring the fleet's slowest ships through the Ghostlight, past her pickets, on a line she says can't be flown (piloting, navigation). The line was sold to her by Tamsin Ao-Rel, as it happens.",
+      "Resonant: read her (attunement). She isn't ambitious. She's holding something up and she can't put it down, and there's a small comm in her pocket she won't let go of. Saying so out loud is dangerous, and it might just work."
+    ],
+    "checks": [
+      "leadership:hard to win the hearing on your feet",
+      "lore:moderate to cite the regulation that gives a battlefield appointment standing",
+      "hacking:hard to reach the file's real annex",
+      "navigation:hard to bring slow ships through the nebula on an uncharted line",
+      "gunnery:moderate to win the gunnery contest",
+      "deception:moderate to get Dorn to say what he knows"
+    ],
+    "fights": [
+      "remnant_marine in a formal bout, or more of them if the code books are stolen",
+      "void_stalker in the Ghostlight on the way in or out"
+    ],
+    "outcomes": [
+      "If the captain gets an alliance on their own terms, six warships are on call, fed by the fleet, and Okonkwo is a permanent rival who'll try to take over at the first crisis. She calls them Captain, once. She'll expect Voss to come over when called.",
+      "If she takes command of the fleet's defense, order improves and the civilians revolt, and Halm and the captain find they're on the same side for once. The captain keeps the Meridian and the fleet's trust. She runs straight at the first thing she sees, and they'll need the captain again within days.",
+      "If they break, she declares the captain a mutineer. Her ships stay hidden and take food from stragglers, Dorn offers codes for safe passage, and she'll still turn up at the end, with or without an invitation.",
+      "If the annex is exposed, her crews' faith is shattered, some defect to the fleet, and she goes on out of sheer will, broken in a way the captain will have to live with. Dorn's surrender gets a lot closer."
+    ],
+    "rewards": "remnant_codes, an old_concord_medal from Okonkwo if the captain stands up to her and wins, a service_rifle from Remnant stores, and standing with the remnant, one way or the other."
+  }
+}

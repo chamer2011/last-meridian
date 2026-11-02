@@ -1,0 +1,63 @@
+{
+  "name": "Unbound Sentinel",
+  "threat": 3,
+  "hp": 30,
+  "attack": 5,
+  "defense": 15,
+  "damage": [
+    4,
+    8
+  ],
+  "xp": 80,
+  "credits": [
+    0,
+    15
+  ],
+  "machine": true,
+  "tags": [
+    "machines"
+  ],
+  "motive": "guarding",
+  "faction": "unbound",
+  "desc": "A free synthetic on guard, who won't serve anyone again and won't let you past.",
+  "weapon": "Factory Cutter",
+  "lines": {
+    "intro": [
+      "A scarred synthetic steps out of the dark, says you have eleven seconds to forget the way here, and starts counting aloud.",
+      "A synthetic with an old service collar cut in half and welded to their chest like a medal raises a factory cutter, and asks who sent you."
+    ],
+    "hit": [
+      "A forearm built for moving engine blocks catches you in the chest. \"Nobody owns this door,\" they tell you.",
+      "The cutter comes down, and the sentinel tells you, with no anger at all, that your odds of getting home are falling.",
+      "They step through your guard in one clean motion, the way they once had to do it a thousand times a day."
+    ],
+    "miss": [
+      "You get clear of the cutter, and they note the angle out loud and adjust.",
+      "The cutter shears a pipe above your head, and they don't look away from you.",
+      "They stop the blow just short of you, and ask you once more to leave."
+    ],
+    "crit": [
+      "They've worked out your next step, and the cutter is waiting for you when you take it."
+    ],
+    "defeated": [
+      "The sentinel's lights drop to amber. \"Tell them I didn't move,\" they ask you.",
+      "Their knees lock, and they stay standing across the doorway, switched off, and you have to squeeze past them."
+    ],
+    "joins": [
+      "{Enemy} drops from a gantry behind you, an old service collar cut in half on their chest."
+    ],
+    "stunned": [
+      "{Enemy}'s eyes go dark, and you hear them counting back up as something inside restarts."
+    ],
+    "persuade_worked": [
+      "You don't give it an order. You ask, and you say that you're asking. The sentinel considers that for longer than you expected, and lets you back away."
+    ],
+    "persuade_failed": [
+      "The sentinel says that it's heard that tone before, from people who owned it."
+    ],
+    "shutdown_worked": [
+      "You find a back door in its old service code, and you use it. The sentinel goes still. You'll have to live with having done that to someone who was free."
+    ]
+  },
+  "art": "synthetic"
+}

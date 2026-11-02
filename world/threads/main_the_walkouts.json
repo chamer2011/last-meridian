@@ -1,0 +1,48 @@
+{
+  "title": "The Walk-Outs",
+  "kind": "main",
+  "places": ["sundial", "haven", "anselm"],
+  "minLevel": 2,
+  "after": null,
+  "people": ["oskar", "yara", "grann", "bastian", "wen", "iven"],
+  "factions": ["quiet", "fleet"],
+  "lead": "Three shuttles left the Sundial last night with no flight plan and sixty people aboard, all of whom had given away their shoes. Steward Tull wants the man who talked them into it brought to her in chains.",
+  "anyone": "Three shuttles left the Sundial last night with no flight plan and sixty people aboard, all of whom had given away their shoes. Steward Tull wants the man who talked them into it brought to her in chains.",
+  "gm": {
+    "truth": "Oskar Lind, a gentle hydroponics tech, preaches that the Beacon is a door and that being kept by the Choir is salvation. A Mimic with his dead daughter's face once sang him a song only she could know, and that's his whole faith. Sister Yara Solune at Haven glows with what looks like perfect peace, and Ilari skin can't lie, which frightens people more than anger would. The walkers fly out into the lanes to meet the silver, unarmed, by choice. Everything about this looks like a Choir fifth column. A small transmitter the walkers call the lantern, hidden in the Sundial's irrigation controllers, sends out the names of people who've asked to be kept, and Iven Sorel has heard it, and so can anything else. Hunters follow the shuttles into the fleet's lanes. A real Mimic has been attending the meetings. The player should conclude that the Quiet serve the Choir. They don't: nobody in the Quiet has ever had an order from the Choir, and what the deep members feel is only the song spilling (a Resonant may catch this, and nobody will believe them). The hard question is real, too. On Anselm's Mercy the dying are asking Wen if they can go, Wen signs them over as 'transfers', and they've got a case. Arc clues: quiet_door_theory.",
+    "beats": [
+      "Grann Tull's rage on the Long Furrow, and the pile of shoes by the airlock. Some of them belonged to her people, and she has written down whose.",
+      "A sermon on the Drowned Deck, in warm blue half-light, with the pumps running. Oskar is kind and funny, and he asks the captain nothing at all except 'You must be tired. How have you been sleeping?' The room is full of the fleet's most exhausted people, and they look rested.",
+      "Hunters follow the shuttle beacons straight into the fleet's lanes, and a ship is lost defending a shuttle that didn't want defending. The fleet wants blood. Iven quietly mentions he's been hearing a list of names on a dead band, and that it's coming from the Sundial.",
+      "A Mimic in the congregation is discovered. Oskar, appalled and gentle, asks it if it's at peace. It says it's looking for its son.",
+      "Wen brings the captain a dying patient who has read all the arguments and would like to go. Who has the right to stop her? And what does the captain do about the Quiet: ban them, tolerate them or use them?"
+    ],
+    "routes": [
+      "Talker: debate Oskar in front of his people (persuasion, lore), or bring in Father Roe, who set out chairs with Oskar for years and has no faith left to argue him out of. Say the plain thing he can't answer: how do you know? He'll agree with you, and go on as if you hadn't said it.",
+      "Infiltrator: get a quiet_token and go to the inner meetings (deception, stealth). Learn who's flying the shuttles and who's going next. Anyone who goes in deep comes out sleeping a little too well.",
+      "Technical: find the lantern (hacking, engineering, science). Shut it down, leave it running or send something else out on it.",
+      "Force: arrest the preachers and lock the shuttle bays (intimidation, tactics, leadership). It works for about a week, and then there are martyrs.",
+      "Medical: work with Wen (medicine) on who's really choosing and who's only tired, and offer the fleet's dying something else to hope for.",
+      "Resonant: sit in the quiet with them (attunement, composure). Nobody's calling them. It's something spilling, very comfortable, and there's nothing in it. Nobody will believe this yet."
+    ],
+    "checks": [
+      "persuasion:hard to shake Oskar's congregation",
+      "deception:moderate to pass in the inner meetings",
+      "hacking:moderate to trace the lantern to the irrigation controllers",
+      "attunement:moderate to feel what the Quiet are really resting in",
+      "medicine:moderate to tell a real choice from exhaustion",
+      "intimidation:moderate to shut the shuttle bays without a riot"
+    ],
+    "fights": [
+      "quiet_zealot if someone tries to stop a launch",
+      "choir_mimic once the congregation's visitor is found out"
+    ],
+    "outcomes": [
+      "If they ban and arrest, the walk-outs slow, the Quiet go underground, and Oskar's a martyr in a cell, preaching through the vent. Grann Tull is pleased. Half the night nurses stop coming to work.",
+      "If they tolerate it with rules (no lantern, no children, a doctor must sign), the walk-outs become a legal and terrible part of the fleet's life. Wen and Aduro split over it, and Tarrow asks whether the captain has lost their mind.",
+      "If they use it, letting the walkers carry a message or a tracker to the Choir, it works. Oskar finds out, and something between him and the captain breaks. The Cantor later quotes the message.",
+      "If the captain or a friend gets drawn in, they may earn the hears_the_song trait or simply start sleeping very well. Later that makes it much easier, and more frightening, to recognize what's happening on the ship that stops answering."
+    ],
+    "rewards": "A quiet_token, calm_tabs from Wen, and an ally in Grann or Oskar, though not both."
+  }
+}

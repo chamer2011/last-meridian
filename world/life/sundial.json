@@ -1,0 +1,60 @@
+{
+  "_help": "The days of the people here. The instructions are at the top of meridian.json.",
+  "people": {
+    "grann": [
+      { "at": "05:00", "doing": "measuring out the day's water", "go": "post" },
+      { "at": "10:00", "doing": "at the ledgers", "go": "@steward" },
+      { "at": "13:00", "doing": "walking the strips, remembering everything", "go": "@furrow" },
+      { "at": "16:00", "doing": "hearing complaints at the Table", "go": "post" },
+      { "at": "20:00", "doing": "at the ledgers", "go": "@steward" },
+      { "at": "22:30", "doing": "asleep beside the seed room", "go": "@steward", "asleep": true }
+    ],
+    "oskar": [
+      { "at": "06:00", "doing": "tending the bays", "go": "post" },
+      { "at": "12:00", "doing": "eating at the edge of a strip", "go": "@furrow" },
+      { "at": "13:00", "doing": "tending the bays", "go": "post" },
+      { "at": "17:00", "doing": "sitting with whoever comes", "go": "post" },
+      { "at": "22:00", "doing": "asleep in the warm blue light", "go": "post", "asleep": true }
+    ]
+  },
+  "crowd": [
+    {
+      "names": [["Bettina Rae", 0], ["Hal Rae", 10], ["Old Zeb", 20], ["Nan Okafor", 30], ["Tunde Okafor", 30], ["Little Moss", 40]],
+      "day": [
+        { "at": "06:00", "doing": "hoeing a family strip", "go": "@furrow" },
+        { "at": "07:00", "doing": "hearing the water called out", "go": "@table" },
+        { "at": "08:00", "doing": "hoeing a family strip", "go": "@furrow" },
+        { "at": "13:00", "doing": "eating beans and arguing", "go": "@furrow" },
+        { "at": "14:00", "doing": "hoeing a family strip", "go": "@furrow" },
+        { "at": "19:00", "doing": "reciting who took what from whom", "go": "@table" },
+        { "at": "21:00", "doing": "asleep on the strip", "go": "@furrow", "asleep": true }
+      ]
+    },
+    {
+      "names": [["Lamp Tender Mirra", 0]],
+      "day": [
+        { "at": "07:00", "doing": "walking the lamp along its rail", "go": "@rail" },
+        { "at": "16:00", "doing": "oiling the rail", "go": "@rail" },
+        { "at": "23:00", "doing": "asleep on the gantry", "go": "@rail", "asleep": true }
+      ]
+    },
+    {
+      "names": [["Pump Hand Joan", 0], ["Pump Hand Ravi", 45]],
+      "day": [
+        { "at": "05:30", "doing": "working the pump tower", "go": "@table" },
+        { "at": "14:00", "doing": "checking the bays", "go": "@drowned" },
+        { "at": "17:00", "doing": "working the pump tower", "go": "@table" },
+        { "at": "21:00", "doing": "asleep on the strip", "go": "@furrow", "asleep": true }
+      ]
+    },
+    {
+      "names": [["A Woman by the Water", 0], ["A Man by the Water", 45]],
+      "day": [
+        { "at": "09:00", "doing": "sitting by the water", "go": "@drowned" },
+        { "at": "13:00", "doing": "hoeing a strip, slowly", "go": "@furrow" },
+        { "at": "16:00", "doing": "sitting by the water", "go": "@drowned" },
+        { "at": "21:30", "doing": "asleep by the water", "go": "@drowned", "asleep": true }
+      ]
+    }
+  ]
+}

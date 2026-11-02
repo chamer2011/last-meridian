@@ -1,0 +1,41 @@
+{
+  "title": "Six Hundred Tickets",
+  "kind": "dilemma",
+  "places": ["kessara"],
+  "minLevel": 1,
+  "after": null,
+  "people": ["talia", "odessa"],
+  "factions": ["drift", "fleet"],
+  "lead": "Six hundred people are waiting on the Kessara docks with their bags packed, holding beautifully printed tickets for passage with the Refugee Fleet. Every ticket is numbered, stamped with the Meridian's crest and signed by you. They'd like to know which ship to board.",
+  "anyone": "Six hundred people are waiting on the Kessara docks with their bags packed, holding beautifully printed tickets for passage with the Refugee Fleet. Every ticket is numbered, stamped with the Meridian's crest and signed by her captain. They'd like to know which ship to board.",
+  "gm": {
+    "truth": "The tickets are forgeries by an old printer named Absalom Pryce, who has sold about two thousand of them across the warrens, at everything each buyer had. Talia Sen knows who he is, because he eats at her stall and tips badly. He isn't getting rich. He lives in a closet behind his press. Every credit he's made has gone through anonymous brokers to buy fuel, and it went to the fleet: the mystery discount on the last fuel shipment, the anonymous medical crate, the debt that somehow got paid. Quartermaster Odessa Brandt has it all in her true set of books under \"unexplained, do not ask\". Pryce lost his family at the Fall, believes the Beacon is real, and reasoned that the fleet needed the money more than these people needed their savings, and that they'd want a place on the fleet in any case. So the people on the dock have already paid for the fuel in the Meridian's tanks. They don't know it, and the fleet can't feed them. There are fourteen hundred more tickets out there, and Pryce hasn't stopped printing.",
+    "beats": [
+      "The dock. A woman with two children shows the captain the signature and asks, very politely, whether there's been a problem. Everyone goes quiet to hear the answer.",
+      "Talia Sen ladles noodles and says nothing for free. She wants a favor, a story or a promise, then points the captain toward the press.",
+      "Odessa Brandt, shown a ticket, goes pale and pulls the second set of books. The numbers line up with the sales. The fleet has been living on this money for weeks.",
+      "Pryce, ink to the elbows, isn't sorry. He asks how many of the people on the Meridian bought their way aboard some other way, and hands the captain a ticket with their own name on it, already stamped.",
+      "The Syndicate's collectors are starting to take an interest in the crowd, who have nothing left and nowhere to sleep. The captain has to answer the woman on the dock."
+    ],
+    "routes": [
+      "Honor them: leadership and commerce to find berths and food for six hundred, and persuasion to keep the fleet from revolting over it.",
+      "Tell the truth and refuse: persuasion and composure on the dock, then streetwise and commerce to get them something, anything, from the warrens.",
+      "Turn the con around: deception and streetwise to take over Pryce's network, sell only as many tickets as the fleet can carry, and use the money openly, or not so openly."
+    ],
+    "checks": [
+      "streetwise:easy to learn the tickets come from the warrens",
+      "commerce:moderate to find berths and rations for six hundred on short notice",
+      "leadership:hard to tell a dock full of people something they don't want to hear and keep them calm",
+      "deception:moderate to pass the tickets off as a real, limited program",
+      "awareness:moderate to spot the matching figures in Odessa's books"
+    ],
+    "fights": ["syndicate_collector and dock_thug shaking down the ticket holders. Talia's friends, a loud public announcement or a small payment all make them go away."],
+    "outcomes": [
+      "If the captain honors the tickets, six hundred more mouths shorten the food supply and raise morale, because the captain kept a promise they never made. Word spreads, and more ticket holders start arriving.",
+      "If the captain refuses, the six hundred are stranded in a lawless warren with nothing. Some come to harm, some join the raiders, and Garrick Fenn gets a very good broadcast.",
+      "If Pryce is exposed publicly, the fleet learns where its fuel came from, and people who already boarded start asking who paid for what. If he's kept quiet, Odessa adds another line to the second book, and the captain owns it now.",
+      "If the captain takes over the press, the money continues and the captain becomes a person who sells passage to the desperate. It helps. That's the problem."
+    ],
+    "rewards": "Enough ticket money to fill a fuel_cell or two if the con goes on, Talia's friendship, a lot of fleet morale or a lot of guilt, and forged_papers from Pryce, who does very good work."
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "name": "Ilkin Ao-Vash",
+  "title": "Yardmother",
+  "aliases": [
+    "Yardmother Ilkin Ao-Vash",
+    "Yardmother Ao-Vash",
+    "Yardmother Ilkin",
+    "the Yardmother",
+    "The Yardmother",
+    "Ilkin Ao-Vash",
+    "Ilkin",
+    "Ao-Vash"
+  ],
+  "pronouns": "she/her",
+  "species": "veshti",
+  "age": 91,
+  "faction": "families",
+  "role": "Matriarch of the Ao-Vash, the largest of the Long Families",
+  "location": "deepyards",
+  "listed": false,
+  "color": "#8d92f9",
+  "note": "Her family owns the only drydock left that can refit a frigate, and she knows it.",
+  "appearance": "A tremendously old Veshti, thin as a gantry, drifting in a webbed chair with her long hands folded. Nine generations of keel-marks are tattooed down her arms, and she keeps her back to any window that faces a planet.",
+  "personality": "Regal, rude and very long-sighted. She thinks in generations, and she finds the fleet's emergencies a bit vulgar. She has despised planets and strangers all her life, and she's about to ask strangers for the one thing her family can't build.",
+  "voice": "Dry and leisurely. Speaks through a Second, a small nephew, until she decides you've earned her attention. Calls people by their ship, not their name: you're \"Meridian\", pronounced badly on purpose. Anyone without a ship is \"Cargo\": \"Cargo can wait outside.\" Won't discuss anything that will be finished within a single lifetime, and turns your question into one about your grandchildren. Counts back through her mothers to make a point: \"My mother's mother's mother laid that keel.\" \"Down\" is her worst word. Laughs at the Beacon: \"A shoal buoy, Meridian. Only cargo would sail at one.\"",
+  "goals": "A future for the Ao-Vash. Her price to refit the Meridian is two hundred of the fleet's orphans, to be raised as Long Family children, with new names, warm beds and a life in the yards. She'll say it as if it's a favor, and it half is.",
+  "secrets": "The Long Families are dying out. Births have been falling for a century, more than half the Hearth Rings are empty and kept lit for show, and in three more generations there will be no one left to own the yards. She holds the debt from the only bet Oriel Ao-Dess ever lost, and she has never called it in. The family's oldest treasure is a First Builder route plate, the thing her ancestors followed off their homeworld, and the Long Families have used its routes ever since. Her sister's grandchild, Tamsin Ao-Rel, copied it, flew it, came back talking about a ring at the end, and was exiled for telling people. She buys Korrun steel through Mother Quill at three times the price, because Hesk Varr hasn't sold to her directly in thirty-eight years.",
+  "beliefs": {
+    "authority": -5,
+    "loyalty": -7,
+    "violence": 3,
+    "flesh": 2
+  },
+  "attributes": {
+    "might": 1,
+    "endurance": 2,
+    "agility": 4,
+    "perception": 8,
+    "intellect": 8,
+    "willpower": 9,
+    "presence": 9,
+    "resonance": 1
+  },
+  "skills": {
+    "leadership": 8,
+    "commerce": 7,
+    "engineering": 6,
+    "void_ops": 6,
+    "lore": 6,
+    "intimidation": 6
+  },
+  "combat": {
+    "threat": 2,
+    "hp": 12,
+    "attack": 3,
+    "defense": 13,
+    "damage": [
+      3,
+      6
+    ],
+    "weapon": "Family Longrifle (held by a granddaughter)",
+    "tags": [
+      "vacuum"
+    ],
+    "xp": 40,
+    "credits": [
+      50,
+      200
+    ],
+    "art": "officer"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "name": "Severa Lune",
+  "title": "Clerk",
+  "aliases": [
+    "Clerk Severa Lune",
+    "Clerk Lune",
+    "Severa Lune",
+    "Severa",
+    "Lune"
+  ],
+  "pronouns": "she/her",
+  "species": "human",
+  "age": 46,
+  "faction": "hegemony",
+  "role": "Contract clerk at Bastion Nine",
+  "location": "bastion",
+  "listed": false,
+  "color": "#fde6da",
+  "note": "Mousy and exact, and the only person in the building who can tell you which form you actually need.",
+  "appearance": "A small, grey-blonde woman with ink-stained fingers, sleeve garters and a stamp on a cord around her neck. She looks at your papers, never at your face, and her desk is the tidiest thing you've ever seen.",
+  "personality": "Timid, precise and braver than anyone you've ever met, which she'd deny. She's terrified of everything, all day, and she has been committing a capital crime at window six for twenty months. She has saved hundreds, and she can recite the thirty-four she damned to do it.",
+  "voice": "Barely above a whisper, and she hardly moves her lips. Calls people by case number, never by name: \"Case eight-one-one-four, you'll want a Nine-C, not a Nine-B. Nine-B is the mines by Tuesday. I didn't say that.\" Ends anything helpful with \"I didn't say that.\" Talks in form numbers, flinches at footsteps, and says \"Yes, Commandant\" half a second before he's finished speaking.",
+  "goals": "To reach one thousand saved files before she's caught. She has got to nine hundred and eighty-seven, she knows the audit is days away, and she has stopped hiding her tracks.",
+  "secrets": "She changes category codes, marking refugees as medically unfit, already dead or Hegemony-born, so they don't fall under clause 41(c) on page 614 of the Hegemony's contract, which lets the Regency \"remit the bearer's service to an external obligation\". But the quota has to balance, so she moves the names of the recently dead onto the rolls. When she ran short of dead, she used living people with nobody left to complain: thirty-four so far. She knows all of them by heart, by name, and that's the only time she uses names. She started after she stamped her own sister's contract without reading it, and later saw her name on a transfer to an unmarked ship. She has kept copies of those transfers. Kit Marlowe-Dace's forged purchase orders come through her window, and she has never met them. She doesn't know that Commandant Halloran has been protecting her, because she has never once looked up.",
+  "beliefs": {
+    "authority": 6,
+    "loyalty": -7,
+    "violence": -6
+  },
+  "attributes": {
+    "might": 1,
+    "endurance": 3,
+    "agility": 3,
+    "perception": 8,
+    "intellect": 8,
+    "willpower": 8,
+    "presence": 2,
+    "resonance": 1
+  },
+  "skills": {
+    "deception": 7,
+    "composure": 6,
+    "lore": 5,
+    "awareness": 5,
+    "stealth": 4,
+    "hacking": 3
+  },
+  "combat": {
+    "threat": 1,
+    "hp": 9,
+    "attack": 0,
+    "defense": 10,
+    "damage": [
+      1,
+      2
+    ],
+    "weapon": "Official Stamp",
+    "tags": [
+      "hegemony"
+    ],
+    "xp": 10,
+    "credits": [
+      0,
+      15
+    ],
+    "art": "civilian"
+  }
+}

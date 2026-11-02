@@ -1,0 +1,417 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "The Ghostlight Nebula",
+  "start": "market",
+  "levels": {
+    "market": {
+      "name": "The Cold Market",
+      "aliases": [
+        "cold market",
+        "the market",
+        "market",
+        "the rope walks",
+        "rope walks"
+      ],
+      "desc": "A dozen smugglers' ships lashed together with their engines dead, joined by rope walks through vacuum. A hand-rung bell warns of stalkers, and when it rings, every lamp goes out.",
+      "floor": "-",
+      "colors": {
+        "floor": "#3c5048",
+        "walls": "#7c9c90",
+        "scenery": "#b0e0c8",
+        "writing": "#e0ffee"
+      },
+      "plan": [
+        "~  .   ~    .    ~  .   ~   .    ~   .   ~   .  ~   .    ~   .    ~   .   ",
+        "  [======]       [=========]       [======]       [==========]      [====]",
+        "  [======]       [====s====]       [======]       [==========]      [====]",
+        "      -               -                -               -             -    ",
+        "      -               -                -               -             -    ",
+        "1--------------------------------------------@-------------------------   ",
+        "              -                               -                       -   ",
+        "              -                               -                       -   ",
+        "  [=======]   -   [======]    [=========]     -   [=====]   [=========b   ",
+        "  [=======]   -   [======]    [=========]     -f  [=====]   [=========]   ",
+        "              -                               -                           ",
+        "              -                               -                           ",
+        "2-----------------------------D--------------------------------------     ",
+        "~  .   ~    .    ~  .   ~   .    ~   .   ~   .  ~   .    ~   .    ~   .   "
+      ],
+      "writing": [
+        [20, 0, "ENGINES COLD. NO LAMP WITHOUT LEAVE."]
+      ],
+      "labels": [
+        {
+          "text": "THE COLD MARKET",
+          "at": [49, 5]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "lanes",
+          "via": "1"
+        },
+        "2": {
+          "to": "battle",
+          "via": "1",
+          "closed": {
+            "look": "A signal lamp on a rope walk, and past it, six warships at anchor in perfect formation with their hulls painted out. You don't go aboard without being asked. Somebody's already watching you through a very good lens.",
+            "use": "I signal the Remnant's picket by lamp-code, and I ask for leave to come aboard."
+          }
+        }
+      },
+      "people": {
+        "D": {
+          "id": "dorn",
+          "label": "Dorn",
+          "asks": [
+            "What brings the Commodore to a place like this?",
+            "How would I go about seeing the Admiral?"
+          ]
+        }
+      },
+      "things": {
+        "b": {
+          "name": "The stalker bell",
+          "look": "A hand-rung bell, on a line that runs through every ship in the market. Nobody's joking about it, and nobody's standing near it who isn't paid to.",
+          "use": "I ask the bell-ringer how often the bell has rung lately."
+        },
+        "s": {
+          "name": "A stall of scramblers",
+          "item": "signal_scrambler",
+          "look": "Pocket jammers, laid out on a blanket inside a dead airlock, and priced in hours of heater. Nobody here wants money. The seller's lips are blue.",
+          "use": "I offer an hour of heater for a signal scrambler."
+        },
+        "f": {
+          "name": "The heater-hours slate",
+          "look": "The day's exchange, by lamp-light: fuel, food, medicine, all priced in hours of a heater's warmth. Somebody's chalked up a child's coat at three hours, and crossed it out.",
+          "use": "I read the heater-hours slate, and ask what's in short supply."
+        }
+      }
+    },
+    "battle": {
+      "name": "The Line of Battle",
+      "aliases": [
+        "line of battle",
+        "the remnant",
+        "the remnant fleet",
+        "the flagship",
+        "the warships",
+        "okonkwo's flagship"
+      ],
+      "desc": "Six Concord warships at anchor in perfect formation, hulls painted out. Inside it's all polished boots, cold steel, and the anthem at six every morning.",
+      "floor": "=",
+      "colors": {
+        "floor": "#2f3c5a",
+        "walls": "#6a80a8",
+        "scenery": "#a8c0e8",
+        "writing": "#f0f6ff"
+      },
+      "plan": [
+        "#########################################################################",
+        "#                                                                       #",
+        "#  .---------.     .---------.     .---------.     .---------.          #",
+        "# <    | |    >   <    | |    >   <    | |    >   <    | |    >         #",
+        "#  '---------'     '---------'     '---------'     '---------'          #",
+        "#                                                                       #",
+        "#########################################################################",
+        "#=======================================================================#",
+        "1=======================================================================#",
+        "#=====@==================================O==============================#",
+        "#=======================================================================#",
+        "#===[||||||||]a====================[--------]c===================[!!!!]r#",
+        "#=======================================================================#",
+        "#########################################################################"
+      ],
+      "writing": [
+        [3, 13, "ANTHEM AT 0600. DRESS FOR IT."]
+      ],
+      "labels": [
+        {
+          "text": "THE LINE OF BATTLE",
+          "at": [27, 7]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "market",
+          "via": "2"
+        }
+      },
+      "people": {
+        "O": {
+          "id": "okonkwo",
+          "label": "Okonkwo-Reyes",
+          "asks": [
+            "What would the Admiral need to hear from me?",
+            "Whose orders are you following, Admiral?"
+          ]
+        }
+      },
+      "things": {
+        "a": {
+          "name": "The orders of the day",
+          "look": "Typed and posted at the proper height, as if nothing has happened. It gives the date in the old Concord calendar, and it schedules a review for the morning. The frost is thick on the inside of the hull.",
+          "use": "I read the orders of the day and ask who still follows them."
+        },
+        "c": {
+          "name": "A signal locker",
+          "item": "remnant_codes",
+          "look": "Recognition codes for every ship in the Line, in a locker that's kept scrupulously locked and never quite out of sight. The officer beside it stands a little straighter when you notice.",
+          "use": "I ask to see the Remnant's recognition codes, and whether I can be trusted with them."
+        },
+        "r": {
+          "name": "The armor rack",
+          "item": "remnant_plate",
+          "look": "Concord assault plate, polished like new, by people who won't admit the war is over. It's hard not to salute it. Most of the crew do, on their way past.",
+          "use": "I ask the armorer whether a captain from the fleet could ever be issued a suit of Remnant plate."
+        }
+      }
+    },
+    "lanes": {
+      "name": "The Lamp Lanes",
+      "aliases": [
+        "lamp lanes",
+        "the lanes",
+        "lamp-buoys",
+        "the buoys",
+        "smugglers' routes"
+      ],
+      "desc": "Smugglers' routes marked with hand-placed lamp-buoys, passed down through families and sold by the jump. Some of the buoys were put there by wreckers.",
+      "floor": ".",
+      "colors": {
+        "floor": "#2f403b",
+        "walls": "#5a7a70",
+        "scenery": "#e8f080",
+        "writing": "#ffffd0"
+      },
+      "plan": [
+        "~    ~     ~   ~      ~     ~    ~     ~      ~    ~     ~    ~      ~ ",
+        "   ~    *.......*        ~       ~        ~     ~      ~      ~        ",
+        "~      .............*     ~    ~     *.........*     ~     ~      ~    ",
+        "    ~  ..... ~  ........*  ~   ~  *.............  ~     ~      ~     ~ ",
+        "1...........~    ~  ........*  *........  ~  ......*   ~    ~     ~    ",
+        "   ...... ~    ~    ~   .........@...  ~     ~  ......*   ~    ~      ~",
+        "~    ~      ~     ~     ~  ......  ~    ~    ~   ........*      ~      ",
+        "  ~    ~   ~    ~     ~   ~ ...... ~    ~     ~    ~  .....b  ~    ~   ",
+        "~     ~      *.....w.......... ~  ~   ~    ~     ~   *......*  ~       ",
+        "   ~     ~  ...........~     ~   ~     ~    ~      ~  .......... ~     ",
+        "~    ~    *.......t...  ~   ~     ~     ~     ~     ~   ..........2    ",
+        "  ~     ~    ~     ~   ~    ~     ~     ~     ~   ~    ~     ~     ~   ",
+        "~     ~     ~     ~    ~     ~    ~     ~     ~     ~     ~     ~      "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE LAMP LANES",
+          "at": [41, 2]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "market",
+          "via": "1"
+        },
+        "2": {
+          "to": "drift",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "b": {
+          "name": "A family lamp-buoy",
+          "look": "A hand-made buoy with a family's mark scratched into the casing, and six generations of initials under it. If you know the mark, you know where the next one is.",
+          "use": "I check the mark on the lamp-buoy against what I've been told."
+        },
+        "w": {
+          "name": "A new lamp, very bright",
+          "look": "Cleaner and brighter than the others, and it's just where you'd hope a lamp would be. There's a fresh scrape on the casing where somebody's filed off a mark.",
+          "use": "I hold back from the new lamp, and I try to see what's waiting beyond it."
+        },
+        "t": {
+          "name": "A toll line",
+          "look": "A rope across the lane, a tin on a string, and a note: ONE HOUR, FAMILIES FREE. Somebody's been keeping this up for a long time. You don't see them, but they'll know.",
+          "use": "I pay the toll and leave a message in the tin."
+        }
+      }
+    },
+    "drift": {
+      "name": "The Drift of Lost Ships",
+      "aliases": [
+        "drift of lost ships",
+        "the drift",
+        "lost ships",
+        "the lost ships"
+      ],
+      "desc": "A slow tangle of vessels that came in looking for a shortcut. A few of them still have lights on, and one or two still have people.",
+      "floor": ":",
+      "colors": {
+        "floor": "#3c4044",
+        "walls": "#74807c",
+        "scenery": "#a8c0a8",
+        "writing": "#e0f4d8"
+      },
+      "plan": [
+        " ~     ~       ~        ~      ~       ~       ~      ~        ~       ",
+        "  ::::::::\\\\\\\\\\\\\\:::::::::::::::::::::////////:::::::::::::::::::::::::",
+        "1:::::::::::\\\\\\\\\\\\\\:::::::::::::::////////::::::::::[========]:::::::: ",
+        "::::::::::::::\\\\\\\\\\\\\\::::::::::////////:::::::::::::[========]l::::::: ",
+        "::::@::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ",
+        ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ",
+        ":::::::[====|====]:::::::::::::::::::::::////////::::::::::::::::::::: ",
+        ":::::::[====|====]m::::::::::\\\\\\\\\\\\\\:::::////////::::::::::::::::::::: ",
+        "::::::::::::::::::::::::::::::\\\\\\\\\\\\\\::::::::::::::::::::::::::::::::: ",
+        ":::::::::::::::::::::::::::::::\\\\\\\\\\\\\\::::::::::::r::::::::::::::::::: ",
+        "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::2",
+        " ~     ~       ~        ~      ~       ~       ~      ~        ~       "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE DRIFT OF LOST SHIPS",
+          "at": [40, 5]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "lanes",
+          "via": "2"
+        },
+        "2": {
+          "to": "burn",
+          "via": "1",
+          "closed": {
+            "look": "The last lamp-buoy, and past it the glow gets stronger, and your sensors go white. Nobody's mapped what's in there, and it's getting bigger. You'd want a good reason, and a small ship, and someone to tell.",
+            "use": "I take a skiff past the last buoy, toward the Burn."
+          }
+        }
+      },
+      "people": {},
+      "things": {
+        "l": {
+          "name": "A ship with its lights on",
+          "look": "An old passenger liner, tangled up with two others, and all its cabin lights are lit. There's a figure at one of the windows. It doesn't wave, and it doesn't stop looking.",
+          "use": "I bring a skiff alongside the lit-up ship and hail it."
+        },
+        "m": {
+          "name": "A medal on a dead console",
+          "item": "old_concord_medal",
+          "look": "An old Concord service medal, wired to the console of a dead patrol boat. The boat's crew left a note under it. It's addressed to whoever comes looking, and it's very polite.",
+          "use": "I go aboard the patrol boat and read the note under the medal."
+        },
+        "r": {
+          "name": "A rifle in a sealed rack",
+          "item": "service_rifle",
+          "look": "A service rifle, still racked in the airlock of a wrecked cutter, frosted and fine. There are a lot of empty clips beside it, and all the hatches are welded from the inside.",
+          "use": "I go aboard the wrecked cutter and take the rifle from its rack."
+        }
+      }
+    },
+    "burn": {
+      "name": "The Burn",
+      "aliases": [
+        "burn",
+        "the core",
+        "the hot core",
+        "the nebula's core"
+      ],
+      "desc": "The cloud's hot bright core, where the glow's strongest. Nobody's mapped it, and it's getting bigger.",
+      "floor": ";",
+      "colors": {
+        "floor": "#40583c",
+        "walls": "#90c070",
+        "scenery": "#e8ff90",
+        "writing": "#ffffe0"
+      },
+      "plan": [
+        "             *****************************             ",
+        "     *******;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;*******      ",
+        "   *****;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;*****   ",
+        "***;;;;;;;;;(%%%%);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;***",
+        "**;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;**",
+        "1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;**",
+        "**;;;;;;;@;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;**",
+        "***;;;;;;;;;;;;;;;;;;;;;;;;;;;;;(%%%%)n;;;;;;;;;;;;;***",
+        "*****;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;*****",
+        "   *******;;;;;;;;;;;;;g;;;;;;;;;;;;;;;;;;;;;*******   ",
+        "             *****************************             "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE BURN",
+          "at": [22, 2]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "drift",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "n": {
+          "name": "A nest",
+          "look": "A knot of hull metal and frost, warm from inside, with a lot of small scoured marks around it. It's woven from pieces of ships. You recognize one of the pieces.",
+          "use": "I edge closer to the nest and see what it's made from."
+        },
+        "g": {
+          "name": "The glow",
+          "look": "There's no direction to it, and your eyes won't settle. Your instruments read white. Your breath stops fogging for the first time since you got here, and you find that you don't like that at all.",
+          "use": "I switch everything off and sit in the glow, to see what hunts by heat."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Hand chart",
+    "plan": [
+      "   .  ~  .   ~   .  ~   .   ~   .   ~    .   ~   .   ~   .    ",
+      "~ <===><===><===>~~~~~~~~~~~~~~~~~~~~~~~~<=><=><=><=><=><=> ..",
+      "~ ,,,,,,,,,,,,,,,,~~~~~~~~~~~~~~~~~~~~~~~::::::::::::::::::: ~",
+      "~ ,,,,,,,,,,,,,,,,~~~~~~~~~~~~~~~~~~~~~~~::::::::::::::::::: .",
+      "  .  ~ * ~ * ~ ''''''''''''''''''''''''''''' ~ * ~ * ~ * ~ .  ",
+      "~ . ~ . ~ . ~ '''''''''''''''''''''''''''''' . ~ . ~ . ~ . ~ .",
+      "~ ;;;;;;;;;;;;;;;;;;;;;;;; ~ . ~ . ~ \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\" ~ .",
+      "~ ;;;;;;;;;;;;;;;;;;;;;;;; ~ . ~ . ~ \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\" ~ .",
+      "   .  ~  .   ~   .  ~   .   ~   .   ~    .   ~   .   ~   .    "
+    ],
+    "floors": {
+      ",": "market",
+      ":": "battle",
+      "'": "lanes",
+      ";": "drift",
+      "\"": "burn"
+    },
+    "rooms": [
+      {
+        "level": "market",
+        "at": [4, 3],
+        "text": "COLD MARKET"
+      },
+      {
+        "level": "battle",
+        "at": [42, 3],
+        "text": "LINE OF BATTLE"
+      },
+      {
+        "level": "lanes",
+        "at": [22, 5],
+        "text": "THE LAMP LANES"
+      },
+      {
+        "level": "drift",
+        "at": [8, 7],
+        "text": "LOST SHIPS"
+      },
+      {
+        "level": "burn",
+        "at": [42, 7],
+        "text": "THE BURN"
+      }
+    ]
+  }
+}

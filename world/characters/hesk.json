@@ -1,0 +1,87 @@
+{
+  "name": "Hesk Varr",
+  "title": "Warden",
+  "aliases": [
+    "Warden Hesk Varr",
+    "Warden Varr",
+    "Hesk Varr",
+    "Hesk",
+    "Varr"
+  ],
+  "pronouns": "he/him",
+  "species": "korrun",
+  "age": 77,
+  "faction": "clans",
+  "role": "Clan warden of Korrath",
+  "location": "korrath",
+  "listed": false,
+  "color": "#eb7a52",
+  "note": "Won't deal with anyone who hasn't worked a shift at the furnaces, and he has turned away admirals.",
+  "appearance": "A vast old Korrun burned hairless by sixty years of furnace light, with forearms like mooring posts. He wears no insignia, only a smelter's apron, and he looks at your hands before your face.",
+  "personality": "Grim, exact and utterly without small talk. The Clans would follow him into the furnace, because he has never asked anyone to do what he hasn't done himself. He judges everyone by whether they've kept their word, and he has been breaking his for six months.",
+  "voice": "Very few words, set down one at a time like ingots. Looks at your hands and says \"Show me.\" Asks what you've made. Grades people aloud in stages of metal: newcomers are \"slag\", and if you earn it you become \"pig\", then \"billet\", and he has only ever called three living people \"bar\". Won't say \"maybe\", \"I think\" or \"please\". Ends meetings by naming the shift: \"Sixth bell. Bring gloves.\"",
+  "goals": "Keep the furnaces lit and the Clans whole, and keep the Choir's attention off Korrath for as long as he's alive. He also wants an heir who can carry the hammer, and he believes he's found one.",
+  "secrets": "When the Concord called in the Clans' oath during the Fall, the call reached him by courier, under Tobin Hask's seal. He told no one, and he sealed fifty-four war hulls, finished except for their engines, in a dry pit under the slag fields. He believed the Concord was already dead and the Clans would die with it, and he told himself that a call never spoken over the Weigh House scale doesn't bind. A Korrun can't destroy a record, so he still has the letter. Meanwhile six more hulls go up the tether to the Hegemony, under a contract that was weighed, and he hates it. If the Clans learn of this, they'll pull him down. Whoever finds those hulls has the start of a navy. Brenna Tor is his chosen heir. He works her harder than anyone, and she thinks he despises her. He hasn't sold steel to the Ao-Vash in thirty-eight years, over one short payment. He thinks the Beacon is a promise someone made, and he'll show anyone who has worked a shift the sealed pan of the Long Debt.",
+  "beliefs": {
+    "authority": -7,
+    "loyalty": -6,
+    "violence": 4,
+    "flesh": -4
+  },
+  "attributes": {
+    "might": 9,
+    "endurance": 9,
+    "agility": 1,
+    "perception": 6,
+    "intellect": 6,
+    "willpower": 10,
+    "presence": 7,
+    "resonance": 1
+  },
+  "skills": {
+    "engineering": 7,
+    "leadership": 7,
+    "melee": 7,
+    "intimidation": 7,
+    "composure": 7
+  },
+  "combat": {
+    "threat": 4,
+    "hp": 52,
+    "attack": 6,
+    "defense": 14,
+    "damage": [
+      6,
+      10
+    ],
+    "weapon": "Forge Hammer",
+    "tags": [
+      "heavy_gravity"
+    ],
+    "xp": 140,
+    "credits": [
+      20,
+      80
+    ],
+    "lines": {
+      "intro": [
+        "Hesk Varr takes off his apron, folds it and picks up a hammer you couldn't lift. \"Slag,\" he says."
+      ],
+      "hit": [
+        "The hammer comes down like a furnace door, and you feel it in your teeth.",
+        "He doesn't swing so much as arrive, and you go backward across the floor."
+      ],
+      "miss": [
+        "The hammer craters the floor where you were standing. He looks at the crater, not at you.",
+        "You duck, and the hammer takes a bite out of the wall. \"Still slag,\" he says."
+      ],
+      "crit": [
+        "The hammer catches you square, and for a while there's only the sound of furnaces."
+      ],
+      "defeated": [
+        "Hesk Varr goes down on one knee, slowly, and looks at your hands. \"Pig,\" he says. It's the kindest thing he's said to you."
+      ]
+    },
+    "art": "brawler"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "name": "Elsbeth Crane",
+  "title": "Factor",
+  "aliases": [
+    "Factor Elsbeth Crane",
+    "Factor Crane",
+    "Elsbeth Crane",
+    "Elsbeth"
+  ],
+  "pronouns": "she/her",
+  "species": "human",
+  "age": 67,
+  "faction": "guild",
+  "role": "The Salvage Guild's factor at the Graveyard",
+  "location": "graveyard",
+  "listed": false,
+  "color": "#b291ba",
+  "note": "They say her contracts have never been broken, only outlived.",
+  "appearance": "A small, tidy widow with white hair pinned flat and a Guild seal at her collar, at a desk bolted to the deck of her barge. She keeps the claims register by hand, in ink, and she offers you a pen as if it's a loaded weapon.",
+  "personality": "Gracious, patient and dryly funny, and she enjoys a well-drafted clause more than most people enjoy dinner. She has never broken her word. She has been Rusk's friend for nineteen years and she means it, and she's been waiting nineteen years to ruin him, and she means that too.",
+  "voice": "Dry, gentle and exact. Stops you to define your terms, and writes down the answer: \"By 'soon', do you mean before or after your death?\" Prefaces her bluntest remarks with \"For the avoidance of doubt\": \"For the avoidance of doubt, that was a threat.\" Calls people \"the party\" when she's amused. Reads contracts aloud in a clear, pleasant voice, a little faster at the clause that matters. Never says \"promise\", \"maybe\" or \"trust me\".",
+  "goals": "Keep the Guild's paper good while every government that ever signed it goes to dust. She has filed a Guild claim on the source of the Beacon, because a distress call with no crew answering is an abandoned vessel. She wants Rusk's map, which by contract becomes the Guild's the moment he dies. She'd much rather he handed it to her himself, and told her why.",
+  "secrets": "Rusk's first partner, Dell, was her husband. She holds Dell's suit recorder, which shows his tether was cut from Rusk's end. She has kept it sealed for nineteen years, kept Rusk on the books and played cards with him every week, and he doesn't know she knows. She also holds a dummy claim on the CFS Tarn, bought through a third party; the Concord flagship's flight recorder, which shows Admiral Okonkwo-Reyes's squadron leaving the line an hour before it broke; and the salvage contract for the battlefield, signed by the Admiralty a week before the battle. And every ship refitted on Guild credit, including the Meridian, carries a debt that passed to whoever commands it. She hasn't presented the note. Yet.",
+  "beliefs": {
+    "authority": -7,
+    "loyalty": 3,
+    "belief": -5
+  },
+  "attributes": {
+    "might": 1,
+    "endurance": 3,
+    "agility": 2,
+    "perception": 8,
+    "intellect": 9,
+    "willpower": 9,
+    "presence": 7,
+    "resonance": 1
+  },
+  "skills": {
+    "commerce": 8,
+    "composure": 7,
+    "lore": 5,
+    "persuasion": 5,
+    "intimidation": 4
+  },
+  "combat": {
+    "threat": 1,
+    "hp": 12,
+    "attack": 1,
+    "defense": 11,
+    "damage": [
+      2,
+      5
+    ],
+    "weapon": "Small Pistol in the Desk",
+    "tags": [],
+    "xp": 20,
+    "credits": [
+      50,
+      200
+    ],
+    "art": "civilian"
+  }
+}

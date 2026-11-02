@@ -1,0 +1,65 @@
+{
+  "name": "Tamsin Ao-Rel",
+  "title": "Navigator",
+  "aliases": [
+    "Navigator Tamsin Ao-Rel",
+    "Navigator Ao-Rel",
+    "Tamsin Ao-Rel",
+    "Tamsin",
+    "Ao-Rel"
+  ],
+  "pronouns": "they/them",
+  "species": "veshti",
+  "age": 41,
+  "faction": "families",
+  "role": "An exiled Veshti navigator",
+  "location": "deepyards",
+  "listed": false,
+  "color": "#12b2f4",
+  "note": "Lives on a patched skiff off the Ice Cut, and sells charts of routes nobody else believes exist.",
+  "appearance": "Long and stooped and wrapped in three thermal coats, with chart ink up to the elbows and a way of looking just past you, at something a long way off. They draw on whatever's nearest: tables, walls, your sleeve.",
+  "personality": "Dreamy, arrogant and lonely. They're the best navigator alive and will tell you so, mildly, as a fact. They insist they believe only in what can be charted, and their whole life's work was copied from something they don't understand.",
+  "voice": "Mild and faraway, in long looping sentences measured in days of travel: \"That's eleven days from honest.\" Keeps working on your questions after you've stopped asking, so they often answer something you asked an hour ago: \"...No, the third leg works if you skip the star. Sorry. You asked me that on the way in.\" Never says \"impossible\" or \"lost\", only \"uncharted\". Draws while they talk.",
+  "goals": "To be believed, and to have one pilot with nerve fly the whole of the long route with them. They also want to go home once, through the front door, to the family that painted over their name.",
+  "secrets": "The routes are real, but they aren't theirs. They come from the Ao-Vash route plate, the First Builder relic the Veshti ancestors followed off their homeworld, and the Long Families have quietly used them for nine generations. Tamsin copied it as a young navigator, flew as much as they dared and came back with the ship's clocks wrong. They weren't exiled for lying, but for telling people. One route ends at a ring the size of a moon: the Pale Gate. Another, the Thin Road, heads out past the map, the same way the Beacon does. They've been selling pieces of the plate as their own work ever since, and they're ashamed of it. The Remnant hides in the Ghostlight on a route they sold, and Admiral Okonkwo-Reyes thinks she found it herself. Madame Oriel bought their first chart at full price, and they've never found out why.",
+  "beliefs": {
+    "authority": 7,
+    "loyalty": 4,
+    "belief": -6
+  },
+  "attributes": {
+    "might": 2,
+    "endurance": 3,
+    "agility": 6,
+    "perception": 8,
+    "intellect": 9,
+    "willpower": 5,
+    "presence": 4,
+    "resonance": 3
+  },
+  "skills": {
+    "navigation": 10,
+    "piloting": 6,
+    "void_ops": 6,
+    "science": 5,
+    "lore": 4
+  },
+  "combat": {
+    "threat": 1,
+    "hp": 12,
+    "attack": 2,
+    "defense": 12,
+    "damage": [
+      2,
+      5
+    ],
+    "weapon": "Flare Pistol",
+    "tags": [],
+    "xp": 20,
+    "credits": [
+      5,
+      40
+    ],
+    "art": "civilian"
+  }
+}

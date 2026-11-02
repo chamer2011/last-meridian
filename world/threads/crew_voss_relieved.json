@@ -1,0 +1,58 @@
+{
+  "title": "Until Relieved",
+  "kind": "crew",
+  "places": [
+    "fleet",
+    "meridian"
+  ],
+  "minLevel": 7,
+  "after": "crew_voss_tarn_recorder",
+  "people": [
+    "voss",
+    "iven",
+    "lira",
+    "tarrow",
+    "pell",
+    "seven"
+  ],
+  "factions": [
+    "fleet"
+  ],
+  "lead": "The master of the freighter Little Marigold swears Commander Voss ordered her out of formation an hour ago, on a command channel, in a voice she's heard a hundred times. Voss has been standing beside you all shift.",
+  "anyone": "The master of the freighter Little Marigold swears Commander Voss ordered her out of formation on a command channel, in a voice she's heard a hundred times. Voss was on the bridge the whole time, with witnesses.",
+  "gm": {
+    "truth": "The voice is the other Voss, the copy in the song, in her old chair on the silver-grown CFS Tarn. Her crew, all sixty-three of them, were kept together, and they're still holding the line: the Tarn shadows the fleet at the far edge of sensor range, with a long trail of broken Choir scouts behind her, and every nineteen days she goes back to her assigned station in the Long Silence and rings the watch change on her brass bell. That's part of why the fleet has been found less often than it should have been. Little Marigold's diversion moved it out of the path of a Hunter that arrived twenty minutes later. So the enemy's voice is saving lives, or this is the most patient lure ever built, and until someone has been aboard (main_on_station) the captain can't prove which. The GM's truth: she's real, as far as anything in the song is. She can't leave, because nobody has ever told her she may. Her sentences have started to slip from \"I\" into \"we\". The Tarn's comms tech, Anja Sorel, is Lt. Sorel's dead sister, and her overlay is the Navy layer of the Beacon. Relieving the Tarn is a small rehearsal of the ending: if it's done, the crew go quiet, SAFE HARBOR stops on every band, and the Cantor goes on without them.",
+    "beats": [
+      "The Marigold's master insists, and plays the recording. The real Voss listens with no expression at all and says, \"That's me.\" Tarrow's hand moves. Iven looks like a man who has been expecting this for months.",
+      "Investigation. The Hunter turns up exactly where the Marigold was. Backtracking the sensor record finds wreckage in the fleet's wake: Choir scouts, cut to pieces, at intervals, for months.",
+      "A second order comes through, now to everyone: \"All ships, alter course four degrees. Do it now.\" The captain has ninety seconds to decide whether to obey a voice from the enemy's throat.",
+      "Contact. A channel opens and the two Vosses talk, with a brass bell ringing somewhere behind one of them. It's the shortest and most terrible conversation in the game. Her report is the best intelligence on the Choir anyone has ever had. Near the end she says \"we\" and doesn't notice.",
+      "The real Voss turns to the captain. \"It's my name. It's your fleet. Your call, Captain.\" For the first time, she has finished deciding how she says that word."
+    ],
+    "routes": [
+      "Command: treat her as an asset. Tactics and leadership to build a protocol that checks every warning against Lira's board before anyone acts on it. The crew needs a reason to obey, and Tarrow needs a reason not to shoot.",
+      "Analysis: science and hacking with Seven and Iven to authenticate the voice, trace the carrier and learn how a copy holds its shape in the song. Seven has a chart that may help (see crew_seven_consult).",
+      "Go out there: piloting and void_ops to cross the debris screen and board her, with Voss if she's allowed (see main_on_station). On the old bridge, a silver figure with her face sits in her chair, on duty, and doesn't look up. One with Lt. Ibarra's face salutes.",
+      "Listen: attunement across the void finds something like one tired person holding a door shut with her back. Manifestation can't pull her out, but it can let her know she's been heard."
+    ],
+    "checks": [
+      "tactics:hard to judge in ninety seconds whether the course change is a trap",
+      "navigation:moderate to backtrack the fleet's wake to the wrecked scouts",
+      "piloting:hard to close with the Tarn through her own debris screen",
+      "attunement:very_hard to feel what's left of her from across the void",
+      "composure:hard to stand on that bridge and give an order to that chair",
+      "gunnery:very_hard to kill her with one working cannon, if that's the choice"
+    ],
+    "fights": [
+      "choir_drone pair that wake if a boarding party lingers on the hulk",
+      "choir_hunter drawn by the open channel, if the conversation goes on too long"
+    ],
+    "outcomes": [
+      "Relieved: Voss stands up, on the Meridian's bridge or the Tarn's, and says the sailor's words. \"CFS Tarn, this is Commander Voss. I relieve you.\" A long silence, then, in her own voice: \"I stand relieved.\" The bell stops. If she's aboard, she finally returns the salute. The overlay goes off every band, the fleet wakes to find SAFE HARBOR gone, and the Cantor says: \"They stand relieved. We are still here. Who relieves us?\" Voss sleeps a whole night for the first time. Choir scouts start finding the fleet more often, and everyone has to live with that.",
+      "Kept on station: the warnings keep coming, each a little stranger and a little more plural. They go on being right, until the day the captain has to decide whether this one is. The captain owns that day, whichever way it goes.",
+      "Destroyed: Tarrow's way, and clean, with all sixty-three aboard and Anja Sorel at her board. If asked, Voss fires the shot herself and doesn't speak for a day, and Iven doesn't come to the bridge at all. The overlay stops. The Cantor doesn't speak for nine days, and then it asks why. Nobody will ever know if it was a lure. The scouts return.",
+      "Brought home: Seven thinks a copy can be held outside the song for a while, in a medical core. It's a long shot and it costs a lot. If it works at all, the fleet has living proof that the copied are still people, and that changes how everyone sees the final question."
+    ],
+    "rewards": "An old_concord_medal, the Tarn's commissioning medal, handed over by Voss without explanation. The best Choir intelligence in the game. Whatever standing it costs or earns with a fleet that has heard it all on Garrick Fenn's channel."
+  }
+}

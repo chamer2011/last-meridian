@@ -1,0 +1,86 @@
+{
+  "name": "Lucan Dorn",
+  "title": "Commodore",
+  "aliases": [
+    "Commodore Lucan Dorn",
+    "Commodore Dorn",
+    "Lucan Dorn",
+    "Lucan",
+    "Dorn"
+  ],
+  "pronouns": "he/him",
+  "species": "human",
+  "age": 52,
+  "faction": "remnant",
+  "role": "Second in command of the Concord Remnant",
+  "location": "ghostlight",
+  "listed": false,
+  "color": "#81a4b9",
+  "note": "Soft-spoken, correct and, by every account, absolutely loyal to Admiral Okonkwo-Reyes.",
+  "appearance": "A neat, mild, balding man who carries his cap under his arm, with a bookkeeper's eyes in a fighting officer's scarred face. There's a stack of letters in his coat, and he's usually writing another one.",
+  "personality": "Patient, decent and very good at sums. He has fought in four campaigns, and he writes by hand to the family of every crew member he loses, even now, with nowhere to send the letters. He still salutes her and he means it, and he's selling her out to save the only people he has left.",
+  "voice": "Soft and agreeable. Says \"Quite so\" and \"With respect\", then adds one small word: \"Only.\" \"A fine plan, Admiral. Only, we have fuel for two jumps.\" Everything he says is an agreement, until you look at it later. Says \"with respect\" exactly when he has none. Never contradicts anyone directly, and he has never told a lie that could be checked.",
+  "goals": "Keep his three thousand crew alive and fed, whatever flag they do it under. He wants to stop writing letters. If someone showed him a better option than the one he has, he'd take it tonight.",
+  "secrets": "He's been talking to the Hegemony about surrender, in letters through Commandant Dain Halloran, an old friend from the joint border commission. The terms are food, amnesty for the crews and a quiet ending. The price is the squadron's anchorage, written on a chip, and the Remnant's Concord command codes, which he has copied. Legate Corvane sits at the other end of it, and Dorn has no idea that Corvane is also talking to Speaker Halm. He isn't taking a single credit for it. If the Admiral found out she'd have him shot, and he'd understand, and he'd walk there himself. The crews don't know how close it is: two jumps of fuel, thirty days of food, and an Admiral who won't read the report. He has also read the annex to the Project Harbor file, and he has known for months what it really is: \"A fine plan, Admiral. Only, it's a fuel dump.\"",
+  "beliefs": {
+    "authority": -2,
+    "loyalty": -6,
+    "violence": -4,
+    "belief": -4
+  },
+  "attributes": {
+    "might": 4,
+    "endurance": 5,
+    "agility": 5,
+    "perception": 7,
+    "intellect": 8,
+    "willpower": 7,
+    "presence": 6,
+    "resonance": 1
+  },
+  "skills": {
+    "tactics": 7,
+    "deception": 6,
+    "leadership": 6,
+    "composure": 6,
+    "firearms": 5,
+    "commerce": 4,
+    "gunnery": 4
+  },
+  "combat": {
+    "threat": 3,
+    "hp": 30,
+    "attack": 5,
+    "defense": 14,
+    "damage": [
+      4,
+      8
+    ],
+    "weapon": "Service Pistol",
+    "tags": [
+      "authority"
+    ],
+    "xp": 80,
+    "credits": [
+      10,
+      60
+    ],
+    "lines": {
+      "intro": [
+        "Commodore Dorn puts his cap carefully on the nearest surface and draws. \"With respect,\" he says."
+      ],
+      "hit": [
+        "He shoots you without any ill will at all. \"Quite so,\" he says.",
+        "His second shot follows the first. \"Only,\" he adds."
+      ],
+      "miss": [
+        "His shot passes close, and he corrects for it calmly, like a sum.",
+        "You get behind cover. \"A fine move,\" he says. \"Only, there's a second door.\""
+      ],
+      "defeated": [
+        "Commodore Dorn sits down and feels inside his coat for the letters. \"Someone ought to write to them,\" he says."
+      ]
+    },
+    "art": "officer"
+  }
+}

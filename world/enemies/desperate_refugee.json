@@ -1,0 +1,66 @@
+{
+  "name": "Desperate Refugee",
+  "threat": 1,
+  "hp": 12,
+  "attack": 1,
+  "defense": 10,
+  "damage": [
+    1,
+    4
+  ],
+  "xp": 10,
+  "credits": [
+    0,
+    5
+  ],
+  "tags": [
+    "crowd"
+  ],
+  "motive": "desperate",
+  "faction": "fleet",
+  "desc": "Someone from the fleet who has run out of options, and knows it.",
+  "weapon": "Kitchen Knife",
+  "onHit": {
+    "stress": 2
+  },
+  "lines": {
+    "intro": [
+      "A thin figure in a fleet-issue blanket steps into your way, holding a kitchen knife in both hands. They tell you they're sorry before you've said anything.",
+      "Someone pushes out of the crowd and grabs at what you're carrying. When you turn, you see a knife, and a face that hasn't eaten in days."
+    ],
+    "hit": [
+      "The knife catches your arm, and they look more frightened by it than you are.",
+      "They swing with their eyes shut, and it still hurts you.",
+      "They grab your coat and hang on with surprising strength, and the knife comes around at you again."
+    ],
+    "miss": [
+      "The knife goes wide of you, and the swing nearly takes them off their feet.",
+      "You step aside, and they stumble past you, gasping with the effort.",
+      "They lunge at you, stop, and look at the knife as if someone else had put it there."
+    ],
+    "crit": [
+      "They throw their whole weight at you, everything they have left, and the knife finds you before either of you understands what's happened."
+    ],
+    "defeated": [
+      "They drop the knife and sit down on the deck, and you can see how thin their wrists are.",
+      "They put both hands up, and ask you very quietly whether the children on their ship will still get fed."
+    ],
+    "joins": [
+      "{Enemy} pushes out of the crowd behind you, with the same hollow look, no longer caring who sees."
+    ],
+    "stunned": [
+      "{Enemy} stares at you and shakes, and can't make themselves come any closer."
+    ],
+    "persuade_worked": [
+      "You ask about the children on their ship. They start to answer, and then they're crying, and the knife's on the deck between you.",
+      "You say you're not going to report this. They look at the knife as if someone else had put it there, and they let it fall."
+    ],
+    "pay_worked": [
+      "You hold out the credits, and they take them in both hands. They say they're sorry again, and they keep saying it as they back into the crowd."
+    ],
+    "threaten_worked": [
+      "You don't have to say much. They were never going to do it, and now they know you know. They drop the knife, and they run."
+    ]
+  },
+  "art": "civilian"
+}

@@ -1,0 +1,48 @@
+{
+  "_help": "The days of the people here. The instructions are at the top of meridian.json.",
+  "people": {
+    "ilkin": [
+      { "at": "07:00", "doing": "watching the yard", "go": "post" },
+      { "at": "12:00", "doing": "at table with the family", "go": "@rings" },
+      { "at": "14:00", "doing": "watching the yard", "go": "post" },
+      { "at": "19:00", "doing": "among the family portraits", "go": "@rings" },
+      { "at": "22:00", "doing": "asleep in the family ring", "go": "@rings", "asleep": true }
+    ],
+    "tamsin": [
+      { "at": "07:30", "doing": "correcting a chart", "go": "post" },
+      { "at": "13:00", "doing": "staring at the old ships", "go": "@moorings" },
+      { "at": "14:00", "doing": "correcting a chart", "go": "post" },
+      { "at": "20:00", "doing": "drinking at the melt-works", "go": "@cut" },
+      { "at": "23:00", "doing": "back aboard the skiff", "go": ">cut", "hidden": true }
+    ]
+  },
+  "crowd": [
+    {
+      "names": [["Cutter Ao-Min", 0], ["Cutter Ao-Sel", 0], ["Cutter Ren-Vah", 60], ["Second Ao-Tal", 60]],
+      "day": [
+        { "at": "06:00", "doing": "working the gantries", "go": "@dock" },
+        { "at": "14:00", "doing": "taking tea in the ring", "go": "@rings" },
+        { "at": "15:00", "doing": "working the gantries", "go": "@dock" },
+        { "at": "21:00", "doing": "asleep in the ring", "go": "@rings", "asleep": true }
+      ]
+    },
+    {
+      "names": [["Attendant Oo-Rel", 0], ["Attendant Vei", 30]],
+      "day": [
+        { "at": "06:00", "doing": "scrubbing a visitor", "go": "@rinse" },
+        { "at": "18:00", "doing": "labeling swabs", "go": "@rinse" },
+        { "at": "20:00", "doing": "on the way home", "go": ">rinse", "hidden": true }
+      ]
+    },
+    {
+      "names": [["Trawlerman Ebbe", 0], ["Melt-Hand Sorrow", 30], ["Old Ru-Vash", 90]],
+      "day": [
+        { "at": "05:30", "doing": "hauling ice", "go": "@cut" },
+        { "at": "13:00", "doing": "eating at the melt-works", "go": "@cut" },
+        { "at": "14:00", "doing": "hauling ice", "go": "@cut" },
+        { "at": "20:00", "doing": "drinking at the melt-works", "go": "@cut" },
+        { "at": "23:00", "doing": "asleep in the trawler berths", "go": "@cut", "asleep": true }
+      ]
+    }
+  ]
+}

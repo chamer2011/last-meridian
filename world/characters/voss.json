@@ -1,0 +1,65 @@
+{
+  "name": "Ilya Voss",
+  "title": "Commander",
+  "aliases": [
+    "Commander Ilya Voss",
+    "Commander Voss",
+    "Voss"
+  ],
+  "pronouns": "she/her",
+  "species": "human",
+  "age": 47,
+  "faction": "fleet",
+  "role": "Your executive officer",
+  "location": "meridian",
+  "crew": true,
+  "color": "#8ec5ff",
+  "note": "Your XO. Blunt and loyal, and doesn't talk about how she got out of the Fall.",
+  "appearance": "Lean and grey at the temples, with a burn scar along one jaw. Her uniform is the only clean thing on the bridge.",
+  "personality": "Blunt, dutiful and dry. She's loyal to the fleet first and to you second, and she'll say so. She respects competence and has no patience for speeches.",
+  "voice": "Short sentences. States the facts and lets you reach the conclusion yourself. Says \"Captain\" as if she hasn't finished deciding.",
+  "goals": "Keep the fleet alive, keep the chain of command intact, and keep her secret.",
+  "secrets": "During the Fall she commanded the picket ship CFS Tarn. The Choir boarded it and took everyone except her. They let her walk out, and she doesn't know why. She has told no one, and she runs her own medical scans at night in case she's been changed.",
+  "beliefs": {
+    "authority": -5,
+    "loyalty": -6,
+    "violence": 2,
+    "belief": -3
+  },
+  "attributes": {
+    "might": 4,
+    "endurance": 5,
+    "agility": 4,
+    "perception": 6,
+    "intellect": 5,
+    "willpower": 7,
+    "presence": 5,
+    "resonance": 1
+  },
+  "skills": {
+    "tactics": 6,
+    "leadership": 5,
+    "firearms": 4,
+    "composure": 5,
+    "piloting": 3,
+    "awareness": 4
+  },
+  "combat": {
+    "threat": 3,
+    "hp": 40,
+    "attack": 5,
+    "defense": 14,
+    "damage": [
+      4,
+      8
+    ],
+    "weapon": "Concord Sidearm",
+    "tags": [],
+    "xp": 90,
+    "credits": [
+      0,
+      30
+    ],
+    "art": "officer"
+  }
+}

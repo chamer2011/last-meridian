@@ -1,0 +1,394 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "The Harbor",
+  "start": "berths",
+  "levels": {
+    "berths": {
+      "name": "The Berths",
+      "aliases": [
+        "berths",
+        "the docks",
+        "docks",
+        "the anchorage"
+      ],
+      "desc": "Endless empty docks, with door frames that fit Korrun, ceilings that fit Veshti, and shelves at the height of no one living. The whole fleet takes up a tiny corner of it.",
+      "floor": ".",
+      "colors": {
+        "floor": "#5a4e3a",
+        "walls": "#b8a57c",
+        "scenery": "#ffe0a0",
+        "writing": "#fff8e4"
+      },
+      "plan": [
+        "##########################################################################",
+        "#.[| |].[| |].[| |].[| |].[| |].[| |].[| |].[| |].[| |].[| |].[| |].[| |]#",
+        "#.[| |].[| |].[| |].[| |].[| |].[| |].[| |].[| |].[| |].[| |].[| |].[| |]#",
+        "#........................................................................#",
+        "#.......@................................................................#",
+        "#..............................................d.........................#",
+        "#........................................................................#",
+        "#.[| |].[| |].[| |].[| |].[| |].[| |].[| |].[| |].[| |].[| |].[| |].[| |]#",
+        "#.[| |].[| |].[| |].[| |].[| |].[| |].[| |].[| |].[| |].[| |].[| |].[| |]#",
+        "#.....f........................................s.........................#",
+        "##########################################1###############################"
+      ],
+      "writing": [
+        [3, 0, "THERE IS ROOM"]
+      ],
+      "labels": [
+        {
+          "text": "THE BERTHS",
+          "at": [28, 4]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "quay",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "f": {
+          "name": "The fleet's corner",
+          "look": "Forty-one ships, every one you've bled for, tucked in a corner of a single quay. Every lock opened for them without being asked. Nobody's asked what the berths cost, because nobody's asked for anything.",
+          "use": "I look over the fleet's berths and ask who's on watch."
+        },
+        "d": {
+          "name": "A door frame",
+          "look": "Twice your height and a good deal wider than you are, and beside it a second frame that's much too narrow for you, and a third that's about right. They've all been waiting a long time. Not one of them squeaks.",
+          "use": "I go through the door that fits me, and see what's on the other side."
+        },
+        "s": {
+          "name": "A shelf at no one's height",
+          "look": "A long clean shelf, at a height that would suit somebody with very long arms and very short legs. There's nothing on it, and there's no dust, and no one you've ever met could reach it comfortably.",
+          "use": "I run my hand along the shelf that fits nobody living."
+        }
+      }
+    },
+    "quay": {
+      "name": "The Long Quay",
+      "aliases": [
+        "long quay",
+        "the quay",
+        "quay",
+        "the walkway"
+      ],
+      "desc": "A walkway beneath the warm light where people have started coming to sit. They sit in rows, and they don't talk much. They all face the same way, and it's not toward the view.",
+      "floor": ",",
+      "colors": {
+        "floor": "#5c4c34",
+        "walls": "#b09a70",
+        "scenery": "#ffd088",
+        "writing": "#fff6dc"
+      },
+      "plan": [
+        "###########################################3######################",
+        "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+        "#,,,!,!,!,!,!,!,!,!,!,!,!,!,!,!,,,,,,,!,!,!,!,!,!,!,!,!,!,!,!,!,,#",
+        "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+        "#,,,!,!,!,!,!,!,!,!,!,!,!,!,!,!,,,,,,,!,!,!,!,!,!,!,!,!,!,!,!,!,,#",
+        "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+        "#,,,!,!,!,!,!,!,!,!,!,b,!,!,!,!,,,,,,,!,!,!,!,!,!,!,!,!,!,!,!,!,,#",
+        "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+        "#,,,,,,,,,,@,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,r,,,,,,,,#",
+        "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+        "##################1#################2#############################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE LONG QUAY",
+          "at": [26, 8]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "berths",
+          "via": "1"
+        },
+        "2": {
+          "to": "past",
+          "via": "1",
+          "closed": {
+            "look": "A small ship tied up at the end of the quay, and a very long line, coiled, with its far end already out in the dark. It only goes one way, until somebody hauls you back. Nobody can quite tell you what's out there, and those who've been won't stop thinking about it.",
+            "use": "I take the small ship out on the long line, past the lamp."
+          }
+        },
+        "3": {
+          "to": "stair",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "b": {
+          "name": "A place in the rows",
+          "look": "Someone's left a space, just the right width. A woman in the next seat pats it and smiles at you, and you recognize her from the Meridian's second sitting. It looks very comfortable.",
+          "use": "I stop beside the empty seat, and I ask the woman how long she's been sitting here."
+        },
+        "r": {
+          "name": "The rows",
+          "look": "Hundreds of people, and you know some of them. They look well. They look better than they've looked in years. All of their heads are turned the same way, a little down and to the left.",
+          "use": "I walk along the rows and try to see what they're all facing."
+        }
+      }
+    },
+    "stair": {
+      "name": "The Stair of the Lamp",
+      "aliases": [
+        "stair of the lamp",
+        "the stair",
+        "the tower",
+        "the lamp tower",
+        "the climb"
+      ],
+      "desc": "The climb up the tower, with a landing for each people that's ever stood a watch here. Mugs have been left on tables, and there's still a ring in the bottom of each.",
+      "floor": "=_",
+      "colors": {
+        "floor": "#4e4a44",
+        "walls": "#a8a090",
+        "scenery": "#e8d8a8",
+        "writing": "#fffae8"
+      },
+      "plan": [
+        "###############################2###########################",
+        "#_________________________________________________________#",
+        "#__________________[=]m___________________________________#",
+        "#####################################=====#################",
+        "#_________________________________________________________#",
+        "#_______________________________[=]_______________________#",
+        "#=====#####################################################",
+        "#_________________________________________________________#",
+        "#__________[=]____________________________________________#",
+        "###################################=====###################",
+        "#___________________________________g_____________________#",
+        "#_________________________[=]_____________________________#",
+        "#=====#####################################################",
+        "#_________________________________________________________#",
+        "#_______@_________________________________[=]s____________#",
+        "####################1######################################"
+      ],
+      "writing": [
+        [3, 1, "ILUN"],
+        [3, 4, "ILARI"],
+        [3, 7, "VESHTI"],
+        [3, 10, "KORRUN"],
+        [3, 13, "THESSAN"]
+      ],
+      "labels": [
+        {
+          "text": "THE STAIR OF THE LAMP",
+          "at": [34, 13]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "quay",
+          "via": "3"
+        },
+        "2": {
+          "to": "highest",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "m": {
+          "name": "A mug on the top landing",
+          "look": "A plain cup, left on a stone table, on the monks' landing. There's still a ring in the bottom, and it's not dust. It could have been put down this morning, or a thousand years ago.",
+          "use": "I pick up the mug on the top landing and look at the ring in the bottom."
+        },
+        "s": {
+          "name": "A ring of pale metal",
+          "item": "gate_key",
+          "look": "A pale, seamless ring the size of a fist, sitting on the table on the Thessan landing as if somebody had meant to come back for it. It's a good deal heavier than it looks.",
+          "use": "I lift the pale ring from the table."
+        },
+        "g": {
+          "name": "A shard on the Korrun table",
+          "item": "beacon_shard",
+          "look": "A sliver of pale stuff, set on a very large table, with a scale beside it. The scale's been left in balance against nothing at all. Your back teeth start to ache.",
+          "use": "I look at the shard on the Korrun landing, and at what it's balanced against."
+        }
+      }
+    },
+    "highest": {
+      "name": "The Highest Room",
+      "aliases": [
+        "highest room",
+        "the top of the tower",
+        "the room below the lamp",
+        "the watch room"
+      ],
+      "desc": "A small plain room below the lamp, with a chair that fits no one living and a board on the wall. The board's the only thing in the whole Harbor that shows any wear.",
+      "floor": "'",
+      "colors": {
+        "floor": "#5a5040",
+        "walls": "#c8b890",
+        "scenery": "#fff0b0",
+        "writing": "#ffffff"
+      },
+      "plan": [
+        "         ##########################         ",
+        "   #####''''''''''''''''''''''''''''#####   ",
+        "###''''''''''''''''''''''''''''''''''''''###",
+        "##''''''''''''''''''''''''''''''''''''''''##",
+        "##'''''(_)c'''''''''''''''''''''[=====]b''##",
+        "##''''''''''''''''''''''''''''''''''''''''##",
+        "##''''''''''''''''''''''C'''''''''''''''''##",
+        "##''''''''''''''''''''''''''''''''''''''''##",
+        "###'''''''''''''''@''''''''''''''''''''''###",
+        "   #####''''''''''''''''''''''''''''#####   ",
+        "         ############1#############         "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE HIGHEST ROOM",
+          "at": [12, 2]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "stair",
+          "via": "2"
+        }
+      },
+      "people": {
+        "C": {
+          "id": "cantor",
+          "label": "The Cantor",
+          "asks": [
+            "What is this place, really?",
+            "Whose watch is this?"
+          ],
+          "greeting": "A silver figure stands beside the board, as if it's been standing there for a very long time. It turns, and it's already looking at you."
+        }
+      },
+      "things": {
+        "c": {
+          "name": "The chair",
+          "look": "It fits no one living. The arms are too long and the seat's too low, and it's the most worn chair you've ever seen. Somebody sat in it for a very long time, and when you touch it, it's still a little warm.",
+          "use": "I look at the chair, and I think about who sat in it."
+        },
+        "b": {
+          "name": "The board",
+          "look": "Names, in column after column, in every kind of writing you've seen on the way up the stair. Each of them is struck through, except the last. It's worn soft along the edges, from being touched.",
+          "use": "I read down the board, all the way to the last name."
+        }
+      }
+    },
+    "past": {
+      "name": "Past the Lamp",
+      "aliases": [
+        "past the lamp",
+        "beyond the lamp",
+        "the dark"
+      ],
+      "desc": "A place reached only in a small ship on a long line, where the light gives out. There are no stars out here.",
+      "floor": ".",
+      "colors": {
+        "floor": "#3b3b4d",
+        "walls": "#686881",
+        "scenery": "#868697",
+        "writing": "#b0b0c0"
+      },
+      "plan": [
+        "  <\\      /=>        <=\\          /==>        <\\        /=>       <==\\ ",
+        "    \\\\   //            \\\\       //             \\\\      //           \\\\ ",
+        "     \\\\ //              \\\\     //               \\\\    //             \\\\",
+        ".......................................................................",
+        ".......................................................................",
+        "1......................................................................",
+        ".................@................................s....................",
+        ".......................................................................",
+        ".......................................................................",
+        "     // \\\\     c        //     \\\\               //    \\\\             //",
+        "    //   \\\\            //       \\\\             //      \\\\           // ",
+        "  </      \\=>        <=/          \\==>        </        \\=>       <==/ "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "PAST THE LAMP",
+          "at": [28, 4]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "quay",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "s": {
+          "name": "An old ship, facing inward",
+          "look": "Older than any ship you've ever seen, of no shape you can name. It's not damaged. It's only stopped. Every one of them out here has its bow pointed the same way, and they're all silent.",
+          "use": "I bring the small ship up beside the old one, and I look at what it's looking at."
+        },
+        "c": {
+          "name": "A cold silver core",
+          "item": "choir_core",
+          "look": "Drifting at the very end of the line, turning slowly: a core of silver machinery, quite dead. Whatever it was part of came out here and stopped singing.",
+          "use": "I haul in the cold silver core on the end of a boathook."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Harbor plan",
+    "plan": [
+      "                              ^^^^^^^^^                              ",
+      "                               |  ^  |                               ",
+      "                               |\"\"\"\"\"|                               ",
+      "                               |;;;;;|                               ",
+      "                               |;;;;;|                               ",
+      "                               |;;;;;|                               ",
+      ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+      ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+      "   ...............................................................   ",
+      "   ...............................................................   ",
+      "    -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -    ",
+      "                      ~~~~~~~~~~~~~~~~~~~~~~~~                       ",
+      "                      ~~~~~~~~~~~~~~~~~~~~~~~~                       "
+    ],
+    "floors": {
+      "\"": "highest",
+      ";": "stair",
+      ",": "quay",
+      ".": "berths",
+      "~": "past"
+    },
+    "rooms": [
+      {
+        "level": "highest",
+        "at": [41, 2],
+        "text": "THE HIGHEST ROOM"
+      },
+      {
+        "level": "stair",
+        "at": [41, 4],
+        "text": "THE STAIR OF THE LAMP"
+      },
+      {
+        "level": "quay",
+        "at": [12, 6],
+        "text": "THE LONG QUAY"
+      },
+      {
+        "level": "berths",
+        "at": [28, 9],
+        "text": "THE BERTHS"
+      },
+      {
+        "level": "past",
+        "at": [28, 12],
+        "text": "PAST THE LAMP"
+      }
+    ]
+  }
+}

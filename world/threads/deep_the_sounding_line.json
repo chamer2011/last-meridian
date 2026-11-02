@@ -1,0 +1,46 @@
+{
+  "title": "Please Send Filters",
+  "kind": "exploration",
+  "places": ["maris"],
+  "minLevel": 4,
+  "after": null,
+  "people": ["lenn", "tharel", "sable"],
+  "factions": ["fleet", "ilun"],
+  "lead": "Dr. Lenn Corso of Maris Deep has been sending the same station report to every Concord address for months, to people who died in the Fall. The latest is a list of socks and nine thousand numbers, and it ends like all the others: Please do not come. Please send filters.",
+  "anyone": "Dr. Lenn Corso of Maris Deep has been sending the same station report to every Concord address for months, to people who died in the Fall. The latest is a list of socks and nine thousand numbers, and it ends like all the others: Please do not come. Please send filters.",
+  "gm": {
+    "truth": "Corso Station stands on stilts above a kelp-farmers' sea, over a First Builder structure he came to check the lattice against, eleven years ago, on a secret grant from Sable's old office (Project Plumbline). It matched. The structure is a sounding line: a gauge that measures how deep the sleep is. Sea-floor cores hold a hundred thousand years of its pulses, layer on layer, in a steady rhythm, until a break 1,006 years ago, a long slide since, and then, in the top few grains, a spike: six months ago the sleep went deeper than it has been in a thousand years. The Fall worked. It's already wearing off, faster than it rose: about eleven years until the gaps close, with whole towns sitting down long before that. Corso is far less mad than he sounds. Something in the structure reads the station's outgoing signals, so he hides his real reports inside the nonsense: the first word of each line, looked up in the Maris Tide Tables, gives the true data. He also takes down, in his sleep, something the structure keeps repeating. He doesn't know about the Fall. He's still making dinner for six. The other five went into the flooded levels months ago, and what comes to the galley door at shift change, wearing their clothes, is something the structure grows to look after itself. He calls them by name and leaves food out. 'Note: it doesn't hate us, Captain. Correction: it doesn't know we're here. Note: that's what all of this is for.' Arc clues: maris_numbers, boredom_not_noise if the data is followed up, silver_visitors by the date.",
+    "beats": [
+      "Reading the messages from the Meridian, or simply following them. A huge gas giant hauls the whole sea up and down forty meters twice a day. On the Rafts at slack water, friendly, weathered people won't go past the marker buoys, and they leave food on the station dock every week without asking who takes it.",
+      "Corso Station, on its stilts. The lights come on at seven. A table is laid for six. The Tide Levels flood and drain around you, and things have moved that the water couldn't have moved. Something has recently used the coffee machine.",
+      "Corso, thin and courteous: 'Note: you've arrived. Correction: you were expected Thursday. Correction: there are no Thursdays at this depth.' He has a lot to say, in no particular order. At shift change there's a knock at the galley door, and he takes out a plate. 'That's Hana. She's been off her food.'",
+      "The core. He lays it out on a long table, in bands like tree rings. Even an idiot could read it. There's the break. There's the slide. There's the spike. He asks the captain, honestly curious, what happened six months ago.",
+      "Telling him. Then what to do: taking him out may kill the only person reading the gauge, and him too. Leaving him is leaving him to the sea. And the captain now knows the worst week in history was good for the numbers. Who needs to hear that?"
+    ],
+    "routes": [
+      "Science: read the numbers (science), at the table or from far away. It's the cleanest proof in the game, and it can be put in front of anyone.",
+      "Hacker: crack the messages from orbit (hacking), with the Tide Tables from Sefu Anand or without, pull the station's logs and never go down there at all. It gives the shape, and nobody believes a graph.",
+      "Explorer: get in and out on the tide table (void_ops, piloting, survival, athletics). Flooding corridors, weed and a schedule that doesn't care. Something in the levels is drawn to warmth.",
+      "Doctor or talker: get through to him (medicine, persuasion). Bring Tharel's name and he'll weep. Bring filters and he'll be so pleased. Bring him some fresh fruit.",
+      "Resonant: stand on the gauge (attunement). You can feel the drop under your feet, the way you feel a stair that isn't there. Manifestation can hold a flooding bulkhead long enough to get the core out."
+    ],
+    "checks": [
+      "science:moderate to read the core and what the spike means",
+      "hacking:hard to break his messages without the Tide Tables",
+      "void_ops:hard to work the Tide Levels against the clock",
+      "medicine:moderate to reach Corso on a good day",
+      "attunement:hard to feel the depth of the sleep through the floor",
+      "manifestation:hard to hold a flooding bulkhead by will"
+    ],
+    "fights": [
+      "drowned_thing in the Tide Levels, wearing a station badge, drawn to warmth and light"
+    ],
+    "outcomes": [
+      "If Corso is brought up, he lives, he cries at the sight of a lemon and he's himself more often. The fleet gains an expert who can help with the Score or the Tuner. The gauge goes unread, and nobody knows how fast the clock is running after that.",
+      "If he's left, he keeps sending numbers and the captain can read them from the Meridian. One day a message is only numbers. One day it's only socks.",
+      "If the core is brought back, it's proof. Show it to Ouma, the Regent or Hollis-Nine. Tell the fleet, and it breaks people. Ione will ask to see it, and she'll look very calm.",
+      "If Tharel is told, he learns nobody took the last person he told, and that sending him here was his own doing. He rests easier anyway, and asks for a word with Sable."
+    ],
+    "rewards": "The maris_core_sample, Corso's friendship, a field_scanner and nutrient_gel from the station's stores. Filters, if anyone thought to bring them, are their own reward."
+  }
+}

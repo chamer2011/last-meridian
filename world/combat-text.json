@@ -1,0 +1,217 @@
+{
+  "attack": {
+    "firearms": {
+      "hit": [
+        "Your shot catches {enemy} square in the chest.",
+        "You fire twice, and the second round finds {enemy}.",
+        "You lead the target and put a round right where {enemy} was going."
+      ],
+      "miss": [
+        "Your shot goes wide and scorches the wall.",
+        "You fire, and {enemy} is already moving.",
+        "Your round sparks off the bulkhead beside {enemy}."
+      ],
+      "crit": [
+        "You have all the time in the world. The shot is perfect.",
+        "Your shot hits {enemy} exactly where it hurts most."
+      ]
+    },
+    "melee": {
+      "hit": [
+        "You step in and your blow lands hard on {enemy}.",
+        "You get past {enemy}'s guard and connect.",
+        "You drive {enemy} back with a brutal strike."
+      ],
+      "miss": [
+        "You swing, and {enemy} slips away.",
+        "{Enemy} turns your blow aside.",
+        "You overreach, and hit nothing but air."
+      ],
+      "crit": [
+        "Everything lines up, and your blow lands with all your weight behind it.",
+        "You find the opening and hit {enemy} as hard as you've ever hit anything."
+      ]
+    },
+    "engineering": {
+      "hit": [
+        "The tool spits fire, and {enemy} reels back from it.",
+        "You jam the {weapon} forward, and it bites into {enemy}.",
+        "A white-hot arc jumps from the {weapon} and catches {enemy}."
+      ],
+      "miss": [
+        "The arc snaps out and earths itself in the deck.",
+        "You lunge with the {weapon}, and {enemy} jumps clear.",
+        "The {weapon} sputters at the worst possible moment."
+      ],
+      "crit": [
+        "You find the one place the {weapon} will do real harm, and hold it there."
+      ]
+    },
+    "manifestation": {
+      "hit": [
+        "You reach out with the Resonance, and {enemy} staggers as if struck.",
+        "The air hums, and something invisible slams into {enemy}."
+      ],
+      "miss": [
+        "You reach for the Resonance, and it slips through your fingers.",
+        "The hum rises and fades, and {enemy} shakes it off."
+      ],
+      "crit": [
+        "For a moment the Resonance answers fully, and {enemy} is simply thrown."
+      ]
+    },
+    "unarmed": {
+      "hit": [
+        "You get a fist into {enemy}, and it hurts you both.",
+        "You grab {enemy} and slam your forehead forward."
+      ],
+      "miss": [
+        "You swing with your bare hands, and {enemy} leans out of the way.",
+        "You grab for {enemy}, and get nothing."
+      ],
+      "crit": [
+        "A wild, desperate punch lands exactly right."
+      ]
+    }
+  },
+  "abilities": {
+    "overcharged_shot": {
+      "hit": [
+        "You thumb the overcharge and fire. The bolt tears into {enemy}."
+      ],
+      "miss": [
+        "The overcharged bolt screams past {enemy} and melts the wall behind."
+      ]
+    },
+    "push": {
+      "hit": [
+        "The Resonance surges out of you and throws {enemy} backward, reeling."
+      ],
+      "miss": [
+        "You push with everything you have, and {enemy} leans into it and holds."
+      ]
+    },
+    "spike": {
+      "hit": [
+        "You find the handshake, slip through it and burn out its motor control. {Enemy} locks up."
+      ],
+      "miss": [
+        "{Enemy}'s defenses slam shut before your code gets through."
+      ]
+    },
+    "foresight": {
+      "hit": [
+        "You see the moment before it happens, and you're already striking when it arrives."
+      ],
+      "miss": [
+        "You see what's coming, but {enemy} sees you seeing it."
+      ]
+    },
+    "glare": {
+      "hit": [
+        "You fix {enemy} with a look that promises everything. {Enemy} freezes."
+      ],
+      "miss": [
+        "You give {enemy} your worst look, and {enemy} doesn't care."
+      ]
+    },
+    "field_patch": [
+      "You slap a dressing on the worst of it and clamp it down with your teeth."
+    ],
+    "evade": [
+      "You keep moving, low and unpredictable, and give {enemy} nothing to aim at."
+    ],
+    "rally": [
+      "You breathe, plant your feet and remember what this is for."
+    ]
+  },
+  "enemy": {
+    "intro": [
+      "{Enemy} comes at you."
+    ],
+    "hit": [
+      "{Enemy} hits you hard.",
+      "{Enemy}'s attack gets through, and you feel it.",
+      "You take the blow, and you stagger."
+    ],
+    "miss": [
+      "{Enemy} misses.",
+      "{Enemy}'s attack goes wide.",
+      "You get out of the way, barely."
+    ],
+    "crit": [
+      "{Enemy} catches you perfectly, and the world lurches."
+    ],
+    "stunned": [
+      "{Enemy} can't act this round."
+    ],
+    "defeated": [
+      "{Enemy} goes down."
+    ],
+    "joins": [
+      "{Enemy} joins the fight.",
+      "{Enemy} comes in from the side, and the odds get worse.",
+      "Another one. {Enemy} is on you too."
+    ]
+  },
+  "ally": {
+    "hit": [
+      "{Ally} lands a solid hit on {enemy}.",
+      "{Ally} gets past {enemy}'s guard and connects.",
+      "{Ally} catches {enemy} with a clean strike."
+    ],
+    "miss": [
+      "{Ally} goes for {enemy} and misses.",
+      "{Enemy} slips away from {ally}.",
+      "{Ally} lets fly at {enemy}, and hits nothing but the wall."
+    ],
+    "crit": [
+      "{Ally} catches {enemy} perfectly, and it's brutal to watch."
+    ],
+    "down": [
+      "{Ally} goes down, and doesn't get up.",
+      "{Ally} crumples to the deck."
+    ],
+    "joins": [
+      "{Ally} comes running in, and joins the fight at your side.",
+      "{Ally} arrives just in time, and wades in beside you."
+    ]
+  },
+  "enemyVsAlly": {
+    "hit": [
+      "{Enemy} turns on {ally} and lands a hard blow.",
+      "{Enemy} catches {ally} off guard.",
+      "{Ally} takes a hit from {enemy} and staggers."
+    ],
+    "miss": [
+      "{Enemy} goes for {ally}, and misses.",
+      "{Ally} gets clear of {enemy}'s attack."
+    ],
+    "crit": [
+      "{Enemy} catches {ally} perfectly, and it's ugly."
+    ]
+  },
+  "player": {
+    "cover": [
+      "You get behind whatever's closest and make yourself small."
+    ],
+    "fleeSuccess": [
+      "You see a gap, and you take it, and you don't look back."
+    ],
+    "fleeFail": [
+      "You break for it, and {enemy} cuts you off."
+    ],
+    "fleeBoss": [
+      "There's no outrunning this one. Every exit is the same exit."
+    ],
+    "survivor": [
+      "It should have ended you. You refuse, and you stay standing."
+    ],
+    "defeat": [
+      "Your legs stop working, and the deck comes up to meet you."
+    ],
+    "wound": [
+      "That one's going to last."
+    ]
+  }
+}

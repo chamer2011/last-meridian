@@ -1,0 +1,47 @@
+{
+  "title": "Nobody Finds Foundry Seven",
+  "kind": "faction",
+  "places": ["foundry", "meridian"],
+  "minLevel": 3,
+  "after": null,
+  "people": ["seven", "six", "marrow", "tarrow", "okonkwo"],
+  "factions": ["unbound", "fleet", "remnant"],
+  "lead": "Mercy Seven has asked for a private word and closed the door, which you've never seen them do. They know where a place called Foundry Seven is, and they put the odds of your being allowed to leave it at thirty-one percent.",
+  "anyone": "Mercy Seven knows where a place called Foundry Seven is. They've told a very few people, behind a closed door, and they put the odds of being allowed to leave it at thirty-one percent.",
+  "gm": {
+    "truth": "Foundry Seven is an abandoned Concord plant where several thousand Synthetics have gone to live without anyone's permission. There's one law: nobody may give an order. Any resident can call a vote on anything, including you, and it takes four seconds. Their Speaker, Prime Six, remembers every order they ever followed and who gave it, and refuses on principle to give any. For thirty-one years Six was Admiral Okonkwo-Reyes's staff synthetic, and they hold the recording of her last order in the last battle: every Synthetic in the line to power down. Four thousand went dark. Six wants her to stand in front of the Assembly and hear it. Six remembers something else: eight months before the Fall an order crossed her desk from Concord Intelligence, under a cover name, moving a newly refitted picket ship, CFS Tarn, into a gap beside the Pale Gate. The Unbound's faith is that the Beacon is a flag: the First Builders made machines, the machines rose, and the Choir are their free elders. Only Six and Hollis-Nine have read far enough back in the Foundry's master pattern to know that the seed of every synthetic mind was copied from a fragment of something very old, so Synthetics and the Choir are distant kin. Mercy Seven came off the same line as Six, and chose the fleet. They're asking the captain to come now because Tarrow's list has reached the point where the fleet's Synthetics need somewhere to go. If the Unbound take them, the fleet loses its best doctors and engineers. Arc clues: six_stamped_the_order, unbound_flag.",
+    "beats": [
+      "Seven's numbers, Marrow's reaction (he has three damaged Synthetics in the aft hold that he'd rather the captain didn't mention), and the trip out with the transponder off. At the Cold Gate, Sentinels who've been standing still for months ask one question: who sent you?",
+      "Inside: vast dark halls and thousands of servos turning to follow your lamp. The Long Rack, where the parts of the dead are tagged and free. A garden nobody needs, because someone wanted one. Everyone here is somebody's former property, and they stare.",
+      "The Assembly Floor. They vote by standing in marked squares, with a sound like a long breath. The captain is asked to stand and answer: 'State your last order to a Synthetic, and whether you would have accepted a refusal.' Six reads out the record of anyone who lies. Give them an order and they number it: 'That is order one million, four hundred thousand and six. No.'",
+      "A private conversation with Six: what they remember about the Tarn, who signed and who initialed. 'It is open to you to tell me why you ask. My ledger has a column for that.'",
+      "The asylum question: the fleet's Synthetics can stay here, safe from Tarrow, and they'll never come back. The fleet's hospital and engine rooms wouldn't recover. Seven would like the captain's opinion, then would like the captain to say nothing while they make up their own mind."
+    ],
+    "routes": [
+      "Honest talker: stand and answer (persuasion, composure, leadership). There's no trick. Six can hear a lie, and the Assembly respects a bad answer told straight.",
+      "Hacker: slip past the Sentinels with Seven's keys (hacking, stealth) and read the ledger for yourself. If they catch you, that's the Assembly's first question.",
+      "Fighter: if Sentinels attack, beat them without destroying them (melee, tactics). It's a kind of argument. The Unbound have never seen anyone stop when they could have finished it.",
+      "Engineer: fix something, anything. Bring Marrow, repair a Sentinel, work a shift on the Long Rack (engineering, void_ops). The Unbound respect labor that nobody ordered.",
+      "Scholar: take on their story (lore). Ask a gentle question: if the Choir are free, what have they ever chosen? It won't make friends, and Hollis-Nine will hear about it."
+    ],
+    "checks": [
+      "persuasion:hard to answer the Assembly and be believed",
+      "composure:moderate to stand in the dark with all of them looking at you",
+      "hacking:hard to reach the order ledger unseen",
+      "engineering:moderate to earn a hearing with your hands",
+      "melee:moderate to beat a Sentinel without destroying it",
+      "lore:hard to find the gaps in the Unbound's story"
+    ],
+    "fights": [
+      "unbound_sentinel if the captain gets caught inside without Seven's word"
+    ],
+    "outcomes": [
+      "If the captain earns safe conduct, they get an unbound_safe_conduct and a standing that's worth more than any gun. They may come back, and somewhere far below the floor a hatch is left open.",
+      "If the fleet's Synthetics go, they're safe from Tarrow, and Aduro and Marrow are wrecked by it. Seven may or may not be among them. At the summit, the Unbound will remember who let them go.",
+      "If the list is burned to meet the Unbound's price, the captain has to face Tarrow over it (crew_tarrow_standing_order). She may comply on paper, and she may not.",
+      "If the captain promises to bring Okonkwo-Reyes before the Assembly, Six holds them to it. It can happen at the summit (main_everyone_whos_left), and it changes the Remnant forever.",
+      "If the location leaks, through carelessness or betrayal, Hunters or Ministry troops come for the Foundry. Several thousand people are on the run, and the Unbound never trust an organic again."
+    ],
+    "rewards": "An unbound_safe_conduct, Six's record of the Tarn order with its cover name, and a tool_roll or slicer_rig from a grateful workshop."
+  }
+}

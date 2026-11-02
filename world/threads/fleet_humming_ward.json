@@ -1,0 +1,61 @@
+{
+  "title": "Ward Six Has Stopped Dying",
+  "kind": "mystery",
+  "places": [
+    "anselm"
+  ],
+  "minLevel": 5,
+  "after": null,
+  "people": [
+    "wen",
+    "pavel",
+    "oskar",
+    "tarrow",
+    "seven",
+    "aduro",
+    "tessaly"
+  ],
+  "factions": [
+    "fleet",
+    "quiet"
+  ],
+  "lead": "Nobody has died in Ward Six of Anselm's Mercy in twenty-three days. Dr. Adeyemi should be thrilled. They've asked you to come in person, and to please leave Lieutenant Tarrow behind.",
+  "anyone": "Nobody has died in Ward Six of Anselm's Mercy in twenty-three days. Dr. Adeyemi should be thrilled. They've started keeping people out of there, and they've asked that nobody tell Lieutenant Tarrow.",
+  "gm": {
+    "truth": "Pavel Ostrov, a piano tuner from Aurelis, woke from a coma humming and doesn't know he does it. The tune, three falling notes and one rising, is a phrase of the song's oldest verse. (If main_visiting_hours has been played, this comes some time after it.) Wen keeps him among the dying in Ward Six on purpose, and here's why: the ward has started humming along without waking, and their vital signs have leveled out. It averaged a death a day, and it has now had none for twenty-three days. The round steadies a failing mind, because holding minds together is exactly what the song is for. The cost: everyone who recovers keeps humming, and they all stay in perfect time, even across ships, with no signal any instrument can find. Two discharged patients on the Tollan Arms keep time with Ward Six to the beat. Attunement can feel a thin thread running from each of them out into the dark. Wen has two hundred more dying patients and wants to move them in next to Pavel. The catch, which nobody will guess: one Choir scout has shifted course toward the fleet, and it isn't hunting. The old frontier stories about silver visitors at deathbeds are true, and it can't bear watching people die where it can't reach them. If crew_pell_letters has been played, bed forty is in this ward.",
+    "beats": [
+      "The tour: clean, quiet, tired nurses starting to cry for joy. Underneath it, a tune the captain has heard somewhere. Pavel asks when he can see his daughter Mila, and he's lovely. She's seven and alive on the Sundial, and nobody has told her he's awake, because nobody knows what he is.",
+      "Wen's chart. They want the captain's signature to move two hundred patients in. They know exactly what it sounds like.",
+      "Someone matches the tune: Lira, Iven or Aduro. A nurse's child has started humming it at school.",
+      "It gets out. Oskar Lind arrives, asking only to sit with them. Tarrow arrives, asking only for Pavel. Tessaly Marsh turns up on the Gallery with a very large offer for him. Garrick Fenn is a day behind them all.",
+      "The scout's new course comes in. If nobody stops it, there's the night it arrives: a single silver figure walks onto Ward Six, past the nurses, sits down by the worst bed and takes the patient's hand. It doesn't do anything else. Now the captain has to choose."
+    ],
+    "routes": [
+      "Science and medicine: work with Aduro and Seven to isolate the useful phrase and remove whatever carries it, if that's possible. It may take more days than the ward has.",
+      "Attunement: sit with them and find out what the thread is connected to. Manifestation might cut it, one patient at a time, and nobody knows if a patient survives that.",
+      "Security: engineering and tactics to shield the ward, move Anselm's Mercy to the fleet's edge, or quietly station the Meridian between the hospital and the scout.",
+      "People: persuasion to keep out Oskar's followers and Tarrow's marines, and to sit down with Pavel and tell him what he is.",
+      "Face the visitor: composure and persuasion, if it comes. It will answer a polite question gently, and it won't understand why everyone is shouting."
+    ],
+    "checks": [
+      "medicine:moderate to confirm the ward's vital signs are real",
+      "science:very_hard to isolate the phrase from whatever carries it",
+      "attunement:hard to feel the thread",
+      "manifestation:very_hard to cut one thread without killing the patient",
+      "engineering:hard to shield a whole ward with what's on hand",
+      "persuasion:moderate to tell Pavel Ostrov the truth kindly"
+    ],
+    "fights": [
+      "quiet_zealot group if they try to carry Pavel off",
+      "choir_mimic, the silver visitor, if anyone opens fire on the ward. It wears a face from Dr. Adeyemi's list, and it would rather not"
+    ],
+    "outcomes": [
+      "Expanded: Wen saves two hundred more, and the hum can be heard through the hull. Scouts keep shifting course, and someday the captain will have to move the whole ward or defend it. The lives saved are real, and they all hum.",
+      "Stopped: Pavel is moved and sedated. The patients begin to die again, at a death a day, and the nurses remember who signed for it.",
+      "Cleaned up: if the science route works, there's a version with no thread. Wen saves a third as many. The fleet gains a real medical tool, and the first evidence of what the song is for.",
+      "Tarrow gets Pavel: she doesn't hurt him. She just asks him questions, in a room with no windows, and he hums. The ward starts dying, and the fleet finds out why.",
+      "The visitor stays: the dying on Ward Six are held by silver hands, and when they go, they're kept. Half the fleet calls it an invasion and half asks where to sign up. The Quiet treble, and nobody can say it didn't help."
+    ],
+    "rewards": "A surgeon_lens, Wen's gratitude, and a major clue that the song is meant to hold minds together."
+  }
+}

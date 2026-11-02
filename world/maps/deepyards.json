@@ -1,0 +1,407 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "The Veshti Deepyards",
+  "start": "rinse",
+  "levels": {
+    "rinse": {
+      "name": "The Rinse",
+      "aliases": [
+        "rinse",
+        "the arrivals lock",
+        "arrivals lock",
+        "arrivals",
+        "the lock"
+      ],
+      "desc": "The arrivals lock, where visitors are scrubbed by tall bored attendants to get the planet off them. It takes hours, and it's not only for show. They keep the swabs.",
+      "floor": ".",
+      "colors": {
+        "floor": "#2e4a5c",
+        "walls": "#6ea0bc",
+        "scenery": "#a0e0ff",
+        "writing": "#e0f8ff"
+      },
+      "plan": [
+        "##############################################################",
+        "#.....................................................#......#",
+        "#..|~|..|~|..|~|..|~|..|~|..|~|..|~|..|~|..|~|..|~|..|#..[]..#",
+        "#..|~|..|~|..|~|..|~|..|~|..|~|..|~|..|~|..|~|..|~|..|#..[]..#",
+        "#............................................................#",
+        "1............................................................#",
+        "#......................................a.....................#",
+        "#..........@.................................................2",
+        "#............................................................#",
+        "#...[=========]s...............................k[====].......#",
+        "#............................................................#",
+        "##############################################################"
+      ],
+      "writing": [
+        [12, 0, "PLANETS ARE DIRTY. YOU ARE NOT TO BLAME."]
+      ],
+      "labels": [
+        {
+          "text": "THE RINSE",
+          "at": [3, 8]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "cut",
+          "via": "1"
+        },
+        "2": {
+          "to": "dock",
+          "via": "1",
+          "closed": {
+            "look": "A long pale hatch into the yards, and a long pale attendant with a slate. You can't simply walk up to a Veshti. You need a sponsor, and you've got to be clean, and only one of those is up to you.",
+            "use": "I tell the attendant at the hatch that I've business with the Ao-Vash, and I ask who could sponsor me."
+          }
+        }
+      },
+      "people": {},
+      "things": {
+        "s": {
+          "name": "The rack of swabs",
+          "look": "Hundreds of labeled tubes, each with a little of someone in it. The labels go back farther than you'd like, and yours is already in the rack.",
+          "use": "I ask the attendant what they do with the swabs."
+        },
+        "k": {
+          "name": "A locker of Veshti skin",
+          "item": "veshti_skin",
+          "look": "Folded pressure layers, as thin as paper. The attendants wear them under everything. It's only polite to ask, and it isn't cheap.",
+          "use": "I ask what it'd cost to be fitted for a Veshti skin."
+        },
+        "a": {
+          "name": "A tall bored attendant",
+          "look": "Well over two meters of pale patience, holding a stiff brush as if it were a pen. They've done this to admirals. They don't seem to think you're any dirtier than most.",
+          "use": "I ask the attendant how long this is going to take, and why."
+        }
+      }
+    },
+    "dock": {
+      "name": "The Long Drydock",
+      "aliases": [
+        "long drydock",
+        "the drydock",
+        "drydock",
+        "the yard",
+        "the yards",
+        "ao-vash yard"
+      ],
+      "desc": "Ao-Vash Family's great yard, the last in known space that can refit a frigate. It's a kilometer of gantries and sparks, and each cutter on it answers to the Yardmother.",
+      "floor": ":",
+      "colors": {
+        "floor": "#2c3e54",
+        "walls": "#5a7ea0",
+        "scenery": "#ffd080",
+        "writing": "#fff0d0"
+      },
+      "plan": [
+        "###########################################################################",
+        "#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::|:::::::|:::::::|:::::::|:::::::|:::::::|:::::::|:::::::|:::::::|::::::#",
+        "#::|=======|=======|=======|=======|=======|=======|=======|=======|::::::#",
+        "#::::____________________________________________________________:::::::::#",
+        "#:::/   /   /   /   /   /   /   /   /   /   /   /   /   /   /   /  \\::::::#",
+        "1::<    *    *    *    *    *    *    *    *    *    *    *    *    >:::::#",
+        "#:::\\___\\___\\___\\___\\___\\___\\___\\___\\___\\___\\___\\___\\___\\___\\___\\__/::::::#",
+        "#:::::::::::::::f:::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::|=======|=======|=======|=======|=======|=======|=======|=======|::::::#",
+        "#::|:::::::|:::::::|::::::I|:::::::|:::::::|:::::::|:::::::|:::::::|::::::#",
+        "#:::::@:::::::::::::::::::::::::::::::::::::::g:::::::::::::::::::::::::::2",
+        "###########################################################################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE LONG DRYDOCK",
+          "at": [3, 1]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "rinse",
+          "via": "2"
+        },
+        "2": {
+          "to": "rings",
+          "via": "1"
+        }
+      },
+      "people": {
+        "I": {
+          "id": "ilkin",
+          "label": "Ao-Vash",
+          "asks": [
+            "What would a refit cost, Yardmother?",
+            "What do I have to do to earn a longer name?"
+          ],
+          "side": "left"
+        }
+      },
+      "things": {
+        "f": {
+          "name": "The frigate on the slip",
+          "look": "A warship's bare ribs with sparks raining through them. Each cutter is singing the same very slow song, and the work keeps time with it.",
+          "use": "I ask a cutter whose frigate this is, and how long a refit like it would take."
+        },
+        "g": {
+          "name": "A pair of pilot's gloves",
+          "item": "pilot_gloves",
+          "look": "Worn flight gloves, rewired at the fingertips, left on a gantry rail. Veshti pilots have long hands, but these have been cut down for someone who didn't.",
+          "use": "I ask whose gloves these are, left on the gantry rail."
+        }
+      }
+    },
+    "rings": {
+      "name": "The Hearth Rings",
+      "aliases": [
+        "hearth rings",
+        "the rings",
+        "family rings",
+        "family habitats",
+        "the habitats"
+      ],
+      "desc": "Slow-spinning family habitats, with ancestors' names hung on every rail. Each ring is lit and warm and very tidy, though you rarely see many people in them.",
+      "floor": "~",
+      "colors": {
+        "floor": "#4a3a2c",
+        "walls": "#a88a60",
+        "scenery": "#ffd8a0",
+        "writing": "#fff4e0"
+      },
+      "plan": [
+        "           ####################################            ",
+        "    #######~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#######     ",
+        "  ####~~~~~~~~-=-=-=-=-=-=-=-=-=-=-=-=-=-=~~~~~~~~~~~####  ",
+        "###~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~###",
+        "##~~~~~~~~~~~~~~~####################~~~~~~~~~~~~~~~~~~~~##",
+        "##~~~~~~~~~~#####                    #####~~~~~~~~~~~~~~~##",
+        "1~~~~~~~~~~~##       .----------.        ##~~~~~~~~~~~~~~##",
+        "##~~~~~~~~~~##       |          |        ##~~~~~~~~~~~r~~##",
+        "##~~~@~~~~~~#####    '----------'    #####~~~~~~~~~~~~~~~##",
+        "##~~~~~~~~~~~~~~~####################~~~~~~~~~~~~~~~~~~~~##",
+        "###~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~###",
+        "####~~~~~~~~-=-=-=-=-=-=-=-=-=-=l=-=-=-=-=~~~t~~~~~~~~~####",
+        "    #######~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#######     ",
+        "           ####################################            "
+      ],
+      "writing": [
+        [24, 7, "HEARTH"]
+      ],
+      "labels": [
+        {
+          "text": "THE HEARTH RINGS",
+          "at": [18, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "dock",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "r": {
+          "name": "A rail of names",
+          "look": "Nine generations hung on brass tags, each tag polished by the same hand that hung the next one. It's very tidy. Nobody's said anything to you, and you know you're being watched by someone.",
+          "use": "I read the names along the rail, slowly, the way you're supposed to."
+        },
+        "l": {
+          "name": "A longrifle on its pegs",
+          "item": "veshti_longrifle",
+          "look": "As long as its owner, and made for shots across open vacuum. It's hung where a family might keep a clock. The tag beside it has a name on it and a date.",
+          "use": "I ask whose longrifle this is, and what it would mean to be offered one."
+        },
+        "t": {
+          "name": "A pot of smoky tea",
+          "look": "Spiced and very hot, on a little stove clamped to the rail. A cup's been set out on the side away from the door. You're not sure it's meant for you.",
+          "use": "I sit down by the tea and wait until someone tells me I may have some."
+        }
+      }
+    },
+    "cut": {
+      "name": "The Ice Cut",
+      "aliases": [
+        "ice cut",
+        "the cut",
+        "the trawler berths",
+        "melt-works",
+        "the melt-works"
+      ],
+      "desc": "Trawler berths and melt-works at the rough edge of the ring, where the low branches of the Families work and drink. Exiles can get a meal here, as long as nobody says their name.",
+      "floor": ".",
+      "colors": {
+        "floor": "#3a4a58",
+        "walls": "#7e96a8",
+        "scenery": "#b0d4ec",
+        "writing": "#f0fbff"
+      },
+      "plan": [
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+        "%%%%%%%%.....<=====>.......<========>......<===>........%%%%%%%%%%%%",
+        "%%%%..........................................................%%%%%%",
+        "%%%..................................T........................%%%%%%",
+        "1..........@............................<==>n..................%%%%%",
+        "%%..............................................................%%%%",
+        "%%...(===)(===)(===)m.........[==========]d......................%%%",
+        "%%................................................................%%",
+        "%%%%...............................................................2",
+        "%%%%%%%%%%%....................................%%%%%%%%%%%%%%%%%%%%%",
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE ICE CUT",
+          "at": [5, 2]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "rinse",
+          "via": "1"
+        },
+        "2": {
+          "to": "moorings",
+          "via": "1"
+        }
+      },
+      "people": {
+        "T": {
+          "id": "tamsin",
+          "label": "Tamsin",
+          "asks": [
+            "Where does that chart of yours really go?",
+            "What did they exile you for?"
+          ]
+        }
+      },
+      "things": {
+        "m": {
+          "name": "The melt-works",
+          "look": "Huge vats of berg water, boiling off into pipes, with the smell of iron and old ice. Nearly all the water in this yard came through here, and nobody thanks the people who run it.",
+          "use": "I stop by the melt-works and ask the crew how things are at the rough end of the ring."
+        },
+        "n": {
+          "name": "A patched skiff",
+          "item": "nav_slate",
+          "look": "Tamsin's skiff, hull patched in six colors, with a nav slate strapped to the console. The corrections on it are in four different hands, and the last one's still wet.",
+          "use": "I ask Tamsin what they want for that nav slate."
+        },
+        "d": {
+          "name": "The drinking table",
+          "look": "A long table, cut from a trawler's hatch. Nobody here is using a full name. Someone slides a cup along it to you without looking up.",
+          "use": "I sit down at the drinking table and drink what's slid to me."
+        }
+      }
+    },
+    "moorings": {
+      "name": "The Dark Moorings",
+      "aliases": [
+        "dark moorings",
+        "the moorings",
+        "mothballed ships",
+        "the mothballed ships"
+      ],
+      "desc": "A long row of mothballed family ships, tethered in the ice's shadow for generations. No one goes there.",
+      "floor": "_",
+      "colors": {
+        "floor": "#2e3d55",
+        "walls": "#576a84",
+        "scenery": "#7e96b4",
+        "writing": "#c0d4f0"
+      },
+      "plan": [
+        " *           .              *              .           *              .   ",
+        "   <============>      <==============>      <===========>     <=========>",
+        "          |                    |           s       |                |     ",
+        "1_____________________________________________________________________    ",
+        "______________________@_______________________________________________    ",
+        "_________________________________________f____________________________    ",
+        "______________________________________________________________________    ",
+        "          |                    |                   |                |     ",
+        "   <===============>     <===========>       <============>   <=======>   ",
+        "                                                               .          ",
+        " .           *               .              *            .                "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE DARK MOORINGS",
+          "at": [26, 6]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "cut",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "f": {
+          "name": "Frost on a tether",
+          "look": "The frost on this tether is a century thick. On the next one along, there are fresh marks where something's been clipped on and off, and not very long ago.",
+          "use": "I look closely at the marks on the tether."
+        },
+        "s": {
+          "name": "A fuel gauge, lit",
+          "look": "You wipe the frost off a viewport, and on the panel inside there's one small light. The tanks read full. They read full on the next ship too, and the next.",
+          "use": "I try to see who's been keeping these ships fueled."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Yard map",
+    "plan": [
+      ".    *     .      <><><>     *       .     <><>     *    ..",
+      "*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*",
+      "|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|",
+      "|=========================================================|",
+      "|;;;;;;;;;;;;;;;;;|.............|:::::::::::::::::::::::::|",
+      "|;;;;;;;;;;;;;;;;;|.............|:::::::::::::::::::::::::|",
+      "|=========================================================|",
+      "|,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,|",
+      "|,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,|",
+      "'_________________________________________________________'"
+    ],
+    "floors": {
+      "~": "moorings",
+      ";": "cut",
+      ".": "rinse",
+      ":": "dock",
+      ",": "rings"
+    },
+    "rooms": [
+      {
+        "level": "moorings",
+        "at": [21, 2],
+        "text": "THE DARK MOORINGS"
+      },
+      {
+        "level": "cut",
+        "at": [4, 5],
+        "text": "THE ICE CUT"
+      },
+      {
+        "level": "rinse",
+        "at": [21, 5],
+        "text": "THE RINSE"
+      },
+      {
+        "level": "dock",
+        "at": [37, 5],
+        "text": "THE LONG DRYDOCK"
+      },
+      {
+        "level": "rings",
+        "at": [21, 8],
+        "text": "THE HEARTH RINGS"
+      }
+    ]
+  }
+}

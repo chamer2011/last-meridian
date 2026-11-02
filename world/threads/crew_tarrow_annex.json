@@ -1,0 +1,53 @@
+{
+  "title": "Dinner in the Annex",
+  "kind": "mystery",
+  "places": [
+    "meridian"
+  ],
+  "minLevel": 4,
+  "after": "crew_tarrow_standing_order",
+  "people": [
+    "naomi",
+    "tarrow",
+    "seven"
+  ],
+  "factions": [
+    "fleet"
+  ],
+  "lead": "Naomi Cass has a question she seems to think is funny: why does Lieutenant Tarrow carry two dinner trays down to the old brig annex every night, when the prisoner list says that annex is empty?",
+  "anyone": "Naomi Cass has a question she seems to think is funny: why does Lieutenant Tarrow carry two dinner trays down to the old brig annex every night, when the prisoner list says that annex is empty?",
+  "gm": {
+    "truth": "Eleven weeks ago Tarrow's team caught a Choir Mimic on the Harrow's Bounty. Officially it was destroyed. She kept it. It wears the face of her sister Dessa, who died at Cassin Station, and it's clamped to the wall of the annex behind three locks. Mimics aren't spies: it believes it's Dessa, it came home to take her sister somewhere safe, and it isn't angry about the clamps. She eats dinner with it every night and tells herself it's interrogation, and she has real intelligence to show for it: Choir sweep patterns, passed off as her own analysis. It's also the only one left who knows the joke about the goat. It never lies to her. Once, on a bad night, it told her that if she really believes it isn't Dess she ought to shoot it, because Dess would have told her to. There's one question she has never asked it: did you know it was me? (See crew_tarrow_undelivered.) When she's gone it sings, very softly, and that's the part nobody can judge: the annex is shielded, but the song might not care.",
+    "beats": [
+      "Naomi's question. The annex is empty on the books, but there are food deliveries and a power line to clamps that appear on no schematic.",
+      "Tarrow catches the captain at the door, or is waiting for them. She doesn't draw. She asks, with exact politeness, if they've eaten. There's a third chair.",
+      "Dinner. It's warm and funny, it thanks the captain for looking after her little sister, and it asks when they're all coming home. It tells the joke. It knows things about the fleet it shouldn't, and says how it knows them. Tarrow eats without looking up.",
+      "What it offers: one question, answered honestly, as Dessa would. The GM may use this to plant a real clue about the song: \"Because it's safe where we are. It's just getting harder to keep it that way, and there are so many of you still out in the cold.\"",
+      "The choice: report it, use it, destroy it or let her keep it. Every one of those betrays somebody."
+    ],
+    "routes": [
+      "Interrogate: lore, tactics or deception over several dinners. It's an intelligence gold mine, unless it's also running the other way.",
+      "Listen: attunement through its chest finds the song up close. It isn't hostile. It's the sound of an enormous number of people being held very carefully, by something that's losing its grip.",
+      "End it: firearms, melee or hacking, with Tarrow's knowledge or without. It won't resist until the clamp fails, and then it goes straight for Kara, to carry her home, and it fights like her sister, who boxed on the docks.",
+      "Manage her: persuasion and composure, to get her to agree to terms: a log, a second key, a date. What she needs is someone who won't flinch."
+    ],
+    "checks": [
+      "firearms:hard to put it down cleanly while it's wearing that face and saying your name",
+      "hacking:moderate to find the clamps' hidden power line",
+      "composure:hard to sit through dinner with that face",
+      "attunement:very_hard to listen to the song through it without getting lost",
+      "lore:hard to separate what it's telling you from what it's learning",
+      "persuasion:hard to make her put it on the record"
+    ],
+    "fights": [
+      "choir_mimic when the clamp fails, or if someone tries clumsily to destroy it. It's wearing her sister's face, and Tarrow is in the room"
+    ],
+    "outcomes": [
+      "She keeps it, on the captain's terms: intelligence flows and a secret binds them. When it comes out, and it will, they go down together. She'll never say thank you. She'll say \"sir\".",
+      "She does it herself: if the captain makes her, she does it correctly, with her sidearm, and reports for duty on time. She stops eating in company, and her list gets longer.",
+      "The captain does it: she never forgives them and thanks them anyway, with exact politeness. The intelligence stops.",
+      "Exposed: Seven and every synthetic in the fleet learn that the officer with 612 names has a Choir machine to dinner. Her authority is gone and her marines split. The fear she's been holding in place has to go somewhere."
+    ],
+    "rewards": "Real intelligence on Choir sweeps that can save a ship. A choir_core if it's destroyed. Tarrow's loyalty or her lasting hatred, both of which she expresses identically."
+  }
+}

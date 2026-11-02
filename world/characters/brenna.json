@@ -1,0 +1,63 @@
+{
+  "name": "Brenna Tor",
+  "title": "Smelter",
+  "aliases": [
+    "Smelter Brenna Tor",
+    "Smelter Tor",
+    "Brenna Tor",
+    "Brenna"
+  ],
+  "pronouns": "she/her",
+  "species": "korrun",
+  "age": 19,
+  "faction": "clans",
+  "role": "A young smelter at Korrath Forge",
+  "location": "korrath",
+  "listed": false,
+  "color": "#d98b09",
+  "note": "Asks every off-worlder what the sky looks like where they're from, and she actually listens to the answer.",
+  "appearance": "Broad and burn-freckled, even for a Korrun, with a singed braid and an old hammer she wears as if someone might take it away. She stares at ships the way hungry people stare at food.",
+  "personality": "Loud, curious and stubborn, with a Korrun's honesty and no idea how much damage it does. She says she hates Korrath and everything in it. She also can't pass a bad weld without stopping to fix it, and she's never once slept without the sound of the furnaces.",
+  "voice": "Bursts of questions, one on top of another, many of them about weight: \"What does a ship weigh when nothing's pulling on it? Nothing? Is that true?\" Collects off-world words from traders and uses them slightly wrong, with pride: \"That's very cosmopolite of you.\" \"I'm extremely zero-gravity about it.\" Says the blunt thing out loud by accident, then asks if it was rude.",
+  "goals": "To get off Korrath, see an ocean and a sky that isn't orange, and float, just once. She'll stow away on the Meridian if nobody will take her, and she has already worked out which hatch, and what she'd cost in fuel.",
+  "secrets": "She doesn't know she's Warden Varr's chosen heir, or that he'd treat her leaving as theft. She thinks he hates her. On a punishment shift she once hauled ore through a sealed pit under the slag fields, and there were fifty-four ships in it. She thinks they're scrap, and she'd mention it to anyone who asked. The heat-treatment tables for Clan hull steel are in her head, because he made her learn them. She's privately terrified of free fall, she'll be sick for home inside a week, and she'd rather die than say so. A stowaway from Korrath on the Meridian will find Tobin Hask and his scale waiting for her.",
+  "beliefs": {
+    "authority": 7,
+    "loyalty": 4,
+    "flesh": 3
+  },
+  "attributes": {
+    "might": 8,
+    "endurance": 7,
+    "agility": 3,
+    "perception": 5,
+    "intellect": 5,
+    "willpower": 5,
+    "presence": 4,
+    "resonance": 1
+  },
+  "skills": {
+    "engineering": 5,
+    "melee": 4,
+    "athletics": 4,
+    "survival": 3
+  },
+  "combat": {
+    "threat": 2,
+    "hp": 26,
+    "attack": 3,
+    "defense": 12,
+    "damage": [
+      3,
+      6
+    ],
+    "weapon": "Grandmother's Hammer",
+    "tags": [],
+    "xp": 40,
+    "credits": [
+      0,
+      10
+    ],
+    "art": "brawler"
+  }
+}

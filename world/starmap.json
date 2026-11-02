@@ -1,0 +1,40 @@
+{
+  "_note": "The star map. Each place has a spot on the chart (x is the column, y is the row), a short name to draw there, how dangerous it is from 0 to 4, and who controls it if its place file doesn't say. yields is what the work crews can gather there each day, on the matching crew order. trade is what the fleet can buy there, in credits for each unit. charted places are known to everyone from the start. fare in jumps is what a passage costs anyone without a fleet of their own, and passage says how long it takes and how much dearer each step of danger makes it. noPassage means nobody runs a ship there. Restart the game after changing this.",
+
+  "cols": 78,
+  "rows": 23,
+  "start": { "x": 45, "y": 12 },
+  "openSpace": "Open space",
+  "dangerLevels": ["Safe", "Some risk", "Risky", "Dangerous", "Deadly"],
+
+  "jumps": {
+    "shortest": { "reach": 20, "fuel": 1, "hours": 1, "fare": 15 },
+    "medium": { "reach": 40, "fuel": 2, "hours": 1.5, "fare": 30 },
+    "long": { "reach": 999, "fuel": 3, "hours": 2, "fare": 50 }
+  },
+  "passage": { "hours": 18, "dangerFare": 0.25 },
+
+  "places": {
+    "haven": { "x": 34, "y": 10, "short": "Haven Station", "danger": 1, "charted": true, "control": "The Syndicate's money, and everyone's truce", "yields": { "medicine": 1, "parts": 1.5 }, "trade": { "food": 6, "fuel": 40, "medicine": 28, "parts": 22 } },
+    "kessara": { "x": 52, "y": 7, "short": "Kessara Drift", "danger": 2, "charted": true, "yields": { "fuel": 0.4, "parts": 3 }, "trade": { "fuel": 34, "medicine": 40, "parts": 18 } },
+    "ilun": { "x": 26, "y": 3, "short": "Ruins of Ilun", "danger": 1, "charted": true, "yields": { "medicine": 1 } },
+    "vantor": { "x": 8, "y": 6, "short": "Vantor Prime", "danger": 2, "charted": true, "trade": { "food": 8, "fuel": 38, "medicine": 24 } },
+    "graveyard": { "x": 40, "y": 18, "short": "The Graveyard", "danger": 2, "charted": true, "yields": { "parts": 8, "fuel": 0.3 }, "trade": { "parts": 12 } },
+    "frontier": { "x": 66, "y": 15, "short": "Tessen Colony", "danger": 1, "charted": true, "control": "Its own colonists", "yields": { "food": 18 }, "trade": { "food": 4 } },
+    "nest": { "x": 6, "y": 20, "short": "The Choir Nest", "danger": 4, "control": "The Choir", "noPassage": true },
+    "asterion": { "x": 24, "y": 20, "short": "Asterion", "danger": 4, "control": "The Choir", "yields": { "parts": 12 }, "noPassage": true },
+    "bastion": { "x": 18, "y": 9, "short": "Bastion Nine", "danger": 2, "trade": { "food": 7, "medicine": 30 } },
+    "cinder": { "x": 62, "y": 11, "short": "Cinder Reach", "danger": 1, "control": "The company, and the strike", "yields": { "fuel": 1.2 }, "trade": { "fuel": 28, "parts": 20 } },
+    "deepyards": { "x": 66, "y": 5, "short": "The Deepyards", "danger": 1, "yields": { "parts": 6, "fuel": 0.4 }, "trade": { "fuel": 36, "parts": 16 } },
+    "foundry": { "x": 12, "y": 13, "short": "Foundry Seven", "danger": 1, "yields": { "parts": 5 }, "noPassage": true },
+    "ghostlight": { "x": 62, "y": 20, "short": "The Ghostlight", "danger": 3, "yields": { "fuel": 0.8 } },
+    "korrath": { "x": 24, "y": 15, "short": "Korrath Forge", "danger": 1, "yields": { "parts": 5 }, "trade": { "parts": 14 } },
+    "lumen": { "x": 48, "y": 21, "short": "Lumen Sanctuary", "danger": 0, "yields": { "medicine": 3, "food": 5 }, "trade": { "food": 7, "medicine": 18 } },
+    "maris": { "x": 54, "y": 16, "short": "Maris Deep", "danger": 2, "control": "Nobody who's answering", "yields": { "food": 8 }, "trade": { "food": 6 } },
+    "orrin": { "x": 42, "y": 2, "short": "Saint Orrin's Comet", "danger": 0, "control": "The hermits of the cloister" },
+    "pale_gate": { "x": 70, "y": 9, "short": "The Pale Gate", "danger": 3, "control": "Nobody. Not any more" },
+    "sarn": { "x": 10, "y": 2, "short": "Sarn", "danger": 0 },
+    "wheel": { "x": 50, "y": 3, "short": "The Gilded Wheel", "danger": 1, "trade": { "food": 10, "fuel": 44, "medicine": 44 } },
+    "harbor": { "x": 76, "y": 1, "short": "The Harbor", "danger": 0, "control": "Unknown", "noPassage": true }
+  }
+}

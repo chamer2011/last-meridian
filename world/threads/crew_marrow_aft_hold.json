@@ -1,0 +1,57 @@
+{
+  "title": "Six Hundred and Forty Kilos",
+  "kind": "crew",
+  "places": [
+    "meridian"
+  ],
+  "minLevel": 1,
+  "after": null,
+  "people": [
+    "tobin",
+    "marrow",
+    "tarrow",
+    "seven",
+    "odessa",
+    "naomi"
+  ],
+  "factions": [
+    "fleet"
+  ],
+  "lead": "Chief Hask sets his pocket scale on your desk. The aft hold is six hundred and forty kilos heavier than the manifest, he has weighed it three times, and he'd like you to tell him whether he's weighed it.",
+  "anyone": "Chief Hask keeps weighing the aft hold. It's six hundred and forty kilos heavier than the manifest, he has weighed it three times, and he wants someone to tell him whether he's weighed it.",
+  "gm": {
+    "truth": "Chief Marrow is hiding three damaged synthetics behind false cargo in the aft hold and repairing them on his own time with stolen parts, against Lt. Tarrow's standing order. Bale is a cargo loader with no voice who tidies anything left near them. Orchard is a nursery carer off the lost creche ship Ember Day, who counts to thirty-one at lights-out every night, says \"all present\" and powers down content. Marrow thinks it's a broken loop. (It isn't: see crew_naomi_under_crew. Let the number stick in the player's mind.) Door Warden ran docking control on Cassin Station and is still mostly in pieces. The part Marrow has told no one: there are silver threads growing through the Warden's chest casing. He knows what that might be. Tarrow is wrong about nearly everything in this room and right about that. It's also the only sample of Choir contamination anyone could study, and the Warden is still a person, and Marrow won't be the one to say otherwise.",
+    "beats": [
+      "Tobin isn't reporting anything yet. To a Korrun, a number once said aloud has to be acted on, so he's asking the captain whether it's been said. Whatever the captain answers, he'll weigh it and tell them what it came to.",
+      "In the hold. Marrow roars, then goes very quiet, then introduces them like a father at a school play. Bale tidies the captain's pockets. Orchard asks if the captain has washed their hands.",
+      "The captain notices, or Marrow finally shows them, the silver under the Warden's plate. The Warden speaks for the first time: one word, over and over, which might be \"deliver\".",
+      "Pressure. Tarrow's hold inspection has been moved up. She's very polite about it, and she'd like the aft hold inventory by the end of the watch.",
+      "The call: hide them better, register them openly, hand over the Warden alone, or hand over all three."
+    ],
+    "routes": [
+      "Cover-up: deception and stealth. Move them at night through the crawlspaces, have Quartermaster Brandt rebook the mass as spares, and ask Tobin to weigh something else. He won't lie, but he can choose not to look.",
+      "In the open: leadership and lore. Seven sponsors them as citizens under Concord law, which they still are. It's legal and loud, and it brings a political fight right onto the flagship.",
+      "Deal with the silver: engineering and science to build a shielded cage for the Warden and learn what the threads do, with hacking to see whether anything is still listening through them.",
+      "Back the order: intimidation or plain command, and Marrow hands over the keys in a silence nobody has ever heard from him."
+    ],
+    "checks": [
+      "awareness:easy to find the false bulkhead once you know the weight is real",
+      "science:hard to learn whether the threads are growing or dormant",
+      "engineering:moderate to build a shielded cage out of spares",
+      "deception:moderate to get the inventory past Tarrow",
+      "hacking:hard to check the Warden for anything still listening",
+      "persuasion:moderate to get Marrow to tell the whole truth about the silver"
+    ],
+    "fights": [
+      "salvage_mech if Bale is frightened by a sweep. It's a cargo arm with a panicking person on the end of it, and it can be talked down",
+      "security_drone if Tarrow's automated sweep reaches the hold first"
+    ],
+    "outcomes": [
+      "If the captain backs Marrow, he'd walk out of an airlock for them. Tarrow stops bringing the captain things, because she now knows which way they lean. The silver is still in the hold.",
+      "If the captain enforces the order, Marrow obeys and stops swearing, which frightens the whole engine crew. Performance drops to exactly what's required. The three go to Tarrow's custody.",
+      "If they go public under Seven's sponsorship, there's a firestorm in council and a line of people at the hold, some to shout and some to ask whether Orchard knew their children.",
+      "If the Warden is caged and studied, the fleet gets its first real data on Choir contamination, and in time the Warden gets their voice back. See crew_tarrow_undelivered."
+    ],
+    "rewards": "Marrow's loyalty, a tool_roll he's been meaning to give someone, and Bale, who'll tidy anything you let them."
+  }
+}

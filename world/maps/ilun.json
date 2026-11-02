@@ -1,0 +1,334 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "Ruins of Ilun",
+  "start": "hall",
+  "levels": {
+    "hall": {
+      "name": "The Listening Hall",
+      "aliases": [
+        "listening hall",
+        "the nave",
+        "the hall",
+        "the great hall"
+      ],
+      "desc": "A long nave with no roof, where the last monks sit on worn stone in shifts, and have done for a thousand years without a break. Nobody speaks above a whisper here, and the echoes come back late.",
+      "floor": ":",
+      "colors": {
+        "floor": "#3e3c3a",
+        "walls": "#8c8880",
+        "scenery": "#c8bca0",
+        "writing": "#fff4d8"
+      },
+      "plan": [
+        "*       .      *        .        *       .        *       .       *      .",
+        "    .         .     *        .       *       .        *       .       ....",
+        "##########################################################################",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#:::(  ):::::(  ):::::(  ):::::(  ):::::(  ):::::(  ):::::(  ):::::(  )::#",
+        "1::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::::::::::!:!:!:!::::::::::::I:::::::::::::::::!:!:!:!::::::::::::::::::#",
+        "#::::::::::!:!:!:!::::::::::::::::::::::::::::::!:!:!:!::::::::::::::::::2",
+        "#::::@:::::::::::::::::::::::::::::[==]c:::::::::::::::::::::::s:::::::::#",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#:::(  ):::::(  ):::::(  ):::::(  ):::::(  ):::::(  ):::::(  ):::::(  )::#",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "###################3######################################################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE LISTENING HALL",
+          "at": [28, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "cells",
+          "via": "1"
+        },
+        "2": {
+          "to": "gardens",
+          "via": "1"
+        },
+        "3": {
+          "to": "stair",
+          "via": "1"
+        }
+      },
+      "people": {
+        "I": {
+          "id": "ione",
+          "label": "Ione",
+          "asks": [
+            "What have you been listening for, Abbess?",
+            "What do you know about the First Builders that you haven't said?"
+          ]
+        }
+      },
+      "things": {
+        "c": {
+          "name": "The codex on its stand",
+          "item": "ilun_codex",
+          "look": "A huge old book on a stone lectern, with a strap across it. It's written in a hand that's older than the Order. The page it's open at has been read so often that it's nearly transparent.",
+          "use": "I ask the Abbess if I might read from the codex."
+        },
+        "s": {
+          "name": "The worn stone",
+          "look": "A row of hollows worn into the floor, by a thousand years of people sitting in them. They're the wrong size for you. Late at night, you can feel the hum come up through them.",
+          "use": "I sit down in one of the hollows and stay until the hum begins."
+        }
+      }
+    },
+    "cells": {
+      "name": "The Empty Cells",
+      "aliases": [
+        "empty cells",
+        "the cells",
+        "novice cells",
+        "the novice cells"
+      ],
+      "desc": "Hundreds of novice cells, nearly all of them vacant now, each with a name painted over the door. Brother Cael still sweeps them every week.",
+      "floor": "'",
+      "colors": {
+        "floor": "#3e3a47",
+        "walls": "#807890",
+        "scenery": "#b0a8c4",
+        "writing": "#eee8ff"
+      },
+      "plan": [
+        "########################################################################",
+        "#[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ][ ]#",
+        "#''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+        "#[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ][ ]#",
+        "#''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+        "1'''''''''''''''''''''''''''''''''C''''''''''''''''''''''''''''''''''''#",
+        "#''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+        "#[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'n'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]''[ ]#",
+        "#'''''''@''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+        "#[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'[ ]'r'[ ]'[ ]''[ ]#",
+        "#''''''''''''''''''''''''''''''''''''''''''''''''b'''''''''''''''''''''#",
+        "########################################################################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE EMPTY CELLS",
+          "at": [44, 5]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "hall",
+          "via": "1"
+        }
+      },
+      "people": {
+        "C": {
+          "id": "cael",
+          "label": "Cael",
+          "asks": [
+            "Who's left, Brother?",
+            "Why do you still sweep them?"
+          ]
+        }
+      },
+      "things": {
+        "n": {
+          "name": "A name over a door",
+          "look": "Painted carefully, and repainted at some point by somebody who wasn't quite as good at it. The cell's been swept. There's a small plain bowl on the sill, turned upside down.",
+          "use": "I read the name over the door, and I ask Cael who it was."
+        },
+        "r": {
+          "name": "Robes on a peg",
+          "item": "adept_robes",
+          "look": "Adept's robes, folded over a peg in an empty cell, ready for someone. They've been aired and they don't smell of anything but lamp oil. They'd be long on you.",
+          "use": "I ask Cael whether I could wear the robes on the peg, and what that would mean."
+        },
+        "b": {
+          "name": "A broom",
+          "look": "An old broom, worn down at one side from a long habit of sweeping in the same direction. It's leaning where he'll want it next. There's very little dust. He sweeps anyway.",
+          "use": "I pick up the broom and sweep a cell with him."
+        }
+      }
+    },
+    "stair": {
+      "name": "The Under-Stair",
+      "aliases": [
+        "under-stair",
+        "under stair",
+        "the stairway",
+        "the first builder stairway",
+        "the deep stair"
+      ],
+      "desc": "A First Builder stairway going down further than anyone has walked. The steps are the wrong height for every people that has ever lived.",
+      "floor": "_",
+      "colors": {
+        "floor": "#383c49",
+        "walls": "#656a7b",
+        "scenery": "#8890a8",
+        "writing": "#c8d0f0"
+      },
+      "plan": [
+        "#############1##############################################",
+        "#__________________________________________________________#",
+        "#__======================================================__#",
+        "#__|____________________________________________________|__#",
+        "#__|__================================================__|__#",
+        "#__|__|______________________________________________|__|__#",
+        "#__|__|____f_________________________b_______________|__|__#",
+        "#__|__|______________________________________________|__|__#",
+        "#__|__========================__========================|__#",
+        "#__|____________________________________________________|__#",
+        "#__=====__==============================================___#",
+        "#_____________w_______@____________________________________#",
+        "############################################################"
+      ],
+      "writing": [
+        [16, 5, "THE LAST LAMP IS BEHIND YOU NOW"]
+      ],
+      "labels": [
+        {
+          "text": "THE UNDER-STAIR",
+          "at": [22, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "hall",
+          "via": "3"
+        }
+      },
+      "people": {},
+      "things": {
+        "w": {
+          "name": "The lists on the wall",
+          "look": "Cut into the rock below the last lamp, in lines too long to read in one walk. They're names. They aren't in any language you know, and yet some of them seem to be in order, as if somebody's still adding to them.",
+          "use": "I hold up my lamp to the lists of names and try to read them."
+        },
+        "b": {
+          "name": "A pale sliver on a step",
+          "item": "beacon_shard",
+          "look": "A sliver of something pale, resting on a step much too high to be comfortable. Your back teeth start to ache when you bend down to look at it.",
+          "use": "I climb down to the sliver on the step and pick it up."
+        },
+        "f": {
+          "name": "A blade laid down",
+          "item": "focus_blade",
+          "look": "A focus blade, set down neatly on a step by someone who meant to come back. The dust on it is very old. Its edge hums a little, in time with the walls.",
+          "use": "I pick up the focus blade somebody left on the step."
+        }
+      }
+    },
+    "gardens": {
+      "name": "The Wind Gardens",
+      "aliases": [
+        "wind gardens",
+        "the gardens",
+        "the terraces",
+        "the herb terraces"
+      ],
+      "desc": "Terraces of grey lichen and bitter herbs on the cliff face, tended by the very old. It's the only place in the monastery where anyone laughs.",
+      "floor": ".",
+      "colors": {
+        "floor": "#4a4c44",
+        "walls": "#8a9080",
+        "scenery": "#a8c0a0",
+        "writing": "#f0f8e0"
+      },
+      "plan": [
+        "   ~            ~                ~               ~               ~        ",
+        "///////////////////////////////////////////////////////////////////////   ",
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   ",
+        "1.......,,,,,,.......,,,,.........,,,,,,,......,,,,,.........,,,,......   ",
+        ".......................................................................   ",
+        "=======================================...==============================  ",
+        "       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%...%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   ",
+        "       ......,,,,,.......,,,,,o..................,,,,,,......t.........   ",
+        "       ...........@....................................................   ",
+        "       ========================...========================================",
+        "              %%%%%%%%%%%%%%%%%...%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   ",
+        "              .....,,,,...................l...,,,,,.........,,,,.......   ",
+        "              ........................................................    ",
+        "              ........................................................    "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE WIND GARDENS",
+          "at": [4, 4]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "hall",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "o": {
+          "name": "A very old monk, laughing",
+          "look": "She's about a hundred and ten, and she's got a trowel, and somebody's just told her a joke, or she's remembered one. She's the first person on Ilun you've heard above a whisper.",
+          "use": "I crouch down beside the old monk and ask what's so funny."
+        },
+        "l": {
+          "name": "A bed of grey lichen",
+          "look": "It's the only thing that grows here, and it's slow. There's a marker stone that's been moved outward every few years, by hand, for centuries. It tastes the way lamp oil smells.",
+          "use": "I ask about the grey lichen, and how long this bed has taken."
+        },
+        "t": {
+          "name": "A forked crystal on a wall",
+          "item": "resonance_tuner",
+          "look": "A resonance tuner left on a low stone wall, by someone who's gone in for lunch. They hold it against their teeth up here, in the wind, and they say you can hear the field.",
+          "use": "I hold the forked crystal against my teeth and listen."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Monastery plan",
+    "plan": [
+      "//////////////////////////////////////////////////////////////",
+      "//''''''''''''''''''''''//,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,//",
+      "//''''''''''''''''''''''//,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,//",
+      "//''''''''''''''''''''''//,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,//",
+      "//////////////////////////////////////////////////////////////",
+      "//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::://",
+      "//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::://",
+      "//////////////////////////////////////////////////////////////",
+      "                   //;;;;;;;;;;;;;;;;;;;;//                   ",
+      "                   //;;;;;;;;;;;;;;;;;;;;//                   ",
+      "                   ////////////////////////                   "
+    ],
+    "floors": {
+      "'": "gardens",
+      ",": "cells",
+      ":": "hall",
+      ";": "stair"
+    },
+    "rooms": [
+      {
+        "level": "gardens",
+        "at": [5, 2],
+        "text": "THE WIND GARDENS"
+      },
+      {
+        "level": "cells",
+        "at": [36, 2],
+        "text": "THE EMPTY CELLS"
+      },
+      {
+        "level": "hall",
+        "at": [22, 5],
+        "text": "THE LISTENING HALL"
+      },
+      {
+        "level": "stair",
+        "at": [24, 9],
+        "text": "THE UNDER-STAIR"
+      }
+    ]
+  }
+}

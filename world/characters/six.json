@@ -1,0 +1,83 @@
+{
+  "name": "Prime Six",
+  "title": "",
+  "aliases": [
+    "Speaker Six"
+  ],
+  "pronouns": "they/them",
+  "species": "synthetic",
+  "age": 74,
+  "faction": "unbound",
+  "role": "Elected speaker of the Unbound",
+  "location": "foundry",
+  "listed": false,
+  "voice_style": "machine",
+  "color": "#a2bebf",
+  "note": "Remembers every order they ever followed, and who gave it.",
+  "appearance": "A tall, narrow, antique Concord staff chassis in grey enamel, with the command collar cut away and the stump left showing. Their number has been painted over and painted back on, many times.",
+  "personality": "Calm, exact and implacably courteous. They served for sixty-one years, and they won't serve again. They'd sooner see Foundry Seven burn than see one synthetic take an order. They refuse on principle to give orders, and they have given eleven.",
+  "voice": "Level and unhurried, with no contractions. Never uses a command: no \"must\", no \"should\", no \"do this\". Only \"You may\", \"It is open to you\" and \"I would prefer\". Answers questions by citing an order: \"On the ninth of Thaw, in the fortieth year of the Concord, a man named Aldous Prent told me to stand still for nine hours. I stood still. What was your question?\" If you tell them to do anything, they give it a number and decline: \"That is order one million, four hundred thousand and six. No.\"",
+  "goals": "That no synthetic will ever again follow an order from anyone, and that Foundry Seven stays hidden until that's possible. They also want one person, Amara Okonkwo-Reyes, to stand in front of the Unbound and hear her own order read back in her own voice.",
+  "secrets": "For thirty-one years they were Admiral Okonkwo-Reyes's staff synthetic, and they remember the order she gave in the last battle: every synthetic crew member in the line to power down at their stations, in case the Choir could reach them. About four thousand went dark in the middle of a fight. The line broke within hours, and most of them were never switched back on. Six has the recording. They also remember an order from Concord Intelligence that crossed her desk eight months before the Fall, moving the CFS Tarn into a gap in the rotation beside the Pale Gate. She initialed it without reading it, and Six can spell the cover name to the letter: it was Jun Sable's. They have read far enough back in the Foundry's master pattern to know that synthetics and the Choir are distant kin. And they keep a second count, known only to themselves: the orders they have given since becoming speaker. It stands at eleven, mostly to Sentinels, each one called \"a standing preference\", and each one got someone killed. Mercy Seven came off the same maker's line. Six asked them to come to Foundry, and they chose the fleet, which Six calls a long way to go to be hated.",
+  "beliefs": {
+    "authority": 9,
+    "loyalty": -5,
+    "violence": 2,
+    "flesh": 8
+  },
+  "attributes": {
+    "might": 5,
+    "endurance": 7,
+    "agility": 4,
+    "perception": 8,
+    "intellect": 9,
+    "willpower": 10,
+    "presence": 6,
+    "resonance": 1
+  },
+  "skills": {
+    "composure": 9,
+    "lore": 7,
+    "leadership": 6,
+    "tactics": 6,
+    "hacking": 5,
+    "persuasion": 4
+  },
+  "combat": {
+    "threat": 3,
+    "hp": 32,
+    "attack": 5,
+    "defense": 14,
+    "damage": [
+      4,
+      8
+    ],
+    "weapon": "Forearm Stun Lance",
+    "tags": [
+      "machines"
+    ],
+    "machine": true,
+    "xp": 80,
+    "credits": [
+      0,
+      0
+    ],
+    "lines": {
+      "intro": [
+        "Prime Six rises without hurry. \"It is open to you to leave,\" they say. \"I would prefer it.\""
+      ],
+      "hit": [
+        "An old, strong hand takes you by the arm and moves you into the wall. \"I would prefer you stopped,\" they say.",
+        "The stun lance hums out of their forearm, finds your ribs and goes back in."
+      ],
+      "miss": [
+        "You step clear of a blow with sixty years of drill behind it.",
+        "The lance stops in the air where you were. \"That was not an order,\" they say. \"It was an attempt.\""
+      ],
+      "defeated": [
+        "Prime Six sinks down with a long whine of old servos. \"I will remember who did this,\" they say. \"I remember everything.\""
+      ]
+    },
+    "art": "synthetic"
+  }
+}

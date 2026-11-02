@@ -1,0 +1,68 @@
+{
+  "name": "Bastion Nine",
+  "aliases": ["Bastion Nine", "Bastion"],
+  "desc": "A Hegemony border fortress and conscription center, where refugees sign contracts or wait forever.",
+  "market": ["ration_pack", "medkit", "refugee_coat", "flak_vest", "service_rifle", "shock_baton", "calm_tabs"],
+  "faction": "hegemony",
+  "fleet": false,
+  "rest": false,
+  "dangerous": false,
+  "hidden": false,
+  "gm": {
+    "feel": "Disinfectant, wet wool and the warm staleness of nine thousand people waiting in a cold grey fortress. A calm recorded voice calls out one number every few minutes, day and night, and the whole hall lifts its head and then lets it sink again. Nobody here is cruel, the soup is hot and there's a form for everything, and each person holds a paper ticket that's worth more than anything else they own.",
+    "districts": [
+      { "name": "The Line", "desc": "A vast hangar with chalked lanes where refugees live, sleep and raise children in the order of their tickets. It has its own elected Line Mothers, its own markets and its own graveyard shift." },
+      { "name": "The Contract Hall", "desc": "Forty clerks' windows under a white ceiling. Ten years of service buys papers for your family, and every word of the contract is read to you first, for as long as you can stay awake." },
+      { "name": "The Parade Ground", "desc": "A training deck, with a long viewing window that looks onto the Line. New conscripts drill here, and their families can watch them from the other side of the glass, and that's on purpose." },
+      { "name": "The Commandant's Gallery", "desc": "Offices on a catwalk above the Line, with a good view of every lane. Commandant Halloran's window has a desk in it that's turned to face the wall." },
+      { "name": "The Long Anchorage", "desc": "A cloud of refugee ships parked in the fortress's shadow, waiting for permits to dock. Some have been out there so long that they've started growing things." }
+    ],
+    "people": ["dain", "severa", "jaska"],
+    "enemies": ["customs_marine", "hegemony_trooper", "security_drone", "hegemony_hunter", "desperate_refugee"],
+    "items": ["forged_papers", "service_rifle", "refugee_coat", "calm_tabs", "data_chip"],
+    "complications": [
+      "A clerical error has listed a member of your crew as a signed conscript, and the correction form takes eleven weeks.",
+      "An audit team has arrived early from Vantor, and every clerk in the Contract Hall has suddenly gone pale.",
+      "A rumor that the Line's being closed sweeps through the hangar, and nine thousand people all stand up at once.",
+      "A fitness screen comes through the lane where you're standing, and it includes a Resonance test.",
+      "Someone's been forging your signature on sponsorship forms, and it's saved a lot of people, and now you're responsible for them.",
+      "The kitchen's been told to cut the soup, and the cook has decided to let the Line know whose idea it was."
+    ],
+    "secrets": [
+      "Severa Lune has altered nine hundred and eighty-seven files to save refugees, marking them as medically unfit, already dead or Hegemony-born. Inspector Moor is bringing the audit to her window in person within days, and she's stopped trying to hide her tracks.",
+      "Commandant Halloran is keeping the Line slow on purpose. He's eleven months behind his quota, because he's read where the Outer Colonies transports actually go: the unmarked ships. Every day a ticket isn't called is the only mercy he's got left, and it's killing people too, and he still signs a hundred and twenty defaulters onto those ships each month.",
+      "The fortress is a bluff. Half its garrison was pulled back to Vantor after the Fall and the great guns have no shells, and only the officers know. Bastion Nine couldn't stop a determined fleet, and it's relying on no one ever thinking to try."
+    ]
+  },
+  "encounters": [
+    "The voice calls a ticket that's been waiting for five months. An old couple stand up, then the man remembers and sits down. Their son held that number, and he died last week. The clerk at the window can't see faces from there, and they look across the lane at you.",
+    "Commandant Dain Halloran invites you to dinner, and it's very good, and he apologizes for it. Over coffee he says he has nine thousand people he can't process. If five hundred of them walked onto your ships tonight, he'd have a sensor fault. They'd need feeding, and he wants to know if you can do that.",
+    "Clerk Severa Lune slides a form under your hand at window six without looking up. If a fleet captain signs as a sponsor, forty people become fleet personnel, and they go off the books. Her hand is shaking. She's got until the end of the week, and she's misspelled your name to give you a way out later.",
+    "Inspector Jaska Moor falls into step beside you, charming and apologetic, and she has just one more question. It's about the shoes on a child on your shuttle, which were issued by a Hegemony orphanage two sectors from here. She says it's surely nothing, and she'll let you get on.",
+    "A conscript on the Parade Ground snaps a salute at you as you pass the glass. He was on your engine crew until three weeks ago. He's not allowed to speak. His mother's at the window, calling out his name as she does every day at this time, and he's holding two fingers against his cap, which means something in fleet sign.",
+    "A formidable Line Mother asks you to help break the racket selling low-numbered tickets. It's run by a gang that's taken over Lane Twelve, and they've begun taking tickets from the elderly. The boss turns out to be fourteen, with four younger siblings and the best-fed lane in the hangar.",
+    "A retired Concord lawyer has read all eight hundred and twelve pages of the contract, and he explains a clause for a ration bar. There's one on page six hundred and fourteen he can't explain: clause 41(c), where the Regency may remit the bearer's service to an external obligation. He wants you to read it out on the Line. It might save them, or it might set off a riot.",
+    "An Ilari woman has coated her arms and face with grease and flour for the fitness screen, and she's going to fail in about four people's time. Her little boy keeps saying her skin looks funny. She looks at you and asks, with no sound at all, whether you'd go and stand between her and the doctor.",
+    "A small girl is turning seven in Lane Thirty, and her family has made a cake out of ration paste, with one match on it. She's been in this queue since she was six. The voice calls their number halfway through the song. If they don't go now, they'll drop back three thousand places, and the whole lane has stopped singing.",
+    "A Hegemony officer with a smooth folder offers you a real commission: Commodore, your own ship, your own crew and papers for everyone in the fleet who wants them. It's genuine. You look over, and Commandant Halloran catches your eye and says, very quietly, that you should take it. Then he looks horrified, and he asks you to forget he spoke.",
+    "A customs marine on night duty lets you through a door you've no right to use. He's about twenty. He only asks you to write down his name and where he's from, in case someone asks you one day. He says he's had his orders for next week, and he's heard about the Outer Colonies route.",
+    "A cheerful Hegemony corporal has legally married sixty-one refugees, since a citizen's spouse skips the Line. They think he's a saint, and he sleeps in a closet. The audit's coming, and he'd like a senior officer to witness number sixty-two before it does, and she's a very frightened grandmother with a good sense of humor.",
+    "The fortress cook has been serving double portions on the night shift, by getting the numbers wrong. She's been ordered to stop as of today, and she's been told to say it's because of your fleet's arrival. She comes out to the back of the kitchen to warn you, then asks if there's any way that you'd consider saying it's true.",
+    "A family on a ship at the Long Anchorage has been waiting for a docking permit for eight months. They've got tomatoes growing in the cargo hold, and a baby who's never been outside it. They've received a permit at last, and they've called you to ask whether they should use it."
+  ],
+  "rumors": [
+    "Don't lose your ticket. A man lost his. They said he'd have to go to the back of the Line, and then they looked him up and told him he didn't exist.",
+    "The Line moves faster on Thursdays. Nobody knows why. I've been here for twenty-two Thursdays.",
+    "There's a clerk on window six who can get you lost in just the right way. She's got a cough and a very tired look. Go soon, is my advice.",
+    "The Commandant's all right. He looks you in the eye and he says he's sorry, and he means it. That's the worst thing about him.",
+    "Ten years of service and your family's safe. They've got a lovely brochure. My brother signed up, and he writes to me every week, the same letter, word for word.",
+    "Those big guns haven't fired since before I was born. My nephew polishes them. He says that they're the cleanest guns in the Hegemony, and that he's never once seen a shell.",
+    "If you sign by the end of the month, there's a bonus. It's been the end of the month for six months.",
+    "Ticket forty-one twelve went for a year's rations last week. It's a dead man's number, so you'd want to be careful who you say that you are when you get to the window.",
+    "I heard that the fleet's new captain is coming to take all of us out of here. Or to sell us. It depends who you ask. Excuse me, are you the captain?",
+    "The Inspector, the polite one with the notebook, she stopped me about my papers, and then she asked after my knee. I'd never told anybody about my knee.",
+    "When they put you on the Outer Colonies route, you get new boots. Lovely boots. I'd like you to think about why somebody going to a farm would need good boots and nothing else.",
+    "They're a bit short-handed up on the east wing, you'd notice if you were counting. I've been counting. I've got the time.",
+    "You can make a decent life on the Line, you know. We've a school in Lane Sixty, and a very good choir. My daughter was born here, and she thinks that the voice is God. I've stopped correcting her."
+  ]
+}

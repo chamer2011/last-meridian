@@ -1,0 +1,54 @@
+{
+  "title": "Four Hundred and Twelve Messages",
+  "kind": "crew",
+  "places": [
+    "meridian",
+    "fleet"
+  ],
+  "minLevel": 5,
+  "after": "crew_marrow_aft_hold",
+  "people": [
+    "tarrow",
+    "marrow",
+    "seven"
+  ],
+  "factions": [
+    "fleet"
+  ],
+  "lead": "The wrecked synthetic from the aft hold has finally got their voice back, and they have one request. They're holding four hundred and twelve messages they never got to deliver, and one is addressed to Lieutenant Kara Tarrow.",
+  "anyone": "The wrecked synthetic from the aft hold has finally got their voice back, and they have one request. They're holding four hundred and twelve messages they never got to deliver, and one is addressed to Lieutenant Kara Tarrow.",
+  "gm": {
+    "truth": "Door Warden ran docking control for Ring Two at Cassin Station on the last day. When the Choir came through, they sealed Ring Two to save the rest of the station, with 412 people on the wrong side. They kept the comm open and recorded what those people said, because nobody told them to stop, and they have been trying to deliver those messages ever since. The twist: a human duty officer gave the sealing order, and the log names her. Lt. K. Tarrow, station security. Her sister and parents were in Ring Two. She knew. She gave the order anyway, it saved nine thousand people, and she has hated machines ever since, because a machine pressed the button. She has told no one. The Warden won't volunteer the log, but won't lie if asked. Her message is thirty-one seconds long. Her sister says: \"Kara, it's Dess. They're saying it was your call. Good. It's the right call, so don't you dare take it back. Mum says eat something.\" And because the Warden has silver threads in their chest, nobody can prove the recording is real, least of all Tarrow.",
+    "beats": [
+      "The Warden's request. They're very courteous and have a postal worker's patience. They'd like the captain's help, since they've been told they can't go near the security officer.",
+      "The other deliveries. About forty addressees are alive in the fleet: an old man on the Second Thursday, a girl on the Wintermere, someone the captain knows. Each message is short. Each delivery is a scene.",
+      "The captain learns, from the log or by asking the right question, who gave the order. Marrow didn't know. Now he does.",
+      "Tarrow finds out there's a message. She comes to the hold, alone, with her sidearm. She has come either to destroy the Warden or to hear the message, and she doesn't know which. She calls the Warden \"it\", and the Warden doesn't correct her.",
+      "If the annex is still occupied (see crew_tarrow_annex), she can play the message to the thing with her sister's face. It mouths along, word for word. Then she finally asks it her question."
+    ],
+    "routes": [
+      "Deliver it straight: composure and persuasion, in a quiet room, with the captain sitting beside her. Nothing makes this easy.",
+      "Verify it first: science and hacking to test whether the recording is genuine, with Seven's help, which she'll refuse. It can't be settled. At best it's eighty-eight percent, and Seven says so.",
+      "The postal round: streetwise and leadership to find the living addressees and deliver their messages first, so that when she hears hers, it isn't a trap. It's the mail.",
+      "Let Marrow do it: he's the one who kept the Warden alive, and he's never been gentle with an officer before. Attunement can tell the captain if the voice on the recording and the voice in the annex are the same."
+    ],
+    "checks": [
+      "hacking:moderate to read the Warden's sealing log",
+      "science:very_hard to prove the recording is genuine",
+      "streetwise:moderate to track down the living addressees",
+      "composure:hard to sit with her while it plays",
+      "persuasion:very_hard to talk her hand away from her sidearm",
+      "attunement:hard to compare that voice with the one in the annex"
+    ],
+    "fights": [
+      "desperate_refugee crowd, if the log goes public and families come looking for her. She won't defend herself, so the captain may have to"
+    ],
+    "outcomes": [
+      "She hears it, once. She says nothing and walks out. The next morning she's on time. Within a week the standing order is quietly amended to exempt machines with a documented service record, and she never says why. She isn't healed. She has stopped saying \"every machine\".",
+      "She doesn't believe it, and shoots the Warden. The other 411 messages die with them, unless the captain thought to copy them. Marrow doesn't speak to her again. She reports herself for destroying a citizen, and nobody knows what to do with the report.",
+      "The log goes public: families on six ships learn who gave the order. Some call her a murderer, and nine thousand people owe her their lives. She offers to stand trial and means it, and the fleet gets to argue about what she is.",
+      "The captain withholds it: the Warden never stops asking, courteously, every day. She'll find out someday that the captain knew."
+    ],
+    "rewards": "Tarrow's real loyalty, the only kind she has left. Standing with the fleet for every delivered message. Perhaps a copy of the log, which is leverage nobody decent would use."
+  }
+}

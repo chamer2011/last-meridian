@@ -1,0 +1,57 @@
+{
+  "title": "Two Hundred and Twelve",
+  "kind": "politics",
+  "places": [
+    "meridian",
+    "fleet"
+  ],
+  "minLevel": 3,
+  "after": null,
+  "people": [
+    "seven",
+    "aduro",
+    "halm",
+    "grann",
+    "tarrow"
+  ],
+  "factions": [
+    "fleet",
+    "unbound"
+  ],
+  "lead": "Two days before the council votes on a synthetic seat, Mercy Seven asks if you'd look over a speech. It's very short. It's two hundred and twelve names, and you recognize several, including people planning to vote no.",
+  "anyone": "Two days before the council votes on a synthetic seat, Mercy Seven has been going around with a speech. It's very short. It's two hundred and twelve names, and some of them are planning to vote no.",
+  "gm": {
+    "truth": "For six months Aduro has let Seven perform surgery under general anesthetic, while patients and families were told Aduro did it, because people refuse machine hands. Seven has saved 212 people who would otherwise have died. Everyone thinks Dr. Aduro's hands are a miracle. Aduro agreed to the lie and has hated it since the first day. Names on the list: Councillor Bram Duval, who is leading the no vote; two of Tarrow's marines; Steward Tull's grandson; and, if the captain has ever been seriously hurt and patched up in the medbay, the captain. Seven wants to read the list aloud before the vote. They aren't bluffing and they aren't gloating. \"They had the right to refuse. We took it. I would take it again. That is the problem I would like help with.\"",
+    "beats": [
+      "The list. The captain finds a name that matters, perhaps their own, and a scar they thought they knew the story of.",
+      "Aduro's view: they offer to stand up and confess, and take all the blame. Seven won't let them. \"There is one of you. I have run the numbers.\"",
+      "Word reaches a few people on the list. A marine comes at night and asks if it's true, then asks to see the hands. Seven holds them out, and he looks for a long time.",
+      "Vote day. The gallery is packed. Who speaks, and what do they say?",
+      "Afterward: whatever was said can't be unsaid, and some of the 212 are at the medbay door."
+    ],
+    "routes": [
+      "The quiet route: persuasion, going privately to the swing voters with their own surgical records. Some become allies, and one of them will tell everyone.",
+      "The public route: leadership. Let Seven read the list, or read it yourself. It might win the vote, and it breaks medical confidence for 212 people.",
+      "Aduro's route: Aduro confesses first and takes the blame, with lore to work out what Concord consent law says happens next.",
+      "Another way to the seat: commerce and streetwise to buy the votes with something else. Steward Tull's bloc wants synthetic labor in the Sundial's lift shafts, which raises its own question."
+    ],
+    "checks": [
+      "medicine:easy to confirm the surgical logs are genuine",
+      "lore:moderate to find what Concord law says about consent under anesthetic",
+      "persuasion:hard to turn Councillor Duval with his own medical file",
+      "commerce:moderate to bargain with Steward Tull's bloc",
+      "deception:hard to keep the list quiet until the vote",
+      "leadership:hard to hold the chamber while the names are read"
+    ],
+    "fights": [
+      "desperate_refugee crowd at the medbay doors after the reading, if it goes badly"
+    ],
+    "outcomes": [
+      "Read aloud and won: forty-one of the 212 stand up in the gallery, silently, one at a time. The seat passes. Thirty others refuse all treatment from anyone for a month, and not all of them live through it. Seven reads those names to the captain too.",
+      "Read aloud and lost: the fleet learns that machines have had their hands inside them, in the dark, with the doctor's blessing. The Safe Decks campaign gains votes. Aduro offers to step down. The list is a fact now, and can't be unread.",
+      "Kept private: the seat passes or fails on ordinary politics, and the lie goes on. Seven keeps operating. They add a name every week.",
+      "Aduro confesses: the doctor takes the blame, and the fleet's trust in medicine takes a hit that no one can afford, but Seven's name is spoken aloud in a good way for the first time."
+    ],
+    "rewards": "Seven's loyalty, goodwill among the fleet's synthetics, and a surgeon_lens from Aduro."
+  }
+}

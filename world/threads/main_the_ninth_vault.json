@@ -1,0 +1,47 @@
+{
+  "title": "The Ninth Vault",
+  "kind": "main",
+  "places": ["sarn"],
+  "minLevel": 6,
+  "after": "main_what_the_stones_keep",
+  "people": ["ouma", "sefu", "tharel", "kit", "oriel"],
+  "factions": ["archive", "hegemony"],
+  "lead": "First Keeper Ouma will trade you anything in her Archive, for a true thing in return, and she's told you so twice. You've come for the one thing she won't name a price for.",
+  "anyone": "First Keeper Ouma will trade anything in her Archive for a true thing in return, and she means it. There's one thing she won't name a price for, behind the Ninth Door, and people keep coming to Sarn for it.",
+  "gm": {
+    "truth": "Behind the Ninth Door, past the stool and the Keeper on it, is a small cold room with a long table and a very long book. It's a duty roster. The song was always a shift. First Builders, then Thessan, Korrun, Veshti, Ilari and finally the monks of Ilun, last relieved 1,006 years ago. After that comes one line a year, in the hands of a long succession of Keepers: Watch unrelieved. One thousand and six times. The last sixty-two are in Sefu Anand's hand. The First Builder clerk machine that keeps the book has been talking to him through the wall all that time, and each year he writes the line it gives him and posts it through a crack in the stones. At the bottom of the last page: Captain of the Refugee Fleet, inquiring. Shelved around the book are accounts from every people who took the watch. Each ends the same way, and each is written to make the reader want to go, which is why every generation that read them tried to follow the light. Beside the book are the Score, the complete notation of the song and the key to ending it, joining it or fixing it, and a handover note from the last First Builder on watch, very short and very tired. It gives the lattice's last stanza: IF YOU WILL NOT TURN BACK, THE WATCH IS OPEN. COME AND RELIEVE US. Ouma has never read any of it, and no other Keeper knows that. She knows only what one Keeper said on coming out, before she asked to have the door welded shut and had her name struck from the index: that everyone who reads it wants to follow the light. So for three hundred years Ouma has kept it shut, against every principle she has, and sold forgeries to the Regency and Quill. She believes nobody can read it and stay. The Keepers' own law has a loophole: a sealed record lapses once its content is established from three independent sources outside the Archive. Meanwhile Ministry Blades are coming to burn it. Arc clues: ninth_vault_roster, handover_note, sefu_vacancy, maris_numbers.",
+    "beats": [
+      "Ouma's audience on the Warm Stair. She dictates the meeting as it happens: 'The captain asked, at this point, for something that could not be had.' She offers a great deal: Navy records, First Builder star charts, medical archives that could save thousands, all for true things deposited. All of it is real, and all of it would help. She only asks that they stop asking.",
+      "The Conclave, a formal hearing of very old, very slow Thessan who have been waiting centuries to hear a good argument. Or the way round it: Sefu's false shelfmark and his two hundred volumes, or Kit Marlowe-Dace's plan. If Tharel has come home, he and Ouma have a very short conversation after a very long time.",
+      "Ministry Blades land. The Keepers have no weapons and refuse to leave the stacks. The Vault Roads start to burn, and everything anyone ever wrote down is on fire.",
+      "The door. The stool, and the Keeper on it, who looks up and says, for the record: 'Nobody has ever given me a reason.' A small room, a table and the book. It's so much less than anyone imagined. Read it. Find your people in it. Then read the accounts, and feel what they're doing to you.",
+      "The note, and the last line. What happens to this knowledge now? Copy it, burn it, publish it or sell it to one side? Every faction will act on it, alone, the moment they have it."
+    ],
+    "routes": [
+      "Scholar: argue the three-source law before the Conclave (lore, science, persuasion), with evidence in hand: the Korrun receipt, the Maris core, the Tarn's log, the cut pages, the overdue crew, the Tessen children, Hollis-Nine. It's the best courtroom scene in the galaxy, and it takes a very long time.",
+      "Talker: move Ouma herself (persuasion, leadership). Bring something true she doesn't have: every name in the fleet, or a recording from Asterion. Or show her one person who has read it and can walk away. She doesn't believe there is one.",
+      "Hacker or thief: the ninth_vault_index from Sefu, then get past Keepers who've never had to guard anything from anyone who lied (hacking, stealth, deception). Madame Oriel has bet her station on the fleet reaching the Beacon, and she'll quietly fund Kit's plan. Kit will give you odds.",
+      "Fighter: hold the Vault Roads against the Ministry Blades when no one else will (tactics, melee, firearms), with fire behind you. The Keepers won't ask, and they never forget a thing anyone has done.",
+      "Resonant: go down to Sefu's wall and answer what's on the other side (attunement, survival). It will tell you where the door isn't locked. Reading the Score aloud is singing it, and something notices."
+    ],
+    "checks": [
+      "lore:very_hard to win the three-source argument before the Conclave",
+      "persuasion:hard to move Ouma",
+      "stealth:hard to reach the Ninth Door with the Vault Roads on fire",
+      "tactics:hard to hold the stacks against the Blades",
+      "attunement:hard to answer the voice through the wall",
+      "composure:very_hard to read the accounts and not want to go at once"
+    ],
+    "fights": [
+      "ministry_blade and hegemony_trooper in the burning stacks"
+    ],
+    "outcomes": [
+      "If the Keepers' law is honored, the Archive survives, opened by right, and Keepers will copy the Score for anyone who asks, including the Regent. Ouma reads it at last. She either stays and says she was wrong, which no First Keeper ever has, or she asks the way to the Harbor.",
+      "If they break in, the captain has the Roster and the Keepers will hold it against them for several hundred years. Ouma seals the rest, and Sarn's doors close to the fleet.",
+      "If Sarn burns, some of the Archive is not yet recovered, and never will be. The captain may save the Roster or the Score but not everything. Thessan never forget who let it happen.",
+      "If it's published, each people learns its part. Korrun, Veshti and Ilari reactions are seismic: shame, denial, pride. Every one of them now has an opinion about whose turn it is.",
+      "Sefu is brought up into the warm, or left at his wall. Either way he'd like someone to stay for dinner, and she'd like to know if the post has been filled."
+    ],
+    "rewards": "The ninth_vault_index, a data_chip with a copy of the Score, Navy records, standing with the archive, and Sefu's friendship. Whoever reads the accounts may earn the hears_the_song trait."
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "_help": [
+    "Who the player can be. Being captain of the Meridian is one way to start, and these are the others. If they start as anything but the captain, someone else is in the chair, and the fleet goes on without them. Restart the game after changing this.",
+    "group is where it's listed: fleet or world. name and desc are what the player reads when they choose. short is what they're called in the status line. place and room say where they start: room is a level of that place's map.",
+    "job is the work they can do at that place for money: name is what the button says, pay is the credits for an eight-hour shift, skill is the skill it practices and adds to the pay, and done is what's said when it's over.",
+    "people are who they already know there, by id. factions changes how those factions regard them from the start. quest is what's on their mind when the story opens.",
+    "gm and opening are for the game master: who this person is, and how the story opens. Keep them to what's plain to see, and let the story do the rest."
+  ],
+
+  "groups": { "fleet": "In the fleet", "world": "Out in the world" },
+
+  "starts": {
+    "captain": {
+      "group": "fleet",
+      "captain": true,
+      "name": "Captain of the Meridian",
+      "short": "captain",
+      "desc": "Everyone above you is dead, so forty-one ships and thirty thousand people are yours to feed, move and answer for. You give the orders, and you carry what comes of them.",
+      "gm": "The captain of the CFS Meridian, and so of the whole Refugee Fleet, because everyone above them is dead. Everything the notes say about the captain means them.",
+      "opening": "The Meridian has just picked up the mysterious Beacon signal, and the player has just been made captain. Introduce Commander Voss."
+    },
+
+    "engine_hand": {
+      "group": "fleet",
+      "name": "Engine-room hand on the Meridian",
+      "short": "engine hand",
+      "desc": "You keep a reactor running that should have died months ago, under a chief who swears at it and at you. You hear everything, and nobody asks what you think.",
+      "place": "meridian",
+      "room": "engineering",
+      "job": { "name": "Work a shift in Engineering", "pay": 14, "skill": "engineering", "done": "You put in a shift with your arms in the coolant lines, and Chief Marrow calls you something new." },
+      "people": ["marrow", "tobin"],
+      "factions": { "fleet": 3 },
+      "quest": { "id": "keep_her_running", "title": "Keep Her Running", "desc": "The Meridian's held together by patches on patches, and you're one of the few people who knows how bad it is.", "objective": "Get through the week, and find out what Chief Marrow isn't telling anyone." },
+      "gm": "A hand in the Meridian's engine room, answering to Chief Marrow. They've got grease to the elbows, a hot bunk they share with two others, and no say in anything. Officers don't know their name yet.",
+      "opening": "The player is on shift in the Meridian's Engineering, with something leaking and Chief Marrow swearing at it, when word comes down from the bridge about a signal on every band. It's an ordinary terrible day, and the news arrives as gossip."
+    },
+
+    "orderly": {
+      "group": "fleet",
+      "name": "Medbay orderly on the Meridian",
+      "short": "orderly",
+      "desc": "You carry, clean, hold people down and hold their hands. Dr. Aduro trusts you with the things nobody wants to do, and you've started counting what's left on the shelves.",
+      "place": "meridian",
+      "room": "medbay",
+      "job": { "name": "Work a shift in the medbay", "pay": 12, "skill": "medicine", "done": "You work a shift on the ward, and you don't talk about it afterward." },
+      "people": ["aduro", "bastian"],
+      "factions": { "fleet": 3 },
+      "quest": { "id": "the_shelves", "title": "What's on the Shelves", "desc": "The notices about medicine don't match what you see every day.", "objective": "Work out how much medicine there really is, and who else knows." },
+      "gm": "An orderly in the Meridian's medbay, answering to Dr. Aduro. They've seen a great many people die this year, and nobody thinks to lower their voice around them.",
+      "opening": "The player is at the end of a long shift in the Meridian's medbay, changing a dressing, when a patient asks them whether it's true about the signal. Nobody's told the medbay anything."
+    },
+
+    "marine": {
+      "group": "fleet",
+      "name": "Marine under Lieutenant Tarrow",
+      "short": "marine",
+      "desc": "You stand watches, search holds, and do what the Lieutenant says. Lately what she says has been getting harder to hear without flinching, if you're the flinching kind.",
+      "place": "meridian",
+      "room": "aft",
+      "job": { "name": "Stand a watch", "pay": 15, "skill": "awareness", "done": "You stand your watch, walk your rounds, and write down nothing, as ordered." },
+      "people": ["tarrow", "voss"],
+      "factions": { "fleet": 3 },
+      "quest": { "id": "the_list", "title": "The List", "desc": "Some of the marines have started talking about a list, and about what happens when the word comes.", "objective": "Find out what you're going to be asked to do, and decide what you think of it." },
+      "gm": "A marine in Lieutenant Tarrow's security detachment on the Meridian. They've got a rifle, a chain of command and a growing feeling that the two may come apart. The standing order and the list are real, and they're a long way down the chain from whoever decides.",
+      "opening": "The player is standing a watch in the Meridian's aft holds when a sergeant comes by to say that every machine aboard's to be logged tonight, and doesn't say why. The whole ship is talking about a signal."
+    },
+
+    "field_hand": {
+      "group": "fleet",
+      "name": "Field hand on the Sundial",
+      "short": "field hand",
+      "desc": "Every ration in the fleet starts with someone like you, up to the knees in old ore dust under one huge lamp on a rail. Steward Tull decides who eats, and she's noticed you.",
+      "place": "sundial",
+      "room": "furrow",
+      "job": { "name": "Work a shift in the fields", "pay": 10, "skill": "survival", "done": "You work a shift in the furrows, and come back with dirt in your teeth and your back in pieces." },
+      "people": ["grann", "oskar"],
+      "factions": { "fleet": 3 },
+      "quest": { "id": "the_dust", "title": "The Dust", "desc": "The beds on the east side have started to feel wrong in your hands, and you're not the only one who's noticed.", "objective": "Find out what's happening to the soil, and who's keeping it quiet." },
+      "gm": "A field hand on the Sundial, the fleet's farm ship, under Steward Grann Tull. They work the beds, eat what the Steward allows and hear Oskar Lind's sermons whether they want to or not.",
+      "opening": "The player is on the Long Furrow on the Sundial at the start of a shift, with the great lamp coming on overhead, when three pairs of shoes turn up neatly lined along the end of a row, with nobody in them."
+    },
+
+    "porter": {
+      "group": "fleet",
+      "name": "Porter on Anselm's Mercy",
+      "short": "porter",
+      "desc": "The hospital ship was built for four hundred patients, and it has three thousand. You move them from one bad place to another, and you know which number on the list means what.",
+      "place": "anselm",
+      "room": "ward",
+      "job": { "name": "Work a shift on the wards", "pay": 10, "skill": "medicine", "done": "You carry people up and down the Long Ward until your shift is over, and some of them thank you." },
+      "people": ["wen", "pavel"],
+      "factions": { "fleet": 3 },
+      "quest": { "id": "the_list_of_names", "title": "Below the Line", "desc": "Someone you've carried for months has just fallen below the line on Dr. Adeyemi's list.", "objective": "Find out if there's anything that can be done for them, by anyone, at any price." },
+      "gm": "A porter on Anselm's Mercy, under Dr. Wen Adeyemi. They know the wards, the list and most of the patients, and nobody with any power looks at them twice.",
+      "opening": "The player is pushing a gurney down the Long Ward on Anselm's Mercy when they notice an old man humming, and that the whole row of beds around him is breathing in time."
+    },
+
+    "docker": {
+      "group": "world",
+      "name": "Dock hand at Haven Station",
+      "short": "dock hand",
+      "desc": "Everything anyone wants passes through your hands on the Manifest Docks, with a stamp on it or not. You work for Dockmaster Jessup, and you've learned what not to look at.",
+      "place": "haven",
+      "room": "docks",
+      "job": { "name": "Work a shift on the docks", "pay": 16, "skill": "athletics", "done": "You shift crates for eight hours, and Mott Jessup pays you without looking up." },
+      "people": ["mott", "sable"],
+      "factions": { "drift": 5, "fleet": -5 },
+      "quest": { "id": "the_short_crate", "title": "Eleven Crates", "desc": "The tallies have been off for as long as anyone can remember, and today you were the one holding the clipboard.", "objective": "Keep your job, and find out why nobody wants that clipboard." },
+      "gm": "A dock hand on Haven Station, on Dockmaster Mott Jessup's books. They drink at the Neutral Ground when they can afford it. The Refugee Fleet is a lot of desperate strangers to them, and somebody else's problem.",
+      "opening": "The player is on the Manifest Docks at Haven Station at the start of a shift, with a queue of angry people, a crate that isn't on the manifest, and every speaker on the station arguing about a signal."
+    },
+
+    "runner": {
+      "group": "world",
+      "name": "Runner in the Warrens of Kessara Drift",
+      "short": "runner",
+      "desc": "You carry messages, noodles and things that aren't either through a mile of hand-cut tunnel, for whoever pays. You owe Talia Sen, and the air isn't free.",
+      "place": "kessara",
+      "room": "warrens",
+      "job": { "name": "Run errands in the Warrens", "pay": 14, "skill": "streetwise", "done": "You run the Warrens for eight hours, and you get paid for most of it." },
+      "people": ["talia", "tannis"],
+      "factions": { "drift": 8, "hegemony": -5 },
+      "quest": { "id": "air_money", "title": "Air Money", "desc": "In Kessara, air is rent, and you're behind.", "objective": "Pay what you owe before someone comes to close your vent." },
+      "gm": "A runner in the Warrens on Kessara Drift, who knows every junction and owes Talia Sen, the noodle-seller, more than they can pay. Mother Quill doesn't know they exist, which is how they like it.",
+      "opening": "The player is running a covered bowl of something through the Warrens on Kessara Drift when they turn a corner and find the landlord's man closing a vent, with people still arguing on the other side of it."
+    },
+
+    "diver": {
+      "group": "world",
+      "name": "Salvage diver at the Graveyard",
+      "short": "diver",
+      "desc": "You cut plate off dead warships for the Guild, and you get paid by weight. Your air, your suit and your berth are all on Factor Crane's books, and the books never get shorter.",
+      "place": "graveyard",
+      "room": "claims",
+      "job": { "name": "Dive a claim", "pay": 20, "skill": "void_ops", "done": "You dive a claim for eight hours, and you don't look too hard at what you're cutting around." },
+      "people": ["elsbeth", "rusk"],
+      "factions": { "guild": 8, "fleet": -3 },
+      "quest": { "id": "guild_debt", "title": "On the Books", "desc": "You owe the Guild for your suit, your air and the last suit before that.", "objective": "Find one good haul that gets you off Factor Crane's books." },
+      "gm": "A salvage diver working Guild claims at the Graveyard, deep in debt to Factor Elsbeth Crane. They've heard Rusk's stories, they know which wrecks you leave alone, and they've seen things out there they don't talk about.",
+      "opening": "The player is on Claim Row at the Graveyard, suiting up for a dive on a hull they've been told is empty, when a voice on the open channel asks whoever's out there if they can hear a bell."
+    },
+
+    "miner": {
+      "group": "world",
+      "name": "Miner on Shift Row, Cinder Reach",
+      "short": "miner",
+      "desc": "Nobody's dug anything for a while, because six thousand of you are holding the Gate. Your chits buy less every week, and Ulla Greaves says this time it's for good.",
+      "place": "cinder",
+      "room": "row",
+      "job": { "name": "Work a shift for the strike kitchen", "pay": 11, "skill": "athletics", "done": "You haul slag-brick and soup for the strike for eight hours, and they pay you in chits that might be worth something." },
+      "people": ["ulla", "rennick"],
+      "factions": { "fleet": -3 },
+      "quest": { "id": "hold_the_gate", "title": "Hold the Gate", "desc": "The strike's the only thing anyone on Shift Row talks about, and people have started asking whose side you're really on.", "objective": "Stay on the right side of Ulla Greaves, and stay alive." },
+      "gm": "A miner on Shift Row at Cinder Reach, out on strike with everyone else, in the crowd at the Gate. Ulla Greaves knows them by sight. Director Vale knows them as a number on a list.",
+      "opening": "The player is in the crowd at the Gate on Shift Row, with a cold mug of strike soup, when Director Vale's hired men start forming up at the far end of the Row, and Ulla Greaves climbs up on her ore cart."
+    },
+
+    "on_the_line": {
+      "group": "world",
+      "name": "Refugee on the Line at Bastion Nine",
+      "short": "refugee",
+      "desc": "You didn't make it to the fleet. You've been standing on the Line for weeks with six thousand others, waiting for a stamp, and the contract they're offering looks better every day.",
+      "place": "bastion",
+      "room": "line",
+      "job": { "name": "Work a shift in the Line's kitchen", "pay": 7, "skill": "composure", "done": "You peel and carry for eight hours in the Line's kitchen, and it's a day closer to something." },
+      "people": ["severa", "dain"],
+      "factions": { "hegemony": -5 },
+      "quest": { "id": "a_number", "title": "A Number on the Line", "desc": "Your number's coming up, and you've got a choice to make about what you sign.", "objective": "Find out what the contract really asks, before someone calls your number." },
+      "gm": "A refugee from the Concord, waiting on the Line at Bastion Nine to sign a Hegemony service contract, with nothing but what they carried. Nobody here cares who they used to be. Severa Lune, the clerk at the window, may have noticed them.",
+      "opening": "The player is on the Line at Bastion Nine, a long way from the window, when the person ahead of them, who's been there for a month, starts running a fever and looks oddly pleased about it."
+    },
+
+    "farmer": {
+      "group": "world",
+      "name": "Farm hand on Tessen",
+      "short": "farm hand",
+      "desc": "Best harvest in thirty years, and everybody's quiet about it. You work the Long Fields for Elder Dray, and you've stopped asking why some of the children look so tired in the mornings.",
+      "place": "frontier",
+      "room": "fields",
+      "job": { "name": "Work a shift in the Long Fields", "pay": 11, "skill": "survival", "done": "You bring in a shift's worth of grain, and it's more than the field should have given." },
+      "people": ["dray", "sorrel"],
+      "factions": { "fleet": -2 },
+      "quest": { "id": "the_harvest", "title": "Too Good a Year", "desc": "The harvest is more than the soil should give, and the Elder won't let anyone dig in the north section.", "objective": "Find out what's wrong with Tessen, without getting yourself put off it." },
+      "gm": "A farm hand on Tessen Colony, working the Long Fields for Elder Maren Dray. It's a small place where everyone knows everyone and nobody says anything. Marshal Dey keeps an eye on them, as she does on everyone.",
+      "opening": "The player is in the Long Fields on Tessen at first light, when they find a set of small bare footprints in wet clay crossing the rows from the north, and hear Marshal Dey's boots behind them."
+    },
+
+    "smelter": {
+      "group": "world",
+      "name": "Smelter at Korrath Forge",
+      "short": "smelter",
+      "desc": "Twelve hours at the Long Furnaces under full gravity, and at the end of it your word's worth something. Here that's all that's ever worth anything, and there's a scale to prove it.",
+      "place": "korrath",
+      "room": "furnaces",
+      "job": { "name": "Work a shift at the Long Furnaces", "pay": 18, "skill": "athletics", "done": "You work a shift at the furnace, and Warden Varr's scale says you did." },
+      "people": ["hesk", "brenna"],
+      "factions": { "clans": 8 },
+      "quest": { "id": "on_the_scale", "title": "On the Scale", "desc": "Someone on your shift has started saying the scales aren't true, which is the worst thing anyone can say here.", "objective": "Find out who's saying it, and what it'll cost you to have listened." },
+      "gm": "A smelter at the Long Furnaces on Korrath Forge, under the clans' law, where you're weighed by your work. Young Brenna Tor works the same shift. Warden Hesk Varr has weighed them, and found them adequate.",
+      "opening": "The player is at the end of a shift at the Long Furnaces on Korrath Forge when young Brenna Tor, white under the soot, asks them quietly if they've ever seen the Clan Standard up close."
+    },
+
+    "rigger": {
+      "group": "world",
+      "name": "Rigger at the Deepyards",
+      "short": "rigger",
+      "desc": "You hang from the ice on a line and rebuild ships the Long Families think are beneath them. You're family, or you married in, or you owe someone who is. Nobody here has ever stood on a planet, and they'd like you to remember it.",
+      "place": "deepyards",
+      "room": "dock",
+      "job": { "name": "Work a shift on the Long Drydock", "pay": 18, "skill": "void_ops", "done": "You rig for eight hours on the Long Drydock, and nobody at the Hearth Rings says a word against your knots." },
+      "people": ["ilkin", "tamsin"],
+      "factions": { "families": 8 },
+      "quest": { "id": "the_feud", "title": "A Formal Note of Regret", "desc": "A rigger's dead, and there's been a very polite note. Everyone's waiting to see who answers it, and you were on the same line.", "objective": "Keep out of the feud, or work out who's really running it." },
+      "gm": "A rigger on the Long Drydock at the Deepyards, under Yardmother Ilkin Ao-Vash and her family. They're low on the ladder. Exiled Tamsin Ao-Rel's name isn't to be spoken, and they've spoken it.",
+      "opening": "The player is on a line above the Long Drydock at the Deepyards when the power goes out across the whole dock, and a very polite note arrives, on paper, addressed to the family."
+    },
+
+    "aide": {
+      "group": "world",
+      "name": "Healer's aide at Lumen Sanctuary",
+      "short": "aide",
+      "desc": "In a city where nobody can hide a feeling, you carry water for the healers in the Still Rooms. Your hands are steady. Everyone can tell when you're lying, or they think they can.",
+      "place": "lumen",
+      "room": "still",
+      "job": { "name": "Work a shift in the Still Rooms", "pay": 10, "skill": "medicine", "done": "You work a shift in the Still Rooms, and everyone you pass reads how it went." },
+      "people": ["mirei", "ashael"],
+      "factions": { "circle": 8 },
+      "quest": { "id": "the_old_healer", "title": "Who Found Her", "desc": "An old healer's been found dead in the Water Courts, and everybody's skin says something nobody's saying out loud.", "objective": "Find out what the whole city knows, without being the one who says it." },
+      "gm": "An aide to the healers at Lumen Sanctuary, under the Circle. Among Ilari, skin shows every feeling, and if the player isn't Ilari, they're one of the Dim, a guest with a face like a shut door. Mirei has noticed them.",
+      "opening": "The player is carrying water through the Still Rooms at Lumen when every healer in the room goes the same pale color at once, for no reason anyone's going to tell them."
+    },
+
+    "kelper": {
+      "group": "world",
+      "name": "Kelp farmer at Maris Deep",
+      "short": "kelper",
+      "desc": "Long days on the rafts, under a sky that's mostly weather. There's a mad old scientist on stilts out there who pays for filters, and he's the most interesting thing that's happened in years.",
+      "place": "maris",
+      "room": "rafts",
+      "job": { "name": "Work a shift on the rafts", "pay": 11, "skill": "survival", "done": "You haul kelp lines for eight hours, and the sea takes most of the skin off your hands." },
+      "people": ["lenn"],
+      "factions": {},
+      "quest": { "id": "filters", "title": "Please Send Filters", "desc": "Dr. Corso's been sending out the same report for months, and you're the one who takes his supplies over.", "objective": "Find out what he's so afraid of, and why he won't let anyone come." },
+      "gm": "A kelp farmer on the rafts at Maris Deep, among people who've never much cared what the Concord was doing. They take supplies out to Dr. Lenn Corso's station on stilts, and they've started to notice what time he's awake.",
+      "opening": "The player is out on the rafts at Maris Deep at high tide when a light goes on, far down in the water under Corso Station, where nobody's ever said there was anything to light."
+    },
+
+    "dealer": {
+      "group": "world",
+      "name": "Card dealer on the Gilded Wheel",
+      "short": "dealer",
+      "desc": "You deal honest cards at the most honest table in known space, in a borrowed waistcoat, on a station where the house always knows. Everyone in the galaxy comes through, sooner or later, and loses.",
+      "place": "wheel",
+      "room": "great",
+      "job": { "name": "Deal a shift at the Great Wheel", "pay": 20, "skill": "commerce", "done": "You deal for eight hours, and the house is pleased with you, in that it says nothing at all." },
+      "people": ["oriel", "kit"],
+      "factions": { "drift": 5 },
+      "quest": { "id": "the_same_hand", "title": "Seven, Ace, Nine, Ace", "desc": "Tonight you've dealt the same four cards more than once, and you're nearly sure you shuffled.", "objective": "Work out what's happening with the cards, without losing your place at the table." },
+      "gm": "A dealer at the Great Wheel on the Gilded Wheel, employed by Madame Oriel's House, with a marker or two of their own. Kit Marlowe-Dace is a regular at their table.",
+      "opening": "The player is dealing at the Great Wheel, with a table full of people who can't afford to be there, when the same four cards come up in the same order for the second time tonight, and Kit Marlowe-Dace looks up."
+    },
+
+    "sailor": {
+      "group": "world",
+      "name": "Sailor with the Remnant in the Ghostlight",
+      "short": "sailor",
+      "desc": "You got out of the last battle with Admiral Okonkwo-Reyes, and you've been hiding in a nebula ever since. Six warships, thirty days of food, and orders to be ready. Nobody's said for what.",
+      "place": "ghostlight",
+      "room": "battle",
+      "job": { "name": "Stand a watch with the Remnant", "pay": 12, "skill": "gunnery", "done": "You stand a watch at a dark gun, staring into the nebula, and nothing comes. This time." },
+      "people": ["dorn", "okonkwo"],
+      "factions": { "remnant": 10, "fleet": -3 },
+      "quest": { "id": "thirty_days", "title": "Thirty Days of Food", "desc": "The Remnant's stores are getting low, and the officers have stopped saying how low.", "objective": "Find out what the Admiral's really planning, and whether it includes eating." },
+      "gm": "A sailor in the Concord Navy's Remnant, hiding in the Ghostlight under Admiral Okonkwo-Reyes, with Commodore Dorn as the officer they actually see. They're still under orders, in a Navy that no longer exists, and they salute anyway.",
+      "opening": "The player is on watch at a dark gun in the Line of Battle in the Ghostlight when Commodore Dorn walks past, alone, holding something small in his hand as if it might bite him. The Admiral's just sent a courier to a ship called the Meridian."
+    },
+
+    "clerk": {
+      "group": "world",
+      "name": "Ministry clerk at Vantor Prime",
+      "short": "clerk",
+      "desc": "You stamp forms on the Ministry Steps, in the most orderly city in known space. It's clean and warm, and the food is real. You've started noticing what some of the forms are for.",
+      "place": "vantor",
+      "room": "steps",
+      "job": { "name": "Work a shift at the Ministry", "pay": 18, "skill": "commerce", "done": "You stamp forms for eight hours, and every one of them is in perfect order." },
+      "people": ["jaska"],
+      "factions": { "hegemony": 15, "fleet": -8 },
+      "quest": { "id": "the_ledger", "title": "A Discrepancy", "desc": "A column of figures you've been told to file doesn't add up, and you've been told to file it anyway.", "objective": "Find out where nine hundred people a month go, without anyone noticing that you asked." },
+      "gm": "A junior clerk of the Hegemony's Ministry at Vantor Prime, who's a citizen in good standing, for now. They've got every reason to keep their head down. Inspector Jaska Moor has a way of turning up. The Evening Line and the Outer Yards are a short walk away.",
+      "opening": "The player is at their desk on the Ministry Steps at Vantor, as the evening chimes begin, with a form in front of them that needs a stamp, and a column of figures on it that doesn't come to what it says."
+    },
+
+    "keeper": {
+      "group": "world",
+      "name": "Junior Keeper at the Archive of Sarn",
+      "short": "junior keeper",
+      "desc": "You file what the galaxy has forgotten, in the cold, under a First Keeper who trades in true things. You take the lamp oil down to the Deep Stacks when it's your turn, and you've started dreading your turn.",
+      "place": "sarn",
+      "room": "deposit",
+      "job": { "name": "Work a shift in the Deposit Hall", "pay": 9, "skill": "lore", "done": "You take down testimony for eight hours, crimes and all, and you file it where it belongs." },
+      "people": ["ouma", "sefu"],
+      "factions": { "archive": 12 },
+      "quest": { "id": "the_lamp_oil", "title": "The Lamp Oil", "desc": "Old Sefu Anand's been alone in the Deep Stacks for sixty-two years, and he's started losing arguments.", "objective": "Find out who he's arguing with." },
+      "gm": "A junior Keeper at the Long Archive of Sarn, under First Keeper Ouma. They've read a little of everything and are forbidden the rest. Everything that's said here gets written down.",
+      "opening": "The player is in the Deposit Hall at Sarn, taking down a refugee's testimony, when a voice in the corridor says the lamp oil needs taking down to the Deep Stacks, and that it's their turn."
+    },
+
+    "novice": {
+      "group": "world",
+      "name": "Novice of the Order of Ilun",
+      "short": "novice",
+      "desc": "There aren't many of you left, sitting among the stones and learning to listen. The empty houses have their beds made, Brother Cael laughs too much, and the Abbess doesn't sleep.",
+      "place": "ilun",
+      "room": "hall",
+      "job": { "name": "Sit a vigil in the Listening Hall", "pay": 4, "skill": "attunement", "done": "You sit among the stones for eight hours. The Order feeds you, and you think you nearly heard something." },
+      "people": ["cael", "ione"],
+      "factions": { "ilun": 15, "hegemony": -8 },
+      "quest": { "id": "the_empty_houses", "title": "The Beds Were Made", "desc": "Nobody will say what happened to the Order's other houses, and everyone stops talking when you come in.", "objective": "Find out where the novices went." },
+      "gm": "A novice of the Order of Ilun at the ruins, under Abbess Ione, with Brother Cael as the one who bothers to talk to them. They've been told the Order has always listened and never sung. If they aren't a Resonant, they're here for some other reason.",
+      "opening": "The player is sitting a vigil in the Listening Hall at Ilun, long past the hour when the stones start humming, when they notice that Brother Cael has stopped laughing and is counting the people in the room."
+    },
+
+    "scavenger": {
+      "group": "world",
+      "name": "Scavenger at Rimcamp, the Pale Gate",
+      "short": "scavenger",
+      "desc": "The last camp before the edge of every chart, under a ring the size of a moon that everybody agrees is dead. Nobody here asks where you came from, and nobody expects you to stay.",
+      "place": "pale_gate",
+      "room": "camp",
+      "job": { "name": "Pick over the rim for a shift", "pay": 13, "skill": "survival", "done": "You spend eight hours picking over the rim, and you sell what you find to whoever's buying." },
+      "people": [],
+      "factions": { "guild": 2 },
+      "quest": { "id": "four_degrees", "title": "Four Degrees", "desc": "Some of the old hands at Rimcamp swear the ring has moved since they first came here.", "objective": "Find out if it's true, and if there's any money in it." },
+      "gm": "A scavenger at Rimcamp, at the foot of the Pale Gate, as far from anyone's law as it's possible to get. The camp's people are all running from something. Nobody's told them what the ring is, and nobody knows.",
+      "opening": "The player is at Rimcamp under the Pale Gate, trading scrap for a meal, when someone comes in from the Long Face with a story about a hall full of sealed cradles, and nobody laughs as much as they should."
+    }
+  }
+}

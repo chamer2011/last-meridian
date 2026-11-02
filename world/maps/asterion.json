@@ -1,0 +1,410 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "Asterion",
+  "start": "lounges",
+  "levels": {
+    "lounges": {
+      "name": "The Departure Lounges",
+      "aliases": [
+        "departure lounges",
+        "the lounges",
+        "the spaceport",
+        "spaceport",
+        "departures"
+      ],
+      "desc": "The spaceport, where it all stopped: rows of luggage, card tables and half-finished drinks, carefully dusted. The announcements here are the most frightened in the city.",
+      "floor": ".",
+      "colors": {
+        "floor": "#3e4450",
+        "walls": "#8c94a6",
+        "scenery": "#c8d0e4",
+        "writing": "#f4f6ff"
+      },
+      "plan": [
+        "###########################################################################",
+        "#.........................................................................#",
+        "#.._[_]_[_]_[_]_[_]_[_]_..._[_]_[_]_[_]_[_]_[_]_..._[_]_[_]_[_]_[_]_[_]_..#",
+        "#.........................................................................#",
+        "#.._[_]_[_]_[_]_[_]_[_]_..._[_]_[_]_[_]_[_]_[_]_..._[_]_[_]_[_]_[_]_[_]_..#",
+        "#.........................................................................#",
+        "#.......................................c.................................#",
+        "#......[+]......[+]...............@.................[+]......[+]..........#",
+        "#......................................................h..................#",
+        "#.........................................................................#",
+        "#.......[][]....[][]s.....[][][]......[][]....[][][]......[][]....[]d[]...#",
+        "#.........................................................................#",
+        "#################1####################################2####################"
+      ],
+      "writing": [
+        [8, 0, "ALL DEPARTURES ARE DELAYED. THANK YOU FOR YOUR PATIENCE."]
+      ],
+      "labels": [
+        {
+          "text": "THE DEPARTURE LOUNGES",
+          "at": [26, 9]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "walk",
+          "via": "1"
+        },
+        "2": {
+          "to": "exchange",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "c": {
+          "name": "A card table, mid-hand",
+          "look": "Four hands of cards, face down, and four half-finished drinks with no dust on them. Someone has been keeping this exactly as it was, and they've been careful about it.",
+          "use": "I turn over one of the hands at the card table."
+        },
+        "h": {
+          "name": "An officer's case",
+          "item": "remnant_codes",
+          "look": "A Concord officer's document case, left under a seat, with the lock still good. There's an old recognition stamp on it, from a ship that won't be answering.",
+          "use": "I open the officer's case left under the seat."
+        },
+        "s": {
+          "name": "A row of suitcases",
+          "look": "A long line of luggage, tags all turned the same way. Silver dust has settled nowhere on it. You find you've started reading the names.",
+          "use": "I read the names on the luggage tags, and I look for anyone I knew."
+        },
+        "d": {
+          "name": "A chip in a coat pocket",
+          "item": "data_chip",
+          "look": "A coat left over a suitcase, and in its pocket a data chip with someone's last message on it, or someone's last hundred.",
+          "use": "I take the data chip out of the coat pocket."
+        }
+      }
+    },
+    "walk": {
+      "name": "Founders Walk",
+      "aliases": [
+        "the boulevard",
+        "boulevard",
+        "the walk",
+        "the promenade"
+      ],
+      "desc": "The great boulevard: ten kilometers of white stone, plane trees and public phones. The 18:40 tram has been delayed for seven months, and it's still announced every evening.",
+      "floor": "_=",
+      "colors": {
+        "floor": "#5e5a4c",
+        "walls": "#b4ae98",
+        "scenery": "#9fcf8a",
+        "writing": "#fffbe6"
+      },
+      "plan": [
+        "                                                                         ",
+        "  %%%   %%%   %%%   %%%   %%%   %%%   %%%   %%%   %%%   %%%   %%%   %%%  ",
+        "   |     |     |     |     |     |     |     |     |     |     |     |   ",
+        "1______________________________________________________________________2 ",
+        "_______________________________________________________________________  ",
+        "__[#]_________[#]p________[#]___________[#]_________[#]________[#]______ ",
+        "_______________________________________________________________________  ",
+        "=======================================================================  ",
+        "=================================t=====================================  ",
+        "_______________________________________________________________________  ",
+        "_______@________________________________________________________r______  ",
+        "   |     |     |     |     |     |     |     |     |     |     |     |   ",
+        "  %%%   %%%   %%%   %%%   %%%   %%%   %%%   %%%   %%%   %%%   %%%   %%%  "
+      ],
+      "writing": [
+        [24, 0, "THE 18:40 TRAM HAS BEEN DELAYED"]
+      ],
+      "labels": [
+        {
+          "text": "FOUNDERS WALK",
+          "at": [3, 4]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "lounges",
+          "via": "1"
+        },
+        "2": {
+          "to": "hall",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "p": {
+          "name": "A public phone, ringing",
+          "look": "Every phone on the boulevard rings at once, stops, and starts again. If you pick one up, someone's already mid-sentence, and they're very pleased you called.",
+          "use": "I pick up the ringing phone and listen."
+        },
+        "t": {
+          "name": "The 18:40 tram",
+          "look": "Clean, lit and on time for a departure seven months late. Its doors stand open, and there's nobody on it, and it isn't going anywhere yet.",
+          "use": "I step onto the tram and sit down."
+        },
+        "r": {
+          "name": "A silver drone among the roses",
+          "look": "It's kneeling in a flower bed with its pruning shears, and it doesn't look up. The roses are extraordinary. Burned Aurelis hangs in the sky behind them.",
+          "use": "I stop and watch the silver drone tend the roses."
+        }
+      }
+    },
+    "hall": {
+      "name": "Concord Hall",
+      "aliases": [
+        "the senate",
+        "senate",
+        "the hall",
+        "the senate chamber"
+      ],
+      "desc": "The Senate, with its lights on. Silver figures wearing the senators' faces sit in the benches, repeating the last debate from the last night, and they yield to visitors under the proper rules.",
+      "floor": ":",
+      "colors": {
+        "floor": "#40485a",
+        "walls": "#8a98b8",
+        "scenery": "#d8e0f8",
+        "writing": "#ffffff"
+      },
+      "plan": [
+        "  #########################################################  ",
+        "####:::::::::::::::::::::::::::::::::::::::::::::::::::::####",
+        "##:::::((((((((((((((((((((((((((((((((((((((((((::::::::::##",
+        "##:::((::::::::::::::::::::::::::::::::::::::::::((::::::::##",
+        "##::((:::::((((((((((((((((((((((((((((((((:::::::((:::::::##",
+        "##::(:::::((::::::::::::::::::::::::::::::((:::::::(:::::::##",
+        "1::::::::::(::::::::[=======]m:::::::::::::(:::::::::::::::##",
+        "##:::::::::::::::::::::::::::::::::::::::::::::::::::::::::##",
+        "##::::::::::::::::::::::@::::::::::::::::::::::::::::::::::##",
+        "####::::::::::::::::::::::::::::g::::::::::::::::::::::::####",
+        "  #############################f###########################  "
+      ],
+      "writing": [
+        [15, 0, "THE CHAIR RECOGNIZES THE VISITOR"]
+      ],
+      "labels": [
+        {
+          "text": "CONCORD HALL",
+          "at": [34, 7]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "walk",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "m": {
+          "name": "The Speaker's rostrum",
+          "look": "A silver figure stands at it, in the middle of a sentence from the last night of the Fall. It waits politely for a point of order.",
+          "use": "I step up to the rostrum and ask to be recognized by the chair."
+        },
+        "g": {
+          "name": "A medal on the front bench",
+          "item": "old_concord_medal",
+          "look": "An old Concord service medal, left on an empty seat with the ribbon folded under. It's the only seat in the chamber without a silver figure in it.",
+          "use": "I pick up the medal from the empty seat on the front bench."
+        },
+        "f": {
+          "name": "The record of the last debate",
+          "look": "A printout feeding slowly from a slot in the wall. It's the same debate, word for word, and it's been running for a long time. There's more paper than the room should hold.",
+          "use": "I read through the record of the last debate."
+        }
+      }
+    },
+    "exchange": {
+      "name": "The Exchange",
+      "aliases": [
+        "exchange",
+        "the switching hall",
+        "switching hall",
+        "the switchboards",
+        "central exchange"
+      ],
+      "desc": "The old central switching hall: row on row of boards, and a dozen thin old operators still plugging calls. Drones bring them meals and don't speak.",
+      "floor": "'",
+      "colors": {
+        "floor": "#3f394e",
+        "walls": "#7c7298",
+        "scenery": "#d8b868",
+        "writing": "#ffecb0"
+      },
+      "plan": [
+        "############################################################################",
+        "#''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+        "#''[:!:!:!:!:!:!:!:]''''[:!:!:!:!:!:!:!:]''''[:!:!:!:!:!:!:!:]''''[:!:!:]''#",
+        "#''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+        "1''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+        "#''[:!:!:!:!:!:!:!:]''''[:!:!:!:!:!:!:!:]''''[:!:!:!:!:!:!:!:]''''[:!:!:]''#",
+        "#'''''''''''''''''''''''''''E''''''''''''''''''''''''''''''''''''''''''''''#",
+        "#''''''@'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+        "#''[:!:!:!:!:!:!:!:]''''[:!:!:!:!:!:!:!:]''''[:!:!:!:!:!:!:!:]r'''[:!:!:]''#",
+        "#''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+        "#''''''''''''o'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+        "####################################2#######################################"
+      ],
+      "writing": [
+        [26, 0, "NUMBER, PLEASE"]
+      ],
+      "labels": [
+        {
+          "text": "THE EXCHANGE",
+          "at": [44, 7]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "wire",
+          "via": "1"
+        },
+        "2": {
+          "to": "lounges",
+          "via": "2"
+        }
+      },
+      "people": {
+        "E": {
+          "id": "echo",
+          "label": "Echo",
+          "asks": [
+            "Who am I speaking to?",
+            "What do the dead want me to carry out?"
+          ],
+          "greeting": "A cord slides home in a board nearby, and {name} is already on the line, in the middle of a sentence."
+        }
+      },
+      "things": {
+        "o": {
+          "name": "A thin old operator",
+          "look": "They haven't looked up since you came in. Their hands know the board without them. There's a meal going cold on a tray beside them, and a drone waiting to take it away.",
+          "use": "I ask the old operator who they're connecting."
+        },
+        "r": {
+          "name": "A reel in a tray",
+          "item": "asterion_voice_recording",
+          "look": "Eleven minutes of voices pulled off the wires, on a reel with no label. It's a little heavier than the last time you lifted it, which doesn't make sense.",
+          "use": "I take the reel of voices from the tray and listen to it."
+        }
+      }
+    },
+    "wire": {
+      "name": "The Long Wire",
+      "aliases": [
+        "long wire",
+        "the cable vaults",
+        "cable vaults",
+        "the trunk lines",
+        "the vaults"
+      ],
+      "desc": "Cable vaults under the city where the trunk lines run, warm and humming. Whole districts go silent when the slow processions pass through.",
+      "floor": "~",
+      "colors": {
+        "floor": "#493556",
+        "walls": "#7c5c90",
+        "scenery": "#c070e0",
+        "writing": "#f0d0ff"
+      },
+      "plan": [
+        "#########################################################################",
+        "#=======================================================================#",
+        "#=======================================================================#",
+        "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#",
+        "1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#",
+        "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#",
+        "#=========~~~===================~~~================~~===================#",
+        "#=========~~~===================~~~================~~x==================#",
+        "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#",
+        "#~~~~~@~~~~~~~~~~~~~~~~^ ^ ^ ^ ^y~~~~~~~~~~~~~~~~~~c~~~~~~~~~~~~~~~~~~~~#",
+        "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#",
+        "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#",
+        "#=======================================================================#",
+        "#########################################################################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE LONG WIRE",
+          "at": [3, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "exchange",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "c": {
+          "name": "A silver core in a cable junction",
+          "item": "choir_core",
+          "look": "A fist of silver machinery, seated in a trunk line like a heart in a chest. The wire on either side of it is warm, and it's the only thing down here that isn't humming.",
+          "use": "I reach into the junction and work the silver core loose."
+        },
+        "x": {
+          "name": "A hatch in the cable tray",
+          "look": "A service hatch with a brass plate: TRUNK 40, ALL OF AURELIS. Put your ear to the tray and it's a crowd, very far away, all of them trying to be polite.",
+          "use": "I crouch at the cable tray and listen to Trunk 40."
+        },
+        "y": {
+          "name": "A slow procession",
+          "look": "Silver figures in single file, carrying nothing, moving at the pace of a funeral. As they pass a junction the hum stops, and it doesn't start again until they've gone.",
+          "use": "I stand aside for the procession, and I watch where it goes."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "City plan",
+    "plan": [
+      "    .-----------------------------------.     ",
+      "    .'.................................'.     ",
+      "  .'.....................................'.   ",
+      "|============================================|",
+      "|,,,,,,,,,,,,,,,,,,,,,,|:::::::::::::::::::::|",
+      "|,,,,,,,,,,,,,,,,,,,,,,|:::::::::::::::::::::|",
+      "|============================================|",
+      "|''''''''''''''''''''''''''''''''''''''''''''|",
+      "  '.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;.'   ",
+      "    '.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;.'     ",
+      "    '-----------------------------------'     "
+    ],
+    "floors": {
+      ".": "lounges",
+      ",": "hall",
+      ":": "exchange",
+      "'": "walk",
+      ";": "wire"
+    },
+    "rooms": [
+      {
+        "level": "lounges",
+        "at": [11, 2],
+        "text": "THE DEPARTURE LOUNGES"
+      },
+      {
+        "level": "hall",
+        "at": [6, 5],
+        "text": "CONCORD HALL"
+      },
+      {
+        "level": "exchange",
+        "at": [28, 5],
+        "text": "THE EXCHANGE"
+      },
+      {
+        "level": "walk",
+        "at": [15, 7],
+        "text": "FOUNDERS WALK"
+      },
+      {
+        "level": "wire",
+        "at": [15, 8],
+        "text": "THE LONG WIRE"
+      }
+    ]
+  }
+}

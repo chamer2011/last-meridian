@@ -1,0 +1,69 @@
+{
+  "name": "Lumen Sanctuary",
+  "aliases": ["Lumen Sanctuary", "Lumen"],
+  "desc": "An Ilari refuge city where every feeling shows on someone's skin, so nobody can lie comfortably.",
+  "market": ["medkit", "calm_tabs", "nutrient_gel", "surgeon_lens", "resonance_tuner", "adept_robes"],
+  "faction": "circle",
+  "fleet": false,
+  "rest": false,
+  "dangerous": false,
+  "hidden": false,
+  "gm": {
+    "feel": "Night-blooming flowers and warm water, in a city that keeps its lamps low because the people are the lights. A whole street can change color when a piece of news goes down it, the way wind crosses a field of grain. No one here can hide what they feel, so manners are all about not looking: long sleeves and shawls are courtesy, and a deal isn't done until both sides' colors match for a slow count of ten.",
+    "districts": [
+      { "name": "The Open Steps", "desc": "A wide amphitheatre where the Circle holds every meeting in public, under the eyes of thousands. Warden Ashael sits at the top of it, unlit, and it's very hard not to stare." },
+      { "name": "The Water Courts", "desc": "Warm canals, floating stalls and public baths. Prices actually fall when the market's mood is good, and they rise when it's sad, and traders here will tell you that's only fair." },
+      { "name": "The Shade Houses", "desc": "Cool, dark, quiet buildings where people go when they can't stand to feel the rest of the city any more. Most of them are full now, and people sit wrapped up to the eyes on the steps outside." },
+      { "name": "The Stranger's Terrace", "desc": "Guest quarters for non-Ilari, called the Dim. Visitors are offered a tell-band that shows the wearer's pulse in light, and nothing bad happens if they refuse, apart from how everyone looks at them." },
+      { "name": "The Still Rooms", "desc": "A windowless house behind the Circle's archive. Children sometimes go in, and they come out years later with faces like still water. The Circle doesn't discuss it." }
+    ],
+    "people": ["ashael", "mirei"],
+    "enemies": ["hegemony_hunter", "inquisitor", "ministry_blade", "quiet_zealot", "silent_one"],
+    "items": ["lumen_lens", "resonance_tuner", "calm_tabs", "adept_robes"],
+    "complications": [
+      "Someone in your party is angry, and it's spreading: a whole street has started going red, and nobody knows why.",
+      "An Ilari in your own crew blushes the color of a lie at exactly the wrong moment in a negotiation.",
+      "A Hegemony dampener goes off nearby, and for a hundred meters in every direction the lights go out on people's skin.",
+      "A rumor of the Choir sweeps through the Water Courts in a wave of white terror, and the crowd is running before anyone knows it's false.",
+      "The Shade Houses are full, and the families of the people on the steps are starting to blame the refugees' grief.",
+      "You've declined the tell-band, and the merchant you need has very politely gone home."
+    ],
+    "secrets": [
+      "Warden Ashael isn't dark from grief. In the week of the Fall, he felt the billions go and he's never stopped feeling them, and under them something far away and enormous, turning over in its sleep. He had Mirei teach him to go dark, so that the city couldn't catch it from him. It takes everything he has, and it's killing him slowly.",
+      "The city's great mood-tides aren't natural Ilari empathy. Lumen is built on a First Builder conduit that amplifies whatever passes through it, which is why the founders chose the site, and why a panic here could be felt on the far side of the world.",
+      "The Circle has trained its agents in the Still Rooms for two hundred years, teaching them to feel nothing visible. The training can't be undone. Mirei is the best of them, and she hasn't let herself find out what she still feels underneath."
+    ]
+  },
+  "encounters": [
+    "A kind old woman on the Stranger's Terrace offers you a tell-band, so that people can see how you are. She says there's no obligation at all, and she means it. Behind her, a mother is steering her children across to the other side of the walkway, just in case.",
+    "Warden Ashael asks you, from the top of the Open Steps, why you've come. His skin is entirely dark, a thousand people are watching and none of them can tell what he's feeling. Then a small child's voice from the crowd asks him what everybody here has been afraid to ask for six months.",
+    "A woman sits down next to you on the edge of a Water Court, and all the other bathers drift away. Her skin is as still as a stone. Mirei says that your fleet has a leak, and she knows who's selling Ilari names to the Hegemony. She'd like to trade, and there's nothing on her face to tell you if she's lying.",
+    "You're carrying a list of the dead from your fleet to their families here. If you hand over the first name in the street, the grief goes down the whole district like a tide, and hundreds who never knew him will be weeping by evening. The Shade Houses are full. The family's been waiting six months.",
+    "A merchant offers you a fair price on medical supplies, and her arms are running with the pale grey of terror. She doesn't mention it, and neither does anyone else, because that would be rude. She asks you to please stop looking at her wrists.",
+    "On the steps of a Shade House, a young Ilari wrapped from head to foot asks if you'd sit nearby for a while. They can't bear the city's feelings any more, and you're Dim, and they say you're the first restful person they've been near in a year. They'll tell you things in return. All they want is to sit next to you and not be asked anything.",
+    "A licensed Hegemony hunter on the Terrace politely shows you a valid warrant for someone under the Circle's protection. The crowd's fear is climbing. She's got a dampener at her belt that would blank a whole street, and her thumb's on it, and she'd prefer it if you'd calm everybody down.",
+    "A man from your fleet has come to Lumen to be read, because nobody here can lie. He left people behind on the docks at Aurelis, and he wants an Ilari to tell him if he did the right thing. The old healer he's asked has gone a color you've never seen. The man doesn't know what it means, and he's asked you to find out.",
+    "A wedding's in progress, and the couple's colors have to match for a slow count of a hundred. It isn't working. All the guests have courteously looked away, and the bride looks directly at you, the only stranger here, and asks you to go ahead and witness that it matched.",
+    "A synthetic trade delegate has been here for a month, and nobody will look at them. Children throw flowers at them to see whether they'll flinch. They aren't angry. They ask you, with some interest, whether it would help if they installed a light.",
+    "A little girl runs up, takes your hand and looks at your face with great concern. She asks loudly why you're so sad about the tall one. It's someone you haven't mentioned to anyone at all, and the street has gone quiet and very considerate.",
+    "A Quiet missionary has arrived in the market, glowing a steady pure white, a color no one here has ever seen on living skin. People are drifting toward it in dozens, because it's the first calm they've felt in six months. The Circle wants her gone, and they've asked you whether they have the right to ban peace.",
+    "A young Ilari asks you to teach her to lie. She's going to Vantor to find her sister, and she knows that she'd be caught at the first checkpoint. She's brought lunch. She tries out her first falsehood on you, and it's about the lunch, and her whole upper body turns scarlet.",
+    "A shopkeeper gives you far too much change and then just stands there, watching your tell-band with polite interest. So are several of his neighbors. Everyone seems to be waiting to learn what sort of people are going to be coming to live next door."
+  ],
+  "rumors": [
+    "Nobody lies in Lumen. They're just very careful about what they ask.",
+    "Warden Ashael's been dark since the Fall, and the whole city is holding its breath. You don't ask him about it. It'd be like asking a man why he's got no face.",
+    "Take the band when they offer it. If you don't, nobody will say anything. They'll just smile very kindly, and start counting the spoons.",
+    "The Choir can't get in here. Nothing wearing a dead face can fake the light, and there isn't one of them that's ever got past a market stall. That's what we tell the children. We've stopped telling it to each other.",
+    "Play the Beacon to any Ilari in Lumen, and they all go the same slow color, the one we use at funerals and for people who've been up too long. The Circle says that someone out there is very tired. It's not what the Navy lot want to hear.",
+    "There's a woman there who doesn't glow. They say she had it cut out of her. They say she's the only one the whole Circle's afraid of, and she does their shopping.",
+    "It's a thousand a head for Ilari at the Hegemony's border, and the Circle's got a city of people who can't hide being frightened. Do the sums. I wish I hadn't.",
+    "I cried for two days in Lumen, and they weren't my tears. I don't know whose they were. I went back. I miss it.",
+    "My wife's Ilari. Twenty years. You want to know what that's like? I've never once won an argument, and I've never had to start one.",
+    "They've got a garden there that only flowers when the people around it are happy. It's been six months. The gardeners are still watering it, and they've stopped looking up.",
+    "Don't bring your troubles to the Water Courts. You'll spoil the market. The price of bread goes up every time somebody cries, and you'll have forty people glaring at you.",
+    "The Circle keeps a room with no windows where they teach children how to go dark. I didn't believe it. Then I asked three Ilari, and all three of them turned the same color.",
+    "Our gunner got shore leave in Lumen, and he came back with a tell-band he won't take off. He says that it's the first time in his life that anybody's believed him.",
+    "They say it isn't just the Warden. There's others going dark, here and there. Quiet ones, older. They say it starts in the fingers, and they don't say it's grief."
+  ]
+}

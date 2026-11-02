@@ -1,0 +1,46 @@
+{
+  "title": "The Warm Room",
+  "kind": "main",
+  "places": ["haven"],
+  "minLevel": 1,
+  "after": null,
+  "people": ["tharel", "sable", "corvane", "iven", "garrick", "yara"],
+  "factions": ["fleet", "hegemony", "drift", "quiet"],
+  "lead": "Everyone agrees that only old Archivist Tharel can read the Beacon. He hasn't left his Warm Room on Haven Station in nine days, and three different parties have offered Jun Sable money to change that.",
+  "anyone": "Everyone agrees that only old Archivist Tharel can read the Beacon. He hasn't left his Warm Room on Haven Station in nine days, and three different parties have offered Jun Sable money to change that.",
+  "gm": {
+    "truth": "Tharel recognized the Beacon's lattice the moment he saw it and believes it's a warning, but he won't say so. The last person he told, Dr. Lenn Corso, vanished eleven years ago (Corso went to Maris Deep on a secret Concord Intelligence grant, which Sable's old office paid for). So he hides among his crates in a former boiler room, and gives the captain only what he can stand to: the Beacon is two signals locked together, an ancient lattice and, on top, a plain message only months old, in Concord Navy fleet-recall format. He lets them believe the top layer is what matters, because a hope that's wrong is better than what he fears is true, and because chasing Navy survivors will keep the fleet off the lattice's bearing for a while. The three parties are Corvane (protective custody), a Syndicate buyer for Mother Quill (first read of anything First Builder) and Sister Yara Solune, who only wants to sit with him, and tells him it's all right. Sable has been selling the way to his door by the hour and also, without ever saying so, keeping him alive. Arc clues: two_layers.",
+    "beats": [
+      "The Neutral Ground: Sable polishes a glass and answers the question with a price. Everyone in the bar is pretending not to know where the Warm Room is.",
+      "The Warm Room, stifling and stacked with paper. He calls the captain young one, digresses for an hour and tests them: what do you owe frightened people, young one, the truth or a direction? He asks for a clean recording of the Beacon from the Meridian's receivers, which means asking Lieutenant Sorel, who looks as if he hasn't slept.",
+      "Someone stops waiting. Corvane's polite troopers or a Syndicate snatch team come down the maintenance stair with the captain in the room, and Sable's rule about the Neutral Ground stops at Sable's door.",
+      "The reveal: he lays the signal out in two colors. The top layer is Navy format. Someone in uniform is telling them to come home. He flinches if asked what the lower layer says, and says only: 'Bring me the Ilun Codex, young one, and ask me again.'",
+      "The captain has to decide what to tell the fleet. Garrick Fenn already has half of it, and thirty thousand people would give anything to hear that someone survived."
+    ],
+    "routes": [
+      "Talker: pay or charm Sable (commerce, streetwise), then earn Tharel with patience and honest answers (persuasion). Sit through the digressions. He trusts people who listen to the end.",
+      "Scholar or hacker: pull the frame headers from the Meridian's recordings with Iven (science, hacking) and bring them to his door as proof. Tharel respects anyone who has done the reading (lore), and the captain may find the second layer before he admits to it.",
+      "Fighter: stand in the corridor when the snatch team comes (firearms, melee, tactics), then get a frightened old Thessan out through the ventilation in a heated coat. A life saved buys more than an argument.",
+      "Resonant: listen to the Beacon in the Warm Room with him (attunement). Two voices, one ancient and exhausted, one young and scared. Tell him so, and watch both of his eyes stop blinking at the same moment."
+    ],
+    "checks": [
+      "persuasion:moderate to win Tharel's first straight answer",
+      "lore:hard to meet him as a fellow scholar and skip the test",
+      "hacking:moderate to pull the overlay's frame headers from the Meridian's recordings",
+      "attunement:moderate to hear two different voices in the Beacon",
+      "commerce:moderate to get Sable's price down, or streetwise:moderate to learn who else is paying",
+      "firearms:moderate to hold the corridor while Tharel gets out"
+    ],
+    "fights": [
+      "dock_thug and drift_raider if the Syndicate's buyer stops being patient",
+      "hegemony_trooper if Corvane's custody order is refused in the corridor"
+    ],
+    "outcomes": [
+      "If Tharel is kept safe and trusts the captain, he stays an ally for the whole story, gives them a beacon_shard he has used as a paperweight for two centuries, and will read the lattice when the Codex comes. If he's rescued but not trusted, he helps, and holds back longer.",
+      "If Corvane gets him, he's taken to Vantor in comfort. The Regent then knows everything he knows, and getting him back, or bringing the Codex to him there, becomes a job of its own. The captain can still get the two layers from Iven, Sable or their own analysis.",
+      "If Quill's people get him, she sells the captain the two layers at a terrible price and adds it to the fleet's debt. She also now knows something's wrong with the Beacon, and she starts to worry, dear.",
+      "If the captain announces Navy survivors, the fleet's spirits soar, food riots stop for a week, and Okonkwo-Reyes learns who's been using her Navy's name. If they sit on it, Garrick breaks the story anyway and the council wants to know what else they've hidden."
+    ],
+    "rewards": "A data_chip with the frame analysis, a beacon_shard if Tharel trusts them, a favor from Sable, and standing with the fleet if the news lands well."
+  }
+}

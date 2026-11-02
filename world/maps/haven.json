@@ -1,0 +1,454 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "Haven Station",
+  "start": "docks",
+  "levels": {
+    "docks": {
+      "name": "The Manifest Docks",
+      "aliases": [
+        "docks",
+        "manifest docks",
+        "the berths",
+        "berths",
+        "dock"
+      ],
+      "desc": "Forty berths under the same temporary lights. Docking is charged by the hour, and the hour is whatever the dockmaster says it is.",
+      "floor": ".",
+      "colors": {
+        "floor": "#3a4656",
+        "walls": "#7f93a8",
+        "scenery": "#a9c3da",
+        "writing": "#e3f1ff"
+      },
+      "plan": [
+        "########################################################################",
+        "#  _____     _____     _____     _____     _____     _____     _____   #",
+        "# /     \\   /     \\   /     \\   /     \\   /     \\   /     \\   /     \\  #",
+        "# |=====|   |=====|   |=====|   |=====|   |=====|   |=====|   |=====|  #",
+        "#.'-----'...'-----'...'-----'...'-----'...'-----'...'-----'...'-----'..#",
+        "#......................................................................#",
+        "#.............................[======]b................................#",
+        "#...[][][]..............M................................[][]c.........#",
+        "#...[][]...........................................@.....[][][]........#",
+        "#......................................................................#",
+        "#......................................................................#",
+        "#.................f....................................................#",
+        "#############################1#########################2################"
+      ],
+      "writing": [
+        [3, 0, "DOCKING BY THE HOUR. SEE DOCKMASTER FOR THE LENGTH OF AN HOUR."]
+      ],
+      "labels": [
+        {
+          "text": "THE MANIFEST DOCKS",
+          "at": [3, 5]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "bar",
+          "via": "1"
+        },
+        "2": {
+          "to": "hook",
+          "via": "1"
+        }
+      },
+      "people": {
+        "M": {
+          "id": "mott",
+          "label": "Mott",
+          "asks": [
+            "What's really on that ship over there?",
+            "How much is my berth, by your hour?"
+          ]
+        }
+      },
+      "things": {
+        "b": {
+          "name": "The berth board",
+          "look": "Forty berths, forty names, and a column headed REAL MANIFEST that someone has chalked in and rubbed out so often that the board has gone grey.",
+          "use": "I study the berth board and ask who's been in and out lately."
+        },
+        "c": {
+          "name": "A stack of medical crates",
+          "look": "Stenciled MEDICAL SUPPLIES in fresh paint. You've carried enough crates in your life to know that medicine doesn't sit that heavy on a pallet.",
+          "use": "I take a closer look at the crates marked medical supplies, and at who's watching them."
+        },
+        "f": {
+          "name": "The fee schedule",
+          "look": "Bolted to the bulkhead, and amended by hand so many times that the amendments have amendments. There's a charge for reading it, in very small print.",
+          "use": "I read through the docking fees and ask what I actually owe."
+        }
+      }
+    },
+    "bar": {
+      "name": "The Neutral Ground",
+      "aliases": [
+        "neutral ground",
+        "the bar",
+        "sable's bar",
+        "sable's",
+        "bar"
+      ],
+      "desc": "Jun Sable's bar, where every faction drinks together and pretends not to notice. Weapons go in the rack by the door. Feuds wait outside.",
+      "floor": ",",
+      "colors": {
+        "floor": "#54402c",
+        "walls": "#9c7a50",
+        "scenery": "#e0b070",
+        "writing": "#ffe6b8"
+      },
+      "plan": [
+        "        ########################################################        ",
+        "     ######,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,######     ",
+        "  ####,,,,!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!,,,,,,,,,,,,,,,####   ",
+        "###,,,,,,,[======================================]m,,,,,,,,,,,,,,,,,,###",
+        "##,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,##",
+        "##,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,##",
+        "##,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,##",
+        "##,,,(),,,,,,(),,,,,,(),,,,,,,,,,,,,,,,,,,,,(),,,,,,(),,,,,,(),,,,,,,,##",
+        "##,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,s,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,##",
+        "##,,,(),,,,,,(),,,,,,(),,,,,,,,,,,,,,,,,,,,,(),,,,,,()d,,,,,(),,,,,,,,##",
+        "###,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,###",
+        "   ####,,,,,,,,,,,,,,,,,,,,,,,,,@,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,####   ",
+        "    ######,,,,,,,,[|||||||]r,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,######    ",
+        "        ########################1###################2###########        "
+      ],
+      "writing": [
+        [28, 0, "NO FEUDS PAST THIS POINT"]
+      ],
+      "labels": [
+        {
+          "text": "THE NEUTRAL GROUND",
+          "at": [26, 5]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "docks",
+          "via": "1"
+        },
+        "2": {
+          "to": "row",
+          "via": "1"
+        }
+      },
+      "people": {
+        "S": {
+          "id": "sable",
+          "label": "Sable",
+          "asks": [
+            "What's the word on the station, Sable?",
+            "What would it cost me to find something out?"
+          ]
+        }
+      },
+      "things": {
+        "r": {
+          "name": "The weapons rack",
+          "look": "Every kind of sidearm in known space, side by side, each with a numbered brass tag. Nobody's ever been brave enough to pick up the wrong one.",
+          "use": "I hand my weapons over at the rack, and I see whose are already in it."
+        },
+        "s": {
+          "name": "The stain",
+          "look": "A brown patch on the decking with a little rope around it. Sable has broken up exactly one fight in here, and this was kept as a warning.",
+          "use": "I stop by the stain and ask who it used to be."
+        },
+        "m": {
+          "name": "A marker in the tip jar",
+          "item": "wheel_marker",
+          "look": "A gilded chip from the Wheel, in among the small change. Someone's left a debt here instead of a tip, or a debt as a tip.",
+          "use": "I fish the Wheel marker out of the tip jar and ask who left it."
+        },
+        "d": {
+          "name": "A chip under a coaster",
+          "item": "data_chip",
+          "look": "An unlabeled data chip, tucked under a coaster on an empty table. Either somebody forgot it, or it's a very careful way of handing something over.",
+          "use": "I sit down at the empty table and palm the data chip."
+        }
+      }
+    },
+    "row": {
+      "name": "The Consulate Row",
+      "aliases": [
+        "consulate row",
+        "consulates",
+        "the consulates",
+        "corvane's office",
+        "the legation"
+      ],
+      "desc": "A polished corridor of offices flying the flags of governments that may no longer exist. One of them has the only real carpet on the station.",
+      "floor": ":\"",
+      "colors": {
+        "floor": "#3f3f55",
+        "walls": "#8f8fb5",
+        "scenery": "#c8c8ee",
+        "writing": "#f0eeff"
+      },
+      "plan": [
+        "#############################################################################",
+        "#  |>      |  |>      |  |>      |  |>      |  |>      |\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"#",
+        "#  |       |  |       |  |       |  |       |  |       |\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"#",
+        "#--+-------+--+-------+--+-------+--+-------+--+-------+\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"#",
+        "1:::::::::::::::::::::::::::::::::::::::::::::::::::::::\"\"\"\"\"\"\"C\"\"\"\"\"\"\"\"\"\"\"\"#",
+        "#:::::::::::@:::::::::::::::::::::::::::::::::::::::::::\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"#",
+        "#:::::::::::::::::::::::::::::::::::::::::::::::::::::::\"\"\"\"\"\"\"\"\"\"\"\"\"[===]\"\"#",
+        "#--+-------+--+----f--+:::+-------+--+-------+--+-------+\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"#",
+        "#  |>      |  |>      |:::|>      |  |>      |  |>      |\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"#",
+        "#  |       |  |       |:::|       |  |       |  |       |\"\"\"\"p\"\"\"\"\"\"\"\"\"\"\"\"\"\"#",
+        "########################2####################################################"
+      ],
+      "writing": [
+        [4, 2, "CONCORD"],
+        [15, 2, "ILARI"],
+        [26, 2, "THESSA"],
+        [37, 2, "KORRUN"],
+        [48, 2, "VESHTI"],
+        [4, 9, "HEGEM."],
+        [15, 9, "FREE"],
+        [27, 9, "AURELIS"],
+        [38, 9, "SARN"],
+        [49, 9, "CLOSED"]
+      ],
+      "labels": [
+        {
+          "text": "THE CONSULATE ROW",
+          "at": [22, 5]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "bar",
+          "via": "2"
+        },
+        "2": {
+          "to": "warm",
+          "via": "1"
+        }
+      },
+      "people": {
+        "C": {
+          "id": "corvane",
+          "label": "Corvane",
+          "asks": [
+            "What are you offering this week, Legate?",
+            "What does the Hegemony actually want from us?"
+          ]
+        }
+      },
+      "things": {
+        "f": {
+          "name": "A flag of nobody",
+          "look": "A consulate flag, carefully ironed, for a government you're fairly sure was burned out of existence. The office light's still on, and there's a queue of one.",
+          "use": "I knock at the office with the flag of nobody and ask who it still speaks for."
+        },
+        "p": {
+          "name": "Papers on the Legate's desk",
+          "item": "forged_papers",
+          "look": "Blank Hegemony transit papers in a neat stack, and a stamp beside them. They're genuine, right up to the point where someone fills in a name.",
+          "use": "I ask what it would take to get my name on a set of those papers."
+        }
+      }
+    },
+    "warm": {
+      "name": "Tharel's Warm Room",
+      "aliases": [
+        "warm room",
+        "the boiler room",
+        "tharel's room",
+        "the archive room"
+      ],
+      "desc": "A former boiler compartment, kept hot for an old Thessan and his crates of paper. It's the only place on Haven where nobody is selling anything.",
+      "floor": ";",
+      "colors": {
+        "floor": "#5c3220",
+        "walls": "#a8603a",
+        "scenery": "#f09a55",
+        "writing": "#ffdcae"
+      },
+      "plan": [
+        "#########1###################################",
+        "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
+        "#;;;.----------.;;;;;;;;[][][][][][][]e;;;;;#",
+        "#;;;|  ======  |;;;;;;;;[][][][][][][];;;;;;#",
+        "#;;;|  ======  |b;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
+        "#;;;'----------';;;;;;;;;;;;;;;T;;;;;;;;;;;;#",
+        "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
+        "#;;;;;;@;;;;;;;;;;;;[][][][][];;;;;;[===]k;;#",
+        "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
+        "###################2#########################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THARELS WARM ROOM",
+          "at": [23, 1]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "row",
+          "via": "2"
+        },
+        "2": {
+          "to": "hook",
+          "via": "2"
+        }
+      },
+      "people": {
+        "T": {
+          "id": "tharel",
+          "label": "Tharel",
+          "asks": [
+            "What are you reading at the moment, Archivist?",
+            "What can you tell me about the Beacon?"
+          ]
+        }
+      },
+      "things": {
+        "b": {
+          "name": "The old boiler",
+          "look": "It hasn't heated the station in forty years. Someone pays to keep it lit, because an old Thessan can't take the cold. Nobody's been able to tell you who.",
+          "use": "I ask who pays to keep the old boiler going."
+        },
+        "e": {
+          "name": "Crates of paper",
+          "look": "Real paper, in old Thessan script, packed by a very careful hand. There's more history in these crates than in everything else on the station put together.",
+          "use": "I ask Tharel if I might read what's in the crates."
+        },
+        "k": {
+          "name": "A kettle and two cups",
+          "look": "He keeps a second cup out, clean, in case anybody comes. It has a little dust in it.",
+          "use": "I make the tea, and I pour the second cup."
+        }
+      }
+    },
+    "hook": {
+      "name": "The Hook",
+      "aliases": [
+        "hook",
+        "the cargo spine",
+        "cargo spine",
+        "refugee overflow",
+        "the overflow"
+      ],
+      "desc": "Refugee overflow in a disused cargo spine. People hang what they own from the old cargo hooks, and sell it one thing at a time.",
+      "floor": "_",
+      "colors": {
+        "floor": "#3b4a3a",
+        "walls": "#7e9478",
+        "scenery": "#b4cca4",
+        "writing": "#e4f6d4"
+      },
+      "plan": [
+        "###########################################################################",
+        "#   )   )   )   )   )   )   )   )   )   )   )   )   )   )   )   )   )   ) #",
+        "#   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | #",
+        "#  [ ] [=] ( ) [ ] { } [=] ( ) [ ] [=] { } ( ) [ ] { } [=] ( ) [ ] [=] { }#",
+        "#_________________________________________________________________________#",
+        "1_________________________________________________t_______________________#",
+        "#_________@_______________________________________________________________#",
+        "#___==___==___==_____Y_________==___==___==___________==___==___==________#",
+        "#_________________________________________________________________________#",
+        "#________c________________________________________________________________2",
+        "###########################################################################"
+      ],
+      "writing": [
+        [35, 0, "ANYTHING HERE CAN BE BOUGHT"]
+      ],
+      "labels": [
+        {
+          "text": "THE HOOK",
+          "at": [3, 8]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "docks",
+          "via": "2"
+        },
+        "2": {
+          "to": "warm",
+          "via": "2"
+        }
+      },
+      "people": {
+        "Y": {
+          "id": "yara",
+          "label": "Yara",
+          "asks": [
+            "What do you tell these people, Sister?",
+            "Are you afraid of anything at all?"
+          ]
+        }
+      },
+      "things": {
+        "t": {
+          "name": "A silver token on a string",
+          "item": "quiet_token",
+          "look": "A smooth silver disc, hanging from a hook with nothing else on it. Somebody's left it for whoever needs it. People who carry one sleep very well.",
+          "use": "I take down the silver token, and turn it over."
+        },
+        "c": {
+          "name": "A blister pack for sale",
+          "item": "calm_tabs",
+          "look": "Someone's selling their calm tabs one at a time, off a square of blanket. They're asking very little, and they look as if they need them more than you do.",
+          "use": "I buy a strip of calm tabs from the blanket, and ask how they're getting on."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Station plan",
+    "plan": [
+      "        __________________________________________        ",
+      "      __/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\\__      ",
+      "   /:::::::::::::::::|,,,,,,,,,,,,,,,,,,,,,,,,,,|::::\\    ",
+      "  /::::::::::::::::::|,,,,,,,,,,,,,,,,,,,,,,,,,,|:::::\\   ",
+      "|========================================================|",
+      "|;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;|\"\"\"\"\"\"\"\"\"\"\"\"\"\"|",
+      "|;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;|\"\"\"\"\"\"\"\"\"\"\"\"\"\"|",
+      "|========================================================|",
+      "\\''''''''''''''''''''''''''''''''''''''''''''''''''''''''/",
+      "  \\''''''''''''''''''''''''''''''''''''''''''''''''''''/  ",
+      "   \\__________________________________________________/   "
+    ],
+    "floors": {
+      ",": "bar",
+      ":": "row",
+      ";": "hook",
+      "\"": "warm",
+      "'": "docks"
+    },
+    "rooms": [
+      {
+        "level": "bar",
+        "at": [24, 2],
+        "text": "THE NEUTRAL GROUND"
+      },
+      {
+        "level": "row",
+        "at": [4, 3],
+        "text": "CONSULATE ROW"
+      },
+      {
+        "level": "hook",
+        "at": [14, 5],
+        "text": "THE HOOK"
+      },
+      {
+        "level": "warm",
+        "at": [45, 6],
+        "text": "WARM ROOM"
+      },
+      {
+        "level": "docks",
+        "at": [18, 9],
+        "text": "THE MANIFEST DOCKS"
+      }
+    ]
+  }
+}

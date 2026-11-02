@@ -1,0 +1,49 @@
+{
+  "_help": "The days of the people here. The instructions are at the top of meridian.json.",
+  "people": {
+    "orsolya": [
+      { "at": "07:00", "doing": "starting an argument", "go": "post" },
+      { "at": "12:00", "doing": "being rude to the cooks", "go": "@melt" },
+      { "at": "14:00", "doing": "winning the argument", "go": "post" },
+      { "at": "18:00", "doing": "keeping her beer cold", "go": "@hole" },
+      { "at": "20:00", "doing": "starting another argument", "go": "post" },
+      { "at": "23:00", "doing": "asleep in a melted cell", "go": "@melt", "asleep": true }
+    ]
+  },
+  "crowd": [
+    {
+      "names": [["Brother Ott", 0], ["Sister Zell", 360], ["Old Cato", 720], ["Mad Tuck", 1080]],
+      "day": [
+        { "at": "00:00", "doing": "singing in the cage", "go": "@loft" },
+        { "at": "06:00", "doing": "in the burn ward, thawing out", "go": "@ward" },
+        { "at": "09:00", "doing": "arguing through the ice", "go": "@melt" },
+        { "at": "13:00", "doing": "asleep in a melted cell", "go": "@melt", "asleep": true }
+      ]
+    },
+    {
+      "names": [["Hanne", 0], ["Brother Lurch", 30], ["Scalded Ivo", 60]],
+      "day": [
+        { "at": "08:00", "doing": "cooking, having lost", "go": "@pit" },
+        { "at": "11:00", "doing": "looking for someone who's wrong", "go": "@melt" },
+        { "at": "14:00", "doing": "shouting in the Pit", "go": "@pit" },
+        { "at": "18:00", "doing": "singing, badly", "go": "@melt" },
+        { "at": "23:00", "doing": "asleep in a melted cell", "go": "@melt", "asleep": true }
+      ]
+    },
+    {
+      "names": [["Ward Keeper Sunny", 0]],
+      "day": [
+        { "at": "07:00", "doing": "telling terrible jokes to the frostbitten", "go": "@ward" },
+        { "at": "21:00", "doing": "asleep in the warm", "go": "@ward", "asleep": true }
+      ]
+    },
+    {
+      "names": [["A Pilgrim with a Burned Glove", 0]],
+      "day": [
+        { "at": "09:00", "doing": "staring down the Hole", "go": "@hole" },
+        { "at": "15:00", "doing": "asking the wrong question", "go": "@pit" },
+        { "at": "21:00", "doing": "asleep in a melted cell", "go": "@melt", "asleep": true }
+      ]
+    }
+  ]
+}

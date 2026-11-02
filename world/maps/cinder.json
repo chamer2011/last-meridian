@@ -1,0 +1,429 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "Cinder Reach",
+  "start": "row",
+  "levels": {
+    "row": {
+      "name": "Shift Row",
+      "aliases": [
+        "the row",
+        "the barracks",
+        "the gate",
+        "the picket",
+        "the picket line",
+        "strike kitchen",
+        "the strike kitchen"
+      ],
+      "desc": "Miles of soot-black barracks, the strike kitchen and the Gate, where the picket has stood for three weeks in shifts. Ash falls like grey snow on all of it.",
+      "floor": ",",
+      "colors": {
+        "floor": "#4a4440",
+        "walls": "#8a7e74",
+        "scenery": "#c8b8a0",
+        "writing": "#ffb070"
+      },
+      "plan": [
+        "##########################################################################",
+        "#[=====],,[=====],,[=====],,[=====],,[=====],,[=====],,,,,,,,,,!,,,,,,,,,#",
+        "#[=====],,[=====],,[=====],,[=====],,[=====],,[=====],,,,,,,,,,!,,,,,,,,,#",
+        "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,!,,,,,,,,,#",
+        "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,U,,,,,,,,,,,,,,,!,,,,,,,,,#",
+        "#,,,(___)k,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2",
+        "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,g,,,,,,,,,#",
+        "#,,,======,,======,,,,,,,,,,,,,,@,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,!,,,,,,,,,#",
+        "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,!,,,,,,,,,#",
+        "#[=====],,[=====],,[=====],,[=====],,[=====],,[=====],,,,,,,,,,!,,,,,,,,,#",
+        "#[=====],,[=====],,[=====]w,[=====],,[=====],,[=====]s,,,,,,,,,!,,,,,,,,,#",
+        "##################1#######################################################"
+      ],
+      "writing": [
+        [24, 0, "SHIFT WHISTLE SILENT NINETEEN DAYS"]
+      ],
+      "labels": [
+        {
+          "text": "SHIFT ROW",
+          "at": [3, 4]
+        },
+        {
+          "text": "THE GATE",
+          "at": [53, 8]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "tubes",
+          "via": "1"
+        },
+        "2": {
+          "to": "stack",
+          "via": "1",
+          "closed": {
+            "look": "The picket line, three weeks old, across the only road to the Stack. Nobody's going to stop you, and nobody's going to say a hard word. They'll only watch you cross, and they'll remember.",
+            "use": "I walk through the picket line toward the Stack, in front of everyone."
+          }
+        }
+      },
+      "people": {
+        "U": {
+          "id": "ulla",
+          "label": "Greaves",
+          "asks": [
+            "What would it take to end this, Shift Boss?",
+            "What do your people need that I could bring them?"
+          ]
+        }
+      },
+      "things": {
+        "k": {
+          "name": "The strike kitchen",
+          "look": "A pot the size of a bathtub, and a line that's mostly children. What's in it is thinner than it was last week, and it's still free to anyone who hasn't crossed.",
+          "use": "I take a bowl at the strike kitchen and sit with whoever's eating."
+        },
+        "g": {
+          "name": "The picket",
+          "look": "They stand in shifts with their hands in their sleeves, ash settling on their shoulders. There's no shouting. Someone's keeping a list, in a very clear hand.",
+          "use": "I go and stand with the picket for a while and ask how it's holding."
+        },
+        "w": {
+          "name": "A work suit on a peg",
+          "item": "work_suit",
+          "look": "Patched coveralls, padded at the joints, hung outside a barracks door. Its owner's name has been sewn in, and then a second name under that.",
+          "use": "I ask whose work suit this is, and what they'd want for it."
+        },
+        "s": {
+          "name": "The silent whistle",
+          "look": "A big steam whistle on a post, with a rag tied round the lanyard. Nobody's touched it since the walkout. The children dare each other to go near it.",
+          "use": "I look at the silent whistle, and I ask what happens the day it blows."
+        }
+      }
+    },
+    "stack": {
+      "name": "The Stack",
+      "aliases": [
+        "stack",
+        "the refinery",
+        "refinery",
+        "the fuel depot",
+        "the towers"
+      ],
+      "desc": "The refinery itself: towers, pipes, and enough refined fuel to carry your whole fleet for months, all behind the same fence. It's running on a skeleton crew of managers, and it sounds wrong.",
+      "floor": ".",
+      "colors": {
+        "floor": "#4d3828",
+        "walls": "#a87a50",
+        "scenery": "#ff9a40",
+        "writing": "#ffe0a0"
+      },
+      "plan": [
+        "#####################################2######################",
+        "#..........................................................#",
+        "#....^.....^.....^....^.....^.......................^......#",
+        "#...| |...| |...| |..| |...| |.....................| |.....#",
+        "#...| |...| |...| |..| |...| |.....................| |.....#",
+        "#...| |...| |...| |..| |...| |.....................| |.....#",
+        "#...|=|===|=|===|=|==|=|===|=|======...============|=|.....#",
+        "#..........................................................#",
+        "1.............................................m............#",
+        "#.....@....................................................#",
+        "#..........................................................#",
+        "#...(====)(====)(====)(====)u(====)(====)(====)............#",
+        "#...(====)(====)(====)(====).(====)(====)(====)..f.........#",
+        "#..........................................................#",
+        "#################################3##########################"
+      ],
+      "writing": [
+        [3, 0, "HARD HATS BEYOND THIS POINT"]
+      ],
+      "labels": [
+        {
+          "text": "THE STACK",
+          "at": [25, 8]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "row",
+          "via": "2"
+        },
+        "2": {
+          "to": "hill",
+          "via": "1"
+        },
+        "3": {
+          "to": "tap",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "m": {
+          "name": "A manager at a valve",
+          "look": "A man in a very clean coverall, reading the procedure for this valve out of a binder, with his finger on the line. He looks up as if you might know.",
+          "use": "I ask the manager how long he thinks this can run on a skeleton crew."
+        },
+        "u": {
+          "name": "The tank farm",
+          "item": "refined_fuel",
+          "look": "Tank after tank, stenciled and full. Refined fuel, enough to carry forty-one ships for months, and you can smell how close it is.",
+          "use": "I ask what a load of refined fuel from the tanks would cost me, and in whose scrip."
+        },
+        "f": {
+          "name": "The flare stack",
+          "look": "Burning orange over everything, day and night. Old miners won't look at it. It's flickering in a rhythm they'd tell you it shouldn't have.",
+          "use": "I stand under the flare stack and ask what that flicker means."
+        }
+      }
+    },
+    "hill": {
+      "name": "Company Hill",
+      "aliases": [
+        "the hill",
+        "company offices",
+        "the dome",
+        "vale's office",
+        "the director's office"
+      ],
+      "desc": "A clean little dome of offices and gardens with filtered air, above the ash. The Director's windows look down onto Shift Row, and they've been broken and repaired eleven times.",
+      "floor": "'",
+      "colors": {
+        "floor": "#3a5a44",
+        "walls": "#8cbc9c",
+        "scenery": "#a8e0a0",
+        "writing": "#eaffe8"
+      },
+      "plan": [
+        "             ##################################              ",
+        "      #######''''''''''''''''''''''''''''''''''#######       ",
+        "   ####'''''''''%%%%%'''''''''''''''''%%%%%''''''''''####    ",
+        "  ###'''''''''''''''''''''''''''''''''''''''''''''''''''###  ",
+        "##''''[=]''[=]''[=]''''''''''''''''''''[=]''[=]''[=]g''''''##",
+        "##'''''''''''''''''''''''''''''''''''''''''''''''''''''''''##",
+        "##'''''''''''''''''''''''@'''''''''''''''''''''''''''''''''##",
+        "##'''''''''''''''''''''''''''''''''''''''''''''''''''''''''##",
+        "###''''''[=======]a''''''''''''''''''''''''''R''''''''''''###",
+        "####'''''''''''''''''''''''''''''''''''''''''''''''''''''####",
+        "   #######''''''''''''''''''''''''''''''''''''''''w#######   ",
+        "             ####################1#############              "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "COMPANY HILL",
+          "at": [22, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "stack",
+          "via": "2"
+        }
+      },
+      "people": {
+        "R": {
+          "id": "rennick",
+          "label": "Vale",
+          "asks": [
+            "Why can't the reactor be stopped, Director?",
+            "What will you settle for?"
+          ]
+        }
+      },
+      "things": {
+        "w": {
+          "name": "A much-mended window",
+          "look": "Eleven neat rings of sealant, one inside another, like a tree's. The view through it is Shift Row, the Gate and the flare. He's had the glass thickened each time.",
+          "use": "I stand at the Director's mended window and look down at Shift Row."
+        },
+        "g": {
+          "name": "A flower bed",
+          "look": "Real geraniums, in filtered air, with a gardener's card on a little stake. It's the only color you've seen on this moon that isn't fire.",
+          "use": "I ask who's still tending the flower beds, with the strike on."
+        },
+        "a": {
+          "name": "The air filters",
+          "look": "A rack of big clean filters, and a stack of used ones, black as coal, waiting for someone to carry them out. Nobody's come for them in nineteen days.",
+          "use": "I look over the air filters and ask what happens when they run out."
+        }
+      }
+    },
+    "tubes": {
+      "name": "The Tubes",
+      "aliases": [
+        "tubes",
+        "lava tubes",
+        "the mine",
+        "the workings",
+        "the old workings",
+        "the mines"
+      ],
+      "desc": "Old lava tubes and exhausted mine workings that riddle the moon. A century of lost equipment is down here, in the warm dark, with whatever's moved in.",
+      "floor": ":",
+      "colors": {
+        "floor": "#543525",
+        "walls": "#955d38",
+        "scenery": "#d46c31",
+        "writing": "#ffc890"
+      },
+      "plan": [
+        "%%%%%%%%%%%%%%%%%%%1%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+        "%%%%%%%%%%%:::::::::::::%%%%%%%%%%%%%%%%%%%%%%%%%::::::::::%%%%%%%%%%%",
+        "%%%%%%%:::::::::::::::::::::::%%%%%%%%%%%::::::::::::::::::::::%%%%%%%",
+        "%%%%::::::::%%%%%%%::::@::::::::::%%%%::::::::::%%%%%%%::::::::::%%%%%",
+        "%%%:::::%%%%%%%%%%%%%%::::::::::::::::::::::%%%%%%%%%%%%%%%::::::::%%%",
+        "%%:::::%%%%%%%%%%%%%%%%%%%%%::::::::::::%%%%%%%%%%%%%%%%%%%%%%:::::%%%",
+        "%%::::c%%%%%%%%%%%%%%%%%%%%%%%%%::::%%%%%%%%%%%%%%%%%%%%%%%%%%%:::::%%",
+        "%%%:::::%%%%%%%%%%%%%%%%%%%%%%%%::::::%%%%%%%%%%%%%%%%%%%%%%%%:::::%%%",
+        "%%%%:::::::::::%%%%%%%%%%%%%%::::::::::::::%%%%%%%%%%%%%:::::::::%%%%%",
+        "%%%%%%%%:::::::::::::::::::::::::::l:::::::::::::::::::::::::%%%%%%%%%",
+        "%%%%%%%%%%%%%%%::::::::::::::::%%%%%%%%%::::::::::::s::::%%%%%%%%%%%%%",
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE TUBES",
+          "at": [39, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "row",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "c": {
+          "name": "A strike cache",
+          "item": "fuel_cell",
+          "look": "Tarps over a neat stack of fuel cells, with a tally in chalk and a warning that isn't aimed at you yet. Someone's been running this down here for weeks.",
+          "use": "I lift the tarp on the strike cache and take stock of what they've got."
+        },
+        "l": {
+          "name": "A lost ore cart",
+          "look": "A century-old cart, sunk to its axles in cooled rock, with somebody's lunch tin still on the seat. The rock has grown around it like a tree around a fence.",
+          "use": "I look over the old ore cart and see if anything's left in the tin."
+        },
+        "s": {
+          "name": "Grooves in the rock",
+          "look": "Long parallel grooves across the floor of the tube, still warm, and too fresh to have any ash in them. Old miners call what makes these Slag Crawlers, and they don't laugh when they say it.",
+          "use": "I follow the grooves in the rock, as quietly as I can."
+        }
+      }
+    },
+    "tap": {
+      "name": "The Tap",
+      "aliases": [
+        "tap",
+        "the reactor",
+        "the heat exchanger",
+        "reactor complex",
+        "the reactor complex"
+      ],
+      "desc": "The heat exchanger and reactor complex that draws off the moon's pressure to run the Stack. Everyone blames it for everything, and very few people understand it.",
+      "floor": ";",
+      "colors": {
+        "floor": "#632b2b",
+        "walls": "#ab4e41",
+        "scenery": "#ff6a50",
+        "writing": "#ffd0c0"
+      },
+      "plan": [
+        "        ####################1###################        ",
+        "  #####;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#####   ",
+        "###;;;;;;;;;;;;;;;.--------------.;;;;;;;;;;;;;;;;;;;###",
+        "##;;;;;;;;;;;;;;;;/  ==========  \\g;;;;;;;;;;;;;;;;;;;##",
+        "##;;@;;;;;========|  ==========  |=========;;;;;;;;;;;##",
+        "##;;;;;;;;;;;;;;;;|  ==========  |;;;;;;;;;;;;;;;;v;;;##",
+        "##;;;;;;;;========|  ==========  |=========;;;;;;;;;;;##",
+        "##;;;;;;;;;;;;;;;;\\  ==========  /;;;;;;;;;;;;;;;;;;;;##",
+        "###;;;;;;;;;;;;;;;;'--------------';;;;;;;;;;;;;;;;;;###",
+        "#####;;;;;;;;;;;e;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#####",
+        "        #######################################         "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE TAP",
+          "at": [4, 2]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "stack",
+          "via": "3"
+        }
+      },
+      "people": {},
+      "things": {
+        "g": {
+          "name": "The pressure gauge",
+          "look": "A gauge as big as a dinner table, with its needle sitting well into a band somebody has painted over. The paint's newer than anything else down here.",
+          "use": "I ask whoever's on duty what that gauge is really saying, under the paint."
+        },
+        "v": {
+          "name": "The relief valves",
+          "look": "A row of relief valves with chains and seals on them. The seals carry the Director's stamp, and the chains carry the union's, and each of them has been put on over the other.",
+          "use": "I look over the relief valves and ask who's allowed to touch them."
+        },
+        "e": {
+          "name": "A locker of hull patches",
+          "item": "emergency_patch",
+          "look": "Emergency patches, the same kind you'd carry on a ship, stored here against a burst line. There's a lot fewer than the label says.",
+          "use": "I ask if I can take a hull patch from the locker."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Colony map",
+    "plan": [
+      "                     .-------------------.                      ",
+      "                  .'\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"'.                   ",
+      "################################################################",
+      "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,#:::::::::::::::::::::::::::::::::#",
+      "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,#:::::::::::::::::::::::::::::::::#",
+      "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,#:::::::::::::::::::::::::::::::::#",
+      "################################################################",
+      "%%;;;;;;;;;;;;;;;;;;;;;;;;%%%%%%%%%%%%''''''''''''''''''''''''%%",
+      "%%%%;;;;;;;;;;;;;;;;;;;;;;;;;%%%%%%%%%%'''''''''''''''''''''%%%%",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+    ],
+    "floors": {
+      "\"": "hill",
+      ",": "row",
+      ":": "stack",
+      ";": "tubes",
+      "'": "tap"
+    },
+    "rooms": [
+      {
+        "level": "hill",
+        "at": [27, 1],
+        "text": "COMPANY HILL"
+      },
+      {
+        "level": "row",
+        "at": [10, 4],
+        "text": "SHIFT ROW"
+      },
+      {
+        "level": "stack",
+        "at": [42, 4],
+        "text": "THE STACK"
+      },
+      {
+        "level": "tubes",
+        "at": [10, 8],
+        "text": "THE TUBES"
+      },
+      {
+        "level": "tap",
+        "at": [46, 8],
+        "text": "THE TAP"
+      }
+    ]
+  }
+}

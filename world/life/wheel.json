@@ -1,0 +1,60 @@
+{
+  "_help": "The days of the people here. The instructions are at the top of meridian.json.",
+  "people": {
+    "oriel": [
+      { "at": "07:30", "doing": "reading the day's markers", "go": "post" },
+      { "at": "20:00", "doing": "watching the Wheel spin", "go": "@great", "exact": true },
+      { "at": "20:30", "doing": "receiving guests", "go": "post" },
+      { "at": "03:00", "doing": "gone to her rooms", "go": ">velvet", "hidden": true }
+    ],
+    "kit": [
+      { "at": "01:00", "doing": "dealing a friendly game", "go": "post" },
+      { "at": "11:00", "doing": "asleep, owing someone", "go": "@cellars", "asleep": true },
+      { "at": "15:00", "doing": "dealing a friendly game", "go": "post" },
+      { "at": "20:00", "doing": "watching the Wheel, and the crowd's pockets", "go": "post", "exact": true },
+      { "at": "20:30", "doing": "dealing a friendly game", "go": "post" }
+    ]
+  },
+  "crowd": [
+    {
+      "names": [["High Roller Ambrose", 0], ["Lady Sethe", 30], ["Young Mr. Fane", 60], ["A Retired Admiral", 90]],
+      "day": [
+        { "at": "11:00", "doing": "betting on the board", "go": "@great" },
+        { "at": "15:00", "doing": "losing politely", "go": "@exchange" },
+        { "at": "18:00", "doing": "betting on the board", "go": "@great" },
+        { "at": "20:00", "doing": "watching the Wheel spin", "go": "@great", "exact": true },
+        { "at": "21:00", "doing": "betting on the board", "go": "@great" },
+        { "at": "03:00", "doing": "gone to bed", "go": ">great", "hidden": true }
+      ]
+    },
+    {
+      "names": [["Waiter Nine Years", 0], ["Dealer Four Years", 30], ["Cleaner Twelve Years", 60], ["Cook Two Years", 90]],
+      "day": [
+        { "at": "06:00", "doing": "scrubbing the decks", "go": "@cellars" },
+        { "at": "11:00", "doing": "serving drinks with a smile", "go": "@great" },
+        { "at": "20:00", "doing": "not allowed to watch", "go": "@cellars" },
+        { "at": "21:00", "doing": "serving drinks with a smile", "go": "@great" },
+        { "at": "02:00", "doing": "asleep in the Cellars", "go": "@cellars", "asleep": true }
+      ]
+    },
+    {
+      "names": [["Broker Vane", 0], ["Broker Haddad", 20]],
+      "day": [
+        { "at": "09:00", "doing": "trading brass tokens", "go": "@exchange" },
+        { "at": "20:00", "doing": "watching the Wheel spin", "go": "@great", "exact": true },
+        { "at": "20:30", "doing": "trading brass tokens", "go": "@exchange" },
+        { "at": "23:00", "doing": "gone home", "go": ">exchange", "hidden": true }
+      ]
+    },
+    {
+      "names": [["Renter Oyin", 0], ["Renter Cobb", 30]],
+      "day": [
+        { "at": "08:00", "doing": "paying rent on their own ship", "go": "@docks" },
+        { "at": "12:00", "doing": "polishing a brass tag", "go": "@docks" },
+        { "at": "20:00", "doing": "watching the Wheel spin", "go": "@great", "exact": true },
+        { "at": "21:00", "doing": "looking at the ships", "go": "@docks" },
+        { "at": "23:00", "doing": "asleep on board", "go": "@docks", "asleep": true }
+      ]
+    }
+  ]
+}

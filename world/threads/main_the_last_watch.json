@@ -1,0 +1,47 @@
+{
+  "title": "The Last Watch",
+  "kind": "main",
+  "places": ["harbor", "nest"],
+  "minLevel": 8,
+  "after": "main_safe_harbor",
+  "people": ["cantor", "voss", "ione", "cael", "tarrow", "regent", "okonkwo", "oskar", "orsolya"],
+  "factions": ["fleet", "hegemony", "ilun", "remnant", "quiet", "unbound"],
+  "lead": "There's a chair in the highest room of this place, and it doesn't fit anyone who has ever lived. The Cantor is waiting beside it, wearing a face you know, and it has asked you what you've decided.",
+  "gm": {
+    "truth": "The top of the Harbor: a small plain room below the lamp, with a chair and a board, who has the watch. The board is the only thing in the whole place that shows any wear. The last name on it is the Cantor's, put there by a machine that didn't know what else to do. A silver figure with Commander Voss's face stands beside it, and it will wait for as long as it takes. This is where the story ends, in whatever way the player has earned. Four roads are on the table (see the arc's endings): destroy the song, join it, relieve the watch and let the dead change, or something no one has tried. Every ally, every piece, every promise and every betrayal comes due here. Whoever has the Score can act without the captain. The Regent's squadron has come to stop anyone touching anything, and Okonkwo's strike is hitting the Nest whether the captain likes it or not. So this is a clock and a room. The Cantor won't stop the captain from doing anything here, because it isn't sure it can: the board belongs to whoever has the watch, and no one has asked before. It would like, very much, to be told what to do. Voss will recognize the board at once. The words of relief are a sailor's and they've always been enough: 'I relieve you.' 'I stand relieved.' If the Tarn has already been relieved (crew_voss_relieved), there's a precedent on the record, and the Cantor is the one who cites it.",
+    "beats": [
+      "The Stair of the Lamp, with a landing for each people that ever stood a watch here: First Builder, Thessan, Korrun, Veshti, Ilari, and the monks of Ilun at the top. Mugs have been left on tables, and there's still a ring in the bottom of each. Who comes up with the captain? Voss, Tarrow, Cael, Ione, Seven, Oskar, Orsolya wheezing and heckling on every step. Each wants something different, and each has a right to.",
+      "The room. The board. The chair. Through the window, past the lamp, no stars at all.",
+      "The outside world breaks in: the Regent's ships at the docks, in perfect formation, and Okonkwo's voice from the Nest: 'Give the word, Captain.' It's the second time she has ever called them that. Every faction's plan starts at once. The Cantor waits.",
+      "The argument, and it's the last one. Let the people who've earned it speak: Ione's sums. Tarrow's dead. The Echo's poll, with a minority report. The children of Tessen singing the last stanza over the band, because no one has told them not to.",
+      "The choice, and whatever it takes to make it stick. Run the ending in full. Someone has to stay at the board, or there's no longer any board."
+    ],
+    "routes": [
+      "Destroy: hold the note and give the word (manifestation, gunnery, tactics, hacking, leadership). See the ending.",
+      "Join: open the door and lead them through it (leadership, persuasion, composure).",
+      "Relieve: say the words, with every piece the captain has gathered (leadership, lore, engineering, attunement, persuasion). Missing pieces cost more, and they never block it.",
+      "The stranger road: rewrite the song and let it thin (lore, attunement, persuasion at nearly_impossible, with every ally making it easier).",
+      "Any build: a captain with no Resonance, no lore and no allies left can still walk up those stairs and say the words. What they've done so far decides what it costs them."
+    ],
+    "checks": [
+      "leadership:very_hard to make any plan stick with that many hands on it",
+      "composure:very_hard to stand in that room and keep your own mind",
+      "attunement:nearly_impossible to speak to what's past the lamp",
+      "gunnery:very_hard to hold the Regent's squadron off the docks",
+      "hacking:very_hard to open the Choir's machine law to a new order",
+      "lore:hard to say the relief in a form the board will take"
+    ],
+    "fights": [
+      "choir_cantor_shard or gate_warden if someone tries to seize the lamp by force",
+      "ministry_blade and remnant_commando on the stairs, depending on who has been betrayed"
+    ],
+    "outcomes": [
+      "Destroy the Choir: freedom with a deadline. The song stops, everyone hears the names, and the silver falls out of the sky.",
+      "Join the Choir: the fleet goes in with open eyes, the hunting stops, and everyone is kept, unchanging, forever.",
+      "Relieve the Watch: 'We stand relieved.' The dead get to talk, and to choose. The Beacon changes for the first time since before there were people, and a town grows in the empty berths.",
+      "Say Good Morning: the thing past the lamp wakes up and tries to be careful. Nothing will ever be safe again, or lonely.",
+      "If nobody decides, the Regent or the Admiral or the Quiet decide instead, and the captain lives with what they do (see The Regent's Peace). Whatever the ending, give each person who came up those stairs their own last moment, and let Garrick Fenn sign off the way he always does: We're still here."
+    ],
+    "rewards": "How it ends."
+  }
+}

@@ -1,0 +1,379 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "The Choir Nest",
+  "start": "lattice",
+  "levels": {
+    "lattice": {
+      "name": "The Outer Lattice",
+      "aliases": [
+        "outer lattice",
+        "the lattice",
+        "the shell",
+        "the spars"
+      ],
+      "desc": "Silver spars miles long, with drones moving along them like ants on a branch. They don't fire on approaching ships unless they're fired on first, and that frightens veterans more than anything.",
+      "floor": ".",
+      "colors": {
+        "floor": "#3a4048",
+        "walls": "#8a94a4",
+        "scenery": "#d0e0f4",
+        "writing": "#ffffff"
+      },
+      "plan": [
+        "\\\\  //   \\\\  //   \\\\  //   \\\\  //   \\\\  //   \\\\  //   \\\\  //   \\\\  //         ",
+        " \\\\//     \\\\//     \\\\//     \\\\//     \\\\//     \\\\//     \\\\//     \\\\//          ",
+        " //\\\\     //\\\\     //\\\\     //\\\\     //\\\\     //\\\\     //\\\\     //\\\\          ",
+        "//  \\\\   //  \\\\   //  \\\\   //  \\\\   //  \\\\   //  \\\\   //  \\\\   //  \\\\         ",
+        "..............................................................................",
+        "..............................................................................",
+        ".........@.................................\"............d.....................",
+        "..............................................................................",
+        "..............\"..............l...............................\"................",
+        "..............................................................................",
+        ".............................................................................1",
+        "\\\\  //   \\\\  //   \\\\  //   \\\\  //   \\\\  //   \\\\  //   \\\\  //   \\\\  //         ",
+        " \\\\//     \\\\//     \\\\//     \\\\//     \\\\//     \\\\//     \\\\//     \\\\//          "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE OUTER LATTICE",
+          "at": [30, 4]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "faces",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "d": {
+          "name": "A line of drones",
+          "look": "They step around you politely, without breaking stride, and they go on along the spar. One of them pauses and tilts its head at you. It knows your name. You can tell, somehow.",
+          "use": "I stand in the path of the drones to see what they'll do."
+        },
+        "l": {
+          "name": "A lance on the spar",
+          "item": "choir_lance",
+          "look": "A slender length of silver, tucked into a fold of the lattice, as if it had grown there. The nearest drone watches you look at it. It doesn't seem to mind.",
+          "use": "I reach into the fold of the lattice and take hold of the silver lance."
+        }
+      }
+    },
+    "faces": {
+      "name": "The Gallery of Faces",
+      "aliases": [
+        "gallery of faces",
+        "the faces",
+        "the gallery",
+        "the silver walls"
+      ],
+      "desc": "Endless curved walls of smooth silver, where faces rise to the surface, turn to follow you and sink again. Sooner or later you see one you know.",
+      "floor": ":",
+      "colors": {
+        "floor": "#3c404c",
+        "walls": "#909ab0",
+        "scenery": "#e8f0ff",
+        "writing": "#ffffff"
+      },
+      "plan": [
+        "      (  )  (  )  (  )  (  )  (  )  (  )  (  )  (  )  (  )      ",
+        "(  )  (  )  (  )  (  )  (  )  (  )  (  )  (  )  (  )  (  )  (  )",
+        "################################################################",
+        "1::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::2",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::::::@:::::::::::::::::::::f:::::::::::::::::::::::::::::::::#",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "3::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::4",
+        "################################################################",
+        "(  )  (  )  (  )  (  )  (  )  (  )  (  )  (  )  (  )  (  )  (  )",
+        "   (  )  (  )  (  )  (  )  (  )  (  )  (  )  (  )  (  )  (  )   "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE GALLERY OF FACES",
+          "at": [21, 4]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "lattice",
+          "via": "1"
+        },
+        "2": {
+          "to": "waiting",
+          "via": "1"
+        },
+        "3": {
+          "to": "failing",
+          "via": "1"
+        },
+        "4": {
+          "to": "heart",
+          "via": "1",
+          "closed": {
+            "look": "The gallery ends at a place where the silver parts, with nothing behind it, and a song in your back teeth. It isn't a door. It's just that you can't go through until you're wanted.",
+            "use": "I stand where the silver parts, and I say out loud that I'd like to speak with the Cantor."
+          }
+        }
+      },
+      "people": {},
+      "things": {
+        "f": {
+          "name": "A face you know",
+          "look": "It rises out of the silver without any hurry. It's somebody you lost, and they've got the look they used to get when you came in late. It turns to follow you, and it starts to smile.",
+          "use": "I stop in front of the face I know, and I say their name."
+        }
+      }
+    },
+    "waiting": {
+      "name": "The Waiting Rooms",
+      "aliases": [
+        "waiting rooms",
+        "the copies",
+        "the porch",
+        "the rooms"
+      ],
+      "desc": "Perfect copies of places that visitors have loved: a porch, a dormitory, a ship's galley. Everything is right, except that the dust doesn't settle.",
+      "floor": "_",
+      "colors": {
+        "floor": "#4a4034",
+        "walls": "#a08c70",
+        "scenery": "#e8c890",
+        "writing": "#fff8e0"
+      },
+      "plan": [
+        "############################################################################",
+        "#_________________________|____________________|___________________________#",
+        "#__.----------.___________|__[=]_[=]_[=]_[=]___|___[======]________________#",
+        "#__|          |___________|____________________|___________________________#",
+        "#__|          |_p_________|__[=]_[=]_[=]_[=]___|___[======]g_______________#",
+        "#__'----------'___________|____________________|___________________________#",
+        "#_________________________+____________________+___________________________#",
+        "#_________________________|____________________|___________________________#",
+        "1______________________@__|________b___________|___________________________#",
+        "#_________________________|____________________|___________________________#",
+        "############################################################################"
+      ],
+      "writing": [
+        [4, 3, "HOME"],
+        [33, 1, "DORMITORY"],
+        [54, 1, "GALLEY"]
+      ],
+      "labels": [
+        {
+          "text": "THE WAITING ROOMS",
+          "at": [3, 1]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "faces",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "p": {
+          "name": "The porch",
+          "look": "It's your grandmother's porch, or it's somebody's. The boards creak in the right order. There's a cup of something on the rail, and it's still steaming, and it'll go on steaming.",
+          "use": "I sit down on the porch steps for a minute."
+        },
+        "g": {
+          "name": "A ship's galley",
+          "look": "It's the Meridian's galley as it was before the Fall, down to the dent in the kettle. Somebody's left the radio on, very low, and it's playing the song you think it's playing.",
+          "use": "I go into the galley, and I turn the radio up."
+        },
+        "b": {
+          "name": "A pale sliver on a pillow",
+          "item": "beacon_shard",
+          "look": "A dormitory bed, made up tight, and on the pillow, a sliver of pale stuff, where a child might leave a tooth. There's no dust on it. There's no dust anywhere.",
+          "use": "I take the pale sliver from the pillow."
+        }
+      }
+    },
+    "failing": {
+      "name": "The Failing Choir",
+      "aliases": [
+        "failing choir",
+        "the dark section",
+        "the broken section",
+        "the failing section"
+      ],
+      "desc": "A dark section of the shell where the machines have gone wrong, repeating broken phrases and rebuilding the same spar over and over. Drones here seem almost to be grieving.",
+      "floor": "'",
+      "colors": {
+        "floor": "#403a46",
+        "walls": "#6e657d",
+        "scenery": "#a080c0",
+        "writing": "#e8d4ff"
+      },
+      "plan": [
+        "//\\\\//\\\\%%%%%//\\\\//\\\\%%%%//\\\\//\\\\%%%%%//\\\\//\\\\%%%%//\\\\//\\\\%%%%%//\\\\/",
+        "''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''",
+        "'''''[=/=]'''''[=/=]'''''[=/=]'''''[=/=]'''''[=/=]'''''[=/=]s'''''''",
+        "''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''",
+        "1'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''",
+        "''''''@''''''''''''''''''''''''''''d''''''''''''''''''''''''''''''''",
+        "''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''",
+        "'''''''''''''''(~~~~)c''''''''''''''''''''''''''''''''''''''''''''''",
+        "''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''",
+        "//\\\\//\\\\%%%%%//\\\\//\\\\%%%%//\\\\//\\\\%%%%%//\\\\//\\\\%%%%//\\\\//\\\\%%%%%//\\\\/"
+      ],
+      "writing": [
+        [8, 9, "I RELIEVE I RELIEVE I RELIEVE I RELIEVE I RELIEVE I"]
+      ],
+      "labels": [
+        {
+          "text": "THE FAILING CHOIR",
+          "at": [38, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "faces",
+          "via": "3"
+        }
+      },
+      "people": {},
+      "things": {
+        "s": {
+          "name": "The same spar",
+          "look": "They've built this spar and taken it apart more times than you can count. There's a bright place on it, worn by a hundred thousand identical welds. The drone doing it doesn't look up. It's doing its very best.",
+          "use": "I watch them build the same spar, and I try to help."
+        },
+        "d": {
+          "name": "A drone, grieving",
+          "look": "It's sitting down, which you've never seen a drone do. It's repeating a phrase, in a voice like a child's, and each time it gets a little more wrong. It stops when you get close, and it looks hopeful.",
+          "use": "I crouch down beside the grieving drone, and I answer what it's saying."
+        },
+        "c": {
+          "name": "A dying core",
+          "item": "choir_core",
+          "look": "A silver core, cracked along one side, in a nest of its own wiring. It's warm, like something asleep. A small drone is tending it very gently. It lets you see, and it doesn't stop you.",
+          "use": "I take the cracked core from the wiring, as gently as I can."
+        }
+      }
+    },
+    "heart": {
+      "name": "The Heart",
+      "aliases": [
+        "heart",
+        "the dead star",
+        "the center",
+        "the great silent space"
+      ],
+      "desc": "The great silent space around the dead star, where the song starts.",
+      "floor": ".",
+      "colors": {
+        "floor": "#3a3a4f",
+        "walls": "#676789",
+        "scenery": "#e0e0ff",
+        "writing": "#ffffff"
+      },
+      "plan": [
+        "            *********************************             ",
+        "   *******.....................................*******    ",
+        "  ****.............................................****   ",
+        "***...................___________......................***",
+        "**.................../           \\......................**",
+        "**......@.........../             \\s....................**",
+        "**.................|               |....................**",
+        "**.................|               |..........C.........**",
+        "**..................\\             /.....................**",
+        "**...................\\___________/......................**",
+        "***.......................................l............***",
+        "  ****.............................................****   ",
+        "   *******.....................................*******    ",
+        "            **************1******************             "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE HEART",
+          "at": [9, 2]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "faces",
+          "via": "4"
+        }
+      },
+      "people": {
+        "C": {
+          "id": "cantor",
+          "label": "The Cantor",
+          "asks": [
+            "What do you want from us?",
+            "What happened to the Choir?"
+          ],
+          "greeting": "It wears a face you loved, and it's been waiting, and it's very glad you came."
+        }
+      },
+      "things": {
+        "s": {
+          "name": "The dead star",
+          "look": "It's out. It's been out for a very long time. Everything for millions of miles around it is holding very still and very carefully, and it's all pointed at you, and the song has stopped to let you speak.",
+          "use": "I look into the dead star, and I listen to what's left of the song."
+        },
+        "l": {
+          "name": "The song",
+          "look": "It isn't a sound. It came up through the deck plates and into your back teeth, and you've been hearing it for days. Here it's gone, and you find, to your horror, that you miss it.",
+          "use": "I stand very still, and I try to hum it."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Chart of the Nest",
+    "plan": [
+      "   \\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//   ",
+      "//,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\\\\",
+      "\\\\:::::::::::::::::::::::::::::::::::::::::::::::::::::::::://",
+      "//;;;;;;;;;;;;;;;;;;;;;;;;;;;.............''''''''''''''''''\\\\",
+      "\\\\;;;;;;;;;;;;;;;;;;;;;;;;;;;.............''''''''''''''''''//",
+      "//;;;;;;;;;;;;;;;;;;;;;;;;;;;.............''''''''''''''''''\\\\",
+      "   \\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//\\\\//   "
+    ],
+    "floors": {
+      ",": "lattice",
+      ":": "faces",
+      ";": "waiting",
+      ".": "heart",
+      "'": "failing"
+    },
+    "rooms": [
+      {
+        "level": "lattice",
+        "at": [20, 1],
+        "text": "THE OUTER LATTICE"
+      },
+      {
+        "level": "faces",
+        "at": [19, 2],
+        "text": "THE GALLERY OF FACES"
+      },
+      {
+        "level": "waiting",
+        "at": [6, 4],
+        "text": "THE WAITING ROOMS"
+      },
+      {
+        "level": "heart",
+        "at": [32, 4],
+        "text": "THE HEART"
+      },
+      {
+        "level": "failing",
+        "at": [43, 4],
+        "text": "THE FAILING CHOIR"
+      }
+    ]
+  }
+}

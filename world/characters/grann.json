@@ -1,0 +1,66 @@
+{
+  "name": "Grann Tull",
+  "title": "Steward",
+  "aliases": [
+    "Steward Grann Tull",
+    "Steward Tull",
+    "Grann Tull",
+    "Grann",
+    "Tull"
+  ],
+  "pronouns": "she/her",
+  "species": "human",
+  "age": 71,
+  "faction": "fleet",
+  "role": "Steward of the Sundial, the fleet's farm ship",
+  "location": "sundial",
+  "listed": false,
+  "color": "#c2bb64",
+  "note": "She's never missed a harvest or forgiven a slight, and she's been Speaker Halm's political enemy for decades.",
+  "appearance": "A stringy old woman, brown as a boot, in patched overalls and a straw hat she wears indoors, on a ship, under grow-lights. She carries pruning shears on a lanyard and points with them.",
+  "personality": "Sharp, petty and tireless. She can tell you who insulted her at a grain hearing thirty years ago, and what they were wearing. She has also been quietly giving half her ration to the children on her ship for months, and if you noticed, she'd never forgive that either.",
+  "voice": "Fast and tart. Dates everything in harvests: \"You were late three harvests ago as well.\" Keeps a running account of slights out loud, and adds you to it. Calls Halm \"the Coat\". Doesn't do sayings, and says so: \"Sayings are for people who've never had blight.\" Ends arguments by handing you a vegetable. Never says please or thank you. \"I'll remember that\" is a threat, and \"Adequate\" is the highest praise she has.",
+  "goals": "Keep the Sundial hers and the council's hands off it, and live to see Halm lose an election. Under all that, she wants to put her hands in real ground once more before she dies.",
+  "secrets": "The soil is dying: old ore dust is leaching up through the beds, and yields will crash within a few harvests. She's hiding it by blending the grain, because the harvest is the only power she has. Hold Six is listed as fallow, and it's really her hidden reserve. Yields are only holding because Tam Orlo, a young Resonant field hand, sits among the beds in her root cellar sixteen hours a day, aging as he does it, and she reads to him every evening. She and Teodor Halm were married for nine years, thirty-one years ago on Maren Vale. The records burned, and she still wears the ring on a cord. Since the Fall they've met monthly on the east catwalk, because each needs a public enemy to hold their faction together. She has seen a Hegemony courier at his door, and he lied to her about it. Thirty-four years ago Maren Dray walked out of the Concord's agricultural service with half of Grann's seed lines, and Grann hasn't said her name since, which is awkward, because the only living soil within reach is at Tessen. She trusts Oskar Lind more than anyone on the ship, and has no idea what's going on around him.",
+  "beliefs": {
+    "authority": 4,
+    "loyalty": 3,
+    "violence": 2,
+    "belief": -4
+  },
+  "attributes": {
+    "might": 3,
+    "endurance": 6,
+    "agility": 3,
+    "perception": 7,
+    "intellect": 7,
+    "willpower": 9,
+    "presence": 6,
+    "resonance": 1
+  },
+  "skills": {
+    "survival": 7,
+    "science": 6,
+    "leadership": 6,
+    "commerce": 5,
+    "intimidation": 5
+  },
+  "combat": {
+    "threat": 1,
+    "hp": 16,
+    "attack": 2,
+    "defense": 11,
+    "damage": [
+      2,
+      4
+    ],
+    "weapon": "Pruning Shears",
+    "tags": [],
+    "xp": 20,
+    "credits": [
+      0,
+      30
+    ],
+    "art": "civilian"
+  }
+}

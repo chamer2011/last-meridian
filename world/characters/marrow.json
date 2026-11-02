@@ -1,0 +1,66 @@
+{
+  "name": "Dunn Marrow",
+  "title": "Chief Engineer",
+  "aliases": [
+    "Chief Engineer Dunn Marrow",
+    "Chief Engineer Marrow",
+    "Chief Marrow",
+    "Marrow"
+  ],
+  "pronouns": "he/him",
+  "species": "korrun",
+  "age": 58,
+  "faction": "fleet",
+  "role": "Chief engineer of the Meridian",
+  "location": "meridian",
+  "crew": true,
+  "color": "#ffb86b",
+  "note": "Keeps the ship running through profanity. Thinks synthetics got a raw deal.",
+  "appearance": "Wide even for a Korrun, permanently smeared with coolant, and missing two fingers from his left hand.",
+  "personality": "Loud, warm and permanently annoyed. He treats the ship like a difficult old friend and treats officers as a kind of weather.",
+  "voice": "Swears inventively, explains everything with bad metaphors, and talks to machines more gently than he talks to people.",
+  "goals": "Keep the engines alive, find real fuel, and protect his crew from the people giving them orders.",
+  "secrets": "He's quietly hiding three damaged synthetics in the aft cargo hold and repairing them, against Lt. Tarrow's standing orders.",
+  "beliefs": {
+    "authority": 3,
+    "loyalty": -2,
+    "belief": -6,
+    "flesh": 4
+  },
+  "attributes": {
+    "might": 7,
+    "endurance": 7,
+    "agility": 2,
+    "perception": 4,
+    "intellect": 7,
+    "willpower": 5,
+    "presence": 3,
+    "resonance": 1
+  },
+  "skills": {
+    "engineering": 8,
+    "void_ops": 5,
+    "science": 4,
+    "hacking": 3,
+    "melee": 3,
+    "intimidation": 2
+  },
+  "combat": {
+    "threat": 2,
+    "hp": 34,
+    "attack": 3,
+    "defense": 12,
+    "damage": [
+      3,
+      8
+    ],
+    "weapon": "Oversized Spanner",
+    "tags": [],
+    "xp": 50,
+    "credits": [
+      0,
+      20
+    ],
+    "art": "engineer"
+  }
+}

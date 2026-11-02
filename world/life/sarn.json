@@ -1,0 +1,44 @@
+{
+  "_help": "The days of the people here. The instructions are at the top of meridian.json.",
+  "people": {
+    "ouma": [
+      { "at": "07:00", "doing": "receiving what's been deposited", "go": "post" },
+      { "at": "13:00", "doing": "taking tea on the Warm Stair", "go": "@warm" },
+      { "at": "14:00", "doing": "receiving what's been deposited", "go": "post" },
+      { "at": "20:00", "doing": "asleep on the Warm Stair", "go": "@warm", "asleep": true }
+    ],
+    "sefu": [
+      { "at": "06:00", "doing": "talking to the shelves", "go": "post" },
+      { "at": "22:00", "doing": "dozing, still talking", "go": "post", "asleep": true }
+    ]
+  },
+  "crowd": [
+    {
+      "names": [["Keeper Lumis", 0], ["Keeper Oy", 40], ["Keeper Bren", 80]],
+      "day": [
+        { "at": "07:00", "doing": "taking down what's recited", "go": "@deposit" },
+        { "at": "11:00", "doing": "warming up with tea", "go": "@warm" },
+        { "at": "12:00", "doing": "riding a cart down the Vault Roads", "go": "@roads" },
+        { "at": "15:00", "doing": "warming up with tea", "go": "@warm" },
+        { "at": "16:00", "doing": "taking down what's recited", "go": "@deposit" },
+        { "at": "20:00", "doing": "asleep on the Warm Stair", "go": "@warm", "asleep": true }
+      ]
+    },
+    {
+      "names": [["Reciter Halyna", 0], ["Reciter Pau", 30], ["Reciter Amadou", 60]],
+      "day": [
+        { "at": "08:00", "doing": "reciting the names of the dead", "go": "@deposit" },
+        { "at": "12:30", "doing": "eating in the warm", "go": "@warm" },
+        { "at": "13:30", "doing": "reciting the names of the dead", "go": "@deposit" },
+        { "at": "18:00", "doing": "gone back to the ship", "go": ">deposit", "hidden": true }
+      ]
+    },
+    {
+      "names": [["Keeper Ivo", 0], ["Keeper Mesh", 705]],
+      "day": [
+        { "at": "06:00", "doing": "on the stool at the Ninth Door", "go": "@door", "stays": true },
+        { "at": "18:15", "doing": "asleep on the Warm Stair", "go": "@warm", "asleep": true }
+      ]
+    }
+  ]
+}

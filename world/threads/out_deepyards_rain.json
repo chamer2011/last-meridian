@@ -1,0 +1,42 @@
+{
+  "title": "Rain",
+  "kind": "dilemma",
+  "places": ["deepyards", "frontier", "lumen"],
+  "minLevel": 1,
+  "after": null,
+  "people": ["ilkin", "aduro", "dray"],
+  "factions": ["families", "fleet"],
+  "lead": "The oldest woman in the Deepyards wants to hire your ship for one afternoon. Nessa Ao-Vash is a hundred and thirty-one, has never set foot on a planet, and will give you the keel-spar your frigate needs if you'll take her somewhere she can stand in the rain. She asks you not to tell her family. It would kill them, she says, and she's not really joking.",
+  "anyone": "The oldest woman in the Deepyards wants to hire someone for one afternoon. Nessa Ao-Vash is a hundred and thirty-one, has never set foot on a planet, and she'll pay well for anyone who can take her somewhere she can stand in the rain. She'd rather her family didn't hear about it.",
+  "gm": {
+    "truth": "To the Long Families, a planet is a shameful thing, a filthy place where their ancestors fell, and to stand on one is to stop being Veshti. Nessa is the matriarch of the oldest ship in the ring, the Long Patience, and the mother of Yardmother Ilkin. When she was nineteen she loved a planet-born trader who described rain to her in letters, and she kept the letters for a hundred and twelve years. The spar is hers to give only as long as she's still family. Her heart may not take the gravity, and open sky is a horror she has no way to prepare for: no ceiling, no walls, nothing holding the air in. She wants to do it anyway. She may not come back, and she may not want to. There's a deeper wish that she'll only say at the end: to be buried in dirt, which in her culture is the most obscene thing possible. The surprise comes on the way home, or at the funeral, or from a line in a cold formal note. Ilkin has known the whole time. She's been quietly holding every patrol and watch out of the way, and when she has the captain alone she asks, very stiffly, a single question: \"Was it cold?\"",
+    "beats": [
+      "Nessa, tiny and frail, floating in a cabin full of paper letters. She gives the captain a full and detailed account of what she wants, as if ordering a ship part, and her hands are shaking.",
+      "Getting her out: a very old woman who's never left the ring, and a family that counts every member at every meal. Ensign Asante or Dr. Aduro are told the plan, and each has opinions.",
+      "Landing. Gravity hits her and Dr. Aduro's monitors scream. The hatch opens. She won't come out at first, because there's no ceiling. She sits in the doorway for an hour, gripping the frame.",
+      "Rain. The GM should take their time here. If it's Tessen, Elder Dray comes out to see what's on her field, looks at Nessa, takes off her own coat without being asked and says nothing at all. Some things can be left unexplained.",
+      "Going back or staying. What does the Family hear? What about the spar? And there's her last request, which she makes with her face wet and her eyes on the sky."
+    ],
+    "routes": [
+      "Sneak her out: stealth, deception and piloting to get her off the ring without any of the Family's many eyes noticing.",
+      "Keep her alive: medicine and survival to bring a hundred-and-thirty-one-year-old spacer through gravity, weather and terror, and persuasion to get her through the hatch.",
+      "Go to the top: lore and composure to find the old law on elders' wishes, and to ask Ilkin outright, in the family's own careful language, what would happen if someone were to do such a thing."
+    ],
+    "checks": [
+      "stealth:moderate to get her off the ring",
+      "deception:moderate to make the Family think she's in a long meditation",
+      "piloting:moderate to land so gently her heart doesn't stop",
+      "medicine:hard to keep her alive under gravity",
+      "persuasion:moderate to get her out the door when she can't breathe",
+      "composure:easy to not say anything, afterward, when Ilkin asks"
+    ],
+    "fights": [],
+    "outcomes": [
+      "If she stands in the rain and comes home, the captain has the spar, and Nessa Ao-Vash dies in her cabin a month later, at peace, with mud under one fingernail. Her family finds it, and nobody says a word.",
+      "If she stays and is buried in soil, the Family publicly disowns her and strikes her name from the book. Ilkin privately pays for a small marker, and the captain will be asked to look after it.",
+      "If the Family finds out, the captain has shamed them, and the Deepyards close to the fleet unless Ilkin chooses to look away. She may, or she may not, depending on how the captain behaved.",
+      "If the captain tells Nessa no, or takes the spar and doesn't deliver, she nods, she's used to it, and the captain carries that around for the rest of the story. The spar stays in the old ship, which is scrapped within the year."
+    ],
+    "rewards": "The keel-spar, which is worth a real hull improvement through change_ship. A bundle of old letters, a little stress relief for a captain who needed something good to happen, and, eventually, a very stiff nod from Ilkin Ao-Vash."
+  }
+}

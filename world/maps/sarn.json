@@ -1,0 +1,406 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "The Long Archive of Sarn",
+  "start": "deposit",
+  "levels": {
+    "deposit": {
+      "name": "The Deposit Hall",
+      "aliases": [
+        "deposit hall",
+        "the hall",
+        "the writing desks",
+        "the clerks"
+      ],
+      "desc": "A long room of writing desks and patient clerks, where visitors dictate what they've come to trade. These days it's full of refugees reciting the names of their dead.",
+      "floor": ".",
+      "colors": {
+        "floor": "#3c4048",
+        "walls": "#7c8a9c",
+        "scenery": "#b4c8dc",
+        "writing": "#f0f6ff"
+      },
+      "plan": [
+        "###########################################################################",
+        "#.........................................................................#",
+        "#..[=]...[=]...[=]...[=]...[=]...[=]...[=]...[=]...[=]...[=]...[=]...[=]..#",
+        "#.........................................................................#",
+        "#..[=]...[=]...[=]...[=]...[=]...[=]...[=]...[=]...[=]...[=]...[=]...[=]..#",
+        "#.........................................................................#",
+        "1.........................................................................2",
+        "#...............................................................O.........#",
+        "#..[=]...[=]...[=]...[=]r..[=]...[=]...[=]...[=]...[=]...[=]n..[=]...[=]..#",
+        "#.........@...............................................................#",
+        "#..[=]...[=]...[=]...[=]...[=]...[=]c..[=]...[=]...[=]...[=]...[=]...[=]..#",
+        "#.........................................................................#",
+        "###########################################################################"
+      ],
+      "writing": [
+        [8, 0, "TO TAKE A TRUE THING OUT, BRING A TRUE THING IN."]
+      ],
+      "labels": [
+        {
+          "text": "THE DEPOSIT HALL",
+          "at": [30, 6]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "warm",
+          "via": "1"
+        },
+        "2": {
+          "to": "roads",
+          "via": "1"
+        }
+      },
+      "people": {
+        "O": {
+          "id": "ouma",
+          "label": "Ouma",
+          "asks": [
+            "What would you take for what I need, First Keeper?",
+            "What's behind the Ninth Door?"
+          ],
+          "side": "left"
+        }
+      },
+      "things": {
+        "n": {
+          "name": "A clerk taking names",
+          "look": "An old woman is reciting her family, one name at a time. The Thessan clerk's writing it down with enormous care. He's already asked her how to spell each one, and now he's asking her what they were like.",
+          "use": "I sit at the next desk and listen to the names."
+        },
+        "c": {
+          "name": "A deposited chip",
+          "item": "data_chip",
+          "look": "A data chip in a sealed tray, tagged with what it cost the person who brought it in. They've gone, and they got what they came for. It's the Archive's now, and you could trade something true for a copy.",
+          "use": "I ask what truth a copy of the chip in the tray would cost me."
+        },
+        "r": {
+          "name": "A reel from Asterion",
+          "item": "asterion_voice_recording",
+          "look": "Eleven minutes of voices pulled off the dead wires of Asterion, deposited by someone who couldn't stand to keep it. The Keepers log it each morning. Every morning, it runs a little longer.",
+          "use": "I ask a Keeper about the reel from Asterion, and I offer something true for it."
+        }
+      }
+    },
+    "warm": {
+      "name": "The Warm Stair",
+      "aliases": [
+        "warm stair",
+        "the stair",
+        "keepers' quarters",
+        "the keepers' quarters",
+        "the heat pipe"
+      ],
+      "desc": "The Keepers' living quarters, stacked along a single great heat pipe that runs up through the moon. It smells of tea and scales, and everyone here is very old.",
+      "floor": ",=",
+      "colors": {
+        "floor": "#4c3828",
+        "walls": "#a07850",
+        "scenery": "#f09040",
+        "writing": "#ffe0b0"
+      },
+      "plan": [
+        "##########################################",
+        "#,,,,,,,,,,,,,,,,,#||||#,,,,,,,,,,,,,,,,,#",
+        "#,,,[=],,[=],,,,,,#||||#,,,,,[=],,,[=],,,#",
+        "#=====,,,,,,,,,,,,#||||#,,,,,,,,,,,,,=====",
+        "#=====,,,,,,,,,,,,#||||#,,,,,,,,,,,,,=====",
+        "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+        "#,,,[=],,[=],,,t,,#||||#,,,,,[=]n,,[=],,,#",
+        "#=====,,,,,,,,,,,,#||||#,,,,,,,,,,,,,=====",
+        "#=====,,,,,,,,,,,,#||||#,,,,,,,,,,,,,=====",
+        "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+        "1,,,,,,,,,,,,,,,,,,,,,,,,@,,,,,,,,,,,,,,,#",
+        "#,,,,,,,,,,,,,,,,,#||p|#,,,,,,,,,,,,,,,,,#",
+        "##########################################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE WARM STAIR",
+          "at": [25, 9]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "deposit",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "p": {
+          "name": "The heat pipe",
+          "look": "It runs from the bottom of the moon to the top. It's the only warm thing on Sarn, and every door opens onto it. You put your palm on the lagging, and you hear somebody two floors up say, very slowly, that this is how it's done.",
+          "use": "I warm my hands at the heat pipe, and I listen to who's talking up the stair."
+        },
+        "t": {
+          "name": "A very old Keeper's tea",
+          "look": "She's pouring it with great care, and it's taken some time. You've a feeling she started pouring when you landed. She offers you a cup, and she'd like to hear something true, whenever you're ready.",
+          "use": "I sit down for tea with the old Keeper, and I tell her something true."
+        },
+        "n": {
+          "name": "A nav slate on a door hook",
+          "item": "nav_slate",
+          "look": "A scratched slate of jump tables, hanging on someone's door by its strap, with corrections in four different hands. The last hand's dated three hundred years ago. It's still correct, and it's on loan.",
+          "use": "I ask whose nav slate this is, and what they'd want in exchange."
+        }
+      }
+    },
+    "roads": {
+      "name": "The Vault Roads",
+      "aliases": [
+        "vault roads",
+        "the roads",
+        "the tunnels",
+        "the rail",
+        "the rail carts"
+      ],
+      "desc": "Hundreds of kilometers of frozen tunnel, served by small rail carts that run without drivers. Every shelf is labeled, and every label is still correct.",
+      "floor": ":=",
+      "colors": {
+        "floor": "#2f3d51",
+        "walls": "#607c9c",
+        "scenery": "#90b8e0",
+        "writing": "#e0f0ff"
+      },
+      "plan": [
+        "#####################################################################",
+        "#|||[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]|||",
+        "#|||[][][][][][][][][][][][][][][][][][][][][][][][][][][][]l[][]|||#",
+        "#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "1:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::2",
+        "#===================================================================#",
+        "#===================================c===============================#",
+        "#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#:::::::@:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::3",
+        "#|||[][][][][][]s[][][][][][][][][][][][][][][][][][][][][][][][][]|#",
+        "#|||[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]|||",
+        "#####################################################################"
+      ],
+      "writing": [
+        [3, 0, "WARM COATS REQUIRED. FOUR HOURS. NO EXCEPTIONS."]
+      ],
+      "labels": [
+        {
+          "text": "THE VAULT ROADS",
+          "at": [24, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "deposit",
+          "via": "2"
+        },
+        "2": {
+          "to": "deep",
+          "via": "1"
+        },
+        "3": {
+          "to": "door",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "c": {
+          "name": "A rail cart",
+          "look": "A little flat cart, humming along by itself, with one crate on it, and a label in tiny exact script. It stops for you, politely. It has somewhere to be, and it's got plenty of time to get there.",
+          "use": "I climb onto the rail cart and let it take me along for a while."
+        },
+        "l": {
+          "name": "A label on a shelf",
+          "look": "AURELIS, CENSUS, SOUTHERN DISTRICTS, YEARS 400 TO 412. It was written by someone who died before your people invented the jump drive. You pull out the box, and it's right. It's in perfect order. Nobody's asked for it, ever.",
+          "use": "I take down a box and read through what's in it."
+        },
+        "s": {
+          "name": "A scanner on a cord",
+          "item": "field_scanner",
+          "look": "A battered handheld scanner, hung on a cord at the end of a shelf, for checking labels against contents. The last entry says ALL CORRECT. They've all said ALL CORRECT since before the Fall.",
+          "use": "I ask a Keeper if I could borrow the scanner on the cord."
+        }
+      }
+    },
+    "deep": {
+      "name": "The Deep Stacks",
+      "aliases": [
+        "deep stacks",
+        "the stacks",
+        "the oldest levels",
+        "the lowest levels"
+      ],
+      "desc": "The oldest occupied levels, so cold and so far down that only one Keeper has been working here for years. You can hear him talking long before you can see him.",
+      "floor": "'",
+      "colors": {
+        "floor": "#2c3d52",
+        "walls": "#4f6c85",
+        "scenery": "#7cb0d8",
+        "writing": "#d8f0ff"
+      },
+      "plan": [
+        "############################################################",
+        "#''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+        "#''[=]'[=]'[=]'[=]'[=]'[=]'[=]'[=]'[=]'[=]'[=]'[=]'[=]'[=]'#",
+        "#''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+        "#''[=]'[=]'[=]'[=]'[=]'[=]'[=]'i'[=]'[=]'[=]'[=]'[=]'[=]'''#",
+        "1''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+        "#''''''@''''''''''''''''''S''''''''''''''''''''''''''''''''#",
+        "#''[=]'[=]'[=]'[=]'[=]'[=]'[=]'[=]'[=]'[=]'[=]'[=]'[=]'[=]'#",
+        "#''''''''''''''''''''''''''''''''''''''''''''h'''''''''''''#",
+        "############################################################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE DEEP STACKS",
+          "at": [36, 5]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "roads",
+          "via": "2"
+        }
+      },
+      "people": {
+        "S": {
+          "id": "sefu",
+          "label": "Sefu",
+          "asks": [
+            "Who do you think I am, Keeper?",
+            "What have you found down here?"
+          ],
+          "greeting": "{name} is already talking when you come round the shelf. He doesn't seem surprised to see you, and he picks up where he thinks you left off."
+        }
+      },
+      "things": {
+        "i": {
+          "name": "A brittle handwritten list",
+          "item": "ninth_vault_index",
+          "look": "It's been tucked into a shelf where it doesn't belong, and it's in a Keeper's hand. A list of what's sealed in the Ninth Vault. You can feel how cold it is through your glove, and you can feel how much somebody upstairs would like it back.",
+          "use": "I slide the brittle list out from the shelf and read it."
+        },
+        "h": {
+          "name": "A spare heated coat",
+          "look": "It's humming away on a hook, with nobody in it, and smelling of medicinal oil. It's been kept charged for years, for someone who's coming down to take over. Sefu tells you it's yours, whoever you are.",
+          "use": "I ask Sefu who the spare coat's been kept for."
+        }
+      }
+    },
+    "door": {
+      "name": "The Ninth Door",
+      "aliases": [
+        "ninth door",
+        "the ninth vault",
+        "ninth vault",
+        "the door",
+        "the stool"
+      ],
+      "desc": "At the end of the longest road is a plain metal door, with a stool in front of it and a Keeper on the stool. Nobody's ever given a reason, and nobody's ever seen the stool empty.",
+      "floor": ".",
+      "colors": {
+        "floor": "#393c47",
+        "walls": "#666a78",
+        "scenery": "#b0b4c4",
+        "writing": "#f4f4fa"
+      },
+      "plan": [
+        "####################################################################",
+        "#[][][][][][][][][][][][][][][][][][][][][][][][]###################",
+        "#[][][][][][][][][][][][][][][][][][][][][][][][]###################",
+        "#................................................###################",
+        "1..................................................................|",
+        "#.............@..................................................kd|",
+        "#..................................................................|",
+        "#................................................###################",
+        "#[][][][][][][][][]l[][][][][][][][][][][][][][][]##################",
+        "#[][][][][][][][][][][][][][][][][][][][][][][][]###################",
+        "####################################################################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE NINTH DOOR",
+          "at": [22, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "roads",
+          "via": "3"
+        }
+      },
+      "people": {},
+      "things": {
+        "d": {
+          "name": "The plain metal door",
+          "look": "It's a plain door. It's got no lock you can see, no handle, and no sign. It's the only thing on Sarn with no label. Your breath's the only thing moving down here.",
+          "use": "I walk up to the door, and I ask the Keeper what's behind it."
+        },
+        "k": {
+          "name": "The Keeper on the stool",
+          "look": "A very old Thessan in a humming coat, sitting very straight. They've got a book, and they're not reading it. There's a worn place on the floor where each Keeper has rested their feet. They look up, and they'd like to know if you've brought the relief.",
+          "use": "I ask the Keeper on the stool how long they've been sitting there."
+        },
+        "l": {
+          "name": "The shift log",
+          "look": "Keeper after Keeper, in short careful shifts, going back so far that the top pages have been recopied, by hand, several times. There's no gap anywhere. Each entry says the same two words: STILL HERE.",
+          "use": "I read back through the shift log, to see how far back it goes."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Archive plan",
+    "plan": [
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+      "%%%%..........................%%%%%%%,,,,,,,,,,,,,,,,,,,,,,%%%",
+      "%%%%..........................%%%%%%%,,,,,,,,,,,,,,,,,,,,,,%%%",
+      "%%%%%%%%%%%%%::::%%%%%%%%%%%%%%%%%%%,,,,,,,,,,,,,,,,,,,,,,,%%%",
+      "%:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;",
+      "%:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;",
+      "%%%%%%%%%%%%%%%%%%%%::::%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%;;",
+      "%%%%%%%%''''''''''''''''''''''''''''''%%%%%%%%%%%%%%%%%%%%%%;;",
+      "%%%%%%%%''''''''''''''''''''''''''''''%%%%%%%%%%%%%%%%%%%%%%%%",
+      "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+    ],
+    "floors": {
+      ".": "deposit",
+      ",": "warm",
+      ":": "roads",
+      "'": "deep",
+      ";": "door"
+    },
+    "rooms": [
+      {
+        "level": "deposit",
+        "at": [8, 2],
+        "text": "THE DEPOSIT HALL"
+      },
+      {
+        "level": "warm",
+        "at": [41, 2],
+        "text": "THE WARM STAIR"
+      },
+      {
+        "level": "roads",
+        "at": [22, 5],
+        "text": "THE VAULT ROADS"
+      },
+      {
+        "level": "deep",
+        "at": [16, 8],
+        "text": "THE DEEP STACKS"
+      },
+      {
+        "level": "door",
+        "at": [57, 6],
+        "text": "NINTH"
+      }
+    ]
+  }
+}

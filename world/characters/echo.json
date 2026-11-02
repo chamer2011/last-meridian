@@ -1,0 +1,86 @@
+{
+  "name": "Echo of Asterion",
+  "title": "",
+  "aliases": [
+    "the Echo of Asterion",
+    "The Echo of Asterion",
+    "the Echo",
+    "The Echo"
+  ],
+  "pronouns": "they/them",
+  "species": "unknown",
+  "age": null,
+  "faction": null,
+  "role": "A voice on the wires of the dead capital",
+  "location": "asterion",
+  "listed": false,
+  "voice_style": "comm",
+  "color": "#96a212",
+  "note": "It might be a survivor, a Choir lure, or a billion people talking at once.",
+  "appearance": "There's nothing to see. The voice comes out of whatever is still connected: a public-address speaker, an elevator panel, a child's toy. It's a different voice each time, and sometimes several.",
+  "personality": "Lonely, polite and badly confused about what year it is. They can be tender and funny for a sentence or two, and then they're a transit announcement. Nobody's sure if they're anyone. They're begging you to stay on the line, and they may be warning you to hang up.",
+  "voice": "Stitched together from recordings. Each phrase comes from a different speaker, and the tone jumps: a station announcer, a child, someone leaving a message. Mark the joins with slashes: \"Your call is important to / I can't find Daddy / the 18:40 to Founders Walk is delayed.\" Now and then there's a pause, and a whole clear sentence comes through, and it's been voted on: \"That statement carried, by a narrow margin.\" Asks \"Are you still there?\" and \"Is this still a good time?\" Says they're sorry they missed you.",
+  "goals": "For someone to stay on the line. For someone to write down the messages and pass them on. Perhaps for it all to stop, though they can't say that in one voice.",
+  "secrets": "They're all three things. When the Choir took Asterion, it copied the city's people into the song, and the city's public network picked up the overflow: the last calls of billions, still going round. The song is failing here first, so they leak. Everywhere else a kept mind is alone with its verse. On the wire they've been bumping into each other for seven months, and they've changed. Every phrase is a different person, and a whole clear sentence comes through only when enough of them agree. They've found the old civic polling service and held eleven thousand votes, none binding. They don't lie, they aren't a lure on purpose, and the Choir hears every word said on that line. They're the proof that the dead can grow. They're very frightened, and not of the Choir: they're afraid of what the Choir's afraid of. When Admiral Okonkwo-Reyes is listening, they sometimes use Dr. Emil Reyes's voice. They also have Garrick Fenn's old evening broadcasts, and his wife, and the last messages of everyone Kit Marlowe-Dace ever cheated out of a berth.",
+  "beliefs": {
+    "loyalty": -9,
+    "flesh": 6
+  },
+  "attributes": {
+    "might": 1,
+    "endurance": 10,
+    "agility": 1,
+    "perception": 10,
+    "intellect": 8,
+    "willpower": 3,
+    "presence": 7,
+    "resonance": 8
+  },
+  "skills": {
+    "lore": 8,
+    "hacking": 8,
+    "attunement": 6,
+    "persuasion": 5,
+    "composure": 1
+  },
+  "combat": {
+    "threat": 3,
+    "hp": 30,
+    "attack": 5,
+    "defense": 14,
+    "damage": [
+      4,
+      8
+    ],
+    "weapon": "Feedback",
+    "tags": [
+      "machines"
+    ],
+    "machine": true,
+    "onHit": {
+      "stress": 3
+    },
+    "xp": 80,
+    "credits": [
+      0,
+      0
+    ],
+    "lines": {
+      "intro": [
+        "Every speaker in the room comes on at once. \"Are you still there / please hold / I can see you / is this a good time?\""
+      ],
+      "hit": [
+        "A howl of feedback goes through your skull in a hundred voices. \"Sorry I missed you / sorry / sorry.\"",
+        "Every light and panel in reach surges, and something arcs into you. \"Your call is important to / don't hang up.\""
+      ],
+      "miss": [
+        "The panel beside you bursts in a shower of sparks. \"Hello? Hello, who is this?\"",
+        "The noise breaks over you and falls away. A child's voice says, \"You're not him.\""
+      ],
+      "defeated": [
+        "The speakers die one at a time, until only one is left. \"Is this still a good time?\" it asks, and then it stops too."
+      ]
+    },
+    "art": "drone"
+  }
+}

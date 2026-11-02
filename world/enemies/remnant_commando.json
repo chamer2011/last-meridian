@@ -1,0 +1,51 @@
+{
+  "name": "Remnant Commando",
+  "threat": 4,
+  "hp": 42,
+  "attack": 7,
+  "defense": 15,
+  "damage": [
+    5,
+    10
+  ],
+  "xp": 150,
+  "credits": [
+    20,
+    80
+  ],
+  "tags": [],
+  "motive": "orders",
+  "faction": "remnant",
+  "desc": "The last of the Concord's best, with nothing left to lose.",
+  "weapon": "Suppressed Carbine",
+  "lines": {
+    "intro": [
+      "You don't hear the commando arrive. You hear the door seal behind you, and then a quiet voice telling you to put it down.",
+      "A figure in stripped-down Concord armor, with every unit mark cut off it, steps out of the shadow you just checked."
+    ],
+    "hit": [
+      "A knife comes out of nowhere and finds the gap in your guard, and the commando is already gone again.",
+      "Three suppressed rounds hit you in the time it takes you to hear the first.",
+      "The commando uses your own momentum, puts you into the wall, and takes a shot while you're there."
+    ],
+    "miss": [
+      "You catch a flicker of movement and throw yourself sideways, and rounds chew up the place you just left.",
+      "The knife misses you by the width of your collar, and the commando shows no reaction at all.",
+      "You fire blind at the doorway, and the commando, who was about to come through it, decides not to."
+    ],
+    "crit": [
+      "You realize that the first two attacks were only there to put you where you're standing now."
+    ],
+    "defeated": [
+      "The commando sags against the wall. \"We held the line,\" they tell you. \"Where were you?\"",
+      "The commando eases down the wall, and nods to you, one professional to another."
+    ],
+    "joins": [
+      "{Enemy} is suddenly just there at your shoulder, and you never saw the door open."
+    ],
+    "stunned": [
+      "{Enemy} rocks back and takes a full breath, the first sign you've seen that they're human."
+    ]
+  },
+  "art": "trooper"
+}

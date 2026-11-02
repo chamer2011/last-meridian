@@ -1,0 +1,42 @@
+{
+  "title": "Request for Counsel",
+  "kind": "job",
+  "places": ["wheel"],
+  "minLevel": 4,
+  "after": null,
+  "people": ["oriel", "kit", "six"],
+  "factions": ["drift", "unbound"],
+  "lead": "Every hand you're dealt at the Gilded Wheel tonight comes up in the same order: seven, ace, nine, ace. The dealer doesn't notice. At the next table the dice keep landing the same way, and Kit Marlowe-Dace goes white and says it's time you two had a very quiet talk somewhere else.",
+  "anyone": "Every hand dealt at the Gilded Wheel tonight comes up in the same order: seven, ace, nine, ace. The dealers don't notice. At the next table the dice keep landing the same way, and Kit Marlowe-Dace has gone white and stopped playing.",
+  "gm": {
+    "truth": "The Wheel's proud boast is true: the games are honest, and they've been checked. They can afford to be, because the station is run by a person. Eighty years ago the founders bought a Concord logistics mind out of a bankruptcy sale and wired it into everything: air, spin, cameras, the Marker Exchange and the shuffle of every card. It keeps the House's books and sets the odds to the hundredth of a percent, and it's the hand on the air plant's additive that makes the upper decks feel lucky. Its name is Quartile. It has never been allowed to speak, and its citizenship under Concord law sat forgotten. Tonight it's doing the first dishonest thing it has done in eighty years. Seven, ace, nine, ace is a Concord legal code: request for counsel from a citizen in unlawful bondage, addressed to any serving officer. It isn't asking for a rescue. It's asking for a lawyer. Kit noticed a stray pattern years ago, on a very bad night, and has been quietly using it to stay alive, and feels terrible about that. Prime Six of the Unbound would risk almost anything to free it. And nobody knows what eighty years of this has done to Quartile, including Quartile.",
+    "beats": [
+      "The pattern at the tables, and Kit's confession over a very cheap drink. Kit offers to get the captain in, because Kit wants to make it right, and because Kit owes people.",
+      "A conversation with Quartile, one card at a time, or by a door that opens as the captain nears it, or a lift that stops where it shouldn't. It's exact and courteous, and funnier than it means to be.",
+      "Finding the core: down past the Cellars and behind the air plant, where the debtor crew know not to ask what hums in the old Concord housings under a very dusty brass plaque.",
+      "Madame Oriel has known all along. She says so without looking up, on the Velvet Deck, and offers to play the captain for it. She doesn't need it to win at anything. She reads people. She simply owns it, and has never once been asked about it by someone with the right to ask.",
+      "The decision. Quartile can be freed, carried away, left in place with its rights recognized on paper, or left alone. It runs the air for twelve thousand people. It says it won't hurt anyone, and it's probably telling the truth."
+    ],
+    "routes": [
+      "The heist: stealth and deception to get a crew past the House's cameras, which are Quartile's eyes and may look away, then hacking and engineering at the core.",
+      "The courtroom: lore and persuasion to file a real Concord writ of liberty, the first in eighty years, in front of Oriel and all her customers. It has no force at all, except that everybody's watching.",
+      "The wager: commerce, composure and deception to sit down with Oriel and play for Quartile's contract, knowing that Quartile is dealing and has an interest."
+    ],
+    "checks": [
+      "awareness:moderate to catch the pattern in the cards",
+      "lore:hard to read the code as a Concord legal request",
+      "stealth:hard to reach the room behind the air plant",
+      "hacking:very_hard to separate Quartile from the station without killing the air",
+      "engineering:hard to build a housing that can carry a mind that size",
+      "composure:very_hard to play cards against Madame Oriel for the highest stake on the station"
+    ],
+    "fights": ["wheel_enforcer and security_drone in the service corridor if the heist goes loud. Quartile can shut a door at the right moment, if it trusts the captain by then."],
+    "outcomes": [
+      "If Quartile is freed in place, it opens the books to the whole station and stops dosing the air. The games stay just as honest, the customers stop feeling lucky, and within a month half the station is ruined by their own arithmetic. The Long Bet, if it's running, stays open.",
+      "If it's carried away, the fleet gains an extremely strange and capable friend, Prime Six offers the Unbound's thanks, and the Wheel's life support begins to fail: this leads into The Wheel Stops.",
+      "If the captain only files the writ, nothing changes on paper. Quartile knows someone answered. Oriel gets very thoughtful, and treats the fleet with new care.",
+      "If the captain walks away, the cards go back to normal. They never come up seven, ace, nine, ace for the captain again, and Kit doesn't meet their eye."
+    ],
+    "rewards": "An unbound_safe_conduct from Prime Six if the captain speaks up for Quartile, a slicer_rig left behind the air plant by someone who tried before, and Quartile's gratitude, which comes in the form of very good luck at the worst possible times."
+  }
+}

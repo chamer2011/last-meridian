@@ -1,0 +1,59 @@
+{
+  "name": "Syndicate Collector",
+  "threat": 1,
+  "hp": 15,
+  "attack": 3,
+  "defense": 12,
+  "damage": [
+    2,
+    5
+  ],
+  "xp": 25,
+  "credits": [
+    20,
+    70
+  ],
+  "tags": [
+    "syndicate"
+  ],
+  "motive": "paid",
+  "faction": "drift",
+  "desc": "A Syndicate debt collector, polite for about the first minute.",
+  "weapon": "Sleeve Pistol",
+  "lines": {
+    "intro": [
+      "A neat person with a data slate asks whether you have a moment to discuss the balance outstanding. Their other hand is already inside their coat.",
+      "A collector in a very good coat reads you a sum, with interest, and seems truly sorry when you don't reach for your wallet."
+    ],
+    "hit": [
+      "A small pistol comes out of a sleeve and fires twice at you, and the collector makes a note on the slate.",
+      "The slate cracks you across the jaw. \"Late fee,\" the collector says.",
+      "The collector steps in close, straightens your collar, and puts the pistol against your ribs."
+    ],
+    "miss": [
+      "The sleeve pistol spits past your ear. \"That was your first reminder,\" the collector says.",
+      "You knock the pistol aside, and the collector sighs and adjusts their cuffs.",
+      "The collector fires, misses you, and apologizes for the inconvenience."
+    ],
+    "crit": [
+      "The collector shoots you precisely where you'll still be able to sign."
+    ],
+    "defeated": [
+      "The collector sits down, takes out the slate with a shaking hand, and marks your account as overdue.",
+      "The collector folds, and the slate skitters to your feet, showing a very long column of figures."
+    ],
+    "joins": [
+      "{Enemy} arrives straightening their cuffs, and adds your name to the slate."
+    ],
+    "stunned": [
+      "{Enemy} pauses with one finger on the slate, trying to remember what they were about to charge you."
+    ],
+    "pay_worked": [
+      "The collector counts it, makes a note in a little book, and thanks you for your business. There's even a receipt."
+    ],
+    "persuade_worked": [
+      "You ask to see the paperwork, and you find a mistake in it. The collector sighs, closes the little book, and says they'll be in touch."
+    ]
+  },
+  "art": "scoundrel"
+}

@@ -1,0 +1,933 @@
+{
+  "_help": [
+    "The rooms the game draws for anywhere that isn't on a plan, such as somewhere the game master has just made up. The game master picks the kind, or the game works it out from the name and the words below.",
+    "In a layout's plan: # is a wall, @ is where the captain comes in, 0 is the way out, 1 to 8 are where people stand, and a to d are where things go. Any other mark is scenery. Leave room to the right of each number for a name.",
+    "floor says which characters are floor, and label says where the room's name goes, as a column and a row counted from 0 at the top left.",
+    "things fill in whatever the game master didn't say was there. Restart the game after changing this file."
+  ],
+  "kinds": {
+    "ducts": {
+      "words": [
+        "duct",
+        "ductwork",
+        "crawl",
+        "vent",
+        "shaft",
+        "maintenance",
+        "frame",
+        "tunnel",
+        "void",
+        "dead space",
+        "crawlspace",
+        "pipework"
+      ],
+      "floor": "~",
+      "desc": "Warm, tight and full of pipes. It isn't on the deck plan.",
+      "colors": {
+        "floor": "#5c4520",
+        "walls": "#7a6a3f",
+        "scenery": "#c48a3a",
+        "writing": "#e8d48a"
+      },
+      "layouts": [
+        {
+          "label": [3, 1],
+          "plan": [
+            "########################################################",
+            "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#####~~~~~~~~~~~~~#####",
+            "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#=#=#~~~~~~~~~~~~~#=#=#",
+            "#~~~1~~~~~~~~~~~~~~~~~2~~~~~~~~~~~~~~~3~~~~~~~~~~~~~~~~#",
+            "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~a#",
+            "###~4~~~~~~~~~~~~~~~~~5~~~~~~~~~~~~~~~6~~~~~~~~~~~~~~~##",
+            "###~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##",
+            "#~~~7~~~~~~~~~~~~~~~~~8~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#",
+            "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~b#",
+            "#~~~~~~#####~~~~~~~c~~~~~#####~~~~~~~~~d~~~~~~~~#####~~#",
+            "#~@~~~~#=#=#~~~~~~~~~~~~~#=#=#~~~~~~~~~~~~~~~~~~#=#=#~~#",
+            "##0#####################################################"
+          ]
+        }
+      ],
+      "things": [
+        {
+          "name": "A warm pipe",
+          "look": "It hums under your hand. Someone has wrapped a sock around it to dry."
+        },
+        {
+          "name": "A bedroll",
+          "look": "Rolled up neatly, and tucked behind a bracket where nobody would look."
+        },
+        {
+          "name": "Scratched marks",
+          "look": "Tallies, scratched into the metal with something sharp. Whoever it was has been here a long time."
+        },
+        {
+          "name": "A loose grille",
+          "look": "Held on by one screw. It's been opened and closed so often that the paint's worn off around it."
+        }
+      ]
+    },
+    "cabin": {
+      "words": [
+        "cabin",
+        "quarter",
+        "quarters",
+        "bunk",
+        "berth",
+        "dorm",
+        "dormitory",
+        "stateroom",
+        "barracks",
+        "bedroom",
+        "apartment",
+        "home"
+      ],
+      "floor": ".",
+      "desc": "Somebody's whole life, in very little space. It isn't on the deck plan.",
+      "colors": {
+        "floor": "#3a4150",
+        "walls": "#8893a8",
+        "scenery": "#b7c0d6",
+        "writing": "#dfe6f5"
+      },
+      "layouts": [
+        {
+          "label": [3, 1],
+          "plan": [
+            "##########################################",
+            "#........................................#",
+            "#[___][___][___]....[___][___][___]....a.#",
+            "#...1................2...................#",
+            "#........................................#",
+            "#...3................4.................b.#",
+            "#........................................#",
+            "#...5................6...............[==]#",
+            "#........................................#",
+            "#...7................8.................c.#",
+            "#.@..............d.......................#",
+            "##0#######################################"
+          ]
+        }
+      ],
+      "things": [
+        {
+          "name": "A narrow bunk",
+          "look": "Made up tight enough to bounce a coin off, by someone who's still keeping up the habit."
+        },
+        {
+          "name": "A footlocker",
+          "look": "Scuffed, with a name stenciled on it and painted over, and another name stenciled on top."
+        },
+        {
+          "name": "Things pinned to the wall",
+          "look": "A child's drawing, a ration chit, and a picture of a house on a world that isn't there any more."
+        },
+        {
+          "name": "A cracked mirror",
+          "look": "You look about as tired as everyone else does."
+        }
+      ]
+    },
+    "hold": {
+      "words": [
+        "hold",
+        "cargo",
+        "storage",
+        "store",
+        "stores",
+        "storeroom",
+        "warehouse",
+        "locker",
+        "crate",
+        "depot",
+        "stockroom",
+        "pantry",
+        "larder"
+      ],
+      "floor": ".",
+      "desc": "Crates, nets and the smell of old packing grease. It isn't on the deck plan.",
+      "colors": {
+        "floor": "#3d3460",
+        "walls": "#7d6fb0",
+        "scenery": "#a896d8",
+        "writing": "#d8ccff"
+      },
+      "layouts": [
+        {
+          "label": [3, 1],
+          "plan": [
+            "############################################################",
+            "#..........................................................#",
+            "#..[][][]...[][][]...[][][]...%%%%%%%%...[][][]..(o)(o)(o).#",
+            "#...1................2................3....................#",
+            "#..[][]..[][][][]...[][][][]...[][]..%%%%%.....[][][]......#",
+            "#...4................5................6..................a.#",
+            "#..[][][]..[][]...[][][][][]...[][][]..[][]..[][]..........#",
+            "#...7................8.....................................#",
+            "#..........................................................#",
+            "#..[][][][]...b....[][][][][][]....c....[][][][]...d.......#",
+            "#.@........................................................#",
+            "##0#########################################################"
+          ]
+        }
+      ],
+      "things": [
+        {
+          "name": "Stacked crates",
+          "look": "Stenciled with the names of ports that aren't there any more. Nobody has checked what's in the ones at the bottom."
+        },
+        {
+          "name": "A cargo net",
+          "look": "It's been mended so many times that it's more knots than net."
+        },
+        {
+          "name": "A stained tarp",
+          "look": "Pulled over something that isn't quite the shape of a crate."
+        },
+        {
+          "name": "A clipboard on a chain",
+          "look": "The count on it stops halfway down the page, in the middle of a number."
+        }
+      ]
+    },
+    "corridor": {
+      "words": [
+        "corridor",
+        "passage",
+        "passageway",
+        "hallway",
+        "hatchway",
+        "junction",
+        "walkway",
+        "gangway",
+        "stair",
+        "stairwell",
+        "ladder",
+        "landing"
+      ],
+      "floor": "'",
+      "desc": "A stretch of ship that's on the way to somewhere else. It isn't on the deck plan.",
+      "colors": {
+        "floor": "#3a3f47",
+        "walls": "#8a8f99",
+        "scenery": "#b9bdc7",
+        "writing": "#f2f2ea"
+      },
+      "layouts": [
+        {
+          "label": [3, 1],
+          "plan": [
+            "##########################################################################",
+            "#'@''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+            "0'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''a#",
+            "#'''1'''''''''''''''''2'''''''''''''''''3'''''''''''''''4''''''''''''''''#",
+            "#''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+            "#'''5'''''''''''''''''6'''''''''''''''''7'''''''''''''''8'''''''''''''''b#",
+            "#''''''''''''''c''''''''''''''''''''''''''''''d''''''''''''''''''''''''''#",
+            "##########################################################################"
+          ]
+        }
+      ],
+      "things": [
+        {
+          "name": "A junction box",
+          "look": "Its cover's held on with wire. Somebody has labeled every breaker in very small, very worried handwriting."
+        },
+        {
+          "name": "Someone's bedroll",
+          "look": "Pushed against the wall, with a boot on it to say it's taken."
+        },
+        {
+          "name": "Scuff marks",
+          "look": "Thousands of people have walked this way, and they've all stepped over the same deck plate."
+        },
+        {
+          "name": "A hatch wheel",
+          "look": "It turns a quarter of the way, and then it stops and thinks about it."
+        }
+      ]
+    },
+    "chapel": {
+      "words": [
+        "chapel",
+        "shrine",
+        "temple",
+        "altar",
+        "church",
+        "prayer",
+        "memorial",
+        "funeral",
+        "sanctuary",
+        "cloister",
+        "tomb",
+        "crypt",
+        "graveyard"
+      ],
+      "floor": ",",
+      "desc": "Somewhere people come to be quiet together. It isn't on the deck plan.",
+      "colors": {
+        "floor": "#472d50",
+        "walls": "#9a7fb0",
+        "scenery": "#d9c27a",
+        "writing": "#f5e6b8"
+      },
+      "layouts": [
+        {
+          "label": [3, 1],
+          "plan": [
+            "##################################################",
+            "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+            "#,,,,,,,,,,,,,a,,[+++++++++++],,b,,,,,,,,,,,,,,,,#",
+            "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+            "#,,,1,,,,,,,,,,,,,,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+            "#,======,,========,,========,,======,,======,,,,,#",
+            "#,,,3,,,,,,,,,,,,,,,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+            "#,======,,========,,========,,======,,======,,,,,#",
+            "#,,,5,,,,,,,,,,,,,,,6,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+            "#,======,,========,,========,,======,,======,,,,,#",
+            "#,,,7,,,,,,,,,,,,,,,8,,,,,,,,,,,,,,,,,,,,,,,,,c,,#",
+            "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+            "#,@,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,d,#",
+            "##0###############################################"
+          ]
+        }
+      ],
+      "things": [
+        {
+          "name": "A row of candles",
+          "look": "Real wax, which nobody can spare, and nobody's said a word about it."
+        },
+        {
+          "name": "A worn book",
+          "look": "The cover's gone, and the pages fall open at the same place every time."
+        },
+        {
+          "name": "Folded notes",
+          "look": "Tucked into a crack in the bulkhead, dozens of them. You don't read any."
+        },
+        {
+          "name": "A small altar",
+          "look": "A crate with a clean cloth on it, kept cleaner than anything else on the ship."
+        }
+      ]
+    },
+    "clinic": {
+      "words": [
+        "clinic",
+        "ward",
+        "sick",
+        "hospital",
+        "infirmary",
+        "surgery",
+        "triage",
+        "quarantine",
+        "medical",
+        "doctor",
+        "isolation"
+      ],
+      "floor": ".",
+      "desc": "Clean, or as near to it as anyone can manage. It isn't on the deck plan.",
+      "colors": {
+        "floor": "#1c4a52",
+        "walls": "#5fb3b3",
+        "scenery": "#a8e6e0",
+        "writing": "#e0fffb"
+      },
+      "layouts": [
+        {
+          "label": [3, 1],
+          "plan": [
+            "########################################################",
+            "#......................................................#",
+            "#.[====]|.[====]|.[====]|.[====]|.[====]|.[====]|....a.#",
+            "#...1................2.................................#",
+            "#......................................................#",
+            "#...3................4................[=======].....b..#",
+            "#......................................................#",
+            "#...5................6.................................#",
+            "#.[====]|.[====]|.[====]|.[====]|.....................c#",
+            "#...7................8.................................#",
+            "#.@...................................d................#",
+            "##0#####################################################"
+          ]
+        }
+      ],
+      "things": [
+        {
+          "name": "A cot",
+          "look": "The sheet has been boiled so many times that you can read through it."
+        },
+        {
+          "name": "A treatment table",
+          "look": "Scrubbed down, with a tray of instruments laid out in order of size."
+        },
+        {
+          "name": "A medicine cabinet",
+          "look": "Mostly labels, now. Someone has written how many are left on each one, in pencil, so that it can be rubbed out."
+        },
+        {
+          "name": "A chart on a clip",
+          "look": "A column of temperatures, in a hand that gets shakier toward the bottom."
+        }
+      ]
+    },
+    "workshop": {
+      "words": [
+        "workshop",
+        "shop",
+        "repair",
+        "fab",
+        "fabricator",
+        "forge",
+        "bench",
+        "tool",
+        "garage",
+        "yard",
+        "foundry",
+        "salvage",
+        "scrapyard"
+      ],
+      "floor": ":",
+      "desc": "Everything here is either being mended or being taken apart for parts. It isn't on the deck plan.",
+      "colors": {
+        "floor": "#50402a",
+        "walls": "#a08a5a",
+        "scenery": "#e0b860",
+        "writing": "#ffe9b0"
+      },
+      "layouts": [
+        {
+          "label": [3, 1],
+          "plan": [
+            "########################################################",
+            "#::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+            "#[==========]::[==========]::[==========]::[=======]:a:#",
+            "#:::1::::::::::::::::2:::::::::::::::::::::::::::::::::#",
+            "#::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+            "#:::3::::::::::::::::4::::::::::::::::[#####]:::::::b::#",
+            "#::::::::::::::::::::::::::::::::::::::[###]:::::::::::#",
+            "#:::5::::::::::::::::6:::::::::::::::::::::::::::::::::#",
+            "#::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+            "#:::7::::::::::::::::8::::::::::::::::::::::c::::::::::#",
+            "#:@:::::::::::::::::::::::::::::::::::::::::::::::d::::#",
+            "##0#####################################################"
+          ]
+        }
+      ],
+      "things": [
+        {
+          "name": "A cluttered bench",
+          "look": "Nothing on it matches anything else, and all of it is somebody's only spare."
+        },
+        {
+          "name": "A rack of tools",
+          "look": "Every tool has its outline painted on the wall behind it. Three of the outlines are empty."
+        },
+        {
+          "name": "A half-built something",
+          "look": "You can't tell what it was, or what it's going to be. Whoever's working on it seems very sure."
+        },
+        {
+          "name": "A coffee tin of screws",
+          "look": "Sorted by nobody, and worth more than most of the things in this room."
+        }
+      ]
+    },
+    "machinery": {
+      "words": [
+        "engine",
+        "reactor",
+        "turbine",
+        "generator",
+        "pump",
+        "boiler",
+        "furnace",
+        "drive",
+        "power",
+        "core",
+        "coolant",
+        "pumphouse",
+        "plant room"
+      ],
+      "floor": ":",
+      "desc": "Heat, noise and something that really shouldn't be making that sound. It isn't on the deck plan.",
+      "colors": {
+        "floor": "#5a2a18",
+        "walls": "#b8614a",
+        "scenery": "#ffb86b",
+        "writing": "#ffd166"
+      },
+      "layouts": [
+        {
+          "label": [3, 1],
+          "plan": [
+            "##########################################################",
+            "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+            "#==============================================::a::=====#",
+            "#:::1::::::::::::::::2:::::::::::::::::::::::::::::::::::#",
+            "#::::::::::::::::::::::::::::::::::::((((*****)))):::::::#",
+            "#:::3::::::::::::::::4:::::::::::::::((((*****)))):::b:::#",
+            "#::::::::::::::::::::::::::::::::::::((((*****)))):::::::#",
+            "#:::5::::::::::::::::6:::::::::::::::::::::::::::::::::::#",
+            "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+            "#:::7::::::::::::::::8:::::::::::::::::c:::::::::::::::::#",
+            "#:@:::::::::::::::::::::::::::::::::::::::::::::::d::::::#",
+            "##0#######################################################"
+          ]
+        }
+      ],
+      "things": [
+        {
+          "name": "A pressure gauge",
+          "look": "The needle's resting against a pin that someone has added to stop it going any higher."
+        },
+        {
+          "name": "The machine",
+          "look": "Too hot to touch, and too loud to think next to. It's older than anyone working on it."
+        },
+        {
+          "name": "A patched coolant line",
+          "look": "It's held together with a clamp, a rag, and a great deal of hope."
+        },
+        {
+          "name": "A logbook on a string",
+          "look": "The entries get shorter as they go, until the last one just says 'still going'."
+        }
+      ]
+    },
+    "meeting": {
+      "words": [
+        "council",
+        "meeting",
+        "chamber",
+        "office",
+        "boardroom",
+        "briefing",
+        "court",
+        "wardroom",
+        "conference",
+        "hearing",
+        "assembly",
+        "audience"
+      ],
+      "floor": ".",
+      "desc": "A table, and everyone's reasons for being on their side of it. It isn't on the deck plan.",
+      "colors": {
+        "floor": "#3c4534",
+        "walls": "#8a9a70",
+        "scenery": "#c8d8a0",
+        "writing": "#ecf5d0"
+      },
+      "layouts": [
+        {
+          "label": [3, 1],
+          "plan": [
+            "##############################################################",
+            "#............................................................#",
+            "#..........................................................a.#",
+            "#...1................2................3......................#",
+            "#............................................................#",
+            "#.........[=============================]...4................#",
+            "#.........[=============================]....................#",
+            "#.........[=============================]...5...............b#",
+            "#............................................................#",
+            "#...6................7................8......................#",
+            "#.@...........c..................d...........................#",
+            "##0###########################################################"
+          ]
+        }
+      ],
+      "things": [
+        {
+          "name": "The long table",
+          "look": "It's scarred with cup rings, and at least one set of initials that someone tried to sand off."
+        },
+        {
+          "name": "A stack of slates",
+          "look": "Reports, all of them marked urgent, which means that none of them are."
+        },
+        {
+          "name": "A water jug",
+          "look": "Nobody's touched it. Everyone's waiting to see whether someone else will."
+        },
+        {
+          "name": "A chair left empty",
+          "look": "Nobody's sitting in it, though the room's short of chairs. Nobody seems to want to say why."
+        }
+      ]
+    },
+    "cells": {
+      "words": [
+        "brig",
+        "cell",
+        "cells",
+        "prison",
+        "lockup",
+        "holding",
+        "detention",
+        "security",
+        "jail",
+        "interrogation",
+        "stockade"
+      ],
+      "floor": ".",
+      "desc": "Everything in here is bolted down, including the people, sometimes. It isn't on the deck plan.",
+      "colors": {
+        "floor": "#3c3030",
+        "walls": "#a07070",
+        "scenery": "#d09a9a",
+        "writing": "#ffdcdc"
+      },
+      "layouts": [
+        {
+          "label": [3, 1],
+          "plan": [
+            "##########################################################",
+            "#........................................................#",
+            "#|||||||||||||#|||||||||||||#|||||||||||||#...||||||||||##",
+            "#...1................2.................................a.#",
+            "#........................................................#",
+            "#...3................4....................[====].........#",
+            "#........................................................#",
+            "#...5................6.................................b.#",
+            "#|||||||||||||#|||||||||||||#|||||||||||||..............##",
+            "#...7................8...........................c.......#",
+            "#.@.....................d................................#",
+            "##0#######################################################"
+          ]
+        }
+      ],
+      "things": [
+        {
+          "name": "The bars",
+          "look": "Newer than the rest of the ship. Someone made these a priority."
+        },
+        {
+          "name": "A duty desk",
+          "look": "A logbook, a cold cup, and a chair that's been pushed back in a hurry."
+        },
+        {
+          "name": "A locked cell",
+          "look": "Whoever's in there has stopped banging on the door, which isn't a good sign."
+        },
+        {
+          "name": "Marks on the wall",
+          "look": "Somebody counted the days here, and then stopped."
+        }
+      ]
+    },
+    "hangar": {
+      "words": [
+        "hangar",
+        "shuttle",
+        "bay",
+        "dock",
+        "docking",
+        "airlock",
+        "flight",
+        "launch",
+        "ramp",
+        "berthing",
+        "pier"
+      ],
+      "floor": "_",
+      "desc": "A big, cold space, and the only way off this ship that isn't a jump. It isn't on the deck plan.",
+      "colors": {
+        "floor": "#2c3d45",
+        "walls": "#6a8a9a",
+        "scenery": "#a8d0e0",
+        "writing": "#e0f5ff"
+      },
+      "layouts": [
+        {
+          "label": [3, 1],
+          "plan": [
+            "##################################################################",
+            "#________________________________________________________________#",
+            "#________________________________________.----------.____________#",
+            "#___1________________2__________________/  [==][==]  \\___________#",
+            "#______________________________________|   ======    >=-_________#",
+            "#___3________________4__________________\\  [==][==]  /_________a_#",
+            "#________________________________________'----------'____________#",
+            "#___5________________6___________________________________________#",
+            "#________________________________________________________b_______#",
+            "#___7________________8__________________________c________________#",
+            "#_@_________________________________d____________________________#",
+            "##0###############################################################"
+          ]
+        }
+      ],
+      "things": [
+        {
+          "name": "A shuttle",
+          "look": "It's flown too many hours on too few parts, and someone's chalked a name on its nose."
+        },
+        {
+          "name": "A fuel line",
+          "look": "Coiled up neatly and locked to the deck, because fuel is the one thing nobody leaves lying around."
+        },
+        {
+          "name": "The bay door",
+          "look": "One thin door between you and everything else. The seal's been patched from the inside."
+        },
+        {
+          "name": "A tool cart",
+          "look": "One wheel's missing, so it's propped up on a stack of old manuals."
+        }
+      ]
+    },
+    "garden": {
+      "words": [
+        "garden",
+        "farm",
+        "hydroponic",
+        "hydroponics",
+        "orchard",
+        "grow",
+        "crop",
+        "greenhouse",
+        "seed",
+        "grove",
+        "nursery",
+        "vat",
+        "vats"
+      ],
+      "floor": ",",
+      "desc": "It smells like something alive, which is rare out here. It isn't on the deck plan.",
+      "colors": {
+        "floor": "#22472b",
+        "walls": "#5f9c75",
+        "scenery": "#8df5ac",
+        "writing": "#e6ffef"
+      },
+      "layouts": [
+        {
+          "label": [3, 1],
+          "plan": [
+            "########################################################",
+            "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+            "#,YvYvYvYvYvYv,,YvYvYvYvYvYv,,YvYvYvYvYvYv,,YvYvYvYv,a,#",
+            "#,,,1,,,,,,,,,,,,,,,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+            "#,YvYvYvYvYvYv,,YvYvYvYvYvYv,,YvYvYvYvYvYv,,YvYvYvYv,,,#",
+            "#,,,3,,,,,,,,,,,,,,,,4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,b,,#",
+            "#,YvYvYvYvYvYv,,YvYvYvYvYvYv,,YvYvYvYvYvYv,,YvYvYvYv,,,#",
+            "#,,,5,,,,,,,,,,,,,,,,6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+            "#,YvYvYvYvYvYv,,YvYvYvYvYvYv,,YvYvYvYvYvYv,,YvYvYvYv,,,#",
+            "#,,,7,,,,,,,,,,,,,,,,8,,,,,,,,,,,,,,,,,,,,,,,,,c,,,,,,,#",
+            "#,@,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,d,,,,,,,,,,,,,,,,#",
+            "##0#####################################################"
+          ]
+        }
+      ],
+      "things": [
+        {
+          "name": "A grow rack",
+          "look": "Rows of thin green shoots under a humming lamp. Somebody has named each tray."
+        },
+        {
+          "name": "A water line",
+          "look": "It drips, and there's a cup underneath to catch it, and a second cup under the first."
+        },
+        {
+          "name": "A seed tray",
+          "look": "Labeled in careful handwriting, in a language you can only half read."
+        },
+        {
+          "name": "A compost bin",
+          "look": "It's the warmest thing in the room, and it's got a cat-shaped dent in the lid."
+        }
+      ]
+    },
+    "gundeck": {
+      "words": [
+        "gun",
+        "cannon",
+        "turret",
+        "armory",
+        "armoury",
+        "magazine",
+        "weapon",
+        "weapons",
+        "battery",
+        "ammunition",
+        "fire control"
+      ],
+      "floor": ":",
+      "desc": "Everything in here was built to do one thing. It isn't on the deck plan.",
+      "colors": {
+        "floor": "#433d3d",
+        "walls": "#8f8f8f",
+        "scenery": "#ff9f7f",
+        "writing": "#ffd9c9"
+      },
+      "layouts": [
+        {
+          "label": [3, 1],
+          "plan": [
+            "##########################################################",
+            "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+            "#::::::::::::::::::::::::::::::::::::::::::::::::::::::a:#",
+            "#:::1::::::::::::::::2:::::::::::::::::::::::::::::::::::#",
+            "#::::::::::::::::::::::::::::::::::::::[#####]===========#",
+            "#:::3::::::::::::::::4:::::::::::::::::[#####]===========#",
+            "#::::::::::::::::::::::::::::::::::::::[#####]===========#",
+            "#:::5::::::::::::::::6:::::::::::::::::::::::::::::::b:::#",
+            "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+            "#:::7::::::::::::::::8::::::::::::::::[][][]c::::::::::::#",
+            "#:@:::::::::::::::::::::::::::::::::::::::::::d::::::::::#",
+            "##0#######################################################"
+          ]
+        }
+      ],
+      "things": [
+        {
+          "name": "The breech",
+          "look": "Polished by hand. It's the cleanest thing for fifty metres, and it's been loaded."
+        },
+        {
+          "name": "A firing board",
+          "look": "Every switch on it has a strip of tape with a name on it, and some of the names are crossed out."
+        },
+        {
+          "name": "Racked shells",
+          "look": "You count them without meaning to. There are fewer than you'd like."
+        },
+        {
+          "name": "A safety notice",
+          "look": "Most of it has been painted over. The part that's left says DON'T."
+        }
+      ]
+    },
+    "lab": {
+      "words": [
+        "lab",
+        "laboratory",
+        "science",
+        "research",
+        "archive",
+        "archives",
+        "library",
+        "records",
+        "data",
+        "server",
+        "comms",
+        "signal",
+        "observatory",
+        "sensor",
+        "listening"
+      ],
+      "floor": ".",
+      "desc": "Screens, notes, and somebody's half-finished idea. It isn't on the deck plan.",
+      "colors": {
+        "floor": "#22324f",
+        "walls": "#6f8fd0",
+        "scenery": "#a8c8ff",
+        "writing": "#dfeaff"
+      },
+      "layouts": [
+        {
+          "label": [3, 1],
+          "plan": [
+            "########################################################",
+            "#......................................................#",
+            "#[::::][::::][::::][::::][::::][::::][::::][::::]....a.#",
+            "#...1................2.................................#",
+            "#......................................................#",
+            "#...3................4...............[============]....#",
+            "#....................................[============]..b.#",
+            "#...5................6.................................#",
+            "#......................................................#",
+            "#...7................8................c................#",
+            "#.@........................................d...........#",
+            "##0#####################################################"
+          ]
+        }
+      ],
+      "things": [
+        {
+          "name": "A bank of screens",
+          "look": "Most are dark. One's still running something, and it won't say what."
+        },
+        {
+          "name": "A stack of notes",
+          "look": "Handwritten, because nobody trusts the system any more. The top page is mostly question marks."
+        },
+        {
+          "name": "A humming rack",
+          "look": "Warm to the touch, and much busier than it has any reason to be."
+        },
+        {
+          "name": "A cold mug",
+          "look": "It's been holding down the corner of a chart for what looks like several days."
+        }
+      ]
+    },
+    "plain": {
+      "words": [],
+      "floor": ".",
+      "desc": "It isn't on the deck plan.",
+      "colors": {
+        "floor": "#3c433f",
+        "walls": "#7f9a88",
+        "scenery": "#b7cdbf",
+        "writing": "#e6f0ea"
+      },
+      "layouts": [
+        {
+          "label": [3, 1],
+          "plan": [
+            "##################################################",
+            "#................................................#",
+            "#.(#).........................(#)..............a.#",
+            "#...1................2...........................#",
+            "#................................................#",
+            "#...3................4.........................b.#",
+            "#................................................#",
+            "#...5................6...........................#",
+            "#.(#).........................(#)..............c.#",
+            "#...7................8...........................#",
+            "#.@..................................d...........#",
+            "##0###############################################"
+          ]
+        }
+      ],
+      "things": [
+        {
+          "name": "A locker",
+          "look": "Dented, and not locked. There's nothing in it but a single glove."
+        },
+        {
+          "name": "Some scuffed paint",
+          "look": "This was another color once, and another color before that."
+        },
+        {
+          "name": "A notice on the wall",
+          "look": "It's about a safety drill, on a date before the Fall."
+        },
+        {
+          "name": "A stool",
+          "look": "One leg's shorter than the others, and it's been fixed with a folded ration slip."
+        }
+      ]
+    }
+  },
+  "talk": {
+    "asks": [
+      "How are you holding up?",
+      "What should I know that I don't?",
+      "What do you need from me?"
+    ],
+    "rumor": "Ask what they've heard",
+    "goodbye": "Say goodbye",
+    "greetings": {
+      "ally": "{name} smiles as you come over.",
+      "friendly": "{name} nods as you come over.",
+      "neutral": "{name} looks up as you come over.",
+      "wary": "{name} watches you come over, and keeps working.",
+      "hostile": "{name} sees you coming, and the room gets colder.",
+      "unmet": "{name} looks up. You haven't really spoken before.",
+      "asleep": "{name} is asleep. You shake them awake, and they blink up at you."
+    },
+    "rumorAsked": "What have you heard lately?"
+  }
+}

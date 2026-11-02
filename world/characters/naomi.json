@@ -1,0 +1,79 @@
+{
+  "name": "Naomi Cass",
+  "title": "",
+  "aliases": [
+    "Naomi Cass",
+    "Naomi",
+    "Cass"
+  ],
+  "pronouns": "she/her",
+  "species": "human",
+  "age": 12,
+  "faction": "fleet",
+  "role": "Messenger on the Meridian, and former stowaway",
+  "location": "meridian",
+  "listed": false,
+  "color": "#96fe4b",
+  "note": "Twelve years old, and she can get anywhere on the ship, often by routes that aren't on the plans.",
+  "appearance": "Skinny and scabbed at the knees, in a cut-down uniform jacket with the sleeves rolled five times. There's always duct grease in her hair, and her pockets are full of things she says she found.",
+  "personality": "Cheerful, nosy and shrewd, the way children get when they've had to be. She has seen nearly every secret on the ship and understood about half of them. She says she isn't scared of anything, and she hasn't slept through a night since the Fall.",
+  "voice": "Quick, matter-of-fact kid talk. Says \"technically\" a lot, mostly when she's wrong. Calls you the Upstairs Captain. Has her own names for everyone and doesn't explain them: Swear Chief (Marrow), the Counting Lady (Odessa Brandt), Mister Washers (Tobin Hask), the Not-Sleeping Man (Iven Sorel), Doctor Sad (Aduro), the Scan Lady (Voss), Father Pretend (Bastian Roe). Names the ducts too: the Whistler, the Cold Elbow. Charges half a ration bar for directions, and asks if you're going to finish that. \"I didn't see anything. Technically. But if I did, it'd be Swear Chief and the three broken robots in aft cargo.\" When it really counts she drops all that and says it flat, the way Commander Voss does.",
+  "goals": "Keep her crew safe. Find her dad: he put her on the creche ship Ember Day at Aurelis and said he'd be on the next shuttle, and she checks every new manifest she can get at. She wants a real bunk too, and she'd bite anyone who said so.",
+  "secrets": "She isn't the only one. Thirty-one children from the Ember Day live in the Meridian's crawlspaces, with their own council, court and laws painted on a duct, and she's their captain. They visit Orchard, one of Marrow's hidden synthetics, every night. Four months ago she hid the notice of Joss Asante's death from his sister Pell, and she has written sixteen letters in his hand since. She has seen Voss's night scans and Iven Sorel's notebooks without knowing what they mean. She told Father Roe about the Dark Pantry, and she sells corridor gossip to Garrick Fenn for dried fruit. Her father isn't on any ship in the fleet, and everyone who knows has decided it's someone else's job to tell her. Behind Frame Forty, in the number two duct, something has started to hum. It isn't on any plan, she won't go there any more, and it's the one thing she refuses to talk about.",
+  "beliefs": {
+    "authority": 6,
+    "loyalty": 3,
+    "violence": -2
+  },
+  "attributes": {
+    "might": 1,
+    "endurance": 3,
+    "agility": 8,
+    "perception": 8,
+    "intellect": 5,
+    "willpower": 5,
+    "presence": 4,
+    "resonance": 2
+  },
+  "skills": {
+    "stealth": 8,
+    "athletics": 5,
+    "streetwise": 5,
+    "awareness": 5,
+    "deception": 3
+  },
+  "combat": {
+    "threat": 1,
+    "hp": 8,
+    "attack": 0,
+    "defense": 13,
+    "damage": [
+      1,
+      2
+    ],
+    "weapon": "Pocketful of Bolts",
+    "tags": [],
+    "xp": 0,
+    "credits": [
+      0,
+      5
+    ],
+    "lines": {
+      "intro": [
+        "Naomi Cass backs up against a vent with a handful of bolts and her chin in the air. \"I'm telling Swear Chief,\" she says."
+      ],
+      "hit": [
+        "A bolt bounces off your forehead. \"Technically, that was an accident!\"",
+        "A bolt stings your ear, and small feet rattle away through the ducts and back again."
+      ],
+      "miss": [
+        "A bolt pings off the wall and rolls away. She says a word she learned from the engineers.",
+        "She's in the vent, then out of it, and you've lost track of where."
+      ],
+      "defeated": [
+        "Naomi Cass drops her last bolt and glares at you, and she doesn't cry, technically."
+      ]
+    },
+    "art": "civilian"
+  }
+}

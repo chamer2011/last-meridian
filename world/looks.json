@@ -1,0 +1,176 @@
+{
+  "_help": "How each place looks in the isometric view: what it's made of and how it's lit. Nothing here changes the game, only how it's drawn. A place's settings apply to all its rooms, and 'levels' changes them for one room, by its name. floor can be deck, grate, concrete, dirt, soil, stone, tile, wood, carpet, rock, ice, wet or alien. walls can be panels, hull, concrete, rock, brick, wood, tile, stone, ice or alien. rough is what a % on the level's plan is: rock, scrap, ice or plants. ambient is how bright the room is where no lamp reaches, as a color, and the darker it is, the darker the room. lights are the colors of its lamps, picked from at random. glow is the color of its machines, fire is the color of anything burning or shining in it, and machines: false means the place has none to speak of, so that what would be a console is just a plain bench or wall. shape puts one big thing in a room in place of what's drawn on its plan, between two corners given as a column and a row: the only kind so far is wheel.",
+
+  "default": { "floor": "deck", "walls": "panels", "rough": "rock", "ambient": "#5c5f63", "lights": ["#e0b070", "#8fb8c8"], "glow": "#6fd0a0", "fire": "#ff9a50" },
+
+  "places": {
+    "meridian": {
+      "floor": "deck", "walls": "panels", "ambient": "#555c66", "lights": ["#bcd4ec", "#e8b070"], "glow": "#7fc8ff",
+      "levels": {
+        "The Bridge": { "lights": ["#9cc8f0", "#6f90c8"] },
+        "The Long Mess": { "ambient": "#60564a", "lights": ["#f0b870", "#e09850"] },
+        "Engineering": { "floor": "grate", "ambient": "#5a4a40", "lights": ["#ff8a40", "#ffb060"], "glow": "#ff7030" },
+        "The Aft Holds": { "ambient": "#4a4858", "lights": ["#a088d8", "#7a70b0"] },
+        "The Names Bulkhead": { "ambient": "#4c4e52", "lights": ["#c8ccd0"] },
+        "Medbay": { "floor": "tile", "walls": "tile", "ambient": "#586468", "lights": ["#a8e8e0", "#d8f0f0"], "glow": "#70e8d0" },
+        "The Crawlways": { "floor": "grate", "rough": "scrap", "ambient": "#463e30", "lights": ["#e0a040"] },
+        "The Hot Bunks": { "ambient": "#4c4636", "lights": ["#d8b860"] }
+      }
+    },
+    "haven": {
+      "floor": "deck", "walls": "panels", "ambient": "#55585c", "lights": ["#d8d0b0", "#a8c8e0"],
+      "levels": {
+        "The Neutral Ground": { "floor": "concrete", "walls": "brick", "ambient": "#5c5044", "lights": ["#f0a860", "#e07848"] },
+        "The Consulate Row": { "floor": "carpet", "ambient": "#50526a", "lights": ["#b0b8f0"] },
+        "Tharel's Warm Room": { "floor": "carpet", "walls": "wood", "ambient": "#5c4438", "lights": ["#ff9050", "#e86838"] },
+        "The Hook": { "floor": "grate", "walls": "hull", "ambient": "#444c44", "lights": ["#90d890", "#d8c060"] }
+      }
+    },
+    "kessara": {
+      "floor": "concrete", "walls": "hull", "ambient": "#524a50", "lights": ["#e070b0", "#60c0d0", "#e0a050"], "glow": "#e070b0",
+      "levels": {
+        "The Warrens": { "floor": "rock", "walls": "rock", "ambient": "#4a3e30", "lights": ["#e0a050", "#c88040"] },
+        "Quill's Parlor": { "floor": "carpet", "walls": "wood", "ambient": "#54343a", "lights": ["#e05868"] },
+        "The Tally Wall": { "ambient": "#484850", "lights": ["#c8c8d8"] },
+        "The Sump": { "floor": "wet", "walls": "rock", "ambient": "#38443c", "lights": ["#70d090"] }
+      }
+    },
+    "graveyard": {
+      "floor": "deck", "walls": "hull", "rough": "scrap", "ambient": "#4a4c54", "lights": ["#c8d4e0", "#e0a060"],
+      "levels": {
+        "The Factor's Barge": { "ambient": "#54483c", "lights": ["#f0b060"] },
+        "The Long Silence": { "ambient": "#3c4048", "lights": ["#8090b8"] }
+      }
+    },
+    "frontier": {
+      "floor": "dirt", "walls": "wood", "rough": "plants", "machines": false, "ambient": "#a0906c", "lights": ["#f0d090"],
+      "levels": {
+        "The Long Fields": { "floor": "soil" },
+        "The Well-Head": { "floor": "stone" },
+        "The Schoolhouse": { "floor": "wood" }
+      }
+    },
+    "sundial": {
+      "floor": "deck", "walls": "hull", "rough": "plants", "ambient": "#60584a", "lights": ["#f8d880"],
+      "levels": {
+        "The Long Furrow": { "floor": "soil", "ambient": "#94845c", "lights": ["#ffe090"] },
+        "The Water Table": { "floor": "wet", "ambient": "#404c54", "lights": ["#70c0e0"] },
+        "The Sun Rail": { "floor": "grate", "ambient": "#6a5a3c", "lights": ["#ffd060"], "fire": "#ffe9a0" },
+        "The Drowned Deck": { "floor": "wet", "ambient": "#38444c", "lights": ["#60a8c8"] }
+      }
+    },
+    "cinder": {
+      "floor": "concrete", "walls": "hull", "ambient": "#54483e", "lights": ["#ff8a48", "#ffb870"], "glow": "#ff8040",
+      "levels": {
+        "The Stack": { "floor": "rock", "walls": "rock" },
+        "Company Hill": { "floor": "tile", "walls": "panels", "ambient": "#505c50", "lights": ["#d0e8c8"] },
+        "The Tubes": { "floor": "rock", "walls": "rock", "ambient": "#4c3428", "lights": ["#ff6a30", "#ff9040"] },
+        "The Tap": { "floor": "rock", "walls": "rock", "ambient": "#54302a", "lights": ["#ff5030"] }
+      }
+    },
+    "deepyards": {
+      "floor": "deck", "walls": "hull", "rough": "ice", "ambient": "#484e58", "lights": ["#a8c8e8", "#e8b070"],
+      "levels": {
+        "The Rinse": { "floor": "wet" },
+        "The Hearth Rings": { "rough": "scrap", "ambient": "#5a4a3c", "lights": ["#ffb060"] },
+        "The Ice Cut": { "floor": "ice", "walls": "ice", "ambient": "#4c5a68", "lights": ["#b0d8f0"] },
+        "The Dark Moorings": { "ambient": "#343a48", "lights": ["#6880b0"] }
+      }
+    },
+    "korrath": {
+      "floor": "concrete", "walls": "concrete", "ambient": "#524c44", "lights": ["#f0a860", "#d8d0c0"], "glow": "#ff9040",
+      "levels": {
+        "The Long Furnaces": { "floor": "stone", "ambient": "#5c3c2c", "lights": ["#ff7030", "#ffa040"] },
+        "Slag Bridge": { "ambient": "#54402e", "lights": ["#ff8040"] },
+        "The Weigh House": { "floor": "wood" }
+      }
+    },
+    "lumen": {
+      "floor": "stone", "walls": "stone", "rough": "plants", "ambient": "#5a5c68", "lights": ["#c0c8f0", "#a8e0d8"], "glow": "#a8e0d8",
+      "levels": {
+        "The Water Courts": { "floor": "tile", "lights": ["#80d0e0"] },
+        "The Still Rooms": { "floor": "tile", "walls": "tile" }
+      }
+    },
+    "maris": {
+      "floor": "wet", "walls": "concrete", "rough": "plants", "ambient": "#445050", "lights": ["#70d8c0", "#e8c880"], "glow": "#70d8c0",
+      "levels": {
+        "The Rafts": { "floor": "wood", "walls": "wood", "ambient": "#5a6a66" },
+        "Corso Station": { "floor": "deck", "walls": "panels" },
+        "The Long Chamber": { "floor": "stone", "walls": "stone" }
+      }
+    },
+    "wheel": {
+      "floor": "deck", "walls": "panels", "ambient": "#5c5044", "lights": ["#ffc860", "#e88850"], "glow": "#ffc860",
+      "levels": {
+        "The Great Wheel": { "floor": "wood", "walls": "wood", "shape": { "kind": "wheel", "from": [22, 2], "to": [47, 8] } },
+        "The Marker Exchange": { "floor": "tile", "walls": "wood" },
+        "The Cellars": { "floor": "stone", "walls": "brick", "ambient": "#443e3c", "lights": ["#d89850"] },
+        "The Velvet Deck": { "floor": "carpet", "walls": "wood", "ambient": "#7a5a4c", "lights": ["#e05870", "#ffc060"] }
+      }
+    },
+    "ghostlight": {
+      "floor": "deck", "walls": "panels", "rough": "scrap", "ambient": "#484e56", "lights": ["#9fd0b8", "#c8d8e8"],
+      "levels": {
+        "The Burn": { "floor": "rock", "walls": "hull", "ambient": "#3c4c38", "lights": ["#90e070"] }
+      }
+    },
+    "vantor": {
+      "floor": "stone", "walls": "stone", "ambient": "#62666c", "lights": ["#e8ecf0", "#c0c8d8"], "glow": "#c0d8ff",
+      "levels": {
+        "The Lower Stacks": { "floor": "concrete", "walls": "concrete" },
+        "The Outer Yards": { "floor": "concrete", "walls": "panels" },
+        "The Regency Palace": { "floor": "carpet" }
+      }
+    },
+    "sarn": {
+      "floor": "stone", "walls": "stone", "machines": false, "ambient": "#4c5058", "lights": ["#e8c890", "#b0c0d8"]
+    },
+    "ilun": {
+      "floor": "stone", "walls": "stone", "rough": "plants", "machines": false, "ambient": "#54524e", "lights": ["#e8d8b0"],
+      "levels": {
+        "The Under-Stair": { "rough": "rock" }
+      }
+    },
+    "bastion": {
+      "floor": "concrete", "walls": "concrete", "ambient": "#54585c", "lights": ["#d8dce0", "#e0a860"],
+      "levels": {
+        "The Commandant's Gallery": { "floor": "carpet", "walls": "panels" }
+      }
+    },
+    "anselm": {
+      "floor": "tile", "walls": "tile", "ambient": "#585e5e", "lights": ["#d8e8e0", "#e8d8a0"], "glow": "#70e8d0",
+      "levels": {
+        "The Bell Stair": { "floor": "wood", "walls": "wood" }
+      }
+    },
+    "asterion": {
+      "floor": "stone", "walls": "stone", "ambient": "#4c4e56", "lights": ["#a0a8d0", "#d0b070"]
+    },
+    "foundry": {
+      "floor": "deck", "walls": "panels", "rough": "scrap", "ambient": "#4a4e56", "lights": ["#80b0e0", "#e09050"], "glow": "#80b0e0",
+      "levels": {
+        "The Cold Gate": { "floor": "concrete", "rough": "rock" },
+        "The Sublevels": { "floor": "grate", "walls": "hull", "ambient": "#4c3830", "lights": ["#ff7040"] }
+      }
+    },
+    "harbor": {
+      "floor": "stone", "walls": "stone", "machines": false, "ambient": "#5e5644", "lights": ["#f0d090"],
+      "levels": {
+        "Past the Lamp": { "floor": "rock", "ambient": "#38384c", "lights": ["#8080c8"] }
+      }
+    },
+    "nest": {
+      "floor": "alien", "walls": "alien", "rough": "scrap", "ambient": "#4a4e5c", "lights": ["#c0c8f0", "#e8e8ff"], "glow": "#c0c8f0"
+    },
+    "orrin": {
+      "floor": "ice", "walls": "ice", "rough": "ice", "ambient": "#48505c", "lights": ["#b8d0f0", "#ff9860"],
+      "levels": {
+        "The Burn Ward": { "floor": "stone", "ambient": "#54403a", "lights": ["#ff8850"] }
+      }
+    },
+    "pale_gate": {
+      "floor": "stone", "walls": "alien", "ambient": "#504e4a", "lights": ["#d8c8a0", "#90a0e0"], "glow": "#90a0e0"
+    }
+  }
+}

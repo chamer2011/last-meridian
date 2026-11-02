@@ -1,0 +1,505 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "Vantor Prime",
+  "start": "mile",
+  "levels": {
+    "mile": {
+      "name": "The Serene Mile",
+      "aliases": [
+        "serene mile",
+        "the mile",
+        "the boulevard",
+        "the ministries",
+        "the fountains"
+      ],
+      "desc": "Six kilometers of white ministries and fountains that lead to the Regency Palace. Visitors are met here by a courtesy escort, whether or not they arranged one. The air smells of lemon polish, and of nothing else.",
+      "floor": ".",
+      "colors": {
+        "floor": "#5c6068",
+        "walls": "#b0b8c4",
+        "scenery": "#e4ecf8",
+        "writing": "#ffffff"
+      },
+      "plan": [
+        "||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || ",
+        "||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || ",
+        "========================================================================== ",
+        ".......................................................................... ",
+        "1.........................................................................3",
+        "..........@............................................................... ",
+        "...........................................................................",
+        ".........(~~~~)f.....................(~~~~)....................(~~~~)......",
+        "...........................................................................",
+        "...................................e.......................................",
+        "...........................................................................",
+        "..................................................r........................",
+        "==================2======================================================= ",
+        "||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || ",
+        "||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || "
+      ],
+      "writing": [
+        [3, 2, "THANK YOU FOR KEEPING THE MILE SERENE. PLEASE RETAIN YOUR RECEIPT."]
+      ],
+      "labels": [
+        {
+          "text": "THE SERENE MILE",
+          "at": [30, 5]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "steps",
+          "via": "1"
+        },
+        "2": {
+          "to": "line",
+          "via": "1"
+        },
+        "3": {
+          "to": "palace",
+          "via": "1",
+          "closed": {
+            "look": "White gates at the end of the Mile, and two guards in white with very pleasant expressions. You'd have to be expected. They're terribly sorry. They're not going to ask you to step back, and you find that you already have.",
+            "use": "I give my name at the gates of the Regency Palace, and I ask for an audience with the Regent."
+          }
+        }
+      },
+      "people": {},
+      "things": {
+        "f": {
+          "name": "A fountain",
+          "look": "Perfectly clear water and a perfectly timed jet. There's a small brass sign: THE WATER IS RECYCLED, THE FIGURES ARE PUBLISHED. There isn't a single coin in it, nor has there been.",
+          "use": "I stop at the fountain and see who else stops."
+        },
+        "e": {
+          "name": "The courtesy escort",
+          "look": "She's in pale grey, with a very pleasant smile, and she has appeared at your elbow without any fuss. She knows your name and your ship. She'd be happy to show you anything at all, and she will be showing you everything.",
+          "use": "I ask my courtesy escort exactly what's on today's itinerary."
+        },
+        "r": {
+          "name": "A receipt machine",
+          "look": "It's dispensed a receipt, for having passed it. It's got the time on it and your name. You look around for somewhere to throw it, and a citizen across the street smiles at you and very gently shakes his head.",
+          "use": "I take my receipt, and I read what's printed on the back."
+        }
+      }
+    },
+    "steps": {
+      "name": "The Ministry Steps",
+      "aliases": [
+        "ministry steps",
+        "the steps",
+        "the ministry of inquiry",
+        "ministry of inquiry",
+        "the ministry"
+      ],
+      "desc": "A broad public staircase in front of the Ministry of Inquiry, where people wait patiently on benches for news of relatives. They're given numbered tickets, and tea.",
+      "floor": "=_",
+      "colors": {
+        "floor": "#484c58",
+        "walls": "#9098ac",
+        "scenery": "#c8d0e4",
+        "writing": "#f4f6ff"
+      },
+      "plan": [
+        "#########################################################################",
+        "#  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  #",
+        "#  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  #",
+        "#=======================================================================#",
+        "#___-----____-----____-----_______V_______-----____-----____-----_______#",
+        "#=======================================================================#",
+        "#___-----____-----____-----_______________-----____-----____-----_______#",
+        "#===================================================================s===#",
+        "#___-----____-----____-----_______________-----____-----____-----_______#",
+        "#=======================================================================#",
+        "1___________________@____t__________________k___________________________#",
+        "#########################################################################"
+      ],
+      "writing": [
+        [8, 0, "THE MINISTRY OF INQUIRY THANKS YOU FOR WAITING"]
+      ],
+      "labels": [
+        {
+          "text": "THE MINISTRY STEPS",
+          "at": [27, 8]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "mile",
+          "via": "1"
+        }
+      },
+      "people": {
+        "V": {
+          "id": "vael",
+          "label": "Vael",
+          "asks": [
+            "Are you here for me, Inquisitor?",
+            "What would it take for you to look the other way?"
+          ]
+        }
+      },
+      "things": {
+        "t": {
+          "name": "The tea trolley",
+          "item": "calm_tabs",
+          "look": "A polite young man with a very clean trolley. It's good tea. It's the same tea every day, and there's a small strip of calm tabs on every saucer, and it's free. An old woman takes hers with a nod, without looking up.",
+          "use": "I take the tea and the strip of tabs, and I sit down beside the old woman."
+        },
+        "k": {
+          "name": "The ticket machine",
+          "look": "NOW SERVING 2,114. Yours says 88,902. A citizen behind you tells you very kindly that it does move. She has a little cushion with her that she's clearly made herself, for the wait.",
+          "use": "I take a ticket and I ask what the number means."
+        },
+        "s": {
+          "name": "A saber in a glass case",
+          "item": "ministry_saber",
+          "look": "A thin dueling blade, displayed at the top of the steps, in a case, with a small card: THE MINISTRY DOES NOT DRAW THIS. It's very clean. Somebody's carrying its twin, and people will ask you how you got one.",
+          "use": "I look at the saber in its case, and I ask what the card means."
+        }
+      }
+    },
+    "stacks": {
+      "name": "The Lower Stacks",
+      "aliases": [
+        "lower stacks",
+        "the stacks",
+        "the housing",
+        "provisional housing"
+      ],
+      "desc": "Clean, tidy, identical housing for those granted provisional status, including many former Concord citizens. Children here learn the anthem before they learn to read.",
+      "floor": ",",
+      "colors": {
+        "floor": "#44484c",
+        "walls": "#8c9498",
+        "scenery": "#bcc4c8",
+        "writing": "#f0f4f4"
+      },
+      "plan": [
+        "####################################################################",
+        "#[+][+][+][+][+][+][+][+][+][+][+][+][+][+][+][+][+][+][+][+][+][+]#",
+        "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+        "#[+][+][+][+][+][+][+][+][+][+][+][+][+][+][+][+][+][+][+][+][+][+]#",
+        "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+        "#[+][+][+][+][+][+][+][+][+][+][+][+]d+][+][+][+][+][+][+][+][+][+]#",
+        "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+        "1,,,,,,,,,,,,,,,,,,,,,@,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,a,,,,,,,,,#",
+        "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+        "#[+][+][+][+][+][+][+][+][+][+][+][+][+][+][+][+][+][+][+][+][+][+]#",
+        "#,,,,,,,,,,,,,,,,,,p,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+        "####################################################################"
+      ],
+      "writing": [
+        [4, 11, "PROVISIONAL STATUS IS A PRIVILEGE. PLEASE RENEW BY THE 14TH."]
+      ],
+      "labels": [
+        {
+          "text": "THE LOWER STACKS",
+          "at": [26, 7]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "line",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "d": {
+          "name": "A door like the others",
+          "look": "It's identical to every other door on this level. Its name plate's in the new script, and under that, if you look at it in the right light, the old Concord name's still there, scraped off with great care.",
+          "use": "I knock at the door, and I ask for the name that's under the name plate."
+        },
+        "a": {
+          "name": "Children singing",
+          "look": "A row of very clean children in a very clean yard, with a very patient teacher, and they've got every word of it right. One small girl looks round at you and keeps singing. Her accent's from Aurelis.",
+          "use": "I stop to listen to the children, and I smile at the small girl."
+        },
+        "p": {
+          "name": "A blank renewal form",
+          "item": "forged_papers",
+          "look": "Someone's left it under a door, half-filled in. There's a neighbor's stamp on it already, and it isn't the neighbor's handwriting. Round here, that's about the bravest thing you could possibly do.",
+          "use": "I pick up the half-filled form, and I ask the neighbor about it."
+        }
+      }
+    },
+    "line": {
+      "name": "The Evening Line",
+      "aliases": [
+        "evening line",
+        "the tram",
+        "the trams",
+        "tram network",
+        "the freight line",
+        "the tram network"
+      ],
+      "desc": "The tram network, which is flawless. It runs to the second. One freight route with painted windows runs after the last chime, and it isn't on any map.",
+      "floor": "_=",
+      "colors": {
+        "floor": "#383c50",
+        "walls": "#7c84a8",
+        "scenery": "#b0b8f0",
+        "writing": "#f0f2ff"
+      },
+      "plan": [
+        "###################################1#####################################",
+        "#_______________________________________________________________________#",
+        "#______________[======]c__________________________[======]______________#",
+        "#_______________________________________________________________________#",
+        "#=======================================================================#",
+        "#=======================================================================#",
+        "#____________[#|#|#|#|#|#|#]t_____________[#|#|#|#|#|#|#]_______________#",
+        "#_______________________________________________________________________#",
+        "2_____________________@_________________________________________________#",
+        "#_______________________________________________________________________#",
+        "#____________[%%%%%%%%%%%%%%%]f_________________________________________#",
+        "#=======================================================================#",
+        "#=======================================================================#",
+        "#_______________________________________________________________________3",
+        "#########################################################################"
+      ],
+      "writing": [
+        [54, 0, "LAST CHIME 2300"]
+      ],
+      "labels": [
+        {
+          "text": "THE EVENING LINE",
+          "at": [40, 8]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "mile",
+          "via": "2"
+        },
+        "2": {
+          "to": "stacks",
+          "via": "1"
+        },
+        "3": {
+          "to": "yards",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "c": {
+          "name": "The timetable",
+          "look": "Every tram, every stop, to the second, on a white enamel board, and it's correct. You've checked your watch against it. Your watch was wrong. There's a space at the bottom of the board, after the last chime, where nothing's printed.",
+          "use": "I read the timetable, and I ask what runs after the last chime."
+        },
+        "t": {
+          "name": "A spotless tram",
+          "look": "It's arrived exactly when it said it would. Everyone's seated, and everyone's stepped aside for you with a small smile. There's a seat kept empty beside the door. It's yours, and they all know it.",
+          "use": "I get on the tram and take the empty seat."
+        },
+        "f": {
+          "name": "A car with painted windows",
+          "look": "It's an ordinary freight car on a siding, with the windows painted over from the inside, in the same pale grey as everything else here. There's a small scratch in the paint, at about the height of a child's eye.",
+          "use": "I stay past the last chime, near the car with the painted windows."
+        }
+      }
+    },
+    "yards": {
+      "name": "The Outer Yards",
+      "aliases": [
+        "outer yards",
+        "the yards",
+        "the docks",
+        "the fleet",
+        "the marshalling yards",
+        "orbital docks"
+      ],
+      "desc": "Orbital docks and marshalling yards, where the Hegemony's fleet lies in beautiful rows. Plain unmarked transports keep to a bay of their own.",
+      "floor": ":",
+      "colors": {
+        "floor": "#313c58",
+        "walls": "#5c6c94",
+        "scenery": "#90a8e0",
+        "writing": "#e0ecff"
+      },
+      "plan": [
+        " *       .        *         .          *         .        *       .       *   ",
+        "  <====>  <====>  <====>  <====>  <====>  <====>  <====>  <====>  <====>      ",
+        "  <====>  <====>  <====>  <====>  <====>  <====>  <====>  <====>  <====>      ",
+        "#########################################s##################################  ",
+        "1:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::# ",
+        "#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::# ",
+        "#::::::@::::::::::::::::::::::::::::::::::::::::J:::::::::::::::::::::::::::# ",
+        "#::::::::::[==]d::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::# ",
+        "#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::# ",
+        "###############################u##############################################",
+        "    |                |                |              |                |       ",
+        "    |                |                |              |                |       "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE OUTER YARDS",
+          "at": [30, 5]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "line",
+          "via": "3"
+        }
+      },
+      "people": {
+        "J": {
+          "id": "jaska",
+          "label": "Moor",
+          "asks": [
+            "What are you looking for this time, Inspector?",
+            "Is there anything wrong with my papers?"
+          ]
+        }
+      },
+      "things": {
+        "s": {
+          "name": "The fleet in rows",
+          "look": "Eighty warships, perfectly spaced, each with a clean hull and a number. They've all been painted this year. You can't help counting them. You're meant to.",
+          "use": "I stand at the viewport and I count the Hegemony's warships."
+        },
+        "u": {
+          "name": "The unmarked bay",
+          "look": "A bay with no number, down a short ramp, and three plain transports in it. There's nothing wrong with them. There's a sign saying this area's closed for cleaning, and the sign's been cleaned.",
+          "use": "I wander down toward the unmarked bay, and I see who stops me."
+        },
+        "d": {
+          "name": "A chip on a customs desk",
+          "item": "data_chip",
+          "look": "An inspector's terminal, unattended for exactly as long as it takes to notice it, with a data chip in the slot. It's unlabeled, and that's the first unlabeled thing you've seen on this planet. You don't like that.",
+          "use": "I look at the chip on the customs desk, and I look around for who left it."
+        }
+      }
+    },
+    "palace": {
+      "name": "The Regency Palace",
+      "aliases": [
+        "regency palace",
+        "the palace",
+        "palace",
+        "the regent's court",
+        "the audience chamber"
+      ],
+      "desc": "White halls, and a smell of lemon polish, and a long walk toward somebody who's offered safety to everyone.",
+      "floor": "'",
+      "colors": {
+        "floor": "#585c60",
+        "walls": "#c0c4c8",
+        "scenery": "#f4f4ec",
+        "writing": "#ffffff"
+      },
+      "plan": [
+        "             ###########################################             ",
+        "   #####'''''''''''''''''''''''''''''''''''''''''''''''''''''#####   ",
+        "  ###'''''||'''''||'''''||'''''||'''''||'''''||'''''||'''''||'''###  ",
+        "##'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''##",
+        "1''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''##",
+        "##'''''''''''''''''''''@''''''''''''''''''''''''''''''R''''''''''''##",
+        "##'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''##",
+        "##'''''''''''''''''''w'''''''''''''''''''''''''''''''''''''''''''''##",
+        "  ###'''''||'''''||'''''||'''''||'''''||'''''||'''''||'''''||g''###  ",
+        "   #####'''''''''''''''''''''''''''''''''''''''''''''''''''''#####   ",
+        "             ###########################################             "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE REGENCY PALACE",
+          "at": [24, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "mile",
+          "via": "3"
+        }
+      },
+      "people": {
+        "R": {
+          "id": "regent",
+          "label": "The Regent",
+          "asks": [
+            "What are you offering, exactly?",
+            "And what do you ask for it?"
+          ],
+          "side": "left"
+        }
+      },
+      "things": {
+        "w": {
+          "name": "A window with no view",
+          "look": "It looks like a window. It shows a perfect white city under a perfect sky. It's a very good screen. You can't see any part of the real city from anywhere in the Palace, and you start to wonder when anyone last did.",
+          "use": "I look out of the window that isn't one, and I ask who chose the view."
+        },
+        "g": {
+          "name": "A little garden",
+          "look": "One small square of real earth in a white stone tray, in a white hall, with a single flower in it. Every visitor gets shown this, and it's very moving. It's been replaced every morning, for sixty years.",
+          "use": "I stop at the little garden and I ask who replaces the flower."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Tourist map",
+    "plan": [
+      "*        <===> <===> <===> <===>          .           ***",
+      ".  '''''''''''''''''''''''''''''''''''''''''''''''''''  .",
+      "---------------------------------------------------------",
+      "|\"\"\"\"\"\"\"\"\"|:::::::::::::::::::::::::::::::::::::::::::::|",
+      "|\"\"\"\"\"\"\"\"\"|:::::::::::::::::::::::::::::::::::::::::::::|",
+      "|\"\"\"\"\"\"\"\"\"|:::::::::::::::::::::::::::::::::::::::::::::|",
+      "---------------------------------------------------------",
+      "|,,,,,,,,,,,,,,,,,,,,,,,,,|;;;;;;;;;;;;;;;;;;;;;;;;;;;;;|",
+      "|,,,,,,,,,,,,,,,,,,,,,,,,,|;;;;;;;;;;;;;;;;;;;;;;;;;;;;;|",
+      "---------------------------------------------------------",
+      "_________________________________________________________",
+      "_________________________________________________________"
+    ],
+    "floors": {
+      "'": "yards",
+      "\"": "palace",
+      ":": "mile",
+      ",": "steps",
+      ";": "line",
+      "_": "stacks"
+    },
+    "rooms": [
+      {
+        "level": "yards",
+        "at": [18, 1],
+        "text": "THE OUTER YARDS"
+      },
+      {
+        "level": "palace",
+        "at": [2, 4],
+        "text": "PALACE"
+      },
+      {
+        "level": "mile",
+        "at": [22, 4],
+        "text": "THE SERENE MILE"
+      },
+      {
+        "level": "steps",
+        "at": [5, 8],
+        "text": "THE MINISTRY STEPS"
+      },
+      {
+        "level": "line",
+        "at": [32, 8],
+        "text": "THE EVENING LINE"
+      },
+      {
+        "level": "stacks",
+        "at": [20, 10],
+        "text": "THE LOWER STACKS"
+      }
+    ]
+  }
+}

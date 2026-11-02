@@ -1,0 +1,359 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "The Graveyard",
+  "start": "barge",
+  "levels": {
+    "barge": {
+      "name": "The Factor's Barge",
+      "aliases": [
+        "factor's barge",
+        "the barge",
+        "guild office",
+        "the guild office",
+        "the bar",
+        "the guild barge"
+      ],
+      "desc": "A converted ore barge that serves as the Guild's office, bank and only bar. The claims register is written by hand in ink, because ink can't be hacked.",
+      "floor": ":",
+      "colors": {
+        "floor": "#473a2e",
+        "walls": "#8e7656",
+        "scenery": "#e0a860",
+        "writing": "#ffe4b4"
+      },
+      "plan": [
+        "###########################################################################",
+        "#:::::::::::::::::::::::::::|:::::::::::::::::::::::::|:::::::::::::::::::#",
+        "#::[================]r::::::|::::[=====]::[=====]:::::|::!!!!!!!!!!!!:::::#",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::[==========]b::::#",
+        "#:::::::E:::::::::::::::::::|:::::::::::::::::::::::::|:::::::::::::::::::#",
+        "#:::::::::::::::::::::::::::|:::::::::::::::::::::::::|:::::::::::::::::::#",
+        "#--------------+------------'------------+------------'---------+---------#",
+        "1:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#:::::::@:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#:::::::::::::::::::::::::::::::::::::p:::::::::::[][]d:::::::::::::::::::#",
+        "#########################################2#################################"
+      ],
+      "writing": [
+        [4, 0, "EVERYTHING OUT HERE BELONGS TO SOMEONE"]
+      ],
+      "labels": [
+        {
+          "text": "THE FACTOR'S BARGE",
+          "at": [24, 8]
+        },
+        {
+          "text": "REGISTER",
+          "at": [3, 1]
+        },
+        {
+          "text": "BANK",
+          "at": [37, 1]
+        },
+        {
+          "text": "BAR",
+          "at": [58, 1]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "claims",
+          "via": "1"
+        },
+        "2": {
+          "to": "court",
+          "via": "1"
+        }
+      },
+      "people": {
+        "E": {
+          "id": "elsbeth",
+          "label": "Crane",
+          "asks": [
+            "What's open to claim right now, Factor?",
+            "What would you want for a salvage license?"
+          ]
+        }
+      },
+      "things": {
+        "r": {
+          "name": "The claims register",
+          "look": "A ledger as big as a door, in careful ink. Every wreck, every owner, every dive. Her contracts have never been broken, they say. Only outlived.",
+          "use": "I ask the Factor if I can read through the register."
+        },
+        "b": {
+          "name": "The only bar",
+          "look": "Stale coffee, burnt insulation and the sweet reek of suit liners. There's a shelf of bottles with divers' names on them. A lot of them have stopped getting any emptier.",
+          "use": "I buy a drink for whoever's got a bottle with their own name on it."
+        },
+        "p": {
+          "name": "A rack of hull patches",
+          "item": "emergency_patch",
+          "look": "Sold at Guild rates, with a discount for anyone who brings one back empty. Nobody's ever brought one back.",
+          "use": "I buy a hull patch at the Guild rate."
+        },
+        "d": {
+          "name": "A chip in a salvage crate",
+          "item": "data_chip",
+          "look": "A crate of odds and ends from a dive, waiting to be valued. On the top is a data chip with a charred edge, still tagged with the name of the wreck.",
+          "use": "I ask what the data chip in the salvage crate would cost me."
+        }
+      }
+    },
+    "claims": {
+      "name": "Claim Row",
+      "aliases": [
+        "the row",
+        "the claims",
+        "the big wrecks",
+        "the wrecks"
+      ],
+      "desc": "A long curving lane of big wrecks tagged with orange buoys, each one with a named owner and a dive schedule. Touching another diver's claim is theft, and the Guild will take you to court.",
+      "floor": "_",
+      "colors": {
+        "floor": "#373c47",
+        "walls": "#646c7c",
+        "scenery": "#ff9840",
+        "writing": "#ffe0b0"
+      },
+      "plan": [
+        "*            .                *             .             *            .   ",
+        "   %%%%%%%%%%%%*      %%%%%%%%%%%*       %%%%%%%%%%%%%*     %%%%%%%%%*     ",
+        " %%%%%%%%%%%%%%%%%  %%%%%%%%%%%%%%%%   %%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%   ",
+        "___________________________________________________________________________",
+        "1_______________________@_____________R_________________________________w__",
+        "___________________________________________________________________________",
+        "___________________________________________________________________________",
+        " %%%%%%%%%%%%%%%%%___%%%%%%%%%r%%%% b  %%%%%%%%%%%%%%%___%%%%%%%%%%%%%%%   ",
+        "    %%%%%%%%%%*  ____   %%%%%%%*         %%%%%%%%%%*  ____   %%%%%%%*      ",
+        "_______________________________________________________________________    ",
+        "_________m_____________________________________________________________2   ",
+        "_______________________________________________________________________    "
+      ],
+      "writing": [
+        [3, 9, "ORANGE MEANS SOMEBODY'S. ASK BEFORE YOU TOUCH."]
+      ],
+      "labels": [
+        {
+          "text": "CLAIM ROW",
+          "at": [56, 5]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "barge",
+          "via": "1"
+        },
+        "2": {
+          "to": "silence",
+          "via": "1"
+        }
+      },
+      "people": {
+        "R": {
+          "id": "rusk",
+          "label": "Rusk",
+          "asks": [
+            "What's on that map of yours?",
+            "What happened to your partners?"
+          ]
+        }
+      },
+      "things": {
+        "w": {
+          "name": "A dreadnought's bow",
+          "look": "A kilometer of broken ship, with a claim buoy blinking on it like a harbor light. The dive schedule's wired to the hull. It's booked solid for six years, by people who've stopped coming back.",
+          "use": "I check the dive schedule on the dreadnought's bow."
+        },
+        "b": {
+          "name": "An orange claim buoy",
+          "look": "Blinking away, with a name and a number. Inside its little cage there's a hand-written note, and the note says DON'T.",
+          "use": "I read the note in the claim buoy's cage."
+        },
+        "r": {
+          "name": "A rifle in a marine's locker",
+          "item": "service_rifle",
+          "look": "A burst locker on the side of a wreck, and a service rifle still clipped into it. There's an orange tag on the locker. It's somebody's, and they haven't been by in a while.",
+          "use": "I look up who owns this claim, so I can ask about the rifle in the locker."
+        },
+        "m": {
+          "name": "A suit of marine plate",
+          "item": "marine_plate",
+          "look": "An empty suit of marine armor, drifting on a line behind a salvage skiff. The seller says it's been cleaned. The seller doesn't quite meet your eye.",
+          "use": "I ask the salvager what they'd want for the marine plate, and who was in it."
+        }
+      }
+    },
+    "court": {
+      "name": "The Court of Hulls",
+      "aliases": [
+        "court of hulls",
+        "the court",
+        "the tribunal",
+        "guild tribunal",
+        "the dead dreadnought"
+      ],
+      "desc": "The Guild's tribunal meets on the gutted bridge of a dead dreadnought, under a hole you can see stars through. Arbiters wear full suits, and verdicts are final.",
+      "floor": ",",
+      "colors": {
+        "floor": "#3b3b49",
+        "walls": "#70708c",
+        "scenery": "#b0b0e0",
+        "writing": "#eceaff"
+      },
+      "plan": [
+        "           ##############*  .  *  . *###########            ",
+        "   #########,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#########    ",
+        "  #####,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#####  ",
+        "###,,,,,,,,,[=============================]a,,,,,,,,,,,,,###",
+        "##,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,##",
+        "##,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,##",
+        "##,,,,(),,,,(),,,,(),,,,,,,,,,,,,,,,,,,(),,,,(),,,,(),,,,,##",
+        "##,,,,,,,,,,,,,,,@,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,##",
+        "###,,,,,,,,,,,,,,,,,,,,,,,,,,g,,,,,,,,,,,,,,,,,,,,,,,,,,,###",
+        "#####,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,c,,,,,,,#####",
+        "      ################1##############################       "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE COURT OF HULLS",
+          "at": [20, 2]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "barge",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "a": {
+          "name": "The arbiters' bench",
+          "look": "A row of seats from the old command crew, bolted down facing you. When the Court sits, they sit there in full sealed suits, with the visors down, and you never learn who they are.",
+          "use": "I stand before the arbiters' bench and ask how a claim gets heard."
+        },
+        "g": {
+          "name": "An old medal in the deck plate",
+          "item": "old_concord_medal",
+          "look": "An old Concord medal, welded to the deck where the dreadnought's captain stood. Divers touch it on the way past. It's supposed to be good luck. It's a salvage claim nobody's been brave enough to file.",
+          "use": "I kneel down and work the medal loose from the deck plate."
+        },
+        "c": {
+          "name": "A cracked recognition panel",
+          "item": "remnant_codes",
+          "look": "The ship's old recognition panel, hanging by its cables. It still holds a set of codes. The Court has had a case about them on the docket for nine years.",
+          "use": "I ask a clerk of the Court about the codes in the panel."
+        }
+      }
+    },
+    "silence": {
+      "name": "The Long Silence",
+      "aliases": [
+        "long silence",
+        "the silence",
+        "the heart of the field",
+        "the tangle"
+      ],
+      "desc": "The heart of the field, where the fighting was worst and the wrecks are too tangled to tag. Nobody's claim is any good here, and nobody's transponder works properly.",
+      "floor": "'",
+      "colors": {
+        "floor": "#353c4b",
+        "walls": "#5f697b",
+        "scenery": "#8090a8",
+        "writing": "#c8d4e8"
+      },
+      "plan": [
+        "//\\\\//%%%%\\\\//\\\\%%%%%//\\\\//\\\\%%%%//\\\\%%%%%%//\\\\//%%%//\\\\//%%%%//\\\\//\\\\    ",
+        "\\\\//''''''''''%%%%''''''''''''''''''%%%%''''''''''''''''''''%%%%//\\\\%%%   ",
+        "%%%''''@'''''''''''''''''''%%%%''''''''''''''''''''%%%%''''''''''''''//\\\\ ",
+        "\\\\//''''''''%%%%%%%''''''''%%%%%%''''''''''''%%%%%%%%%%%%''''''''''''\\\\// ",
+        "%%%''''''''''%%%%%%%''''''''''%%%%''''''''''''''''%%%%%%%%''''''''''''%%% ",
+        "//\\\\%%%''''''''''''''''''''''''''''''''''%%%%''''''''''''''''''''t'''//\\\\ ",
+        "\\\\//%%%%%%%''''''''''''''''''''''''''''''%%%%%%''''''''''''''''''''%%%%%  ",
+        "%%%%%''''''''''''''%%%%%%%%%%''''''''''''''''''''%%%%%''''''''''''''''//\\\\",
+        "1''''''''''''''''''''''''%%%%%%%%%%''''''''b'''''''''%%%%%%%''''''''''\\\\//",
+        "%%%%%''''''''''''''''''''''''''''''''''''''''''''''''''''''''''c'''%%%%%% ",
+        "//\\\\//%%%%\\\\//\\\\%%%%%//\\\\//\\\\%%%%//\\\\%%%%%%//\\\\//%%%//\\\\//%%%%//\\\\//\\\\    "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE LONG SILENCE",
+          "at": [28, 2]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "claims",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "t": {
+          "name": "A dead transponder",
+          "look": "Your suit's transponder goes quiet out here, and so has this one, clipped to a dead diver's belt. It hasn't stopped trying. It's sending a claim for a wreck that isn't there any more.",
+          "use": "I check the dead diver's transponder, and see what it's claiming."
+        },
+        "b": {
+          "name": "A shard in the wreckage",
+          "item": "beacon_shard",
+          "look": "A piece of something pale that doesn't belong to any ship, embedded in a bulkhead. Your teeth ache a little when you get close to it, and your compass is pointing at it.",
+          "use": "I cut out the pale shard from the bulkhead."
+        },
+        "c": {
+          "name": "Silver in the tangle",
+          "item": "choir_core",
+          "look": "A knot of silver machinery wrapped through a wreck's ribs, like roots through a fence. It isn't moving. You're almost sure about that. At its middle there's a core about the size of your fist.",
+          "use": "I climb in through the wreck's ribs and try to reach the silver core."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Salvage chart",
+    "plan": [
+      "*   .   *   .   *   .   *   .   *   .   *   .   *   .   **",
+      ".  .----------------------.   ,,,,,,,,,,,,,,,,,,,,,,,,,, .",
+      "*  |::::::::::::::::::::::|   ,,,,,,,,,,,,,,,,,,,,,,,,,, *",
+      ".  '----------------------'   ,,,,,,,,,,,,,,,,,,,,,,,,,, .",
+      "*     *     *     .     *     *      *     .     *     * .",
+      ".  ;;;;;;;;;;;;;;;;;;;;;;;;;   ''''''''''''''''''''''''' *",
+      "*  ;;;;;;;;;;;;;;;;;;;;;;;;;   ''''''''''''''''''''''''' .",
+      ".  ;;;;;;;;;;;;;;;;;;;;;;;;;   ''''''''''''''''''''''''' *",
+      "*   .   *   .   *   .   *   .   *   .   *   .   *   .   **"
+    ],
+    "floors": {
+      ":": "barge",
+      ",": "claims",
+      ";": "court",
+      "'": "silence"
+    },
+    "rooms": [
+      {
+        "level": "barge",
+        "at": [6, 2],
+        "text": "THE FACTOR'S BARGE"
+      },
+      {
+        "level": "claims",
+        "at": [37, 2],
+        "text": "CLAIM ROW"
+      },
+      {
+        "level": "court",
+        "at": [7, 6],
+        "text": "COURT OF HULLS"
+      },
+      {
+        "level": "silence",
+        "at": [35, 6],
+        "text": "THE LONG SILENCE"
+      }
+    ]
+  }
+}

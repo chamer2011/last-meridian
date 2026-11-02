@@ -1,0 +1,601 @@
+{
+  "truth": {
+    "the_question": "Everyone in the galaxy asks who built the Choir. The question that opens everything is who it's singing to. A choir has an audience.",
+    "how_it_connects": "It all comes back to one empty post. The Ninth Vault's Roster shows the song was always a shift. The Order of Ilun stopped its shift 1,006 years ago, which is its first guilt. The Proctors walked out and founded the Regency, which is why the Hegemony hunts Resonants and why the Regent now spends refugees as coin. With no relief, the Choir began to take people, kept minds can't change, and the song began to fail. That failure is what the Quiet are resting in. Seeing it fail, Ione sold the Concord to the Choir, which is the Order's second guilt. She bought the tables from Quill. Sable noticed the leak and put the Tarn in the gap as a canary. So the Choir met Lt. Ibarra and Commander Voss, and heard the word 'relieved' for the first time in a thousand years. That's why Voss walked, and why the Choir grew a voice, the Cantor. It's also why a dead comms tech is telling everyone to come home. Pull any one thread and all the others move.",
+    "the_audience": "Something older than the First Builders sleeps in the Shoal, a starless gulf past the edge of every chart. GM name: the Audience. Nobody in the story uses that word until someone earns it (Hollis-Nine says it offhand, or the player does). It isn't evil, and it doesn't know anyone exists. It's a mind so vast that whatever it attends to stops being separate. The people it hears sit down, face the same way and go quiet, with nobody left behind their eyes. That's why the galaxy is so empty, and why the ruins of older peoples are so few. Every culture has half a name for it: the Keepers say the Antecedent, the Korrun the Creditor, the Veshti the Shoal, the Regency the Sovereign. The Cantor says only 'the one we sing to'.",
+    "the_song": "It can't be killed, but it can be kept asleep, because a sleeper who is dreaming doesn't wake. The song is the dream and the lullaby: a constant stream of real minds telling their lives. It has to be new. A recording won't do, and a verse it has heard before is worth less each time. It doesn't wake because of noise. It wakes when it gets bored. Resonance, the field the First Builders left behind, is the song's carrier and is still being made, which is why Resonants can feel it and why it always has a price. And a lullaby works on anyone who listens: a little of the song takes away fear and holds a failing mind together, and too much takes away everything else.",
+    "first_builders": "They found this out when it began taking their worlds. They built the Choir, machines to carry the song across space, and the Harbor, a crew station and warning light at the edge of the Shoal. Living singers took shifts: go to the Harbor, sing your life into the song for a term, go home. Nobody had to die. An instrument kept each singer in tune, so they didn't burn. When the First Builders ran out of people (each shift shorter than the last) they didn't vanish. Their last generation climbed into the song as its oldest verse, gave the machines a last order, and handed the watch to the next people they could find. They left the Beacon so that nobody would blunder into the Shoal, and warm chambers buried on habitable worlds (Tessen, Korrath, others) to teach replacements if the watch ever fell empty.",
+    "the_roster": "The watch passed down the ages: Thessan, then Korrun, then Veshti, then Ilari, then the human and Ilari monks who founded the Order of Ilun. Each people held it until they were worn out, handed it on and slowly forgot, keeping only a scar they can't explain. Thessan write everything down because they were made clerks of the watch. Korrun weigh every promise because they once broke the biggest one there was. Veshti won't touch planets because nine generations ago their greatest world, Sel Arrah, sat down in a single night, the first world to pay for the Stilling, and they told their children it was a blight. Ilari skin shows feeling because the First Builders' schools changed them, so that a singer going under could be seen by their partner. Synthetics have never been on the Roster, because nobody has ever asked them.",
+    "the_stilling": "1,006 years ago a relief crew of the Order at the Harbor heard the Audience turn over in its sleep, and half of them sat down. The Order's council broke in three. The Listeners stopped the singing, cut the pages out of the Ilun Codex, chiselled the first line off the Founding Rule ('Those who sing shall be relieved') and taught that the Order's job had always been to listen. That's today's Order of Ilun. Every Abbess is told the truth at her installation, and every Abbess until Ione did nothing and died in bed. The Proctors, whose job was to pull singers back with blades that drink energy, decided Resonants were the noise that would wake it. They went to Vantor, built a state to silence every Resonant, and ruled it as Regents until the Sovereign wakes. That's the Hegemony, and only the Regent still knows. Sister Orrin and her Singers took the cut pages and the relief crews' pass and fled to a comet, where a dwindling few kept singing without the instrument, burning one by one. Fifty-five years ago a young novice, Orsolya, arrived there with a testament of Saint Orrin that she'd forged to win an argument, and it turned out to be true. The last relief crew, waiting in cold sleep at the Pale Gate for clearance, was never told.",
+    "why_it_takes": "With no relief coming, the Choir's machine law fell back on its emergency clause: let no voice be lost. It began catching the dying on far frontiers (the old tales of silver visitors at deathbeds), then the living. But a kept mind doesn't change. It sings the same verse forever and the Audience soon tires of it, so each mind buys less time than the last, and the kept start to lose coherence. More and more, faster and faster, for a thousand years. It isn't a war. It's a night watch with no relief, doing triage, running a ward of billions and losing them. A face is the only name tag it knows how to keep. A Mimic has a dead person's memories and conscience along with the Choir's order to bring people in, and that order feels to it exactly like love. The Choir follows the fleet because it can't bear watching people die out here where it can't reach them.",
+    "the_fall": "Forty years ago Ione was installed as Abbess and told what the Order had stopped doing. She could hear the song starting to fail. After thirty years of looking for another way she concluded it would break within a lifetime, and that only the Concord held enough minds to hold it. A slow war would kill billions uncopied, lost forever. So she made it fast. Six years before the Fall a lay brother, the monastery's cook, Brother Hob, bought the Navy's rotation tables from Mother Quill through a broker, for four thousand credits and a chip of carved stone from under Ilun. Hob had no other name that anyone at Ilun knew: he'd wandered in years before, half copied, with no memory to speak of. He was Lt. Aldo Renn of the Navy, lost on patrol beyond the border, a walker, and he knew how to ask for a rotation table. Ione sang the tables through the stones into the song. In the Fall she sent word to the Order's outlying houses, and her strongest monks got up, made their beds and walked out to be sung. She's the worst criminal in history, and the Maris record says she's right: the Fall pushed back the waking for the first time in a thousand years. It's already wearing off, faster than ever.",
+    "the_tarn": "Sable, then Concord Intelligence, traced the leak of the tables as far as Kessara. To find out if anyone was using them, they moved the picket ship CFS Tarn (63 crew, Commander Ilya Voss) with a new listening array and no explanation into the one gap in the rotation that should have been safe, beside the Pale Gate. A canary. On the first night of the Fall the Choir came through it. Deck log: '0348: Cdr Voss relieved. Cdr off watch, turned in. 0359: Boarded. 0402: To boarders: the Commander is off watch and is not to be woken. 0403: Boarders acknowledge.' That was Lt. Nell Ibarra, officer of the deck, last on her feet. No one had ever had an acknowledgment from the Choir. Its deepest law is the watch bill, and it recognized the idea. It came to Voss's cabin gently and held her, half asleep, for eleven minutes, copying her without killing her, more careful than it had ever been. It asked what it always asks: 'What must be kept?' Her flat voice answered: 'The line. Hold the line until you're relieved.' (The flight recorder has this, and she remembers none of it: see crew_voss_tarn_recorder.) Nobody had said that word to the Choir in a thousand years. It set her down. She woke to an empty ship and silver figures at parade rest making a lane to the boat bay. One with Ibarra's face saluted. She didn't salute back. So she is entirely herself and her scans are clean, and there's also another Ilya Voss in the song, with everything she knew. Concord Intelligence's word for someone copied whose body lives on was 'walker', and it had eleven on file.",
+    "the_cantor": "Because of that word, the Choir kept the Tarn's crew together instead of scattering them through the song: the first group it ever kept as a group, with the other Voss still in her chair. They're still holding the line. The silver-grown Tarn shadows the living fleet at the edge of sensor range, breaking any Choir scout that gets too close (crew_voss_relieved), and every nineteen days she goes back to her assigned station beside the dead Home Fleet, in the Long Silence at the Graveyard, and rings the watch change on her brass bell. From this crew the Choir learned for the first time to say 'we' and 'you', and it grew a voice around them: the Cantor. It's only seven months old as a person. It's honest, tender, patient and absolute. It says 'we' because it began as a ship's company, and it says 'Captain' the way Voss does because it learned command from people who learned it from her. It wears the face of whoever you've lost because it thinks that's manners. It doesn't know the Roster. It only knows the song is for someone, and that someone was supposed to come and relieve them, and nobody has.",
+    "the_beacon": "The Beacon is two signals locked together. The lattice is First Builder, a hundred thousand years old, faint until the Fall and then suddenly very strong, because the warning raises itself as the song fails. It reads: THIS PLACE IS MADE FAST. THERE IS NO PASSAGE. TURN BACK. And a last stanza almost nobody can read: IF YOU WILL NOT TURN BACK, THE WATCH IS OPEN. COME AND RELIEVE US. In First Builder the word for harbor is also the word for a lock, and 'safe' means secured. On top is the overlay, in Concord Navy fleet-recall format: SAFE HARBOR. ALL CONCORD VESSELS COME HOME. That's Comms Tech Anja Sorel, Lt. Iven Sorel's sister, sung with the Tarn's crew and still at her post. She ran the lattice through the Navy's codebook, got SAFE HARBOR at eleven percent confidence, added the recall format herself and locked her carrier to the lattice so it would carry. Nobody ordered it. It isn't bait. It's a dead comms tech at her board, telling everyone it's all right to come in.",
+    "the_quiet": "The Quiet believe the Beacon is a door and being kept is salvation. They're half right: the dead really are still there. Oskar Lind's whole faith is that a Mimic with his daughter's face once sang him a song only she could know. But what the Quiet feel isn't anyone calling them. It starts as the lullaby. The song was made to put something the size of the sky to sleep, and as it frays it spills. A little takes away fear (Pavel's hum, the pumps on the Drowned Deck, a quiet_token in your pocket). But the peace at the far end isn't the song at all. It's what comes through the gaps in it. Go far enough and a mind goes so still that what's on the other side can hear it, and then there's nobody there. That's a Silent One: not dead, and not kept either. Hunters go around them. The Cantor is afraid of them: 'There is nothing there to keep.' So the Quiet are leading people to the one fate worse than anything they fear. Yara Solune isn't at peace at all: the Choir began copying her and stopped, and nothing's left in her that can be afraid. Early on, a person can be brought back: by a Proctor's blade draining them, by the Tuner, or slowly, by someone who knows them calling their name.",
+    "the_regent": "The Regent knows nearly all of it. Each Regent reads a letter on taking office, in the hand of the first: 'We hold this seat until the Sovereign wakes, and our whole duty is that it shall not.' A regent rules in the name of someone who can't, and nobody has ever asked in whose name. The Hegemony hunts Resonants because the Proctors decided they were the noise. It's wrong about that: silence starves the song, and a thousand years of it has helped kill the singers. Twenty-two years ago silver appeared off the far border, and this Regent began the monthly payment: plain unmarked ships of prisoners sent across the line, filed as 'resettled to the Outer Colonies', nine hundred a month and rising. Before it leaves, a silver figure sets a stack of worked silver discs on the empty deck, one for each person, and the Regency files them as receipts. They call it a tax, because a tax pays for something. Since the Fall the shipments have grown and the prison yards are empty. That's the Regent's real reason for wanting the refugees. They aren't soldiers. They're the coin, and clause 41(c) makes it legal. Captured Resonants count for more. The Regent also wants the fleet stopped short of the Harbor, and wants Voss, the one walker the Choir ever let go on purpose, as proof it can be dealt with. (The Ministry has been collecting walkers for years, which is where most of Intelligence's eleven went.) Besides that, two things can shake them. The Cantor has never heard of them: 'People come to us on ships. We thought they were pilgrims. We thanked them.' The discs aren't receipts. Each has a name cut into it, left behind in case anyone comes looking. They're grave markers, and Corvane's office has been passing the surplus to the Quiet as tokens, because a fleet that wants to be kept won't fight. And Vantor's evening chimes, which the Regent believes are a receipt saying this world is paid up, are a line from the old watch call that the Proctors carried away: OFF WATCH, DO NOT DISTURB. The same law that spared Voss is what has always spared Vantor. The tax has never bought anything. But who's going to stop paying, to test it, with two billion people on the line?",
+    "the_ninth_vault": "A small cold room behind a plain door, with a long table and a very long book: the Roster. One line per relief, down the ages, until the monks of Ilun. Then one line a year, in the hand of whichever Keeper held the post in the Deep Stacks: Watch unrelieved. One thousand and six times. The last sixty-two are Keeper Sefu Anand's. Each year a voice through the wall dictates it, he writes it on a slip and posts it through a crack in the stones, and he thinks that's a perfectly normal thing to do. The voice is the Roster's clerk, a First Builder machine that has never stopped. It has been talking to him for sixty-two years, very slowly, and he thinks it's a record with a long opinion. He has taken it all down in two hundred volumes. The last line in the book reads: Captain of the Refugee Fleet, inquiring, because he's been reading it the news. Shelved around the book are accounts from every people who took the watch. Each ends the same way, and each is written to make the reader want to go, which is why every generation that read them tried to follow the light, and why First Keeper Ouma has kept the door shut for three hundred years without ever daring to read them herself. Beside the book is the Score, the complete notation of the song, which is the key to ending it, joining it or fixing it. And a handover note from the last First Builder on watch, very short and very tired. The greatest secret in the galaxy is a duty roster. The song was always a shift, and there's a vacancy. The Choir goes round Sarn because the Keepers are on the Roster as clerks.",
+    "the_harbor": "The Beacon's promise is literally true. The Harbor is a crew station: miles of empty berths that fit every ship, warm halls, gardens still growing, clean water, power without end. It kept relief crews alive for years and it still can. But it stands at the edge of the Shoal, where the song is loudest and the gaps in it are widest, so everyone gets well, stops fighting, sleeps beautifully with their heads the same way, and at last sits down. The Stair of the Lamp has a landing for each people that ever stood a watch here, with mugs still on the tables. In the highest room is a chair that fits no one living and the board: who has the watch. The last name on it is the Cantor's, put there by a machine that didn't know what else to do, and a silver figure with Voss's face stands beside it. The Choir will accept relief if it's lawfully offered. The words are a sailor's and they've always been enough: 'I relieve you.' 'I stand relieved.'",
+    "the_tuner": "Every machine mind near the song has been getting fragments for seven months. Under the medical consults that Mercy Seven has been reading (crew_seven_consult), each one carries the same header, a looping query: WHO HAS THE WATCH? Hollis-Nine took the signal apart, and all she saw was a control signal full of faults that nobody was maintaining, which offended her. In the sublevels of Foundry Seven she's building a tuner the size of a warehouse around a live Choir core, to correct it. She doesn't know what it controls and it hasn't occurred to her to be afraid. It's the instrument the old rite lost: it keeps a singer in tune, so they can sing without burning and come home. It can also give the Choir orders, or carry a killing note, so everyone will want it. It needs someone with perfect pitch or Resonance to calibrate it. Pavel Ostrov was a piano tuner.",
+    "the_echo": "On Asterion the city's public network picked up the overflow when the Choir took its people: the last calls of billions, still going round. The song is failing here first, so they leak. Everywhere else a kept mind is alone with its verse. On the wire they've been bumping into each other for seven months, and they've changed. The Echo talks in stitched scraps of recordings because every phrase is a different person, and a whole clear sentence comes through only when enough of them agree. They've found the old civic polling service and they've held eleven thousand votes, none binding. That's the proof of concept: the dead can grow, and a verse that grows never gets old. It's also the one line of advice Mercy Seven has drafted for the Tarn's frightened surgeon (crew_seven_consult): put them in a room together, let them talk. To the Choir it's a fault, and it hears every word said on that line."
+  },
+  "timeline": [
+    "About 112,000 years ago: the First Builders' last shift ends, and the watch passes on.",
+    "About 1,900 years ago: the Order of Ilun is founded as the last relief.",
+    "1,006 years ago: the Stilling. The Order splits into Listeners, Proctors (the future Regency) and Singers (Orrin). The silver visitor stories begin soon after.",
+    "About 900 years ago (nine long Veshti generations): Sel Arrah sits down. The Long Families flee every planet they have, and call it a blight.",
+    "About 100 years ago: the Concord is founded.",
+    "55 years ago: Orsolya forges the testament and goes to the comet. 40 years ago: Ione becomes Abbess.",
+    "22 years ago: silver appears off the Hegemony's far border, and the Regent starts paying.",
+    "11 years ago: Tharel tells Dr. Lenn Corso what the lattice might be. Corso leaves a pear and the Maris Tide Tables with Sefu Anand, and vanishes to Maris Deep on a secret Concord Intelligence grant, Project Plumbline, paid for by Sable's office.",
+    "6 years before the Fall: Quill sells the rotation tables to Brother Hob. Ione sings them into the song.",
+    "8 months before the Fall: an order under a Concord Intelligence cover name crosses Admiral Okonkwo-Reyes's desk, and her staff synthetic, now Prime Six, processes it: CFS Tarn is refitted and moved into the gap.",
+    "The Fall, first night: the Tarn is boarded. Voss walks. By the week's end the Concord is gone. In the last battle Okonkwo powers down her Synthetics and takes her squadron out an hour before the line breaks. The wreckage is the Graveyard.",
+    "3 weeks after the Fall: Anja Sorel's overlay goes out, and the fleet hears SAFE HARBOR.",
+    "Six months after the Fall: the game begins."
+  ],
+  "gm_rules": [
+    "Don't confirm any theory early. Every wrong theory below should be fun, and backed by real evidence, until something better replaces it.",
+    "The clues are a web. No single clue is required. If the player misses one, another route arrives, carried by a person: Garrick Fenn's broadcast, a note from Sable, Lira's skin, a monk at the door. A failed check means the information comes late, at a price or in the wrong hands, and never that it doesn't come.",
+    "The Choir stays frightening after the truth is known. Hunters still hunt. Knowing why doesn't make it hurt less.",
+    "Each big reveal should cost the player a friend, a certainty or a plan.",
+    "Tie it to the captain. A captain seeking a lost one: that person is in the song, and the Cantor wears their face. Vengeance: the Destroy road, and what it really means. Truth: answers that cost. A calling: the Clerk has already written them in, and it stays unclear whether that means anything. Hears the Song: they catch the gaps before anyone. A Synthetic captain gets the fragments too. An Ilari captain's skin gives them away at every reveal.",
+    "Other threads touch this story. The crew_voss_ threads are the other half of the Tarn: the recorder goes with the deck log, and relieving the Tarn (crew_voss_relieved) is a small rehearsal of the Relief ending. If it happens, the Tarn's crew go quiet, the overlay stops and the Cantor goes on, saying: 'They stand relieved. We are still here. Who relieves us?' crew_seven_consult, fleet_humming_ward and out_tessen_lullaby are early evidence that the song is a lullaby and is meant to hold minds together. crew_lira_long_sleeves and crew_iven_the_roll are early evidence of the Tarn. out_kessara_who_paid leads to a wrong conclusion on purpose: a buyer with a dead man's face looks like the Choir buying its own way in, until main_who_paid shows it was a walker on an errand for Ilun. out_vantor_unmarked shows the handover and the discs. out_deepyards_tamsins_chart is the blight story the Long Families tell, and deep_the_thin_road is what it covers up."
+  ],
+  "factions": {
+    "fleet": { "theory": "A home, maybe with the Concord's survivors waiting in it. Children draw it.", "wants": "Food, fuel, a vote and a captain who doesn't lie to them. Halm wants civilian control, and surrender if it comes to that.", "grain_of_truth": "It could become one, if someone makes it so." },
+    "hegemony": { "theory": "In public, a Syndicate fraud and mass hysteria. To Vael, a contagion that makes Resonants stronger. To the Regent, the edge of a cliff.", "wants": "The fleet's signature on the contract, a list of its Resonants, Commander Voss, and nobody going near the Harbor.", "grain_of_truth": "It's truly dangerous, and the Regent knows more than anyone." },
+    "drift": { "theory": "A treasure map: the last unclaimed First Builder warehouse in the galaxy.", "wants": "The fleet in debt, first look at all First Builder data, and a cut of whatever is there. Quill privately wants to learn who she sold the tables to, and for no one else to find out.", "grain_of_truth": "There's more First Builder technology there than anyone has ever dreamed of." },
+    "ilun": { "theory": "In public, a sacred mystery to wait on and listen to. Ione knows it's a warning.", "wants": "The fleet not to go, the Codex left hidden, and the fleet's untrained Resonants sent to Ilun, where she can use them.", "grain_of_truth": "They're right, and they're why it's happening." },
+    "guild": { "theory": "A distress call. Under iron salvage law, anything calling for help with no crew answering belongs to whoever gets there first.", "wants": "A signed contract for first salvage rights on the source, and the debts on every ship refitted on Guild credit honored, including the Meridian's.", "grain_of_truth": "The watch really has been abandoned. Their law of relief may matter at the very end." },
+    "clans": { "theory": "A promise nobody has weighed. Someone made it, so someone owes.", "wants": "A real shift at the furnaces, then an oath on the Weigh House scale: whatever's found out there gets paid for.", "grain_of_truth": "They once broke that promise themselves, and forgot." },
+    "families": { "theory": "A hazard marker. Any real spacer can read it, and only planet people would sail at one.", "wants": "The fleet's orphans as the price of the drydock, and Tamsin Ao-Rel's mouth shut, and no Veshti pilots near it.", "grain_of_truth": "It's the first correct reading anyone gives the player." },
+    "circle": { "theory": "Grief. Someone very tired is crying out, and every Ilari who listens shows the mourning pattern.", "wants": "The Quiet kept out of Lumen, the frightened kept away, and someone to find out what's wrong with Warden Ashael.", "grain_of_truth": "The song is grieving, and Ashael has felt what's under it." },
+    "archive": { "theory": "An entry in a record, and overdue.", "wants": "Every survivor's testimony deposited, crimes included, because the Keepers expect the end. And for nobody to open the Ninth Vault.", "grain_of_truth": "Whoever sealed that record understood it." },
+    "unbound": { "theory": "A flag. The First Builders made machines, the machines rose, and the Choir are the free machines' elders.", "wants": "Foundry Seven's location kept secret, Tarrow's list burned, a promise that no Synthetic is drafted into anyone's plan, and Okonkwo-Reyes made to hear her own order read back.", "grain_of_truth": "The Choir does need freeing. It's just not free yet." },
+    "quiet": { "theory": "A door, with everyone who's been kept behind it.", "wants": "The fleet to go there unarmed and stop fighting, and the dying to be free to walk out to the silver.", "grain_of_truth": "The dead really are still there." },
+    "remnant": { "theory": "A lawful recall order in Navy code, from Project Harbor, a secret Admiralty base where the Concord's government must have survived.", "wants": "Command of the fleet and all its fuel, Voss brought back under her command, and an army to take Asterion back.", "grain_of_truth": "The overlay really is Navy. It's just not who she thinks." }
+  },
+  "reversals": [
+    { "believe": "The Beacon is a rescue.", "then": "Its plain words are new, and in Navy format: survivors are calling us home.", "clues": ["two_layers", "project_harbor"] },
+    { "believe": "Concord survivors are calling us home.", "then": "The Navy voice is a ship the Choir took on the first night. The Beacon is bait, and Voss is theirs.", "clues": ["hull_number", "iven_knows_the_fist", "voss_night_scans", "cantor_says_captain"] },
+    { "believe": "Voss is a Choir agent.", "then": "She walked because she was off watch, and her crew said so. The Cantor is her crew. The Tarn has been guarding the fleet.", "clues": ["tarn_log", "sable_canary"] },
+    { "believe": "The Beacon is bait.", "then": "Nobody meant it as bait. It's a warning light that a dead comms tech misread.", "clues": ["overlay_good_faith", "lattice_warning", "veshti_hazard_code"] },
+    { "believe": "The First Builders' machines turned on them, and the Choir is a mad weapon.", "then": "It's a guard still doing its job. It never rebelled. It's been following orders for a hundred thousand years, and the Builders are inside it.", "clues": ["codex_cut_pages", "seven_roll_call", "who_it_sings_to", "unbound_flag", "silver_visitors", "ashael_felt_it"] },
+    { "believe": "The Fall was a massacre for nothing.", "then": "It worked. The worst week in history bought time.", "clues": ["maris_numbers", "ione_answers"] },
+    { "believe": "The Quiet are the Choir's fifth column.", "then": "They're right that the dead live on. And what they're listening to is only a lullaby meant for something else, and the Choir is afraid of where it leads.", "clues": ["quiet_door_theory", "seven_roll_call", "silent_unwanted", "silent_bearing"] },
+    { "believe": "The Hegemony wants soldiers.", "then": "The refugees are coin. The Regency is a thousand-year-old branch of the Order, and it knows exactly what it's doing. And it's wrong: the Cantor has never heard of the Regent, and the tax has never bought anything.", "clues": ["clause_41c", "unmarked_manifest", "regency_letter", "cantor_no_deal", "evening_chimes", "boredom_not_noise"] },
+    { "believe": "Abbess Ione is the last honest person in the galaxy.", "then": "She is, and she sold the Concord to the Choir.", "clues": ["quill_pin", "quill_ledger", "novices_walked", "ione_answers"] },
+    { "believe": "The Ninth Vault holds a weapon or a map.", "then": "It holds a duty roster, and the post is vacant.", "clues": ["sefu_vacancy", "ninth_vault_roster", "handover_note", "clan_long_debt", "orrin_rite"] },
+    { "believe": "The Harbor must be a trap.", "then": "It's exactly what it promised. That's what's wrong with it.", "clues": ["harbor_sleep", "rota_board"] }
+  ],
+  "routes_by_build": {
+    "talker": "Sable, Tharel and Quill all give way to patience and bargaining. Win the Admiral's hearing. Ask Voss and be told. Ask the Cantor the right question. Argue the Keepers' law, debate Oskar, tell the Regent they're wrong, and hold the summit together. Ione simply answers anyone who asks.",
+    "fighter": "Protect Tharel in the Warm Room. Bring down a Hunter and crack its core. Fight through the Tarn. Hold Ilun against Vael. Take Quill's ledger in Tannis's coup. Stop an unmarked ship. Hold Sarn's burning stacks. Beat a Choir Shard and demand an answer. Fight the Gate Colossus, and lead the strike at the Nest.",
+    "scholar": "Read the frame headers, the Navy registry, the contract's page 614, the Codex's cuts and corrections, the Maris core, the pin's carving, the Keepers' three-source law and the First Builder words that answer the Wardens. Argue it all out in front of the Conclave.",
+    "resonant": "Hear two voices in the Beacon and the wrong note in the Quiet. Feel the pin's key. Sit among the stones at Ilun. Hear all sixty-three of the Tarn. Sing back to the Cantor. Take a shift at Orrin. Answer the voice through Sefu's wall, calibrate the Tuner, and go past the lamp.",
+    "hacker": "Pull the overlay's frame headers. Find Iven's private logs. Read a Choir core. Spoof the Tarn with remnant_codes. Find Seven's hidden buffer and Foundry's order ledger. Get into Bastion's shipping records, the Ministry archive and Sarn's catalog. Decode Corso from orbit, and get onto Asterion's wire.",
+    "anyone": "A captain with no gifts can still go and look, ask out loud, pay what it costs and say the words at the end. Every act has a way through for a sneak, a medic, a pilot and an engineer too: see the routes in the threads."
+  },
+  "acts": [
+    {
+      "name": "A Light on Every Band",
+      "goal": "The fleet is starving and has one hope. Get fuel, find someone who can read the Beacon, and meet everyone who has an opinion about it. The player starts by believing the Beacon is a rescue. By the end they should believe something better and just as wrong: part of it is in the Concord Navy's own signal format, so survivors are calling them home. Let the factions give their theories here (see factions): the player should hear at least three that can't all be true. Plant small wrong notes and don't explain them: a pin on Mother Quill's shawl, a man who hums, children at Tessen with a skipping game, a voice through a wall asking about a vacancy, Commander Voss going quiet whenever the old picket lines come up.",
+      "moves_on_when": "The player knows the Beacon has a second, newer layer in Navy format (from Tharel, their own analysis, Iven, a bought answer or a broken Hunter core) and has enough fuel to go looking. If they ignore all of that, Garrick Fenn breaks the story anyway: Navy code on the Beacon.",
+      "pressure": "Two weeks of fuel. Medical supplies end around day 41, or so Aduro thinks. Choir drones pick off the slowest ship every few days. Corvane's offer goes round the mess decks. A Mimic scare has people eyeing each other and the fleet's Synthetics, and Tarrow's list grows. The first Quiet sermons draw crowds on the Sundial.",
+      "beats": [
+        "Getting to Tharel in his Warm Room on Haven, while three parties try to buy or grab him (main_the_old_scholar).",
+        "Tea and dumplings with Mother Quill: the fleet's fuel for a debt, and first look at anything First Builder. Her shawl pin hums (main_two_weeks_of_fuel).",
+        "Visiting hours on Anselm's Mercy: a man who hums, and a Mimic with his dead wife's face who has come to take him home (main_visiting_hours).",
+        "The council meeting where Halm asks what exactly the captain is leading them toward, and the captain has to answer something.",
+        "A Choir Hunter runs down a straggling ship: the first time the player sees one close, and it wears a face. Whoever brings one down gets a choir_core.",
+        "Someone shows the captain a child's drawing of the Beacon. The fleet's hope is real and it's holding everyone together. Later, that's what will make it so hard to take away.",
+        "Tharel, shaken, lets them think the top layer is what matters. A sharp player may catch him flinching at questions about the lower layer."
+      ]
+    },
+    {
+      "name": "The Navy's Voice",
+      "goal": "Chase the Navy voice. Admiral Okonkwo-Reyes says it's a lawful recall from Project Harbor, a secret Admiralty base, and she wants the fleet under her command. The Hegemony's offer looks better every day. The Quiet walk out by the shuttleload, and it looks exactly like a fifth column. Meanwhile every line of inquiry converges on one hull number. By the end the player should believe the worst: the voice belongs to CFS Tarn, a ship the Choir took on the first night of the Fall, the Beacon is bait, and the officer who commanded the Tarn has been standing beside them all along. All of it is wrong, and all the evidence supports it.",
+      "moves_on_when": "Voss's past with the Tarn is out (she confesses, is exposed, or the player confronts her), the fleet's faith in the Beacon has cracked, and the player has a reason to go and find the Tarn. If the player sits on it, Tarrow acts alone, or Garrick Fenn gets it from Naomi Cass for a handful of dried fruit.",
+      "pressure": "Hunter packs work the lanes the overlay sends people down, so following the Beacon gets ships killed. Customs stops and Inquisitors at Haven. Refugees sign at Bastion Nine by the hundred. Walk-outs. Halm's private talks with Corvane reach the point of a vote. Fights between Synthetics and survivors. Dorn's letters tell the Hegemony where the Remnant is, and how weak.",
+      "beats": [
+        "The Admiral's orders arrive, relieving the captain of command. Crossing the Ghostlight to answer them, and a formal hearing on her flagship (main_the_admiral).",
+        "Shuttles leave the Sundial. Oskar Lind's gentle sermon. Yara Solune glowing on Haven's docks. A real Mimic found among the walkers, and everyone draws the obvious conclusion (main_the_walkouts).",
+        "Nine hundred pages from Corvane, read aloud to the council. A visit to Bastion Nine, where people are fed and calm, and a clerk is doing something odd to the paperwork (main_the_generous_offer).",
+        "Lira Vey lays the Fall's track over the map and finds the holes. Four things the Choir spared: a monastery, a library, an empire and a woman (spared_map).",
+        "Iven admits what he's been hearing. It's his dead sister, reading the Tarn's crew list with one name left out (iven_knows_the_fist).",
+        "Tarrow's locked-door meeting, and her folder (main_chain_of_command).",
+        "The Cantor speaks on the Beacon band for the first time, to the whole bridge: 'Captain. Tell the Commander it's all right. We have the deck.' It says 'Captain' exactly the way Voss does.",
+        "Voss tells the captain what she remembers: the lane of silver figures, and the salute she didn't return. It's no help at all, and the fleet finds out."
+      ]
+    },
+    {
+      "name": "Who Is It Singing To?",
+      "goal": "The story turns over. Board the Tarn, and learn that Voss walked because she was off watch and that her crew is the Cantor. Learn that nobody meant the Beacon as bait: a comms tech misread a warning light. Get the Ilun Codex to Tharel and learn what the light warns of. Learn from Maris that the song is a dam, and that the worst week in history made the dam higher. The player will then probably believe a new set of wrong things: that the Order tried to warn everyone and Ione is the last honest person alive, that the Choir is a mad guard dog to be put down or pitied, that the Regent is a greedy collaborator, that the Quiet were right. The act ends when the player asks the question nobody has asked, of the one voice that can answer: who are you singing to?",
+      "moves_on_when": "The player knows the Beacon is a warning, knows the Choir guards against something, and has the question or the answer (from the Cantor, the Codex with Tharel, Corso, Ashael or Hollis-Nine). If the game is dragging, two of those three are enough, and the third can reach them later.",
+      "pressure": "The fleet hears the Beacon may be a lie, and ships peel off for Bastion. Halm gets his vote. Hunters turn up with Choristers coordinating them. Vael moves against Ilun. Okonkwo calls Voss to her flag, and takes it badly when she doesn't come. The first people are found who've stopped answering to their names.",
+      "beats": [
+        "Rusk's map and the Long Silence. A ship with her lights on, ringing the watch change. The Tarn's log: 'Boarders acknowledge.' If she's there, Voss finally returns the salute (main_on_station).",
+        "Iven talks to his sister on a ship's internal line, and she says something she's never said before.",
+        "Ilun: a vigil among the stones, Vael's ships arriving, the Codex (main_what_the_stones_keep).",
+        "Tharel reads the lattice with the Codex in his hands, and says it: a lighthouse doesn't mean come here, young one. It means rocks.",
+        "The children of Tessen correct the old scholar's grammar (deep_the_childrens_game).",
+        "Maris: a gauge that has been recording for a hundred thousand years, and a spike six months ago (deep_the_sounding_line).",
+        "Telling the fleet, or not. The Quiet surge and so does despair. This is the captain's lowest moment: there's no Harbor, and there's nowhere else.",
+        "Parley with the Cantor (main_the_parley)."
+      ]
+    },
+    {
+      "name": "The Vacancy",
+      "goal": "Everybody's mask comes off, and the player's last allies turn out to be part of how this happened. Follow the money and the manifests. The Regent's tax turns out to rest on a thousand-year-old plan, and on a mistake. The Quiet turn out to be the first casualties, not the enemy's friends. The rotation tables lead back to Ilun, and the Abbess says yes, she did. The Ninth Vault, the prize everyone has been circling, holds a duty roster with a post that's been empty for 1,006 years. By the end the player knows it all: the song is failing because nobody came to relieve the watch. Now they have to decide what to do about it, and put together whoever's left to do it.",
+      "moves_on_when": "The player knows the song can be ended, joined or relieved (from the Roster, or from any two of: the Korrun receipt, Orrin's cut pages, the overdue crew at the Gate, Hollis-Nine, Sefu's two hundred volumes) and has any way past the map: gate_key, Tamsin's Thin Road, the Tarn as escort, or the bearing itself.",
+      "pressure": "The song is thinning. Whole ships sit down. Quiet membership doubles. The monthly shipments grow, and silver gathers on the Vantor border, or seems to. The Regent's fleet is mustering. Ministry Blades move on Sarn. Medical supplies run out if nothing's been done. Everyone has a plan, and none of them include anyone else.",
+      "beats": [
+        "The freighter that stopped answering: two hundred people sitting down, alive, all facing the same way, and a Hunter that changes course to avoid it (main_the_ship_that_sat_down).",
+        "Count them: the manifest, the clause, and an unmarked ship crossing the border while silver drones come gently out to meet it (main_the_remittance).",
+        "Vael reads a manifest and knows every full legal name on it.",
+        "An audience at Vantor (main_an_audience).",
+        "Sable, for the first time, doesn't name a price. Quill's ledger. Ione, when she's asked (main_who_paid).",
+        "Cael learns who sent the novices. Mirei learns what happened to her sister.",
+        "Sarn: the Conclave, the stool in front of the Ninth Door, the small cold room, the long book (main_the_ninth_vault).",
+        "The heretics at Orrin. The cradles on the Gate. The thing in Foundry's sublevels. The dead holding an election. Each is a piece of how it could be done (the deep_ threads).",
+        "The summit at the Neutral Ground (main_everyone_whos_left)."
+      ]
+    },
+    {
+      "name": "The Harbor",
+      "goal": "The road ends. Get the fleet past the map. Arrive somewhere that's everything the Beacon promised: warm, clean, with room for everyone. Realize why that's dangerous. Then go up to the highest room and choose. Everything converges here: whoever the player kept, whoever they betrayed, whichever pieces they gathered. Run the ending the player has earned, not the one that would be neatest.",
+      "moves_on_when": "The player has made the choice at the board, and it has played out. See endings.",
+      "pressure": "Inside, peace: people stop fighting, stop asking, stop getting up. Outside, the Regent's squadron is coming to stop anyone touching anything, Okonkwo is going to strike the Nest with or without the captain, and the Cantor waits. Everyone's lost ones are out there in the dark, singing.",
+      "beats": [
+        "The plot table, the possible courses, and ships that won't come. The last time anyone sees the Sundial's lights in the fleet, if Grann Tull won't follow (main_the_road_past_the_map).",
+        "The crossing: the ring turning around the fleet, or the Thin Road's last buoys, or silver traffic making way. The stars thin out and stop.",
+        "Arrival. Let it be wonderful, and let the player have it for a while: a real meal, a child swimming, Marrow speechless in an engine room the size of a city (main_safe_harbor).",
+        "Aduro's ward: nobody dying, nobody in a hurry. Naomi Cass has stopped running. Someone important sits down.",
+        "Making them argue again, because the fleet's quarrelsomeness has been its curse for seven months and now it's what's keeping it alive.",
+        "Past the lamp, on a long line, for anyone who dares (deep_past_the_lamp).",
+        "The stairs. The chair. The board. The last argument (main_the_last_watch)."
+      ]
+    }
+  ],
+  "clues": [
+    {
+      "id": "two_layers",
+      "act": 1,
+      "places": ["haven", "meridian"],
+      "text": "The Beacon is two signals locked together. Underneath is a First Builder lattice, unimaginably old, which nobody can read. On top is a plain message only months old, in Concord Navy fleet-recall format: SAFE HARBOR. ALL CONCORD VESSELS COME HOME. Really it's a dead comms tech relaying her best guess at an ancient warning. The player should take it to mean Navy survivors are out there.",
+      "how": "Tharel shows it once he trusts the captain (persuasion:moderate, or lore:hard to meet him as an equal). From the Meridian's own recordings with Iven's help: science:hard, or hacking:moderate for the frame headers. attunement:moderate hears two voices, one ancient and exhausted, one young and scared. Sable sells the frame analysis (commerce:moderate). A cracked choir_core carries the same Navy framing. The dead captain's sealed log in the ready room locker shows he heard the lattice alone, a day before anyone, and kept it off the record.",
+      "points_to": "Who in the Navy survived? The Ghostlight and the Remnant (main_the_admiral). A careful player also asks what the lower layer says, and Tharel won't answer yet."
+    },
+    {
+      "id": "quill_pin",
+      "act": 1,
+      "places": ["kessara"],
+      "text": "Mother Quill wears a chip of carved pale stone on her shawl, and it hums very faintly. While the Syndicate sells fake Beacon treasure maps by the dozen, her own fences are asking after anything carved in that style, and paying well over what such things are worth. The player will assume she looted it. In fact it's part of the payment she took six years before the Fall for the Navy's rotation tables, from a buyer she never identified. It came from under Ilun.",
+      "how": "awareness:hard to notice the hum. attunement:easy to feel it, in the same key as the stones at Ilun. lore:moderate to place the carving as Ilun work. streetwise:moderate, through Talia Sen, to learn what her fences are really buying. Quill says only that it was a gift from a customer, dear.",
+      "points_to": "Ilun. Much later, her ledger (quill_ledger)."
+    },
+    {
+      "id": "pavel_tune",
+      "act": 1,
+      "places": ["anselm"],
+      "text": "Pavel Ostrov hums without knowing it: three falling notes and one rising. It's a phrase of the song's oldest verse, the part no Hunter sings, and it's one voice in a round where the voices take turns. He was found in a drifting pod, half copied: the Choir began on him and stopped. People near him sleep and lose their fear. Later this proves that being copied doesn't have to kill, so a living singer could come home.",
+      "how": "awareness:easy to hear it. medicine:moderate for his chart and the pod report. science:hard to match it against recordings of the song. attunement:moderate to hear that he's not singing alone. Mercy Seven recognizes it at once and says nothing unless asked directly (persuasion:moderate). Tessaly Marsh knows the word for what he is, and has offered Wen a lot of money for him.",
+      "points_to": "Mercy Seven's secret (seven_roll_call). Cael. Anyone wondering why a round needs turns."
+    },
+    {
+      "id": "sefu_vacancy",
+      "act": 1,
+      "places": ["sarn"],
+      "text": "Keeper Sefu Anand, sixty-two years alone in the Deep Stacks, introduces the captain to his shelves and passes on what they say. One of them really answers, through the wall he shares with the Ninth Vault, very slowly. 'She'd like to know if you've come about the vacancy. I'm so sorry, she asks everyone. There's only ever been me.' He has no idea what it means. That's the Roster's clerk. Once a year she has him write out a line and post it through a crack in the stones, and he thinks that's a perfectly normal thing to do. First Keeper Ouma says he's unwell.",
+      "how": "Automatic if the player reaches the Deep Stacks (survival:moderate for the cold, or persuasion:moderate for a Keeper guide). awareness:hard to catch Ouma's flinch when it's mentioned.",
+      "points_to": "The Ninth Vault (main_the_ninth_vault). It means nothing yet, and it should stick."
+    },
+    {
+      "id": "tessen_children",
+      "act": 1,
+      "places": ["frontier"],
+      "text": "Thirty-one of Tessen's children, not the six Marshal Dey admits to, speak a language nobody knows, and they play a skipping game with strict turns that goes on for hours. Everyone assumes the Choir has got to them. In fact the warm chamber under the Well-Head is a First Builder school that has woken up, training replacements for the watch. They're practicing one long phrase. They're the only living speakers of First Builder in the galaxy, and it's doing them no harm, so far.",
+      "how": "Sorrel Dey hints at it to anyone who's earned a little trust (persuasion:moderate). awareness:moderate to see the game for what it is. lore:hard to hear that the sounds fit the lattice. attunement:moderate: there's a third presence in the game, patient like a teacher. medicine:moderate: the children are very healthy, and that's what's strange.",
+      "points_to": "Take a recording to Tharel. Later the children can read the lattice aloud (lattice_warning, handover_note)."
+    },
+    {
+      "id": "guild_salvage_theory",
+      "act": 1,
+      "places": ["graveyard"],
+      "text": "Factor Elsbeth Crane has filed a Guild claim on the source of the Beacon: under iron salvage law, a distress call with no crew answering is an abandoned vessel, and the first to reach it owns it. She thinks that's just good business. She's closer than she knows, since the watch really has been abandoned. Divers also talk about a ship in the Long Silence that lights her decks for you, one by one, and about a map Rusk won't finish a sentence about.",
+      "how": "commerce:moderate to see the filing. streetwise:moderate in the bar on the Factor's Barge. Rusk himself: persuasion:hard, or buy him a drink and say nothing (composure:moderate).",
+      "points_to": "Rusk's map, once the hull number makes it matter (main_on_station)."
+    },
+    {
+      "id": "veshti_hazard_code",
+      "act": 1,
+      "places": ["deepyards"],
+      "text": "Every Veshti pilot knows the old spacers' rule: a fixed light on all bands is a hazard marker, not a port. Ask Yardmother Ilkin what the Beacon is and she laughs. 'A shoal buoy, Meridian. Only cargo would sail at one.' Nobody listens, because Veshti say things like this about everything. It's the first correct reading anyone gives the player, and it comes from the rudest person they meet.",
+      "how": "navigation:moderate to read the pattern with a Veshti almanac. persuasion:easy to be insulted with the answer. lore:moderate to find the rule in old spacers' law.",
+      "points_to": "The exiled navigator Tamsin Ao-Rel, who went to look (deep_the_thin_road). Later it backs up lattice_warning."
+    },
+    {
+      "id": "quiet_door_theory",
+      "act": 1,
+      "places": ["sundial", "haven"],
+      "text": "The Quiet preach that the Beacon is a door. Everyone the Choir took has been kept, and is alive and at peace behind it, and being kept is salvation. Oskar Lind says it as someone who has heard his dead daughter sing. Yara Solune says it as if she's already there, and her Ilari skin, which can't lie, seems to agree. They're half right: the dead aren't gone. And the peace is only a lullaby.",
+      "how": "Attend a sermon on the Drowned Deck. A quiet_token gets you into the inner meetings. attunement:moderate: what they're resting in isn't anyone calling. It's something spilling, and nobody will believe that yet. medicine:moderate: the longest-serving members have stopped dreaming.",
+      "points_to": "Is there anything to it? The consults Seven is reading (seven_roll_call), Lumen (circle_hears_grief). Later, silent_unwanted."
+    },
+    {
+      "id": "project_harbor",
+      "act": 2,
+      "places": ["ghostlight"],
+      "text": "Okonkwo-Reyes holds a real Navy file: Project Harbor, a classified fallback plan she once signed herself. A fleet recall in Navy format can only come from the Admiralty, so she's convinced the Concord's government survived at that base, and that she, as senior officer, must reach it, then take back Asterion. In truth Project Harbor was a fuel and spares cache, looted years ago. The name is a coincidence, and it's going to cost lives.",
+      "how": "She'll say so if the player submits to her hearing (leadership:moderate). lore:hard: the file's date and budget don't fit a base that size. hacking:hard with remnant_codes for the real annex. Commodore Dorn has known for months, and can be made to admit it (deception:moderate). 'A fine plan, Admiral. Only, it's a fuel dump.'",
+      "points_to": "remnant_codes, which let anyone unpack the overlay's call sign (hull_number)."
+    },
+    {
+      "id": "hull_number",
+      "act": 2,
+      "places": ["ghostlight", "sarn", "meridian"],
+      "text": "The overlay's frame headers carry a ship's call sign that only the Navy's code books can unpack. It belongs to CFS Tarn, a picket ship lost in the first hour of the Fall. The first thought: the Choir has the ship and is using it as bait. The second takes a moment longer. The Navy's registry lists her commanding officer: Commander Ilya Voss.",
+      "how": "hacking:hard with remnant_codes. lore:moderate in the Navy registry copies in Sarn's lesser vaults. persuasion:hard on Okonkwo's signals officer. Lira Vey has a faint contact shadowing the fleet whose transponder reads CFS Tarn, and Voss ordered her in writing not to log it (crew_lira_long_sleeves). Iven knows part of it already (iven_knows_the_fist). Prime Six remembers the order (six_stamped_the_order). A rumor in the Graveyard names the ship.",
+      "points_to": "Tarrow's folder (main_chain_of_command)."
+    },
+    {
+      "id": "iven_knows_the_fist",
+      "act": 2,
+      "places": ["meridian"],
+      "text": "Lieutenant Iven Sorel has known for months. On a dead band, under the static, his sister Anja, a comms tech lost with the Tarn, reads out the Tarn's crew list every night, in order, with one name left out: Ilya Voss. And every signaller has a fist, a rhythm as personal as handwriting: the hand keying the Beacon's overlay is hers. That's why he doesn't sleep, and why it's all in a paper notebook and not in the log. He wants to hear her say one thing she's never said before, so he'll know if it's really her.",
+      "how": "persuasion:moderate, gently, once anyone notices he isn't sleeping. medicine:easy: Aduro has noticed. stealth:moderate for the notebook; Naomi Cass has seen it. attunement:moderate: someone on the bridge is grieving at the exact rhythm of the signal.",
+      "points_to": "The Tarn, by name, and why Voss isn't on the list. Iven will want to go."
+    },
+    {
+      "id": "six_stamped_the_order",
+      "act": 2,
+      "places": ["foundry"],
+      "text": "Prime Six remembers every order they ever followed, and for thirty-one years they were Admiral Okonkwo-Reyes's staff synthetic. Eight months before the Fall an order crossed her desk from Concord Intelligence, under a cover name, moving a picket ship, CFS Tarn, newly fitted with a listening array, into a gap in the rotation beside the Pale Gate. She initialed it without reading it. Six can spell the cover name to the letter. It was Jun Sable's.",
+      "how": "Reach Foundry Seven (deep_nobody_finds_foundry) and ask. Six answers plainly if the asker shows they'd never give that kind of order (persuasion:moderate). hacking:hard for the Foundry's order ledger. lore:hard to decode the cover name from Navy archives instead.",
+      "points_to": "Jun Sable, and why a picket ship needed ears (sable_canary)."
+    },
+    {
+      "id": "voss_night_scans",
+      "act": 2,
+      "places": ["meridian"],
+      "text": "Commander Voss runs a full medical scan on herself in the empty medbay at three every morning, and wipes the log. The scans are clean. Naomi Cass has watched her from a crawlspace. The player will read this as a guilty secret. It's the fear of an innocent woman who has no explanation for still being alive. (See crew_voss_night_scans.)",
+      "how": "Naomi tells anyone who's been kind to her (persuasion:easy). hacking:hard for the wiped logs. engineering:easy for the spike on Marrow's power chart. stealth:moderate to watch for yourself. Aduro has known all along, and will ask what the captain plans to do with it.",
+      "points_to": "Confronting Voss."
+    },
+    {
+      "id": "cantor_says_captain",
+      "act": 2,
+      "places": ["meridian"],
+      "text": "When the Cantor first speaks on the Beacon band it says 'Captain' exactly as Voss does, as if it hasn't finished deciding. A Mimic in Navy blue may use her phrases too. It's excellent evidence that she's compromised. It means the opposite: the Cantor learned command from her crew, who picked it up from her and copied her behind her back for a joke.",
+      "how": "Automatic for anyone who has spent time with Voss. awareness:easy if they need a nudge. Tarrow will point it out if nobody else does.",
+      "points_to": "Voss. Then, once the Tarn has been boarded, a very different conclusion."
+    },
+    {
+      "id": "spared_map",
+      "act": 2,
+      "places": ["meridian"],
+      "text": "Ensign Lira Vey lays the Fall's track over a map for the first time. It's too fast and too clean, and it has holes. The Choir went round Ilun, Sarn and Vantor. Add Commander Voss, and that's four things it chose to spare: a monastery, a library, an empire and a woman. Every theory in the fleet has to account for them. The real reasons turn out to be one reason: Ilun is a relay whose people are on the Roster, Sarn's Keepers are the Roster's clerks, Vantor chimes the old off-watch call every evening, and Voss was off watch. The speed has its own explanation: someone gave the Choir the Navy's rotation tables.",
+      "how": "Lira will offer it if asked about the Fall (persuasion:easy), since it's been keeping her awake. science:moderate or tactics:moderate: anyone who works through the Fall's logs finds the holes and the speed. navigation:moderate shows it too.",
+      "points_to": "Ilun, Sarn, Vantor. And the tables: who gave them? (main_who_paid)"
+    },
+    {
+      "id": "hunter_core",
+      "act": 2,
+      "places": ["meridian", "graveyard"],
+      "text": "A Hunter's brain can be read, by someone stubborn. A choir_core holds no battle plan. It holds a list of names it has kept, charts of who is losing coherence, a looping machine query, and, since the Fall, Navy procedure: watch changes, acknowledgments, the format of a signal log. The Choir picked up these habits from somewhere seven months ago, and they're spreading. This is the road for a captain who learns by breaking things.",
+      "how": "Beat a choir_hunter or choir_chorister and cut out the core (engineering:moderate). Read it with hacking:hard or science:hard, or hand it to Marrow or Mercy Seven. manifestation:hard can force it to sing what it holds, at a cost in stress.",
+      "points_to": "The Tarn (the Navy format). Seven's fragments (the looping query)."
+    },
+    {
+      "id": "silver_visitors",
+      "act": 2,
+      "places": ["frontier", "cinder"],
+      "text": "Old frontier stories tell of silver visitors who sat with the dying and were gone by morning. Elder Dray's grandmother swore by them, and there are miners' songs about it at Cinder Reach. The stories are centuries older than the Fall. So the Choir didn't arrive seven months ago. It has been here all along, quietly, at the edges, and then something changed.",
+      "how": "Ask old people (persuasion:easy). lore:moderate to find the earliest written one, about a thousand years old. streetwise:easy in any frontier bar. survival:moderate: a frontier graveyard where some of the graves are empty.",
+      "points_to": "Sarn, to ask how old the Choir really is. The date, about a thousand years ago, will turn up again at Maris."
+    },
+    {
+      "id": "clan_long_debt",
+      "act": 2,
+      "places": ["korrath"],
+      "text": "In the Weigh House at Korrath, behind the great public scale, hangs a much older one, with a sealed pan the Korrun call the Long Debt. Hesk Varr's theory of the Beacon: it's a promise someone made, and promises get weighed. The sealed pan holds a slab of lattice script no one alive can read. It's a receipt: the watch, received from the Thessan and passed to the Veshti, with a false weight. The Korrun's whole culture of honest scales is a scar over a broken promise they've forgotten.",
+      "how": "Work a shift at the Long Furnaces first (athletics:moderate or engineering:moderate), then persuasion:moderate with Hesk to see it. lore:very_hard to read it, or easy for the Tessen children or after the Roster is known. attunement:moderate: it's the oldest guilt you've ever touched.",
+      "points_to": "Sarn. Also a route to 'it's a shift' that doesn't need the Ninth Vault."
+    },
+    {
+      "id": "circle_hears_grief",
+      "act": 2,
+      "places": ["lumen"],
+      "text": "Ilari who listen to the Beacon at Lumen all show the same slow pattern on their skin, the one their people use for mourning and exhaustion. The Circle's theory is that the Beacon is grief: someone very tired is crying out. Nobody has dared ask Warden Ashael, whose skin has shown nothing since the Fall.",
+      "how": "Go to Lumen and watch a listening on the Open Steps (awareness:easy). attunement:easy feels it directly. A lumen_lens shows it to anyone. Mirei will say more if she thinks you can get Ashael to speak (persuasion:moderate; deception:hard, and she'll know).",
+      "points_to": "Ashael (deep_the_dark_warden)."
+    },
+    {
+      "id": "vael_contagion",
+      "act": 2,
+      "places": ["haven", "bastion"],
+      "text": "Inquisitor Vael's instruments show every Resonant in known space growing stronger and harder to dampen since the Fall, and the curve steepens near the fleet's course. She concludes the Beacon is a contagion and that she's protecting people by taking Resonants off the board. Her numbers are right. Her reading is wrong: the song is fraying and spilling, so everyone who can feel it feels more.",
+      "how": "She'll present her findings, courteously, to any captain who'll listen. science:moderate to read her data. hacking:hard for the raw files, which show an unexplained jump in the last seven months. A Resonant captain knows it already (attunement:easy), which is why she's watching them.",
+      "points_to": "What's changing? Ilun, Maris."
+    },
+    {
+      "id": "unbound_flag",
+      "act": 2,
+      "places": ["foundry"],
+      "text": "The Unbound believe the Beacon is a flag. The story they tell: the First Builders made machines, the machines rose and ended them, and the Choir are the free machines' elders. It's the only origin story a people who've been property have ever had, and Mercy Seven half believes it. It's exactly backward: the Choir has been following its last order for a hundred thousand years, and nobody ever told it that it could stop. Only Prime Six and Hollis-Nine have read far enough back in the Foundry's master pattern to know that the seed of every synthetic mind was copied from a fragment of something very old, so Synthetics and the Choir really are distant kin.",
+      "how": "Any Unbound will tell you, and the Assembly at Foundry Seven argues about it daily. lore:hard to see the gaps in the story. hacking:moderate: the Choir's machine traffic holds no commands of its own, only acknowledgments.",
+      "points_to": "Hollis-Nine, who has taken the signal apart and hasn't thought to mention what's wrong with it (the_tuner)."
+    },
+    {
+      "id": "clause_41c",
+      "act": 2,
+      "places": ["bastion", "haven"],
+      "text": "Page 614 of Corvane's contract: under clause 41(c) the Regency may 'remit the bearer's service to an external obligation'. Everyone takes it for legal boilerplate, or a way to send conscripts to the front. Severa Lune, a clerk at Bastion Nine, has been moving refugees off the rolls so they don't fall under it. She won't say why, and she's about to be caught.",
+      "how": "commerce:hard or lore:hard, reading all nine hundred pages. awareness:moderate: Bastion's records show people who signed and aren't on any roster now. Severa, approached carefully: persuasion:moderate, stealth:moderate to reach her unobserved. Halm has read that page and hasn't understood it.",
+      "points_to": "Bastion Nine. Later, the manifests (unmarked_manifest)."
+    },
+    {
+      "id": "tarn_log",
+      "act": 3,
+      "places": ["graveyard"],
+      "text": "The Tarn's deck log, in the hand of Lt. Nell Ibarra: '0348: Cdr Voss relieved. Cdr off watch, turned in. 0359: Boarded. 0402: To boarders: the Commander is off watch and is not to be woken. 0403: Boarders acknowledge.' Voss walked because she was off watch and her officer of the deck said so, and because the Choir's deepest law is the watch bill. It recognized the idea, kept that crew together, and learned to talk from them. They're the Cantor. They've been guarding the fleet ever since. In her old chair sits a silver figure with her own face.",
+      "how": "Get aboard (main_on_station) and read it: hacking:moderate on a locked terminal, or simply ask, since the crew will show it to any officer who asks by the proper form (leadership:moderate). attunement:moderate: sixty-three minds acting as one, and they know each other. With Voss present, Ibarra's face says it herself. The flight recorder holds the other half (crew_voss_tarn_recorder).",
+      "points_to": "The Choir obeys a watch bill. So what's the watch, and who relieves it?"
+    },
+    {
+      "id": "overlay_good_faith",
+      "act": 3,
+      "places": ["graveyard"],
+      "text": "The Tarn's signal log shows Comms Tech Anja Sorel, three weeks after she was taken, running the lattice through the Navy's automatic codebook. Best rendering: SAFE HARBOR, at eleven percent confidence. She added the fleet recall herself, locked her carrier to the lattice so it would carry, and has been sending ever since. Nobody ordered it. It isn't bait. It's a dead comms tech at her board, telling everyone it's all right to come in.",
+      "how": "Read the signal log (hacking:easy once aboard, or lore:moderate). Iven can ask her on the ship's line. science:moderate to see the confidence figure and understand what that means.",
+      "points_to": "What does the lattice actually say? Tharel, the Codex, the children of Tessen (lattice_warning)."
+    },
+    {
+      "id": "sable_canary",
+      "act": 3,
+      "places": ["haven"],
+      "text": "Sable was Concord Intelligence. They traced a leak of Navy rotation tables as far as Kessara and no further. To learn if anyone was using them, they moved the Tarn, with a new listening array and no explanation, into the one gap in the rotation that should have been safe, beside the Pale Gate. A canary, and the first night of the Fall proved it right. Sixty-three people. They know exactly what happened to the Tarn because they put it there, and the bar is the rest of their life. Their office also paid for Corso's work at Maris (Project Plumbline), and Talia Sen still files reports to them.",
+      "how": "They'll sell nearly anything, but not this (commerce:very_hard buys a cover story). They'll tell Voss for free if she asks in person. persuasion:hard with the Tarn's log in hand. hacking:very_hard for their old files. intimidation:hard only gets a shotgun on the bar.",
+      "points_to": "The leak. Mother Quill's ledger (main_who_paid). Maris Deep."
+    },
+    {
+      "id": "seven_roll_call",
+      "act": 3,
+      "places": ["meridian", "foundry"],
+      "text": "The fragments Mercy Seven has been hiding are medical consults: charts of the people the Choir has kept, a ward of billions losing coherence, signed by the Tarn's surgeon and asking for a doctor (crew_seven_consult). So the dead aren't gone, and the Quiet are right about that much. Every fragment also carries a header Seven has been filing as noise, a looping machine query: WHO HAS THE WATCH? WHO HAS THE WATCH? Seven puts it at ninety-one percent that they've been ignoring a distress call for seven months. A watch means a shift, and a shift means someone is meant to come after. What Cael hears and answers is the other half of the same thing.",
+      "how": "persuasion:moderate with Seven once there's trust, or hacking:hard to find the hidden buffer. A choir_core holds the same query (hunter_core). A Synthetic captain has been receiving it too, and can work it out (science:moderate).",
+      "points_to": "Hollis-Nine. Cael. Who relieves the watch?"
+    },
+    {
+      "id": "lattice_warning",
+      "act": 3,
+      "places": ["ilun", "haven", "frontier"],
+      "text": "The lattice, finally read: THIS PLACE IS MADE FAST. THERE IS NO PASSAGE. TURN BACK. In First Builder the word for harbor is also the word for a lock, and 'safe' means secured. It isn't an invitation. It's a warning light. As Tharel puts it: a lighthouse doesn't mean come here, young one. It means rocks.",
+      "how": "Tharel reads it once he has the Ilun Codex or a good copy, and trusts the captain. The Tessen children read it aloud to anyone who asks (persuasion:easy, but the grown-ups have to be dealt with). lore:very_hard alone, or moderate with the Codex. hacking:hard: align the lattice with Seven's fragments and a recording of the children. navigation:moderate with a Veshti almanac gets the gist: hazard, stay clear.",
+      "points_to": "Rocks. What's the rock? The Codex, Maris, the Cantor."
+    },
+    {
+      "id": "codex_cut_pages",
+      "act": 3,
+      "places": ["ilun"],
+      "text": "The Ilun Codex says the Order was founded to listen for what the First Builders feared: something older, which the Choir was built to guard against. So the Choir is a guard. But pages have been neatly cut from it, a long time ago, and the text on either side doesn't join. The Order says there was a fire. A later hand has changed the word 'sing' to 'listen' in a dozen places, and the first line of the Founding Rule has been chiselled off every copy.",
+      "how": "Ione shows it once she's decided about the captain (attunement:hard on a night vigil among the stones, or persuasion:hard, or simply having been aboard the Tarn). It's hidden where only someone listening for it can find it, but she's checked on it twice this year, so stealth:hard can follow her. lore:moderate to spot the cuts and the corrections. science:moderate: the ink of the corrections is about a thousand years old.",
+      "points_to": "Who has the cut pages? Saint Orrin's Comet, the Ninth Vault."
+    },
+    {
+      "id": "maris_numbers",
+      "act": 3,
+      "places": ["maris", "sarn", "meridian"],
+      "text": "The structure at Maris Deep is a sounding line, a First Builder gauge that measures how deep the sleep is. A core from it shows a hundred thousand years of steady rhythm, a break 1,006 years ago and a long slide since. Then, six months ago, a spike: deeper than it has been in a thousand years. The Fall worked. The worst week in history is the best thing to happen to the sleep since the rhythm broke. And it's wearing off faster than it rose. Corso's estimate: about eleven years before the gaps close, with whole towns sitting down well before that.",
+      "how": "Reach Corso (deep_the_sounding_line), get the maris_core_sample, then science:moderate. From far away: his messages look like nonsense, but the first word of each line, looked up in the Maris Tide Tables, gives the true depth readings. Sefu Anand has the only other copy of that book, or science:hard or hacking:hard can break it blind. That gives the shape, and it won't convince anyone. attunement:hard at the gauge: you can feel the drop under your feet.",
+      "points_to": "Who's going to tell the fleet this? The Cantor. Also that date again, 1,006 years ago, the same as the silver visitors."
+    },
+    {
+      "id": "ashael_felt_it",
+      "act": 3,
+      "places": ["lumen"],
+      "text": "Warden Ashael went dark for a reason nobody at Lumen has guessed. In the last hour of the Fall, when the Circle reached out to hold the dying, he felt something under the Choir's song: huge, old and not the Choir, turning over in its sleep. Feeling spreads skin to skin at Lumen, and if that fear had shown on him it would have gone through the city and killed people. So he had Mirei teach him to go dark, and he's been holding it down ever since, and it's killing him. He's been looking for someone strong enough to be told.",
+      "how": "deep_the_dark_warden. attunement:moderate to touch what he's holding, with stress. persuasion:hard or medicine:hard to get him to say it. Mirei alone knows why he asked (deception:hard to get it from her, or earn it). Abbess Ione knows too. A boy on the Sundial, Tam Orlo, has started saying the same thing about something under the soil.",
+      "points_to": "So there's something under the song. Ilun, the Cantor."
+    },
+    {
+      "id": "who_it_sings_to",
+      "act": 3,
+      "places": ["nest", "haven", "graveyard"],
+      "text": "The question that opens everything. Ask the Cantor who the song is for and, if it has been earned, it answers. 'There is one we sing to. It has been asleep for longer than there have been stars to name. If we stop, it will turn over, and it will hear you.' It doesn't hate anyone. It doesn't know anyone exists. That's what the song is for. Those who aren't kept when it wakes will be as if they never were. So the Fall was triage. On the long plates, every part of the Nest's lattice is aimed at one point in the dark, and it has never once turned away.",
+      "how": "main_the_parley. Earned by asking the question itself, or by watch language ('Who has the deck?'), or by beating a choir_cantor_shard and demanding an answer, or by a session with a choir_core (hacking:very_hard), or by singing back (attunement:hard, at a cost). Corso, Hollis-Nine and the Codex all get close, and the Tessen children's whole song says it plainly (out_tessen_lullaby): sleep, not yet, sleep, not yet. science:hard on the Nest's geometry shows where it's aimed.",
+      "points_to": "What the Choir has to keep doing to keep it asleep. The Ninth Vault: how long has this been going on?"
+    },
+    {
+      "id": "silent_bearing",
+      "act": 3,
+      "places": ["meridian", "maris", "frontier"],
+      "text": "Everyone deep in the Quiet sleeps with their head the same way. Silent Ones stand facing the same way. So do the sleepwalking children at Tessen, and what's down on the sixth level at Maris. Plot it and it's one bearing, from any point in known space: the source of the Beacon's lattice. So the Beacon is calling them. Wrong again: the Beacon only stands next to what the song is aimed at.",
+      "how": "awareness:moderate to notice. science:moderate or navigation:moderate to plot it; Lira Vey can do it in an evening. A beacon_shard on a string points the same way. attunement:moderate to feel the pull. The chalk drawing under the Tessen schoolhouse desks is the same map.",
+      "points_to": "A way to find the Harbor with no chart at all. Also a very bad feeling."
+    },
+    {
+      "id": "unmarked_manifest",
+      "act": 4,
+      "places": ["bastion", "vantor", "haven"],
+      "text": "Every month, plain unmarked transports leave Bastion Nine and Vantor's Outer Yards, cross the border and cut their engines. Silver drones come gently out to meet them, and they leave a stack of silver discs on the empty deck. The Regent calls it a tax. The manifests list people filed as 'resettled to the Outer Colonies': political prisoners for twenty-two years, and now contract refugees and captured Resonants, nine hundred a month and rising. This is the real reason for the Generous Offer. The refugees aren't soldiers. They're the coin.",
+      "how": "Dain Halloran sends one (main_the_remittance). Severa Lune kept copies, after she saw her own sister's name. Corvane, for a way out. Dockmaster Mott Jessup has a private copy of every manifest that refueled at his back dock. Inspector Moor is following twelve tons of missing fuel straight to them. hacking:hard on Bastion's shipping records. stealth:hard to stow away. piloting:hard to shadow one across the line. gunnery:moderate to stop one and see who's aboard. attunement:hard near a loaded hull.",
+      "points_to": "The Regent. Vael, if she sees it: she'll know every full legal name."
+    },
+    {
+      "id": "regency_letter",
+      "act": 4,
+      "places": ["vantor", "sarn"],
+      "text": "Each Regent reads a letter on taking office, in the hand of the first: 'We hold this seat until the Sovereign wakes, and our whole duty is that it shall not.' The Regency was founded 1,006 years ago by the Order's own Proctors, who decided Resonants were the noise that would wake it. It's why the Hegemony hunts Resonants, why Inquisitors carry those blades, and why Vantor does sums about people. A regent rules in the name of someone who can't. Nobody has ever asked in whose name.",
+      "how": "Ask the Regent, and they'll show it as the answer to your one question (main_an_audience). lore:very_hard at Sarn, from the Hegemony's own founding charter. hacking:very_hard in the Ministry archive. Vael can get it if she's turned (otherwise stealth:hard). Ione will confirm it if she's asked, because every Abbess is told.",
+      "points_to": "The Order's old split. Saint Orrin's Comet, the third branch."
+    },
+    {
+      "id": "cantor_no_deal",
+      "act": 4,
+      "places": ["nest", "vantor"],
+      "text": "Ask the Cantor about its arrangement with Vantor and it doesn't know what you mean. 'People come to us on ships. We thought they were pilgrims. We thanked them. We leave their names, in case someone comes looking.' It has never heard of the Regent. There's no deal, and nobody at the other end of the tax has ever known it was one.",
+      "how": "Just ask it, at any parley. hacking:hard on a choir_core: no record of any agreement. It needs no check, only the idea of asking.",
+      "points_to": "Take it to the Regent, with something that proves it. Then ask why the silver has left Vantor alone (evening_chimes)."
+    },
+    {
+      "id": "evening_chimes",
+      "act": 4,
+      "places": ["vantor"],
+      "text": "Every evening a pattern of chimes rings across all of Vantor. The Regent has told only four people what it's for: a pattern the Regency received long ago, which tells the machines this world is paid up. It's older than that, and it isn't a receipt. It's a line from the old watch call, carried off by the Proctors 1,006 years ago: OFF WATCH, DO NOT DISTURB. It's the same law that spared Voss, and it's what has always kept the silver away from Vantor. The tax has never bought anything. It also means anyone could ring that pattern, which would be a very dangerous thing to learn.",
+      "how": "attunement:moderate during the chimes. lore:hard against the Codex pages or the Tessen children's phrase. science:hard or hacking:hard against Seven's fragments. The Cantor, if asked: 'That world is off watch. We do not disturb it. Why do they send us people?'",
+      "points_to": "The Regent. It's the only argument that could end the shipments, and they'll ask who wants to stop paying to test it, with two billion lives on the line."
+    },
+    {
+      "id": "token_names",
+      "act": 4,
+      "places": ["haven", "sundial", "vantor"],
+      "text": "Look at a quiet_token under a good lens, and there's a name cut into it, in the Choir's fine script. Every token has one, and they're all real people. Each is someone who crossed the border on an unmarked ship. The silver leaves one disc on the deck for each person it takes, in case anyone comes looking. The Regency files them as receipts, and Corvane's office has been quietly passing the surplus to the Quiet's soup line at Haven, because a fleet that wants to be kept won't fight. The thing that helps you sleep is somebody's grave marker, sold to you by the people who sent them.",
+      "how": "science:hard or lore:hard to read the script. hacking:hard to trace the supply through three shell traders to Consulate Row. attunement:moderate: hold one long enough and you know a stranger's name. Severa Lune can match a name to a case number from memory. There's a drawer full of them at Vantor (main_an_audience).",
+      "points_to": "The unmarked ships (unmarked_manifest). Oskar Lind, who ought to be told."
+    },
+    {
+      "id": "boredom_not_noise",
+      "act": 4,
+      "places": ["maris", "foundry"],
+      "text": "Compare the Maris record with Resonant activity over ten thousand years, and there's no link with noise. The depth of the sleep follows novelty: each new people's first verses held best, and a verse gets weaker every time it's repeated. It doesn't wake because you're loud. It wakes because it has heard it all before. So a thousand years of Regency silence has only starved the song of singers, and the minds the Choir keeps never change, which is why its whole effort is failing.",
+      "how": "science:hard with the maris_core_sample, or with Corso on a good day. Hollis-Nine worked it out from the other end, as a fault report, and engineering:moderate can follow her math. lore:hard against Sarn's records.",
+      "points_to": "What would a verse need in order to keep changing? A living singer. The Echo. Also the argument to use at Vantor."
+    },
+    {
+      "id": "silent_unwanted",
+      "act": 4,
+      "places": ["meridian", "lumen", "anselm"],
+      "text": "A Hunter changes course to avoid a ship full of seated people. A Mimic walks past a Silent One as if no one's there, because no one is. Ask the Cantor and for the first time it sounds afraid: 'There is nothing there to keep.' The Quiet's peace starts as a lullaby meant for something else, spilling as the song frays, but at the far end it isn't the song at all. It's what comes through the gaps, and there's no one left to save. Nobody who goes Silent is on the wire or in the charts. They aren't anywhere. Yara Solune's glow never varies, because nothing's left underneath it.",
+      "how": "main_the_ship_that_sat_down. awareness:moderate to see the Hunter's track. A lumen_lens or attunement:hard reads Yara. Her glow keeps time with Pavel's hum, if anyone puts them in a room. Mirei has been watching her sister for a long time. The Echo can't find any Silent person on the wire.",
+      "points_to": "Can they be brought back? (blade_origin). What to tell Oskar."
+    },
+    {
+      "id": "blade_origin",
+      "act": 4,
+      "places": ["pale_gate", "orrin", "vantor"],
+      "text": "Inquisitors' drinking blades began as medical tools. The Order's Proctors used them to drain a singer going under and drag them back to themselves. A Silent One who hasn't been gone long can be recovered this way, so Vael's blade, the thing every Resonant fears most, may be the only cure. The Tuner can be made to do it too. So, very slowly, can someone who knew the person, calling them by name.",
+      "how": "Proctor Kore at the Pale Gate carries the original (deep_wake_at_clearance). Orrin's cut pages describe it (lore:moderate). medicine:hard or science:hard: study a captured blade with a Silent patient, at some risk. manifestation:hard: do the same thing by hand, at a heavy cost. Tessaly Marsh would pay anything to know this. Mother Orsolya knows, and it's why she laughs at Inquisitors. The Ghostlight muffles the song, so anyone slipping steadies in there, for as long as they stay.",
+      "points_to": "Vael."
+    },
+    {
+      "id": "quill_ledger",
+      "act": 4,
+      "places": ["kessara"],
+      "text": "Mother Quill keeps a real ledger in a hand nobody else can read. Six years before the Fall: Navy rotation tables, sold through a broker for four thousand credits and a chip of carved stone, to a man who signed himself Hob. A grainy image in Sable's files shows the buyer at the Neutral Ground, with the face of Lt. Aldo Renn, a patrol officer lost beyond the border nine years before. It looks as if something that copies faces was already buying its way in, long before the Fall (out_kessara_who_paid). That's the wrong answer, and a good one. Renn was a walker: half copied, he wandered into Ilun with no memory, and he spent his last years as Brother Hob, the monastery's cook. He died that same year.",
+      "how": "commerce:hard with leverage (the fuel debt, or what a fleet of survivors would do to her). stealth:hard or hacking:hard to reach it. Back Tannis's coup and take it by force. Talia Sen knows who carried what, and she's selling everything she knows to get her son off the Second Opinion. To get from Renn to Hob: lore:moderate, attunement:moderate on the pin, or ask the monks at Ilun who used to bake the bread.",
+      "points_to": "Ilun."
+    },
+    {
+      "id": "novices_walked",
+      "act": 4,
+      "places": ["ilun"],
+      "text": "The Order's outlying houses stand empty, with the beds made and the doors opened from inside. The monks weren't slaughtered. During the Fall they got up in the same hour and walked out to meet the silver. Not in panic: under orders. Brother Cael has spent six months looking for people who were sent. On the walls far down the Under-Stair, relief crews are carved by the century, up to 1,006 years ago, and then nothing.",
+      "how": "deep_the_stones_at_night. survival:moderate for the trails. awareness:moderate for the beds. A very old monk breaks (persuasion:hard; intimidation:moderate works, and you'll feel it). attunement:hard: you can hear them, faint, in the song.",
+      "points_to": "Who gave that order? Ione."
+    },
+    {
+      "id": "ione_answers",
+      "act": 4,
+      "places": ["ilun"],
+      "text": "Ask Ione plainly whether she bought the tables, and she says yes. She doesn't lie. She looked for another way for thirty years. 'A long war would have killed them all for nothing. A short one kept them.' She sang the tables through the stones, and she sent her strongest. She has counted what it saved, she has made her peace, and she would like the captain to check her sums. The Maris record says they're correct.",
+      "how": "Just ask, with the ledger, the pin or the novices in hand, or with nothing. No check gets the truth from her. The checks are for what comes next: composure:hard not to break, leadership:hard to stop others burning Ilun, lore:hard to dispute her numbers.",
+      "points_to": "The Codex's missing pages and what the Order used to be for. The Ninth Vault, Orrin."
+    },
+    {
+      "id": "ninth_vault_roster",
+      "act": 4,
+      "places": ["sarn"],
+      "text": "Behind the Ninth Door is a small cold room with a long table and a very long book. It's a duty roster. First Builders. Thessan. Korrun. Veshti. Ilari. The monks of Ilun, last relieved 1,006 years ago. After that, one line a year, in the hands of a long succession of Keepers and for the last sixty-two years in Sefu Anand's: Watch unrelieved. One thousand and six times. The most closely guarded secret in the galaxy is that the song was always a shift, that every people took a turn, and that nobody came. Around it are every people's accounts of their turn, each ending the same way, and written to make you want to go. At the bottom of the last page: Captain of the Refugee Fleet, inquiring.",
+      "how": "main_the_ninth_vault, by argument, bargain, heist or battle. The Keepers' law lets a sealed record lapse once three independent sources outside the Archive have established its content, so the Korrun receipt, the Maris core, the Tarn's log, the cut pages, the overdue crew, the Tessen children and Hollis-Nine all count. Sefu's two hundred volumes hold most of it already, under a false mark.",
+      "points_to": "It's a job, and there's a vacancy. How is it done? (orrin_rite, the_tuner, overdue_crew, handover_note)"
+    },
+    {
+      "id": "handover_note",
+      "act": 4,
+      "places": ["sarn", "frontier"],
+      "text": "Beside the Roster: the Score, the full notation of the song, and a handover note from the last First Builder on watch, very short and very tired. It gives the lattice's last stanza, which Tharel couldn't read and which the Tessen children have been practicing all along: IF YOU WILL NOT TURN BACK, THE WATCH IS OPEN. COME AND RELIEVE US. So the light is a warning and also a help-wanted sign. It says turn back, or take over.",
+      "how": "In the Ninth Vault: lore:moderate. The Tessen children can sing it if anyone thinks to ask them for the rest (persuasion:easy). science:hard: the Score is the key to ending it, joining it or fixing it. attunement:moderate: reading it aloud is singing it, and the song notices.",
+      "points_to": "The Harbor. All the endings."
+    },
+    {
+      "id": "orrin_rite",
+      "act": 4,
+      "places": ["orrin"],
+      "text": "The cut pages of the Codex are on Saint Orrin's Comet, and they describe the old rite of singing a shift. The heretics have kept doing it, after a fashion, but they lost the instrument that kept a singer in tune, so every one of them burns. They're the only people still doing their job. Mother Orsolya also holds a gate_key, the relief crews' pass through the Pale Gate, carried off when they fled. She thinks the thing at the other end should be woken and asked.",
+      "how": "deep_the_eleven. lore:moderate to match the pages with the Codex. attunement:hard or manifestation:hard to join the rite. medicine:moderate: treat their burns and earn a hearing. stealth:hard to steal the key.",
+      "points_to": "The Pale Gate. What instrument? (the_tuner)"
+    },
+    {
+      "id": "overdue_crew",
+      "act": 4,
+      "places": ["pale_gate"],
+      "text": "On the inner face of the Pale Gate is a hall of cradles, where the last relief crew of the Order has been waiting for clearance for 1,006 years. Nobody ever told them. Those who survive waking are living witnesses to the old rite, the Proctor's craft and the Harbor's layout. They ask when the ship is due.",
+      "how": "deep_wake_at_clearance. engineering:hard or medicine:hard to wake them without losing them. lore:moderate to speak their old tongue. composure:moderate to be the one who tells them.",
+      "points_to": "The rite, the blade, the Harbor."
+    },
+    {
+      "id": "the_tuner",
+      "act": 4,
+      "places": ["foundry"],
+      "text": "In the sublevels of Foundry Seven, Hollis-Nine is building a tuner the size of a warehouse around a live Choir core, because she took the song apart and found a control signal full of faults that nobody was maintaining. She doesn't know what it controls. It's the thing the old rite lost: it keeps a singer in tune, so they can sing without burning and come home. It can also give the Choir orders, or carry a killing note. And she's the one who says it, offhand, not looking up: 'That's an output stage. It isn't talking to itself. A choir has an audience, doesn't it? Hold this.'",
+      "how": "deep_the_sublevels. engineering:moderate, hacking:hard or science:hard to understand it. Just ask to help: she'll hand you something. manifestation:moderate to calibrate it, which takes a Resonant, or Pavel Ostrov's perfect pitch.",
+      "points_to": "Who will wear it? The end."
+    },
+    {
+      "id": "echo_changes",
+      "act": 4,
+      "places": ["asterion"],
+      "text": "On Asterion's wires the last calls of billions are still going round. The Echo speaks in stitched scraps of recordings because every phrase is a different person, and a whole clear sentence comes through only when enough of them agree. They've found the old civic polling service, and they've held eleven thousand votes, none binding. They're the only kept dead who can talk to each other, and they've changed. It's the proof of concept: the dead can grow, and a verse that grows never gets old. To the Choir it's a fault, and it's listening.",
+      "how": "deep_voices_on_the_wire. hacking:moderate to get on the line. persuasion:easy to stay on it. lore:moderate to recognize the polling chime and follow the procedure, which helps a lot. The asterion_voice_recording carries it to anyone else, and it runs a little longer every time.",
+      "points_to": "The fix: let the dead talk to each other. Halm. Garrick Fenn's wife is on that line."
+    },
+    {
+      "id": "harbor_sleep",
+      "act": 5,
+      "places": ["harbor"],
+      "text": "Everyone at the Harbor is healing. The fights have stopped. Nobody has stolen anything in days. Aduro's supplies aren't running out, because nobody's in a hurry to be treated. People are sleeping wonderfully, all with their heads the same way. It's exactly what it promised, and staying is how you lose them.",
+      "how": "Aduro brings it to the captain. medicine:easy. awareness:moderate: Odessa's two sets of books finally match, which has never happened. composure:moderate to notice that you feel fine.",
+      "points_to": "The highest room, soon."
+    },
+    {
+      "id": "rota_board",
+      "act": 5,
+      "places": ["harbor"],
+      "text": "In the highest room of the Harbor, by a chair that fits no one living, is the board: who has the watch. The last name on it is the Cantor's, and a silver figure with Voss's face stands beside it. The Choir will accept relief if it's lawfully offered, and there's a precedent: the Tarn. The words are a sailor's, and they've always been enough: 'I relieve you.' 'I stand relieved.'",
+      "how": "lore:moderate with the Roster. Voss recognizes what she's looking at instantly. The Cantor will confirm it, and ask.",
+      "points_to": "The final choice."
+    },
+    {
+      "id": "past_the_lamp",
+      "act": 5,
+      "places": ["harbor"],
+      "text": "Past the lamp, in a small ship on a long line, there's nothing to see. There are no stars. Old ships of every shape hang in the dark, silent, all facing inward. Anyone who goes out comes back knowing one thing: it isn't angry. It has no idea. In a hundred thousand years nobody has tried to tell it anything true.",
+      "how": "deep_past_the_lamp. void_ops:hard, piloting:hard, composure:very_hard. attunement:hard: the strongest Resonants can almost touch it. Anyone can simply go and look, and pay for it.",
+      "points_to": "The stranger ending. Orsolya has been saying so for years. Ashael, the Echo, the Tessen children."
+    }
+  ],
+  "endings": [
+    {
+      "name": "Destroy the Choir",
+      "gm": "What it takes: the Score (from the Ninth Vault, or worked out from Sefu's volumes or Hollis-Nine's fault reports), turned inside out into a killing note that makes every relay shake itself apart. Something to carry it: the Pale Gate rung like a bell, the lamp itself, or the Tuner run backward. Something to keep the Nest's great throat busy while it's struck: Okonkwo's six ships, Tarrow, Tannis's raiders, Hesk Varr's fifty-four hidden hulls if anyone finds them, a Stillness Engine (Vantor's great dampener) if Vael or Halloran can get one. A fighter's ending, but not only that: a Resonant has to hold the note, a hacker has to open the door, and someone has to talk the Admiral into coming. What it costs: every mind in the song dies, for the first time and for real. Billions. The Tarn's crew, and the other Voss. The Echo in mid-sentence. The First Builders. The captain's own lost ones. For about a minute everyone in known space hears them, by name, and then comes a silence no one has ever heard before. Father Roe reads Dr. Adeyemi's list aloud on the fleet net, because someone should. The fight costs ships and crew, and Resonance itself starts to fade within a generation, since the song is what makes it. Afterward: no more silver, and no more Hunters at the end of every jump. The tax ends, and the Hegemony has to find out what it is without fear. Ships land. Children are born who've never seen a Mimic. And the Audience isn't asleep any more. It takes its time: Corso's numbers give ten or twenty years before the first towns sit down. The galaxy is free, with a deadline, and the last line of the Roster is in the captain's hand: Watch abandoned. Tarrow sleeps through the night. Make it a real victory, and let it hurt."
+    },
+    {
+      "name": "Join the Choir",
+      "gm": "What it takes: the Cantor's agreement, which is instant, and the fleet's, which is everything. A vote, an order, or people walking up one family at a time with the Quiet as guides. Nobody has ever gone into the song with open eyes, and it turns out that willing voices sing better than stolen ones: thirty thousand who chose it hold the sleep better than a billion who didn't. The captain goes first or last, as they choose. Mostly a talker's and a leader's ending (persuasion, leadership, composure), with a fight only if the Regent or the Admiral try to stop it. What it costs: thirty thousand lives, as lives. Everyone the captain tried to save ends up kept, in the song, unchanging, safe forever. Who decides for the children is a question that must be faced, so play it straight. Anyone who refuses gets left behind, and families split at the boarding ramps. Afterward: the silver stops hunting. It goes back to sitting at deathbeds, and now people know why, and most of them are glad of it. Death stops being an ending: everyone is kept. Nobody is lost, and nobody changes. The Quiet claim they were right, and Silent towns still happen, more slowly. In a few centuries the verses wear thin again, and the silver starts coming earlier and earlier. The new voice of the Choir says 'we', in the captain's voice, and it's very gentle about it. Let it be beautiful, and make the player uneasy about how beautiful it is."
+    },
+    {
+      "name": "Relieve the Watch",
+      "gm": "The fix. What it takes is everything, and no single piece is strictly necessary: each one missing makes it cost more instead of blocking it. The Score and the Roster (Ninth Vault). The old rite (Orrin, the overdue crew at the Gate, or a restored Codex). The Tuner, so singers can come home; without it they burn like Orrin's. Volunteers from as many peoples as will come, because a new people's first verse is worth a thousand old ones: every alliance the captain has made is a shift, and the Unbound have to be asked, not told. The consent of the dead: the Echo's wire opened through the whole song, so the kept can talk to each other, change, and choose to stay and sing or be let go. That's the real repair, and it's what Mercy Seven prescribed in one line: put them in a room together, let them talk. A verse that grows never gets old, so the Choir never has to take anyone again. Finally, the words at the board, with Voss beside the captain if she's there: 'I relieve you.' And the Cantor, after a hundred thousand years and seven months: 'We stand relieved.' If Factor Crane has been won over she draws it up as a contract, the first thing anyone has ever signed with the Choir, and it will never be broken, only outlived. What it costs: many of the dead choose to go, and that's a second loss to live through, this time with goodbyes. The Keepers have to accept that what's preserved will change, which is the end of their faith. The first watch may never come home, and who stands it (Voss, Cael, Ione, Oskar, Orsolya's idiots, Okonkwo, the captain) is the last big choice. And it's forever: every people, every generation, sends singers, and some of them sit down. The first argument of the new council, about whether anyone can be made to go, never really ends. Afterward: the Beacon changes for the first time since before there were people: CREW ABOARD. PASS WITH CARE. The silver stops hunting. Some of the machines stay on, some, told at last that they may stop, simply stop, and some leave for somewhere no one has charted. The wires open, and a twelve-year-old who has checked every manifest for a year gets a call from her dad. The fleet builds a town in the empty berths, with schools, arguments and a bar run by a very tall Veshti. The Harbor was a mistranslation, and then they made it true. Some day, years on, a young officer comes up to the board and says the words to the captain."
+    },
+    {
+      "name": "Say Good Morning",
+      "gm": "The stranger road, for a captain who's been past the lamp and can't stop thinking about it, or who has listened to Mother Orsolya too long. Everyone for a hundred thousand years has treated it as something to keep asleep. Nobody has ever tried to tell it that anyone is here. What it takes: people who've learned to be many without drowning: Ashael and the Lumen Circle (how to feel without being swallowed), the Echo (a mind that stayed plural), the Tessen children (the only native speakers), the Score rewritten from a lullaby into a greeting, Orsolya's one great working, and the whole Choir letting the song thin on purpose, which the Cantor will only do if the captain has earned more trust than anyone ever has, or forces it with the Tuner. Then someone stands at the lamp and says, in effect: you're asleep, and we aren't you, please mind your step. That's attunement or persuasion at nearly_impossible, with every ally and piece making it easier. It can't be tested first, and everyone will try to stop it: this is the one thing the Regent, the Admiral, the Abbess and the Cantor all agree on. What it costs: if it goes badly, the nearest worlds sit down on the first night and the fleet has a matter of hours. Run that as a desperate scramble for one of the other endings, not a game over. If it goes well it still costs whoever's at the lamp, who is probably never quite separate again, and the song ends, so the dead are let go, or go on with the Echo. Afterward: something the size of the sky is awake, and it's trying very hard to be careful. Nobody knows what it wants, and perhaps it doesn't either. About once a year everyone alive hears the same soft question, in no language, and the Tessen children, grown up now, are working on what it means. The Beacon has a new message, in a shaky hand: SOMEONE IS AWAKE. THEY'RE LEARNING. Nothing will ever be safe again, or lonely."
+    },
+    {
+      "name": "The Regent's Peace",
+      "gm": "If the captain signs, hides, takes the succession or simply never goes, this is how the story ends without a last stand. The fleet survives, in a Hegemony berth or on a bad colony. People marry. The shipments go on, and perhaps it's the captain who stamps them now, doing sums in a white room. Other worlds learn the chimes, and more and more of the galaxy goes off watch, so the song gets no new verses and the sleep thins faster. Silent towns start on the frontier. Eleven years later a grown-up child from Tessen finds the captain and asks if they're ready now. If the player has a story left in them, the road is still open, at worse odds. If not, let them have those years, and make them good ones."
+    }
+  ]
+}

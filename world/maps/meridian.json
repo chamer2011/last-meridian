@@ -1,0 +1,887 @@
+{
+  "_help": [
+    "Each place's levels are in a file named after it, and each room is its own level, drawn in characters, which you can edit like a picture. These instructions are for all of them. Restart the game after changing a file.",
+    "In a level's plan: # is a wall, + is a door inside the level, and @ is where the captain stands when the story puts them here. The floor setting says which characters are floor. Any other mark is scenery, which nobody can walk through.",
+    "A capital letter is one of the level's people, a small letter is one of its things, and a digit is one of its exits. Move a letter to move them. A letter that isn't listed is a mistake, and digits that aren't listed are just scenery.",
+    "exits say which level each one goes to, and which exit there you come out of (via). They should match up in both directions.",
+    "An exit with closed in it can't be walked through until the story has taken the captain through it. closed.look says why it's closed, and closed.use goes to the story when the player asks at it.",
+    "A person's asks are what the player can click to say to them first, and greeting, if there is one, is how they look when you come over. A thing's look is what the player reads for free, and its use goes to the story as the player's action. A thing with an item in it can't be used again while you're carrying one.",
+    "desc is what the player reads about the room, so keep the place file's secrets out of it. writing is words painted or chalked on the level, labels are the room names on it, and colors are the level's colors. writing and labels use column and row numbers, counted from 0 at the top left of the plan.",
+    "aliases are the other names the game master might use for a room, so that the map follows the story.",
+    "overview is the map of the whole place, which opens from the button beside the level. title is what that button says.",
+    "What everyone says in a talk, and how they look when you come over, is in talk in world/rooms.json. A place's file can have a talk of its own to change any of it."
+  ],
+  "name": "CFS Meridian",
+  "start": "bridge",
+  "levels": {
+    "bridge": {
+      "name": "The Bridge",
+      "aliases": [
+        "bridge",
+        "helm",
+        "ready room"
+      ],
+      "floor": "._",
+      "colors": {
+        "floor": "#24496b",
+        "walls": "#5f8fb8",
+        "scenery": "#8ec5ff",
+        "writing": "#cfe8ff"
+      },
+      "plan": [
+        "                 ############################                 ",
+        "            #####   *     '      *     '   * #####            ",
+        "        #####   '      *      '       *     '    #####        ",
+        "     ####======================v=====================####     ",
+        "   ##....................................................##   ",
+        "  ##...................[==============]...................##  ",
+        " ##............................P...........................## ",
+        "##.............................................[=====]d.....##",
+        "##...::::::::::::::..............................I..........##",
+        "##...:_[====]_____:................a[======]................##",
+        "##...:___L__________......r...(c)......V....................##",
+        "##...:____________:...........RMU.........####################",
+        "##...::::::::::::::.......................#.................##",
+        "##........................................+.....[==]...l....##",
+        "##............................@...........#.................##",
+        "##........................................#.................##",
+        "#########2####################1###############################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE BRIDGE",
+          "at": [4, 5]
+        },
+        {
+          "text": "SENSOR PIT",
+          "at": [7, 8]
+        },
+        {
+          "text": "READY ROOM",
+          "at": [44, 12]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "names",
+          "via": "1"
+        },
+        "2": {
+          "to": "crawlways",
+          "via": "3"
+        }
+      },
+      "people": {
+        "V": {
+          "id": "voss",
+          "label": "Voss",
+          "asks": [
+            "What's our real situation, Commander?",
+            "Is there anything I should be worried about?"
+          ]
+        },
+        "P": {
+          "id": "pell",
+          "label": "Pell",
+          "asks": [
+            "How's she handling, Ensign?",
+            "When did you last sleep?"
+          ]
+        },
+        "I": {
+          "id": "iven",
+          "label": "Sorel",
+          "asks": [
+            "Anything on comms, Lieutenant?",
+            "You look like you could use a break."
+          ]
+        },
+        "L": {
+          "id": "lira",
+          "label": "Vey",
+          "asks": [
+            "What are the sensors showing, Ensign?",
+            "How are you holding up in the pit?"
+          ]
+        },
+        "R": {
+          "id": "reddick",
+          "label": "Reddick",
+          "asks": [
+            "How long have we really got, Captain?",
+            "Is there anything a hand can do?"
+          ]
+        },
+        "M": {
+          "id": "marchetti",
+          "label": "Marchetti",
+          "asks": [
+            "Where are we going next, Captain?",
+            "How are the guns holding up?"
+          ]
+        },
+        "U": {
+          "id": "lund",
+          "label": "Lund",
+          "asks": [
+            "What does the council want, Captain?",
+            "May I tell you something I've seen?"
+          ]
+        }
+      },
+      "things": {
+        "c": {
+          "name": "The captain's chair",
+          "look": "The seat's been patched with cargo webbing, and one armrest still has the last captain's thumb worn into it. It's yours now. Everyone on the bridge pretends not to watch you sit in it.",
+          "use": "I sit down in the captain's chair and ask the bridge for a status.",
+          "lookOther": "The seat's been patched with cargo webbing, and one armrest still has the last captain's thumb worn into it. It isn't yours, and everyone on the bridge would notice if you got any closer.",
+          "useOther": "I take a closer look at the captain's chair, while nobody's watching."
+        },
+        "r": {
+          "name": "Cracked repeater",
+          "look": "A tactical repeater with a crack from corner to corner. It still works if you read around the split, and nobody has time to replace it.",
+          "use": "I try to get a clean long-range picture out of the cracked repeater."
+        },
+        "l": {
+          "name": "Ready room locker",
+          "look": "The old captain's locker, just inside the ready room, with a private seal still on it. Nobody's opened it since the Fall, or nobody's admitted to it.",
+          "use": "I go into the ready room and try the old captain's sealed locker."
+        },
+        "d": {
+          "name": "Data chip in the comms tray",
+          "item": "data_chip",
+          "look": "An unlabeled, encrypted data chip, left in the comms tray. Someone would pay to read it, or pay more to destroy it.",
+          "use": "I pick up the unlabeled data chip from the comms tray and ask whose it is."
+        },
+        "a": {
+          "name": "The plot table",
+          "look": "Forty-one green dots, and a few that flicker. Someone keeps wiping the glass where the Beacon's bearing would be, and it keeps leaving a mark.",
+          "use": "I lean over the plot table and ask for a read on the formation."
+        },
+        "v": {
+          "name": "The forward viewport",
+          "look": "Stars, and the running lights of the ships nearest you. It's the coldest place on the ship, and everyone on the bridge has decided not to stand next to it.",
+          "use": "I stand at the viewport for a minute and look at the fleet."
+        }
+      }
+    },
+    "mess": {
+      "name": "The Long Mess",
+      "aliases": [
+        "long mess",
+        "mess hall",
+        "mess"
+      ],
+      "floor": ",",
+      "colors": {
+        "floor": "#5a4020",
+        "walls": "#a3793a",
+        "scenery": "#d9a860",
+        "writing": "#ffe0a8"
+      },
+      "plan": [
+        "##############################s###########################################",
+        "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+        "#,,[=====]k,,,,,,,-----------------------,,,---------------,,,,,,,,,,,,,,#",
+        "#,,,,,,,,,,,,,,,,,=======================w,,===============,,,,,,,,,,,,,,#",
+        "#,,,,,,,,,,,,,,,,,-----------------------,,,---------------,,,,H,,,,,,,,,#",
+        "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+        "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,S,,,,,,,,,,,,,,,,,,,,,,,,,,,,f[========],#",
+        "#,,,,,,,,,,,,,,,,,-----------------------,,,---------------,,,,,,,,,,,,,,#",
+        "#,,,x,,,,,,,,,,,,,=======================,,,===============,,,,,,,,,,,,,,#",
+        "#,,[][],O,,,,,,,,,-----------------------,,,---------------,,,,,,,,,,,,,,#",
+        "#,,,,,,,,,,,,,,,,,,,@,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+        "####################1#############################2#######################"
+      ],
+      "writing": [
+        [32, 0, "SITTINGS: 1ST 2ND 3RD 4TH"]
+      ],
+      "labels": [
+        {
+          "text": "THE LONG MESS",
+          "at": [24, 5]
+        },
+        {
+          "text": "GALLEY",
+          "at": [3, 1]
+        },
+        {
+          "text": "THE FAR TABLE",
+          "at": [60, 5]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "names",
+          "via": "2"
+        },
+        "2": {
+          "to": "names",
+          "via": "3"
+        }
+      },
+      "people": {
+        "H": {
+          "id": "halm",
+          "label": "Halm",
+          "asks": [
+            "What does the council want, Speaker?",
+            "How are the civilians taking all this?"
+          ]
+        },
+        "O": {
+          "id": "odessa",
+          "label": "Brandt",
+          "asks": [
+            "How long will the rations really last?",
+            "What are we running short of that nobody's said?"
+          ]
+        },
+        "S": {
+          "id": "seven",
+          "label": "Seven",
+          "asks": [
+            "How are the synthetics being treated aboard?",
+            "What do you need from me?"
+          ]
+        }
+      },
+      "things": {
+        "k": {
+          "name": "Soup kettle",
+          "look": "Today's soup is mostly hot water and good intentions. Someone has chalked a name on the side of the kettle.",
+          "use": "I take a bowl of today's soup and sit with whoever's eating."
+        },
+        "x": {
+          "name": "Ration crate",
+          "item": "ration_pack",
+          "look": "Sealed ration packs, counted twice a day. The quartermaster knows exactly how many are in there, and you're not sure anyone else does.",
+          "use": "I ask for a ration pack from the crate, the same as anyone else."
+        },
+        "f": {
+          "name": "The far table",
+          "look": "The one table in the hall that doesn't wobble, which is why the council meets here. The carved initials go back three captains.",
+          "use": "I sit down at the far table and make it clear that I've got time to listen.",
+          "useOther": "I sit down near the far table, and listen to what's being said there."
+        },
+        "s": {
+          "name": "Sitting rota",
+          "look": "Four sittings, nine hundred people, one hall. The rota's been rewritten so many times that the paper has gone soft.",
+          "use": "I read through the sitting rota and ask who's been going hungry."
+        },
+        "w": {
+          "name": "A wobbling table",
+          "look": "Every table in the hall wobbles but one. Someone has folded ration slips under the legs of this one, and someone else keeps taking them.",
+          "use": "I sit down at the wobbling table with whoever's there, and ask how they're doing."
+        }
+      }
+    },
+    "engineering": {
+      "name": "Engineering",
+      "floor": ":",
+      "aliases": [
+        "Engineering and the Aft Holds",
+        "engine room",
+        "reactor room"
+      ],
+      "district": "Engineering and the Aft Holds",
+      "colors": {
+        "floor": "#5a2a18",
+        "walls": "#b8614a",
+        "scenery": "#ffb86b",
+        "writing": "#ffd166"
+      },
+      "plan": [
+        "##################################################################",
+        "#================================================================#",
+        "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::::::::::.-------------.:::::::::::::::::::::b[||||||||||||]:::#",
+        "#::::::::.'   _________   '.:::::::::::::::::::::::::::::::::::::#",
+        "#:::::::/   .'  *****  '.   \\e:::::::::::::::::::::::::::::::::::#",
+        "#::::::|    |  *******  |    |::M::::::::::::::::::::::::::::::::#",
+        "#::::::|    |  *******  |    |::::::::::::::::::::::::::|::::::::#",
+        "#:::::::\\   '.  *****  .'   /:::::::::::::::::::::::::::|::::::::#",
+        "#::::::::'.   ---------   .'::::::::::::::::::::::::::::|::::::::g",
+        "#::::::::::'-------------'::::::::::::::::::::::::::::::|::::::::#",
+        "#:::::::::::::::::::::::::::::::::::::::::::::::::::::::|::::::::#",
+        "1:::::::::::::::::::::::::::::::::::[=======]t::::::::::|::::::::#",
+        "#:::::::@:::::::::::::::::::::::::::::::::::::::::::::::|::::::::#",
+        "#::T:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "##################################################2###############"
+      ],
+      "writing": [
+        [30, 1, "DO NOT TOUCH. THIS MEANS YOU, SIR."]
+      ],
+      "labels": [
+        {
+          "text": "ENGINEERING",
+          "at": [33, 3]
+        },
+        {
+          "text": "CANNON CAPACITORS",
+          "at": [47, 4]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "names",
+          "via": "4"
+        },
+        "2": {
+          "to": "aft",
+          "via": "1"
+        }
+      },
+      "people": {
+        "M": {
+          "id": "marrow",
+          "label": "Marrow",
+          "asks": [
+            "How's the reactor holding up, Chief?",
+            "What aren't you telling me about this ship?"
+          ]
+        },
+        "T": {
+          "id": "tobin",
+          "label": "Hask",
+          "asks": [
+            "How's the deck crew holding up, Chief?",
+            "What did my last order weigh?"
+          ],
+          "asksOther": [
+            "How's the deck crew holding up, Chief?",
+            "What's the heaviest thing you've weighed lately?"
+          ]
+        }
+      },
+      "things": {
+        "e": {
+          "name": "The reactor",
+          "look": "It's loud, it's hot, and it runs on spite and Marrow's swearing. You can feel it in your teeth from here.",
+          "use": "I ask for someone to walk me through how the reactor's really doing."
+        },
+        "b": {
+          "name": "Capacitor bank",
+          "look": "The cannon's capacitor bank, patched with three kinds of cable. The sign above it is in Marrow's handwriting, and he means it.",
+          "use": "I check over the cannon's capacitor bank with whoever's on shift."
+        },
+        "t": {
+          "name": "Tool roll on the bench",
+          "item": "tool_roll",
+          "look": "A well-kept roll of tools left out on the bench, which on this ship is practically an invitation.",
+          "use": "I borrow the tool roll from the bench."
+        },
+        "g": {
+          "name": "Reactor gauges",
+          "look": "Three gauges on the bulkhead. Two of them are taped over, and someone has written FINE on the tape.",
+          "use": "I peel back the tape on the reactor gauges and read them."
+        }
+      }
+    },
+    "aft": {
+      "name": "The Aft Holds",
+      "floor": ".",
+      "aliases": [
+        "aft holds",
+        "aft hold",
+        "the holds"
+      ],
+      "desc": "Past Engineering, where the crates stop having labels. On paper, all of this is empty.",
+      "colors": {
+        "floor": "#3d3460",
+        "walls": "#7d6fb0",
+        "scenery": "#a896d8",
+        "writing": "#d8ccff"
+      },
+      "plan": [
+        "#################################1##################################",
+        "#................................@.................................#",
+        "#.....[][][][]....[][][][]....[][][][]....%%%%%%%%.....o(0)(0)(0)..#",
+        "#.....[][][][]....[][][][]....[][][][]....%%%%%%%%......(0)(0)(0)..#",
+        "#..................................................................#",
+        "#.......................................K..........................#",
+        "#.....[][][]......%%%%%%%%%%%%%h..................[][][][][].......#",
+        "#.....[][][]......%%%%%%%%%%%%%...................[][][][][].......#",
+        "2.............................................................m....#",
+        "####..................[][][][][][]........[][].................#####",
+        "   ###................[][][][][][]........[][]................###   ",
+        "     ###....................................................###     ",
+        "       ######################################################       "
+      ],
+      "writing": [
+        [50, 0, "MANIFEST: EMPTY"]
+      ],
+      "labels": [
+        {
+          "text": "THE AFT HOLDS",
+          "at": [3, 1]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "engineering",
+          "via": "2"
+        },
+        "2": {
+          "to": "crawlways",
+          "via": "2"
+        }
+      },
+      "people": {
+        "K": {
+          "id": "tarrow",
+          "label": "Tarrow",
+          "asks": [
+            "What's your team looking for down here, Lieutenant?",
+            "Is the ship secure?"
+          ]
+        }
+      },
+      "things": {
+        "o": {
+          "name": "Coolant tanks",
+          "look": "Big coolant tanks at the back of the aft hold, sweating in the heat. There's a gap behind them, just wide enough to make you wonder.",
+          "use": "I go round and look behind the coolant tanks."
+        },
+        "h": {
+          "name": "The empty hold",
+          "look": "The manifest says this hold is empty. There's a lot of tarp in here for an empty hold.",
+          "use": "I lift the tarps and see what's actually in the aft hold."
+        },
+        "m": {
+          "name": "A manifest on a clip",
+          "look": "It says this hold has been empty since the refit. It's been signed by someone who's very sure of that, and countersigned by someone who wasn't there.",
+          "use": "I read through the manifest and ask who signed it."
+        }
+      }
+    },
+    "names": {
+      "name": "The Names Bulkhead",
+      "floor": "'",
+      "aliases": [
+        "names bulkhead",
+        "bulkhead",
+        "corridor",
+        "main corridor"
+      ],
+      "colors": {
+        "floor": "#3a3f47",
+        "walls": "#8a8f99",
+        "scenery": "#b9bdc7",
+        "writing": "#f2f2ea"
+      },
+      "plan": [
+        "######################2###############7###############3#####################",
+        "#''''''''%%%''''''''''''''''''''''''''''''''''''''''''''''''''%%''''''%%%''#",
+        "1'''''''''''''''''''''''''''''''''''''''@''''''''''''''''''''''''''''''''''4",
+        "#''''''''''''s''''''''''''''''''''''''''''''''''R''''''''''''''''''''''''''#",
+        "######5########                n             w       m       ###6###########",
+        "              #                                              #              ",
+        "              #                                              #              ",
+        "              #                                              #              ",
+        "              ################################################              "
+      ],
+      "writing": [
+        [15, 4, "D.OSEI  T.ANNEK  BOSUN RAY  L.MBEKI  OLD PETE"],
+        [15, 5, "S.ORTEGA  P.IVERS  M.KADE  J.HOLT  ENS.ROOK"],
+        [15, 6, "CPL.DANE  A.VEKEMAN  TOMAS  K.LIND  R.AMARA"],
+        [15, 7, "NOOR, AGE 6  B.TEMBO  G.FALK  I.ROSS  W.AYO"]
+      ],
+      "labels": [
+        {
+          "text": "THE NAMES BULKHEAD",
+          "at": [20, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "bridge",
+          "via": "1"
+        },
+        "2": {
+          "to": "mess",
+          "via": "1"
+        },
+        "3": {
+          "to": "mess",
+          "via": "2"
+        },
+        "4": {
+          "to": "engineering",
+          "via": "1"
+        },
+        "5": {
+          "to": "medbay",
+          "via": "1"
+        },
+        "6": {
+          "to": "crawlways",
+          "via": "1",
+          "label": "Crawlways"
+        },
+        "7": {
+          "to": "bunks",
+          "via": "1"
+        }
+      },
+      "people": {
+        "R": {
+          "id": "bastian",
+          "label": "Roe",
+          "asks": [
+            "How are people holding up, Father?",
+            "Who are you here for today?"
+          ]
+        }
+      },
+      "things": {
+        "n": {
+          "name": "The chalked names",
+          "look": "Names in chalk from the deck to the overhead, in dozens of different hands. Nobody ordered it, and nobody dares wash it.",
+          "use": "I stop at the Names Bulkhead and read the names, taking my time."
+        },
+        "w": {
+          "name": "Stub of chalk",
+          "look": "A stub of chalk on a pipe bracket, worn down to a thumbnail. Someone will need it tomorrow.",
+          "use": "I take the chalk and add a name I've been carrying."
+        },
+        "m": {
+          "name": "Old Concord medal",
+          "item": "old_concord_medal",
+          "look": "A Concord service medal, hung from a pipe under one of the names. Its ribbon has gone grey.",
+          "use": "I take down the old Concord medal and ask who it belongs to."
+        },
+        "s": {
+          "name": "Hot-bunk slate",
+          "look": "Bunk hours, traded and re-traded in a dozen hands. Nine hundred people on a ship built for three hundred, and a hot bunk is worth more than money.",
+          "use": "I read the hot-bunk slate and ask who's going without."
+        }
+      }
+    },
+    "medbay": {
+      "name": "Medbay",
+      "floor": ".",
+      "aliases": [
+        "medbay",
+        "sickbay",
+        "sick bay"
+      ],
+      "desc": "Four cots, a scan bed, and a queue that never quite ends. It smells of antiseptic and of everyone's last good day.",
+      "colors": {
+        "floor": "#1c4a52",
+        "walls": "#5fb3b3",
+        "scenery": "#a8e6e0",
+        "writing": "#e0fffb"
+      },
+      "plan": [
+        "#########################1########################",
+        "#................................................#",
+        "#..[====]|......................................q#",
+        "#................................................#",
+        "#..[====]c..................[=====]b.............#",
+        "#................................................#",
+        "#..[====]|...............A......................p#",
+        "#................................................#",
+        "#..[====]|...............@........################",
+        "#.................................#               ",
+        "#.......=================w........#               ",
+        "#.................................#               ",
+        "###################################               "
+      ],
+      "writing": [
+        [18, 12, "WAIT YOUR TURN"]
+      ],
+      "labels": [
+        {
+          "text": "MEDBAY",
+          "at": [3, 1]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "names",
+          "via": "5"
+        }
+      },
+      "people": {
+        "A": {
+          "id": "aduro",
+          "label": "Aduro",
+          "asks": [
+            "How bad is it in here, Doctor?",
+            "What's the medbay short of?"
+          ]
+        }
+      },
+      "things": {
+        "p": {
+          "name": "Emergency hull patches",
+          "item": "emergency_patch",
+          "look": "A rack of emergency hull patches, stored in the medbay because it's the one locker with a working seal.",
+          "use": "I ask the doctor if I can take one of the emergency hull patches."
+        },
+        "q": {
+          "name": "Calm tabs",
+          "item": "calm_tabs",
+          "look": "A dispenser of calm tabs with a handwritten tally taped to it. The tally is longer than you'd like.",
+          "use": "I ask the doctor for a strip of calm tabs."
+        },
+        "c": {
+          "name": "A cot with its curtain drawn",
+          "look": "A shape under a thin blanket, and a hand that doesn't move when you stop beside it. The chart at the foot of the cot has been filled in very neatly.",
+          "use": "I read the chart on the curtained cot and ask how they're doing."
+        },
+        "b": {
+          "name": "The scan bed",
+          "look": "The medbay's one working scanner. Its log has a lot of entries at three in the morning.",
+          "use": "I ask the doctor to run me through the scan bed."
+        },
+        "w": {
+          "name": "The queue",
+          "look": "A bench for six, with eleven people on it. Nobody's complaining, which worries you more than if they were.",
+          "use": "I sit down on the bench with the queue and ask what brought them here."
+        }
+      }
+    },
+    "crawlways": {
+      "name": "The Crawlways",
+      "aliases": [
+        "crawlways",
+        "crawlway",
+        "crawlspace",
+        "crawlspaces"
+      ],
+      "floor": "~",
+      "colors": {
+        "floor": "#5c4520",
+        "walls": "#7a6a3f",
+        "scenery": "#c48a3a",
+        "writing": "#e8d48a"
+      },
+      "plan": [
+        "#################################1##################################",
+        "#~~~~~~~~~~~~~~~~#=#=#=#=#=#=#~~~~~~~~~~~~~#=#=#=#=#~~~~~~~~~~~~~~~#",
+        "#~~~~~~~~~~~~~~~~#############~~~~~~~~~~~~~#########~~~~~~~~~~~~~~~#",
+        "3~~~~#########~~~#############~~~#######~~~#########~~~#########~~~#",
+        "#~~~~#=======#~~~#############~~~#=====#~~~#########~~~#=======#~~~#",
+        "#~~~~#########~~~#####~~~~~~~~~~~~~~~~~~~~~~~~######~~~#########~~~#",
+        "#~~~~#########~~~#####~~~~~~~~~~~~~~~~~~~~~~~~######~~~#########~~~#",
+        "#~~~~#########~~~#####~~~~~~~N~~~~~~~~~%%%%~~y######~~~#########~~~#",
+        "##u###########~~~#####~~~~~~~~~~~~~~~~~%%%%~~~######~~~#########~~~#",
+        "##############~~~#####~~~~~~~~@~~~~~~~~~~~~~~~######~~~#########~~~#",
+        "##############~~~###############~~~#################~~~#########~~~#",
+        "##############~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#",
+        "##############~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~2",
+        "########################################z###########################"
+      ],
+      "writing": [
+        [4, 8, "DON'T"],
+        [42, 13, "FRAME 30"]
+      ],
+      "labels": [
+        {
+          "text": "THE CRAWLWAYS",
+          "at": [24, 5]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "names",
+          "via": "6"
+        },
+        "2": {
+          "to": "aft",
+          "via": "2"
+        },
+        "3": {
+          "to": "bridge",
+          "via": "2"
+        }
+      },
+      "people": {
+        "N": {
+          "id": "naomi",
+          "label": "Cass",
+          "asks": [
+            "What's the word in the crawlways?",
+            "What'll it cost me to find something out?"
+          ]
+        }
+      },
+      "things": {
+        "y": {
+          "name": "Warm bedrolls",
+          "look": "Bedrolls wedged into the warm stretch of duct, each one somebody's whole home. It smells of coolant and sleep.",
+          "use": "I crouch down by the bedrolls and ask who's sleeping here."
+        },
+        "u": {
+          "name": "Number two duct",
+          "look": "Someone has chalked DON'T on the hatch of the number two duct, and nothing else. If you hold your breath, there's a faint sound behind it.",
+          "use": "I put my ear to the number two duct and listen."
+        },
+        "z": {
+          "name": "Frame Thirty",
+          "look": "A frame marker stenciled 30, and beside it a duct panel that's been opened recently. There's fresh paint on the screws.",
+          "use": "I open the duct panel beside Frame Thirty."
+        }
+      }
+    },
+    "bunks": {
+      "name": "The Hot Bunks",
+      "aliases": [
+        "hot bunks",
+        "bunks",
+        "the racks",
+        "crew quarters",
+        "quarters",
+        "the cabins",
+        "cabins",
+        "officers' cabins"
+      ],
+      "desc": "Built for a third of the people who sleep here, so every rack is shared by shifts, and a bunk is never cold. The few cabins at the far end have doors, which makes them the most envied rooms on the ship.",
+      "floor": ";",
+      "colors": {
+        "floor": "#3f3a24",
+        "walls": "#8f8656",
+        "scenery": "#c9bd82",
+        "writing": "#f5ecc4"
+      },
+      "plan": [
+        "####################1###################################################",
+        "#;;;;;;;;;;;;;;;;;;;@;;;;;;;;;;;;;;;;;;;;#;;;;;;;;;#;;;;;;;;;#;;;;;;;;;#",
+        "#;;[=][=][=][=][=][=];t;[=][=][=][=][=];;#;[];;;;;;#;[];;;;;;#;[];;;;;;#",
+        "#;;[=][=][=][=][=][=];;;[=][=][=][=][=];;#;;;;;;;;;#;;;;;;;;;#;;;;;;;;;#",
+        "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#####+#########+#########+#####",
+        "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
+        "#;;[=][=][=][=][=][=];;;[=][=][=][=][=];;+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
+        "#;;[=][=][=][=][=][=];h;[=][=][=][=][=];;#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#",
+        "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#####+#########+#########+#####",
+        "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#;;;;;;;;;#;;;;;;;;;#;;;;;;;;;#",
+        "#;;[=][=][=][=][=][=];;;[=][=][=][=][=];;#;[];;;;;;#;[];;;;;;#;[];;;;;;#",
+        "#;;[=][=][=][=][=][=];p;[=][=][=][=][=];;#;;;;;;;;;#;;;;;;;;;#;;;;;;;;;#",
+        "#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#;;;;;;;;;#;;;;;;;;;#;;;;;;;;;#",
+        "########################################################################"
+      ],
+      "writing": [
+        [44, 1, "VOSS"],
+        [54, 1, "TARROW"],
+        [64, 1, "HALM"],
+        [44, 12, "SOREL"],
+        [54, 12, "BRANDT"],
+        [64, 12, "FR. ROE"]
+      ],
+      "labels": [
+        {
+          "text": "THE HOT BUNKS",
+          "at": [3, 1]
+        },
+        {
+          "text": "CABINS",
+          "at": [54, 6]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "names",
+          "via": "7"
+        }
+      },
+      "people": {},
+      "things": {
+        "t": {
+          "name": "A warm bunk",
+          "look": "Someone got out of this rack a minute ago, and someone else is already waiting beside it with their boots in their hand. It's never had time to go cold.",
+          "use": "I ask whoever's waiting by the warm bunk how long they've been on their feet."
+        },
+        "h": {
+          "name": "A sack under a rack",
+          "look": "A canvas sack, shoved under a lower bunk. It's far heavier than it looks, and when you nudge it with your boot, it clinks like a great many washers.",
+          "use": "I ask whose sack this is, and what's in it."
+        },
+        "p": {
+          "name": "A photograph in a rack frame",
+          "look": "A family on Aurelis, all of them squinting into the sun, tucked into the rack frame where someone can see it lying down. There's a date on the back, and it's the last week of the Concord.",
+          "use": "I ask the nearest sleeper whose photograph this is."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Deck plan",
+    "plan": [
+      "                    #################################################         ",
+      "                 #######################################################      ",
+      "              #########,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,##::::::::::::::##    ",
+      "           ##.........#,,,,=======,,,,,=======,,,,,,,,,,##::::(*****)::::##   ",
+      "        ##............#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,##::::(*****):::::##  ",
+      "      ##......====....#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,##::::(*****):::::##  ",
+      "    ##................#,,,,=======,,,,,=======,,,,,,,,,,##::::(*****)::::::## ",
+      "  ##..................#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,##:::::::::::::::::## ",
+      " ##..==...............########+#################+#########::::::::::::::::::##",
+      "##......|.............+''''''''''''''''''''''''''''''''''+:::[||||]:::::::::##",
+      "##......|.............+''''''''''''''''''''''''''''''''''+::::::::::::::::::##",
+      " ##..==...............######+##;;;;;;;;;;;+;;;;;;;;;;;;;;#########+###########",
+      "  ##..................#--------------#~~~~~~~~~~~~~~~~~~~#_________________## ",
+      "    ##................#--==---==-----#~~~~~~~~~~~~~~~~~~~+____________(0)__## ",
+      "      ##......====....#--------------#~~####~~######~~####______[][]__%%__##  ",
+      "        ##............#--==---==-----#~~####~~######~~####______[][]__%%__##  ",
+      "           ##.........#--------------#~~####~~######~~####__________(0)__##   ",
+      "              ######+#################~~####~~######~~####______________##    ",
+      "                 ###~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~###############      ",
+      "                    #################################################         "
+    ],
+    "floors": {
+      ".": "bridge",
+      ",": "mess",
+      ":": "engineering",
+      "_": "aft",
+      "'": "names",
+      "-": "medbay",
+      "~": "crawlways",
+      ";": "bunks"
+    },
+    "rooms": [
+      {
+        "level": "bridge",
+        "at": [12, 4],
+        "text": "THE BRIDGE"
+      },
+      {
+        "level": "mess",
+        "at": [36, 4],
+        "text": "THE LONG MESS"
+      },
+      {
+        "level": "engineering",
+        "at": [60, 2],
+        "text": "ENGINEERING"
+      },
+      {
+        "level": "names",
+        "at": [27, 9],
+        "text": "THE NAMES BULKHEAD"
+      },
+      {
+        "level": "medbay",
+        "at": [24, 12],
+        "text": "MEDBAY"
+      },
+      {
+        "level": "crawlways",
+        "at": [40, 13],
+        "text": "THE CRAWLWAYS"
+      },
+      {
+        "level": "aft",
+        "at": [60, 17],
+        "text": "AFT HOLDS"
+      },
+      {
+        "level": "bunks",
+        "at": [32, 11],
+        "text": "THE HOT BUNKS"
+      }
+    ]
+  }
+}

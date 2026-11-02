@@ -1,0 +1,54 @@
+{
+  "title": "Mutiny on the Ashgrove",
+  "kind": "job",
+  "places": [
+    "fleet"
+  ],
+  "minLevel": 4,
+  "after": null,
+  "people": [
+    "voss",
+    "tarrow",
+    "halm"
+  ],
+  "factions": [
+    "fleet"
+  ],
+  "lead": "The crew of the CFS Ashgrove have locked their captain in her own brig, and they've sent you a very polite message asking you to confirm their bosun in her place. She sealed a burning deck with thirty-one people on it, and they'd like you to say she was wrong.",
+  "anyone": "The crew of the CFS Ashgrove have locked their captain in her own brig. She sealed a burning deck with thirty-one people on it, they've sent a very polite message to the Meridian asking for their bosun to be confirmed in her place, and every ship in the fleet is watching.",
+  "gm": {
+    "truth": "Captain Ines Varga sealed Deck Four during a fire to save the ship, and thirty-one people died. Bosun Caleb Reth, whose partner was among them, led the crew in taking the ship: six hundred aboard, plus a marine detachment that hasn't picked a side. Every ship in the fleet is watching. Reinstate her by force and the captain's a butcher. Confirm Reth and mutiny works. The first twist is in the fire log: Varga held that seal forty seconds past protocol, gambling the whole ship to get nine more people out, and she has told no one, because she thinks of those forty seconds as a failure. The second twist: she arranged the mutiny. Reth thinks he overpowered her, but she left the keys where he'd find them. A ship that had begun to tear itself apart needed someone to blame, and she has decided it should be her. She wants to be tried and sentenced, and she wants the captain to sign it. A small faction won't wait for that, and plans to put her out of a lock tonight.",
+    "beats": [
+      "The polite message and the docking approach. The Ashgrove's guns track the Meridian. Someone on the comm keeps saying \"sir\".",
+      "Aboard: six hundred people who haven't slept, a deck still stinking of smoke and thirty-one names chalked on a bulkhead. Reth is young and grief-sick, and he's doing a good job of running the ship.",
+      "The brig. Varga sits very straight. She's glad to see the captain, and she'd like them to leave her here. If they've found the forty seconds, she asks them to keep it to themself.",
+      "Marine Sergeant Odalys Tovar says her people will follow whoever looks like they've got a plan by midnight. The lock faction moves tonight.",
+      "Judgment, in front of the whole fleet."
+    ],
+    "routes": [
+      "Walk in alone: leadership and composure, no guns, right down the middle of the ship. This is the fleet's best chance to see what the captain's made of.",
+      "Retake her by force: tactics, firearms and melee with a boarding party, and the marines if you can get them. It's quick, and it's never forgotten.",
+      "Read the logs: hacking and engineering on the fire record. What it shows could change the ship's mind, if she lets it.",
+      "Use the law: lore. The old Concord Articles let a crew petition to relieve a captain before a court of three captains, with persuasion to get both sides to accept it. It's fair, and it makes everyone wait, and waiting is the hard part tonight."
+    ],
+    "checks": [
+      "piloting:moderate to dock under their guns without looking frightened",
+      "leadership:hard to walk through that ship and come out with the crew's ear",
+      "hacking:moderate to dig the real fire log out of the ship's recorder",
+      "lore:moderate to cite the old Articles",
+      "tactics:hard to take the brig without a bloodbath",
+      "firearms:moderate to stop the lock party without killing anyone who didn't ask for it"
+    ],
+    "fights": [
+      "mutineer group at the brig door, or at the lock if the faction moves first",
+      "concord_deserter pair, hard men who joined the mutiny for reasons of their own"
+    ],
+    "outcomes": [
+      "Varga gets what she asked for: the ship heals around her sentence. A good officer goes to the Sundial's labor decks on the captain's signature, and only the captain knows about the forty seconds.",
+      "Cleared publicly: the forty seconds come out, against her wishes. The crew is ashamed and Reth surrenders. Varga gets her ship back and can't bear to look at it.",
+      "Reth confirmed: crews on other ships start asking for votes. Within a month there are three elected captains in the fleet, and the chain of command has changed for good. Some of those captains are good.",
+      "Retaken by force: the Ashgrove is in line by morning, with dead on both sides. Nobody in the fleet sends the captain a polite message again."
+    ],
+    "rewards": "The Ashgrove's marines and a service_rifle or two, or a fleet that has now seen what the captain does with force."
+  }
+}

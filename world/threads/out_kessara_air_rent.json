@@ -1,0 +1,42 @@
+{
+  "title": "Air Rent",
+  "kind": "survival",
+  "places": ["kessara"],
+  "minLevel": 1,
+  "after": null,
+  "people": ["talia", "marrow"],
+  "factions": ["drift", "fleet"],
+  "lead": "In Kessara, air is rent, and Block Nineteen is eleven days behind. The landlord's man has started closing the vents on three hundred fleet stragglers, and an old Korrun named Bettany Kell has chained herself to the main valve. She'd like a word with her captain, while she can still talk.",
+  "anyone": "In Kessara, air is rent, and Block Nineteen is eleven days behind. The landlord's man has started closing the vents on three hundred fleet stragglers, and an old Korrun named Bettany Kell has chained herself to the main valve.",
+  "gm": {
+    "truth": "Block Nineteen paid its rent every week, in cash, into Bettany Kell's hands. She's their elected block boss, and she spent all of it on tickets to board the fleet, from a very convincing printer in the warrens. She believed she was buying them out. She hasn't told them, and she's chained to that valve partly out of shame. The bailiff, an amiable man named Fitch Dunmore, isn't a monster: he's got orders, a list and a warren where every block is watching to see whether rent can be skipped. Thirty hours of air are left behind the shut vents. The only spare capacity in the rock is Block Eighteen's, and Block Eighteen has children in it too.",
+    "beats": [
+      "The block. The vents are shut, the air is already thick, and three hundred people are looking at a uniform as if it's going to fix something. Fitch Dunmore tips his hat and shows the bill.",
+      "Bettany Kell, chained up and furious, tells the captain everyone's been wronged. Somebody who looks carefully at the block's accounts, or at the ticket in her pocket, will see where the rent went.",
+      "Options narrow. Pay, and the fleet's money goes down a hole, and every block stops paying tomorrow. Cross-feed from Block Eighteen, and their air runs short by morning. Carry tanks across the rock's outer surface, and someone has to go out there.",
+      "People start to panic as the air gets bad. A rumor says the Meridian's crew have their own tanks. Someone has a wrench and is thinking about Block Eighteen's valve.",
+      "When it's over, somebody has to tell the block about the tickets, and Bettany would rather it wasn't her."
+    ],
+    "routes": [
+      "Fix it with hands: engineering to rig a scrubber from spare parts with Dunn Marrow swearing down the comm, and void_ops to haul air tanks over the outside of the asteroid.",
+      "Fix it with words: commerce and persuasion with Fitch Dunmore for a payment plan the landlord can live with, or streetwise to learn who the landlord owes and lean on them.",
+      "Hold them together: leadership and composure to keep three hundred people calm and breathing slowly through a bad night, and survival to teach them how to make the air last."
+    ],
+    "checks": [
+      "engineering:moderate to rig a scrubber from whatever's in the block",
+      "void_ops:hard to carry tanks over the asteroid's surface",
+      "commerce:moderate to get Fitch Dunmore to take a partial payment",
+      "survival:easy to teach people how to use less air",
+      "leadership:hard to stop the crowd from going for Block Eighteen's valve",
+      "awareness:moderate to notice the ticket and work out where the rent went"
+    ],
+    "fights": ["desperate_refugee if a panicking crowd rushes Block Eighteen's valve, and dock_thug if the landlord sends help. A calm voice or an open tank stops most of it."],
+    "outcomes": [
+      "If the block is saved without cutting anyone else off, the warren's small people start to tell stories about the captain. Fitch Dunmore privately thanks them for not making him do it.",
+      "If the captain cross-feeds from Block Eighteen, Nineteen lives and Eighteen has a terrible night, and there are now two blocks with a very clear idea of what fleet protection means.",
+      "If the captain pays the arrears, the money's gone, the landlord's other tenants stop paying, and the Syndicate sends a bill for the trouble.",
+      "If Bettany's secret comes out badly, she loses the block and possibly more. If it's handled kindly, she becomes fiercely loyal, and she knows exactly who sold her those tickets."
+    ],
+    "rewards": "A tool_roll or some emergency_patch kits from grateful tenants, a little fleet morale, 100 credits at most, and useful friends in Kessara's lower blocks."
+  }
+}

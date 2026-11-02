@@ -1,0 +1,43 @@
+{
+  "title": "The Clerk's Arithmetic",
+  "kind": "dilemma",
+  "places": ["bastion"],
+  "minLevel": 1,
+  "after": null,
+  "people": ["severa", "dain", "jaska", "kit"],
+  "factions": ["hegemony", "fleet"],
+  "lead": "A contract clerk at Bastion Nine slides a sheet with thirteen refugee names on it under her window, without looking up from her stamp. \"I have altered nine hundred and eighty-seven files,\" Severa Lune says. \"The inspector arrives on Thursday. I would like to reach a thousand. I would also prefer not to be shot.\"",
+  "anyone": "A contract clerk at Bastion Nine named Severa Lune has been sliding sheets of names under her window, without looking up from her stamp. She has altered nine hundred and eighty-seven files, the inspector arrives on Thursday, and she'd like to reach a thousand.",
+  "gm": {
+    "truth": "Over twenty months Severa has saved nine hundred and eighty-seven people by marking them medically unfit, already dead or Hegemony-born, so that clause 41(c) can't touch them. It's real heroism, and it has a flaw she has never hidden from herself: the quota has to balance. So she moved the names of the recently dead onto the rolls in their place. When she ran short of dead, she used living people with nobody left to complain. There have been thirty-four of them so far. They're the only names she knows by heart, and they're the only time she uses names at all. One of the thirty-four is Aran Veldt, a fleet deckhand conscripted out of the Line, now serving as a customs marine at this very fortress, who has found out why his number came up and has written to the inspector. He isn't wrong to. Commandant Dain Halloran has known about Severa for over a year and has been protecting her by losing audit requests. She has no idea, because she has never once looked up. He can't lose this one: Inspector Jaska Moor is bringing it in person, following a discrepancy that leads through Severa's window and up to his gallery. If Severa goes, Halloran goes, and whoever replaces him won't keep the Line eleven months behind quota. And someone Severa has never met keeps sending forged purchase orders through her window, buying up contracts. She calls them her favorite stamp. It's Kit Marlowe-Dace.",
+    "beats": [
+      "The Contract Hall: forty windows under a white ceiling, and Severa at hers. She's dry, terrified and precise. She wants thirteen more out before Thursday, she's stopped hiding her tracks, and she isn't asking to be rescued herself.",
+      "The Line: thousands of people in chalked lanes, and the thirteen among them. A Line Mother sizes up the captain. Nobody knows what's been done for them, and nobody's cousins know what's been done to them.",
+      "Severa slides over a second, much shorter sheet, because someone ought to read it. Thirty-four names. Aran Veldt finds the captain before the captain finds him, stands to attention and asks whether he's allowed to be angry.",
+      "Inspector Jaska Moor arrives early, with one more question. Commandant Halloran, over a very bad drink, makes it clear without saying anything that he's been doing sums too.",
+      "Thursday. Who gets out, what happens to the two lists, and who's standing there when the inspector opens the last file? For the first time, Severa looks up."
+    ],
+    "routes": [
+      "Get them out on paper: lore and hacking to rework the fortress's records with Severa, and deception to get transit passes past the gate.",
+      "Get them out by deal: commerce and persuasion with Halloran or Jaska Moor, or by finding the person behind the forged purchase orders, trading something real for thirteen contracts.",
+      "Face it openly: leadership and composure to bring Aran Veldt and Severa into the same room, then decide what the fleet owes both lists and let the people on them hear it."
+    ],
+    "checks": [
+      "hacking:hard to rework the quota records so that they balance",
+      "deception:moderate to walk thirteen people past the gate on forged passes",
+      "composure:hard to get through Inspector Moor's one more question",
+      "persuasion:moderate to get Aran Veldt to hold his evidence for a day",
+      "commerce:hard to buy out contracts at Bastion without alerting anyone",
+      "streetwise:hard to work out who's behind the forged purchase orders"
+    ],
+    "fights": ["customs_marine at the gate if the forged passes fail. Handing over paperwork and walking back to the queue is always an option, and Severa will try again."],
+    "outcomes": [
+      "If Severa reaches a thousand and escapes, Halloran faces the inspector alone, and the Line gets a much faster commandant unless the captain does something about it. Severa comes aboard, starts counting the fleet, and has nothing to do with her hands.",
+      "If the captain protects Halloran and Severa is taken, she won't name anyone, ever. The Line stays slow, for now, and the shorter sheet stays with the captain.",
+      "If Aran Veldt is given justice first, his contract and those of others on the short list can be bought out, and the whole fleet learns what mercy costs when the quota doesn't change. It's not a popular lesson.",
+      "If the captain abandons the matter, Severa is arrested on Thursday. The list of thirteen arrives on the Meridian the next week, by post, with a note saying she thought it should go to someone.",
+      "If Kit and Severa ever meet, it's one of the great awkward conversations of the age, and the fleet gains the only pair of forgers who've ever been ashamed in the same direction."
+    ],
+    "rewards": "The loyalty of Severa, Halloran or Aran Veldt, depending on what the captain does. Forged_papers from Severa's own drawer, copies of her transfers, which matter a great deal later, and fleet morale when the last thirteen walk aboard."
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "title": "The Children's Game",
+  "kind": "mystery",
+  "places": ["frontier", "haven"],
+  "minLevel": 3,
+  "after": null,
+  "people": ["tharel", "dray", "sorrel", "tessaly"],
+  "factions": ["fleet", "archive"],
+  "lead": "Archivist Tharel has been playing the same recording of some farm children skipping rope on Tessen, over and over, for three days. He says one of them has just corrected his grammar, young one, and he would very much like to meet her.",
+  "anyone": "Archivist Tharel has been playing the same recording of some farm children skipping rope on Tessen, over and over, for three days. He says one of them has just corrected his grammar, young one, and he would very much like to meet her.",
+  "gm": {
+    "truth": "The warm chamber under Tessen's Well-Head is a First Builder school. There are others, buried on habitable worlds (there's one on Korrath), and they wake when the watch has gone unrelieved too long. It teaches in the only way it can: through a slow hum in the ground water, to whichever minds are young enough to take it up. So Tessen's children have been learning First Builder, and to them it's just their secret language. The skipping game goes in strict turns for hours: one child steps out, another steps in, and if you break the turn they get upset in a way children don't. It isn't a Choir infection, and there's no silver anywhere near it. Tharel has spent two hundred years reconstructing the lattice from dead fragments, and here's a seven-year-old using a verb form nobody has spoken in a hundred thousand years, to complain about her brother. He's terrified, and he hasn't been this happy in two centuries. The children are the only living speakers of the language in the galaxy. They can read the lattice if someone thinks to show it to them: 'It says don't come here. Why did you come here?' And they're all practicing one long phrase, the lattice's last stanza, which no scholar has ever been able to read. Marshal Dey has told Elder Dray that six children are affected. It's thirty-one, her own son Emmet was the first, and they walk in their sleep to the Well-Head. Bringing a famous scholar and a fleet captain to look at those children is going to bring everyone else in known space behind them. Arc clues: tessen_children, lattice_warning, handover_note, silent_bearing, silver_visitors.",
+    "beats": [
+      "The Warm Room, or the Meridian. Tharel plays the recording, stops it, plays it. 'That, young one, is a subjunctive, and she's skipping to it.' He wants to go. He hasn't left a heated room in decades, and Thessan don't do well in the cold.",
+      "Getting a three-hundred-year-old scholar past Elder Dray, who hands visitors a hoe before they've finished saying who they are. Marshal Dey is relaxed about the whole thing: 'A little bit of a situation.' Her hand goes to her rifle when she says it.",
+      "The game. Dusk, a dirt yard and twenty kids skipping in turns. It's beautiful and exact. A child out of turn gets moved back into place, gently, by the others, and no one taught them that. Tharel sits on an upturned bucket in his heated coat. A girl on the fence tells him he's saying it wrong. He thanks her, and gets out his notebook.",
+      "The lesson. It takes days, and it's the happiest anyone has seen him. Under the schoolhouse rug, a chalk drawing keeps coming back. Someone shows the children the Beacon. They read it out as if it were a road sign. Then they ask if the captain wants the rest.",
+      "The choice. Dray wants to know the real number, and what the captain means to do about it. Reading the lattice has made these children the most valuable people alive, and the most wanted. What's owed to thirty-one kids who've been drafted by a machine that doesn't know they're kids?"
+    ],
+    "routes": [
+      "Scholar: work with Tharel (lore, science) on the grammar. A lot of what he's been getting wrong for two hundred years falls over in an afternoon. If he isn't available, the captain can do it with a recording and a very patient child.",
+      "Talker: earn Dray's trust (persuasion, leadership) with plain speech, fair dealing and a day's work, and get Sorrel to tell the truth, which takes asking twice. Getting the kids to teach you their game is easy. The adults are hard.",
+      "Doctor: examine the children (medicine). They're very healthy, and that's what's strange. Find out about the sleepwalking. Tessaly Marsh has already seen it, and she'd pay well for an hour with Emmet.",
+      "Resonant: skip with them (attunement, athletics, if you dare). There's a third presence in the game, patient like a teacher. If you manifest anything here, the stone at the Well-Head rings.",
+      "Engineer or hacker: run the recordings against Seven's fragments and the lattice (hacking, science, engineering) and build a lexicon the fleet can use without needing a child in the room. It takes weeks, and it's the kinder way."
+    ],
+    "checks": [
+      "lore:hard to follow what the children are really saying",
+      "science:moderate to match the game's rhythm to the lattice",
+      "persuasion:moderate to get the real number from Marshal Dey",
+      "medicine:moderate to see what's strange about how healthy they are",
+      "attunement:moderate to feel the teacher in the game",
+      "hacking:hard to build a lexicon from the recordings"
+    ],
+    "fights": [
+      "quiet_zealot or hegemony_hunter, only if the Quiet or a Ministry surveyor comes for the children"
+    ],
+    "outcomes": [
+      "If a child reads the lattice, it's the fastest way to learn what the Beacon says. It also brings everyone in known space to Tessen's door. Dray will never forgive it. Marshal Dey might. Tharel knows what he has done, and he stays to help guard them, on a bucket, in the cold.",
+      "If the chamber is destroyed, Dray is grateful and the fleet gets the seed vault. The kids stop sleepwalking, they're sad for a long time and can't say why, and they keep what they've learned but won't learn any more. See out_tessen_lullaby and out_tessen_marshals_count for what else is down there.",
+      "If it's left running, the kids become stranger, funnier and more competent. In the end they may be the first watch, or the interpreters at the very end, which would be the most important and the worst thing anyone could ask of them.",
+      "If the captain asks for the rest, the children sing the last stanza, and nobody on Tessen knows what it means. The captain may not either, until someone reads the Roster."
+    ],
+    "rewards": "The children's recording on a data_chip, which is worth more than anything. The tessen_seed_vault_key and grain for the fleet, if Dray comes out of this grateful. Tharel's lasting friendship."
+  }
+}

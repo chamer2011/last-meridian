@@ -1,0 +1,57 @@
+{
+  "title": "The Midnight Roll",
+  "kind": "mystery",
+  "places": [
+    "meridian",
+    "fleet"
+  ],
+  "minLevel": 5,
+  "after": null,
+  "people": [
+    "garrick",
+    "iven",
+    "lira",
+    "aduro",
+    "voss"
+  ],
+  "factions": [
+    "fleet",
+    "quiet"
+  ],
+  "lead": "Garrick Fenn storms onto your deck, which nobody has ever seen him do. Someone has been broadcasting in his voice at three every morning, reading out the names of the dead, and it's now the most popular show in the fleet.",
+  "anyone": "Someone has been broadcasting in Garrick Fenn's voice at three every morning, reading out the names of the dead, and it's now the most popular show in the fleet. Fenn is furious, and he's looking for whoever's doing it.",
+  "gm": {
+    "truth": "Lt. Iven Sorel hasn't slept in nineteen days. On a dead band, under the static, his sister Anja reads out the Tarn's crew list every night (see iven_knows_the_fist). Under her, other voices read other names. They never stop and never repeat. He has filled eleven notebooks with more than a million names, all Concord dead, and his husband Tomas is in notebook four. It's the song's patient roll. Some nights, not quite knowing he's doing it, he patches a transmitter into a spare antenna and reads the notebooks out in Garrick Fenn's cadence, because that's the voice the fleet trusts. Eight thousand people stay up to listen. Nobody else can hear the band, though a good science check finds a real carrier under it. Here's why he won't report it: the roll isn't only the dead. Twenty-three names belong to people alive in this fleet. Commander Voss is one. Several are coma patients on Anselm's Mercy. Last night the voices read a new one, and he has been trying to find a way to tell the captain, because it was the captain's. Nobody ever has to explain why the captain's name is there. If someone asks the Cantor, it says it has been keeping a place, and hopes that isn't rude.",
+    "beats": [
+      "Fenn's fury, in perfect vowels. \"This reporter\" has a recording and wants the impostor found, right up until he sees the listening figures.",
+      "Tracking the signal: it's coming from inside the Meridian. Lira can see it on her board, she has been quietly fixing his log errors for weeks, and her skin knows whose console it is. Iven is very polite, and there's a tremor in his hands.",
+      "The comms room at 0300. Eleven notebooks. He's writing with one hand and talking into a microphone in a voice that isn't his, and he doesn't look up.",
+      "The requests start. People have worked out that if the Roll reads a name, then someone, somewhere, is keeping it. A woman asks Iven if her son is in the book, and the Quiet are paying close attention. Then Fenn himself asks, with the famous voice gone small and hoarse, whether there's a name in there from Asterion.",
+      "He shows the captain the last page, and the captain's name in his shaking hand, written last night."
+    ],
+    "routes": [
+      "Trace it: hacking, science and awareness to find the transmitter and the carrier under the static. Proving there's really something there doesn't help as much as you'd think.",
+      "Help him: medicine and composure, with Aduro and calm_tabs, to make him sleep. He's terrified that if he stops, the names stop being written, so someone has to promise to keep listening. He can sleep beside Pavel Ostrov, and nobody should be comfortable about why.",
+      "Listen: attunement on the dead band. A Resonant hears it too, and it's hard to put down. It costs stress, and there's a risk of wanting to stay.",
+      "Make a deal: persuasion or commerce with Fenn. He could take over the Roll officially, as a memorial, which keeps the comfort and removes the mystery. It also gives the Quiet the biggest pulpit in the fleet."
+    ],
+    "checks": [
+      "hacking:moderate to trace the pirate signal back to the Meridian",
+      "science:hard to find the real carrier under the static",
+      "medicine:moderate to get a man nineteen days without sleep safely under",
+      "attunement:very_hard to hear the Roll and then stop listening",
+      "persuasion:moderate to stop Fenn from going public at once",
+      "composure:hard to read your own name in that notebook and not show it"
+    ],
+    "fights": [
+      "silent_one: a comms rating who has been taking Iven's second watch, and has listened far longer than Iven knew. He's at the door when the captain comes for the notebooks"
+    ],
+    "outcomes": [
+      "Iven sleeps for three days and the Roll stops. Eight thousand people lie awake at 0300 with nothing to listen to, and some of them blame the captain. He comes back on duty and never mentions it. The notebooks go in the captain's safe.",
+      "The Roll goes official: Fenn reads it nightly as a memorial. The fleet's grief has somewhere to go, petitions start to arrive about getting the dead back, and the Quiet doubles.",
+      "The notebooks are published: everyone checks. Someone finds Voss's name, and someone finds the captain's. It's the fleet's worst and most hopeful week.",
+      "They're burned: Iven rewrites them from memory. He never needed the notebooks to remember. He needed somewhere to put the names."
+    ],
+    "rewards": "A signal_scrambler from Iven's private kit, Fenn's grudging favor, and the knowledge that the captain's name is on the Roll, which can't be unknown again."
+  }
+}

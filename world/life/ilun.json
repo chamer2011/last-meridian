@@ -1,0 +1,49 @@
+{
+  "_help": "The days of the people here. The instructions are at the top of meridian.json.",
+  "people": {
+    "ione": [
+      { "at": "05:00", "doing": "walking in the gardens", "go": "@gardens" },
+      { "at": "07:00", "doing": "sitting in the hall", "go": "post" },
+      { "at": "13:00", "doing": "eating a heel of bread", "go": "@gardens" },
+      { "at": "14:00", "doing": "sitting in the hall", "go": "post" },
+      { "at": "21:00", "doing": "listening to the stones hum", "go": "post" },
+      { "at": "23:30", "doing": "asleep in a plain cell", "go": "@cells", "asleep": true }
+    ],
+    "cael": [
+      { "at": "06:00", "doing": "sweeping the cells", "go": "post" },
+      { "at": "11:00", "doing": "making the old ones laugh", "go": "@gardens" },
+      { "at": "14:00", "doing": "carrying lamp oil down the stair", "go": "@stair" },
+      { "at": "17:00", "doing": "taking his turn to sit", "go": "@hall" },
+      { "at": "21:00", "doing": "asleep in his cell", "go": "post", "asleep": true }
+    ]
+  },
+  "crowd": [
+    {
+      "names": [["Brother Ansel", 0], ["Sister Maud", 360], ["Brother Quinn", 720], ["Sister Aume", 1080]],
+      "day": [
+        { "at": "00:00", "doing": "sitting in silence", "go": "@hall", "stays": true },
+        { "at": "06:00", "doing": "tending bitter herbs", "go": "@gardens" },
+        { "at": "12:00", "doing": "eating bread in silence", "go": "@cells" },
+        { "at": "13:00", "doing": "asleep in a cell", "go": "@cells", "asleep": true }
+      ]
+    },
+    {
+      "names": [["Old Brother Tam", 0], ["Old Sister Pia", 30]],
+      "day": [
+        { "at": "06:00", "doing": "tending the lichen", "go": "@gardens" },
+        { "at": "12:00", "doing": "laughing at something", "go": "@gardens" },
+        { "at": "15:00", "doing": "tending the lichen", "go": "@gardens" },
+        { "at": "19:00", "doing": "asleep in a cell", "go": "@cells", "asleep": true }
+      ]
+    },
+    {
+      "names": [["Brother Oswin", 0]],
+      "day": [
+        { "at": "07:00", "doing": "fetching lamp oil", "go": "@stair" },
+        { "at": "11:00", "doing": "baking the week's bread", "go": "@cells", "every": 7 },
+        { "at": "14:00", "doing": "trimming the lamps", "go": "@hall" },
+        { "at": "21:00", "doing": "asleep in a cell", "go": "@cells", "asleep": true }
+      ]
+    }
+  ]
+}

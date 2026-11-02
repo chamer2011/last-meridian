@@ -1,0 +1,55 @@
+{
+  "name": "Slag Crawler",
+  "threat": 3,
+  "hp": 34,
+  "attack": 4,
+  "defense": 14,
+  "damage": [
+    4,
+    8
+  ],
+  "xp": 80,
+  "credits": [
+    0,
+    0
+  ],
+  "tags": [
+    "heavy_gravity"
+  ],
+  "motive": "hunger",
+  "desc": "A long, armored creature from the lava tubes, which eats heat and isn't fussy about whose.",
+  "weapon": "Slag-Crusted Mandibles",
+  "onHit": {
+    "energy": -1
+  },
+  "lines": {
+    "intro": [
+      "The wall of the lava tube moves. A long body of cooled slag drags itself out, and you feel the warmth go out of the air around you.",
+      "Your breath suddenly fogs, in a tunnel hot enough to cook in. Something long turns toward the warmth of you."
+    ],
+    "hit": [
+      "Mandibles crusted with slag close on your arm, and the cold runs right up to your shoulder.",
+      "Its tail whips through the heavy air and knocks your legs out from under you.",
+      "It presses its glowing underside against you, and you feel it drink the warmth from your whole side."
+    ],
+    "miss": [
+      "It strikes where you were standing, and leaves a bite-shaped hole in solid rock.",
+      "You drag yourself clear, every step heavy in this gravity, and the mandibles close behind you.",
+      "It lunges at you and overshoots, and its segments grind past you in a shower of hot grit."
+    ],
+    "crit": [
+      "It wraps around you, and everything warm in you starts to leave, and you've never been so cold."
+    ],
+    "defeated": [
+      "The glow fades along its seams, segment by segment, until you're looking at a long heap of slag.",
+      "It curls up and cracks, and the heat it stole rolls back over you in one great breath."
+    ],
+    "joins": [
+      "A seam in the rock beside you splits open, and {enemy} pours out of it, glowing."
+    ],
+    "stunned": [
+      "{Enemy} coils in on itself with its seams dimming, and loses track of you."
+    ]
+  },
+  "art": "crawler"
+}

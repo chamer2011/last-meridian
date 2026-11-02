@@ -1,0 +1,49 @@
+{
+  "_help": "The days of the people here. The instructions are at the top of meridian.json.",
+  "people": {
+    "elsbeth": [
+      { "at": "07:00", "doing": "writing up the claims register", "go": "post" },
+      { "at": "13:00", "doing": "hearing a dispute", "go": "post" },
+      { "at": "19:00", "doing": "taking one drink at the Guild's bar", "go": "post" },
+      { "at": "21:00", "doing": "writing up the claims register", "go": "post" },
+      { "at": "22:30", "doing": "gone to bed", "go": ">barge", "hidden": true }
+    ],
+    "rusk": [
+      { "at": "07:00", "doing": "checking his tethers", "go": "post" },
+      { "at": "09:00", "doing": "down in the Long Silence", "go": "@silence" },
+      { "at": "15:00", "doing": "checking his tethers", "go": "post" },
+      { "at": "19:00", "doing": "at the bar, not talking", "go": "@barge" },
+      { "at": "22:00", "doing": "asleep in his suit liner", "go": "@barge", "asleep": true }
+    ]
+  },
+  "crowd": [
+    {
+      "names": [["Diver Anouk", 0], ["Diver Brask", 20], ["Diver Nell", 40], ["Diver Oyelowo", 60]],
+      "day": [
+        { "at": "06:00", "doing": "working a claim", "go": "@claims" },
+        { "at": "12:00", "doing": "eating in a suit liner", "go": "@claims" },
+        { "at": "13:00", "doing": "working a claim", "go": "@claims" },
+        { "at": "19:00", "doing": "drinking at the barge", "go": "@barge" },
+        { "at": "22:00", "doing": "asleep on the barge", "go": "@barge", "asleep": true }
+      ]
+    },
+    {
+      "names": [["Register Clerk Fenn", 0], ["Buoy Hand Tovi", 30]],
+      "day": [
+        { "at": "07:00", "doing": "inking the register", "go": "@barge" },
+        { "at": "12:00", "doing": "setting claim buoys", "go": "@claims" },
+        { "at": "16:00", "doing": "inking the register", "go": "@barge" },
+        { "at": "21:00", "doing": "asleep on the barge", "go": "@barge", "asleep": true }
+      ]
+    },
+    {
+      "names": [["Arbiter Sunde", 0], ["Arbiter Mbatha", 0]],
+      "day": [
+        { "at": "08:00", "doing": "reading a contract, in full suit", "go": "@court" },
+        { "at": "14:00", "doing": "sitting in judgment", "go": "@court", "every": 5 },
+        { "at": "18:00", "doing": "on the way back to the barge", "go": "@barge" },
+        { "at": "22:00", "doing": "asleep on the barge", "go": "@barge", "asleep": true }
+      ]
+    }
+  ]
+}

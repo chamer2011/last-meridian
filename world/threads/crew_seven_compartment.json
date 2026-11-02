@@ -1,0 +1,51 @@
+{
+  "title": "Compartment Eleven",
+  "kind": "survival",
+  "places": [
+    "meridian"
+  ],
+  "minLevel": 4,
+  "after": "crew_tarrow_standing_order",
+  "people": [
+    "tarrow",
+    "seven",
+    "marrow"
+  ],
+  "factions": [
+    "fleet"
+  ],
+  "lead": "Lieutenant Tarrow has insisted on walking the aft sections with you and Mercy Seven to settle something once and for all, when the hull rings like a struck pan and the bulkheads slam shut on all three of you.",
+  "anyone": "Lieutenant Tarrow and Mercy Seven have been walking the aft sections together, to settle something once and for all, and the hull's been ringing like a struck pan back there.",
+  "gm": {
+    "truth": "A stray impact has sealed Compartment Eleven: a narrow pipe gallery with one hand-cranked scrubber, a dead comm panel and a warped hatch. Marrow's crew is about seven hours away. The air is good for about five, for two people breathing. Seven doesn't breathe. Seven's power cell could run the scrubber for the whole seven hours, but they'd drain to nothing, and they put their chance of waking afterward at sixty-four percent. Then the impact turns out to have jarred Tarrow's neural bridge, and her legs stop answering. Only Seven can reset it, by hand, by flashlight, with her back open. She has never let anyone touch it. She has a sidearm. The enemy here is arithmetic. There's no fight, only three people and the dark, and this is where things finally get said: the list, the Cradle, the fragments, the sister. Tarrow asks Seven what they think she'd have done to them. \"Seventy-four percent.\" \"It's higher than that.\" \"I was being polite.\"",
+    "beats": [
+      "The bang, the dark, a head count. Tarrow takes command by reflex, and then tries to stand.",
+      "The arithmetic, laid out by Seven in a pleasant voice. The captain decides who cranks, who talks and who rests.",
+      "The bridge. Seven offers and Tarrow refuses. Her breathing starts to go as well. She puts her sidearm where she can reach it, then, a while later, where she can't.",
+      "The long middle: the things people say in the dark. The captain should hear something true from each of them, and be asked something true in return.",
+      "Hour five. Seven's offer can't wait any longer. Then, faintly, the sound of Marrow swearing through four inches of hull."
+    ],
+    "routes": [
+      "Engineering and survival: get more out of the scrubber and the air, rig the pipes, slow everyone down. Void_ops to take the one patch suit and try the crawl outside the hull.",
+      "Athletics or manifestation: force the warped hatch by muscle, or bend the frame with Resonance. A big push could open it hours early, and Tarrow will be watching the captain do it.",
+      "Medicine and persuasion: help with the reset. The captain's hands hold the light. The hard part is getting Tarrow to say yes.",
+      "Composure and attunement: keep all three of you calm. Panic uses air. A Resonant can slow a room's breathing, at a price."
+    ],
+    "checks": [
+      "engineering:hard to stretch the scrubber by an hour",
+      "survival:moderate to get everyone breathing slowly and lying low",
+      "athletics:very_hard to force the warped hatch",
+      "manifestation:hard to bend the frame far enough",
+      "persuasion:hard to get Tarrow to let Seven touch her spine",
+      "composure:moderate to keep your voice steady at hour four"
+    ],
+    "fights": [],
+    "outcomes": [
+      "Tarrow lets Seven operate: she walks out of there, and has no words for it. A week later one name has been taken off the list, and she'll never say which.",
+      "Seven runs the scrubber: they go dark at hour six. When the hatch opens, Tarrow carries the chassis out herself and won't let anyone else touch it until Marrow has it on a bench. Play the sixty-four percent honestly. If they don't wake at first, Marrow won't stop trying.",
+      "Tarrow refuses: she's carried out alive with no feeling in her legs, and Aduro needs weeks to fix it. She runs security from a chair, more polite than ever, owing nobody anything.",
+      "The captain uses Resonance in front of her: if this is news to her, she now has to decide whether the captain goes on a list. She tells them so, once they've all stopped coughing."
+    ],
+    "rewards": "A private truce between Tarrow and Seven that doesn't look like one, and trust from both, which neither would ever call that."
+  }
+}

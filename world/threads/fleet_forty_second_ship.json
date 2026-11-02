@@ -1,0 +1,61 @@
+{
+  "title": "The Forty-Second Ship",
+  "kind": "job",
+  "places": [
+    "fleet",
+    "meridian"
+  ],
+  "minLevel": 3,
+  "after": null,
+  "people": [
+    "lira",
+    "tessaly",
+    "quill",
+    "pell",
+    "jaska",
+    "tannis"
+  ],
+  "factions": [
+    "fleet",
+    "drift",
+    "hegemony"
+  ],
+  "lead": "Ensign Vey has counted the fleet four times this morning and it keeps coming to forty-two. Her skin says she isn't joking, and the third-shift helm says, without quite meeting your eye, that everybody knows about the Honest Mistake.",
+  "anyone": "Ensign Vey keeps counting the fleet and getting forty-two. The third-shift helm says, without quite meeting anyone's eye, that everybody knows about the Honest Mistake.",
+  "gm": {
+    "truth": "The Honest Mistake is a Syndicate market barge that has been jumping with the fleet for seven weeks, with its transponder echoing a fleet freighter's. It sells antibiotics, liquor, real coffee, forged papers, love letters and news. Half the civilian skippers trade there. Families are selling wedding rings for medicine, and every debt goes on Mother Quill's books: in three months she'll hold the notes on a third of the fleet. Its skipper, Tessaly Marsh, is a ship's doctor and fence who turns up wherever things have just gone wrong, and honestly believes she's helping. Everyone assumes someone is selling her the jump plots. No one is. Her navigator, an old Veshti card player called Ren Ao-Sael, has simply worked out how Pell flies. She has habits nobody ever trained out of her, and she always takes the third-best lane for the same reason. He can call her next jump nine times in ten from where she made the last one. He thinks it's hilarious, and he'll sell that to anyone. Inspector Moor has been seen shopping at the market, always polite, with one more question. In the back of the barge, behind the ledger, is what it's all for: a row of cold-sleep pods, holding Tessaly's son Bas, twenty years old and half-copied, and nine others like him that she has bought or stolen off wards. She's looking for a way to bring someone back.",
+    "beats": [
+      "The count and the awkward silence, then the third-shift helm's look. Everyone knows but the captain.",
+      "Market night: strings of lights in a cargo hold, real coffee, the first music in months. The captain can go in disguise, and may be recognized by a rating who begs them not to tell.",
+      "The ledger: who owes what. A skipper has mortgaged his ship. Tessaly treats a sick child for free, then sells the father a bottle at ten times cost, all in the same five minutes. \"You'll live. What've you got?\"",
+      "How do they follow us? The hunt for a leak turns up nothing, and then Ren shows the captain with a chart and a deck of cards, gleeful. He's right.",
+      "Inspector Moor, browsing. She buys the captain a coffee, and asks how the fleet's next jump looks."
+    ],
+    "routes": [
+      "Raid it: tactics and gunnery, then boarding with firearms and melee. Seized goods would fill Aduro's shelves for a month. The Syndicate will come to collect.",
+      "Deal: commerce and persuasion with Tessaly for a price cap, a fleet tax and no more debt paper. She'll agree if Mother Quill doesn't object, and that's one more thing owed to Mother Quill.",
+      "Go undercover: deception and streetwise on market night, stealth into the back office for the ledger and what's behind it, and a card game with Ren for his notebook, or for a mortgaged ship.",
+      "Use the tell: tactics and navigation. Now that the captain knows Pell's habit, have her fly the pattern once and lead whoever's following into a trap. Or fix it, by telling a terrified twenty-year-old that her flying has a flaw that could kill everyone."
+    ],
+    "checks": [
+      "melee:moderate to win a market-night brawl with a debt collector, in front of everyone who owes one",
+      "deception:moderate to pass as a buyer on market night",
+      "commerce:hard to get a price cap out of Tessaly Marsh",
+      "stealth:hard to get into the back office and see the ledger",
+      "gunnery:hard to disable the barge without breaking what's inside",
+      "navigation:very_hard to plan a false jump that fools someone reading Pell's habits"
+    ],
+    "fights": [
+      "drift_raider crew if the barge is boarded",
+      "syndicate_collector calling in a debt on market night"
+    ],
+    "outcomes": [
+      "Raided: a month of medicine and a hard blow to Mother Quill, who is now very worried about the captain. Rook Tannis turns up within the month. People who relied on the market are furious. The raid also finds the pods, and ten half-copied people are now the captain's problem, one of them the son of the best doctor anyone ever met.",
+      "Licensed: the forty-second ship flies openly, taxed and capped. It's legal and it's ugly, and the fleet now runs partly on Syndicate goods. Inspector Moor applies for a permit.",
+      "Driven off: no more market. Antibiotics run short, the coffee's gone, and thousands of debts are still on Mother Quill's books.",
+      "Pell is told: she's shattered, spends a week unlearning it, and either comes back flying the cleanest jump of her life or loses her nerve for a while. Either way, the fleet stops being predictable.",
+      "The trap: a Hegemony shadow ship arrives at a false point, right in front of the Meridian's cannon. It works exactly once, and now Inspector Moor knows the captain knows."
+    ],
+    "rewards": "A stash of medkit and stim, a ledger_of_favors, real coffee, and perhaps a ship's mortgage won back."
+  }
+}

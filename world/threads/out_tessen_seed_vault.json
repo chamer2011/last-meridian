@@ -1,0 +1,42 @@
+{
+  "title": "The Seed Vault",
+  "kind": "survival",
+  "places": ["frontier"],
+  "minLevel": 2,
+  "after": null,
+  "people": ["dray", "grann"],
+  "factions": ["fleet"],
+  "lead": "Tessen's seed vault sits in the high badlands, forty kilometers past where the fields stop. The old keeper walked out there in the first snow and hasn't come back, and now Elder Dray has one spare key, one working crawler and twelve days to the planting. She's looking at your boots.",
+  "anyone": "Tessen's seed vault sits in the high badlands, forty kilometers past where the fields stop. The old keeper walked out there in the first snow and hasn't come back, and now Elder Dray has one spare key, one working crawler and twelve days to the planting. She's looking for someone with good boots.",
+  "gm": {
+    "truth": "The vault holds Tessen's old hardy seed, from before the warm wells: stock that grows in cold soil, without any help from anything underground. The colony needs it in case something happens to the warmth, and Steward Grann Tull would trade her own right arm for it on the Sundial, not least because half of those lines were hers before Maren Dray walked off with them, thirty-four years ago. Elder Dray knows the hardy seed is also the seed her chamber can't help or harm, and that's why she's sending someone. The keeper, a cranky old man called Aldous Rudge, did get there. So did six Concord deserters and their dying lieutenant, who ran from a bad fight, wrecked a shuttle in the badlands and walked until they found a door. Rudge let them in, because he's that kind of old man and he wasn't going to watch people freeze. They've been eating the seed. A third of the only clean seed stock on the planet has gone into a pot, to keep eight people alive, and Rudge has been measuring out each handful and writing it down. Rudge refuses to leave and refuses to let them starve. The deserters know they've been eating a colony's future, and they're ashamed of it, and they've got rifles, and they aren't going to stop. Nobody in this vault is a villain, and every handful counts.",
+    "beats": [
+      "The drive. A crawler that coughs, a white sky and a wind with teeth. The road markers stop after an hour. Something's been following in the crawler's track, and it's only the storm, until it isn't.",
+      "The storm, and the crawler dies or nearly dies. Now it's a walk, with a compass that doesn't quite agree with the shape of the land. This is the part where survival and nerve count most.",
+      "The door. It opens before the captain knocks. A gaunt young woman in a stripped Concord uniform has a rifle pointed at them, and she apologizes for it. There's soup. It smells wonderful, and the captain knows what's in it.",
+      "Aldous Rudge and his ledger, with each handful recorded. The lieutenant is dying on a cot. He'd like to know whether he outranks the captain, and if not, whether the captain can make all this someone else's fault.",
+      "Twelve days are becoming eight. What goes back down the mountain, who goes with it, and what does the captain tell Dray?"
+    ],
+    "routes": [
+      "Cross it: survival, navigation and athletics to get across forty kilometers of bad weather, with the crawler or without it, and find the vault.",
+      "Fly it: piloting and engineering to get a shuttle in during a gap in the storm or fix the crawler on the way, at the risk of adding one more wreck to the badlands.",
+      "Settle it: persuasion, medicine and leadership at the vault door, to save the lieutenant or ease his death, win the deserters over, and turn six enemies with rifles into six people who'll carry grain."
+    ],
+    "checks": [
+      "survival:moderate to keep going through a night in the open",
+      "navigation:hard to find a door on a blank white mountainside",
+      "athletics:moderate to climb the last ridge with a full pack",
+      "piloting:very_hard to land in the storm",
+      "persuasion:hard to get the deserters to lower their rifles",
+      "medicine:moderate to make the lieutenant's last days less terrible"
+    ],
+    "fights": ["concord_deserter at the vault door, only if the captain arrives shooting or threatens Rudge's ledger. They'd much rather be asked."],
+    "outcomes": [
+      "If the seed gets down the mountain, the colony has something to plant if the warm wells ever fail, and the Sundial gets a sample. Grann Tull is close to tears, and she'll deny it.",
+      "If the deserters come back with the captain, they face Tessen's anger and the fleet's law, and they bring six good rifles and a lot of shame. What they get is up to the captain: amnesty, a court or a hard hour with Lt. Tarrow.",
+      "If the deserters are killed or left behind, the seed comes home, a dead man's rank insignia comes home too, and Rudge won't ever speak to the captain again.",
+      "If the seed is lost, Dray still has the warm wells, and she now has no way out. She looks at the captain, says \"Well\", and goes on with the planting."
+    ],
+    "rewards": "The tessen_seed_vault_key, a sack of cold-hardy seed for the Sundial, a real gain in fleet food in the long term, and six people who owe the captain everything, if it goes well."
+  }
+}

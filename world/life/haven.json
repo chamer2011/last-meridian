@@ -1,0 +1,86 @@
+{
+  "_help": "The days of the people here. The instructions are at the top of meridian.json.",
+  "people": {
+    "sable": [
+      { "at": "07:30", "doing": "polishing a glass", "go": "post" },
+      { "at": "12:00", "doing": "pouring, and listening", "go": "post" },
+      { "at": "20:00", "doing": "pouring, and listening", "go": "post" },
+      { "at": "04:00", "doing": "gone to the back room", "go": ">bar", "hidden": true }
+    ],
+    "tharel": [
+      { "at": "06:00", "doing": "reading by the boiler", "go": "post" },
+      { "at": "15:00", "doing": "taking his one walk along the Row", "go": "@row" },
+      { "at": "15:45", "doing": "reading by the boiler", "go": "post" },
+      { "at": "23:00", "doing": "dozing among the crates", "go": "post", "asleep": true }
+    ],
+    "corvane": [
+      { "at": "07:30", "doing": "drafting a generous offer", "go": "post" },
+      { "at": "11:00", "doing": "making someone a generous offer", "rounds": ["@docks", "@hook"], "stop": 40 },
+      { "at": "13:00", "doing": "lunching at the Neutral Ground", "go": "@bar" },
+      { "at": "14:30", "doing": "drafting a generous offer", "go": "post" },
+      { "at": "18:30", "doing": "drinking with the right people", "go": "@bar" },
+      { "at": "22:00", "doing": "gone to his rooms", "go": ">row", "hidden": true }
+    ],
+    "mott": [
+      { "at": "05:30", "doing": "walking the berths with a slate", "go": "post" },
+      { "at": "12:30", "doing": "at the noodle hatch", "go": "@docks" },
+      { "at": "13:00", "doing": "walking the berths with a slate", "go": "post" },
+      { "at": "20:00", "doing": "settling accounts at the bar", "go": "@bar" },
+      { "at": "22:00", "doing": "walking the berths with a slate", "go": "post" },
+      { "at": "00:30", "doing": "gone home", "go": ">docks", "hidden": true }
+    ],
+    "yara": [
+      { "at": "07:00", "doing": "sitting with frightened people", "go": "post" },
+      { "at": "10:00", "doing": "preaching at the end of a dock", "go": "@docks" },
+      { "at": "13:00", "doing": "sitting with frightened people", "go": "post" },
+      { "at": "23:30", "doing": "asleep among the refugees", "go": "@hook", "asleep": true }
+    ]
+  },
+  "crowd": [
+    {
+      "names": [["Docker Pav", 0], ["Docker Renko", 60], ["Tally Clerk Ise", 0], ["Docker Bo", 420]],
+      "day": [
+        { "at": "05:30", "doing": "hauling cargo", "go": "@docks" },
+        { "at": "13:00", "doing": "in the noodle queue", "go": "@docks" },
+        { "at": "13:30", "doing": "hauling cargo", "go": "@docks" },
+        { "at": "19:00", "doing": "drinking at the Neutral Ground", "go": "@bar" },
+        { "at": "22:00", "doing": "gone home", "go": ">docks", "hidden": true }
+      ]
+    },
+    {
+      "names": [["Attache Lindqvist", 0], ["Fixer Domo", 30], ["Signals Tech Harl", 240], ["Hunter Reva", 300]],
+      "day": [
+        { "at": "11:00", "doing": "doing business in the corridor", "go": "@row" },
+        { "at": "14:00", "doing": "arguing over a card game", "go": "@bar" },
+        { "at": "18:00", "doing": "not looking at anyone, with great skill", "go": "@bar" },
+        { "at": "23:00", "doing": "gone to bed", "go": ">bar", "hidden": true }
+      ]
+    },
+    {
+      "names": [["Ama", 0], ["Old Beni", 20], ["Little Dov", 40], ["Sera", 60], ["Tobo", 80], ["Mother Ilse", 100]],
+      "day": [
+        { "at": "07:00", "doing": "in the noodle queue", "go": "@docks" },
+        { "at": "08:30", "doing": "selling something off a hook", "go": "@hook" },
+        { "at": "16:00", "doing": "looking for work on the docks", "go": "@docks" },
+        { "at": "18:00", "doing": "back at the hooks", "go": "@hook" },
+        { "at": "22:00", "doing": "asleep under a hook", "go": "@hook", "asleep": true }
+      ]
+    },
+    {
+      "names": [["Air Tech Neve", 0]],
+      "day": [
+        { "at": "08:00", "doing": "checking the scrubbers", "rounds": ["@hook", "@docks", "@row"], "stop": 40 },
+        { "at": "17:00", "doing": "arguing about filters", "go": "@docks" },
+        { "at": "19:00", "doing": "gone home", "go": ">docks", "hidden": true }
+      ]
+    },
+    {
+      "names": [["Consul Threnn", 0]],
+      "day": [
+        { "at": "10:00", "doing": "sitting under a flag", "go": "@row" },
+        { "at": "16:00", "doing": "very drunk, and stamping things", "go": "@bar" },
+        { "at": "22:00", "doing": "being helped home", "go": ">row", "hidden": true }
+      ]
+    }
+  ]
+}

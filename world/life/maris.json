@@ -1,0 +1,25 @@
+{
+  "_help": "The days of the people here. The instructions are at the top of meridian.json.",
+  "people": {
+    "lenn": [
+      { "at": "00:00", "doing": "talking to the floor", "go": "post" },
+      { "at": "06:00", "doing": "calling the elevator", "go": "@shaft", "exact": true },
+      { "at": "06:30", "doing": "talking to the floor", "go": "post" },
+      { "at": "18:00", "doing": "calling the elevator", "go": "@shaft", "exact": true },
+      { "at": "18:30", "doing": "talking to the floor", "go": "post" }
+    ]
+  },
+  "crowd": [
+    {
+      "names": [["Kelper Annik", 0], ["Kelper Joss", 15], ["Old Marit", 30], ["Young Ebb", 45], ["Kelper Teague", 60]],
+      "day": [
+        { "at": "05:30", "doing": "out on the kelp lines", "go": "@rafts" },
+        { "at": "11:00", "doing": "bargaining at slack water", "go": "@rafts" },
+        { "at": "13:00", "doing": "out on the kelp lines", "go": "@rafts" },
+        { "at": "16:00", "doing": "leaving food on the station dock", "go": "@station", "every": 7 },
+        { "at": "18:00", "doing": "mending a net", "go": "@rafts" },
+        { "at": "21:30", "doing": "asleep on the raft", "go": "@rafts", "asleep": true }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,381 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "The Pale Gate",
+  "start": "camp",
+  "levels": {
+    "camp": {
+      "name": "Rimcamp",
+      "aliases": [
+        "the camp",
+        "the huts",
+        "the logbook",
+        "the spar",
+        "rim camp"
+      ],
+      "desc": "Forty or so people in huts made of ship parts, welded to the only spar anyone's ever got a weld to hold on. Sign the log on your way in, and whoever's on duty will come and look for you, once.",
+      "floor": ".",
+      "colors": {
+        "floor": "#3e3c38",
+        "walls": "#8e887c",
+        "scenery": "#d8c8a0",
+        "writing": "#fff8e4"
+      },
+      "plan": [
+        "*          '              *              '             *            '  ",
+        "   '           *                '             *               '        ",
+        "=======================================================================",
+        "1.....................................................................#",
+        "#..[__]...[=_]...[__]....[_=_]...[__]....[=_=]...[_]...[__]...........#",
+        "#..[__]...[=_]...[__]....[_=_]...[__]....[=_=]...[_]...[__]...........#",
+        "#.....................................................................#",
+        "#.....@................[====]l...............(%%)s....................#",
+        "#.....................................................................#",
+        "#............................t........................................#",
+        "=========================================================2============="
+      ],
+      "writing": [
+        [4, 2, "SIGN THE LOG. WHOEVER'S ON DUTY WILL LOOK FOR YOU, ONCE."]
+      ],
+      "labels": [
+        {
+          "text": "RIMCAMP",
+          "at": [35, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "face",
+          "via": "1"
+        },
+        "2": {
+          "to": "walk",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "l": {
+          "name": "The logbook",
+          "look": "A thick stained book on a chain, on the only table. The columns are NAME, OUT and BACK. A lot of the lines have no BACK. Further up, someone's dated an entry next year, and it's the same hand as today's.",
+          "use": "I sign the logbook, and I read who's still out."
+        },
+        "s": {
+          "name": "The still",
+          "look": "It's the only thing in camp that everyone agrees on. Keepers, scouts, pilgrims and a very tired Hegemony researcher are all sitting round it. They all stop talking as you come up, for a slightly different reason each.",
+          "use": "I sit down at the still and buy a round."
+        },
+        "t": {
+          "name": "A tuner on a nail",
+          "item": "resonance_tuner",
+          "look": "A forked crystal, hanging by a loop of wire from a nail outside a hut. Its owner went out on a long tether, and left this behind so that someone would have it. There's a date on the tag. Nobody's sure which calendar.",
+          "use": "I ask whose forked crystal this is, and when they went out."
+        }
+      }
+    },
+    "face": {
+      "name": "The Long Face",
+      "aliases": [
+        "long face",
+        "the face",
+        "the outer surface",
+        "the ring's surface"
+      ],
+      "desc": "The ring's outer surface, kilometer after kilometer of featureless pale metal under the stars. Claim buoys and tether stakes slide off it overnight, a meter or so at a time, in the same direction.",
+      "floor": "_",
+      "colors": {
+        "floor": "#44423e",
+        "walls": "#8c887e",
+        "scenery": "#e0d8c8",
+        "writing": "#ffffff"
+      },
+      "plan": [
+        " *              .                *                .               *     .    ",
+        "      .                *                  .                *                 ",
+        "____________________________________________________________________________ ",
+        "____________________________________________________________________________ ",
+        "1___________________________________________________________________________ ",
+        "_________@__________________________________________________________________ ",
+        "____________________________________________________________________________ ",
+        "_________________________________s___________________________________________",
+        "____________________________________________________________________________ ",
+        "______________________c_____________________________________________________ ",
+        "____________________________________________________________________________ ",
+        "____________________________________________________________________________2"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE LONG FACE",
+          "at": [31, 2]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "camp",
+          "via": "1"
+        },
+        "2": {
+          "to": "throat",
+          "via": "1",
+          "closed": {
+            "look": "The inner edge of the ring, and past it, the empty space at the center. You'd want a small ship for that, and a pilot who won't look at it for too long. It's not always showing the same stars on the other side.",
+            "use": "I take a small ship off the rim, out into the Throat."
+          }
+        }
+      },
+      "people": {},
+      "things": {
+        "s": {
+          "name": "A tether stake",
+          "look": "It was driven in hard yesterday, with a mark to show where. It's moved a meter. They all have, in the same direction. Your own boots have started to feel like they're on a very slight slope.",
+          "use": "I pace out how far the tether stake has moved, and in which direction."
+        },
+        "c": {
+          "name": "Silver on the pale",
+          "item": "choir_core",
+          "look": "A silver core lying on the bare metal, exactly where it fell. It's got no marks on it, and nor has the ring. It hasn't slid. Everything else on the Face slides. A claim buoy has slid right round it.",
+          "use": "I walk out across the Face and pick up the silver core."
+        }
+      }
+    },
+    "walk": {
+      "name": "The Warden's Walk",
+      "aliases": [
+        "warden's walk",
+        "the walk",
+        "the corridors",
+        "the rim corridors"
+      ],
+      "desc": "Corridors inside the rim, wide as streets, with thin cold air. Gate Wardens pace along them on rounds that take years to complete, and they stop to look at anything new.",
+      "floor": ":",
+      "colors": {
+        "floor": "#3c3e44",
+        "walls": "#868c98",
+        "scenery": "#c0c8d8",
+        "writing": "#f4f8ff"
+      },
+      "plan": [
+        "###############################################################",
+        "#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::::||:::::::::::::::::||:::::::::::::::::||:::::::::::::::::#",
+        "#::::||:::::::::::::::::||:::::::::::::::::||:::::::::::::::::#",
+        "#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "1:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::2",
+        "#:::::::::::::::::@::::::::::::::::::::::::::::::w::::::::::::#",
+        "#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#::::||:::::::::::::::::||:::::::::::::::::||:::::::::::::::::#",
+        "#::::||:::::::::::::::::||::::::r::::::::::||:::::::::::::::::#",
+        "#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "###############################################################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE WARDEN'S WALK",
+          "at": [22, 1]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "camp",
+          "via": "2"
+        },
+        "2": {
+          "to": "cradles",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "w": {
+          "name": "Footprints in the dust",
+          "look": "There's almost no dust, and what there is has one line of prints in it, each a good deal longer than your forearm, and they're all perfectly spaced. They go on out of sight in both directions. They've been walked over and over, on the same marks.",
+          "use": "I measure the prints and wait to see who comes along them."
+        },
+        "r": {
+          "name": "A mark on the wall",
+          "look": "A small mark at no particular height, the only mark on this whole wall, and it's brand new. Somebody scratched their initials here last week. There's a Warden standing beside it. It's been looking at it for several days.",
+          "use": "I stop beside the Warden, and I look at the scratched initials with it."
+        }
+      }
+    },
+    "cradles": {
+      "name": "The Hall of Cradles",
+      "aliases": [
+        "hall of cradles",
+        "the cradles",
+        "cradles",
+        "the sealed cradles"
+      ],
+      "desc": "A long gallery on the ring's inner face, with row upon row of sealed cradles, and racks of slender pale tools beside each. Lamps burn low at the far end, as if someone's expected.",
+      "floor": ".",
+      "colors": {
+        "floor": "#443b2f",
+        "walls": "#988868",
+        "scenery": "#ffe0a0",
+        "writing": "#fff4d8"
+      },
+      "plan": [
+        "########################################################################",
+        "#......................................................................#",
+        "#..(===)/..(===)/..(===)/..(===)/..(===)/..(===)/..(===)/......i.......#",
+        "#......................................................................#",
+        "1......................................................................#",
+        "#.....@...........................................................*....#",
+        "#......................................................................#",
+        "#..(===)/..(===)/..(===)/..(===)/..(===)/..(===)t..(===)/.........*....#",
+        "#.....................c................................................#",
+        "#..............................................................g.......#",
+        "#..(===)/..(===)/..(===)/..(===)/..(===)/..(===)/..(===)/.........*....#",
+        "#......................................................................#",
+        "########################################################################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE HALL OF CRADLES",
+          "at": [26, 5]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "walk",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "c": {
+          "name": "A sealed cradle",
+          "look": "A long pale casket, sealed without a seam. It's been made to fit someone much taller than you, and something much narrower. Your breath doesn't fog on it. It's the coldest thing you've touched, and it isn't cold.",
+          "use": "I put my hand on the sealed cradle, and I listen."
+        },
+        "t": {
+          "name": "A rack of pale tools",
+          "look": "Slender tools, in sizes that go very small, all made of the same pale metal as the ring. They've been put away neatly, by someone who was planning on a long job, and meant to be back in the morning.",
+          "use": "I take one of the pale tools down from its rack."
+        },
+        "i": {
+          "name": "The lamps at the far end",
+          "look": "They burn low, and they're always burning. There's a chair, and a table, with something set out on it. You don't remember being told about this. It seems to be laid for you.",
+          "use": "I walk down to the far end, where the lamps are burning, and I look at the table."
+        },
+        "g": {
+          "name": "A ring of pale metal",
+          "item": "gate_key",
+          "look": "A pale, seamless ring, sitting on the table under the lamps. It's a good deal heavier than it looks, and it gets heavier as you pick it up. There's no dust on it.",
+          "use": "I pick up the pale ring from the table."
+        }
+      }
+    },
+    "throat": {
+      "name": "The Throat",
+      "aliases": [
+        "throat",
+        "the center of the ring",
+        "the empty space",
+        "the gate"
+      ],
+      "desc": "The empty space at the center of the ring. It's not always showing the same stars on the other side, and pilots who look at it for too long start to give very calm reports.",
+      "floor": "'",
+      "colors": {
+        "floor": "#323a5c",
+        "walls": "#606691",
+        "scenery": "#a0a8e0",
+        "writing": "#e8ecff"
+      },
+      "plan": [
+        "           #################################            ",
+        "  #######'''''''''''''''''''''''''''''''''''''#######   ",
+        "####'''''''*'''''''''''''''-''''''''''*'''''''''''''####",
+        "###''''''''''''''''''''''''''''''''''''''''''''''''''###",
+        "##''''-'''''''''''*''''''''''''''''''''''-''''''''''''##",
+        "1'''''''''''''''''''''''''''''''''''''''''''''''''''''##",
+        "##'''''''@''''''''''''''''''''''''''''''''''''s'''''''##",
+        "##'''''''''''*''''''''''''''''-'''''''''''*'''''''''''##",
+        "###''''''''''''''''''''''''b'''''''''''''''''''''''''###",
+        "####''''''-'''''''''''''''''''''''*'''''''''''''''''####",
+        "#######''''''''''''''''''''''''''''''''''''''''''#######",
+        "           #################################            "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE THROAT",
+          "at": [22, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "face",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "s": {
+          "name": "The stars on the other side",
+          "look": "They aren't the stars you came in under. You check them against the chart, and then you check the chart. Your own voice on the comm sounds very calm. You don't remember deciding that.",
+          "use": "I hold the ship steady, and I try to match those stars to a chart."
+        },
+        "b": {
+          "name": "A pale sliver, turning",
+          "item": "beacon_shard",
+          "look": "A sliver of something pale, exactly at the middle of everything, turning very slowly on nothing. Your back teeth ache. Your instruments report that it isn't there, in a very relaxed way.",
+          "use": "I bring the ship in close, and I take the pale sliver aboard."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Map of the ring",
+    "plan": [
+      "       .-----------------------------------.        ",
+      "    .'.......................................'.     ",
+      "  .'''''''''''''''''''''''''''''''''''''''''''''.   ",
+      "|:::::::::|                               |;;;;;;;;|",
+      "|:::::::::|         ,,,,,,,,,,,,,         |;;;;;;;;|",
+      "|:::::::::|         ,,,,,,,,,,,,,         |;;;;;;;;|",
+      "|:::::::::|                               |;;;;;;;;|",
+      "\\''''''''''''''''''''''''''''''''''''''''''''''''''/",
+      "   \\''''''''''''''''''''''''''''''''''''''''''''/   ",
+      "     '---------------------------------------'      "
+    ],
+    "floors": {
+      ".": "camp",
+      "'": "face",
+      ":": "walk",
+      ";": "cradles",
+      ",": "throat"
+    },
+    "rooms": [
+      {
+        "level": "camp",
+        "at": [24, 1],
+        "text": "RIMCAMP"
+      },
+      {
+        "level": "face",
+        "at": [19, 2],
+        "text": "THE LONG FACE"
+      },
+      {
+        "level": "walk",
+        "at": [1, 4],
+        "text": "WARDEN'S WALK"
+      },
+      {
+        "level": "cradles",
+        "at": [44, 4],
+        "text": "CRADLES"
+      },
+      {
+        "level": "throat",
+        "at": [21, 5],
+        "text": "THE THROAT"
+      }
+    ]
+  }
+}

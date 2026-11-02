@@ -1,0 +1,46 @@
+{
+  "_help": "The days of the people here. The instructions are at the top of meridian.json.",
+  "people": {
+    "echo": [
+      { "at": "00:00", "doing": "on every line at once", "go": "post" },
+      { "at": "18:20", "doing": "announcing the 18:40 tram", "go": "@walk", "exact": true },
+      { "at": "19:00", "doing": "on every line at once", "go": "post" }
+    ]
+  },
+  "crowd": [
+    {
+      "names": [["Senator Achterberg's Face", 0], ["Senator Moll's Face", 0], ["Senator Ilesanmi's Face", 0]],
+      "day": [
+        { "at": "00:00", "doing": "repeating the last debate", "go": "@hall", "stays": true }
+      ]
+    },
+    {
+      "names": [["Rose Drone Nine", 0], ["Rose Drone Twelve", 240]],
+      "day": [
+        { "at": "06:00", "doing": "tending the roses", "go": "@walk" },
+        { "at": "14:00", "doing": "dusting the luggage", "go": "@lounges" },
+        { "at": "20:00", "doing": "tending the roses", "go": "@walk" }
+      ]
+    },
+    {
+      "names": [["Operator Hesper", 0], ["Operator Lund", 180], ["Operator Bex", 360]],
+      "day": [
+        { "at": "00:00", "doing": "plugging calls", "go": "@exchange", "stays": true },
+        { "at": "03:00", "doing": "dozing at the board", "go": "@exchange", "asleep": true },
+        { "at": "05:00", "doing": "plugging calls", "go": "@exchange", "stays": true }
+      ]
+    },
+    {
+      "names": [["Meal Drone Four", 0]],
+      "day": [
+        { "at": "00:00", "doing": "bringing an operator a meal", "rounds": ["@exchange", "@lounges"], "stop": 90 }
+      ]
+    },
+    {
+      "names": [["The Slow Procession", 0]],
+      "day": [
+        { "at": "00:00", "doing": "passing slowly through the vaults", "go": "@wire" }
+      ]
+    }
+  ]
+}

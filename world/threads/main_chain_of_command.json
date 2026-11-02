@@ -1,0 +1,46 @@
+{
+  "title": "Chain of Command",
+  "kind": "main",
+  "places": ["meridian", "haven"],
+  "minLevel": 3,
+  "after": "main_the_old_scholar",
+  "people": ["voss", "tarrow", "naomi", "iven", "lira", "aduro", "sable", "cantor"],
+  "factions": ["fleet", "remnant"],
+  "lead": "Lieutenant Tarrow has asked to see you with the door locked. She's holding a folder, and for the first time since you've known her she doesn't seem to want to open it.",
+  "gm": {
+    "truth": "All the threads of the Navy voice converge. The overlay's call sign belongs to CFS Tarn, lost in the first hour of the Fall, and the Tarn's commanding officer was Commander Ilya Voss. She has told no one. Everyone's first conclusion: the Choir has the ship, the Beacon is bait and the XO is theirs. The evidence is excellent. She has lied for six months. She runs secret medical scans at night and wipes the logs. She ordered Lira Vey in writing not to log a contact whose transponder reads CFS Tarn. Iven Sorel hears a dead woman reading the Tarn's crew list with one name left out. A Mimic or the Cantor uses her exact words. Who else ever walked out of a boarded ship? All of it is wrong. She doesn't know why she lived. She woke to an empty ship, with her door open and silver figures at parade rest in the corridor. They made a lane to the boat bay, and one of them saluted with a face she knew. She didn't salute back. She'll tell that plainly if asked, and she'll accept arrest without protest, because that's the regulation and she half believes it herself. Her scans are clean: she's entirely human. The Cantor picks this moment to speak on the Beacon band for the first time, to the whole bridge: 'Captain. Tell the Commander it's all right. We have the deck.' It means that kindly. It's the worst thing it could have said. Sable knows more and isn't saying. Arc clues: hull_number, voss_night_scans, iven_knows_the_fist, cantor_says_captain, spared_map.",
+    "beats": [
+      "The folder. The call sign, the registry page, Voss's name. Tarrow wants six hours and has a team ready. She has never asked anyone's permission so politely.",
+      "Voss. The captain can confront her alone, on the bridge or in her cabin. She takes off her rank tabs before she sits down, and puts them on the table. Then the plain account, in about nine sentences. 'That's all of it. I don't know why. I've looked.'",
+      "It keeps coming: Iven's notebook, Lira's written order, Naomi's crawlspace testimony, Aduro's clean results. Each one looks worse than the last.",
+      "The Cantor hails the bridge, on an open band. Everyone hears it. It says 'Captain' exactly the way she does.",
+      "It gets out, through Garrick Fenn or the mess decks. A crowd gathers at the brig or the bridge hatch. Okonkwo demands that Voss come to her flag. Halm calls a vote to stop following the Beacon and accept Corvane's terms. The captain has to say something to thirty thousand people, and decide what happens to their XO."
+    ],
+    "routes": [
+      "Leadership: hold the line in public (leadership, composure). She stays in uniform or goes to the brig on the captain's word until there's proof. Tarrow's team has to be faced down (intimidation, tactics).",
+      "Medical and technical: prove what can be proved (medicine, science): she's human, and her scans are clean, and Aduro will swear to it. Recover the logs (hacking). It doesn't prove she isn't theirs. It buys time.",
+      "Resonant: touch her mind, with her permission (attunement). There's no song in her at all, only a closed door and a lot of fear. But a Resonant's word is worth little on this ship, and Tarrow will say so.",
+      "Detective: work the holes. What would a spy actually do? Why would the Choir burn its one agent by saying that on an open band? (lore, tactics, awareness) Then who moved the Tarn? A trip to Sable (commerce, persuasion) or to Prime Six.",
+      "Friend: take Iven to the medbay, get Naomi a real bunk, and listen to what people have been carrying alone (persuasion, medicine). The whole crew has been keeping pieces of this from each other for months."
+    ],
+    "checks": [
+      "leadership:hard to hold the crew together through the broadcast",
+      "intimidation:hard to stand down Tarrow's team without a shot",
+      "medicine:moderate to read her scans and see what they can and can't prove",
+      "hacking:moderate to restore the wiped logs",
+      "attunement:moderate to read Voss, with her permission",
+      "persuasion:moderate to get Iven to hand over his notebook"
+    ],
+    "fights": [
+      "mutineer if Tarrow's team or a frightened crowd moves on the brig",
+      "choir_mimic in Navy blue, if someone comes looking for the Commander"
+    ],
+    "outcomes": [
+      "If Voss is arrested, she stays aboard in the brig, the fleet calms and the bridge is weaker. She'll still go to the Tarn if the captain signs for it. If she's handed to Okonkwo, a rescue or a deal is the next job.",
+      "If the captain stands by her without proof, Tarrow may resign or act alone, the council calls the captain compromised, and Halm's vote gets a lot closer. But Voss would walk into fire for them for the rest of the story.",
+      "If she's allowed to leave, or goes on her own, she takes a small ship to find the Tarn by herself, which is a job and a chase, and she finally says 'Captain' as if she's finished deciding.",
+      "Whatever happens, faith in the Beacon cracks. Ships leave for Bastion and the Quiet gain. The one thing left to do is go and see the Tarn. Rusk's map matters now."
+    ],
+    "rewards": "Nothing you can hold. Voss's loyalty or Tarrow's respect, and the first honest conversation anyone on this bridge has had in six months."
+  }
+}

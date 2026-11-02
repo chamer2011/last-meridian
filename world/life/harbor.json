@@ -1,0 +1,16 @@
+{
+  "_help": "The days of the people here. The instructions are at the top of meridian.json.",
+  "people": {
+    "cantor": [
+      { "at": "00:00", "doing": "waiting", "go": "post" }
+    ]
+  },
+  "crowd": [
+    {
+      "names": [["A Woman in a Fleet Coat", 0], ["An Old Docker", 0], ["A Boy with a Kite", 0], ["Someone's Grandfather", 0]],
+      "day": [
+        { "at": "00:00", "doing": "sitting, facing the light", "go": "@quay", "stays": true }
+      ]
+    }
+  ]
+}

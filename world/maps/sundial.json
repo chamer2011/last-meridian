@@ -1,0 +1,409 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "The Sundial",
+  "start": "furrow",
+  "levels": {
+    "furrow": {
+      "name": "The Long Furrow",
+      "aliases": [
+        "long furrow",
+        "the furrow",
+        "the main hold",
+        "main hold",
+        "the strips",
+        "the hold"
+      ],
+      "desc": "The main hold: two kilometers of soil divided into family strips, marked out with string and old grudges. A single huge lamp crawls along the roof, making a slow false day.",
+      "floor": ".|",
+      "colors": {
+        "floor": "#4c3c24",
+        "walls": "#8e7848",
+        "scenery": "#80c050",
+        "writing": "#f0ffd0"
+      },
+      "plan": [
+        "#########################################1#################################",
+        "#%\"%\"%\"%\"%\"%\"%|%\"%\"%\"%\"%\"%\"|\"%\"%\"%\"%\"%\"%\"|%\"%\"%\"%\"%\"%|\"%\"%\"%\"%\"%\"%||%\"%\"%\"#",
+        "#%\"%\"%\"%\"%\"%\"%|%\"%\"%\"%\"%\"%\"|\"%\"%\"%\"%\"%\"%\"|%\"%\"%\"%\"%\"%|\"%\"%\"%\"%\"%\"%||%\"%\"%\"#",
+        "#.........................................................................#",
+        "#.............................................................b...........#",
+        "2.................@.......................................................3",
+        "#.........................................................................#",
+        "#.........................................................................#",
+        "#%\"%\"%\"%\"%\"%\"%|%\"%\"%\"%\"%\"%\"|\"%\"%\"%\"s\"%\"%\"|%\"%\"%\"%\"%\"%|\"%\"%\"%\"%\"%\"%||%\"%\"%\"#",
+        "#%\"%\"%\"%\"%\"%\"%|%\"%\"%\"%\"%\"%\"|\"%\"%\"%\"%\"%\"%\"|%\"%\"%\"%\"%\"%|\"%\"%\"%\"%\"%\"%||%\"%\"%\"#",
+        "#.........................................................................#",
+        "#.......t.................................................................#",
+        "################################4##########################################"
+      ],
+      "writing": [
+        [4, 0, "EVERY RATION IN THE FLEET STARTS HERE"]
+      ],
+      "labels": [
+        {
+          "text": "THE LONG FURROW",
+          "at": [26, 6]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "rail",
+          "via": "1"
+        },
+        "2": {
+          "to": "table",
+          "via": "1"
+        },
+        "3": {
+          "to": "drowned",
+          "via": "1"
+        },
+        "4": {
+          "to": "steward",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "b": {
+          "name": "A thin child with a paintbrush",
+          "look": "She's walking the rows with a tin of pollen, touching each squash flower once, and she's counting under her breath. She doesn't look up. She knows to the flower how many she's done, and how many her cousin hasn't.",
+          "use": "I ask the child with the paintbrush to show me how it's done."
+        },
+        "s": {
+          "name": "The string",
+          "look": "A line of old string, pegged out dead straight. On one side's a family with beans, and on the other's a family with barley. They moved this string four centimeters, nine years ago, and they still haven't forgiven each other.",
+          "use": "I ask both sides of the string how it came to be here."
+        },
+        "t": {
+          "name": "A strip of calm tabs",
+          "item": "calm_tabs",
+          "look": "Taped to a stake in somebody's bean row, with a price in kilos of beans. It's for the ones who've been on the night watering too long. It's the first time you've seen anything here priced by anything but weight and water.",
+          "use": "I trade a kilo of beans for the strip of calm tabs."
+        }
+      }
+    },
+    "table": {
+      "name": "The Water Table",
+      "aliases": [
+        "water table",
+        "the table",
+        "the pump tower",
+        "pump tower",
+        "the allotment"
+      ],
+      "desc": "An actual table, a scarred steel slab at the foot of the pump tower, where each day's water is allotted out loud. It's the fleet's closest thing to a parliament, and it's a lot louder.",
+      "floor": ":",
+      "colors": {
+        "floor": "#2c4048",
+        "walls": "#68909c",
+        "scenery": "#80d0e0",
+        "writing": "#e0fbff"
+      },
+      "plan": [
+        "#############################################################",
+        "#:::::::::::::::::::::::::::::::::::::::::::::||==||::::::::#",
+        "#:::::::::::::::::::::::::::::::::::::::::::::||==||::::::::#",
+        "#:::::::::::::::::::::::::::::::::::::::::::::||==||p:::::::#",
+        "#:::::::::::[=====================]t::::::::::||==||::::::::#",
+        "#:::::::::::[=====================]:::::::::::||==||::::::::#",
+        "1:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
+        "#:::::@:::::::::::::::G:::::::::::::::::::::::::::::::::::::#",
+        "#:::::::::::::::::::::::::::::::::::::::::a:::::::::::::::::#",
+        "#############################################################"
+      ],
+      "writing": [
+        [3, 9, "ONE LITER, SPOKEN ALOUD, IS ONE LITER OWED."]
+      ],
+      "labels": [
+        {
+          "text": "THE WATER TABLE",
+          "at": [12, 2]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "furrow",
+          "via": "2"
+        }
+      },
+      "people": {
+        "G": {
+          "id": "grann",
+          "label": "Grann Tull",
+          "asks": [
+            "How's the harvest looking, Steward?",
+            "What does Speaker Halm owe you, exactly?"
+          ]
+        }
+      },
+      "things": {
+        "t": {
+          "name": "The scarred steel slab",
+          "look": "It's been banged on by every fist on this ship. A hundred dents, and a bright worn place at each end where the two loudest families have stood for three generations. A kid's reading out numbers at the top of her voice.",
+          "use": "I bang on the table once, and I ask to be heard."
+        },
+        "p": {
+          "name": "The pump tower",
+          "look": "A rust-streaked tower, with a pump that's older than the ship was. It runs on a rhythm that the whole hold breathes to. Nobody talks when it misses, and then everybody talks.",
+          "use": "I climb up to look over the pump."
+        },
+        "a": {
+          "name": "The allotment slate",
+          "look": "A long slate of family names and liters, in chalk. Today's numbers are lower than yesterday's. There's one family's name with a line through it, and people are looking at it without quite seeming to.",
+          "use": "I read the allotment slate and I ask about the name with the line through it."
+        }
+      }
+    },
+    "rail": {
+      "name": "The Sun Rail",
+      "aliases": [
+        "sun rail",
+        "the rail",
+        "the gantry",
+        "the lamp",
+        "the great lamp"
+      ],
+      "desc": "A gantry along the hold's roof that carries the great lamp, tended by one woman who lives up there. When it stalls, a whole section bakes while the rest goes cold.",
+      "floor": "=",
+      "colors": {
+        "floor": "#4c4020",
+        "walls": "#a89040",
+        "scenery": "#fff080",
+        "writing": "#fffff0"
+      },
+      "plan": [
+        "###########################################################################",
+        "#.   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .#",
+        "#=========================================================================#",
+        "#=========================================================================#",
+        "#===========@==========================w==================================#",
+        "#=========================================================================#",
+        "#|  |  |  |  |  |  |  |  |  |  l  |  |  1  |  |  |  |  |  |  |  |  |  |   #",
+        "#|    .-----------------------------------.      |   |  |  |  |  |  |  |  #",
+        "#|    |   ***************************     |      |   |  |  |  |  |  |  |  #",
+        "#|    '-----------------------------------'      |   |  |  |  |  |  |  |  #",
+        "###########################################################################"
+      ],
+      "writing": [
+        [3, 0, "KEEP OFF THE RAIL WHILE THE LAMP IS MOVING"]
+      ],
+      "labels": [
+        {
+          "text": "THE SUN RAIL",
+          "at": [46, 2]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "furrow",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "w": {
+          "name": "The woman on the rail",
+          "look": "She's lived up here for eleven years, with a hammock and a very large wrench. She looks at you as if you've come up from a long way down. She'd like to know if it's true about the sky.",
+          "use": "I ask the woman on the rail how things look from up here."
+        },
+        "l": {
+          "name": "The great lamp",
+          "look": "You can't look straight at it, and it's as big as a shuttle. It crawls, a meter at a time, along a rail that was never built for it. It's the whole day, for four thousand people. It's making a noise you'd worry about, on a ship.",
+          "use": "I check the rail bearings on the great lamp with a spare wrench."
+        }
+      }
+    },
+    "drowned": {
+      "name": "The Drowned Deck",
+      "aliases": [
+        "drowned deck",
+        "the hydroponics",
+        "hydroponics",
+        "hydroponics bays",
+        "the blue deck"
+      ],
+      "desc": "Hydroponics bays in warm blue half-light, with the sound of running water. It's the most peaceful place in the fleet, and it's where the Quiet come to sit.",
+      "floor": "'",
+      "colors": {
+        "floor": "#243f51",
+        "walls": "#4c88a8",
+        "scenery": "#70c0e8",
+        "writing": "#d8f4ff"
+      },
+      "plan": [
+        "#################################################################",
+        "#'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+        "#''~~~~~~~~~~~~''~~~~~~~~~~~~''~~~~~~~~~~~~''~~~~~~~~~~~~''~~~~~#",
+        "#''~~~~~~~~~~~~''~~~~~~~~~~~~''~~~~~~~~~~~~''~~~~~~~~~~~~''~~~~~#",
+        "#'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+        "1''''''''''''''''''''''''''''''''''''O''''''''''''''''''''''''''#",
+        "#'''''@'''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+        "#'''''''''''''!'!'!'!'''''''''''''q''''''''''''''''''''''''n''''#",
+        "#''~~~~~~~~~~~~''~~~~~~~~~~~~''~~~~~~~~~~~~''~~~~~~~~~~~~''~~~~~#",
+        "#''~~~~~~~~~~~~''~~~~~~~~~~~~''~~~~~~~~~~~~''~~~~~~~~~~~~''~~~~~#",
+        "#'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
+        "#################################################################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE DROWNED DECK",
+          "at": [22, 4]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "furrow",
+          "via": "3"
+        }
+      },
+      "people": {
+        "O": {
+          "id": "oskar",
+          "label": "Oskar",
+          "asks": [
+            "What do you tell the people who come here?",
+            "Would you tell me what the Quiet really want?"
+          ]
+        }
+      },
+      "things": {
+        "q": {
+          "name": "A silver token in the water",
+          "item": "quiet_token",
+          "look": "A smooth silver disc at the bottom of a tray, among the roots. The water's very clear. Somebody's put it there on purpose, for whoever comes to sit by this tray next. You're the one sitting here.",
+          "use": "I reach into the tray and pick up the silver token."
+        },
+        "n": {
+          "name": "A pack of nutrient gel",
+          "item": "nutrient_gel",
+          "look": "Made here, in a press, from whatever's come out of the trays. It's the color of the light. Everybody on the deck looks well on it. You notice that nobody's in any hurry to eat.",
+          "use": "I ask for a pack of the gel and I ask what's in it."
+        }
+      }
+    },
+    "steward": {
+      "name": "Steward's Row",
+      "aliases": [
+        "steward's row",
+        "the seed room",
+        "seed room",
+        "grann's office",
+        "the ledgers",
+        "the steward's office"
+      ],
+      "desc": "The Steward's office, the seed room and the ledgers, behind a door with a tally of past harvests cut into it. There's no mark on that door for a harvest she's missed.",
+      "floor": "_",
+      "colors": {
+        "floor": "#493a2e",
+        "walls": "#8e7458",
+        "scenery": "#d8a870",
+        "writing": "#fff0d8"
+      },
+      "plan": [
+        "###########################1################################",
+        "#__________________________________________________________#",
+        "#__[||||||||||||||]_____________|_____[][][][][][][][]_____#",
+        "#__[||||||||||||||]l____________|_____[][][][][][][][]s____#",
+        "#_______________________________|__________________________#",
+        "#_______________________________+__________________________#",
+        "#_________@_____________________|__________________________#",
+        "#_______________________________|_____[][][][][][][][]_____#",
+        "#_______d_______________________|______________r___________#",
+        "############################################################"
+      ],
+      "writing": [
+        [3, 1, "LEDGERS"],
+        [38, 1, "SEED ROOM"]
+      ],
+      "labels": [
+        {
+          "text": "STEWARD'S ROW",
+          "at": [12, 4]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "furrow",
+          "via": "4"
+        }
+      },
+      "people": {},
+      "things": {
+        "l": {
+          "name": "The ledgers",
+          "look": "Forty years of who took how much from whom, and when, in one unforgiving hand. Every family's got a page. You've got one too. It's short, and it's written in pencil, for now.",
+          "use": "I ask to see what the ledger says about the Meridian's share."
+        },
+        "s": {
+          "name": "The seed room",
+          "look": "Shelf on shelf of labeled envelopes, and the cool smell of dry earth. The Steward counts every seed that goes in and out of here herself. There's more of the future of the human race in this room than there is in the fleet's guns.",
+          "use": "I stand in the seed room and ask how much there really is."
+        },
+        "r": {
+          "name": "A stack of ration packs",
+          "item": "ration_pack",
+          "look": "The finished product, sealed and ready for the shuttle, and counted. Every ration in the fleet starts here. They'll give you one if you ask, and they'll write down that you asked.",
+          "use": "I ask for a ration pack, and I watch it go in the ledger."
+        },
+        "d": {
+          "name": "The door with the tally",
+          "look": "A heavy door with a notch cut for each harvest, in rows, going back forty years, and there's no gap. Her enemies have tried to find a gap. You run your thumb along the notches, and you can't.",
+          "use": "I count the notches on the door, and I ask how many harvests are left."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Deck plan",
+    "plan": [
+      "  ______________________________________________________________   ",
+      "/\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\\",
+      "|=================================================================|",
+      "|.................................................................|",
+      "|.................................................................|",
+      "|.................................................................|",
+      "|=================================================================|",
+      "|:::::::::::::::::::::|,,,,,,,,,,,,,,,,,,,,,|;;;;;;;;;;;;;;;;;;;;;|",
+      "|:::::::::::::::::::::|,,,,,,,,,,,,,,,,,,,,,|;;;;;;;;;;;;;;;;;;;;;|",
+      "\\_________________________________________________________________/"
+    ],
+    "floors": {
+      "\"": "rail",
+      ".": "furrow",
+      ":": "table",
+      ",": "drowned",
+      ";": "steward"
+    },
+    "rooms": [
+      {
+        "level": "rail",
+        "at": [24, 1],
+        "text": "THE SUN RAIL"
+      },
+      {
+        "level": "furrow",
+        "at": [24, 4],
+        "text": "THE LONG FURROW"
+      },
+      {
+        "level": "table",
+        "at": [3, 8],
+        "text": "THE WATER TABLE"
+      },
+      {
+        "level": "drowned",
+        "at": [25, 8],
+        "text": "THE DROWNED DECK"
+      },
+      {
+        "level": "steward",
+        "at": [47, 8],
+        "text": "STEWARD'S ROW"
+      }
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "name": "The Gilded Wheel",
+  "aliases": ["the Gilded Wheel", "Gilded Wheel", "the Wheel", "The Wheel"],
+  "desc": "A Syndicate casino station, where everything is a game and every debt is collected.",
+  "market": ["stim", "calm_tabs", "smugglers_coat", "needle_rifle", "ghostweave", "slicer_rig", "ledger_of_favors", "forged_papers", "wheel_marker"],
+  "faction": "drift",
+  "fleet": false,
+  "rest": false,
+  "dangerous": false,
+  "hidden": false,
+  "gm": {
+    "feel": "Perfume, warm brass and costly smoke, under gold light that never changes, because there are no clocks or windows on the gaming decks. The whole station turns around a single enormous roulette wheel, and everyone stops to watch it once a day. Nobody here sells you anything outright: the barman offers double or nothing, the tailor flips a coin, and you can stake anything at all that a witness can describe, from a ship to a year of your life.",
+    "districts": [
+      { "name": "The Great Wheel", "desc": "A gilded wheel forty meters across, spun once a day for whatever's on the board. It's completely honest, and it's been checked, and that's what brings them in." },
+      { "name": "The Marker Exchange", "desc": "A hushed trading floor where debts are bought and sold in small brass tokens. If you hold someone's marker, you hold them, and it's all perfectly legal, for what that's worth out here." },
+      { "name": "The Cellars", "desc": "The service decks where debtors work off what they owe as cleaners, dealers and waiters. Everyone's terribly polite, and everyone's got a number of years they can tell you without looking." },
+      { "name": "The Velvet Deck", "desc": "Madame Oriel Ao-Dess's own salon, furnished for someone seven feet tall. Invitations are made in person, and no one's ever worked out how to decline one." },
+      { "name": "The Ticket Docks", "desc": "A long gallery of ships lost at the tables, each with a brass tag on its airlock. A few of them still have their crews on board, paying rent." }
+    ],
+    "people": ["oriel", "kit"],
+    "enemies": ["wheel_enforcer", "syndicate_collector", "dock_thug", "hegemony_hunter"],
+    "items": ["wheel_marker", "ledger_of_favors", "data_chip", "remnant_codes"],
+    "complications": [
+      "A dealer has been caught cheating in your favor, and it wasn't your doing, and the House wants to talk to you about it.",
+      "Someone in your crew has placed a bet you didn't authorize, and the stake was something of yours.",
+      "A House Enforcer has come to collect on a marker that was sold to someone you've just crossed.",
+      "You're told that leaving before settling your bar tab counts as welshing, and the tab has been doubling since Tuesday.",
+      "The upper deck's air has started to make your whole party feel extremely lucky.",
+      "A Hegemony officer on a winning streak has just bought a debt that gives him the legal right to board one of your ships."
+    ],
+    "secrets": [
+      "Madame Oriel holds a marker on Mother Quill's fuel depot, won in a single hand thirty years ago and never called. She has also bet the whole station, at long odds, on the fleet reaching the Beacon, with Quill on the other side. So she's on the captain's side, and she'd cheerfully ruin them if it improved the odds.",
+      "The games really are honest, but the air on the upper decks isn't. A faint additive in the air plant makes people feel lucky and calm, and the House has been adjusting it for decades. Only the air plant's debtor crew know, and they've got nothing to gain by saying so.",
+      "One of the ships on the Ticket Docks is a Concord Remnant cutter, staked and lost by an officer who was gambling with the admiral's money. It still has its codes aboard, and the brass tag on it says it's a grain hauler."
+    ]
+  },
+  "encounters": [
+    "Kit Marlowe-Dace drops into the seat across from you, and shows you a card they've just palmed out of your own coat. They owe three people and they're owed by eight. If you'd buy their debt, you'd be owed a favor by the chief enforcer's sister, and that's only the first reason you should.",
+    "Madame Oriel Ao-Dess invites you to play one game at the Velvet Deck. She doesn't raise her voice. The stake is your next yes: whatever she next asks of you, you'll agree to it. If you win, she'll do the same for you. She's never lost, and she's in no hurry at all.",
+    "A refugee father from your fleet has lost his family's ration cards at a small table. He's got one brass marker left, and he's sure that his luck's about to turn. He asks you to play the hand for him, because he thinks that you're the kind of person it'd work for. His children are outside.",
+    "A fleet transport is sitting on the Ticket Docks with a brass tag on its airlock. Her captain staked her and lost, and eighty families are still aboard, waiting for what they've been told is a spare part. The House has been charging them rent. They ask if you've got any news about that part.",
+    "A cleaning woman in the Cellars recognizes your uniform, and she's delighted to see you. She's a Concord senator's widow, and she owes sixty-one years. She has a system that she's worked out over her years of watching, and she only needs a small stake from a friend. The dreadful thing is that the system looks sound.",
+    "A House Enforcer, expensively rebuilt, sits down next to you. He's very nice about it for the first minute. Your gunnery officer has staked their name in a card game, and lost it, and they'll need to answer to a number until it's won back. It's all in the contract, and he wants to know if you're interested in redeeming it.",
+    "An old man has lost a bet, and the stake was the right to say his late wife's name. He can't ever say it again now, and they check. He finds you at the bar, shaking. It's quite legal for someone else to say it, he says, and he'd like you to read it off this piece of paper, once, and let him hear it.",
+    "Forty refined fuel cells are on today's board at the Great Wheel, and every captain on the station wants them. Tickets are cheap, and the wheel is honest. Kit swears that there's a way to know where it'll land. Three other people have told you the same thing, and two of them work for Madame.",
+    "A drunk Hegemony auditor is on a winning streak, and he's staking the things that he's brought with him. On the table right now is the audit schedule for Bastion Nine, and with it the release of a prisoner at Vantor. He'd enjoy playing you. He's actually very good when he's drunk, and terrible when he's sober.",
+    "A ten-year-old card counter has been barred from each table on the station, and she sells tips for food. Her parents are in the Cellars, on opposite shifts. She'll play you one hand for a place on your ship. If you lose, you've got to go and tell Madame that you've seen how she does it.",
+    "Two Syndicate lieutenants want a neutral witness to a bet on whether Mother Quill will still be alive by the end of the year. It's a fair fee, and you won't have to do a thing, aside from having your name on the marker. You can see Rook Tannis across the room, raising a glass to you.",
+    "A waitress with a hundred and four years left on her debt brings you a drink you didn't order, and says under her breath to stop breathing so deep. She says it's sweet up on this deck, and that you'll want to hold your next big bet down in the Cellars. She'd like to know what you'd pay for the rest of it.",
+    "You look down at your winnings and realize that the dealer's been slipping you good cards all evening. He's sweating. He whispers that a man gave him a choice about it, and that he's got a daughter, and that he doesn't know why. Across the room, someone in very good shoes has just asked for the floor manager.",
+    "A door that's usually shut has been left ajar behind the Marker Exchange. Inside is one long wall of chalked odds, with bets from Mother Quill, the Regency and half the Syndicate, all on the survival of your fleet. Your name's at the top, with today's price next to it. A polite clerk asks if you'd care to back yourself, and how much.",
+    "A wedding party has hired the Velvet Deck. The groom's a Long Family heir, the bride's a dealer in the Cellars, and the marriage is itself a wager: if it lasts a year, the Ao-Dess pay off her debt, and if not, the groom takes her place. Both of them seem very happy. They ask you, as a passing officer, to perform the ceremony."
+  ],
+  "rumors": [
+    "The Wheel's honest. That's the terrible part. You can have it checked. A Thessan checked it for a hundred years, and he's still down in the Cellars, working off the fee.",
+    "Madame's never lost a bet. Not one. I asked her how she does it, and she bet me I couldn't guess.",
+    "Kit Marlowe-Dace owes me four hundred, owes my brother two thousand and once saved our mother's life. I don't know how you'd mark that.",
+    "You can bet anything here that a witness can describe. I saw a woman stake the color of her eyes. They were a very nice color.",
+    "Never take a drink on the house. Nothing's on the house. The house is on you.",
+    "It's one spin a day. I've seen a ship on that board. I've seen a moon. I saw a man's whole family once, and they were standing right there looking pleased, because they didn't understand the board.",
+    "They say Madame's got a marker on Mother Quill herself, thirty years old, and she's never called it. I'd give a lot to know for what. I'd give more to be somewhere else on the day she does.",
+    "The air's sweeter on the upper deck. You'll feel lucky. You aren't lucky. Hold a wet cloth to your face, and go and have a look at how you've been betting.",
+    "You can't leave owing. I knew a fellow who tried. They've got his ship on the dock, and his name on a chair, and he's got a very nice view of both.",
+    "A captain from your lot lost a whole transport at cards, with eighty families aboard. Nobody's told them yet. They think they're waiting on a part.",
+    "The Regent's own nephew is down in the Cellars carrying drinks. So they say. I've been served by a very polite young man who kept correcting my grammar, and I've left it at that.",
+    "There's a Remnant ship out on the Ticket Docks with a grain hauler's tag on it. Grain haulers don't have gun ports, friend. Grain haulers don't have gun ports that've been welded over.",
+    "If you win big, walk out through the front, with a crowd. Don't go back for your coat. People who win big and go back for their coat keep turning up in the Cellars, and they all say that they've changed their mind about leaving."
+  ]
+}

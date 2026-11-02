@@ -1,0 +1,42 @@
+{
+  "title": "One Shift",
+  "kind": "job",
+  "places": ["korrath"],
+  "minLevel": 1,
+  "after": null,
+  "people": ["hesk", "brenna", "marrow"],
+  "factions": ["clans", "hegemony", "fleet"],
+  "lead": "Warden Hesk Varr puts a pocket scale on the table, looks at your hands, and doesn't touch your contract. \"Nobody here deals with anyone who hasn't worked a shift,\" he says. \"Furnace Six starts in an hour. If you're on your feet when it ends, we'll talk. Bring gloves.\"",
+  "anyone": "Warden Hesk Varr keeps a pocket scale on the table, and he won't touch anyone's contract until he's looked at their hands. \"Nobody here deals with anyone who hasn't worked a shift,\" he says. Furnace Six starts in an hour.",
+  "gm": {
+    "truth": "The law is simple. Anyone who works a full twelve-hour shift at a Korrath furnace, under full gravity, has earned the right to be heard. They're weighed before and after, and what they lost is written in the book as what they gave. Almost no outsider ever finishes. Finishing isn't really the point, though nobody will say so: the whole crew is watching what the stranger does when it gets hard, and especially when the worker next to them stumbles. The captain's minder is Brenna Tor, a young smelter who is sharp, sarcastic and very curious about what's outside. The surprise comes around hour eight, when the captain, who has been hauling molds and breathing slag for most of a day, gets a look at what they've been casting. The hull plates are stamped with a Hegemony maker's mark. The clans deal with anyone who has worked a shift, and years ago a Hegemony quartermaster worked one, and did it well. A contract for six warship hulls was weighed and sealed before the Fall, and they're still going up the tether. The plates the captain just helped to pour will end up on ships that hunt their fleet. Varr hates that contract, and a Korrun doesn't break what's been weighed. When they ask, he doesn't flinch. \"You didn't ask,\" he says, and he weighs the words.",
+    "beats": [
+      "The scale. The captain steps on it in a heavy suit, and a clerk writes down the number. Dunn Marrow on the comm is enjoying this much more than he should be. Three times normal weight, and the first hour hasn't started.",
+      "The Long Furnaces. Rivers of slag, a noise like the end of the world, a bored foreman who's seen a lot of visitors faint, and a crew that doesn't talk. Brenna Tor shows the captain how to breathe and how to lift, and she asks a hundred questions about ships. She's convinced the Warden hates her.",
+      "The stumble. Old Dorrit, sixty years on this floor, goes down at the worst moment, with a mold half poured. Stopping means losing the shift. Everyone keeps working, and everyone sees exactly what the captain does.",
+      "The stamp on the cooling plate, in hour eight. Who's it for? The crew tells the truth when asked: they always do. The captain still has four hours left to work, on those same plates.",
+      "The second weighing. Then Varr, a book and a real conversation, with the captain's muscles shaking. What can be bought here, and at what price, and will they still sell it to the Hegemony?"
+    ],
+    "routes": [
+      "Earn it the hard way: athletics, survival and composure to stay on their feet for twelve hours, in heavy gravity, in that heat.",
+      "Work smart: engineering and awareness to find the better way to do a job the crew has been doing for three hundred years, and maybe win over a smelter who hates being wrong.",
+      "Work the room: persuasion, commerce and leadership with Varr and the crew afterward, or to bring forty of the fleet's Korrun in to do a share of the shift with the captain, which nobody has tried."
+    ],
+    "checks": [
+      "athletics:hard to keep lifting into the tenth hour",
+      "survival:moderate to know when to drink and when to stop breathing",
+      "composure:moderate to keep going when your body says no",
+      "engineering:hard to spot the flaw in a mold before it pours",
+      "commerce:hard to outbid the Hegemony on the next run of plate",
+      "persuasion:moderate to get Varr to tell you what else he's selling"
+    ],
+    "fights": [],
+    "outcomes": [
+      "If the captain finishes the shift, the clans will deal with them from now on, and the fleet gets the right to buy at Korrath, at hard but honest prices. Word gets around. Korrun everywhere start treating the captain differently.",
+      "If the captain stops to help Old Dorrit and loses the shift, Varr says that doesn't count. The crew says nothing. Next morning there's a pair of good gloves outside the captain's door, and someone else asks to speak to them.",
+      "If the captain collapses, they're carried out and politely told to come back when they're stronger. They can. Nobody here thinks less of someone for failing, only for not returning.",
+      "If the captain tries to stop the Hegemony contract, by outbidding it or by telling Corvane's quartermaster it's known about, the clans won't break their word but they can be persuaded not to renew it. The Hegemony gets its six hulls and nothing after that, and Varr gives the captain a very long look that might be thanks."
+    ],
+    "rewards": "The right to trade at Korrath, a korrun_harness at a fair price, a forge_hammer if Dorrit lives, a lot of practice in athletics through train_skill, and Brenna Tor's interest, which leads to Short Weight."
+  }
+}

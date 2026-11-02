@@ -1,0 +1,48 @@
+{
+  "title": "Looking the Wrong Way",
+  "kind": "main",
+  "places": ["haven", "kessara", "ilun"],
+  "minLevel": 5,
+  "after": "main_on_station",
+  "people": ["sable", "quill", "tannis", "ione", "cael", "talia", "mirei"],
+  "factions": ["drift", "ilun", "fleet"],
+  "lead": "Jun Sable has set a glass in front of you and, for the first time anyone can remember, hasn't named a price. They'd like to know if you've ever wondered how the whole Concord Navy came to be looking the wrong way for a week.",
+  "anyone": "Jun Sable has started setting out a glass for people and not naming a price, for the first time anyone can remember. They'd like to know who's ever wondered how the whole Concord Navy came to be looking the wrong way for a week.",
+  "gm": {
+    "truth": "The Choir took the Concord in a week because someone gave it the Navy's rotation tables. Sable traced the leak years ago as far as Kessara, and moved the Tarn into the hole to see who'd come through, and that's their share of the guilt. Quill sold the tables, six years before the Fall, through a broker, for four thousand credits and a chip of carved stone, to a man who signed himself Hob. She has been trying not to find out who he was. The stone's on her shawl. A grainy image in Sable's files shows the buyer with the face of Lt. Aldo Renn, a patrol officer lost beyond the border nine years before, and if out_kessara_who_paid has been played the captain already believes the Choir bought its own way in. This is where that belief falls apart. Renn was a walker: half copied, he wandered into Ilun with no memory, and he spent his last years as Brother Hob, the monastery's cook, who knew how to ask for a rotation table and died the same year. The stone came from under Ilun. Abbess Ione bought the tables. Forty years ago, at her installation, she was told what the Order had stopped doing, as every Abbess is, and she could hear the song failing. She looked for another way for thirty years. She decided that only the Concord held enough minds to hold it, and that a slow war would kill billions uncopied and lost forever. So she made it fast. She sang the tables through the stones. During the Fall she sent word to the outlying houses, and her strongest monks walked out to be sung, and they did. Ask her, and she'll say yes. She doesn't lie. 'A long war would have killed them all for nothing. A short one kept them.' She has asked no one's forgiveness. The Maris numbers say she was right, which is the unbearable part. Yara Solune was one of those she sent, and Yara is Mirei's sister. Arc clues: sable_canary, quill_pin, quill_ledger, novices_walked, ione_answers, spared_map.",
+    "beats": [
+      "Sable's confession, in their own dry way: where the Tarn went, and why. If Voss is there, this is a scene between the two of them, and everyone else should leave. The bar stays open. Nobody has ever seen them sit down before.",
+      "The way into Quill's real ledger. She has been worrying about the captain for a while now. Tannis has bought up the debts of Quill's oldest lieutenants on the Tally Wall, and her coup is about to happen regardless. Talia Sen says 'Eat', and puts something green in the bowl.",
+      "The entry, and the name Hob. Then the pin. Anyone who has been to Ilun will already have felt it. A cold feeling, in a warm room full of dumplings. At Ilun an old monk looks at the grainy image of a dead Navy lieutenant and says: 'That's our cook. He made terrible bread.'",
+      "Ilun. Cael, laughing, glad to see you. The Abbess in her small room, already pouring water. 'You've come to ask me something.' She answers. She'd like the captain to check her sums.",
+      "Cael learns it. He has been looking for his friends for six months. Then what? Telling the fleet means Ilun burns. Not telling means everything else the captain has said is a lie."
+    ],
+    "routes": [
+      "Merchant: trade for the ledger (commerce), using the fuel debt or the plain fact of what thirty thousand survivors would do to the woman who sold the tables. She's worried, dear.",
+      "Fighter: back Tannis's coup and take the ledger by force (tactics, melee, gunnery). Tannis will try to make sure the captain gets the blame, and it's a bloody day in the warrens.",
+      "Thief or hacker: her real books are on paper, but the trail of payments isn't (hacking, stealth, streetwise). Talia Sen knows who carried what, and she'd sell nearly anyone to get her son off the Second Opinion.",
+      "Resonant or scholar: the pin itself (attunement, lore) has the same key as the stones of Ilun, and it was cut from a lintel you can go and stand under. No ledger needed.",
+      "Plain: ask Ione. Anyone can do it, at any time. She has been waiting for somebody to."
+    ],
+    "checks": [
+      "commerce:hard to get the ledger out of Quill alive",
+      "attunement:moderate to match the pin to the stones",
+      "melee:hard to stay on your feet in the warrens on the day of the coup",
+      "lore:moderate to trace the carving to its lintel",
+      "composure:hard to sit across from Ione and hear it",
+      "leadership:hard to stop what happens when the fleet finds out"
+    ],
+    "fights": [
+      "drift_raider and syndicate_collector in Tannis's coup",
+      "desperate_refugee and mutineer if a mob from the fleet reaches Ilun"
+    ],
+    "outcomes": [
+      "If it's published, the fleet hates the Order forever. Ilun is attacked by the fleet's own people unless the captain stops it, and the last teachers of Resonance may die with it. Ione doesn't run. Quill's life is worth nothing. The truth is out, and the captain's word is good.",
+      "If it's kept secret, everyone the captain is working with stays useful, and they now hold the biggest secret in history. Sable, Quill and Ione all know they do. It will come out at the summit, unless someone stops it.",
+      "If Cael is told gently, he stays. If he finds out on his own, he leaves the Order and answers the song out loud. Either way he's the next person to sing, it may not be safe, and he isn't laughing.",
+      "If Mirei learns who sent Yara, she shows nothing, as always, and goes to Ilun alone. What she does there depends on whether the captain gets there first.",
+      "Quill is toppled by Tannis, or bought, or protected by the captain in return for everything she knows. Whoever runs the Syndicate now holds the fleet's debt. Ione offers to be judged, or to be the first to go at the end. She's eighty-one, and she isn't afraid of either."
+    ],
+    "rewards": "The truth. Quill's marker erased or paid, a ledger_of_favors from her desk if it's taken, and a glass on the house at the Neutral Ground, which has never happened before."
+  }
+}

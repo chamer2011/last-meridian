@@ -1,0 +1,50 @@
+{
+  "name": "Strikebreaker",
+  "threat": 2,
+  "hp": 26,
+  "attack": 3,
+  "defense": 11,
+  "damage": [
+    3,
+    6
+  ],
+  "xp": 40,
+  "credits": [
+    15,
+    50
+  ],
+  "tags": [],
+  "motive": "paid",
+  "desc": "Company muscle at Cinder Reach, paid by the shift, with the union patch cut off their helmet.",
+  "weapon": "Drill Rod",
+  "lines": {
+    "intro": [
+      "A wide figure in a company vest hefts a length of drill rod, and tells you the refinery would like you to go home.",
+      "Someone in a miner's helmet, with the union patch cut off it, steps into your way. They won't meet your eyes, but they don't move."
+    ],
+    "hit": [
+      "The drill rod comes down across your shoulder, with ten years of mine work behind it.",
+      "They drive you into the rock wall with a shoulder, hold you there, and hit you again.",
+      "The helmet lamp blinds you for a moment, and the rod arrives out of the glare."
+    ],
+    "miss": [
+      "The rod rings off the pipe beside your ear, and the whole tunnel hums with it.",
+      "You duck, and the rod buries itself in a slag barrel. They swear at you while they pull it out.",
+      "They swing low, you hop over it, and they stumble on the loose rock."
+    ],
+    "crit": [
+      "The rod catches you behind the knee, then again on your way down, and they look almost sorry."
+    ],
+    "defeated": [
+      "They sit down hard, pull off the helmet, and tell you they've got a family to feed, the same as anyone.",
+      "The rod clatters away from you down the tunnel, and they don't go after it."
+    ],
+    "joins": [
+      "{Enemy} shoulders in from a side tunnel with a drill rod and a bonus to earn, and looks you over."
+    ],
+    "stunned": [
+      "{Enemy} shakes their head, the helmet lamp wobbling, and can't find you in the beam."
+    ]
+  },
+  "art": "miner"
+}

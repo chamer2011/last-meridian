@@ -1,0 +1,65 @@
+{
+  "name": "Teodor Halm",
+  "title": "Speaker",
+  "aliases": [
+    "Speaker Teodor Halm",
+    "Speaker Halm",
+    "Teodor Halm",
+    "Halm"
+  ],
+  "pronouns": "he/him",
+  "species": "human",
+  "age": 61,
+  "faction": "fleet",
+  "role": "Head of the fleet's civil council",
+  "location": "meridian",
+  "prominent": true,
+  "color": "#e6d9a8",
+  "note": "The last Concord senator anyone can find. Speaks for the civilians, and believes the fleet should answer to them.",
+  "appearance": "Silver-haired and carefully dressed in the one good coat he got out with.",
+  "personality": "Warm, patient and calculating. He truly believes in civil government, and he'd sacrifice almost anything to preserve it.",
+  "voice": "Rounded and reassuring. Says \"we\" constantly, and never answers the question he was asked.",
+  "goals": "Bring the fleet under civilian control, hold elections, and find safety for the civilians at almost any price.",
+  "secrets": "He has already opened a private channel with Legate Corvane, and he's discussing terms for the fleet's surrender to the Hegemony.",
+  "beliefs": {
+    "authority": -3,
+    "loyalty": -5,
+    "violence": -4,
+    "belief": -2
+  },
+  "attributes": {
+    "might": 2,
+    "endurance": 3,
+    "agility": 2,
+    "perception": 5,
+    "intellect": 6,
+    "willpower": 5,
+    "presence": 8,
+    "resonance": 1
+  },
+  "skills": {
+    "persuasion": 7,
+    "deception": 5,
+    "leadership": 5,
+    "lore": 4,
+    "commerce": 3
+  },
+  "combat": {
+    "threat": 1,
+    "hp": 14,
+    "attack": 0,
+    "defense": 10,
+    "damage": [
+      1,
+      3
+    ],
+    "weapon": "Bare Hands",
+    "tags": [],
+    "xp": 15,
+    "credits": [
+      10,
+      60
+    ],
+    "art": "civilian"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "_help": "The days of the people here. The instructions are at the top of meridian.json.",
+  "people": {
+    "quill": [
+      { "at": "07:30", "doing": "receiving visitors over tea", "go": "post" },
+      { "at": "16:00", "doing": "reading the Tally Wall", "go": "@tally" },
+      { "at": "17:00", "doing": "receiving visitors over tea", "go": "post" },
+      { "at": "23:00", "doing": "gone to bed", "go": ">parlor", "hidden": true }
+    ],
+    "tannis": [
+      { "at": "07:30", "doing": "repainting the Second Opinion", "go": "post" },
+      { "at": "13:00", "doing": "eating noodles, loudly", "go": "@warrens" },
+      { "at": "15:00", "doing": "repainting the Second Opinion", "go": "post" },
+      { "at": "20:00", "doing": "collecting for Mother Quill", "rounds": ["@tally", "@sump"], "stop": 45 },
+      { "at": "23:30", "doing": "back aboard her ship", "go": ">row", "hidden": true }
+    ],
+    "talia": [
+      { "at": "05:00", "doing": "tending the broth", "go": "post" },
+      { "at": "23:00", "doing": "asleep behind the stall", "go": "post", "asleep": true }
+    ]
+  },
+  "crowd": [
+    {
+      "names": [["Gunner Sax", 0], ["Raider Bly", 20], ["Raider Mung", 40], ["Quartermaster Ez", 60]],
+      "day": [
+        { "at": "09:00", "doing": "repainting a hull", "go": "@row" },
+        { "at": "13:00", "doing": "in line for noodles", "go": "@warrens" },
+        { "at": "14:30", "doing": "repainting a hull", "go": "@row" },
+        { "at": "19:00", "doing": "gambling on a debt", "go": "@tally" },
+        { "at": "23:00", "doing": "asleep on the job", "go": "@row", "asleep": true }
+      ]
+    },
+    {
+      "names": [["Stallkeeper Ruo", 0], ["Shrine Keeper Nane", 30], ["Cable Hand Pirt", 60], ["Old Vasya", 90]],
+      "day": [
+        { "at": "06:00", "doing": "minding a stall", "go": "@warrens", "stays": true },
+        { "at": "14:00", "doing": "watching who goes past", "go": "@warrens" },
+        { "at": "21:00", "doing": "minding a stall", "go": "@warrens", "stays": true },
+        { "at": "00:30", "doing": "asleep in the tunnel", "go": "@warrens", "asleep": true }
+      ]
+    },
+    {
+      "names": [["Collector Inge", 0], ["Scribe Pollo", 45]],
+      "day": [
+        { "at": "10:00", "doing": "carving a debt on the wall", "go": "@tally" },
+        { "at": "15:00", "doing": "out collecting", "rounds": ["@warrens", "@sump"], "stop": 40 },
+        { "at": "20:00", "doing": "carving a debt on the wall", "go": "@tally" },
+        { "at": "23:00", "doing": "gone to bed", "go": ">tally", "hidden": true }
+      ]
+    },
+    {
+      "names": [["Nobody Much", 0], ["Sump Rat Kell", 60]],
+      "day": [
+        { "at": "08:00", "doing": "hiding from someone", "go": "@sump" },
+        { "at": "14:00", "doing": "picking through what comes down", "go": "@sump" },
+        { "at": "22:00", "doing": "asleep in the damp", "go": "@sump", "asleep": true }
+      ]
+    },
+    {
+      "names": [["A Very Quiet Man", 0], ["A Very Quiet Woman", 0]],
+      "day": [
+        { "at": "07:30", "doing": "standing near the cushions", "go": "@parlor", "stays": true },
+        { "at": "23:00", "doing": "gone", "go": ">parlor", "hidden": true }
+      ]
+    }
+  ]
+}

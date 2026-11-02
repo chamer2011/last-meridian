@@ -1,0 +1,5 @@
+node_modules/
+# The installer, which app/build.js makes
+dist/
+# Your API key and saved games
+data/

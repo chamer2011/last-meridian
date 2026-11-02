@@ -1,0 +1,68 @@
+{
+  "name": "The Pale Gate",
+  "aliases": ["the Pale Gate", "The Pale Gate", "Pale Gate"],
+  "desc": "A First Builder ring the size of a moon, older than anything, and not entirely switched off.",
+  "market": [],
+  "faction": null,
+  "fleet": false,
+  "rest": false,
+  "dangerous": true,
+  "hidden": false,
+  "gm": {
+    "feel": "A ring so large that its far side is hazy, made of one seamless pale metal like old bone, with no sound or marks on it at all. Clocks disagree here, and everyone's learned to ask the date politely. Inside, in halls built to a scale that's just slightly wrong, the air is cold and clean and it smells of rain. A little camp of chancers and scholars is tied to the outer rim, and they've got one rule for doing business: you sign the log on your way in, and whoever's on duty will come and look for you, once.",
+    "districts": [
+      { "name": "Rimcamp", "desc": "Forty or so people in huts made of ship parts, welded to the only spar anyone's ever got a weld to hold on. Keepers, Syndicate scouts, Quiet pilgrims and a Hegemony researcher all share one still and one logbook." },
+      { "name": "The Long Face", "desc": "The ring's outer surface, kilometer after kilometer of featureless pale metal under the stars. Claim buoys and tether stakes slide off it overnight, a meter or so at a time, in the same direction." },
+      { "name": "The Warden's Walk", "desc": "Corridors inside the rim, wide as streets, with thin cold air. Gate Wardens pace along them on rounds that take years to complete, and they stop to look at anything new." },
+      { "name": "The Hall of Cradles", "desc": "A long gallery on the ring's inner face, with row upon row of sealed cradles, and racks of slender pale tools beside each. Lamps burn low at the far end, as if someone's expected." },
+      { "name": "The Throat", "desc": "The empty space at the center of the ring. It's not always showing the same stars on the other side, and pilots who look at it for too long start to give very calm reports." }
+    ],
+    "people": [],
+    "enemies": ["gate_warden", "gate_colossus", "choir_drone", "wreck_diver", "void_stalker"],
+    "items": ["gate_key", "beacon_shard", "choir_core", "resonance_tuner"],
+    "complications": [
+      "You've been inside for an hour, by your watch, and your ship says that it's been three days.",
+      "A Gate Warden has taken an interest in someone in your party, and it's been walking slowly behind them ever since.",
+      "A ring of Choir drones has taken up position at the edge of the ring's shadow, perfectly still, and it's a bit closer than it was yesterday.",
+      "The tether holding your shuttle has slid off the Long Face, along with the stake and two meters of frost.",
+      "A Resonant in your party has started walking toward the Hall of Cradles, without waking up.",
+      "A light has come on in the Throat, a long way off, and the whole of Rimcamp has gone out onto the spar in silence to watch it."
+    ],
+    "secrets": [
+      "The Hall of Cradles holds the last relief crew of the Order of Ilun, in long sleep and waiting for clearance to go on watch for 1,006 years. Nobody ever told them. Those who survive waking are witnesses to the old rite, the Proctors' craft and the way to the Harbor, and the first thing they'll ask is when the ship's due.",
+      "The Wardens aren't guarding the Gate against intruders. They're checking the crew in, and they've been holding their posts for a shift change that never came. Anyone carrying a gate_key, or who speaks to them properly in the words of the watch, will be treated as staff. The Colossus at the inner door is simply the last one who hasn't been told he can stand down.",
+      "The ring is a relay on the old road, and it can be rung like a bell, which is what makes it the likeliest way to send a killing note through the whole of the song. CFS Tarn was on picket next to it on the first night of the Fall, and the tools racked by the cradles are the originals of the Inquisitors' drinking blades, made for bringing singers back."
+    ]
+  },
+  "encounters": [
+    "An old Veshti woman keeps Rimcamp's log, and she's fussy about it. She asks you to sign in with your name, the time and when you expect to be back. You can't help noticing the last entry. It's for a man who's marked as going in tomorrow, and it's in your handwriting.",
+    "A Keeper from Sarn and a Hegemony researcher have been sharing a hut for six years. They loathe each other, and they're best friends. Each takes you aside to warn you that the other is filing reports on you. They both are. Each of them is also falsifying the other's reports, and they'd like you to help with the spelling.",
+    "A Gate Warden stops in front of you in a corridor, and slowly holds out one great pale palm. It waits. You've got nothing to give it. After two hours, a nervous crewman puts a ration bar on the palm, and the Warden closes its hand, and now it follows the crewman wherever they go, at a respectful distance.",
+    "Your pilot reports a small unmarked vessel coming out of the Throat, on a stately course. Someone aboard greets you on an old band, very politely, in a form of Concord standard that's been dead for centuries. They ask whether they're late, and if the Commodore would be kind enough to sign for the cargo.",
+    "A cradle opens as you pass. A woman in very old robes sits up and coughs out a little dust, then calmly asks what time the ship's due, since her crew is ready to go on watch. Behind her, others are starting to stir, and some of them are waking up badly. Nobody's going to enjoy telling her.",
+    "A girl of about eleven who was born in Rimcamp knows the Wardens' rounds the way other children know a skipping game, and she plays in their shadows. She's never been anywhere else. She'll take you past them for a story about a place with weather. She says that they're not angry, they're only waiting to be told that they can go home.",
+    "A Salvage Guild surveyor is trying to fix a claim buoy on the Long Face. Every buoy she's set has slid a meter by morning. She has a contract from Factor Crane, a sharp sense of humor and a lawyer's letter in her pocket, and she'd like you to witness that she was here first. There's frost on her faceplate, on the inside.",
+    "Someone at Rimcamp has been leaving things out at the edge of the ring's shadow, for the silver drones parked there in their long neat line. A coat comes back folded. A broken watch comes back mended, and running at some other time. He's a harmless old man, and he asks you whether you've got anything you'd like fixed.",
+    "You come back to your ship after an hour inside. They've held a memorial service for you. They've had an election, as well, and there's a very awkward silence on the bridge, and someone's sitting in your chair and hasn't quite got up yet. It's been nine days, they say, and they thought that you'd want them to carry on.",
+    "Your navigator picks up a mild, faraway voice on the radio. \"...no, the third leg works if you skip the star. Sorry. You asked me that on the way in.\" It's Tamsin Ao-Rel's voice. Tamsin isn't here. It's giving very clear directions to a place you haven't mentioned, and it sounds as though it's been saying this for years.",
+    "A Quiet pilgrim has unclipped his tether, and he's walking away over the Long Face with no hurry at all, toward the ring's inner edge. His friends tell you that he's going home. You've got a line and a good throw. He hasn't asked to be saved, and they're asking you very gently not to.",
+    "A scholar in the Hall of Cradles lifts a slender pale tool from its rack and shows you the handle. It isn't a weapon, she says, look at the grip. It's made for a nurse. An Inquisitor would kill to know that. One of your crew has picked up another one, to look at it, and they've sat down rather suddenly, looking very tired.",
+    "You've got the key, and it's grown too heavy to carry alone. All the way along the corridor to the inner door, Wardens have stopped and turned to face you. The largest shape in the dark begins to straighten up. A grinding voice asks what you've come to relieve. Someone in your party knows half of an old monastery phrase, and they're looking at you.",
+    "A deserter from your own fleet is selling little flasks of condensation from the Warden's Walk. People buy it for the dying, because it smells of rain. It does seem to calm them. He's making a good living and he's quite ashamed. He asks after his mother, who's on the Sundial, and whether you'd take a flask to her."
+  ],
+  "rumors": [
+    "It's bigger than a moon, and it's got no seams. Not one. I've walked nine kilometers on it, and I couldn't find a thing to hang my coat on.",
+    "There are stars in the middle of that ring that aren't ours. Or one star that's been there for a very long time. Nobody who's looked for long agrees.",
+    "The Wardens won't bother you if you've got something to show them. No one knows what. A fellow showed one his Guild card once, and it looked at him for a day and a half.",
+    "Your clock's wrong. Don't bother fixing it. Mine says Tuesday, and it's been saying so for six years.",
+    "It smells of rain in there. That's how you know you should leave.",
+    "There used to be a Navy picket here, before the Fall. A little ship, sat right there off the rim. Nobody knew why they'd put her there. She used to send over coffee.",
+    "They say it's how the First Builders left, and they say that they're coming back. That's a long time to keep the lights on for someone.",
+    "Someone's asleep in there. That's what the monks told me. I asked how they knew, and they said, \"It's still switched on.\"",
+    "There's a big one, at the inner door. It's never moved. I don't like how it's never moved.",
+    "The silver don't come past the shadow of the ring. They stop there and wait, in a line, as neat as you like, like people waiting for a shift to start.",
+    "Don't touch the walls. It won't hurt you. It's only that I did it once, and now I always know how many people are in a room before I go in.",
+    "A chart of the way here went for four thousand credits at the Gilded Wheel. It was drawn on somebody's sleeve.",
+    "The key's a myth. No, there isn't a door. All right, there's a door. No one's ever opened it, or not lately, and I've heard it's been a thousand years."
+  ]
+}

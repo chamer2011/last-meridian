@@ -1,0 +1,430 @@
+{
+  "_help": [
+    "This place's levels. Instructions for changing them are at the top of meridian.json. Restart the game after changing this file."
+  ],
+  "name": "Anselm's Mercy",
+  "start": "sorting",
+  "levels": {
+    "sorting": {
+      "name": "The Sorting Deck",
+      "aliases": [
+        "sorting deck",
+        "triage",
+        "shuttle bay",
+        "the shuttle bay"
+      ],
+      "desc": "Triage, in the old shuttle bay. Everyone who comes aboard gets a colored tag here, and the color decides nearly everything after that.",
+      "floor": ".",
+      "colors": {
+        "floor": "#3e4f4a",
+        "walls": "#86a89c",
+        "scenery": "#b6dccc",
+        "writing": "#eafff5"
+      },
+      "plan": [
+        "#######################################################################",
+        "#.....................................................................#",
+        "#..====..====..|..====..====..|..====..====..|..====..====....______..#",
+        "#..............|..............|..............|.............../  __  \\_#",
+        "#..====..====..|..====..====..|..====..====..|..====..====...|  |__| >#",
+        "#..............|..............|..............|...............\\______/.#",
+        "#.....................................................................#",
+        "#.....................................................................#",
+        "1...............................................[=====]t..............#",
+        "#..............................W......................................#",
+        "#..........@.....................................................k....#",
+        "#...........................................g.........................#",
+        "###########################2###########################################"
+      ],
+      "writing": [
+        [3, 1, "RED"],
+        [18, 1, "AMBER"],
+        [33, 1, "GREEN"],
+        [48, 1, "GREY"]
+      ],
+      "labels": [
+        {
+          "text": "THE SORTING DECK",
+          "at": [2, 6]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "ward",
+          "via": "1"
+        },
+        "2": {
+          "to": "stair",
+          "via": "1"
+        }
+      },
+      "people": {
+        "W": {
+          "id": "wen",
+          "label": "Dr. Adeyemi",
+          "asks": [
+            "How many did you lose last night, Doctor?",
+            "What's the list short of?"
+          ]
+        }
+      },
+      "things": {
+        "t": {
+          "name": "The triage table",
+          "look": "A steel table, a pen on a string, and a stack of forms. It's worn pale at the spot where someone has been leaning on it for months.",
+          "use": "I stand at the triage table for a while and watch how it's done."
+        },
+        "g": {
+          "name": "A box of colored tags",
+          "look": "Red, amber, green and grey, sorted by a careful hand. The grey box is the fullest, and nobody on the deck will look straight at it.",
+          "use": "I pick a grey tag out of the box and ask what it means."
+        },
+        "k": {
+          "name": "A crash cart",
+          "item": "trauma_kit",
+          "look": "The last well-stocked cart on the deck, with a trauma kit strapped to the top. The tally on its lid is in three different hands, and they don't agree.",
+          "use": "I ask whether anyone can spare a trauma kit off the crash cart."
+        }
+      }
+    },
+    "ward": {
+      "name": "The Long Ward",
+      "aliases": [
+        "long ward",
+        "ward six",
+        "ward 6",
+        "the ward",
+        "wards"
+      ],
+      "desc": "A converted cargo hold, with row upon row of cots and families sleeping underneath them. Ward Six is at the far end.",
+      "floor": ".",
+      "colors": {
+        "floor": "#44484a",
+        "walls": "#9aa4a8",
+        "scenery": "#d0dade",
+        "writing": "#fff8ec"
+      },
+      "plan": [
+        "############################3###############################################",
+        "1..........................................................|...............#",
+        "#..[=]..[=]..[=]..[=]..[=]..[=]..[=]..[=]..[=]..[=]..[=]...|..[=]..[=]..[=]#",
+        "#..........................................................|...............#",
+        "#..[=]..[=]..[=]..[=]..[=]..[=]..[=]..[=]..[=]..[=]..[=]...|..[=]..[=]..[=]#",
+        "#..........................................................|...............#",
+        "#..........@...............................................+........P......#",
+        "#..........................................................|...............#",
+        "#..[=]..[=]..[=]..[=]..[=]..[=]..[=]..[=]..[=]..[=]..[=]...|..[=]..[=]..[=]#",
+        "#......................d...........................l.......|...............#",
+        "#..[=]..[=]..[=]..[=]..[=]..[=]..[=]..[=]..[=]..[=]..[=]...|..[=]..[=]..[=]#",
+        "#..........................................................|....q..........#",
+        "########################################################2###################"
+      ],
+      "writing": [
+        [62, 1, "WARD SIX"]
+      ],
+      "labels": [
+        {
+          "text": "THE LONG WARD",
+          "at": [24, 6]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "sorting",
+          "via": "1"
+        },
+        "2": {
+          "to": "still",
+          "via": "1"
+        },
+        "3": {
+          "to": "gallery",
+          "via": "2"
+        }
+      },
+      "people": {
+        "P": {
+          "id": "pavel",
+          "label": "Pavel",
+          "asks": [
+            "How are you feeling today, Pavel?",
+            "Do you remember anything from before you woke up?"
+          ],
+          "greeting": "{name} looks up from a heap of potatoes, delighted to see anyone at all."
+        }
+      },
+      "things": {
+        "d": {
+          "name": "Drawings over a warning label",
+          "look": "Crayon suns and crayon ships, taped over the hazard stencils. Under one of them you can still read FLAMMABLE. Under another, somebody's drawn the Meridian.",
+          "use": "I stop to look at the children's drawings, and ask who drew the Meridian."
+        },
+        "l": {
+          "name": "A surgeon's lens",
+          "item": "surgeon_lens",
+          "look": "A jeweler's eyepiece rebuilt for field surgery, left on a cot rail by somebody who was called away in a hurry. It's a very good one.",
+          "use": "I pick up the surgeon's lens and go looking for whoever left it."
+        },
+        "q": {
+          "name": "An empty cot in Ward Six",
+          "look": "It was made up fresh this morning. Lately, a lot of the cots at this end of the ward have needed making up, and not for the usual reason.",
+          "use": "I ask the nurse who was in this cot, and where they've gone."
+        }
+      }
+    },
+    "still": {
+      "name": "The Still Ward",
+      "aliases": [
+        "still ward",
+        "the coma ward",
+        "the eleven"
+      ],
+      "desc": "A dim, peaceful compartment for the comatose. There are eleven beds, and they've all been full since the Fall.",
+      "floor": ";",
+      "colors": {
+        "floor": "#2c3c59",
+        "walls": "#566a8f",
+        "scenery": "#8fa8d8",
+        "writing": "#c8d8ff"
+      },
+      "plan": [
+        "        ####################1###################         ",
+        "  ######;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;######   ",
+        "###;;;;;[~];;;;[~];;;;[~];;;;[~];;;;[~];;;;[~];;;;;;;;###",
+        "##;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;##",
+        "##;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;##",
+        "##;;;;;;;;;;@;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;c;;;;;;;;;;;##",
+        "##;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;##",
+        "###;;;;;;;;;[~];;;;[~];;;;[~];;;;[~];;;;[~]m;;;;;;;;;;###",
+        "######;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;######",
+        "   #######################b##########################    "
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE STILL WARD",
+          "at": [20, 3]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "ward",
+          "via": "2"
+        }
+      },
+      "people": {},
+      "things": {
+        "m": {
+          "name": "The monitors",
+          "look": "Eleven heart monitors, all ticking along very quietly. You stand there longer than you meant to before you work out what's bothering you about them.",
+          "use": "I watch the monitors for a few minutes, with a nurse's log beside me."
+        },
+        "c": {
+          "name": "The night nurse's chair",
+          "item": "quiet_token",
+          "look": "A plain chair in the middle of the room, with a folded blanket on it and a smooth silver token left on the blanket. Whoever sits here has a good view of all eleven, and nothing to do.",
+          "use": "I sit down in the night nurse's chair, and I turn the silver token over."
+        },
+        "b": {
+          "name": "The power board",
+          "look": "Hand-labeled breakers, and a note that says what this room costs per day in a very small hand. Somebody has underlined it, and somebody else has rubbed that out.",
+          "use": "I read the power board and ask who signs off on this ward."
+        }
+      }
+    },
+    "stair": {
+      "name": "The Bell Stair",
+      "aliases": [
+        "bell stair",
+        "the bell",
+        "the stairwell",
+        "stairwell"
+      ],
+      "desc": "A stairwell with a salvaged ship's bell at the top, rung by anyone well enough to walk out. You can hear it on every deck.",
+      "floor": ",=",
+      "colors": {
+        "floor": "#4c4030",
+        "walls": "#a08a60",
+        "scenery": "#f0c860",
+        "writing": "#fff0c0"
+      },
+      "plan": [
+        "##############################2################",
+        "#,,,,,,,,,,,,,,,,,,,,.-\"-.,,,,,,,,,,,,,,,,,,,,#",
+        "#,,,,,,,,,,,,,,,,,,,/     \\b,,,,,,,,,,,,,,,,,,#",
+        "#,,,,,,,,,,,,,,,,,,,'-----',,,,,,,,,,n,,,,,,,,#",
+        "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
+        "##################################====#########",
+        "#=============================================#",
+        "#====##########################################",
+        "#====##########################################",
+        "#=============================================#",
+        "####################################====#######",
+        "#=============================================#",
+        "#====##########################################",
+        "#===========@=================================#",
+        "####################1##########################"
+      ],
+      "writing": [],
+      "labels": [
+        {
+          "text": "THE BELL STAIR",
+          "at": [2, 1]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "sorting",
+          "via": "2"
+        },
+        "2": {
+          "to": "gallery",
+          "via": "1"
+        }
+      },
+      "people": {},
+      "things": {
+        "b": {
+          "name": "The bell",
+          "look": "A salvaged ship's bell, with the name of a ship nobody remembers filed off it. The rope's been worn smooth by very few hands. It's been rung eleven times since Aurelis.",
+          "use": "I put my hand on the bell rope and ask who rang it last."
+        },
+        "n": {
+          "name": "Notches on the rail",
+          "look": "Eleven notches cut into the handrail, each one different, each with a set of initials beside it. There's room for a twelfth, and somebody's already marked the spot.",
+          "use": "I run my thumb along the notches, and ask the nearest patient who they were."
+        }
+      }
+    },
+    "gallery": {
+      "name": "The Gallery",
+      "aliases": [
+        "gallery",
+        "the upper walkway",
+        "upper walkway",
+        "the walkway"
+      ],
+      "desc": "The upper walkway, where visiting families camp and trade: places in the queue, blood chits, laundry hours and news. Almost nothing up here is legal, and the nurses need all of it.",
+      "floor": "_",
+      "colors": {
+        "floor": "#4d3a4a",
+        "walls": "#a38098",
+        "scenery": "#e0b0d0",
+        "writing": "#ffe6f6"
+      },
+      "plan": [
+        "#########################################################################",
+        "1_______________________________________________________________________#",
+        "#_______________T_______________________________________________________#",
+        "#___====================================================================#",
+        "#____|     .   [=]   [=]   [=]   [=]   [=]   [=]   [=]   [=]   .  |_____#",
+        "#____|     .   [=]   [=]   [=]   [=]   [=]   [=]   [=]   [=]   .  |_____#",
+        "#____|     .   [=]   [=]   [=]   [=]   [=]   [=]   [=]   [=]   .  |_____#",
+        "#____================================================================___#",
+        "#___________________@___________________________________________________#",
+        "#_____b_________________________s_______________________________k_______#",
+        "#____________________________________________________________q__________#",
+        "#############################2###########################################"
+      ],
+      "writing": [
+        [16, 5, "THE LONG WARD, BELOW"]
+      ],
+      "labels": [
+        {
+          "text": "THE GALLERY",
+          "at": [58, 1]
+        }
+      ],
+      "exits": {
+        "1": {
+          "to": "stair",
+          "via": "2"
+        },
+        "2": {
+          "to": "ward",
+          "via": "3"
+        }
+      },
+      "people": {
+        "T": {
+          "id": "tessaly",
+          "label": "Tessaly",
+          "asks": [
+            "What's in the bag, Doctor Marsh?",
+            "Who are you selling to these days?"
+          ]
+        }
+      },
+      "things": {
+        "b": {
+          "name": "A slate of blood chits",
+          "look": "A going rate for a pint, chalked up like the price of beans, and a queue of people with their sleeves already rolled.",
+          "use": "I ask what a pint of blood will buy up here today."
+        },
+        "s": {
+          "name": "A very long sweater",
+          "look": "A child's sweater, eleven meters long and still growing, in every color of wool the ship has had. The knitter nods politely and doesn't stop.",
+          "use": "I sit down with the woman knitting the long sweater, and ask about it."
+        },
+        "k": {
+          "name": "A medkit on a blanket",
+          "item": "medkit",
+          "look": "A proper sealed medkit, offered for trade on a square of blanket. It's got a hospital stamp on it, and the seller has put their thumb over the stamp.",
+          "use": "I ask what the seller wants for the medkit, and where it came from."
+        },
+        "q": {
+          "name": "A loose strip of calm tabs",
+          "item": "calm_tabs",
+          "look": "Calm tabs, sold singly, for laundry hours. It's the cheapest thing on the Gallery, and the first to run out each day.",
+          "use": "I trade for a strip of calm tabs."
+        }
+      }
+    }
+  },
+  "overview": {
+    "title": "Deck plan",
+    "plan": [
+      "______________________________________________________________",
+      "/''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''\\",
+      "|============================================================|",
+      "|::::|.............|,,,,,,,,,,,,,,,,,,,,,,,,,,,,|;;;;;;;;;;;;|",
+      "|::::|.............|,,,,,,,,,,,,,,,,,,,,,,,,,,,,|;;;;;;;;;;;;|",
+      "|::::|.............|,,,,,,,,,,,,,,,,,,,,,,,,,,,,|;;;;;;;;;;;;|",
+      "\\____________________________________________________________/"
+    ],
+    "floors": {
+      "'": "gallery",
+      ":": "stair",
+      ".": "sorting",
+      ",": "ward",
+      ";": "still"
+    },
+    "rooms": [
+      {
+        "level": "gallery",
+        "at": [24, 1],
+        "text": "THE GALLERY"
+      },
+      {
+        "level": "stair",
+        "at": [1, 4],
+        "text": "BELL"
+      },
+      {
+        "level": "sorting",
+        "at": [7, 4],
+        "text": "SORTING DECK"
+      },
+      {
+        "level": "ward",
+        "at": [30, 4],
+        "text": "THE LONG WARD"
+      },
+      {
+        "level": "still",
+        "at": [50, 4],
+        "text": "STILL WARD"
+      }
+    ]
+  }
+}

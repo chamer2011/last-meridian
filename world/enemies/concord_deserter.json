@@ -1,0 +1,40 @@
+{
+  "name": "Concord Deserter",
+  "threat": 2,
+  "hp": 24,
+  "attack": 4,
+  "defense": 13,
+  "damage": [
+    3,
+    7
+  ],
+  "xp": 45,
+  "credits": [
+    20,
+    60
+  ],
+  "tags": [],
+  "motive": "desperate",
+  "desc": "Well trained, desperate, and out of options.",
+  "weapon": "Service Rifle",
+  "lines": {
+    "intro": [
+      "A deserter in a stripped Concord uniform brings up a service rifle. Their hands are steady, and their eyes aren't."
+    ],
+    "hit": [
+      "A disciplined burst walks across your chest.",
+      "The deserter fires from cover, just like the manual says, and it works."
+    ],
+    "miss": [
+      "Rounds chew the wall beside you.",
+      "The deserter fires twice, and misses twice, and swears in perfect Fleet standard."
+    ],
+    "crit": [
+      "A perfect shot. Somebody taught this person very well."
+    ],
+    "defeated": [
+      "The deserter sits down against the wall, looking almost relieved."
+    ]
+  },
+  "art": "soldier"
+}

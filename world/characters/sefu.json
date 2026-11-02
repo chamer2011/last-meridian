@@ -1,0 +1,66 @@
+{
+  "name": "Sefu Anand",
+  "title": "Keeper",
+  "aliases": [
+    "Keeper Sefu Anand",
+    "Keeper Anand",
+    "Keeper Sefu",
+    "Sefu Anand",
+    "Sefu",
+    "Anand"
+  ],
+  "pronouns": "he/him",
+  "species": "thessan",
+  "age": 190,
+  "faction": "archive",
+  "role": "A Keeper of the deep vaults of Sarn",
+  "location": "sarn",
+  "listed": false,
+  "color": "#7ca391",
+  "note": "He's been alone down there longer than most people live. He's delighted to have visitors, though he seems to think you've interrupted someone.",
+  "appearance": "A stout, pale Thessan in a dozen mismatched heated shawls, with huge lamp-pale eyes and a smear of binding glue on his chin. He has forgotten how far apart people stand, and he stands very close.",
+  "personality": "Sociable, scatterbrained and sweet-natured, after sixty-two years in the Deep Stacks with almost no one to talk to. He's entirely at home among the dead, and he has strong opinions about their manners. He's desperate for company, and going upstairs terrifies him.",
+  "voice": "A cheerful, too-loud whisper, as if he's forgotten how voices work. Talks to the records as if they're people in the room, and introduces you: \"Captain, have you met the Treaty of Orsk? She's been dying to speak to you.\" Passes on what they say: \"Don't mind the Tessen Land Grant. He's in a mood.\" One of them asks every visitor the same thing, through him: \"She'd like to know if you've come about the vacancy. I'm so sorry, she asks everyone.\" Gossips about documents, stops to let them finish, and calls his shelves \"the neighbors\".",
+  "goals": "Someone to stay for dinner. He'd love to hear an actual voice say his name, and he'd like to be written down, to be sure someone will remember him. He has never asked to leave, and he wouldn't go if he was asked.",
+  "secrets": "One of them really does answer. The Deep Stacks share a wall with the Ninth Vault, and for sixty-two years something on the other side has been speaking through it, very slowly. He thinks it's just another record with an unusually long opinion. He has taken it all down, in two hundred volumes, shelved under a false mark, with an index he made for his own convenience. That's the only index to the Ninth Vault that exists. First Keeper Thressel put him here on purpose, because he's the only one who can stand it. She tells people he's unwell, and she has never told him why. Dr. Lenn Corso visited eleven years ago, and left him a pear and a copy of the Maris Tide Tables. \"She's been very chatty lately.\" That book is the key to Corso's messages.",
+  "beliefs": {
+    "violence": -6,
+    "belief": 3,
+    "flesh": 2
+  },
+  "attributes": {
+    "might": 1,
+    "endurance": 3,
+    "agility": 1,
+    "perception": 6,
+    "intellect": 9,
+    "willpower": 5,
+    "presence": 4,
+    "resonance": 5
+  },
+  "skills": {
+    "lore": 10,
+    "science": 4,
+    "attunement": 3,
+    "stealth": 3,
+    "awareness": 3
+  },
+  "combat": {
+    "threat": 1,
+    "hp": 12,
+    "attack": 0,
+    "defense": 9,
+    "damage": [
+      1,
+      2
+    ],
+    "weapon": "Heavy Catalog",
+    "tags": [],
+    "xp": 15,
+    "credits": [
+      0,
+      5
+    ],
+    "art": "civilian"
+  }
+}

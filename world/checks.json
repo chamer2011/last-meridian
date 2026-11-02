@@ -1,0 +1,689 @@
+{
+  "tierNames": ["untrained", "novice", "trained", "expert", "master"],
+  "skills": {
+    "hacking": {
+      "game": "crack",
+      "theme": "cyan",
+      "window": "Intrusion Console",
+      "runLabel": "Execute",
+      "prompt": "root@meridian:~$",
+      "promptOther": "root@terminal:~$",
+      "help": "Find the password in the memory dump. Click a word to try it, or type it. Typing part of a word is fine.",
+      "consoles": { "terminal": "Programming Console", "dump": "Coding Console", "decode": "Decoding Console" },
+      "results": {
+        "success": "ACCESS GRANTED",
+        "failure": "ACCESS DENIED",
+        "successLine": "The exploit runs clean. The system's yours, for now.",
+        "failureLine": "The exploit bounces. Somewhere, a log entry has your name on it."
+      },
+      "users": ["nightking", "sysop_4", "dockmaster", "root_ops", "auditor", "hegemon9", "custodian", "ghostnet", "vantor_ops", "quartermaster", "admin", "maintenance"],
+      "noteLines": [
+        "\"Reminder to self: the new password starts with {letter}. Change it before the audit.\"",
+        "\"Told the night shift it begins with {letter}. Do NOT write it down.\" Someone wrote that down.",
+        "\"Password hint, as if I'd forget: first letter {letter}.\""
+      ],
+      "motd": [
+        "Welcome. All sessions are monitored. Have a safe and productive shift.",
+        "NOTICE: the coffee machine on deck 4 is not a network device. Stop trying to log in to it.",
+        "Reminder: refugee manifests are confidential. Sharing them is a Ministry offense.",
+        "This node hasn't been patched since the Fall. Nobody's left who knows how.",
+        "Scheduled maintenance has been cancelled due to the end of civilization."
+      ],
+      "code": [
+        "import hashlib",
+        "import sqlite3",
+        "100 FOR K = 1 TO 4096",
+        "110 IF HASH(K) = TARGET THEN GOTO 140",
+        "120 NEXT K",
+        "140 PRINT FOURDIGITPASSWORD",
+        "def __init__(self, server_address):",
+        "    self.username = nightking",
+        "    return decrypted_code",
+        "len = decode(encrypted_code)",
+        "for character in input_string:",
+        "    charcode = Asc(Mid(input, i))"
+      ],
+      "words": {
+        "5": ["ORBIT", "PROBE", "RELAY", "PULSE", "DRIFT", "FLARE", "CARGO", "VAULT", "NEXUS", "SOLAR", "LASER", "PHASE", "TRACE", "STACK", "SHELL", "PROXY", "ROUTE", "PATCH", "TOKEN", "CRYPT", "ALLOY", "ARRAY", "BYTES", "CACHE", "CHAIN", "CLOCK", "CORES", "DEBUG", "DEPOT", "EPOCH", "FORGE", "GHOST", "GLYPH", "GUARD", "HATCH", "INDEX", "LOGIN", "NODES", "PIXEL", "QUEUE", "RADAR", "ROBOT", "SCRIP", "SHARD", "SIGIL", "SPIKE", "SWARM", "TITAN", "TORCH", "VIRUS"],
+        "6": ["ACCESS", "BEACON", "BINARY", "BRIDGE", "BUFFER", "CIPHER", "COBALT", "CODECS", "DAEMON", "DECODE", "DOCKET", "ENGINE", "FILTER", "FLEETS", "HANGAR", "HARBOR", "KERNEL", "LEDGER", "MODULE", "MIRROR", "NEURON", "ORACLE", "PACKET", "PLASMA", "PORTAL", "PRISMS", "QUANTA", "ROUTER", "SCRIPT", "SECTOR", "SENSOR", "SERVER", "SIGNAL", "SOCKET", "STATIC", "SYSTEM", "TARGET", "THREAD", "TUNNEL", "VECTOR", "VESSEL", "WARDEN"],
+        "7": ["AIRLOCK", "ARCHIVE", "BALLAST", "BASTION", "CAPTAIN", "CIRCUIT", "COMMAND", "CONSOLE", "CONTACT", "COUNCIL", "CRUISER", "CRYSTAL", "CUSTOMS", "DISPLAY", "ECLIPSE", "EXPLOIT", "FREIGHT", "GATEWAY", "HARVEST", "HEGEMON", "MONITOR", "NETWORK", "NUCLEUS", "PAYLOAD", "PHANTOM", "QUARTER", "REACTOR", "REFUGEE", "REPLICA", "RUNTIME", "SCANNER", "SHUTTLE", "STATION", "TRACKER", "TRANSIT", "UPLINKS", "VOLTAGE", "WARSHIP"],
+        "8": ["BACKDOOR", "BULKHEAD", "CHECKSUM", "COMPILER", "DATABASE", "DERELICT", "DOWNLINK", "FIREWALL", "FLAGSHIP", "HOLOGRAM", "KEYSTONE", "LOCKDOWN", "MAINLINE", "MANIFEST", "NAVIGATE", "OVERRIDE", "PASSCODE", "PIPELINE", "PROTOCOL", "QUANTIZE", "RECEIVER", "REGISTER", "RESONANT", "SALVAGED", "SCRAMBLE", "SENTINEL", "SEQUENCE", "SOFTWARE", "SPECTRUM", "STARSHIP", "STOWAWAY", "SUBLEVEL", "TERMINAL", "THRUSTER", "TRANSMIT", "UNLOCKED", "VIGILANT", "WATCHDOG", "WAYPOINT"],
+        "9": ["ALGORITHM", "AUTOPILOT", "BLACKOUTS", "BLOCKADES", "CALIBRATE", "CONTAINER", "CORRIDORS", "DEADLOCKS", "DECOMPILE", "DECRYPTED", "DIAGNOSIS", "ENCRYPTED", "EXECUTIVE", "FREIGHTER", "GENERATOR", "INTERCEPT", "INTERFACE", "INTERLOCK", "INTRUSION", "MAINFRAME", "NAVIGATOR", "OVERWATCH", "PARAMETER", "PASSWORDS", "RESONANCE", "SHIPYARDS", "SIMULATOR", "SMUGGLERS", "SUBSYSTEM", "TELEMETRY", "TRANSPORT", "WAVEFORMS"]
+      }
+    },
+    "engineering": {
+      "game": "switches",
+      "theme": "amber",
+      "window": "Maintenance Panel",
+      "runLabel": "Throw the main",
+      "prompt": "eng@panel:~$",
+      "opening": "You pop the panel. Half the relays are dead, and whoever wired this should be ashamed.",
+      "help": "Click a relay to flip it. It also flips the ones wired to it. Get every relay live.",
+      "consoles": { "terminal": "Diagnostics Console", "bus": "Power Bus", "wiring": "Wiring Diagram" },
+      "results": {
+        "success": "SYSTEM NOMINAL",
+        "failure": "FAULT",
+        "successLine": "It catches, it hums, and it holds.",
+        "failureLine": "Something pops behind the panel, and the smell isn't good."
+      }
+    },
+    "science": {
+      "game": "codebreak",
+      "theme": "cyan",
+      "window": "Analysis Station",
+      "runLabel": "Run the analysis",
+      "prompt": "lab@sensors:~$",
+      "opening": "You feed the readings in. There's a pattern in there, if you can find its parts.",
+      "help": "Click the symbols to build an attempt. # means exact, o means right but in the wrong place.",
+      "symbols": ["A", "B", "C", "D", "E", "F", "G", "H"],
+      "consoles": { "terminal": "Analysis Console", "signal": "Spectrum Analyzer", "history": "Lab Results" },
+      "results": {
+        "success": "RESULT CONFIRMED",
+        "failure": "INCONCLUSIVE",
+        "successLine": "The numbers line up, and now they mean something.",
+        "failureLine": "The data's noise, or you've read it wrong, and you can't tell which."
+      }
+    },
+    "medicine": {
+      "game": "balance",
+      "theme": "green",
+      "window": "Patient Monitor",
+      "runLabel": "Call it",
+      "prompt": "medbay:~$",
+      "opening": "The monitor comes up. Everything's moving the wrong way, and everyone's looking at you.",
+      "help": "Each turn, choose a treatment. Keep the numbers inside the = marks.",
+      "consoles": { "terminal": "Treatment Log", "monitor": "Patient Monitor", "chart": "Treatments" },
+      "results": {
+        "success": "STABLE",
+        "failure": "CRITICAL",
+        "successLine": "The numbers settle. The room starts breathing again.",
+        "failureLine": "It isn't working, and it's going to need something you don't have."
+      },
+      "meters": [
+        { "id": "pulse", "name": "PULSE", "zone": [4, 6] },
+        { "id": "oxygen", "name": "OXYGEN", "zone": [5, 8] },
+        { "id": "pressure", "name": "PRESSURE", "zone": [4, 6] }
+      ],
+      "actions": [
+        { "id": "stimulant", "name": "Stimulant", "deltas": { "pulse": 2, "pressure": 1 }, "line": "the heart picks up." },
+        { "id": "sedative", "name": "Sedative", "deltas": { "pulse": -2, "pressure": -1 }, "line": "it eases things down." },
+        { "id": "oxygen", "name": "Oxygen", "deltas": { "oxygen": 2 }, "line": "the color comes back a little." },
+        { "id": "fluids", "name": "Fluids", "deltas": { "pressure": 2, "pulse": -1 }, "line": "the line runs open." },
+        { "id": "watch", "name": "Watch and wait", "deltas": {}, "line": "sometimes the best thing is to do nothing." },
+        { "id": "titrate", "name": "Careful dosing", "tier": 2, "deltas": { "pulse": 1, "oxygen": 1 }, "line": "a little of each, and it's exactly right." },
+        { "id": "surgery", "name": "Open them up", "tier": 3, "uses": 1, "deltas": { "pressure": 2, "oxygen": 2, "pulse": -1 }, "line": "you find the bleed yourself." }
+      ],
+      "events": [
+        { "text": "The patient seizes on the table.", "deltas": { "pulse": 2, "oxygen": -1 } },
+        { "text": "Blood pressure falls away.", "deltas": { "pressure": -2 } },
+        { "text": "A lung isn't taking air.", "deltas": { "oxygen": -2 } },
+        { "text": "The heart stumbles.", "deltas": { "pulse": -2 } },
+        { "text": "A hidden bleed opens up.", "deltas": { "pressure": -2, "pulse": 1 } },
+        { "text": "The fever spikes.", "deltas": { "pulse": 2 } },
+        { "text": "The shock's wearing off, and the body's fighting back.", "deltas": { "pulse": 1, "pressure": 1 } },
+        { "text": "Breathing goes shallow.", "deltas": { "oxygen": -1, "pulse": 1 } }
+      ]
+    },
+    "lore": {
+      "game": "codebreak",
+      "theme": "violet",
+      "window": "Archive Cross-Reference",
+      "runLabel": "Read it out",
+      "prompt": "archive:~$",
+      "opening": "You lay the fragments side by side. The glyphs repeat, and that has to mean something.",
+      "help": "Click the glyphs to build a reading. # means exact, o means right but in the wrong place.",
+      "symbols": ["Δ", "Ω", "Ψ", "Φ", "Ξ", "Σ", "Θ", "Λ"],
+      "consoles": { "terminal": "Your Notes", "signal": "The Inscription", "history": "Readings So Far" },
+      "results": {
+        "success": "IT READS",
+        "failure": "IT WON'T READ",
+        "successLine": "The meaning surfaces all at once, like a shape under water.",
+        "failureLine": "You can read the words. You just can't trust what you think they mean."
+      }
+    },
+    "piloting": {
+      "game": "runner",
+      "theme": "blue",
+      "window": "Flight Console",
+      "runLabel": "Punch it",
+      "prompt": "helm:~$",
+      "opening": "You take the stick. Proximity alarms start up before you've even finished your first turn.",
+      "help": "Go left, straight or right, one move at a time. The arrow keys work too.",
+      "consoles": { "terminal": "Flight Log", "radar": "Proximity Radar" },
+      "you": "^",
+      "block": "#",
+      "hitsName": "HULL HITS",
+      "hitLine": "Something big scrapes down the hull!",
+      "clearLine": "Clear.",
+      "wreckLine": "Alarms everywhere. She can't take any more of this.",
+      "results": {
+        "success": "CLEAN FLYING",
+        "failure": "LOST CONTROL",
+        "successLine": "You bring her through, and someone behind you lets out a very long breath.",
+        "failureLine": "The ship goes where it wants to, and you find out where along with everyone else."
+      }
+    },
+    "athletics": {
+      "game": "runner",
+      "theme": "red",
+      "window": "On Foot",
+      "runLabel": "Go for it",
+      "prompt": "run:~$",
+      "opening": "You're already moving. There's a lot in the way.",
+      "help": "Go left, straight or right, one move at a time. The arrow keys work too.",
+      "consoles": { "terminal": "Your Breath", "radar": "What's Ahead" },
+      "you": "@",
+      "block": "#",
+      "hitsName": "STUMBLES",
+      "hitLine": "You clip it hard, and nearly go down.",
+      "clearLine": "Clear.",
+      "wreckLine": "Your legs are done, and so is your lead.",
+      "results": {
+        "success": "MADE IT",
+        "failure": "NOT FAST ENOUGH",
+        "successLine": "You get there with your lungs on fire and nothing broken.",
+        "failureLine": "Your body has opinions about this, and they win."
+      }
+    },
+    "void_ops": {
+      "game": "sneak",
+      "theme": "blue",
+      "window": "EVA Suit Display",
+      "runLabel": "Cut the tether",
+      "prompt": "suit:~$",
+      "opening": "The airlock opens on nothing at all. Your suit's display wakes up and starts counting.",
+      "help": "Move across the hull one step at a time, and keep out of the path of the debris. Nothing moves until you do.",
+      "consoles": { "terminal": "Suit Log", "map": "Hull Map" },
+      "you": "@",
+      "exit": "A",
+      "exitName": "the airlock",
+      "movesName": "OXYGEN",
+      "seenLine": "Debris clips your suit, and the alarm starts chirping.",
+      "caughtLine": "Your tether's gone, and the hull's sliding away. You make one desperate jump.",
+      "lateLine": "Your air's nearly gone. You have to go now.",
+      "results": {
+        "success": "BACK INSIDE",
+        "failure": "SUIT BREACH",
+        "successLine": "The pressure comes up, and you can hear yourself breathing again.",
+        "failureLine": "You make it back in, but not the way you planned, and not in one piece of good news."
+      }
+    },
+    "stealth": {
+      "game": "sneak",
+      "theme": "teal",
+      "window": "Patrol Pattern",
+      "runLabel": "Make your move",
+      "prompt": "shadow:~$",
+      "opening": "You wait for the footsteps to pass. Then you count them, and start working it out.",
+      "help": "Move one step at a time, and stay out of anyone's line of sight. Nothing moves until you do.",
+      "consoles": { "terminal": "What You Hear", "map": "The Layout" },
+      "you": "@",
+      "exit": "X",
+      "exitName": "your way out",
+      "movesName": "TIME",
+      "seenLine": "A head turns. Did they see you?",
+      "caughtLine": "\"Hey! You there!\" So much for that.",
+      "lateLine": "Time's up. You've got to move, ready or not.",
+      "results": {
+        "success": "UNSEEN",
+        "failure": "SPOTTED",
+        "successLine": "You're through, and nobody will ever know you were there.",
+        "failureLine": "Someone's shouting now, and they're shouting about you."
+      }
+    },
+    "gunnery": {
+      "game": "target",
+      "theme": "red",
+      "window": "Fire Control",
+      "runLabel": "Open fire",
+      "prompt": "guns:~$",
+      "opening": "The targeting solution keeps slipping. It's jinking, and it knows what it's doing.",
+      "help": "Click the square where the target will be when your shot gets there.",
+      "consoles": { "terminal": "Fire Control Log", "scope": "Targeting Grid" },
+      "target": "X",
+      "hitLine": "Direct hit! Something comes off it.",
+      "nearLine": "Close enough to rattle them.",
+      "missLine": "Your shot goes on into the dark.",
+      "results": {
+        "success": "TARGET HIT",
+        "failure": "NO SOLUTION",
+        "successLine": "The grid lights up, and the bridge goes quiet in a good way.",
+        "failureLine": "They're still coming, and now they know what your guns can do."
+      }
+    },
+    "firearms": {
+      "game": "target",
+      "theme": "red",
+      "window": "Over the Sights",
+      "runLabel": "Squeeze",
+      "prompt": "sights:~$",
+      "opening": "You bring the weapon up, and breathe out. It's moving. Aim where it's going to be.",
+      "help": "Click the square where your target will be when the shot gets there.",
+      "consoles": { "terminal": "Your Breathing", "scope": "Over the Sights" },
+      "target": "X",
+      "hitLine": "On target.",
+      "nearLine": "It chips the wall right by them.",
+      "missLine": "Wide.",
+      "results": {
+        "success": "ON TARGET",
+        "failure": "MISSED",
+        "successLine": "One clean shot, exactly where it needed to go.",
+        "failureLine": "The noise is all anyone remembers, and it told everyone where you are."
+      }
+    },
+    "melee": {
+      "game": "duel",
+      "theme": "red",
+      "window": "Close Quarters",
+      "runLabel": "Finish it",
+      "prompt": "guard:~$",
+      "opening": "You close the distance, and you can see their weight shift.",
+      "help": "Choose your move each exchange. What you can see of their stance might be a feint.",
+      "consoles": { "terminal": "The Exchange", "board": "Their Stance" },
+      "moves": [
+        { "id": "thrust", "name": "Thrust", "hint": "straight in", "tell": "Their guard's dropping. It looks like they're about to thrust." },
+        { "id": "parry", "name": "Parry", "hint": "turn it aside", "tell": "They're coiled and waiting. It looks like they'll parry." },
+        { "id": "feint", "name": "Feint", "hint": "draw them out", "tell": "There's something sly in their footwork. It looks like a feint." }
+      ],
+      "winLines": ["You get through their guard.", "They read it wrong, and pay for it.", "A clean hit, and they back off."],
+      "loseLines": ["They saw that coming.", "You walked straight onto it.", "Pain, and you give ground."],
+      "tieLines": ["Steel on steel, and neither of you gains a thing.", "You're both still standing, both still breathing hard."],
+      "results": {
+        "success": "YOU HAVE THEM",
+        "failure": "OUTMATCHED",
+        "successLine": "You've got the opening you needed.",
+        "failureLine": "They're better than you thought, or you're more tired."
+      }
+    },
+    "tactics": {
+      "game": "duel",
+      "theme": "red",
+      "window": "Tactical Board",
+      "runLabel": "Give the order",
+      "prompt": "tac:~$",
+      "opening": "You pull up what you know about their positions, and what you know is less than you'd like.",
+      "help": "Choose your orders each round. The intel might be wrong, so watch for their habits.",
+      "consoles": { "terminal": "Comms", "board": "Intel" },
+      "moves": [
+        { "id": "advance", "name": "Advance", "hint": "press them hard", "tell": "Scouts report them massing to come straight at you." },
+        { "id": "hold", "name": "Hold the line", "hint": "dig in", "tell": "They're fortifying. It looks like they'll hold." },
+        { "id": "flank", "name": "Flank", "hint": "go around", "tell": "Movement on the far side. It looks like they're going around." }
+      ],
+      "winLines": ["Exactly where you wanted them.", "Their line buckles.", "You catch them out of position, and they know it."],
+      "loseLines": ["They anticipated that.", "That cost you, and you can see it on the board.", "You've walked into their plan."],
+      "tieLines": ["The two sides grind against each other, and nothing changes.", "A stalemate for now."],
+      "results": {
+        "success": "THE PLAN HOLDS",
+        "failure": "OUTMANEUVERED",
+        "successLine": "The pieces fall where you said they would.",
+        "failureLine": "It's a good plan for the battle you thought you were in."
+      }
+    },
+    "navigation": {
+      "game": "route",
+      "theme": "blue",
+      "window": "Star Chart",
+      "runLabel": "Lay it in",
+      "prompt": "nav:~$",
+      "opening": "You pull the chart up. There are a hundred ways across, and most of them end badly.",
+      "help": "Click your next stop. Each one adds drift, and you can only shift one row at a time.",
+      "consoles": { "terminal": "Nav Console", "chart": "Star Chart" },
+      "hazardLine": "Gravity shear! That wasn't on the chart. +3 drift.",
+      "results": {
+        "success": "COURSE LOCKED",
+        "failure": "COURSE ERROR",
+        "successLine": "The numbers close, and it's a beautiful line.",
+        "failureLine": "It'll get you somewhere. You're just not certain where."
+      }
+    },
+    "persuasion": {
+      "game": "appeal",
+      "theme": "gold",
+      "window": "The Conversation",
+      "runLabel": "Make your case",
+      "prompt": "you:",
+      "opening": "They've folded their arms, but they haven't left. That's something.",
+      "help": "Choose how you come at this. See how they react, and don't say the same thing twice if you can help it.",
+      "consoles": { "terminal": "What's Being Said", "read": "Their Reaction", "approaches": "How You Come at It" },
+      "meterName": "WON OVER",
+      "wonLine": "They let out a long breath. They're with you.",
+      "lostLine": "They hold up a hand. They've heard enough.",
+      "approaches": [
+        { "id": "facts", "name": "Lay out the facts", "pole": "reason", "line": "Here's what we know, and here's what follows from it." },
+        { "id": "duty", "name": "Appeal to duty", "pole": "order", "line": "You know your duty. You've always known it." },
+        { "id": "harm", "name": "Talk about who gets hurt", "pole": "mercy", "line": "There are real people on the end of this decision." },
+        { "id": "threat", "name": "Point to the danger", "pole": "iron", "line": "If we don't act, it won't wait for us to feel ready." },
+        { "id": "gain", "name": "Say what's in it for them", "pole": "self", "line": "Forget me. Think about what you stand to gain." },
+        { "id": "together", "name": "Talk about what we owe each other", "pole": "community", "line": "We only got this far because people carried each other." },
+        { "id": "choice", "name": "Leave the choice with them", "pole": "freedom", "line": "I won't tell you what to do. It's your call, and it always was." },
+        { "id": "faith", "name": "Trust in something larger", "pole": "faith", "line": "You've felt it too, that this is bigger than any of us." },
+        { "id": "future", "name": "Show them what could be", "pole": "ascension", "line": "We don't have to stay what we've been." },
+        { "id": "honest", "name": "Admit what you don't know", "pole": "purity", "line": "I'll be honest. I'm scared too, and I don't have all of it." }
+      ],
+      "reactions": {
+        "strong": ["That lands. You see it land.", "They go still, and then they nod slowly.", "Something in their face opens up."],
+        "good": ["They tilt their head. They're listening now.", "\"Go on,\" they say.", "It's not agreement, but it's closer."],
+        "flat": ["They wait for you to say something else.", "It washes over them.", "They shrug, not unkindly."],
+        "bad": ["Their jaw sets. Wrong thing to say.", "\"Don't you dare,\" they say quietly.", "You've just lost ground, and you know it."]
+      },
+      "results": {
+        "success": "CONVINCED",
+        "failure": "NOT CONVINCED",
+        "successLine": "You can see it in their shoulders before they say a word.",
+        "failureLine": "They've made up their mind, and it isn't your way."
+      }
+    },
+    "leadership": {
+      "game": "appeal",
+      "theme": "gold",
+      "window": "In Front of Them",
+      "runLabel": "Give the word",
+      "prompt": "captain:",
+      "promptOther": "you:",
+      "opening": "They're all looking at you. Nobody's said anything yet, and that's the worst part.",
+      "help": "Choose how you speak to them. A crew knows when you're faking it, so read them as you go.",
+      "consoles": { "terminal": "What You Say", "read": "The Room", "approaches": "How You Lead" },
+      "meterName": "FOLLOWING",
+      "wonLine": "Somebody at the back starts moving. Then they all do.",
+      "lostLine": "The murmuring starts, and it doesn't stop.",
+      "approaches": [
+        { "id": "plain", "name": "Tell it straight", "pole": "reason", "line": "Here's how bad it is. I won't dress it up." },
+        { "id": "order", "name": "Give the order", "pole": "order", "line": "This is what's happening. Move." },
+        { "id": "beside", "name": "Share the danger", "pole": "community", "line": "I'm going first. Anyone with me?" },
+        { "id": "dead", "name": "Honor the dead", "pole": "faith", "line": "Everyone we've lost got us to this room. We owe them the next step." },
+        { "id": "shame", "name": "Shame them", "pole": "iron", "line": "Is this who you are? Because the people out there are counting on better." },
+        { "id": "reward", "name": "Promise them something", "pole": "self", "line": "Do this, and you've got my word on what comes after." },
+        { "id": "vote", "name": "Let them decide", "pole": "freedom", "line": "I won't order you into this. Who's in?" },
+        { "id": "mercy", "name": "See their fear", "pole": "mercy", "line": "I know you're tired. I know what I'm asking." }
+      ],
+      "reactions": {
+        "strong": ["Backs straighten across the room.", "Someone says \"Aye\" and it spreads.", "You can feel the room turn."],
+        "good": ["A few nods. That's a start.", "They're looking at each other now, not the floor.", "The muttering stops."],
+        "flat": ["Nobody moves.", "They've heard speeches before.", "Polite silence, which is worse than the other kind."],
+        "bad": ["Someone laughs, and it isn't friendly.", "You've lost the back of the room.", "\"Easy for you to say,\" someone calls out."]
+      },
+      "results": {
+        "success": "THEY FOLLOW",
+        "failure": "THEY HESITATE",
+        "successLine": "They'd follow you out an airlock right now. Try not to need that.",
+        "failureLine": "They're still looking at you, but now it's how they look at a problem."
+      }
+    },
+    "streetwise": {
+      "game": "appeal",
+      "theme": "teal",
+      "window": "Working the Room",
+      "runLabel": "Make the ask",
+      "prompt": "you:",
+      "opening": "You find a spot where you can watch the door. Somebody here knows what you need to know.",
+      "help": "Choose how you work the room. Everyone wants something different, so watch how they take it.",
+      "consoles": { "terminal": "What You Hear", "read": "The Room", "approaches": "How You Work It" },
+      "meterName": "TRUST",
+      "wonLine": "Someone slides onto the stool next to you. \"I hear you've been asking around.\"",
+      "lostLine": "The room's gone quiet around you. Time to leave.",
+      "approaches": [
+        { "id": "round", "name": "Buy a round", "pole": "community", "line": "Next one's on me. What's the word around here?" },
+        { "id": "name", "name": "Drop a name", "pole": "order", "line": "A mutual friend said to ask for you." },
+        { "id": "credits", "name": "Slip some credits across", "pole": "self", "line": "This is for your trouble. There's more if it's good." },
+        { "id": "shop", "name": "Talk shop", "pole": "reason", "line": "Same work, different port. How's business really?" },
+        { "id": "lean", "name": "Lean on someone", "pole": "iron", "line": "We can do this friendly, or I can ask your boss." },
+        { "id": "listen", "name": "Say nothing, and listen", "pole": "mercy", "line": "You nurse your drink, and let people get used to you." },
+        { "id": "outlaw", "name": "Show you're no friend of the law", "pole": "freedom", "line": "I'm not here for anyone with a badge. Quite the opposite." },
+        { "id": "story", "name": "Trade a rumor", "pole": "faith", "line": "I'll tell you what I heard, if you tell me what you heard." }
+      ],
+      "reactions": {
+        "strong": ["Now they're leaning in.", "Someone laughs and moves over to make room.", "\"You're all right,\" they say, and they seem to mean it."],
+        "good": ["They look at you twice. That's progress.", "You get a nod, and a name.", "The bartender tops you up without asking."],
+        "flat": ["Nobody's biting.", "They look through you like glass.", "They shrug and go back to their drink."],
+        "bad": ["Conversation dies at the next table.", "Someone goes to make a call.", "Wrong port for that. You've been noticed."]
+      },
+      "results": {
+        "success": "YOU GET THE WORD",
+        "failure": "WRONG CROWD",
+        "successLine": "You've got your answer, and it only cost you a little.",
+        "failureLine": "All you've learned is that people are now asking about you."
+      }
+    },
+    "deception": {
+      "game": "cover",
+      "theme": "gold",
+      "window": "Your Cover Story",
+      "runLabel": "Bluff it out",
+      "prompt": "you:",
+      "opening": "They look up from the slate and smile. \"Just a few questions.\"",
+      "help": "Choose how you answer. Watch how they ask: if they already know the answer, a bold lie will sink you.",
+      "consoles": { "terminal": "The Questions", "read": "How It's Going" },
+      "questions": [
+        "Where did you say you were coming from?",
+        "And who signed for this?",
+        "How long have you known them?",
+        "What was the name of your last port?",
+        "Why would you need that?",
+        "Who else knows you're here?",
+        "What's in the hold, exactly?",
+        "Have we met?",
+        "Who's your commanding officer, again?",
+        "What did you do before the Fall?"
+      ],
+      "knowsTells": [
+        "They glance at their slate before you've even answered.",
+        "They ask it a little too casually.",
+        "Their eyes don't move from yours. They've asked this before.",
+        "They nearly smile.",
+        "They've already started writing something down."
+      ],
+      "blankTells": [
+        "They look genuinely curious.",
+        "They're tired, and checking the time.",
+        "They frown at their slate, scrolling for something.",
+        "They ask it the way you'd read from a list.",
+        "They look away for a moment while you answer."
+      ],
+      "sold": ["They nod and write it down. They bought that.", "\"Ah, of course.\" You've got them.", "You add one small, perfect detail, and they relax."],
+      "caught": ["\"That's interesting. It isn't what it says here.\"", "They let the silence stretch, and tap the slate.", "You see the moment they stop believing you."],
+      "fine": ["They accept it, and move on.", "It's dull, and dull is good.", "They make a small mark, and carry on."],
+      "shaky": ["\"You're sure about that?\" You're sure. Mostly.", "A small frown. Nothing you can do about it now.", "Too simple, and they've noticed."],
+      "dodged": ["You answer a different question, and they let you.", "\"Good question. Who wants to know?\"", "You make a joke, and it buys you a moment."],
+      "blownLine": "They set the slate down. \"Let's stop pretending, shall we?\"",
+      "endLine": "They close the slate. \"I think that's everything.\"",
+      "results": {
+        "success": "THEY BELIEVE YOU",
+        "failure": "YOU'RE MADE",
+        "successLine": "You keep your face still until you're out of sight.",
+        "failureLine": "It's the kind of smile that means someone's being called."
+      }
+    },
+    "intimidation": {
+      "game": "push",
+      "theme": "red",
+      "window": "Leaning on Them",
+      "runLabel": "Let it land",
+      "prompt": "you:",
+      "opening": "You step in closer than is polite. Now it's just a question of how far to take this.",
+      "help": "Push to raise the pressure. Hold when they're where you want them. Push too far, and they snap.",
+      "consoles": { "terminal": "What You Say", "gauge": "How Scared They Are" },
+      "pushName": "lean harder",
+      "holdName": "hold it there",
+      "brokeLabel": "THEY SNAPPED",
+      "goodLabel": "THEY'RE YOURS",
+      "weakLabel": "NOT SCARED ENOUGH",
+      "pushLines": ["You lower your voice.", "You mention their family, in passing.", "You don't blink.", "You step closer.", "You let them see the weapon, without touching it."],
+      "holdLines": ["You stop, and let the silence do the rest.", "You straighten up. They flinch anyway."],
+      "breakLines": ["Something behind their eyes gives way. They go for you, or the door, or both.", "You've pushed too far. They've stopped being scared, and started being desperate."],
+      "results": {
+        "success": "THEY BREAK",
+        "failure": "THEY DON'T",
+        "successLine": "They can't look at you. They'll do it.",
+        "failureLine": "All you've done is make an enemy who knows your face."
+      }
+    },
+    "commerce": {
+      "game": "haggle",
+      "theme": "gold",
+      "window": "The Negotiating Table",
+      "runLabel": "Shake on it",
+      "prompt": "you:",
+      "opening": "They name a figure, and then they name the terms, and smile as if it's a gift.",
+      "help": "Make offers, and take the deal when you think it's as good as it'll get.",
+      "consoles": { "terminal": "Across the Table", "deal": "The Deal" },
+      "dealLines": ["They spit in their palm, and offer it.", "\"Pleasure doing business.\" It probably was."],
+      "acceptLines": ["They wince, and take it. You're fairly sure the wince is real.", "\"You're robbing me.\" They shake your hand anyway.", "They look at the ceiling, sigh and nod."],
+      "counterLines": ["They come down, grudgingly.", "\"I've got mouths to feed too.\" They give a little.", "They tap the table, and move their price."],
+      "insultLines": ["They laugh, and they don't mean it.", "\"Is that a joke? Say if it's a joke.\"", "They start putting their things away, slowly."],
+      "walkLine": "They stand up. \"We're done. Find someone else to insult.\"",
+      "results": {
+        "success": "DEAL",
+        "failure": "BAD DEAL",
+        "successLine": "You come out ahead, and they might even deal with you again.",
+        "failureLine": "You'll notice exactly how bad it was around the time it's too late."
+      }
+    },
+    "awareness": {
+      "game": "scan",
+      "theme": "teal",
+      "window": "Something's Wrong Here",
+      "runLabel": "Trust your gut",
+      "prompt": "you:",
+      "opening": "You stop. You don't know why yet. Something's wrong with what you're looking at.",
+      "help": "Look for what's different from everything around it, and click it.",
+      "consoles": { "terminal": "Your Instincts", "field": "What You're Looking At" },
+      "pairs": [
+        [[".", "x"], [",", "#"], ["-", "+"]],
+        [["o", "x"], ["-", "="], [".", ":"]],
+        [["c", "e"], ["n", "h"], ["v", "y"]],
+        [["l", "1"], ["O", "Q"], ["m", "n"]],
+        [["O", "0"], ["I", "l"], ["5", "S"]]
+      ],
+      "foundLines": ["There. That's what's been bothering you.", "That doesn't belong.", "Got it. Your neck was right to prickle."],
+      "wrongLines": ["Nothing. Just nerves.", "No, that's as it should be.", "False alarm."],
+      "allFound": "You've got all of it, and now you wish you didn't.",
+      "outOfTime": "You can't stand here staring any longer.",
+      "results": {
+        "success": "YOU NOTICE",
+        "failure": "YOU MISS IT",
+        "successLine": "You see what nobody else in the room has seen.",
+        "failureLine": "Everything seems fine. That's what you'll remember thinking."
+      }
+    },
+    "survival": {
+      "game": "balance",
+      "theme": "amber",
+      "window": "Staying Alive",
+      "runLabel": "Push on",
+      "prompt": "you:",
+      "opening": "No help is coming, not soon. You take stock of what you've got, and start doing the arithmetic.",
+      "help": "Each turn, choose what to do. Keep the numbers inside the = marks.",
+      "consoles": { "terminal": "Your Log", "monitor": "How You're Doing", "chart": "What You Can Do" },
+      "meters": [
+        { "id": "warmth", "name": "WARMTH", "zone": [4, 7] },
+        { "id": "water", "name": "WATER", "zone": [4, 8] },
+        { "id": "strength", "name": "STRENGTH", "zone": [4, 8] }
+      ],
+      "actions": [
+        { "id": "shelter", "name": "Build shelter", "deltas": { "warmth": 2, "strength": -1 }, "line": "it isn't pretty, but it holds." },
+        { "id": "water", "name": "Find water", "deltas": { "water": 3, "strength": -1 }, "line": "it tastes terrible, and it's wonderful." },
+        { "id": "rest", "name": "Rest", "deltas": { "strength": 2, "warmth": -1 }, "line": "you make yourself stop." },
+        { "id": "fire", "name": "Make a fire", "deltas": { "warmth": 3, "water": -1 }, "line": "it's the best thing you've ever seen." },
+        { "id": "forage", "name": "Forage", "deltas": { "strength": 1, "water": 1 }, "line": "you find something you can eat, probably." },
+        { "id": "trap", "name": "Set a proper camp", "tier": 2, "deltas": { "warmth": 1, "water": 1, "strength": 1 }, "line": "you've done this before, and it shows." }
+      ],
+      "events": [
+        { "text": "The temperature falls off a cliff.", "deltas": { "warmth": -2 } },
+        { "text": "You've got nothing left to drink.", "deltas": { "water": -2 } },
+        { "text": "A long, punishing stretch of ground.", "deltas": { "strength": -2 } },
+        { "text": "A storm rolls in.", "deltas": { "warmth": -1, "strength": -1 } },
+        { "text": "The heat comes up, and your throat closes.", "deltas": { "water": -2, "warmth": 1 } },
+        { "text": "You turn your ankle.", "deltas": { "strength": -2, "water": -1 } },
+        { "text": "A bad night. Nobody sleeps.", "deltas": { "strength": -1, "warmth": -1 } }
+      ],
+      "results": {
+        "success": "STILL ALIVE",
+        "failure": "IN TROUBLE",
+        "successLine": "You've kept yourself going, and you know what to do next.",
+        "failureLine": "You're alive, but your body's sending the bill."
+      }
+    },
+    "composure": {
+      "game": "balance",
+      "theme": "violet",
+      "window": "Holding Steady",
+      "runLabel": "Face it",
+      "prompt": "you:",
+      "opening": "Your heart's going too fast. You've got about a second before it shows on your face.",
+      "help": "Each turn, choose how you steady yourself. Keep the numbers inside the = marks.",
+      "consoles": { "terminal": "Inside Your Head", "monitor": "How You're Holding Up", "chart": "What You Hold On To" },
+      "meters": [
+        { "id": "fear", "name": "FEAR", "zone": [2, 5] },
+        { "id": "anger", "name": "ANGER", "zone": [2, 5] },
+        { "id": "focus", "name": "FOCUS", "zone": [5, 8] }
+      ],
+      "actions": [
+        { "id": "breathe", "name": "Breathe", "deltas": { "fear": -2, "focus": 1 }, "line": "in for four, out for six, the way you were taught." },
+        { "id": "count", "name": "Count the exits", "deltas": { "focus": 2, "fear": -1 }, "line": "two doors, one vent. All right." },
+        { "id": "bite", "name": "Bite down on it", "deltas": { "anger": -2, "focus": -1 }, "line": "you say nothing. It costs you." },
+        { "id": "anger", "name": "Let the anger in", "deltas": { "fear": -2, "anger": 2 }, "line": "better furious than frightened." },
+        { "id": "home", "name": "Think of someone", "deltas": { "fear": -1, "anger": -1 }, "line": "you know who you're doing this for." },
+        { "id": "still", "name": "Go completely still", "tier": 2, "deltas": { "fear": -1, "anger": -1, "focus": 1 }, "line": "you've been in worse rooms than this." }
+      ],
+      "events": [
+        { "text": "Someone says your name, very quietly.", "deltas": { "fear": 2 } },
+        { "text": "They bring up the people you lost.", "deltas": { "anger": 2, "focus": -1 } },
+        { "text": "The pain comes back, all at once.", "deltas": { "focus": -2 } },
+        { "text": "The lights go out for three long seconds.", "deltas": { "fear": 2, "focus": -1 } },
+        { "text": "You hear them laugh at you.", "deltas": { "anger": 2 } },
+        { "text": "You remember the last time this happened.", "deltas": { "fear": 1, "focus": -1 } },
+        { "text": "Everyone's watching to see if you'll flinch.", "deltas": { "fear": 1, "anger": 1 } }
+      ],
+      "results": {
+        "success": "YOU HOLD",
+        "failure": "YOU CRACK",
+        "successLine": "Your hands are steady. Nobody ever has to know what that cost.",
+        "failureLine": "It only shows for a moment, but a moment's all they needed."
+      }
+    },
+    "attunement": {
+      "game": "tune",
+      "theme": "violet",
+      "window": "The Field",
+      "runLabel": "Open yourself",
+      "prompt": "...",
+      "opening": "You let the room go quiet, and then the part of you that isn't in the room.",
+      "help": "Set the dial, then listen. It's stronger the closer you are. Each listen costs you.",
+      "consoles": { "terminal": "What You Sense", "dial": "The Field" },
+      "warmer": "Stronger. Something's there.",
+      "colder": "Fainter. It's slipping away.",
+      "foundLine": "There. It's clear as a bell, and it's looking back.",
+      "spentLine": "Your head's splitting. You can't hold this any longer.",
+      "results": {
+        "success": "YOU HEAR IT",
+        "failure": "ONLY STATIC",
+        "successLine": "You know something now that you've got no way of knowing.",
+        "failureLine": "You come back with a nosebleed, and the feeling you were noticed."
+      }
+    },
+    "manifestation": {
+      "game": "push",
+      "theme": "violet",
+      "window": "Shaping the Field",
+      "runLabel": "Release it",
+      "prompt": "...",
+      "opening": "You reach for the field. It's always there, and it always wants more than you meant to give.",
+      "help": "Push to draw on it. Hold when you've got enough. Past the limit, it burns you.",
+      "consoles": { "terminal": "Your Focus", "gauge": "What You're Holding" },
+      "pushName": "draw deeper",
+      "holdName": "hold it there",
+      "brokeLabel": "BACKLASH",
+      "goodLabel": "IT'S YOURS",
+      "weakLabel": "NOT ENOUGH YET",
+      "pushLines": ["Your teeth ache.", "The air gets thin around you.", "Loose objects begin to tremble.", "You can taste metal.", "The lights dim, and something hums."],
+      "holdLines": ["You hold it, trembling, exactly where you want it.", "You stop reaching, and it stays."],
+      "breakLines": ["It goes through you like a bell struck too hard. Everything's white.", "You've reached too deep, and it reaches back."],
+      "results": {
+        "success": "IT MOVES",
+        "failure": "IT BURNS",
+        "successLine": "The world does what you asked it to, and it remembers that you asked.",
+        "failureLine": "You've got a bad headache, and everyone nearby has a bad feeling."
+      }
+    }
+  }
+}
