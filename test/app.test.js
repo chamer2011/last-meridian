@@ -96,7 +96,7 @@ test("the installer can't contain your saves or your API key", () => {
     assert.ok(!/^(\*|data|backups|test|dist|\.)/.test(pattern), `${pattern} shouldn't go in the installer`);
     assert.ok(!pattern.includes("**/*"), `${pattern} could take in anything`);
   }
-  for (const needed of ["app/**", "public/**", "src/**", "world/**", "server.js", "package.json"]) assert.ok(files.includes(needed), `${needed} needs to go in`);
+  for (const needed of ["app/**", "public/**", "src/**", "world/**", "server.js", "package.json", "LICENSE", "STORY-AND-WORLD.md"]) assert.ok(files.includes(needed), `${needed} needs to go in`);
 });
 
 test("the app's own files are all there, and its icon is one Windows can use", () => {

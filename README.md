@@ -6,7 +6,7 @@ As it stands right now, AI is overwhelmingly present in every part of the projec
 
 The style I have in mind for the finality of the project is the games AGE OF DECADENCE, Colony Ship: A Post-Earth Role Playing Game, both excellent games from a passionate developer!
 
-MOREOVER : The description is written by AI. THIS WILL CHANGE SOON (and I will use my great skill of writing to do it!) as the project is merely 6 days old (as of 02/11/26 or 11/02/26) and I wanted to get the game out as soon as possible to get feedback. The game is OPENSOURCE and will stay the same. I might have a patreon soon if you want to support me since I fear the cost of everything will slowly creep up
+MOREOVER : The description is written by AI. THIS WILL CHANGE SOON (and I will use my great skill of writing to do it!) as the project is merely 6 days old (as of 02/11/26 or 11/02/26) and I wanted to get the game out as soon as possible to get feedback. The code is OPENSOURCE and will stay the same. I might have a patreon soon if you want to support me since I fear the cost of everything will slowly creep up
 
 PS : English being my second language, please excuse the possible grammatical errors.
 
@@ -107,6 +107,8 @@ Then go to http://localhost:3210.
 
 ## What you can do with it
 
-You're welcome to download it and play it. All other rights are kept: see [LICENSE](LICENSE).
+**The code is open source,** under [GPL-3.0](LICENSE). You can use it, change it and share it, even for money, as long as what you release stays open under the same licence. Copyright (C) 2026 chamer2011.
+
+**The story and world stay with their owner.** You're welcome to download the game, play it and change your own copy, but not to share the story and world or use them in your own game. [STORY-AND-WORLD.md](STORY-AND-WORLD.md) lists what that covers.
 
 The game was built with [Claude Code](https://claude.com/claude-code), and the story you play is written live by Claude.

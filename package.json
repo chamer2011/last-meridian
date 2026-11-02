@@ -1,9 +1,10 @@
 {
   "name": "last-meridian",
   "productName": "The Last Meridian",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A sci-fi text RPG with an AI game master",
   "author": "The Last Meridian",
+  "license": "GPL-3.0-only",
   "private": true,
   "type": "module",
   "main": "app/main.js",
@@ -33,7 +34,9 @@
       "src/**",
       "world/**",
       "server.js",
-      "package.json"
+      "package.json",
+      "LICENSE",
+      "STORY-AND-WORLD.md"
     ],
     "win": {
       "target": "nsis",
