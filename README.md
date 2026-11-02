@@ -49,7 +49,7 @@ These are rough figures in US cents, from a small number of real turns, and Sonn
 
 **Your key** stays on your computer, saved in plain text, and only ever goes to Anthropic. The game doesn't contact anything else, apart from a local AI if you use one.
 
-**With no key,** you can still make a character, walk around, watch people go about their day, read the menus, and try the skill games and the fight simulator. Only the story has to wait.
+**With no key,** you can still make a character, walk around, watch people go about their day, read the menus, and try the skill games, plus the fight simulator if you start aboard the Meridian. Only the story has to wait.
 
 **A local AI** is free, and the game has a setting for one through [Ollama](https://ollama.com). It needs a download of several GB and writes less well, and the game hasn't been tried with a real one yet.
 
@@ -88,7 +88,7 @@ This is for anyone who'd rather not use the installer, or isn't on Windows, thou
 ```bash
 git clone https://github.com/chamer2011/last-meridian.git
 cd last-meridian
-npm install
+npm install --omit=dev
 npm start
 ```
 
