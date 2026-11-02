@@ -1,5 +1,16 @@
 # The Last Meridian
 
+DISCLAMER Hello I'm the solo "developer" working on this project. I would like to say that I do not have any experience nor knowledge of how to code; as such, I have used Claude's code to write the game. Knowing that AI is a divided subject right now (with merit I might have), I understand if it causes controversy and disinterest from you. That being said, this project is a passion project I wouldn't have been able to do without AI, though. NO AI was used to generate ART, MUSIC, etc. as I feel it is a HUMONGUS problem of AI right now. It is in my future plans to hire an artist to help me with the art; if you're interested, please contact me!
+
+As it stands right now, AI is overwhelmingly present in every part of the project, my vision going forward would be to eliminate the use of AI progressively in a way that, in term, the AI would be an optional features to add dept to the story and make it feel more interactive and not the main part of the game. THIS IS NOT THE CASE RIGHT NOW, it is everywhere and the game is very much EARLY STAGE. If that sounds interesting to you then I would ask you to please give me feedback on your experience (bugs, ideas for features, how the menus feel) as I am now at university and working at the same time; I do not have the time to deeply test the game. I hope you enjoy it.
+
+The style I have in mind for the finality of the project is the games AGE OF DECADENCE, Colony Ship: A Post-Earth Role Playing Game, both excellent games from a passionate developer!
+
+MOREOVER : The description is written by AI. THIS WILL CHANGE SOON (and I will use my great skill of writing to do it!) as the project is merely 6 days old (as of 02/11/26 or 11/02/26) and I wanted to get the game out as soon as possible to get feedback. The game is OPENSOURCE and will stay the same. I might have a patreon soon if you want to support me since I fear the cost of everything will slowly creep up
+
+PS : English being my second language, please excuse the possible grammatical errors.
+
+
 *Thirty thousand survivors. Forty-one ships. One signal from beyond the edge of the map. Where are you in all this?*
 
 A sci-fi RPG for Windows where an AI writes the story and the game's own code keeps the rules fair. You can be the fleet's captain, a dock hand, a card dealer or a scavenger, and the world goes on with or without you.
