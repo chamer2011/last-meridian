@@ -915,7 +915,7 @@ test("a save from before the fleet loads, with nothing charged for the days alre
   save.ship = { name: "CFS Meridian", hull: 40, maxHull: 100, fuel: 3, maxFuel: 12, morale: 31 };
   save.transcript = [{ role: "narrator", text: "The story so far.\n\n> Do something" }];
   const game = migrateGame(save);
-  assert.equal(game.version, 14);
+  assert.equal(game.version, 15);
   assert.equal(game.fleet.day, 9);
   assert.equal(game.fleet.at, "kessara");
   assert.equal(game.fleet.food, FLEET_DATA.start.food);
@@ -944,7 +944,7 @@ test("a save aboard a fleet ship starts in open space, and one from any older ve
   const ancient = { ...oldSave(), version: 3, bestiary: undefined };
   delete ancient.campaign;
   const game = migrateGame(ancient);
-  assert.equal(game.version, 14);
+  assert.equal(game.version, 15);
   assert.ok(game.fleet);
   assert.doesNotThrow(() => publicState(game));
 });
@@ -957,7 +957,7 @@ test("ships added to or removed from the file reach a save, and a new save alway
   assert.equal(migrated.fleet.ships.old_friend, undefined);
   assert.ok(migrated.fleet.ships.kittiwake);
   assert.doesNotThrow(() => publicState(migrated));
-  assert.equal(newGame().version, 14);
+  assert.equal(newGame().version, 15);
 });
 
 test("sleeping pays for the day too", () => {

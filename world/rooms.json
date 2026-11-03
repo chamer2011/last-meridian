@@ -31,7 +31,10 @@
       },
       "layouts": [
         {
-          "label": [3, 1],
+          "label": [
+            3,
+            1
+          ],
           "plan": [
             "########################################################",
             "#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#####~~~~~~~~~~~~~#####",
@@ -92,7 +95,10 @@
       },
       "layouts": [
         {
-          "label": [3, 1],
+          "label": [
+            3,
+            1
+          ],
           "plan": [
             "##########################################",
             "#........................................#",
@@ -154,7 +160,10 @@
       },
       "layouts": [
         {
-          "label": [3, 1],
+          "label": [
+            3,
+            1
+          ],
           "plan": [
             "############################################################",
             "#..........................................................#",
@@ -215,7 +224,10 @@
       },
       "layouts": [
         {
-          "label": [3, 1],
+          "label": [
+            3,
+            1
+          ],
           "plan": [
             "##########################################################################",
             "#'@''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''#",
@@ -273,7 +285,10 @@
       },
       "layouts": [
         {
-          "label": [3, 1],
+          "label": [
+            3,
+            1
+          ],
           "plan": [
             "##################################################",
             "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
@@ -335,7 +350,10 @@
       },
       "layouts": [
         {
-          "label": [3, 1],
+          "label": [
+            3,
+            1
+          ],
           "plan": [
             "########################################################",
             "#......................................................#",
@@ -397,7 +415,10 @@
       },
       "layouts": [
         {
-          "label": [3, 1],
+          "label": [
+            3,
+            1
+          ],
           "plan": [
             "########################################################",
             "#::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
@@ -459,7 +480,10 @@
       },
       "layouts": [
         {
-          "label": [3, 1],
+          "label": [
+            3,
+            1
+          ],
           "plan": [
             "##########################################################",
             "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
@@ -520,7 +544,10 @@
       },
       "layouts": [
         {
-          "label": [3, 1],
+          "label": [
+            3,
+            1
+          ],
           "plan": [
             "##############################################################",
             "#............................................................#",
@@ -580,7 +607,10 @@
       },
       "layouts": [
         {
-          "label": [3, 1],
+          "label": [
+            3,
+            1
+          ],
           "plan": [
             "##########################################################",
             "#........................................................#",
@@ -640,7 +670,10 @@
       },
       "layouts": [
         {
-          "label": [3, 1],
+          "label": [
+            3,
+            1
+          ],
           "plan": [
             "##################################################################",
             "#________________________________________________________________#",
@@ -702,7 +735,10 @@
       },
       "layouts": [
         {
-          "label": [3, 1],
+          "label": [
+            3,
+            1
+          ],
           "plan": [
             "########################################################",
             "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#",
@@ -762,7 +798,10 @@
       },
       "layouts": [
         {
-          "label": [3, 1],
+          "label": [
+            3,
+            1
+          ],
           "plan": [
             "##########################################################",
             "#::::::::::::::::::::::::::::::::::::::::::::::::::::::::#",
@@ -826,7 +865,10 @@
       },
       "layouts": [
         {
-          "label": [3, 1],
+          "label": [
+            3,
+            1
+          ],
           "plan": [
             "########################################################",
             "#......................................................#",
@@ -874,7 +916,10 @@
       },
       "layouts": [
         {
-          "label": [3, 1],
+          "label": [
+            3,
+            1
+          ],
           "plan": [
             "##################################################",
             "#................................................#",
@@ -928,6 +973,61 @@
       "unmet": "{name} looks up. You haven't really spoken before.",
       "asleep": "{name} is asleep. You shake them awake, and they blink up at you."
     },
-    "rumorAsked": "What have you heard lately?"
+    "rumorAsked": "What have you heard lately?",
+    "stock": {
+      "_help": "Lines for anyone without a conversation of their own (a file called talk_<id>.txt in world/scenes). greet is by how they feel about the player. {name}, {role}, {doing} and {desc} are filled in. Each person always gets the same line, so they sound like themselves.",
+      "greet": {
+        "ally": [
+          "\"Good. I was hoping it'd be you.\"",
+          "\"There you are. Sit, if there's anything to sit on.\"",
+          "\"You look like you've been up as long as I have.\""
+        ],
+        "friendly": [
+          "\"Captain.\" A nod. \"What can I do?\"",
+          "\"Didn't expect company. It's welcome.\"",
+          "\"Go on, I'm listening. I can do two things at once, most days.\""
+        ],
+        "neutral": [
+          "\"Yes?\"",
+          "\"Something I can help with?\"",
+          "\"I've got a minute. About a minute.\""
+        ],
+        "wary": [
+          "\"If this is about the rations, I've said what I've said.\"",
+          "\"I'm working.\" A pause. \"But go on.\"",
+          "\"Make it quick, would you.\""
+        ],
+        "hostile": [
+          "\"No.\" Then, because you're still standing there: \"What.\"",
+          "\"I've got nothing to say to you that you'd want to hear.\"",
+          "\"Say it and go.\""
+        ],
+        "unmet": [
+          "\"Do I know you?\" It isn't unfriendly. It isn't friendly either.",
+          "\"Hm? Sorry. Miles away. What is it?\"",
+          "\"You're new. Or I am. Go on.\""
+        ]
+      },
+      "asks": {
+        "work": "What do you do here?",
+        "doing": "What are you up to right now?",
+        "place": "What's it like, here?"
+      },
+      "work": [
+        "I'm {role}. It keeps me busy, which is the point of it.",
+        "{role}, for my sins. Before the Fall I was something else. Everyone was.",
+        "I'm {role}. Nobody asked me if I wanted to be. Nobody asks anyone anything, these days."
+      ],
+      "doing": [
+        "{doing}, if you must know. It doesn't do itself.",
+        "{doing}. Same as yesterday, same as tomorrow, if we get one.",
+        "{doing}. You can watch, if you like. It's not much of a show."
+      ],
+      "place": [
+        "{name} looks round at the place, as if seeing it for the first time in a while. {desc}",
+        "{name} shrugs. {desc}",
+        "{name} doesn't answer straight away. {desc}"
+      ]
+    }
   }
 }

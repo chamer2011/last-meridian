@@ -821,7 +821,10 @@ after(() => {
 });
 
 test("over the real server: the game master starts a fight and says why, the player talks them down, and the game master hears how it went", async () => {
-  const made = await post("/api/new", { draft: randomDraft({ seed: 42, archetype: "envoy" }) });
+  // A life with no written opening of its own, so the game master writes the opening, and can start a fight in it.
+  const draft = randomDraft({ seed: 42, archetype: "envoy" });
+  draft.start = "miner";
+  const made = await post("/api/new", { draft });
   assert.equal(made.status, 200, JSON.stringify(made));
   nextFight = { enemy: "desperate_refugee", lead_in: "A thin figure steps out, holding a knife.", why: "afraid", reason: "They think you've come to take their ship's rations." };
   const started = await post("/api/chat", { event: "start" });

@@ -41,7 +41,10 @@
       "labels": [
         {
           "text": "THE RAFTS",
-          "at": [3, 6]
+          "at": [
+            3,
+            6
+          ]
         }
       ],
       "exits": {
@@ -108,12 +111,19 @@
         "      |   |                                          |   |              "
       ],
       "writing": [
-        [4, 0, "CORSO STATION. PLEASE SIGN THE VISITORS' BOOK"]
+        [
+          4,
+          0,
+          "CORSO STATION. PLEASE SIGN THE VISITORS' BOOK"
+        ]
       ],
       "labels": [
         {
           "text": "CORSO STATION",
-          "at": [42, 4]
+          "at": [
+            42,
+            4
+          ]
         }
       ],
       "exits": {
@@ -180,12 +190,19 @@
         "#######################################################################"
       ],
       "writing": [
-        [30, 0, "SLACK WATER ONLY. CHECK THE TABLE"]
+        [
+          30,
+          0,
+          "SLACK WATER ONLY. CHECK THE TABLE"
+        ]
       ],
       "labels": [
         {
           "text": "THE TIDE LEVELS",
-          "at": [22, 6]
+          "at": [
+            22,
+            6
+          ]
         }
       ],
       "exits": {
@@ -248,12 +265,19 @@
         "###################################################"
       ],
       "writing": [
-        [21, 7, "DOWN  2,000 METERS"]
+        [
+          21,
+          7,
+          "DOWN  2,000 METERS"
+        ]
       ],
       "labels": [
         {
           "text": "THE SHAFT",
-          "at": [22, 2]
+          "at": [
+            22,
+            2
+          ]
         }
       ],
       "exits": {
@@ -266,7 +290,11 @@
           "via": "1",
           "closed": {
             "look": "The elevator stands open, lit from inside, with nobody in it. There's one button, and it doesn't go up. It came for you from below, and it's going to wait for two minutes.",
-            "use": "I step into the elevator at high tide, and I press the button."
+            "use": "I step into the elevator at high tide, and I press the button.",
+            "ask": {
+              "opens": "You step in at high tide and press the only button. The doors close, the light goes amber, and the elevator goes down for longer than the sea is deep.",
+              "flag": "went_down_at_maris"
+            }
           }
         }
       },
@@ -323,7 +351,10 @@
       "labels": [
         {
           "text": "THE LONG CHAMBER",
-          "at": [3, 3]
+          "at": [
+            3,
+            3
+          ]
         }
       ],
       "exits": {
@@ -380,27 +411,42 @@
     "rooms": [
       {
         "level": "rafts",
-        "at": [6, 2],
+        "at": [
+          6,
+          2
+        ],
         "text": "THE RAFTS"
       },
       {
         "level": "station",
-        "at": [38, 2],
+        "at": [
+          38,
+          2
+        ],
         "text": "CORSO STATION"
       },
       {
         "level": "tides",
-        "at": [40, 4],
+        "at": [
+          40,
+          4
+        ],
         "text": "THE TIDE LEVELS"
       },
       {
         "level": "shaft",
-        "at": [48, 6],
+        "at": [
+          48,
+          6
+        ],
         "text": "SHAFT"
       },
       {
         "level": "chamber",
-        "at": [22, 8],
+        "at": [
+          22,
+          8
+        ],
         "text": "THE LONG CHAMBER"
       }
     ]

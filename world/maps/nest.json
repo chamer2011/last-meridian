@@ -40,7 +40,10 @@
       "labels": [
         {
           "text": "THE OUTER LATTICE",
-          "at": [30, 4]
+          "at": [
+            30,
+            4
+          ]
         }
       ],
       "exits": {
@@ -97,7 +100,10 @@
       "labels": [
         {
           "text": "THE GALLERY OF FACES",
-          "at": [21, 4]
+          "at": [
+            21,
+            4
+          ]
         }
       ],
       "exits": {
@@ -118,7 +124,10 @@
           "via": "1",
           "closed": {
             "look": "The gallery ends at a place where the silver parts, with nothing behind it, and a song in your back teeth. It isn't a door. It's just that you can't go through until you're wanted.",
-            "use": "I stand where the silver parts, and I say out loud that I'd like to speak with the Cantor."
+            "use": "I stand where the silver parts, and I say out loud that I'd like to speak with the Cantor.",
+            "ask": {
+              "answer": "You say it out loud, and the silver doesn't part. You aren't wanted yet. You'd know if you were. Everyone does."
+            }
           }
         }
       },
@@ -161,14 +170,29 @@
         "############################################################################"
       ],
       "writing": [
-        [4, 3, "HOME"],
-        [33, 1, "DORMITORY"],
-        [54, 1, "GALLEY"]
+        [
+          4,
+          3,
+          "HOME"
+        ],
+        [
+          33,
+          1,
+          "DORMITORY"
+        ],
+        [
+          54,
+          1,
+          "GALLEY"
+        ]
       ],
       "labels": [
         {
           "text": "THE WAITING ROOMS",
-          "at": [3, 1]
+          "at": [
+            3,
+            1
+          ]
         }
       ],
       "exits": {
@@ -226,12 +250,19 @@
         "//\\\\//\\\\%%%%%//\\\\//\\\\%%%%//\\\\//\\\\%%%%%//\\\\//\\\\%%%%//\\\\//\\\\%%%%%//\\\\/"
       ],
       "writing": [
-        [8, 9, "I RELIEVE I RELIEVE I RELIEVE I RELIEVE I RELIEVE I"]
+        [
+          8,
+          9,
+          "I RELIEVE I RELIEVE I RELIEVE I RELIEVE I RELIEVE I"
+        ]
       ],
       "labels": [
         {
           "text": "THE FAILING CHOIR",
-          "at": [38, 3]
+          "at": [
+            38,
+            3
+          ]
         }
       ],
       "exits": {
@@ -296,7 +327,10 @@
       "labels": [
         {
           "text": "THE HEART",
-          "at": [9, 2]
+          "at": [
+            9,
+            2
+          ]
         }
       ],
       "exits": {
@@ -351,27 +385,42 @@
     "rooms": [
       {
         "level": "lattice",
-        "at": [20, 1],
+        "at": [
+          20,
+          1
+        ],
         "text": "THE OUTER LATTICE"
       },
       {
         "level": "faces",
-        "at": [19, 2],
+        "at": [
+          19,
+          2
+        ],
         "text": "THE GALLERY OF FACES"
       },
       {
         "level": "waiting",
-        "at": [6, 4],
+        "at": [
+          6,
+          4
+        ],
         "text": "THE WAITING ROOMS"
       },
       {
         "level": "heart",
-        "at": [32, 4],
+        "at": [
+          32,
+          4
+        ],
         "text": "THE HEART"
       },
       {
         "level": "failing",
-        "at": [43, 4],
+        "at": [
+          43,
+          4
+        ],
         "text": "THE FAILING CHOIR"
       }
     ]

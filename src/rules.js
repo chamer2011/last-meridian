@@ -649,8 +649,14 @@ export function travel(game, destination) {
 export function assembleGame(profile) {
   const start = START_LIST[profile.start] ?? START_LIST.captain;
   const game = {
-    version: 14,
+    version: 15,
     campaign: null,
+    // Who writes the story: "written" plays the scenes in world/scenes, and "ai" is the AI game master. The server sets it from the Settings menu.
+    mode: "ai",
+    scene: null,
+    flags: {},
+    lastCheck: null,
+    lastFight: null,
     name: profile.name,
     character: profile.character,
     level: 1,
@@ -928,6 +934,8 @@ export function publicState(game) {
     enemiesUnseen: Object.keys(allEnemies(game.campaign)).filter((id) => !enemies.some((enemy) => enemy.id === id)).length,
     locations: locationList(game),
     pendingEvents: game.pendingEvents.length,
+    mode: game.mode ?? "ai",
+    scene: game.scene ? { id: game.scene.id, part: game.scene.part } : null,
     files: {
       world: "world",
       campaign: game.campaign ? campaignFolderName(game.campaign) : null,

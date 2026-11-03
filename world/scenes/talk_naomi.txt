@@ -1,0 +1,68 @@
+# Talking with Naomi Cass
+
+== start
+? flag downstairs_enemies -> start_cold
+? flag downstairs_crew -> start_cadet
+? flag downstairs_hidden -> start_hidden
+
+@Naomi Cass: "Are you going to finish that?" She's looking at a ration bar you don't remember having. "Technically I'm on my way somewhere. But I can wait."
+
+> Ask where she's on her way to -> errand ? not seen errand
+> Ask what she calls everyone -> names ? not seen names
+> Ask how she gets about the ship -> ducts ? not seen ducts
+> Let her go -> done
+
+== start_cadet
+@Naomi Cass: "Upstairs Captain." She says it with the cut-down uniform's sleeves rolled exactly three times, which is regulation, she says, downstairs. "Technically I'm on duty. But I can talk. Talking's a duty."
+
+> Ask how the Downstairs Crew are settling in -> settling ? not seen settling
+> Ask what she calls everyone -> names ? not seen names
+> Ask how she gets about the ship -> ducts ? not seen ducts
+> Let her go -> done
+
+== start_hidden
+@Naomi Cass: "You didn't see me." She's eating something. "Technically. Swear Chief says the valves are smooth now and he doesn't want to know why. He knows why."
+
+> Ask how everyone is, downstairs -> downstairs ? not seen downstairs
+> Ask what she calls everyone -> names ? not seen names
+> Ask how she gets about the ship -> ducts ? not seen ducts
+> Let her go -> done
+
+== start_cold
+Naomi Cass looks at you from the far end of the passage, and then she isn't there. There's a deck plate where she was, and it doesn't look like a deck plate that moves.
+
+== errand
+@Naomi Cass: "The Not-Sleeping Man wants a message taken to Doctor Sad, and Doctor Sad will want one taken back, and that's half a ration bar each way." She counts on her fingers. "Technically a whole one. I'm going by the Whistler, so it's quicker."
+
+> Ask what she calls everyone -> names ? not seen names
+> Ask how she gets about the ship -> ducts ? not seen ducts
+> Let her go -> done
+
+== settling
+@Naomi Cass: "Wick's on the roster and he won't shut up about it. Pim's got a proper bag now. Doctor Sad gave it her." A pause. "Teo's fine. Technically he was always going to be fine." She looks away. "The drill's good. We did it in forty seconds. The Scan Lady said forty-one, but she was being nice."
+
+> Ask what she calls everyone -> names ? not seen names
+> Ask how she gets about the ship -> ducts ? not seen ducts
+> Let her go -> done
+
+== downstairs
+@Naomi Cass: "Same as before, but warmer. Wick says the ship's being kind to us. Technically it's Swear Chief being kind, and pretending it's the ship." She shrugs. "We're all right. You can come down. You know the way now. Half a ration bar."
+
+> Ask what she calls everyone -> names ? not seen names
+> Ask how she gets about the ship -> ducts ? not seen ducts
+> Let her go -> done
+
+== names
+@Naomi Cass: "I don't call people things." She does. "Swear Chief's Swear Chief because he swears. The Counting Lady counts. Mister Washers has washers. The Not-Sleeping Man doesn't sleep. The Scan Lady, I'm not telling you about." She considers you. "You're the Upstairs Captain. That's not a name, that's a job."
+
+> Ask how she gets about the ship -> ducts ? not seen ducts
+> Let her go -> done
+
+== ducts
+@Naomi Cass: "The Whistler, the Cold Elbow, the Long Warm, the one behind the medbay that I'm not allowed to tell you about." She says it like a list of friends. "Technically there's nowhere on the ship I can't get to. I didn't see anything, though. Technically."
+
+> Ask what she calls everyone -> names ? not seen names
+> Let her go -> done
+
+== done
+@Naomi Cass: "That'll be half a ration bar. For the conversation." She doesn't wait for it.

@@ -279,6 +279,24 @@
       {"after":15,"news":"More shuttles have left the Sundial with no flight plan, and everyone aboard gave away their shoes first.","lead":"The shuttles keep leaving the Sundial with no flight plan, and there are shoes lined up neatly along the dock. Steward Tull still wants the man who talked them into it, and fewer people are helping her look.","fleet":{"morale":-1},"places":[{"id":"haven","sides":{"quiet":2}}]},
       {"after":42,"news":"The Quiet are preaching in the open on three ships now, and Steward Tull has stopped trying to prevent it.","lead":"The Quiet preach in the open on three ships now, and people go down to listen with their shoes in their hands. Oskar Lind says anyone's welcome to come and argue with him, and he means you.","fleet":{"morale":-1},"places":[{"id":"lumen","sides":{"quiet":2}}]}
     ] },
+    "main_the_council": {
+      "stages": [
+        {
+          "after": 12,
+          "news": "Speaker Halm held the council without the captain, and asked an empty chair where the fleet was going. Garrick Fenn's channel has been playing the silence on a loop.",
+          "lead": "The council met without you. Speaker Halm asked the empty chair at the head of the table where the fleet was going, and Fenn broadcast the silence. He's called it again, and this time the chair's expected to be sat in.",
+          "fleet": {
+            "morale": -1
+          }
+        },
+        {
+          "after": 30,
+          "news": "The council voted to follow the Beacon without being told what it is, because the other choice was Legate Corvane's nine hundred pages. Halm abstained, which is his way of voting twice.",
+          "lead": "The council has voted to follow the Beacon, without you and without knowing what it is. Halm abstained. The question's still on the table, and so is a child's drawing somebody left there.",
+          "big": true
+        }
+      ]
+    },
     "main_two_weeks_of_fuel": { "stages": [
       {"after":18,"news":"Mother Quill's depot at Kessara Drift has started selling to whoever asks first, and the fuel the fleet was counting on is going.","lead":"The fuel's still there, but Mother Quill's depot is selling it to anyone who asks, and her baskets of dumplings have stopped coming. Chief Marrow says that whatever you're going to do, you should do it soon.","places":[{"id":"kessara","goods":{"fuel":-15}}]},
       {"after":45,"news":"The council has taken a shipment of fuel from Legate Corvane without waiting for the captain, at a price nobody's reading out loud.","lead":"The council took Corvane's fuel without you, and Chief Marrow has found something bolted to every ship's transponder that wasn't there before. Mother Quill says her offer's still open, at a worse price.","fleet":{"fuel":3,"morale":-1},"big":true}

@@ -1,0 +1,59 @@
+# Talking with Dr. Aduro
+
+== start
+? flag aduro_knows -> start_list
+
+@Dr. Sen Aduro: "Sit down a moment. No, really." They don't look up from the patient's chart, and the patterns on their skin are slow and dim. "When did you last sleep? Don't answer. I can see it."
+
+> How are the medical stores, honestly? -> stores ? not seen stores
+> How are you holding up? -> holding ? not seen holding
+> Is there anything I should know? -> know ? not seen know
+> Say you'll sleep when they do -> done
+
+== start_list
+@Dr. Sen Aduro: "Thirty-one names, and I've seen twenty-six of them, and the other five are hiding from me, which I take as a sign of health." They do look up, this time. "Sit down a moment. Pim's teaching me things. I'm not sure I like it."
+
+> How are the medical stores, honestly? -> stores ? not seen stores
+> How are the children? -> children ? not seen children
+> How are you holding up? -> holding ? not seen holding
+> Say you'll sleep when they do -> done
+
+== stores
+@Dr. Sen Aduro: "Honestly." They consider the word. "There's a day, and I know it, and I haven't told the council, because I know what the council would do with it." A pause. "If you order me to tell you, I will. I'd rather you asked me what you could do instead."
+
+> Ask what you could do instead -> instead ? not seen instead
+> How are you holding up? -> holding ? not seen holding
+> Say you'll sleep when they do -> done
+
+== instead
+@Dr. Sen Aduro: "Find me medicine before the day comes. Haven has it, at a price. Anselm's Mercy has three thousand people in a ship built for four hundred, and every one of them is a reason." They go back to the chart. "And sleep. I'm serious about the sleep."
+
+* journal: Dr. Aduro knows the day the medicine runs out and hasn't told the council. They'd rather be brought medicine than made to say it. Haven has some, at a price.
+
+> How are you holding up? -> holding ? not seen holding
+> Is there anything I should know? -> know ? not seen know
+> Say you'll sleep when they do -> done
+
+== holding
+@Dr. Sen Aduro: "I'm tired in the way where the tiredness has become a person, and the person is a colleague now." A small smile. "Mercy Seven sits with the night patients so I can lie down. Nobody asked them to. Remember that, the next time Tarrow makes her list."
+
+> How are the medical stores, honestly? -> stores ? not seen stores
+> Is there anything I should know? -> know ? not seen know
+> Say you'll sleep when they do -> done
+
+== know
+@Dr. Sen Aduro: "Someone's using the full-body scanner at three in the morning, every night, and it isn't logged. Marrow thinks it's a fault." They look at you steadily. "I don't think it's a fault. I think it's someone frightened, and I'd like them to come and talk to me instead."
+
+> How are the medical stores, honestly? -> stores ? not seen stores
+> How are you holding up? -> holding ? not seen holding
+> Say you'll sleep when they do -> done
+
+== children
+@Dr. Sen Aduro: "Underfed and furious about being examined, which is what healthy children are. Teo's fever's gone. Pim watched me do it and told me where I'd been slow." Their skin brightens, briefly. "I've asked for her as an orderly. She's asked for me as an apprentice. We're negotiating."
+
+> How are the medical stores, honestly? -> stores ? not seen stores
+> How are you holding up? -> holding ? not seen holding
+> Say you'll sleep when they do -> done
+
+== done
+@Dr. Sen Aduro: "That's not what I said, and you know it." But they let you go.

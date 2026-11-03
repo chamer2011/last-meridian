@@ -1,0 +1,268 @@
+# Where We're Going
+// The end of the first act, from world/threads/main_the_council.json: the council meeting where Speaker Halm asks
+// what the captain is leading them toward, Tharel's flinch, and the child's drawing. The captain's own business,
+// so there's no side for anyone else. The act moves on when this and Two Weeks of Fuel are both settled, whichever
+// comes second. Draft by the AI (Claude), 2026-11-02, not yet edited by the owner.
+start: start
+
+== start
+AI: Halm never answers a question, and he asks this one twice. He wants a mandate or a scapegoat, and either will do. Voss says nothing until the vote. Fenn records everything and will quote it back later. The council will not vote until the captain has said something, and anything said is said to thirty thousand people.
+* raw travel {"destination": "meridian"}
+* raw set_scene {"area": "The Long Mess", "people": ["halm", "voss", "odessa", "pell"]}
+
+The Long Mess has been cleared and set as a chamber, which means the tables are pushed together down the middle and forty-one ships' worth of representatives are sitting on the benches with their coats on. Speaker Halm has put himself at the foot of the table, so that the head of it is yours, and he's put a cup of tea at the head, on a folded sheet of paper, so that you'll have to lift it to see what's underneath.
+
+Garrick Fenn is against the bulkhead with his recorder in his hand and his broadcast voice turned down to a murmur. Commander Voss is standing, because the chair beside yours is for Halm's clerk, and she'd rather stand.
+
+@Speaker Teodor Halm: "Captain. We'd all like to know, and I think we're entitled to know, what exactly you're leading us toward." A pause, for the room. "We would. All of us. Where are we going?"
+
+* new quest main_the_council: Where We're Going | Speaker Halm has called the full council to the Long Mess, and the chair at the head of the table is yours. He'd like you to tell thirty thousand people where they're going, in words they can repeat. | Answer the council, and see what it votes.
+
+> Tell them the whole of it: two layers, and a Navy voice on top of something nobody can read -> truth
+> [deception:moderate] Tell them about the Navy layer, and keep the rest back -> kept | gap_noticed
+> Send for Archivist Tharel, and let him tell them -> send_tharel ? not flag tharel_taken_by_quill
+> Tell them you don't know, and that you're going to find out -> dont_know
+
+== truth
+You say it. Two signals, locked together. On top, a Concord Navy recall, months old, plain: safe harbor, all vessels come home. Underneath, something older than anyone can say, that nobody can read, and that the Navy voice is sitting on top of like a lid.
+
+The room splits down the middle so fast you can hear it: the half that heard "Navy" and the half that heard "nobody can read". Fenn's recorder is pointed at your face. Voss has looked at you, which she doesn't do in rooms.
+
+=> You told the council about the lattice under the Navy voice, with Fenn recording.
+
+* flag told_the_fleet_truth
+* xp 10: Two layers, out loud
+
+> [leadership:hard] Stand up, and bring the room back -> carry_pass | carry_fail
+> Let them argue, and wait for the vote -> vote_split
+
+== carry_pass
+You stand up, and you don't raise your voice, because the Meridian's bridge taught you that the quiet ones get listened to. You tell them what a fleet is for. You tell them that a recall is a recall, and that the people who sent it don't care what's under it, and that neither do you, until you've got everyone home. You tell them nobody's going to lie to them in this room, ever, and that's why they're being told now.
+
+The room comes back. Not all at once, and not all of it, but the half that heard "nobody can read" has started hearing "home".
+
+@Commander Ilya Voss: "Captain." As if she's finished deciding.
+
+=> The council heard the whole truth and followed you anyway.
+
+* flag carried_the_room
+* xp 20: The room, brought back
+* belief reason 1: You told the fleet the truth and made it hold
+* contact Ilya Voss ally: You told the council the truth and carried the room, and she said your rank as if she meant it
+* journal: I told the council the whole truth about the Beacon: the Navy recall, and the older thing under it that nobody can read. The room split, and I brought it back.
+
+> Go on -> drawing
+
+== carry_fail
+You stand up and you say the right things, and it isn't enough, because the half that heard "nobody can read" has a man from the Sundial in it with a loud voice, and he's asking what the captain means, exactly, by nobody, and the room's gone to him. Halm lets it run. He's good at that.
+
+=> The council heard the whole truth, and it's arguing with itself, and Halm's letting it.
+
+* flag council_split
+* journal: I told the council the whole truth about the Beacon, and the room split, and I couldn't bring it back. Halm let it run.
+
+> Go on -> drawing
+
+== kept
+You tell them the top of it. A Concord Navy recall, months old, in a format any officer would know. Safe harbor. All vessels come home. Someone in uniform survived, and they're calling.
+
+The room goes up like a flare. Fenn is already murmuring it into his recorder in his broadcast voice. Nobody asks what's under it, because nobody knows there's an under, and you've made sure of that, and Voss looks at the table.
+
+=> The council heard about the Navy voice and nothing else, and it's yours to carry.
+
+* flag kept_the_lattice
+* xp 10: The top of it
+* journal: I told the council about the Navy recall on the Beacon and kept the lattice under it back. The room cheered. It's mine to carry now.
+
+> Go on -> drawing
+
+== gap_noticed
+You tell them the top of it. A Concord Navy recall, months old. Safe harbor. All vessels come home. The room goes up like a flare, and then Fenn, from the bulkhead, in a voice that carries exactly as far as he wants it to:
+
+@Garrick Fenn: "And under it, Captain?" He smiles. "For the listeners. Only you paused."
+
+You say static. He writes down the pause.
+
+=> The council heard about the Navy voice and nothing else, and Garrick Fenn heard you pause.
+
+* flag kept_the_lattice
+* flag fenn_heard_a_gap
+* journal: I told the council about the Navy recall and kept the lattice under it back. Garrick Fenn asked what was under it, for the listeners, and I said static, and he wrote down the pause.
+
+> Go on -> drawing
+
+== send_tharel
+Tharel comes across on the Haven shuttle in a coat that isn't his, the first time he's been off the station in nine days, and he stands at the head of the table beside you because nobody thought to give him a chair, and he tells them, in the plainest words anyone's heard him use, about the Navy layer. Fleet-recall format. Months old. Someone in uniform, calling the fleet home.
+
+He doesn't say the word lattice. He doesn't say what's under it. He says that he's an old man and a cautious one, and sits down on the bench a clerk gives up.
+
+AI: Tharel will say nothing about the lattice in this room, however he's asked. Asked straight, both his eyes stop blinking and he says the Ilun Codex. He'd like to go home.
+
+> [lore:moderate] Ask him, in front of them, what's under the Navy layer, and watch him -> tharel_flinch | tharel_smooth
+> Let him finish, and thank him -> tharel_done
+
+== tharel_flinch
+You ask him. Both his eyes stop blinking at the same moment, which you've learned is what he does instead of flinching, and the room doesn't see it and you do.
+
+@Archivist Oss Tharel: "Bring me the Ilun Codex, young one, and ask me again." Then, to the council, with the long digression back in his voice: "An old signal, which is to say, a boring one. The Navy's voice is the news."
+
+He lets them think the top layer is what matters. He's good at it. He's had practice.
+
+=> Tharel flinched at the lower layer, in front of the council, and only you saw it.
+
+* flag saw_tharel_flinch
+* xp 15: What he isn't saying
+* journal: In front of the council, Tharel told the fleet the Navy voice was the news, and when I asked what was under it both his eyes stopped blinking. He wants the Ilun Codex before he'll say.
+
+> Go on -> drawing
+
+== tharel_smooth
+You ask him, and he's off: the history of Concord fleet-recall formats, the three revisions, the time a recall was sent in error to a fishing fleet. The council laughs. By the time he's finished nobody remembers the question, including, you think, him.
+
+> Go on -> drawing
+
+== tharel_done
+You thank him. He bows to the council, old-fashioned, from the waist, and the council, to its own surprise, bows back.
+
+* contact Oss Tharel friendly: You brought him to the council and let him say what he could stand to
+
+> Go on -> drawing
+
+== drawing
+? flag pavel_met_mila -> drawing_mila
+
+Halm lifts the cup. Under it there's a sheet of paper in crayon: a lighthouse, with a door in it, and a ship going in at the door, and a great many small people at the ship's windows, all of them smiling.
+
+@Speaker Teodor Halm: "A girl on the Sundial. Seven. Her teacher sent it across." He doesn't push it toward you. He lets it lie there, in the middle of the table, where forty-one ships can see it. "We'd like to know what to tell her, Captain. We all would."
+
+The room goes quiet in the way that's hard to argue with.
+
+> Pick it up -> pick_up
+> Leave it on the table -> leave_drawing
+
+== drawing_mila
+Halm lifts the cup. Under it there's a sheet of paper in crayon: a lighthouse, with a door in it, and a ship going in at the door, and beside the lighthouse, where there's always a man beside everything she draws, a man with a piano.
+
+You know whose it is. Halm doesn't, and he's about to tell the room about a girl on the Sundial, seven, whose teacher sent it across.
+
+@Speaker Teodor Halm: "We'd like to know what to tell her, Captain. We all would."
+
+The room goes quiet in the way that's hard to argue with.
+
+> Pick it up -> pick_up
+> Leave it on the table -> leave_drawing
+
+== pick_up
+You pick it up, and fold it once, and put it inside your coat, and the room watches you do it. Halm's face does something very small, because he'd meant to be the one.
+
+=> You've got the drawing. The fleet's hope is a crayon lighthouse, and it's in your coat.
+
+* flag has_the_drawing
+* xp 5: The drawing
+
+> Go on -> vote
+
+== leave_drawing
+You leave it where it is, in the middle of the table, under the lamp, and everyone who speaks after that speaks to it.
+
+* flag left_the_drawing
+
+> Go on -> vote
+
+== vote_split
+You let them argue. It goes on for an hour, and Fenn records all of it, and the man from the Sundial with the loud voice has a following by the end. Halm waits until the room is tired, which is his gift, and calls the vote.
+
+* flag council_split
+
+> Call the vote -> vote
+
+== vote
+? not quest main_two_weeks_of_fuel done -> vote_fuel_first
+? flag council_split -> vote_close
+? flag said_dont_know -> vote_close
+-> vote_follow
+
+== vote_follow
+The vote's a show of hands, and Halm counts them twice, slowly, which is theatre, because it isn't close. The council will follow the Beacon. The fleet has fuel to do it, and a captain who's said where they're going, and Fenn has it all on his recorder for tonight.
+
+@Speaker Teodor Halm: "Then we're agreed." He says we. "The chair at the head of the table is yours, Captain. We'd like you to remember who gave it to you."
+
+@Commander Ilya Voss: "Captain." The vote's over, so she's allowed. "Orders."
+
+=> The council voted to follow the Beacon, with fuel in the tanks and your name on it.
+
+* flag council_voted_follow
+* xp 25: Where we're going
+* faction fleet 4: The council voted to follow the captain toward the Beacon
+* journal: The council voted to follow the Beacon, by a show of hands that wasn't close. Halm says the chair's mine and that I should remember who gave it to me.
+* quest main_the_council done: The council voted to follow the Beacon.
+
+> Go on -> after
+
+== vote_close
+The vote's a show of hands, and Halm counts them three times, because it's close enough to need it, and then abstains, which is his way of voting twice. It passes by four ships. The council will follow the Beacon, with fuel in the tanks and a captain it isn't sure of, and Fenn has the count on his recorder.
+
+@Speaker Teodor Halm: "Then we're agreed, narrowly." He says we. "The chair's yours, Captain. We'll be watching it."
+
+=> The council voted to follow the Beacon by four ships, and Halm abstained, to be able to say so later.
+
+* flag council_voted_follow
+* flag halm_abstained
+* xp 15: Where we're going, narrowly
+* journal: The council voted to follow the Beacon by four ships. Halm abstained, and he'll remind me.
+* quest main_the_council done: The council voted to follow the Beacon, narrowly, and Halm abstained.
+
+> Go on -> after
+
+== vote_fuel_first
+The vote's a show of hands, and it isn't about the Beacon at all, because Chief Marrow's count is on the bulkhead where everyone passed it on the way in. The council will follow the Beacon when the tanks are full, and not an hour before, and until then the fleet goes nowhere it doesn't have to.
+
+@Speaker Teodor Halm: "Fuel first, Captain. We're agreed on that much." He says we. "Then we'll ask again."
+
+=> The council will follow the Beacon when the fleet has fuel. Until then, it waits.
+
+* flag council_waits_for_fuel
+* xp 10: Fuel first
+* journal: The council voted to find fuel before it follows anything. When the tanks are full, it'll ask again.
+* quest main_the_council done: The council voted fuel first. It follows the Beacon when the tanks are full.
+
+END
+
+== dont_know
+You tell them you don't know. You tell them it's a signal in two parts, that one of them is the Navy's and the other one isn't anyone's that you can name, and that you're going to find out which of them matters before you ask anyone to die for either. You sit down.
+
+It's very quiet. Then Voss, from where she's standing, in front of forty-one ships:
+
+@Commander Ilya Voss: "Captain." As if she's finished deciding.
+
+@Speaker Teodor Halm: "We'd hoped for more, Captain." He smiles. "We're sure you'll find it."
+
+=> You told the council you don't know, and Voss decided about you, and so did Halm.
+
+* flag said_dont_know
+* xp 15: I don't know
+* belief reason 1: You said you don't know, in front of everyone
+* contact Ilya Voss ally: You told the council you didn't know, and she said your rank as if she meant it
+* contact Teodor Halm wary: You gave him nothing he could use, and he'll use that
+* journal: I told the council I don't know what the Beacon is, and that I'll find out before I ask anyone to die for it. Voss said "Captain" as if she'd decided. Halm said they'd hoped for more.
+
+> Go on -> drawing
+
+== after
+? act < 2 -> act_two
+-> done
+
+== act_two
+With the council's vote behind you and fuel in the tanks, there's nothing left to wait for. Pell plots the Beacon's bearing without being asked, and leaves it on the plot table where everyone can see it, and nobody rubs it out.
+
+=> The fleet is following the Beacon now, and it's your doing.
+
+* act 2
+* journal: With the council's vote behind us and fuel in the tanks, the fleet is following the Beacon.
+
+END
+
+== done
+The council files out in its coats, and Fenn goes last, and he stops at the hatch to thank you, in his broadcast voice, for the listeners.
+
+END

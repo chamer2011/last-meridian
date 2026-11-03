@@ -38,6 +38,7 @@ export const WORLD_PLACES = readFolder(path.join(worldDir, "places"));
 export const WORLD_THREADS = readFolder(path.join(worldDir, "threads"));
 export const WORLD_MAPS = readFolder(path.join(worldDir, "maps"));
 export const WORLD_LIFE = readFolder(path.join(worldDir, "life"));
+// The written scenes aren't here: src/scenes.js reads them whenever the story needs them, so a change shows up without a restart.
 export const WORLD_ITEMS = readFile("items.json");
 export const WORLD_PERKS = readFile("perks.json");
 export const WORLD_FACTIONS = readFile("factions.json");

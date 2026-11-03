@@ -20,9 +20,11 @@ Only one copy of the game can run at a time, so they can't overwrite each other:
 
 At the prompt, type what you want to do, or the number of a listed choice. You can also click anything on screen.
 
+The story can be written in advance, or written by an AI as you go: see [Who writes the story](#who-writes-the-story). Without an AI key, a new game uses the written story, which is free.
+
 ## Menus
 
-The story has the whole window to itself. The buttons down the right edge open the menus, which slide out over the story and always take up the same space: three quarters of the screen. To close one, press **Close** or Esc, click the story behind it, or click its button again. On a phone, press **Menu** instead.
+The buttons down the right edge open the menus, grouped under **You**, **The story**, **The fleet**, **Gear** and **Game**. A menu slides out over the story and always takes up the same space: three quarters of the screen. To close one, press **Close** or Esc, click the story behind it, or click its button again. On a narrow window, press **Menu** instead, and the same groups run along the top. Inside a menu, the parts you don't need every time fold away behind a line like **[ + Fleet log ]**: click it to open them, and they stay open while the game's running. Rest the mouse on a button to see what its menu holds.
 
 Each menu also has a command you can type:
 
@@ -33,17 +35,17 @@ Each menu also has a command you can type:
 | `/traits` | Traits | Traits, convictions, and everything currently affecting you |
 | `/perks` | Perks | What you've learned, what you can learn now, and what's locked |
 | `/beliefs` | Beliefs | Where you stand on each axis, and your standing with each faction |
-| `/dossier` | Dossier | Your personal record and life history |
+| `/dossier` | Your past | Your personal record, career and life history |
 | `/people` | People | Everyone you've met or heard of |
 | `/quests` | Quests | Active and finished quests, and the journal |
 | `/leads` | Leads | Stories you could start here, what people are saying, and the stories you're following |
-| `/codex` | Codex | Places, factions and ideas, with a search box |
+| `/codex` | What you know | Places, factions, ships and ideas you've come across, with a search box |
 | `/inv` | Inventory | What you're carrying and wearing |
 | `/ship` | Ship | The Meridian and its crew, with the way to the star map. Only if you're the captain |
 | `/fleet` | Fleet | All 41 ships, supplies, rations, work crews and orders. If you aren't the captain, how things stand |
 | `/map` | Star map | The chart of known space, with Set course, or Book passage if you aren't the captain |
 | `/market` | Market | Buying and selling, where there's a market |
-| `/bestiary` | Bestiary | Enemies you know of, their stats, why they fight, what you could try on them, and the simulator |
+| `/bestiary` | Enemies met | Enemies you know of, their stats, why they fight, what you could try on them, and the simulator |
 | `/settings` | Settings | Reading and display options, AI choice, saved games, and where your files are |
 
 `/close` closes the open menu, and `/help` shows this list in the game.
@@ -85,7 +87,7 @@ It takes your whole turn, and the enemies still get theirs. Your followers hold 
 
 Fights run entirely on this computer, from the stats in the game's files. The AI only decides that a fight starts and who's in it. After that it isn't involved, so a fight costs nothing however long it lasts. When it ends, the story gets one line saying how it went, and nothing is sent to the AI until you choose **Continue the story** or type what you do next. Talking in a fight doesn't use the AI either.
 
-To try a fight without the AI at all, use **Run in simulator** in the Bestiary, aboard the Meridian, or **With followers** to have your crew and more enemies join in. Nothing that happens in the simulator carries over.
+To try a fight without the AI at all, use **Run in simulator** in **Enemies met**, aboard the Meridian, or **With followers** to have your crew and more enemies join in. Nothing that happens in the simulator carries over.
 
 ## Skill checks
 
@@ -212,7 +214,7 @@ Under **Reading** in the Settings menu:
 
 **The talk window** shows the person, how they feel about you, what's been said, and things you can click to say. You can type your own words instead if you'd like.
 
-- **What it costs:** each thing you say is one call to the AI, and the window shows what the talk has cost so far. Opening a talk, closing it, and **Ask what they've heard** are free.
+- **What it costs:** each thing you say is one call to the AI, and the window shows what the talk has cost so far. Opening a talk, closing it, and **Ask what they've heard** are free, and so are the written lines of someone with a written conversation, which are marked.
 - **Time:** the clock stops during a talk, so talking can never use up a day in the fleet. The game refuses if the AI tries to pass time or move you, and sleeping and the Fleet menu's orders wait until you've closed the window.
 - **Checks and fights:** if something you say leads to a skill check or a fight, its own window takes over, and the talk ends there.
 - **Afterwards:** the story keeps one line about the talk, with **What was said** folded under it.
@@ -267,6 +269,7 @@ There's a lot more out there than the places you start out knowing about, and yo
 
 The world is kept in files you can open with any text editor. Be warned that most of them contain spoilers, including everyone's secrets and how the whole story ends.
 
+- `world/scenes/` has the written story, one plain text file for each scene: its parts, what each says, the choices, the checks and fights they lead to, the conditions on them, and what they change in the game. `talk_<id>.txt` is what that person says in a talk, and `arrive_<place>.txt` plays when the player arrives somewhere. `_how-to-write-a-scene.txt` there explains it all, including a thing's `used` and a door's `ask` in the map files, and the stock lines at the end of `rooms.json`. These are read again whenever the story needs them, so there's no restart. `npm run check-story` lists every mistake with its line, and `npm test` checks them too.
 - `world/characters/` has one file for each important person, whether you've met them or not.
 - `world/enemies/` has one file for each type of enemy, with its stats, why it usually fights (`motive`) and who for (`faction`). Against you, threat levels 2 and up fight harder than their files say, by the amounts in `FIGHT_DIFFICULTIES` in `src/combat.js`, depending on the difficulty you've chosen.
 - `world/places/` has one file for each place: what it's like, who's there, what could happen and what people say.
@@ -335,6 +338,22 @@ Your life history, traits and beliefs go to the AI, so it can build the story ar
 
 Saved games from before this system still load. They get a basic character profile, and you need to start a new game to use the creator. When you start a new game, your last one is kept as **Previous game** on the title screen.
 
+## Who writes the story
+
+**Who writes the story** in the Settings menu decides it for new games, and a game keeps what it started with:
+
+- **Written story:** the story is written in advance, in plain text files in `world/scenes/`, so it's free and needs no AI. The choices are the ones on offer, and typing part of one is enough. What the story can't answer, it says so. For now that's the openings for three lives (the captain, an engine hand on the Meridian, and a dock hand at Haven Station), the fleet's arrival at Haven, the whole of the main plot's first act with every way through it written out, and one story aboard the Meridian. The first act is **The Warm Room** at Haven, **Two Weeks of Fuel** at Kessara Drift and Cinder Reach, **Visiting Hours** on Anselm's Mercy, and the council meeting, **Where We're Going**, which ends the act once the fuel's found and the council has voted. The Meridian's story is **The Downstairs Crew**. The **Leads** menu offers them where they happen, written ones first, and never leaves a written one off. Anyone else gets a short opening while theirs is written, and a smaller side of each story. Each scene file says at the top whether it's the AI's draft or the owner's own writing. In the Leads menu, a story that hasn't been written out yet says so instead of offering **Look into this**. Walking, people's lives, the wider world, fights, skill checks, the fleet and the menus all work as usual.
+  - **People:** walk up to anyone and they speak first. The Meridian's crew each have a written conversation of their own (`world/scenes/talk_<id>.txt`), with things to say that lead on, questions that go away once asked, and answers that change with what the story has done. Everyone else has stock lines, made from who they are, what they're doing and where you are, plus what they've heard. Nothing in a talk uses the AI.
+  - **Things and doors:** **Use** on a thing gives its written result or picks it up, and **Ask to go through** at a closed door follows that door's rule: some open when asked, some need something you've earned, and some open a skill check whose result decides. All 15 doors have a rule, and the bridge's things have results, with a plain answer anywhere that hasn't been written yet.
+  - **Writing it yourself:** open a file in `world/scenes/` with Notepad, change it and save. The game reads it again the next time the story gets there, with no restart. `world/scenes/_how-to-write-a-scene.txt` explains the format: parts, choices, checks, fights, what a part changes, and conditions such as `? has data_chip` or `? skill persuasion >= 3` that decide which choices are offered and where the story goes. A choice can lead to a check whose pass and fail go different ways, a part can remember a flag for any later scene, a part can wait for the fleet to arrive somewhere, and a story can fill the fleet's tanks or move the main story on to its next act.
+  - **Finding mistakes:** run `npm run check-story` in the game's folder. It lists every problem with the line it's on, in plain words, and changes nothing. A file the game can't read is explained in the game too.
+- **AI game master:** the written parts play exactly as above, and they're still free. The three lives' openings, the arrival at Haven, the written stories and the crew's conversations come from their files, and clicking a choice costs nothing, which the choices say. The AI is the layer on top:
+  - **Your own words.** Type anything in a written part and one call to the AI reads the part, the writer's notes for it and the choices on offer. It either takes the choice your words come to, with a sentence or two of its own to bridge them, and the story says how your words were taken, or it answers you in a few words without moving anything on, and the same choices come back. In a written part it can't change the story any other way: every other action is refused to it there. In a written conversation it's the same, in the person's voice.
+  - **Everything that isn't written** is the AI's, as before: the other lives' openings, the stories the Leads menu hasn't got written out, people without a conversation of their own, and things without a written result. The AI is told what the written story played, so it carries on from where the written part left off.
+  - It needs a key or a local model, as below. Adding this to the AI's instructions makes it reload your story once, the next time it writes.
+
+Until you choose, a new game uses the written story if no AI is set up, and the AI game master if one is. A game that an AI has been writing can't switch to the written story, because the written story wouldn't know what happened in it.
+
 ## Choosing your AI
 
 Open the **Settings** menu in the game. You can switch at any time, even in the middle of a story.
@@ -382,7 +401,7 @@ The download is several GB. Local models make more mistakes with game actions th
 - `src/data.js` holds the items, perks, locations and story background. Restart the game after you change it.
 - `src/character-data.js` holds the skills, species, origins, traits, beliefs and ready-made characters.
 - `src/life-data.js` holds the careers and everything that can happen in the life simulation.
-- `src/lore.js` holds the Codex entries. Only put what your character would know in there, because players can read it.
+- `src/lore.js` holds the entries of **What you know**. Only put what your character would know in there, because players can read it.
 - `src/creator.js` works out a character from the choices made in the creator, and `src/role.js` works out who that makes them in the world, and what the game master is told about it.
 - `src/rules.js` holds the rules: dice, leveling, stress and beliefs.
 - `src/combat.js` holds the rules for fights, including talking in them, and `public/fight.js` draws the fight window.
@@ -391,6 +410,7 @@ The download is several GB. Local models make more mistakes with game actions th
 - `src/life.js` runs everyone's days, and how they get around. `src/daily.js` runs each place's supplies, prices and factions, day by day. `src/story-clock.js` moves the stories on when nobody has stepped in. None of them has any screens, and none of them uses the AI.
 - `src/checks.js` runs the skill check windows, `src/check-games/` has the game behind each one, and `public/check.js` draws them.
 - `src/story-library.js` decides which leads, rumors and notes the player and the game master get.
+- `src/scenes.js` plays the written story from `world/scenes/`, through the same tools, checks and fights as the AI, and checks the scene files. `src/scene-text.js` reads the text format, its conditions and its effects, `src/talks.js` plays written conversations and makes stock ones, and `src/check-scenes.js` is the `npm run check-story` command.
 - `src/npc.js` generates the stats of anyone the AI adds, and `src/campaign.js` saves them to their files.
 - `src/tools.js` lists what the AI is allowed to do, and the limits on it.
 - `src/ai.js` holds the AI's instructions and the connection to it.

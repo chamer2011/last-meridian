@@ -1,0 +1,16 @@
+# The Signal
+// How the story opens for any life that doesn't have an opening of its own yet.
+// To write one, make a file called opening_<life>.txt, with the life's id from starts.json.
+
+== morning
+The signal is on every band this morning, and nobody who outranks you will say what it means. Where you stand, the work doesn't care.
+
+Whatever this means for the fleet is happening a long way over your head. For now there's the day in front of you: the people here, the work, and whatever they've heard.
+
+NOTE: [STORY] This life's own opening hasn't been written yet. You can walk around, work, talk to people about what they've heard, and watch the world go on.
+
+> Get on with the day -> day
+
+== day
+You get on with it. The signal keeps going, six seconds at a time, under everything else.
+END

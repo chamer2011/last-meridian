@@ -51,15 +51,24 @@
       "labels": [
         {
           "text": "THE BRIDGE",
-          "at": [4, 5]
+          "at": [
+            4,
+            5
+          ]
         },
         {
           "text": "SENSOR PIT",
-          "at": [7, 8]
+          "at": [
+            7,
+            8
+          ]
         },
         {
           "text": "READY ROOM",
-          "at": [44, 12]
+          "at": [
+            44,
+            12
+          ]
         }
       ],
       "exits": {
@@ -136,33 +145,40 @@
           "look": "The seat's been patched with cargo webbing, and one armrest still has the last captain's thumb worn into it. It's yours now. Everyone on the bridge pretends not to watch you sit in it.",
           "use": "I sit down in the captain's chair and ask the bridge for a status.",
           "lookOther": "The seat's been patched with cargo webbing, and one armrest still has the last captain's thumb worn into it. It isn't yours, and everyone on the bridge would notice if you got any closer.",
-          "useOther": "I take a closer look at the captain's chair, while nobody's watching."
+          "useOther": "I take a closer look at the captain's chair, while nobody's watching.",
+          "used": "You sit. The chair takes your weight the way it took his, and the bridge gives you a status without being asked: reactor at two-thirds, forty-one ships answering, and the signal still on every band.",
+          "usedOther": "You get as far as the armrest before Commander Voss looks up. You find you've stepped back."
         },
         "r": {
           "name": "Cracked repeater",
           "look": "A tactical repeater with a crack from corner to corner. It still works if you read around the split, and nobody has time to replace it.",
-          "use": "I try to get a clean long-range picture out of the cracked repeater."
+          "use": "I try to get a clean long-range picture out of the cracked repeater.",
+          "used": "You read round the split. Forty-one returns, and beyond them, where the Beacon's bearing would be, a smear the repeater can't resolve and won't let go of."
         },
         "l": {
           "name": "Ready room locker",
           "look": "The old captain's locker, just inside the ready room, with a private seal still on it. Nobody's opened it since the Fall, or nobody's admitted to it.",
-          "use": "I go into the ready room and try the old captain's sealed locker."
+          "use": "I go into the ready room and try the old captain's sealed locker.",
+          "used": "The seal holds. It's the old captain's, and nobody has the code, or nobody's admitting to it. Marrow could cut it. You'd have to decide to ask him."
         },
         "d": {
           "name": "Data chip in the comms tray",
           "item": "data_chip",
           "look": "An unlabeled, encrypted data chip, left in the comms tray. Someone would pay to read it, or pay more to destroy it.",
-          "use": "I pick up the unlabeled data chip from the comms tray and ask whose it is."
+          "use": "I pick up the unlabeled data chip from the comms tray and ask whose it is.",
+          "used": "Nobody on the bridge will say whose it is. Sorel looks at his board. Vey's arm goes faintly green."
         },
         "a": {
           "name": "The plot table",
           "look": "Forty-one green dots, and a few that flicker. Someone keeps wiping the glass where the Beacon's bearing would be, and it keeps leaving a mark.",
-          "use": "I lean over the plot table and ask for a read on the formation."
+          "use": "I lean over the plot table and ask for a read on the formation.",
+          "used": "Forty-one green dots, and the one that flickers is the Slow Harriet, as it always is. The mark where the Beacon's bearing would be is back under the glass, where nobody's wiping it."
         },
         "v": {
           "name": "The forward viewport",
           "look": "Stars, and the running lights of the ships nearest you. It's the coldest place on the ship, and everyone on the bridge has decided not to stand next to it.",
-          "use": "I stand at the viewport for a minute and look at the fleet."
+          "use": "I stand at the viewport for a minute and look at the fleet.",
+          "used": "You stand there a minute. The running lights of the nearest ships, and past them, nothing with a name. Nobody on the bridge comes to stand next to you, and after a minute you understand why."
         }
       }
     },
@@ -195,20 +211,33 @@
         "####################1#############################2#######################"
       ],
       "writing": [
-        [32, 0, "SITTINGS: 1ST 2ND 3RD 4TH"]
+        [
+          32,
+          0,
+          "SITTINGS: 1ST 2ND 3RD 4TH"
+        ]
       ],
       "labels": [
         {
           "text": "THE LONG MESS",
-          "at": [24, 5]
+          "at": [
+            24,
+            5
+          ]
         },
         {
           "text": "GALLEY",
-          "at": [3, 1]
+          "at": [
+            3,
+            1
+          ]
         },
         {
           "text": "THE FAR TABLE",
-          "at": [60, 5]
+          "at": [
+            60,
+            5
+          ]
         }
       ],
       "exits": {
@@ -311,16 +340,26 @@
         "##################################################2###############"
       ],
       "writing": [
-        [30, 1, "DO NOT TOUCH. THIS MEANS YOU, SIR."]
+        [
+          30,
+          1,
+          "DO NOT TOUCH. THIS MEANS YOU, SIR."
+        ]
       ],
       "labels": [
         {
           "text": "ENGINEERING",
-          "at": [33, 3]
+          "at": [
+            33,
+            3
+          ]
         },
         {
           "text": "CANNON CAPACITORS",
-          "at": [47, 4]
+          "at": [
+            47,
+            4
+          ]
         }
       ],
       "exits": {
@@ -410,12 +449,19 @@
         "       ######################################################       "
       ],
       "writing": [
-        [50, 0, "MANIFEST: EMPTY"]
+        [
+          50,
+          0,
+          "MANIFEST: EMPTY"
+        ]
       ],
       "labels": [
         {
           "text": "THE AFT HOLDS",
-          "at": [3, 1]
+          "at": [
+            3,
+            1
+          ]
         }
       ],
       "exits": {
@@ -483,15 +529,34 @@
         "              ################################################              "
       ],
       "writing": [
-        [15, 4, "D.OSEI  T.ANNEK  BOSUN RAY  L.MBEKI  OLD PETE"],
-        [15, 5, "S.ORTEGA  P.IVERS  M.KADE  J.HOLT  ENS.ROOK"],
-        [15, 6, "CPL.DANE  A.VEKEMAN  TOMAS  K.LIND  R.AMARA"],
-        [15, 7, "NOOR, AGE 6  B.TEMBO  G.FALK  I.ROSS  W.AYO"]
+        [
+          15,
+          4,
+          "D.OSEI  T.ANNEK  BOSUN RAY  L.MBEKI  OLD PETE"
+        ],
+        [
+          15,
+          5,
+          "S.ORTEGA  P.IVERS  M.KADE  J.HOLT  ENS.ROOK"
+        ],
+        [
+          15,
+          6,
+          "CPL.DANE  A.VEKEMAN  TOMAS  K.LIND  R.AMARA"
+        ],
+        [
+          15,
+          7,
+          "NOOR, AGE 6  B.TEMBO  G.FALK  I.ROSS  W.AYO"
+        ]
       ],
       "labels": [
         {
           "text": "THE NAMES BULKHEAD",
-          "at": [20, 3]
+          "at": [
+            20,
+            3
+          ]
         }
       ],
       "exits": {
@@ -590,12 +655,19 @@
         "###################################               "
       ],
       "writing": [
-        [18, 12, "WAIT YOUR TURN"]
+        [
+          18,
+          12,
+          "WAIT YOUR TURN"
+        ]
       ],
       "labels": [
         {
           "text": "MEDBAY",
-          "at": [3, 1]
+          "at": [
+            3,
+            1
+          ]
         }
       ],
       "exits": {
@@ -676,13 +748,24 @@
         "########################################z###########################"
       ],
       "writing": [
-        [4, 8, "DON'T"],
-        [42, 13, "FRAME 30"]
+        [
+          4,
+          8,
+          "DON'T"
+        ],
+        [
+          42,
+          13,
+          "FRAME 30"
+        ]
       ],
       "labels": [
         {
           "text": "THE CRAWLWAYS",
-          "at": [24, 5]
+          "at": [
+            24,
+            5
+          ]
         }
       ],
       "exits": {
@@ -764,21 +847,51 @@
         "########################################################################"
       ],
       "writing": [
-        [44, 1, "VOSS"],
-        [54, 1, "TARROW"],
-        [64, 1, "HALM"],
-        [44, 12, "SOREL"],
-        [54, 12, "BRANDT"],
-        [64, 12, "FR. ROE"]
+        [
+          44,
+          1,
+          "VOSS"
+        ],
+        [
+          54,
+          1,
+          "TARROW"
+        ],
+        [
+          64,
+          1,
+          "HALM"
+        ],
+        [
+          44,
+          12,
+          "SOREL"
+        ],
+        [
+          54,
+          12,
+          "BRANDT"
+        ],
+        [
+          64,
+          12,
+          "FR. ROE"
+        ]
       ],
       "labels": [
         {
           "text": "THE HOT BUNKS",
-          "at": [3, 1]
+          "at": [
+            3,
+            1
+          ]
         },
         {
           "text": "CABINS",
-          "at": [54, 6]
+          "at": [
+            54,
+            6
+          ]
         }
       ],
       "exits": {
@@ -844,42 +957,66 @@
     "rooms": [
       {
         "level": "bridge",
-        "at": [12, 4],
+        "at": [
+          12,
+          4
+        ],
         "text": "THE BRIDGE"
       },
       {
         "level": "mess",
-        "at": [36, 4],
+        "at": [
+          36,
+          4
+        ],
         "text": "THE LONG MESS"
       },
       {
         "level": "engineering",
-        "at": [60, 2],
+        "at": [
+          60,
+          2
+        ],
         "text": "ENGINEERING"
       },
       {
         "level": "names",
-        "at": [27, 9],
+        "at": [
+          27,
+          9
+        ],
         "text": "THE NAMES BULKHEAD"
       },
       {
         "level": "medbay",
-        "at": [24, 12],
+        "at": [
+          24,
+          12
+        ],
         "text": "MEDBAY"
       },
       {
         "level": "crawlways",
-        "at": [40, 13],
+        "at": [
+          40,
+          13
+        ],
         "text": "THE CRAWLWAYS"
       },
       {
         "level": "aft",
-        "at": [60, 17],
+        "at": [
+          60,
+          17
+        ],
         "text": "AFT HOLDS"
       },
       {
         "level": "bunks",
-        "at": [32, 11],
+        "at": [
+          32,
+          11
+        ],
         "text": "THE HOT BUNKS"
       }
     ]

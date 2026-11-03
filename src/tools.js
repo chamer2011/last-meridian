@@ -310,6 +310,11 @@ export const TOOL_DEFS = [
       text: str("One or two sentences, written for the player."),
     }),
   },
+  {
+    name: "follow_scene",
+    description: "Only when the message has a <written_scene> block: the number of the written choice the player's words come to, or 0 when they fit none of them and your short reply answers them instead. The written story plays on from the choice by itself.",
+    input_schema: obj({ choice: num("The number of the written choice the player's words mean, or 0 for none of them.") }),
+  },
 ];
 
 const withNotes = (first, notes = []) => [first, ...notes].filter(Boolean).join("\n");
@@ -616,6 +621,16 @@ const handlers = {
     game.lore.push({ id: `custom:${game.lore.length}`, name: term, kind: input.kind, text: input.text });
     return { result: `Codex entry added: ${term}.`, notice: `[LORE] New codex entry: ${term}` };
   },
+  // The written story's one tool for the AI: it fits the player's own words to a written choice, and the game plays it.
+  follow_scene(game, input, turn) {
+    const scene = turn?.scene;
+    if (!scene) throw new Error("There's no written scene here to follow. Write the story yourself.");
+    const count = scene.choices.length;
+    if (input.choice < 0 || input.choice > count) throw new Error(`The written choices here are numbered 1 to ${count}, or 0 for none of them.`);
+    scene.followed = input.choice;
+    if (input.choice === 0) return { result: "Noted: nothing moves on. Now answer the player in one to three sentences, in the voices of the people there, with no > choices of your own. The written choices are offered again after your words." };
+    return { result: `The written story takes choice ${input.choice}, ${scene.choices[input.choice - 1].say}, and plays on from here by itself. Write nothing more.` };
+  },
 };
 
 function checkValue(key, spec, value) {
@@ -669,10 +684,18 @@ export function newTurnLimits() {
 // The tool list itself stays the same, because changing it would make Claude reload the whole story.
 const NOT_IN_A_TALK = ["pass_time", "travel", "set_scene"];
 
+// What's wrong with a call before it's made, for checking written scenes. Null means it would be accepted.
+export function toolProblem(name, input) {
+  const def = TOOL_DEFS.find((t) => t.name === name);
+  return def ? validate(def, input) : `Unknown tool: ${name}`;
+}
+
 export function runTool(game, name, input, turn) {
   const def = TOOL_DEFS.find((t) => t.name === name);
   if (!def) return { result: `Unknown tool: ${name}`, isError: true };
   if (turn?.talking && NOT_IN_A_TALK.includes(name)) return { result: "The clock is stopped in a talk window, and the player stays where they are, so that can't happen here. Just answer in words.", isError: true };
+  // In a written part, the written story is the only thing that can change the game.
+  if (turn?.scene && name !== "follow_scene") return { result: "This part of the story is written in advance, so nothing changes here except through follow_scene: give the number of the written choice the player's words mean, or 0 and answer them in a few words.", isError: true };
   const problem = validate(def, input);
   if (problem) return { result: problem, isError: true };
   try {

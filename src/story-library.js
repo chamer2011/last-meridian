@@ -9,6 +9,7 @@ import { ENEMIES, FACTIONS, ITEMS, LOCATIONS } from "./data.js";
 import { worldRumors } from "./daily.js";
 import { hasMovedOn, leadNow, movedView, ranItsCourse, whatHappened } from "./story-clock.js";
 import { inTheFleet, isCaptain } from "./role.js";
+import { writtenThreadIds } from "./scene-files.js";
 import { chairOf, lostShipNames } from "./fleet.js";
 import { FLEET_EVENTS, WORLD_ARC, WORLD_THREADS } from "./world.js";
 
@@ -68,16 +69,20 @@ function threadOpen(id, thread, game) {
   return fitsHere(thread, game);
 }
 
-// A few of the stories that could start here, with a mix of kinds. Main story threads come first.
+// A few of the stories that could start here, with a mix of kinds. Main story threads come first, and the
+// stories that have been written out come before all of those, in every game: with an AI they're the free ones.
 export function leadsHere(game) {
   const open = Object.entries(WORLD_THREADS).filter(([id, thread]) => threadOpen(id, thread, game));
   const shuffled = seededShuffle(open, cycleSeed(game, "leads"));
   shuffled.sort(([, a], [, b]) => Number(b.kind === "main") - Number(a.kind === "main"));
+  const written = writtenThreadIds();
+  shuffled.sort(([a], [b]) => Number(written.has(b)) - Number(written.has(a)));
   const chosen = [];
   const kinds = new Set();
   for (const entry of shuffled) {
     if (chosen.length >= LEADS_SHOWN) break;
-    if (kinds.has(entry[1].kind)) continue;
+    // One of each kind, except that a story that's written out is never left off for its kind.
+    if (kinds.has(entry[1].kind) && !written.has(entry[0])) continue;
     chosen.push(entry);
     kinds.add(entry[1].kind);
   }
@@ -85,7 +90,7 @@ export function leadsHere(game) {
     if (chosen.length >= LEADS_SHOWN) break;
     if (!chosen.includes(entry)) chosen.push(entry);
   }
-  return chosen.map(([id, thread]) => ({ id, title: thread.title, kind: thread.kind, lead: leadNow(game, id), moved: hasMovedOn(game, id) }));
+  return chosen.map(([id, thread]) => ({ id, title: thread.title, kind: thread.kind, lead: leadNow(game, id), moved: hasMovedOn(game, id), written: written.has(id) }));
 }
 
 export function rumorsHere(game) {

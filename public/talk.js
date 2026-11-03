@@ -182,7 +182,7 @@ function optionsFor(view) {
   const asks = view.asks.filter((ask) => !shown.has(ask)).slice(0, offered.length ? 1 : 3);
   const withCheck = (choice) => choice.tags?.some((tag) => tag.kind === "check" && tag.difficulty);
   return [
-    ...offered.map((choice) => ({ ...choice, run: () => (withCheck(choice) ? order({ action: "check", label: choice.label }) : say(choice.label)) })),
+    ...offered.map((choice) => ({ ...choice, ...(view.written && view.typed ? { detail: "free" } : {}), run: () => (withCheck(choice) ? order({ action: "check", label: choice.label }) : say(choice.label)) })),
     ...asks.map((ask) => ({ label: ask, run: () => say(ask) })),
     view.rumors > 0 && { label: view.rumorLabel, detail: "free", run: () => order({ action: "rumor" }) },
     { label: view.goodbyeLabel, detail: "free", run: endTalk },
@@ -219,6 +219,13 @@ function inputNode() {
     el("button", { class: "check-run", disabled: talk.sending, onclick: () => say(talk.draft) }, "Say it"));
 }
 
+// What the footer says about what costs what.
+function talkHint(view) {
+  if (!view.written) return "Each thing you say is one call to the AI. Free ones are marked.";
+  if (view.typed) return "A written conversation: the listed lines are free. Your own words are one call to the AI.";
+  return "A written conversation. Nothing here uses the AI, so it's all free.";
+}
+
 export function talkNode() {
   const view = app.ui.game?.talk;
   if (!view) return null;
@@ -236,9 +243,9 @@ export function talkNode() {
         el("button", { class: "mobile-toggle", onclick: () => app.openMenu(app.ui.tab) }, "Menu")),
       el("div", { class: "talk-desk" }, personPanel(view), logPanel(view)),
       talk.message && el("div", { class: "notice-inline fail talk-message" }, talk.message),
-      el("div", { class: "check-controls" }, optionsNode(view), inputNode()),
+      el("div", { class: "check-controls" }, optionsNode(view), view.typed && inputNode()),
       el("footer", { class: "check-taskbar" },
-        el("span", { class: "check-hint" }, "Each thing you say is one call to the AI. Free ones are marked."),
+        el("span", { class: "check-hint" }, talkHint(view)),
         el("span", { class: "check-spacer" }),
         el("span", { class: "check-meter" }, `THIS TALK ${money(talk.spent)}`))));
 }

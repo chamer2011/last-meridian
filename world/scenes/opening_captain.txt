@@ -1,0 +1,123 @@
+# A Light on Every Band
+// How the story opens for the captain. The format is explained in _how-to-write-a-scene.txt.
+start: bridge
+
+== bridge
+AI: Voss gives facts, not comfort, and she won't say what she'd do with the chair unless she's asked straight. Sorel is frightened of the signal and hides it badly. Nobody on the bridge will talk about the dead captain yet, and nobody has orders to give the player but the player.
+The bridge is cold enough to see your breath, and nobody has said the word captain yet. The last one is three hours dead, and the chair still has his thumb worn into the armrest.
+
+Forty-one green dots sit on the plot table. One of them flickers.
+
+@Lieutenant Iven Sorel: "It's still there, Captain." He says it low, as if someone's asleep nearby. "Every band. Six seconds, then it starts again. It isn't noise. I'd know noise."
+
+@Commander Ilya Voss: "Captain." She says it as if she hasn't finished deciding. "Two weeks of fuel. Three of food, if nobody eats much. The Choir will find our slowest ship in a few days, the way they always do. And half the fleet is already calling that signal a harbor." She lets that sit. "Your orders."
+
+> [+Voss] Ask her what she'd do, if the chair were hers -> voss_answer
+> [persuasion:moderate:voss] Ask what she isn't telling you -> voss_pressed_pass | voss_pressed_fail
+> [reason] Tell the fleet the truth: you don't know what the signal is yet -> truth
+> Say nothing, and listen to it -> listen
+
+== voss_answer
+She doesn't look at the chair. She looks at the dots.
+
+@Commander Ilya Voss: "Keep them together. Find out what that signal is before I point thirty thousand people at it. Haven Station is one jump, and there's a man there who can read a signal that old, if he's still alive and still sober." A pause. "You asked. Most wouldn't have."
+
+=> Voss will remember that you asked her first.
+
+* contact Ilya Voss friendly: You asked for her judgment before you gave your first order.
+* journal: Voss's advice on day one: keep the fleet together, and find out what the signal is before leading anyone toward it. There's a man at Haven Station who can read old signals.
+
+> Go on -> orders
+
+== voss_pressed_pass
+Something in her jaw moves, where the scar is.
+
+@Commander Ilya Voss: "Fine. I have a list. Which ships can't keep up, and the day we stop trying to make them. I wrote it last night, before anyone asked me to." She meets your eye. "You'll want one of your own, Captain. You'll hate having it."
+
+=> Voss told you about her list.
+
+* journal: Voss keeps a list: the ships the fleet can't keep up with, and the day she'd stop trying. She made it before anyone asked.
+* xp 10: You got the truth out of Voss
+* flag knows_about_the_list
+
+> Go on -> orders
+
+== voss_pressed_fail
+@Commander Ilya Voss: "Captain. If I had something to tell you, you'd have it." The scar along her jaw doesn't move at all. "Orders."
+
+Behind her, Sorel finds something very interesting in his headset.
+
+> Go on -> orders
+
+== truth
+@Lieutenant Iven Sorel: "Fleet-wide, Captain. Say again when you're ready. Over."
+
+You tell forty-one ships that you don't know what the signal is, that nobody does yet, and that you're going to find out before you take them anywhere. The channel stays open a second too long afterward, and you can hear the quiet on the Sundial.
+
+@Commander Ilya Voss: "Well." It's almost approval. "Now they know."
+
+=> The whole fleet heard you say you don't know.
+
+* belief reason 1: You told the fleet the truth instead of a hope
+* faction fleet 2: The fleet heard the truth from you
+* journal: Your first words to the fleet were that you don't know what the signal is yet, and that you'd find out before taking them anywhere.
+* flag told_the_fleet
+
+> Go on -> orders
+
+== listen
+Sorel puts it on the bridge speakers without being asked. Six seconds. A tone under static, then something that might be a voice, then the tone again.
+
+@Ensign Lira Vey: "Confirming: the same six seconds, forty times since the watch began. The arm is elevated. Please disregard the arm."
+
+@Ensign Pell Asante: "It's, it's pretty, is the thing. Captain." She catches herself a beat late, as always.
+
+Nobody on the bridge says the word home, and everyone has heard it.
+
+* journal: The signal: six seconds, a tone under static, and something like a voice. The bridge hears a word in it that nobody will say out loud.
+
+> Go on -> orders
+
+== orders
+Voss waits. The dots on the table don't.
+
+@Commander Ilya Voss: "Haven Station is one jump. The council will want to be told before we go, and Speaker Halm will want to be told twice. I can have Pell plot it while you decide."
+
+The bridge goes back to work around you, the way a bridge does when it's decided to trust you for an hour.
+
+> Ask her what she'd do, if the chair were hers -> voss_answer ? not seen voss_answer
+> Have Pell plot the course for Haven -> plot
+> Go and see the ship first -> walk
+
+== plot
+// If the fleet heard the captain say they don't know, the helm has heard about it too.
+? flag told_the_fleet -> plot_after_truth
+
+@Ensign Pell Asante: "Plotted, sir. Captain. One jump, about sixteen hours, and we'd come out with fuel to spare." A breath. "Not a lot to spare."
+
+=> The course to Haven Station is laid in. Set it from the Star map when you're ready.
+
+That's the end of the written opening. You can walk the ship, talk to the crew about what they've heard, and go to Haven from the Star map.
+
+* quest the_beacon: Haven Station is plotted. Set course from the Star map when you're ready, and tell the council first if you want Speaker Halm on your side.
+* xp 10: Your first order as captain
+END
+
+== plot_after_truth
+@Ensign Pell Asante: "Plotted, sir. Captain. One jump, about sixteen hours, and we'd come out with fuel to spare." A breath. "The Sundial's asking if you meant it. About not knowing. I said you did."
+
+=> The course to Haven Station is laid in. Set it from the Star map when you're ready.
+
+That's the end of the written opening. You can walk the ship, talk to the crew about what they've heard, and go to Haven from the Star map.
+
+* quest the_beacon: Haven Station is plotted. Set course from the Star map when you're ready, and tell the council first if you want Speaker Halm on your side.
+* xp 10: Your first order as captain
+END
+
+== walk
+You leave the chair empty a while longer. Nobody says anything about it, and Voss goes back to her list.
+
+That's the end of the written opening. You can walk the ship, talk to the crew about what they've heard, and go to Haven from the Star map.
+
+* quest the_beacon: Haven Station is one jump away. Set course from the Star map when you're ready, and tell the council first if you want Speaker Halm on your side.
+END

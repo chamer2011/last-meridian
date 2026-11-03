@@ -1,0 +1,565 @@
+# The Warm Room
+// The first story of the main plot, at Haven Station, from world/threads/main_the_old_scholar.json. The captain
+// gets the whole of it. An engine hand from the Meridian and a dock hand of Haven's each get their own way
+// in, from hand_start and dock_start, and anyone else gets the stranger's way, from other_start.
+start: start
+
+== start
+AI: Sable won't go below forty credits and won't be charmed or hurried. A threat makes her stop talking and walk off. She knows where Tharel lives and nothing of what he knows. The Ilari woman at the end of the bar is Sister Yara, and Sable won't point her out.
+? life engine_hand -> hand_start
+? life docker -> dock_start
+? not captain -> other_start
+
+The Neutral Ground is the only bar on Haven where every faction drinks together and pretends not to notice. Weapons go in the rack by the door. Feuds wait outside. Jun Sable, who owns it, is a very tall Veshti folded behind a very low bar, polishing a glass that has never once been clean.
+
+@Jun Sable: "The Warm Room." They don't look up. "Forty credits. Twenty for the way, twenty for not telling the next three people who ask that you went."
+
+Everyone in the bar is pretending not to know where the Warm Room is. A Hegemony officer is pretending hardest. At the far end, a slim Ilari in plain grey with skin that glows one steady white is watching you, and not pretending anything.
+
+* new quest main_the_old_scholar: The Warm Room | Only old Archivist Tharel can read the Beacon, and he hasn't left his Warm Room on Haven in nine days. Three parties want him. | Get to Tharel before the others do, and find out what the signal is.
+
+> Pay Sable's forty -> paid ? credits >= 40
+> [commerce:moderate] Get the price down -> haggled | bar_fail
+> [streetwise:moderate] Ask who else has been paying -> who_pays | bar_fail
+> Go and speak to the Ilari at the end of the bar -> yara
+
+== paid
+Sable takes the money without counting it, which is how you know they counted it.
+
+@Jun Sable: "Consulate Row, past the carpet. The door that's warm. Knock twice, or he'll think you're the Hegemony." A pause. "The Hegemony knocks three times. He's not stupid, young one, is what I'm telling you. He's frightened."
+
+* credits -40: The way to the Warm Room, and Sable's silence
+* flag paid_sable
+
+> Go to the Warm Room -> warm_room
+
+== haggled
+@Jun Sable: "Twenty." They say it as if you'd insulted the glass. "For the way. The silence I'll throw in, because you'll need it more than I need the twenty." The glass goes round once more. "Consulate Row, past the carpet. The door that's warm. Knock twice."
+
+* credits -20: The way to the Warm Room, at Sable's lower price
+* flag paid_sable
+
+> Go to the Warm Room -> warm_room
+
+== bar_fail
+@Jun Sable: "Forty." The glass doesn't stop. "I don't haggle, young one. I price. The price is what it costs. Pay it, or go and ask the woman at the end of the bar. She's free, and she'll tell you it's all right, and she'll be lying."
+
+> Pay Sable's forty -> paid ? credits >= 40
+> Go and speak to the Ilari at the end of the bar -> yara
+
+== who_pays
+You buy the drink that comes with the question, and Sable talks to the glass.
+
+@Jun Sable: "Legate Corvane, for protective custody, which is a kind of custody. A buyer of Mother Quill's, for the first read of anything older than the Concord, which is a kind of reading. And Sister Solune, at the end of the bar, who's offered nothing and asks for nothing, and who worries me more than the other two." The glass goes round. "I've sold the way to all three. I'm selling it to you. Forty. The old man's still in there, which tells you what the way is worth."
+
+* journal: Three parties want Tharel: Legate Corvane for Hegemony custody, a Syndicate buyer for Mother Quill, and Sister Yara Solune of the Quiet, who wants nothing. Sable has sold the way to his door to all of them.
+* flag who_pays_known
+
+> Pay Sable's forty -> paid ? credits >= 40
+> [commerce:moderate] Get the price down -> haggled | bar_fail ? not seen bar_fail
+> Go and speak to the Ilari at the end of the bar -> yara
+
+== yara
+She doesn't stand up. Her skin holds its one white glow, steady as a lamp, and nothing about her changes when you sit down.
+
+@Sister Yara Solune: "You want the old man. You are afraid of what he knows." She says it like weather. "I sit with him. He is afraid too. It's all right. I'll take you."
+
+She does. Nobody in the bar watches an Ilari of the Quiet walk out with the captain of the refugee fleet, with tremendous skill.
+
+* contact Sister Yara Solune neutral: She took you to the Warm Room, and asked for nothing.
+* flag yara_took_you
+
+> Follow her to the Warm Room -> warm_room
+
+== warm_room
+* raw set_scene {"area": "Tharel's Warm Room", "people": ["Oss Tharel"]}
+
+The Warm Room was a boiler compartment, and it's still hot enough to make your eyes water. Crates of paper, floor to ceiling, and between them an old Thessan in a heated coat, with scales gone pale and eyes that blink slowly and separately. There's a kettle. There are two cups. One of them was already out.
+
+@Archivist Oss Tharel: "Young one." He says it as if he's a thousand years older than you, which he nearly is. "You've come about the song. Everyone has. Sit, and I'll tell you about the Concord, which was a brief and promising experiment, and then you'll ask me again, and I'll tell you about the Thessan calendar, which is more interesting than you'd think."
+
+He does. It takes most of an hour. Then, without any change in his voice:
+
+@Archivist Oss Tharel: "What do you owe frightened people, young one? The truth, or a direction?"
+
+> The truth. Always -> truth
+> A direction. They can't eat the truth -> direction
+> Both, and it depends on the day -> depends
+> [lore:hard] Answer him as a scholar would: with the question under his question -> scholar | depends
+
+== truth
+He looks at you with one eye, then the other.
+
+@Archivist Oss Tharel: "So did Lenn Corso. Dr. Lenn Corso, young one, eleven years ago, in this room, when it was a boiler room and I was only old." The kettle ticks. "I told him the truth. He went to find out whether I was right, and nobody has seen him since. You'll forgive me if I owe you a direction first, and the truth after, if you're still here."
+
+* belief reason 1: You told the old man you owed people the truth
+* flag told_tharel_truth
+* flag tharel_trusts
+
+> Ask him what he needs, to begin -> tharel_asks
+
+== direction
+@Archivist Oss Tharel: "Yes." He pours. "That's what the Concord said too, at the end. It had a great many directions. I'm not mocking you, young one. I'm telling you I agree, and that agreeing with me isn't a comfort, because I'm hiding in a boiler room."
+
+* belief order 1: You told the old man people needed a direction more than the truth
+
+> Ask him what he needs, to begin -> tharel_asks
+
+== depends
+@Archivist Oss Tharel: "A politician's answer. Or a doctor's." He seems pleased, in the slow way of his kind. "Lenn Corso would have said the truth. Look where it got him. We'll see what it gets you."
+
+> Ask him what he needs, to begin -> tharel_asks
+
+== scholar
+You ask him the question under his question: whether a frightened old man owes the truth to a frightened fleet, and whether he's asked himself what he'd answer.
+
+Both of his eyes stop blinking at the same moment, which you'll learn is rare.
+
+@Archivist Oss Tharel: "Ah." A long pause. "You've done the reading, young one. Very few have. Corso had. Sit closer to the boiler. We'll skip the calendar."
+
+* xp 15: You met him as a scholar
+* flag tharel_trusts
+
+> Ask him what he needs, to begin -> tharel_asks
+
+== tharel_asks
+@Archivist Oss Tharel: "A clean recording. Not the station's, which is full of noodle hatches. Your ship's. Your comms officer will have one, young one, and if he's any good he's been listening to it every night and not sleeping." He blinks, one eye. "Bring it to me, and I'll show you what I can stand to show you."
+
+=> Tharel wants a clean recording of the Beacon from the Meridian's receivers.
+
+> Shuttle back across to the Meridian, and find Lieutenant Sorel -> sorel
+
+== sorel
+The shuttle takes twenty minutes each way, and the Meridian's bridge is cold after the Warm Room. Sorel has one side of his headset on, as always, and the other side on the desk, as if it might say something while he isn't wearing it.
+
+@Lieutenant Iven Sorel: "A clean recording." Low, as if someone's asleep nearby. "Copy. I've got nine days of it, Captain. I've got it cleaner than clean." He takes a chip from inside his jacket, where it's warm, and doesn't hand it over yet. "It's someone reading, you know. Not talking. Reading off a list. That's not in my report. Over."
+
+> Take the recording to Tharel -> back_to_warm_room
+> [hacking:moderate] Sit down at his board, and pull the signal's frame headers yourselves first -> headers_pass | headers_fail
+
+== headers_pass
+You and Sorel pull the frame headers apart at his board, in the dark, with the bridge watch pretending not to watch. It takes an hour. Under the signal's six seconds there's a lattice of something the board can't name, and locked on top of it, in Concord Navy fleet-recall format, four words any officer would know: SAFE HARBOR. ALL CONCORD VESSELS COME HOME.
+
+Sorel doesn't say anything for a while. Then: "Copy."
+
+=> You found the Beacon's second layer yourselves: Navy format, on top of something older.
+
+* item +data_chip
+* xp 15: The frame headers
+* flag found_overlay
+* journal: With Sorel, you pulled the Beacon's frame headers apart. On top of something old and unreadable there's a plain message in Concord Navy fleet-recall format: SAFE HARBOR. ALL CONCORD VESSELS COME HOME.
+* raw update_story {"clue": "two_layers"}
+
+> Take it to Tharel -> back_to_warm_room
+
+== headers_fail
+You and Sorel pull at the frame headers for an hour and get noise, which Sorel says is never nothing, and a headache. He gives you the chip anyway.
+
+@Lieutenant Iven Sorel: "The old man's better at this than either of us, Captain. Hold on." He listens to something you can't hear. "Take it to him. Over."
+
+* item +data_chip
+
+> Take it to Tharel -> back_to_warm_room
+
+== back_to_warm_room
+AI: The men on the stair won't talk. They're Mother Quill's, they want Tharel and not a fight with the fleet, and they'll come up the stair unless they're stopped. Tharel won't leave his frame without his coat, which takes him a minute.
+* raw set_scene {"area": "Tharel's Warm Room", "people": ["Oss Tharel"]}
+
+The Warm Room again, hotter than before, and Tharel with the chip in his pale hands, turning it over as if it were the Codex itself.
+
+@Archivist Oss Tharel: "Good. Good. Sit, young one. This will take..."
+
+It doesn't take anything, because somebody on the maintenance stair has stopped waiting. Boots, more than two pairs, coming down without any attempt at quiet. Sable's rule about the Neutral Ground stops at Sable's door, and this isn't Sable's door.
+
+> [firearms:moderate] Stand in the corridor and hold it while he gets his coat -> held | overrun
+> Draw, and meet them on the stair -> stair_fight
+> [athletics:moderate] Get him out through the ventilation, heated coat and all -> vent_pass | vent_fail
+> Stand aside, and let them take him -> let_them
+
+== held
+You hold the corridor. It isn't heroic. It's the width of the corridor and the fact that nobody who's paid by the hour wants to be the first through it, and you say so, loudly, with the sidearm where they can see it. Behind you, Tharel finds his coat and the kettle, in that order.
+
+Somebody above decides it isn't worth it today. The boots go back up the stair.
+
+=> You held the corridor, and the old man saw you do it.
+
+* xp 20: The corridor
+* flag saved_tharel
+* flag tharel_trusts
+* contact Oss Tharel friendly: You stood in the corridor for him.
+
+> Go on -> reveal
+
+== overrun
+You hold the corridor for about as long as it takes them to decide you're one person. Then you're on the floor, and they're in the room, and the last thing you see before the lights go is Tharel, upright in his heated coat, being very polite to them.
+
+* health -6: The maintenance stair
+* stress 6: They walked over you
+
+> Go on -> taken
+
+== stair_fight
+FIGHT dock_thug
+  lead_in: You meet them on the stair, where it's narrow, and the first one through doesn't expect it. The one behind has a Kessara knife and a patched jacket, and isn't surprised by anything.
+  enemy_followers: drift_raider
+  why: paid
+  reason: Somebody's paying them to bring an old man out of a boiler room.
+  won -> fought_them_off
+  lost -> taken
+  fled -> taken
+  talked -> fought_them_off
+
+== fought_them_off
+It's over, and the stair is quiet, and Tharel is standing in his doorway with the kettle, which he was apparently going to throw.
+
+@Archivist Oss Tharel: "Young one." Both eyes on you. "Corso couldn't do that. Sit down. I'll show you now, before the next ones."
+
+* flag saved_tharel
+* flag tharel_trusts
+* contact Oss Tharel friendly: You met the snatch team on the stair for him.
+
+> Go on -> reveal
+
+== vent_pass
+There's a ventilation hatch behind the boiler, and an old Thessan in a heated coat fits through it, just, if you go first and pull. It's a long warm crawl to the Hook, with the boots arriving in an empty room behind you, and Tharel saying "young one, my crates" the whole way.
+
+You come out among the refugees' hanging belongings, grease on both of you, and he sits down on somebody's crate and laughs, which you didn't know Thessans did.
+
+=> You got Tharel out through the ventilation, and he's alive because of it.
+
+* xp 20: The ventilation
+* flag saved_tharel
+* flag tharel_trusts
+* contact Oss Tharel friendly: You pulled him through the ventilation in his heated coat.
+
+> Go on -> reveal
+
+== vent_fail
+You get the hatch open and the old man half through it, and then the boots are in the room, and it's a fight after all, in a space the size of a cupboard.
+
+> Draw, and fight them in the doorway -> stair_fight
+
+== let_them
+You stand aside. They're polite about it, which is worse. Tharel looks at you once, with one eye, and then goes with them, with his coat and without his crates.
+
+* belief self 1: You stood aside and let them take him
+* stress 5: He looked at you once
+
+> Go on -> taken
+
+== reveal
+? flag tharel_trusts -> reveal_trusted
+
+He lays it out on the top of a crate, in two colors of pencil, the way he must have laid things out for students a century ago.
+
+@Archivist Oss Tharel: "Two signals, locked together. Underneath, this, which I can't read, and nor can you, and nor can anyone. On top, this." The second color. "Concord Navy fleet-recall format. Months old, not years. Plain. 'Safe harbor. All Concord vessels come home.' Someone in uniform is telling you to come home, young one."
+
+You ask what the lower layer says.
+
+@Archivist Oss Tharel: "Bring me the Ilun Codex, young one, and ask me again." He puts the pencil down, and he doesn't flinch, quite.
+
+* raw update_story {"clue": "two_layers"}
+* item +data_chip
+* journal: Tharel laid the Beacon out in two colors: an old lattice nobody can read, and on top of it a plain message in Concord Navy fleet-recall format, months old. SAFE HARBOR. ALL CONCORD VESSELS COME HOME. He won't say what the lower layer is until he has the Ilun Codex.
+
+> [attunement:moderate] Listen to it with him, here, before you go -> two_voices | one_voice
+> Ask him what you should tell the fleet -> decide
+
+== reveal_trusted
+He lays it out on the top of a crate, in two colors of pencil, the way he must have laid things out for students a century ago, and his hands are nearly steady.
+
+@Archivist Oss Tharel: "Two signals, locked together. Underneath, this, which is older than the Concord by a great deal, and which I can read about as well as you can read the weather. On top, this." The second color. "Concord Navy fleet-recall format. Months old. Plain. 'Safe harbor. All Concord vessels come home.' Someone in uniform is telling you to come home, young one, and I'd like you to think about who."
+
+You ask what the lower layer says. For a moment both his eyes stop blinking.
+
+@Archivist Oss Tharel: "Something I told Lenn Corso, and he went to find out. Bring me the Ilun Codex, and ask me again, and I'll answer you properly, because you'll have earned it." He takes something off a crate: a warm fragment of crystal he's used as a paperweight for two centuries. "Take this. It points somewhere. I've never liked where."
+
+=> Tharel trusts you. He's given you the shard he's kept for two hundred years.
+
+* raw update_story {"clue": "two_layers"}
+* item +data_chip
+* item +beacon_shard
+* contact Oss Tharel ally: You earned the Warm Room, and he gave you his paperweight.
+* journal: Tharel laid the Beacon out in two colors: an old lattice, and on top of it a plain message in Concord Navy fleet-recall format. SAFE HARBOR. ALL CONCORD VESSELS COME HOME. He'll say what the lower layer is when he has the Ilun Codex. He gave you a shard of the Beacon that he's kept for two centuries.
+
+> [attunement:moderate] Listen to it with him, here, before you go -> two_voices | one_voice
+> Ask him what you should tell the fleet -> decide
+
+== two_voices
+You listen. Six seconds, and under them, two voices, if that's the word. One is old and exhausted beyond anything you have a word for, saying the same thing over and over, the way a lighthouse does. The other is young, and frightened, and reading.
+
+You say so. Both of Tharel's eyes stop blinking at the same moment.
+
+@Archivist Oss Tharel: "Yes." Very quietly. "Yes, young one. That's what I hear. Don't tell anyone else you can."
+
+=> You heard two voices in the Beacon, one ancient and one afraid, and Tharel knows you did.
+
+* flag heard_two_voices
+* xp 15: Two voices
+* stress 5: One of them is so tired
+
+> Ask him what you should tell the fleet -> decide
+
+== one_voice
+You listen. Six seconds, and a tone, and something under it that might be a voice, and then the tone again. Tharel watches you listen, and whatever he was hoping for, he doesn't see it.
+
+@Archivist Oss Tharel: "No. Well. It took me nine days."
+
+> Ask him what you should tell the fleet -> decide
+
+== decide
+@Archivist Oss Tharel: "What you tell them is yours, young one. I've told you what I can stand to. But I'll say this: Garrick Fenn has half of it already, and thirty thousand people would give anything to hear that someone survived. Whatever you say, say it before he does."
+
+Haven's speakers are still going, outside, six seconds at a time.
+
+> Announce it to the fleet: Navy survivors are calling us home -> announced
+> Tell the council first, and let Halm carry it -> council_first
+> Keep it to yourself, and the bridge, for now -> kept
+
+== announced
+You put it on the fleet band yourself, from the Meridian's bridge, with Sorel at the board: the Beacon carries a Concord Navy recall. Someone survived. Someone is calling them home.
+
+The fleet's spirits go up like a flare. The food queue on the Sundial stops being a riot for a week. Garrick Fenn runs it three times a watch with your voice in it, and somewhere out past the Burn, the Remnant's admiral hears the Navy's own code being used, and starts asking who.
+
+=> The whole fleet believes Navy survivors are calling them home, because you told them so.
+
+* faction fleet 4: You gave them hope, and said it in your own voice
+* flag announced_navy_survivors
+* quest main_the_old_scholar done: Tharel read the Beacon: an old lattice, and on top of it a Navy recall. You told the fleet. Bring him the Ilun Codex, and he'll read the rest.
+* xp 25: The Warm Room
+END
+
+== council_first
+You take it to the council first, in the Long Mess, at the far table that doesn't wobble, and Speaker Halm hears you out with his hands folded and his face very warm.
+
+@Speaker Teodor Halm: "We'll carry it, Captain. Gently. We know what hope weighs." He does. By morning it's on the fleet band in his voice, with a "we" in every sentence, and the captain is the one who found it, and the council is the one who told them, and everyone knows which they'll remember.
+
+=> The council carried the news, in Halm's voice.
+
+* faction fleet 2: The fleet heard, from the council
+* flag council_told_first
+* contact Speaker Teodor Halm friendly: You brought the Beacon's news to the council before the fleet.
+* quest main_the_old_scholar done: Tharel read the Beacon: an old lattice, and on top of it a Navy recall. The council told the fleet. Bring him the Ilun Codex, and he'll read the rest.
+* xp 25: The Warm Room
+END
+
+== kept
+You keep it to yourself and the bridge. Sorel says "Copy" and nothing else. Voss says nothing at all, for longer than usual.
+
+Garrick Fenn breaks it anyway, four days later, with a signals tech from the Neutral Ground as his source: Navy code on the Beacon, and the captain knew. The fleet's spirits go up, and the council wants to know what else you've been sitting on.
+
+=> Garrick Fenn told the fleet what you didn't, and the council noticed.
+
+* faction fleet -2: They heard it from Fenn, and that you'd known
+* flag kept_the_two_layers
+* quest main_the_old_scholar done: Tharel read the Beacon: an old lattice, and on top of it a Navy recall. You sat on it, and Garrick Fenn broke it. Bring Tharel the Ilun Codex, and he'll read the rest.
+* xp 20: The Warm Room
+END
+
+== taken
+Mother Quill's people have him. They were polite about it, and they left his crates, and by the time you're on your feet the Warm Room is just a boiler room again, with a kettle in it.
+
+Sable finds you at the bar afterwards, and doesn't ask how you are.
+
+@Jun Sable: "Quill's buyer got him out through the service dock an hour ago. He'll be comfortable. She's not cruel, she's careful." The glass goes round. "What he was going to tell you, I can tell you. Sixty. I was Concord Intelligence once, young one, and I know what that signal's wearing."
+
+* contact Oss Tharel neutral: He was taken by the Syndicate while you were there.
+* flag tharel_taken_by_quill
+* journal: Mother Quill's people took Tharel from the Warm Room. Sable says they can sell you what he'd have said, for sixty credits.
+
+> Pay Sable's sixty -> bought ? credits >= 60
+> Refuse, and go back to the fleet with nothing -> nothing
+
+== bought
+@Jun Sable: "Two signals, locked together. The bottom one's older than anything with a name. The top one's months old, and it's Concord Navy fleet-recall format, plain as a bill. Safe harbor, all Concord vessels come home." They take the sixty. "That's the whole of it. Who's sending it is a different sixty, and I don't sell that one."
+
+=> Sable sold you the Beacon's two layers, and kept the rest.
+
+* credits -60: What Tharel would have told you, from Sable
+* raw update_story {"clue": "two_layers"}
+* flag sable_favor
+* journal: Sable sold you what Tharel would have said: the Beacon is two signals, an old lattice and a plain Navy recall on top. SAFE HARBOR. ALL CONCORD VESSELS COME HOME. Tharel is in Mother Quill's hands.
+* quest main_the_old_scholar done: Tharel was taken by the Syndicate. Sable sold you the Beacon's two layers: an old lattice, and a Navy recall on top. Getting Tharel back is a job of its own now.
+* xp 10: The Warm Room, the hard way
+END
+
+== nothing
+You go back to the fleet with nothing. Four days later Garrick Fenn has it anyway, from a signals tech at the Neutral Ground: Navy code on the Beacon. The fleet's spirits go up, and the council wants to know why the captain went to Haven and came back with a bruise.
+
+* faction fleet -2: Fenn told the fleet what you couldn't
+* raw update_story {"clue": "two_layers"}
+* flag kept_the_two_layers
+* quest main_the_old_scholar done: Tharel was taken by the Syndicate, and Garrick Fenn broke the Beacon's Navy layer to the fleet. Getting Tharel back is a job of its own now.
+* xp 5: The Warm Room, lost
+END
+
+// ---- An engine hand from the Meridian --------------------------------------------------------
+
+== hand_start
+The Neutral Ground, with Marrow's capacitor money in your pocket and grease on your hands that the bar's regulars notice. Jun Sable, a very tall Veshti behind a very low bar, polishes a glass and doesn't look up.
+
+@Jun Sable: "The Warm Room." They've heard it a hundred times today. "Not to you. Forty credits buys the way, and you haven't got it, and if you had I'd know where it came from." The glass goes round. "The old man's boiler's dying, is the thing. He won't let a Hegemony tech near it. He'd let a fleet one, if he had one."
+
+* new quest main_the_old_scholar: The Warm Room | Only old Archivist Tharel can read the Beacon, and his boiler is dying, and he won't let the Hegemony's techs near it. | Fix the old man's boiler, and see what he says.
+
+> Offer to fix the boiler, as a Meridian engine hand -> hand_boiler
+> Go and speak to the Ilari at the end of the bar -> hand_yara
+
+== hand_boiler
+Sable sells nothing, and points with the glass. Consulate Row, past the carpet, the door that's warm. You knock twice.
+
+The Warm Room was a boiler compartment and the boiler's still in it, coughing, with an old Thessan in a heated coat sitting as close to it as he can get.
+
+@Archivist Oss Tharel: "A fleet hand." One eye on you, one on your hands. "Marrow's, by the grease. Young one, if you can make that thing stop coughing, you can sit here as long as you like, and I'll tell you about the Thessan calendar."
+
+> [engineering:moderate] Get the boiler running -> hand_fixed | hand_not_fixed
+
+== hand_fixed
+It's a Concord boiler with a Thessan patch on a Haven fitting, and it takes an hour and most of the swearing you learned from Marrow. When it catches, the room goes from warm to hot, and the old man closes both eyes at once, which you'll learn is rare.
+
+@Archivist Oss Tharel: "Thank you, young one." He means it. "Nobody's fixed anything for me in nine days. They've all wanted something." He pours two cups. "Sit. The ones who want something are coming down the stair, I think. We've a few minutes."
+
+* xp 15: The old man's boiler
+* flag fixed_tharels_boiler
+* flag tharel_trusts
+* contact Oss Tharel friendly: You fixed his boiler and wanted nothing for it.
+
+> Sit, and ask him about the signal -> outsider_warm
+
+== hand_not_fixed
+It's a Concord boiler with a Thessan patch on a Haven fitting, and it beats you. It coughs, and keeps coughing, and the old man watches you fail with no unkindness at all.
+
+@Archivist Oss Tharel: "It beat the Hegemony's man too, young one. Sit anyway. You tried, which is more than the ones who are coming down the stair have."
+
+> Sit, and ask him about the signal -> outsider_warm
+
+== hand_yara
+She doesn't stand up. Her skin holds its one white glow, and nothing about her changes when you sit down.
+
+@Sister Yara Solune: "You want the old man. You are afraid of what he knows." Like weather. "I sit with him. I'll take you."
+
+She does, through the Hook and up a maintenance stair that isn't on any plan.
+
+* contact Sister Yara Solune neutral: She took you to the Warm Room, and asked for nothing.
+* flag yara_took_you
+
+> Follow her to the Warm Room -> outsider_warm
+
+// ---- A dock hand of Haven's ----------------------------------------------------------------------
+
+== dock_start
+The office couldn't possibly deliver a crate of paper to a boiler room on Consulate Row. Mott can, and Mott's got a dock hand, which is you, and a crate, which is heavy, and a line: "Tell the old lizard it's from a friend, and don't say which."
+
+The Neutral Ground is on the way, and Jun Sable looks at the crate and at you and doesn't charge for either.
+
+@Jun Sable: "You're on Mott's books, so you're already paid for." The glass goes round. "Door that's warm. Knock twice. If you hear boots on the stair, young one, that's not Mott's crate they're coming for."
+
+* new quest main_the_old_scholar: The Warm Room | Mott Jessup is sending a crate of paper to the old archivist in the Warm Room, by you, and three parties want the archivist. | Deliver Mott's crate, and keep your eyes open.
+
+> Take the crate up to the Warm Room -> dock_warm
+
+== dock_warm
+The Warm Room was a boiler compartment, and it's hot enough to make your eyes water. An old Thessan in a heated coat takes the crate from you as if it were a child, and looks inside, and makes a sound.
+
+@Archivist Oss Tharel: "Paper." Both eyes on it. "Real paper. Mott Jessup, who has never read a page in his life, sends me paper." One eye comes up to you. "Young one, sit. You've carried something that matters, which nobody on this station has done for nine days. The others are coming. I'd rather talk to you first."
+
+* xp 10: Mott's crate
+* contact Oss Tharel friendly: You brought him Mott's crate of paper.
+* contact Mott Jessup friendly: You delivered the crate without asking what it was for.
+
+> Sit, and ask him about the signal -> outsider_warm
+
+// ---- Anyone else ---------------------------------------------------------------------------------
+
+== other_start
+The Neutral Ground is the only bar on Haven where every faction drinks together and pretends not to notice. Jun Sable, behind the bar, polishes a glass and prices you at a glance.
+
+@Jun Sable: "The Warm Room. Not to you. I don't sell the old man's door to people I can't place." The glass goes round. "The woman at the end of the bar will take you for nothing. Ask yourself why."
+
+* new quest main_the_old_scholar: The Warm Room | Only old Archivist Tharel can read the Beacon, and three parties want him. Sable won't sell you the way, but someone will take you for nothing. | Get to the Warm Room, and see what the old man says.
+
+> Go and speak to the Ilari at the end of the bar -> hand_yara
+> It isn't your business -> other_leaves
+
+== other_leaves
+You finish your drink. The old man stays in his Warm Room, and whatever he knows stays with him, and four days later Garrick Fenn tells the fleet band that there's Navy code on the Beacon, from a signals tech at this bar, and everyone has an opinion.
+
+* quest main_the_old_scholar failed: You left the Warm Room to the people who were paying for it. Garrick Fenn broke the Beacon's Navy layer to the fleet anyway.
+END
+
+// ---- The Warm Room, for someone who isn't the captain --------------------------------------------
+
+== outsider_warm
+* raw set_scene {"area": "Tharel's Warm Room", "people": ["Oss Tharel"]}
+
+He tells you about the Concord, which was a brief and promising experiment, and about the Thessan calendar, which is more interesting than you'd think, and then, without any change in his voice:
+
+@Archivist Oss Tharel: "Two signals, young one. Locked together. Underneath, something older than anything with a name, which nobody can read. On top, a plain message in Concord Navy fleet-recall format, months old. Safe harbor. All Concord vessels come home." He blinks, one eye. "Your captain will want to hear that from me, and I'll tell them, if they get here before the others do. You I'm telling because you fixed something, or carried something, or came with her." A glance at the door. "They're on the stair. Can you hear them?"
+
+You can. Boots, more than two pairs, coming down without any attempt at quiet.
+
+* raw update_story {"clue": "two_layers"}
+* flag two_layers_known
+* journal: Tharel told you the Beacon is two signals: an old lattice nobody can read, and on top of it a plain Concord Navy recall. SAFE HARBOR. ALL CONCORD VESSELS COME HOME.
+
+> [athletics:moderate] Get him out through the ventilation, heated coat and all -> outsider_vent | outsider_fight
+> Stand in the doorway, and buy him time -> outsider_fight
+> Get out yourself, while there's a way -> outsider_leaves
+
+== outsider_vent
+There's a ventilation hatch behind the boiler, and an old Thessan in a heated coat fits through it, just, if you go first and pull. It's a long warm crawl to the Hook with the boots arriving in an empty room behind you, and when you come out among the refugees' hanging belongings, he sits down on somebody's crate and laughs.
+
+Sable is waiting there, which you didn't expect, with a glass.
+
+@Jun Sable: "I keep him alive, young one. I don't advertise it." The glass goes round. "You did that for nothing. That's a favor. I keep those too."
+
+=> You got Tharel out through the ventilation, and Sable owes you.
+
+* xp 25: The ventilation
+* flag saved_tharel
+* flag sable_favor
+* contact Oss Tharel ally: You pulled him through the ventilation in his heated coat.
+* contact Jun Sable friendly: You saved the old man for nothing, and they keep favors.
+* quest main_the_old_scholar done: You got Tharel out of the Warm Room ahead of the snatch team, and he told you what the Beacon is: an old lattice with a Navy recall on top. Sable owes you a favor.
+END
+
+== outsider_fight
+FIGHT dock_thug
+  lead_in: You're in the doorway when the first of them reaches it, and he isn't expecting a doorway with someone in it. The one behind has a Kessara knife and isn't surprised by anything.
+  enemy_followers: drift_raider
+  why: paid
+  reason: Somebody's paying them to bring an old man out of a boiler room, and you're in the door.
+  won -> outsider_held
+  lost -> outsider_lost
+  fled -> outsider_lost
+  talked -> outsider_held
+
+== outsider_held
+The stair is quiet, and Tharel is in his doorway with the kettle, which he was apparently going to throw.
+
+@Archivist Oss Tharel: "Young one. Thank you. Go and tell your captain I'll see them, and that I'm told I owe you a cup of something."
+
+* xp 20: The doorway
+* flag saved_tharel
+* contact Oss Tharel ally: You held his doorway against the snatch team.
+* quest main_the_old_scholar done: You held the Warm Room's door against the snatch team, and Tharel told you what the Beacon is: an old lattice with a Navy recall on top. He'll see the captain now.
+END
+
+== outsider_lost
+You come round on the floor of a boiler room with a kettle beside you and no old man in it. Mother Quill's people have him, and they were polite about it, and they left his crates.
+
+What he told you, you still know, and so, by the next watch, does the signals tech at the Neutral Ground, and by the watch after that, Garrick Fenn.
+
+* stress 5: They walked over you
+* flag tharel_taken_by_quill
+* quest main_the_old_scholar done: The Syndicate took Tharel from the Warm Room over you. He'd already told you what the Beacon is: an old lattice with a Navy recall on top. Getting him back is somebody's job now.
+END
+
+== outsider_leaves
+You go back up the stair past the boots, and nobody stops a nobody. Behind you the Warm Room goes quiet in a way you'll remember. By the next watch Mother Quill's people have him, and by the one after, Garrick Fenn has what you were told, from somebody else.
+
+* belief self 1: You got out while there was a way
+* stress 4: The Warm Room going quiet behind you
+* flag tharel_taken_by_quill
+* quest main_the_old_scholar done: You left the Warm Room as the snatch team came down the stair. The Syndicate took Tharel. You know what the Beacon is: an old lattice with a Navy recall on top.
+END

@@ -1,0 +1,37 @@
+# Talking with Ensign Vey
+
+== start
+@Ensign Lira Vey: "Confirming: no contacts, bearing any. The board is clear." Her left arm is a slow, pale green. "The arm is elevated. Please disregard the arm."
+
+> What are the sensors showing, Ensign? -> sensors ? not seen sensors
+> How are you holding up in the pit? -> pit ? not seen pit
+> Ask about the arm -> arm ? not seen arm
+> Tell her to carry on -> done
+
+== sensors
+@Ensign Lira Vey: "Confirming: forty-one returns, formation nominal, the Slow Harriet two kilometers out of station, which is improved. Beyond the formation, the Beacon's bearing, which the board resolves and the repeater doesn't." Flat, level, exact. "Nothing I'd call a contact. I'd call it before the arm did, Captain, given the chance."
+
+> How are you holding up in the pit? -> pit ? not seen pit
+> Ask about the arm -> arm ? not seen arm
+> Tell her to carry on -> done
+
+== pit
+@Ensign Lira Vey: "Confirming: well. The pit is cold, which is correct for the equipment, and quiet, which is correct for me." A beat. "I'd like to stay in it. There's a report I'd like to make one day with my mouth before anything else makes it for me. That's all."
+
+> What are the sensors showing, Ensign? -> sensors ? not seen sensors
+> Ask about the arm -> arm ? not seen arm
+> Tell her to carry on -> done
+
+== arm
+The green goes a shade deeper, and she doesn't look at it.
+
+@Ensign Lira Vey: "It is a feature of my species, Captain. It reports. It is not a reading, it is not calibrated, and it is not alarmed." Flat. "I am not alarmed. Please disregard the arm."
+
+=> Vey's skin reports before she does, and she'd like it disregarded. You've noticed that it was green.
+
+> What are the sensors showing, Ensign? -> sensors ? not seen sensors
+> How are you holding up in the pit? -> pit ? not seen pit
+> Tell her to carry on -> done
+
+== done
+@Ensign Lira Vey: "Confirming: carrying on." The arm fades, slowly, to nothing in particular.

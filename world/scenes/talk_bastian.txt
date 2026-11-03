@@ -1,0 +1,37 @@
+# Talking with Father Roe
+
+== start
+@Father Bastian Roe: "Sit down, sit down. There's tea, or there's something I'm calling tea." He's already pouring. "Weak, or very weak? Don't tell me what happened yet. What are you carrying?"
+
+> Tell him what you're carrying -> carrying ? not seen carrying
+> Ask how the services are going -> services ? not seen services
+> Ask what he's heard from the names on the bulkhead -> names ? not seen names
+> Take the tea, and go -> done
+
+== carrying
+He listens the way other people breathe, without seeming to do it.
+
+@Father Bastian Roe: "Well. We're told that's what the chair's for, so that the rest of us don't have to." He tops up your tea, which doesn't need it. "I don't know that I believe that. I know it's what we're told. Drink that, it's doing you no harm."
+
+* stress -4: Weak tea, and someone who listens
+
+> Ask how the services are going -> services ? not seen services
+> Ask what he's heard from the names on the bulkhead -> names ? not seen names
+> Take the tea, and go -> done
+
+== services
+@Father Bastian Roe: "Every tenth day, for whoever comes. More come than you'd think. Fewer stay for the tea, which is the sensible half." The dry admission, at the end, as always. "I say the words very well now. I've had practice. Whether that's the same thing as meaning them, the Service doesn't say."
+
+> Tell him what you're carrying -> carrying ? not seen carrying
+> Ask what he's heard from the names on the bulkhead -> names ? not seen names
+> Take the tea, and go -> done
+
+== names
+@Father Bastian Roe: "That people stop at the ones they knew, and touch the chalk, and it comes off on their fingers, and they don't wipe it." He looks at his own hands. "Hask asks me to say a few words for the four hundred at Harlow, every tenth day, and never stays for them. We're told that's grief. It might be. Weak, or very weak?"
+
+> Tell him what you're carrying -> carrying ? not seen carrying
+> Ask how the services are going -> services ? not seen services
+> Take the tea, and go -> done
+
+== done
+@Father Bastian Roe: "Go on. Come back when it's worse. That's what the tea's for."

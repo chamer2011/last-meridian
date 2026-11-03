@@ -1,0 +1,34 @@
+# Haven Station
+// Plays when the fleet, or the player alone, arrives at Haven: the first time at length, and after that in a line.
+// A file called arrive_<place>.txt does this for any place whose id is in world/places.
+
+== start
+? flag arrived_haven -> again
+? not captain -> alone
+
+The jump ends the way jumps do, with the stars going still and forty-one ships counting themselves. Then Haven Station comes up on the viewport, lit by lights that were meant to be temporary forty years ago, with a fee schedule bolted to every wall of it, amended by hand.
+
+@Ensign Pell Asante: "Berth's assigned, Captain. Dockmaster says the hour's eighteen credits. Then he said it was twenty-two. Then he asked what we were carrying."
+
+@Commander Ilya Voss: "Three parties have been asking after the archivist since we were sighted. The Hegemony's legate. Someone of Mother Quill's. And a missionary of the Quiet, who asked for nothing." She hands you a slate. "The bar's called the Neutral Ground. The owner sells everything, including the way to the old man's door."
+
+The signal is on Haven's speakers too, under the noodle hatch's arguments. Six seconds, and then it starts again, and everyone on the station has an opinion about it.
+
+* flag arrived_haven
+* journal: The fleet reached Haven Station. Three parties want Archivist Tharel, who can read the Beacon: the Hegemony, the Syndicate, and the Quiet. The way to his door is sold at the Neutral Ground.
+
+NOTE: [STORY] Haven's stories are in the Leads menu. The Warm Room is the main one.
+END
+
+== alone
+Haven Station, on your own, with the noise of the Manifest Docks coming up through the shuttle's deck plates before the hatch is open. Forty berths, one fee schedule per wall, and the signal on the speakers under everything, six seconds at a time. Nobody meets you. Nobody was going to.
+
+* flag arrived_haven
+* journal: You reached Haven Station alone. Everyone here says only Archivist Tharel can read the Beacon, and three parties want him.
+
+NOTE: [STORY] Haven's stories are in the Leads menu.
+END
+
+== again
+Haven again. The lights are still temporary, the fee is still whatever the dockmaster says, and the signal is still on the speakers.
+END

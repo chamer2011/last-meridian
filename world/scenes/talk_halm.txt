@@ -1,0 +1,47 @@
+# Talking with Speaker Halm
+
+== start
+? flag downstairs_crew -> start_cadets
+
+@Speaker Teodor Halm: "Captain. We were just saying how glad we are you've found a moment." Nobody else is at the table. "We've all got so much to carry, haven't we. Sit, sit."
+
+> Ask what the council wants -> council ? not seen council
+> Ask what he thinks the signal is -> signal ? not seen signal
+> Ask him a straight question: does he trust you? -> trust ? not seen trust
+> Say you've got a fleet to run -> done
+
+== start_cadets
+@Speaker Teodor Halm: "Captain. We were just saying what a remarkable thing it is, thirty-one children in uniform. Remarkable." The word does a lot of work. "The Wintermere has teachers, of course. We only mention it. Sit, sit."
+
+> Ask what the council wants -> council ? not seen council
+> Ask what he thinks the signal is -> signal ? not seen signal
+> Ask him a straight question: does he trust you? -> trust ? not seen trust
+> Say you've got a fleet to run -> done
+
+== council
+@Speaker Teodor Halm: "What we all want, surely. To be consulted. To be told where we're going before we're taken there." He spreads his hands, which have never done a day's work and are very clean. "We're thirty thousand people, Captain, and forty-one votes on a good day. We only ask to be one of the votes."
+
+> Ask what he thinks the signal is -> signal ? not seen signal
+> Ask him a straight question: does he trust you? -> trust ? not seen trust
+> Say you've got a fleet to run -> done
+
+== signal
+@Speaker Teodor Halm: "We think it's hope, Captain, and we think hope is the most valuable cargo in the fleet, and we think it should be handled by people who understand what it weighs." Warm, patient. "Whether it's also a harbor, we'll know when we get there, won't we. We."
+
+> Ask what the council wants -> council ? not seen council
+> Ask him a straight question: does he trust you? -> trust ? not seen trust
+> Say you've got a fleet to run -> done
+
+== trust
+For one second the warmth is still there and he isn't behind it.
+
+@Speaker Teodor Halm: "We trust the chair, Captain. The chair has been very good to us, on the whole, as chairs go." He smiles. "You asked a straight question. I hope you'll notice that we've given you the straightest answer the chair is going to get."
+
+=> Halm trusts the chair. He didn't say he trusts you.
+
+> Ask what the council wants -> council ? not seen council
+> Ask what he thinks the signal is -> signal ? not seen signal
+> Say you've got a fleet to run -> done
+
+== done
+@Speaker Teodor Halm: "Of course, of course. We'll be here. We're always here." It's true, and it's the thing about him.

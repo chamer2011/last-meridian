@@ -1,7 +1,7 @@
 {
   "name": "last-meridian",
   "productName": "The Last Meridian",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A sci-fi text RPG with an AI game master",
   "author": "The Last Meridian",
   "license": "GPL-3.0-only",
@@ -11,6 +11,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "node --test test/",
+    "check-story": "node src/check-scenes.js",
     "app": "electron .",
     "build-app": "node app/build.js"
   },

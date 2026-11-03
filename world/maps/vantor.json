@@ -40,12 +40,19 @@
         "||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  || "
       ],
       "writing": [
-        [3, 2, "THANK YOU FOR KEEPING THE MILE SERENE. PLEASE RETAIN YOUR RECEIPT."]
+        [
+          3,
+          2,
+          "THANK YOU FOR KEEPING THE MILE SERENE. PLEASE RETAIN YOUR RECEIPT."
+        ]
       ],
       "labels": [
         {
           "text": "THE SERENE MILE",
-          "at": [30, 5]
+          "at": [
+            30,
+            5
+          ]
         }
       ],
       "exits": {
@@ -62,7 +69,12 @@
           "via": "1",
           "closed": {
             "look": "White gates at the end of the Mile, and two guards in white with very pleasant expressions. You'd have to be expected. They're terribly sorry. They're not going to ask you to step back, and you find that you already have.",
-            "use": "I give my name at the gates of the Regency Palace, and I ask for an audience with the Regent."
+            "use": "I give my name at the gates of the Regency Palace, and I ask for an audience with the Regent.",
+            "ask": {
+              "if": "flag regent_audience",
+              "opens": "The guards are expecting you, which is the only thing that opens these gates, and they open.",
+              "else": "They're terribly sorry. You'd have to be expected. You find that you've already stepped back."
+            }
           }
         }
       },
@@ -117,12 +129,19 @@
         "#########################################################################"
       ],
       "writing": [
-        [8, 0, "THE MINISTRY OF INQUIRY THANKS YOU FOR WAITING"]
+        [
+          8,
+          0,
+          "THE MINISTRY OF INQUIRY THANKS YOU FOR WAITING"
+        ]
       ],
       "labels": [
         {
           "text": "THE MINISTRY STEPS",
-          "at": [27, 8]
+          "at": [
+            27,
+            8
+          ]
         }
       ],
       "exits": {
@@ -192,12 +211,19 @@
         "####################################################################"
       ],
       "writing": [
-        [4, 11, "PROVISIONAL STATUS IS A PRIVILEGE. PLEASE RENEW BY THE 14TH."]
+        [
+          4,
+          11,
+          "PROVISIONAL STATUS IS A PRIVILEGE. PLEASE RENEW BY THE 14TH."
+        ]
       ],
       "labels": [
         {
           "text": "THE LOWER STACKS",
-          "at": [26, 7]
+          "at": [
+            26,
+            7
+          ]
         }
       ],
       "exits": {
@@ -262,12 +288,19 @@
         "#########################################################################"
       ],
       "writing": [
-        [54, 0, "LAST CHIME 2300"]
+        [
+          54,
+          0,
+          "LAST CHIME 2300"
+        ]
       ],
       "labels": [
         {
           "text": "THE EVENING LINE",
-          "at": [40, 8]
+          "at": [
+            40,
+            8
+          ]
         }
       ],
       "exits": {
@@ -339,7 +372,10 @@
       "labels": [
         {
           "text": "THE OUTER YARDS",
-          "at": [30, 5]
+          "at": [
+            30,
+            5
+          ]
         }
       ],
       "exits": {
@@ -411,7 +447,10 @@
       "labels": [
         {
           "text": "THE REGENCY PALACE",
-          "at": [24, 3]
+          "at": [
+            24,
+            3
+          ]
         }
       ],
       "exits": {
@@ -472,32 +511,50 @@
     "rooms": [
       {
         "level": "yards",
-        "at": [18, 1],
+        "at": [
+          18,
+          1
+        ],
         "text": "THE OUTER YARDS"
       },
       {
         "level": "palace",
-        "at": [2, 4],
+        "at": [
+          2,
+          4
+        ],
         "text": "PALACE"
       },
       {
         "level": "mile",
-        "at": [22, 4],
+        "at": [
+          22,
+          4
+        ],
         "text": "THE SERENE MILE"
       },
       {
         "level": "steps",
-        "at": [5, 8],
+        "at": [
+          5,
+          8
+        ],
         "text": "THE MINISTRY STEPS"
       },
       {
         "level": "line",
-        "at": [32, 8],
+        "at": [
+          32,
+          8
+        ],
         "text": "THE EVENING LINE"
       },
       {
         "level": "stacks",
-        "at": [20, 10],
+        "at": [
+          20,
+          10
+        ],
         "text": "THE LOWER STACKS"
       }
     ]

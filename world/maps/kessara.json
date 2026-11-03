@@ -35,13 +35,24 @@
         "#########################1#################################################"
       ],
       "writing": [
-        [3, 0, "NO QUESTIONS ON THE ROW"],
-        [46, 0, "SECOND OPINION"]
+        [
+          3,
+          0,
+          "NO QUESTIONS ON THE ROW"
+        ],
+        [
+          46,
+          0,
+          "SECOND OPINION"
+        ]
       ],
       "labels": [
         {
           "text": "RAIDERS' ROW",
-          "at": [3, 4]
+          "at": [
+            3,
+            4
+          ]
         }
       ],
       "exits": {
@@ -114,7 +125,10 @@
       "labels": [
         {
           "text": "THE WARRENS",
-          "at": [11, 6]
+          "at": [
+            11,
+            6
+          ]
         }
       ],
       "exits": {
@@ -127,7 +141,12 @@
           "via": "1",
           "closed": {
             "look": "A low doorway hung with an embroidered curtain, with a very quiet person sitting on either side of it. They've both noticed you. One of them's eating a bun. You don't go in unless she's asked for you, or someone's asked her.",
-            "use": "I tell the quiet people at the curtain that I'd like to pay my respects to Mother Quill."
+            "use": "I tell the quiet people at the curtain that I'd like to pay my respects to Mother Quill.",
+            "ask": {
+              "if": "flag quill_invited",
+              "opens": "One of the quiet people stands, and holds the curtain aside for you, and goes on eating the bun.",
+              "else": "They've both noticed you. Neither moves. One of them finishes the bun. Mother Quill sees who she's asked for, and she hasn't asked for you."
+            }
           }
         },
         "3": {
@@ -201,7 +220,10 @@
       "labels": [
         {
           "text": "QUILL'S PARLOR",
-          "at": [20, 1]
+          "at": [
+            20,
+            1
+          ]
         }
       ],
       "exits": {
@@ -269,16 +291,39 @@
         "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
       ],
       "writing": [
-        [2, 1, "T.OKAFOR 412  BLIND SAMIR 90  HALF OF THE VENUS 2,000  WHOEVER SOLD ME"],
-        [2, 2, "R.TANNIS OWES NOTHING  MOTHER Q. 1 BUN  KIT M-D 6,400  KIT M-D 200"],
-        [2, 3, "THE CAPTAIN OF THE HOLLOW JANE, SEE ME  PAID  PAID  NOT PAID"],
-        [2, 8, "THE BOSUN OF THE GREY LADY, ONE FAVOR, NO EXPIRY  J.ROSS 300"],
-        [2, 9, "YOU KNOW WHAT YOU DID  SOMEONE'S COUSIN 75  OLD PETE 9"]
+        [
+          2,
+          1,
+          "T.OKAFOR 412  BLIND SAMIR 90  HALF OF THE VENUS 2,000  WHOEVER SOLD ME"
+        ],
+        [
+          2,
+          2,
+          "R.TANNIS OWES NOTHING  MOTHER Q. 1 BUN  KIT M-D 6,400  KIT M-D 200"
+        ],
+        [
+          2,
+          3,
+          "THE CAPTAIN OF THE HOLLOW JANE, SEE ME  PAID  PAID  NOT PAID"
+        ],
+        [
+          2,
+          8,
+          "THE BOSUN OF THE GREY LADY, ONE FAVOR, NO EXPIRY  J.ROSS 300"
+        ],
+        [
+          2,
+          9,
+          "YOU KNOW WHAT YOU DID  SOMEONE'S COUSIN 75  OLD PETE 9"
+        ]
       ],
       "labels": [
         {
           "text": "THE TALLY WALL",
-          "at": [28, 4]
+          "at": [
+            28,
+            4
+          ]
         }
       ],
       "exits": {
@@ -337,7 +382,10 @@
       "labels": [
         {
           "text": "THE SUMP",
-          "at": [4, 7]
+          "at": [
+            4,
+            7
+          ]
         }
       ],
       "exits": {
@@ -391,27 +439,42 @@
     "rooms": [
       {
         "level": "row",
-        "at": [22, 1],
+        "at": [
+          22,
+          1
+        ],
         "text": "RAIDERS' ROW"
       },
       {
         "level": "parlor",
-        "at": [2, 4],
+        "at": [
+          2,
+          4
+        ],
         "text": "QUILL'S PARLOR"
       },
       {
         "level": "warrens",
-        "at": [24, 4],
+        "at": [
+          24,
+          4
+        ],
         "text": "THE WARRENS"
       },
       {
         "level": "tally",
-        "at": [46, 4],
+        "at": [
+          46,
+          4
+        ],
         "text": "THE TALLY WALL"
       },
       {
         "level": "sump",
-        "at": [26, 8],
+        "at": [
+          26,
+          8
+        ],
         "text": "THE SUMP"
       }
     ]

@@ -9,11 +9,12 @@
 // and a campaign can keep its own rooms in its folder, so they stay the same from then on.
 
 import { allCharacters, campaignRooms, findCampaignRoom, findCharacter, fullName, saveCampaignRoom } from "./campaign.js";
-import { startChoiceCheck } from "./checks.js";
-import { LOCATIONS } from "./data.js";
+import { startCheck, startChoiceCheck } from "./checks.js";
+import { ITEMS, LOCATIONS } from "./data.js";
 import { hasADay, livesHere, peopleAboard } from "./life.js";
 import { isCaptain, toOutsider } from "./role.js";
-import { audienceBonus, clockRuns } from "./rules.js";
+import { addItem, audienceBonus, clockRuns } from "./rules.js";
+import { conditionHolds } from "./scene-text.js";
 import { rumorsFrom } from "./story-library.js";
 import { colorForName, parseNarration } from "../public/story.js";
 import { COMBAT_ART, LOOKS, ROOM_KINDS, ROOM_TALK, WORLD_MAPS } from "./world.js";
@@ -157,6 +158,63 @@ function openDoorsTo(game, id) {
   game.opened ??= {};
   game.opened[game.location] ??= [];
   if (!game.opened[game.location].includes(id)) game.opened[game.location].push(id);
+}
+
+// Without an AI, asking at a closed door goes by the rule written in the map file, under closed.ask:
+// an answer that leaves it closed, a condition that opens it, or a check whose result decides.
+export function askAtDoor(game, key) {
+  const walk = walkOf(game);
+  const level = levelOf(game, walk, mapFor(game.location));
+  const exit = level.exits.find((one) => one.key === key);
+  if (!exit || !isClosed(game, exit)) throw new Error("That door isn't closed.");
+  const rule = exit.closed.ask ?? {};
+  const open = (said) => {
+    openDoorsTo(game, exit.to);
+    if (rule.flag) (game.flags ??= {})[rule.flag] = true;
+    return { said: said ?? "The way is open.", opened: true };
+  };
+  // In order: a condition that opens it, a check whose result decides, a door that simply opens when asked, or an answer that leaves it closed.
+  if (rule.if) {
+    if (conditionHolds(game, rule.if, { attr: () => 0, skillRank: () => 0, maxHp: () => 1 })) return open(rule.opens);
+    if (!rule.check) return { said: rule.else ?? "Not this way, not yet." };
+  }
+  if (rule.check) {
+    const [skill, difficulty, audience] = rule.check.split(":");
+    startCheck(game, { skill, difficulty, audience: audience ?? null, reason: rule.reason ?? `Get through: ${exit.label}`, scene: exit.closed.look, source: "door" });
+    game.doorAsked = { place: game.location, to: exit.to, pass: rule.pass ?? "The way is open.", fail: rule.fail ?? "The way stays closed.", flag: rule.flag ?? null };
+    return { check: true };
+  }
+  if (rule.opens) return open(rule.opens);
+  return { said: rule.answer ?? "Asking gets you nowhere, for now. The story will have to take you through." };
+}
+
+// A door's check is done, and this says how it went, opening the door if it passed.
+export function answerDoor(game, success) {
+  const asked = game.doorAsked;
+  game.doorAsked = null;
+  if (!asked) return "Nothing more is written here for now.";
+  if (success && game.location === asked.place) {
+    game.opened ??= {};
+    game.opened[asked.place] ??= [];
+    if (!game.opened[asked.place].includes(asked.to)) game.opened[asked.place].push(asked.to);
+    if (asked.flag) (game.flags ??= {})[asked.flag] = true;
+  }
+  return success ? asked.pass : asked.fail;
+}
+
+// Without an AI, using a thing is what its file says it is: something to pick up, a written result, or nothing much.
+export function useThing(game, key) {
+  const walk = walkOf(game);
+  const level = levelOf(game, walk, mapFor(game.location));
+  const thing = level.things.find((one) => one.id === key);
+  if (!thing) throw new Error("That isn't here.");
+  if (thing.item && !game.inventory?.[thing.item]) {
+    addItem(game, thing.item);
+    return { said: `[ITEM] Received: ${ITEMS[thing.item]?.name ?? thing.item}. ${thing.used ?? ""}`.trim() };
+  }
+  if (thing.item) return { said: "You've already got one." };
+  const written = (!isCaptain(game) && thing.usedOther) || thing.used;
+  return { said: written ?? "Nothing more comes of it, for now." };
 }
 
 // Where the captain can get to from here without the story's help.
@@ -488,6 +546,11 @@ export function walkCommand(game, body) {
       }
       return answer([]);
     }
+    // Using a thing or asking at a door, without the AI. The page shows what came of it.
+    case "use":
+      return useThing(game, String(body.key ?? ""));
+    case "ask":
+      return askAtDoor(game, String(body.key ?? ""));
     default:
       throw new Error("Unknown order.");
   }
@@ -734,12 +797,14 @@ const thingView = (game, thing) => ({
   x: thing.x,
   y: thing.y,
   have: Boolean(thing.item && game.inventory?.[thing.item]),
+  // Something to pick up or a written result answers from the file, even with an AI, so the page knows it's free.
+  written: Boolean(thing.item || thing.used || (!isCaptain(game) && thing.usedOther)),
 });
 
 function exitView(game, exit) {
   const { key, x, y, label, glyph, side } = exit;
   if (!isClosed(game, exit)) return { key, x, y, label, glyph, side };
-  return { key, x, y, label, glyph: "x", side, closed: true, look: exit.closed.look, use: exit.closed.use };
+  return { key, x, y, label, glyph: "x", side, closed: true, look: exit.closed.look, use: exit.closed.use, written: Boolean(exit.closed.ask) };
 }
 
 function overviewView(game, walk, map) {
@@ -948,14 +1013,17 @@ export function talkLineOver(game) {
   if (game.combat || game.check || game.fleet?.raid) closeTalk(game);
 }
 
-// What runTurn needs for one line of a talk.
-export function talkBrief(game) {
+// What runTurn needs for one line of a talk. In a written conversation, the AI fits the line to the written ones instead of answering freely.
+export function talkBrief(game, { written = false } = {}) {
   const talk = needTalk(game);
   const free = talk.unheard.splice(0);
   const told = free.length ? ` Since your last line, they also passed on what people are saying: ${free.map((rumor) => `"${rumor}"`).join(" ")}` : "";
   const soFar = talkRecord(talk).map((line) => (line.role === "player" ? `${isCaptain(game) ? "Captain" : game.name}: ${line.text}` : line.text)).join(" ");
   // The reminder is on every line, because a long story sets a habit of writing long scenes.
-  return { name: talk.name, lastReply: talk.lastReply, tag: `<talk with="${talk.name}" at="${talk.where}"${talk.doing ? ` doing="${talk.doing}"` : ""}>Answer only as them, in one to three sentences, then 2 or 3 short > choices.${told}</talk>`, soFar };
+  const asked = written
+    ? "This conversation is written in advance: fit what the player said to one of the numbered lines in the written_scene block with follow_scene, or answer only as them in one to three sentences with 0, and write no > choices."
+    : "Answer only as them, in one to three sentences, then 2 or 3 short > choices.";
+  return { name: talk.name, lastReply: talk.lastReply, tag: `<talk with="${talk.name}" at="${talk.where}"${talk.doing ? ` doing="${talk.doing}"` : ""}>${asked}${told}</talk>`, soFar };
 }
 
 export function talkView(game) {
@@ -967,7 +1035,12 @@ export function talkView(game) {
   const home = Object.values(map?.levels ?? {}).flatMap((level) => level.homes).find((one) => one.id === talk.personId);
   const own = (!isCaptain(game) && home?.asksOther) || home?.asks || [];
   const said = new Set(talk.log.filter((line) => line.role === "player").map((line) => line.text));
+  // In a written conversation, the things to say are its own, and the map's asks have nobody to answer them: without an AI that's
+  // every talk, and with one it's the people with a conversation of their own. typed says whether there's a line to type on.
+  const written = game.mode === "written" || Boolean(talk.written);
   return {
+    written,
+    typed: game.mode !== "written",
     id: talk.id,
     name: talk.name,
     short: talk.short,
@@ -981,7 +1054,7 @@ export function talkView(game) {
     relationship: person ? audienceBonus(game, person.id) : 0,
     log: talk.log,
     lastReply: talk.lastReply,
-    asks: [...own, ...(map?.talk?.asks ?? [])].filter((ask) => !said.has(ask)),
+    asks: written ? [] : [...own, ...(map?.talk?.asks ?? [])].filter((ask) => !said.has(ask)),
     rumors: rumorsLeft(game, talk).length,
     rumorLabel: map?.talk?.rumor ?? "Ask what they've heard",
     goodbyeLabel: map?.talk?.goodbye ?? "Say goodbye",

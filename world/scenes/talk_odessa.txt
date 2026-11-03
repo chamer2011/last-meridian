@@ -1,0 +1,49 @@
+# Talking with Quartermaster Brandt
+
+== start
+? flag brandt_knows -> start_crates
+
+@Quartermaster Odessa Brandt: "Eleven hundred filters." She doesn't look up. "On paper." Then she does. "Which count would you like, Captain?"
+
+> Ask how long the food really lasts -> food ? not seen food
+> Ask what "on paper" means -> paper ? not seen paper
+> Ask about Chief Hask -> hask ? not seen hask
+> Say you'll ask in writing -> done
+
+== start_crates
+@Quartermaster Odessa Brandt: "Thirty-one crates. Not drawn this week." She licks her pencil. "On paper, or otherwise. Which count would you like?"
+
+> Ask how long the food really lasts -> food ? not seen food
+> Ask what "on paper" means -> paper ? not seen paper
+> Ask about Chief Hask -> hask ? not seen hask
+> Say you'll ask in writing -> done
+
+== food
+@Quartermaster Odessa Brandt: "Twenty-four days. On paper." She watches to see if you caught it. "Twenty-one, with a variance for the Sundial's lamp, which isn't what it was. Eighteen if the Harriet keeps eating like a frigate." She writes your name in the margin. "Ask me again in a week, and I'll have a different number, and it'll be right too."
+
+* journal: Brandt says the food lasts twenty-four days on paper, twenty-one with the Sundial's lamp failing, eighteen if the Slow Harriet keeps eating like a frigate.
+
+> Ask what "on paper" means -> paper ? not seen paper
+> Ask about Chief Hask -> hask ? not seen hask
+> Say you'll ask in writing -> done
+
+== paper
+@Quartermaster Odessa Brandt: "It means a number that's true in the ledger." She closes it. "There are two kinds of true, Captain. I keep the kind that gets the fleet through the week, and I keep it very carefully. You'll want the other kind one day. Ask in writing, and I'll know you mean it."
+
+=> Brandt keeps a number that's true, and one that gets the fleet through the week.
+
+> Ask how long the food really lasts -> food ? not seen food
+> Ask about Chief Hask -> hask ? not seen hask
+> Say you'll ask in writing -> done
+
+== hask
+Something happens to her face that the ledger doesn't cover.
+
+@Quartermaster Odessa Brandt: "Chief Hask weighs things." A pause of exactly one line in the ledger. "He's an honest man with a scale, Captain. There aren't many left of either. If he ever asks you to look at it closely, do him the kindness of not."
+
+> Ask how long the food really lasts -> food ? not seen food
+> Ask what "on paper" means -> paper ? not seen paper
+> Say you'll ask in writing -> done
+
+== done
+@Quartermaster Odessa Brandt: "Do." She's already writing. "In duplicate."

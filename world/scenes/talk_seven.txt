@@ -1,0 +1,35 @@
+# Talking with Mercy Seven
+
+== start
+@Mercy Seven: "Captain. I estimate a seventy percent chance that this is about the council seat, and a thirty percent chance that it's about something worse." A small pause. "I'd prefer the seat."
+
+> Ask how the synthetics are being treated aboard -> treated ? not seen treated
+> Ask about the council seat -> seat ? not seen seat
+> Ask what they need from you -> need ? not seen need
+> Say it's neither, and go -> done
+
+== treated
+@Mercy Seven: "Politely, by most. Carefully, by Lieutenant Tarrow, who has a list, and who has never once been rude to me, which I find I'd prefer she were." The pause again. "Chief Marrow treats us as people. I estimate he's one of four. I sit with Dr. Aduro's night patients. Nobody asked me to. It's the only time nobody's afraid of me."
+
+> Ask about the council seat -> seat ? not seen seat
+> Ask what they need from you -> need ? not seen need
+> Say it's neither, and go -> done
+
+== seat
+@Mercy Seven: "Three hundred and twelve of us, in a fleet of thirty thousand. One percent. A seat is one percent of the council's attention, and at present we have none." Gently. "Speaker Halm says the time isn't right. The time is never right for one percent. I've stopped being surprised, Captain. I haven't stopped asking."
+
+=> Mercy Seven wants a council seat for the fleet's synthetics, and Halm keeps saying the time isn't right.
+
+> Ask how the synthetics are being treated aboard -> treated ? not seen treated
+> Ask what they need from you -> need ? not seen need
+> Say it's neither, and go -> done
+
+== need
+@Mercy Seven: "To be counted as people before something happens that makes it a question. Not after." They look at you directly, which they rarely do. "I've been afraid for six months, Captain. I'm tired of being reasonable about it. I'll go on being reasonable. I'd like it noticed that it costs something."
+
+> Ask how the synthetics are being treated aboard -> treated ? not seen treated
+> Ask about the council seat -> seat ? not seen seat
+> Say it's neither, and go -> done
+
+== done
+@Mercy Seven: "Then I revise to the seat. Good day, Captain." It's almost a joke. They'd deny it.

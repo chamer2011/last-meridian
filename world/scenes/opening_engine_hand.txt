@@ -1,0 +1,68 @@
+# An Ordinary Terrible Day
+// How the story opens for an engine-room hand on the Meridian.
+
+== shift
+AI: Marrow swears, answers questions about the work and nothing else, and won't be drawn on the signal: the bridge is the bridge's business. The line can't be fixed by talking about it.
+The coolant line went at the start of the watch, which is when they go, and Chief Marrow has been swearing at it for an hour in a way that's nearly a language. You're the one with your arms in it. That's the job.
+
+@Chief Engineer Dunn Marrow: "Hold that. No, hold it like you mean it, she can tell. Flaming thing's weeping like a widow." He wipes his face with the back of a hand that's missing two fingers. "Twenty years I've nursed worse than this, and this is the one that'll kill me. Mark it."
+
+Above you the deck plates carry the bridge the way they always do, in bursts. Somebody up there has said the word signal three times, and then somebody said it in Ensign Asante's voice, over the ship's speakers, too fast and then slow: every band, six seconds, nobody knows.
+
+> [engineering:moderate] Get the line sealed before the chief loses his voice -> sealed | scalded
+> Ask the chief what the bridge is on about -> asked_chief
+> Keep your head down, and listen to the gossip -> gossip
+
+== sealed
+You get it. It takes a borrowed wire and a trick with the clamp that nobody taught you, and when you take your arms out the line is dry and the chief is looking at you the way he looks at the reactor.
+
+@Chief Engineer Dunn Marrow: "Huh." It's the nearest thing to praise in Engineering. "Don't let it go to your head. She'll do it again tomorrow."
+
+* xp 10: The coolant line
+* flag sealed_the_line
+
+> Ask the chief what the bridge is on about -> asked_chief
+> Keep your head down, and listen to the gossip -> gossip
+
+== scalded
+You nearly get it, and then the clamp slips and the line says what it thinks of you across the back of your hand. The chief has it sealed in four seconds, swearing, and sends you to put the hand under the cold tap.
+
+@Chief Engineer Dunn Marrow: "That's a lesson, that is. The lesson's that she doesn't like you yet. Give her a month."
+
+* health -3: The coolant line
+
+> Ask the chief what the bridge is on about -> asked_chief
+> Keep your head down, and listen to the gossip -> gossip
+
+== asked_chief
+@Chief Engineer Dunn Marrow: "A signal." He says it the way he'd say a rat. "On every band, since the middle watch. The bridge thinks it's a harbor. The bridge thinks a lot of things. What I know is that every receiver on this ship is pulling power to listen to it, and I'm the one who finds the power." He goes back to the line. "If it's a harbor, it'll have a dock. If it's got a dock, it'll have parts. That's as far as my opinion goes."
+
+> Keep your head down, and listen to the gossip -> gossip ? not seen gossip
+> Ask what he needs, if the fleet goes somewhere with a dock -> errand
+
+== gossip
+The gossip comes down the ducts before it comes down the ladder. Chief Hask is in the hatchway with his pocket scale out, weighing nothing, listening. A girl of about twelve goes past overhead inside the trunking, which isn't possible, and says "technically it's a formal notice" to nobody. The mess hands say it's the Navy. The mess hands said that about the last three things.
+
+@Chief Tobin Hask: "They'll want to go and look at it." Slow, low. "The chair always does. I'll weigh the order when it comes. It'll come up light. They always do, the first week."
+
+* journal: The signal is on every band. The bridge calls it a harbor, Marrow calls it a drain on the power, and Hask says the order to go and look at it will come up light on his scale.
+
+> Ask the chief what the bridge is on about -> asked_chief ? not seen asked_chief
+> Ask the chief what he needs, if the fleet goes somewhere with a dock -> errand
+> Get back to work -> back_to_work
+
+== errand
+@Chief Engineer Dunn Marrow: "A capacitor. A real one, not a reconditioned lie with a new label. The Manifest Docks at Haven had three, last time anyone asked, and the dockmaster wanted a kidney for each." He looks at the line, and at you. "If this fleet goes anywhere near Haven, somebody from this room goes across and comes back with one. Somebody who isn't me, because I can't leave her. That's you, if you're asking."
+
+=> Marrow wants a capacitor from Haven, and he's asked you to get it.
+
+* quest keep_her_running: Get through the week, and find out what Chief Marrow isn't telling anyone. If the fleet reaches Haven Station, go across from the Star map and find him a real capacitor on the Manifest Docks.
+* flag marrow_wants_a_capacitor
+
+> Get back to work -> back_to_work
+
+== back_to_work
+The line holds, for now. The signal goes on under everything, six seconds at a time, and nobody in Engineering has time to listen to it except in the gaps.
+
+That's the end of the written opening. You can work a shift, talk to people about what they've heard, and watch the fleet decide where it's going. If it goes to Haven, the Star map will take you across.
+END

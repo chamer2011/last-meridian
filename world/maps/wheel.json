@@ -36,12 +36,19 @@
         "################################1##########################################"
       ],
       "writing": [
-        [4, 0, "NOTHING HERE WAS STOLEN. IT WAS ALL WAGERED."]
+        [
+          4,
+          0,
+          "NOTHING HERE WAS STOLEN. IT WAS ALL WAGERED."
+        ]
       ],
       "labels": [
         {
           "text": "THE TICKET DOCKS",
-          "at": [28, 4]
+          "at": [
+            28,
+            4
+          ]
         }
       ],
       "exits": {
@@ -103,12 +110,19 @@
         "     ##################################4###############################     "
       ],
       "writing": [
-        [45, 0, "ALL WAGERS WITNESSED"]
+        [
+          45,
+          0,
+          "ALL WAGERS WITNESSED"
+        ]
       ],
       "labels": [
         {
           "text": "THE GREAT WHEEL",
-          "at": [5, 3]
+          "at": [
+            5,
+            3
+          ]
         }
       ],
       "exits": {
@@ -129,7 +143,15 @@
           "via": "1",
           "closed": {
             "look": "A lift with a brass grille, and an attendant who's a head taller than you and very pleasant. Invitations to the Velvet Deck are made in person, and no one's ever worked out how to decline one. No one's ever got in without one, either.",
-            "use": "I tell the attendant at the brass lift that I'd like Madame Ao-Dess to know I'm here."
+            "use": "I tell the attendant at the brass lift that I'd like Madame Ao-Dess to know I'm here.",
+            "ask": {
+              "if": "flag velvet_invitation",
+              "opens": "The attendant has your invitation before you've shown it, and the brass grille slides aside.",
+              "check": "commerce:hard",
+              "reason": "Buy your way to the Velvet Deck",
+              "pass": "The attendant's expression doesn't change, but the grille does. Madame Ao-Dess will know you're coming, and she'll know what it cost you.",
+              "fail": "The attendant is very pleasant about it, and the grille stays where it is, and you don't go up."
+            }
           }
         }
       },
@@ -186,12 +208,19 @@
         "####################################################################"
       ],
       "writing": [
-        [8, 0, "PLEASE KEEP YOUR VOICE DOWN. SOMEONE HERE OWNS YOU."]
+        [
+          8,
+          0,
+          "PLEASE KEEP YOUR VOICE DOWN. SOMEONE HERE OWNS YOU."
+        ]
       ],
       "labels": [
         {
           "text": "THE MARKER EXCHANGE",
-          "at": [22, 3]
+          "at": [
+            22,
+            3
+          ]
         }
       ],
       "exits": {
@@ -252,12 +281,19 @@
         "########################################################"
       ],
       "writing": [
-        [4, 0, "A CLEAN DEBT IS A HAPPY DEBT"]
+        [
+          4,
+          0,
+          "A CLEAN DEBT IS A HAPPY DEBT"
+        ]
       ],
       "labels": [
         {
           "text": "THE CELLARS",
-          "at": [32, 1]
+          "at": [
+            32,
+            1
+          ]
         }
       ],
       "exits": {
@@ -320,7 +356,10 @@
       "labels": [
         {
           "text": "THE VELVET DECK",
-          "at": [20, 4]
+          "at": [
+            20,
+            4
+          ]
         }
       ],
       "exits": {
@@ -378,27 +417,42 @@
     "rooms": [
       {
         "level": "velvet",
-        "at": [16, 1],
+        "at": [
+          16,
+          1
+        ],
         "text": "THE VELVET DECK"
       },
       {
         "level": "great",
-        "at": [6, 4],
+        "at": [
+          6,
+          4
+        ],
         "text": "THE GREAT WHEEL"
       },
       {
         "level": "exchange",
-        "at": [26, 5],
+        "at": [
+          26,
+          5
+        ],
         "text": "THE MARKER EXCHANGE"
       },
       {
         "level": "cellars",
-        "at": [5, 7],
+        "at": [
+          5,
+          7
+        ],
         "text": "THE CELLARS"
       },
       {
         "level": "docks",
-        "at": [24, 8],
+        "at": [
+          24,
+          8
+        ],
         "text": "THE TICKET DOCKS"
       }
     ]

@@ -104,7 +104,10 @@ function notesNode() {
   }, storyEntryNode({ role: "notice", text: note.text }))));
 }
 
-const drawNotes = () => document.getElementById("pop-notes")?.replaceWith(notesNode());
+const drawNotes = () => {
+  document.getElementById("pop-notes")?.replaceWith(notesNode());
+  placeBalloon();
+};
 
 function dropNote(note) {
   clearTimeout(note.timer);
@@ -274,22 +277,37 @@ function commandWindow(composer) {
 function placeBalloon() {
   const balloon = document.getElementById("pop-balloon");
   const box = document.getElementById("pops");
-  if (!balloon || !box) return;
-  const person = speakerHere(current());
+  const notes = document.getElementById("pop-notes");
+  const person = balloon && box ? speakerHere(current()) : null;
   const spot = person && isoSpot(person.key);
-  if (!spot) return;
+  if (!spot) {
+    notes?.classList.remove("covered");
+    return;
+  }
   const row = document.getElementById("pop-row");
+  const inner = balloon.querySelector(".pop-speaker");
+  if (inner) inner.style.maxHeight = "";
   const width = box.clientWidth;
   const floor = box.clientHeight - (row?.offsetHeight ?? 0) - 12;
   const wide = balloon.offsetWidth;
-  const tall = balloon.offsetHeight;
+  const full = balloon.offsetHeight;
   const middle = spot.x + spot.w / 2;
   const left = Math.max(6, Math.min(width - wide - 6, middle - wide / 2));
   // It stays out from under the clock and the notes, which are at the top.
   const clock = document.getElementById("walk-clock");
-  const notes = document.getElementById("pop-notes");
   const under = (other) => (other && other.offsetHeight && left + wide > other.offsetLeft && left < other.offsetLeft + other.offsetWidth ? other.offsetTop + other.offsetHeight + 5 : 6);
-  const roof = Math.max(under(clock), under(notes));
+  let roof = Math.max(under(clock), under(notes));
+  // The words come first. When the room's too short for them under the notes, the notes step aside until the words
+  // have gone, and when it's too short even for that, the window shrinks and its words scroll, so it never runs
+  // into the story below.
+  const covering = floor - roof < full && under(notes) > under(clock);
+  if (covering) roof = under(clock);
+  notes?.classList.toggle("covered", covering);
+  let tall = full;
+  if (floor - roof < full && inner) {
+    inner.style.maxHeight = `${Math.max(60, floor - roof)}px`;
+    tall = balloon.offsetHeight;
+  }
   const above = spot.y - tall - 12;
   const below = spot.y + spot.h + 12;
   const up = above >= roof || below + tall > floor;

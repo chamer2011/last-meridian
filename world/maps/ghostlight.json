@@ -39,12 +39,19 @@
         "~  .   ~    .    ~  .   ~   .    ~   .   ~   .  ~   .    ~   .    ~   .   "
       ],
       "writing": [
-        [20, 0, "ENGINES COLD. NO LAMP WITHOUT LEAVE."]
+        [
+          20,
+          0,
+          "ENGINES COLD. NO LAMP WITHOUT LEAVE."
+        ]
       ],
       "labels": [
         {
           "text": "THE COLD MARKET",
-          "at": [49, 5]
+          "at": [
+            49,
+            5
+          ]
         }
       ],
       "exits": {
@@ -57,7 +64,13 @@
           "via": "1",
           "closed": {
             "look": "A signal lamp on a rope walk, and past it, six warships at anchor in perfect formation with their hulls painted out. You don't go aboard without being asked. Somebody's already watching you through a very good lens.",
-            "use": "I signal the Remnant's picket by lamp-code, and I ask for leave to come aboard."
+            "use": "I signal the Remnant's picket by lamp-code, and I ask for leave to come aboard.",
+            "ask": {
+              "check": "leadership:moderate",
+              "reason": "Ask leave to come aboard, by lamp",
+              "pass": "A lamp answers from the flagship: slow, formal, correct. You have leave to come aboard.",
+              "fail": "The lamp answers with one word, twice. It isn't yes."
+            }
           }
         }
       },
@@ -125,12 +138,19 @@
         "#########################################################################"
       ],
       "writing": [
-        [3, 13, "ANTHEM AT 0600. DRESS FOR IT."]
+        [
+          3,
+          13,
+          "ANTHEM AT 0600. DRESS FOR IT."
+        ]
       ],
       "labels": [
         {
           "text": "THE LINE OF BATTLE",
-          "at": [27, 7]
+          "at": [
+            27,
+            7
+          ]
         }
       ],
       "exits": {
@@ -205,7 +225,10 @@
       "labels": [
         {
           "text": "THE LAMP LANES",
-          "at": [41, 2]
+          "at": [
+            41,
+            2
+          ]
         }
       ],
       "exits": {
@@ -271,7 +294,10 @@
       "labels": [
         {
           "text": "THE DRIFT OF LOST SHIPS",
-          "at": [40, 5]
+          "at": [
+            40,
+            5
+          ]
         }
       ],
       "exits": {
@@ -284,7 +310,10 @@
           "via": "1",
           "closed": {
             "look": "The last lamp-buoy, and past it the glow gets stronger, and your sensors go white. Nobody's mapped what's in there, and it's getting bigger. You'd want a good reason, and a small ship, and someone to tell.",
-            "use": "I take a skiff past the last buoy, toward the Burn."
+            "use": "I take a skiff past the last buoy, toward the Burn.",
+            "ask": {
+              "answer": "You take the skiff as far as the last buoy, and no further. Nobody goes into the Burn on a whim, and whatever reason you'd need, you haven't got it yet."
+            }
           }
         }
       },
@@ -342,7 +371,10 @@
       "labels": [
         {
           "text": "THE BURN",
-          "at": [22, 2]
+          "at": [
+            22,
+            2
+          ]
         }
       ],
       "exits": {
@@ -389,27 +421,42 @@
     "rooms": [
       {
         "level": "market",
-        "at": [4, 3],
+        "at": [
+          4,
+          3
+        ],
         "text": "COLD MARKET"
       },
       {
         "level": "battle",
-        "at": [42, 3],
+        "at": [
+          42,
+          3
+        ],
         "text": "LINE OF BATTLE"
       },
       {
         "level": "lanes",
-        "at": [22, 5],
+        "at": [
+          22,
+          5
+        ],
         "text": "THE LAMP LANES"
       },
       {
         "level": "drift",
-        "at": [8, 7],
+        "at": [
+          8,
+          7
+        ],
         "text": "LOST SHIPS"
       },
       {
         "level": "burn",
-        "at": [42, 7],
+        "at": [
+          42,
+          7
+        ],
         "text": "THE BURN"
       }
     ]

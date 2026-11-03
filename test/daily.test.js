@@ -105,13 +105,13 @@ test("on day one, every price and every chart entry is exactly what it always wa
 });
 
 test("a new game has a world, and an older save gets one that starts from now", () => {
-  assert.equal(newGame().version, 14);
+  assert.equal(newGame().version, 15);
   assert.ok(newGame().world.places.haven);
   const old = { ...newGame(), version: 11, clock: { hours: 24 * 40 + 8 } };
   old.fleet.day = 40;
   delete old.world;
   const game = migrateGame(JSON.parse(JSON.stringify(old)));
-  assert.equal(game.version, 14);
+  assert.equal(game.version, 15);
   assert.equal(game.world.day, 40, "nobody pays for the days that went by before");
   assert.deepEqual(passTime(game, 1), [], "and nothing happens all at once");
   assert.doesNotThrow(() => publicState(game));

@@ -200,6 +200,11 @@ function fromVersion11(save) {
   return { ...save, version: 12, world: newWorld(save) };
 }
 
+// A game from before there was a written story has an AI game master, and keeps it.
+function fromVersion14(save) {
+  return { ...save, version: 15, mode: "ai", scene: null, flags: {}, lastCheck: null, lastFight: null };
+}
+
 export function migrateGame(save) {
   if (!save) return save;
   let game = save;
@@ -216,6 +221,7 @@ export function migrateGame(save) {
   if (game.version < 12) game = fromVersion11(game);
   if (game.version < 13) game = fromVersion12(game);
   if (game.version < 14) game = fromVersion13(game);
+  if (game.version < 15) game = fromVersion14(game);
   // A place that's gone from the world's files can't hold anyone, and factions added since this save was made need a standing.
   if (!LOCATIONS[game.location]) game.location = "meridian";
   game.factions ??= {};

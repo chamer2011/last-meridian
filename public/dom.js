@@ -58,6 +58,39 @@ export function meter(label, value, max) {
     `${label} [${"#".repeat(filled)}${"-".repeat(10 - filled)}] ${value}/${max}`);
 }
 
+// A part of a menu that folds away. Its heading is a line like [ + Orders ], or [ - Orders ] while it's open, and
+// what's inside slides open or shut in place, without the menu redrawing. fold starts open and folded starts
+// closed, and which ones are open is remembered while the game's open.
+const folds = new Map();
+function foldable(open, key, title, children) {
+  const isOpen = folds.has(key) ? folds.get(key) : open;
+  const body = el("div", { class: "fold-body" }, el("div", { class: "fold-inner" }, children));
+  const toggle = el("button", { class: "fold-toggle", "aria-expanded": String(isOpen) }, `${isOpen ? "-" : "+"} ${title}`);
+  const node = el("section", { class: `menu-section fold${isOpen ? " open" : ""}` }, toggle, body);
+  body.inert = !isOpen;
+  toggle.addEventListener("click", () => {
+    const now = !node.classList.contains("open");
+    folds.set(key, now);
+    node.classList.toggle("open", now);
+    toggle.setAttribute("aria-expanded", String(now));
+    toggle.textContent = `${now ? "-" : "+"} ${title}`;
+    body.inert = !now;
+  });
+  return node;
+}
+export const fold = (key, title, ...children) => foldable(true, key, title, children);
+export const folded = (key, title, ...children) => foldable(false, key, title, children);
+
+// Two columns of a menu's parts, the first half on the left and the rest on the right, which stack on a narrow
+// page. Each column keeps to itself, so a part that opens or closes moves only what's under it.
+export function columns(...children) {
+  const items = children.flat(Infinity).filter((one) => one !== null && one !== undefined && one !== false);
+  const half = Math.ceil(items.length / 2);
+  return twoColumns(items.slice(0, half), items.slice(half));
+}
+// The same, with the page saying what goes left and what goes right.
+export const twoColumns = (left, right) => el("div", { class: "menu-columns" }, el("div", { class: "menu-col" }, left), el("div", { class: "menu-col" }, right));
+
 // For stress and fatigue, where high numbers are the bad ones.
 export function strainMeter(label, value) {
   const filled = Math.round(Math.min(100, value) / 10);

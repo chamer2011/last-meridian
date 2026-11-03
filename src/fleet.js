@@ -972,6 +972,8 @@ function setCourse(game, id) {
   }
   const { message, notes } = travel(game, id);
   if (from !== game.location) {
+    // The written story can have an arrival for this place, played when the player continues.
+    game.arrived = game.location;
     if (isCaptain(game)) game.pendingEvents.push(jumped ? `On the captain's order, the fleet jumped to ${place.name}.` : `The captain crossed over to ${place.name}.`);
     else game.pendingEvents.push(jumped ? `The player paid ${cost.fare} credits for passage to ${place.name}, on someone else's ship. They've just arrived, alone.` : `The player crossed over to ${place.name}.`);
   }

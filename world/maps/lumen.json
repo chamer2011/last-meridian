@@ -40,7 +40,10 @@
       "labels": [
         {
           "text": "THE STRANGER'S TERRACE",
-          "at": [22, 3]
+          "at": [
+            22,
+            3
+          ]
         }
       ],
       "exits": {
@@ -109,7 +112,10 @@
       "labels": [
         {
           "text": "THE OPEN STEPS",
-          "at": [21, 5]
+          "at": [
+            21,
+            5
+          ]
         }
       ],
       "exits": {
@@ -178,7 +184,10 @@
       "labels": [
         {
           "text": "THE WATER COURTS",
-          "at": [28, 8]
+          "at": [
+            28,
+            8
+          ]
         }
       ],
       "exits": {
@@ -244,7 +253,10 @@
       "labels": [
         {
           "text": "THE SHADE HOUSES",
-          "at": [22, 1]
+          "at": [
+            22,
+            1
+          ]
         }
       ],
       "exits": {
@@ -257,7 +269,13 @@
           "via": "1",
           "closed": {
             "look": "A windowless house behind the Circle's archive, with a plain door and an old woman on a stool beside it. Children sometimes go in. The Circle doesn't discuss it. The old woman's face has no expression on it at all, and on Lumen, that isn't a small thing.",
-            "use": "I ask the old woman at the door of the Still Rooms what happens in there, and whether I can see."
+            "use": "I ask the old woman at the door of the Still Rooms what happens in there, and whether I can see.",
+            "ask": {
+              "check": "persuasion:hard",
+              "reason": "Persuade the old woman to let you see",
+              "pass": "She looks at you for a long time, with nothing at all on her face, and then she stands up off the stool. \"Quietly, then.\"",
+              "fail": "Her face doesn't change. On Lumen, that's an answer."
+            }
           }
         }
       },
@@ -319,7 +337,10 @@
       "labels": [
         {
           "text": "THE STILL ROOMS",
-          "at": [10, 3]
+          "at": [
+            10,
+            3
+          ]
         }
       ],
       "exits": {
@@ -372,27 +393,42 @@
     "rooms": [
       {
         "level": "steps",
-        "at": [10, 2],
+        "at": [
+          10,
+          2
+        ],
         "text": "THE OPEN STEPS"
       },
       {
         "level": "terrace",
-        "at": [37, 2],
+        "at": [
+          37,
+          2
+        ],
         "text": "THE STRANGER'S TERRACE"
       },
       {
         "level": "courts",
-        "at": [8, 6],
+        "at": [
+          8,
+          6
+        ],
         "text": "THE WATER COURTS"
       },
       {
         "level": "shade",
-        "at": [36, 6],
+        "at": [
+          36,
+          6
+        ],
         "text": "SHADE HOUSES"
       },
       {
         "level": "still",
-        "at": [51, 6],
+        "at": [
+          51,
+          6
+        ],
         "text": "STILL ROOMS"
       }
     ]

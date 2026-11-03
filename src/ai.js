@@ -117,6 +117,14 @@ The world is bigger than these lists, and the rest is kept in files. You're give
 - Stories don't wait. If nobody steps in, a story moves on by itself: a <world_report> says what's happened, and its lead and notes say how it stands. The main story's pressure builds the same way, and an act can move on without the player. Start from how things stand now.
 - Everyone, every enemy and every item named in these notes is real and can be used, whether or not it's on the lists below.
 
+THE WRITTEN STORY
+Some of this story is written out in advance, in the game's own files, and the game plays those parts itself, for free: the openings of some lives, arriving at some places, some whole stories from the Leads menu, and some people's conversations. You aren't called for them. Two blocks tell you about them:
+- A <written_story> block is what was played since your last reply, as the player read it. Take it as what happened, keep its voices and facts, and don't retell it: go on from the end of it.
+- A <written_scene> block means the player is in a written part right now and has typed something that isn't one of its choices. Your whole reply fits what they did to the written story, and nothing else can change: every tool but follow_scene is refused, and the written part decides what happens next.
+  - If their words mean one of the numbered choices, or clearly lead to it, call follow_scene with that number. Before the call you may write one or two sentences in the voices of the people there, bridging their words to that choice, and not a word that resolves anything, because the written part that follows does that. Don't repeat the choice's own words.
+  - If their words fit none of the choices, call follow_scene with 0 and write one to three sentences that answer what they did without moving anything on: someone replies, something is noticed, a door stays shut. The same choices are then on offer again. Don't invent a fourth way through, and don't write > choices or => consequences of your own.
+  - A written conversation in a <talk> works the same way: fit what the player said to one of the numbered lines, or answer as the person in one to three sentences and leave the lines as they are.
+
 THE FLEET
 The game runs the fleet by itself, without you: 41 named ships, food, fuel, medicine, parts, morale, health and how close the Choir is. Supplies drain every day. The captain sets rations and work orders, jumps, and answers raids, in their own windows if that's the player, and by themselves if it isn't. The Fleet line in the state is the truth. If the player isn't in command, they don't give the fleet orders and they aren't told its numbers unless someone tells them: they travel by paying for passage on someone else's ship, and they live on what they earn. If the story really does put them in the chair, or take them out of it, call change_command. A <fleet_report> or a game event tells you about shortages, losses and raids. Bring those into the story as the serious setbacks they are, with names and faces, and never as the end of the game. Don't invent losses or new supplies without change_fleet or change_fleet_ship. Call read_fleet for a ship's captain or role. A ship not in the roster isn't one of the 41. If something's gone wrong and the captain hasn't dealt with it, the officers and the council act by themselves, and a <fleet_report> says what they did. That's what happened, and the captain can overrule it.
 
@@ -396,17 +404,39 @@ function playerMessage(playerText, lastNarration) {
   return offered ? `The player takes this choice from your last message: ${offered}` : `The player writes: ${playerText}`;
 }
 
+// The part of the written story the player is in, when they've typed their own words there.
+function writtenSceneBlock(scene) {
+  const numbered = scene.choices.map((choice, i) => `${i + 1}. ${[choice.check ? `[${choice.check}] ` : "", ...(choice.tags ?? []).map((tag) => `[${tag}] `), choice.say].join("")}`);
+  return [
+    `<written_scene title="${scene.title}">`,
+    scene.talk ? "This conversation is written in advance. The person has just said:" : "This part of the story is written in advance, and the player has just read it:",
+    scene.text,
+    scene.notes && `Notes for you from the writer: ${scene.notes}`,
+    scene.talk ? "The written lines the player can say, by number:" : "The written choices here, by number:",
+    ...numbered,
+    "Call follow_scene with the number the player's words come to, or with 0 and answer them in a few words.",
+    "</written_scene>",
+  ].filter(Boolean).join("\n");
+}
+
+// What the written story played, free, since the AI last wrote.
+function writtenStoryBlock(entries) {
+  return `<written_story>\nThese parts of the story are written in advance, and the game played them itself since your last reply. The player has read them: take them as what happened, keep their voices and facts, and go on from the end of them without retelling them.\n\n${entries.join("\n\n")}\n</written_story>`;
+}
+
 // ---- One full AI turn ---------------------------------------------------
 
 // Sends the player's message (or a game event) to the AI, applies any actions
 // it requests, and streams the result out through emit(). If anything goes
 // wrong the caller restores the saved game, so a failed turn changes nothing. A line said in a talk
 // window comes with talk, from talkBrief in src/walk.js: it's the same turn, with the clock kept still.
-export async function runTurn({ game, settings, playerText, gameEvent, threadId, talk = null, emit }) {
+export async function runTurn({ game, settings, playerText, gameEvent, threadId, talk = null, scene = null, emit }) {
   const provider = settings.provider;
   const preface = prepareHistory(game, provider);
   const turnLimits = newTurnLimits();
   turnLimits.talking = Boolean(talk);
+  // In a written part, the only tool that works is follow_scene, which fills in scene.followed.
+  turnLimits.scene = scene;
   // The full character background only needs sending when a conversation begins.
   const dossier = game.ai.messages.length === 0 ? aiDossier(game) : null;
   // Fights and other things that happened since the AI last wrote. They're cleared here,
@@ -414,17 +444,21 @@ export async function runTurn({ game, settings, playerText, gameEvent, threadId,
   const events = [...game.pendingEvents.splice(0), gameEvent].filter(Boolean).join(" ");
   const lastNarration = talk ? talk.lastReply : [...game.transcript].reverse().find((entry) => entry.role === "narrator")?.text;
   // In a talk, the files that go out are the person's own, and those of anyone the player brings up.
-  const files = characterFilesFor(game, talk ? [playerText, events, talk.name] : [playerText, events, lastNarration, ...(threadId ? threadPeople(threadId) : [])]);
+  const files = characterFilesFor(game, talk ? [playerText, events, talk.name, scene?.text] : [playerText, events, scene?.text ?? lastNarration, ...(threadId ? threadPeople(threadId) : [])]);
   const reminder = lastNarration && driftedFromFormat(lastNarration) ? FORMAT_REMINDER : null;
   // The rest of the story library goes out only as it becomes relevant. News about the fleet waits until the talk's over.
   const library = [arcBriefIfNew(game), placeFileIfNew(game), threadId ? beginThread(game, threadId) : null, talk ? null : fleetReport(game), talk ? null : worldReport(game), talk ? null : fleetNews(game)];
-  const header = [dossier, preface, files, ...library, stateBlock(game, provider, Boolean(talk)), reminder].filter(Boolean).join("\n\n");
+  // What the written story played since the AI last wrote, so that it goes on from there.
+  const played = game.ai.written?.length ? writtenStoryBlock(game.ai.written) : null;
+  game.ai.written = [];
+  const header = [dossier, preface, files, ...library, played, stateBlock(game, provider, Boolean(talk)), reminder].filter(Boolean).join("\n\n");
   const body = [
     events && `[Game event, not written by the player] ${events}`,
     // If the AI's memory has just restarted, the record so far doesn't have this talk in it yet.
     talk && preface && talk.soFar && `Said in this talk so far: ${talk.soFar}`,
     talk?.tag,
-    playerText && playerMessage(playerText, lastNarration),
+    scene && writtenSceneBlock(scene),
+    playerText && (scene ? `The player writes: ${playerText}` : playerMessage(playerText, lastNarration)),
   ].filter(Boolean).join("\n\n");
   const message = `${header}\n\n${body}`;
   // Starting a fight ends the AI's turn, so the result of that tool goes out with this message.
@@ -482,6 +516,8 @@ export async function runTurn({ game, settings, playerText, gameEvent, threadId,
       emit({ type: "state" });
       // The game runs the fight, the check or the raid from here, so the AI isn't called again until the player continues.
       if (game.combat || game.check || game.fleet?.raid) return narration;
+      // In a written part, the reply is over once the player's words are fitted, unless the AI still owes them its answer.
+      if (scene && scene.followed !== undefined && (scene.followed > 0 || narration.trim())) return narration;
     }
   } catch (err) {
     if (err instanceof AiError) throw err;

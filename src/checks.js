@@ -177,6 +177,8 @@ function finishCheck(game) {
   };
   game.check = null;
   if (practiceOnly) return { over: true, outcome };
+  // The written story reads this to decide where it goes next. The AI reads the event below instead.
+  game.lastCheck = { id: check.id, skill: check.skill, difficulty: check.difficulty, success: r.success, reason: check.reason, source: check.source, used: false };
   game.transcript.push({ role: "notice", text: [`[ROLL] ${check.reason}: ${math}: ${label}`, ...r.notes].join("\n") });
   const margin = `by ${Math.abs(r.margin)}`;
   const taken = check.choice ? `The player took this choice from your last message: ${check.choice}\nThe game ran the check in its own window, so don't call roll_check for it.` : `The check you asked for is done: ${check.reason}.`;

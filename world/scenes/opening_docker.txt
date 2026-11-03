@@ -1,0 +1,63 @@
+# Eleven Crates
+// How the story opens for a dock hand at Haven Station.
+
+== shift
+AI: Mott won't say what's in the crate, and he gets short with anyone who keeps asking. The crate doesn't open: it's sealed, cold and heavy, and leaving it alone is a choice the story already has.
+The Manifest Docks at the start of a shift: forty berths under lights that were meant to be temporary, a queue of people who are already angry, and every speaker on the station arguing about a signal. Six seconds, then it starts again, under the noodle hatch and the fee schedules and Dockmaster Jessup's voice from the glass box over the dock.
+
+@Dockmaster Mott Jessup: "The office says berth nineteen's closed till the fee's paid. Mott says, what've you brought him?" He's eating something somebody gave him. "Clipboard. You. Berth eleven. Count what's in it and sign for it."
+
+Berth eleven has a crate in it that isn't on the manifest. It's heavy, and it's cold, and somebody has scraped the markings off it and done a bad job.
+
+> Count the crates as told, and sign -> signed
+> [awareness:easy] Look the crate over before you sign anything -> looked | missed
+> Take the clipboard back up to the box, and ask what the crate is -> asked
+
+== signed
+You count eleven crates, and there are eleven crates, and you sign for them. Above you in the glass box, Mott Jessup nods without looking, which is how he looks.
+
+Half an hour later the crate is gone, and so is the manifest page you signed. Somebody has decided you're the sort who signs.
+
+=> Mott Jessup has your signature on a crate that isn't on any manifest.
+
+* contact Mott Jessup friendly: You signed for the crate without asking.
+* flag signed_for_the_crate
+* credits 10: A bonus from the office, which the office denies
+
+> Get on with the shift -> speakers
+
+== looked
+The scraped markings were Hegemony, the cold is a medical chiller, and the serial under the scrape is a Concord Navy one, three years out of date. You know enough not to know that out loud. You count eleven crates and you sign for eleven, and you keep the number in your head.
+
+* journal: A crate on berth eleven that isn't on any manifest: a Hegemony medical chiller with a Concord Navy serial under the scrape. You signed for it anyway, and remembered.
+* flag knows_the_crate
+* xp 10: Eyes open
+
+> Get on with the shift -> speakers
+
+== missed
+You give it a look, and it's a crate. Heavy, cold, scraped. You sign for eleven. Later you'll wish you'd looked harder, and later still you'll be glad you didn't.
+
+> Get on with the shift -> speakers
+
+== asked
+@Dockmaster Mott Jessup: "The office couldn't possibly tell you what's in a crate the office doesn't know about." He takes the clipboard, signs it himself, hands it back. "Mott says you've got good instincts and a bad sense of timing, and he says that as a friend. Berth four. Go on."
+
+=> You asked Mott what was in the crate, and he signed for it himself.
+
+* contact Mott Jessup neutral: You asked what was in the crate, and he noticed.
+* flag asked_about_the_crate
+
+> Get on with the shift -> speakers
+
+== speakers
+The shift goes the way shifts go, eight hours of other people's cargo, and the signal under all of it. By the fourth hour the queue has stopped being angry about the fees and started being angry about the signal instead. A Hegemony clerk says it's a Navy recall. A Syndicate runner says it's Quill's business, dear. A woman from the Hook says it's all right, in a voice that makes the queue go quiet.
+
+And everyone, all day, says the same name: Tharel. The old lizard in the Warm Room. The only one who could read it, if he'd come out, and he won't, and three different people have been up to the Neutral Ground to ask Sable what it would cost to change that.
+
+@Dockmaster Mott Jessup: "Refugee fleet's coming." Mott, not the office. "Forty-one ships and a captain who's never paid a docking fee in their life. The office says that's a problem. Mott says it's a market."
+
+* journal: Everyone on the docks says only old Tharel in the Warm Room can read the signal, and three parties have asked Sable the price of getting him out. The refugee fleet is coming to Haven.
+
+That's the end of the written opening. You can work a shift, drink at the Neutral Ground when you can afford it, and look into what people are saying from the Leads menu.
+END

@@ -703,6 +703,8 @@ function endCombat(game, ended, log) {
       gaveUp: (record.gaveUp ?? 0) + (result === "surrendered" ? 1 : 0),
     };
   }
+  // The written story reads this to decide where it goes next.
+  game.lastFight = { result, enemies: [...new Set(c.enemies.map((enemy) => enemy.id))], summary, used: false };
   // The AI hears about the fight with the player's next message. Nothing is sent to it now.
   const wounds = game.conditions.map((condition) => CONDITIONS[condition.id].name);
   const beside = followers.length

@@ -1,0 +1,659 @@
+# Two Weeks of Fuel
+// The second story of the main plot, from world/threads/main_two_weeks_of_fuel.json. The captain gets the whole
+// of it: Mother Quill's page at Kessara, Rook Tannis's quiet night, the Hegemony's free fuel, and the strike at
+// Cinder Reach. An engine hand works the sums with Marrow, a dock hand at Haven carries the baskets, and anyone
+// else hears about it in a bar. Draft by the AI (Claude), 2026-11-02, not yet edited by the owner.
+start: start
+
+== start
+? life engine_hand -> hand_start
+? life docker -> dock_start
+? not captain -> other_start
+AI: Marrow answers in engineering and swearing, and the real answer is the captain's to give. Odessa gives numbers and says "on paper" when one isn't true. Nobody on the bridge will read Quill's page aloud, and everyone has read it.
+
+Two weeks. Chief Marrow has done the sums three times, on the plot table, on the back of a maintenance order and on the bulkhead of Engineering in grease pencil, and the answer gets ruder every time. Forty-one ships, one tank between them that every jump drinks from, and fourteen days of ordinary burning before the Meridian's own reactor starts eating the margin.
+
+@Chief Engineer Dunn Marrow: "Fourteen days if nobody jumps, Captain, and everybody's going to want to jump. She's a kettle with a hole in it, and we're standing here arguing about the tea." He wipes his face with the hand that's missing two fingers. "I'd like a real answer by tomorrow. I'd like it in words I can swear at."
+
+@Quartermaster Odessa Brandt: "One basket. Dumplings. On the plot table since the morning shuttle." She doesn't look at it. "One card. On paper, it's an invitation."
+
+The card is lavender, and the handwriting is a grandmother's. *Come and talk it over with me, dear. Kessara. Bring an appetite. Q.* Under the dumplings, which are still warm, somebody has tucked a contract one page long, folded twice.
+
+* new quest main_two_weeks_of_fuel: Two Weeks of Fuel | The fleet has fourteen days of fuel, and Mother Quill has sent dumplings and a one-page contract. Other fuel exists, and all of it costs something. | Find the fleet its fuel: Quill's page at Kessara, the Hegemony's offer, the strike at Cinder Reach, or days Marrow can find.
+
+> [engineering:moderate] Sit down with Marrow and look for days the fleet hasn't got -> cold_pass | cold_fail
+> Accept the invitation: take the fleet to Kessara Drift -> to_kessara
+> Ask Legate Corvane what the Hegemony would want for fuel -> corvane
+> Take the fleet to Cinder Reach, where the fuel is honest and on strike -> to_cinder
+
+== cold_pass
+Six hours in Engineering with the heat off, because Marrow wants you to feel the schedule before you sign it. Heat down across the fleet to what the old and the sick can stand and not a degree more. The three slowest ships towed in pairs behind the haulers. Every reactor trimmed to the line where it coughs.
+
+@Chief Engineer Dunn Marrow: "Four days." He says it to the bulkhead first, then to you. "Four days of everybody being cold and nobody being dead. That's the whole trick, Captain, and it's the only one I've got."
+
+=> The fleet has four more days than it had this morning.
+
+* fuel 2: A cold-burn schedule, worked out with Marrow: four more days
+* xp 10: Days the fleet didn't have
+* flag cold_burn
+* contact Dunn Marrow friendly: You did the sums with him, and they came out
+
+> Go on -> hub
+
+== cold_fail
+Six hours in Engineering with the heat off, and the numbers won't move. Marrow tries them your way twice, to be polite, and then he tries them his way again, which is the same as the first time.
+
+@Chief Engineer Dunn Marrow: "Fourteen days. Mark it." He puts the grease pencil down very gently, the way he puts down anything that's annoyed him. "Somebody's going to have to sign something, Captain, and I'd rather it was you than the council."
+
+> Go on -> hub
+
+== hub
+Marrow's count is on the bulkhead where everyone can see it, and he rubs out a day every morning. The dumplings are gone. The page is still on the plot table.
+
+> Accept Mother Quill's invitation: take the fleet to Kessara Drift -> to_kessara ? not at kessara and not seen parlor
+> Go up to Mother Quill's parlor -> parlor ? at kessara and not seen parlor
+> Go back to the parlor, and sign her page -> signed ? at kessara and seen parlor
+> Let Rook Tannis buy you that drink on Raiders' Row -> tannis ? at kessara and not seen tannis
+> Eat at Talia Sen's stall in the Warrens, and listen -> talia ? at kessara and not seen talia
+> Ask Legate Corvane what the Hegemony would want for fuel -> corvane ? not seen corvane
+> Take the Hegemony's fuel, after all -> took_corvane ? seen corvane
+> Take the fleet to Cinder Reach, where the fuel is honest and on strike -> to_cinder ? not seen shift_row
+> [engineering:moderate] Sit down with Marrow and look for days the fleet hasn't got -> cold_pass | cold_fail ? not seen cold_pass and not seen cold_fail
+> Walk away from all of it, and let Marrow keep counting -> leave_it
+
+== to_kessara
+? at kessara -> parlor
+
+@Ensign Pell Asante: "Kessara Drift. One jump, and a day with the slow ones in tow, Captain." The Captain comes a beat late, the way it always does. "I can have it plotted before you've finished the dumplings."
+
+Set course for Kessara Drift from the Star map when you're ready, and press Continue the story when the fleet arrives. Mother Quill's page will keep. She wrote it so it would.
+
+> Ask Legate Corvane what the Hegemony would want, first -> corvane ? not seen corvane
+> Go to Cinder Reach instead -> to_cinder ? not seen shift_row
+> Leave it for now -> hub
+
+== parlor
+AI: Quill never threatens, she worries. She won't go below the page's terms, and she won't discuss the pin beyond calling it a gift from a customer, dear. The quiet woman in the corner holds the rifle and says nothing, whatever's said to her. Tannis isn't here, and Quill doesn't mention her.
+* raw set_scene {"area": "Quill's Parlor", "people": ["quill"]}
+
+Quill's Parlor is a low warm room cut out of the rock and lined with cushions that somebody embroidered by hand, a great many years ago, in a great many colors. There's tea. There's a plate of something that's still steaming. In the corner, on a plain stool, a very quiet woman sits holding a long rifle across her knees the way other people hold a coat for a friend.
+
+Mother Quill is small, and grey, and wrapped in a shawl held closed at the throat by a chip of pale carved stone, and she takes both your hands in both of hers before you've said a word. She asks after your mother, by name. You didn't tell her your mother's name.
+
+@Mother Quill: "Eat something first, dear. Nobody signs anything in my parlor hungry. It's bad for the digestion and worse for the terms." She pours. "Fuel for all forty-one, tonight. One marker from the master of each ship, good for a favor to be named later, and I don't name them often. And if your scholar ever finds anything the First Builders left lying about, I'd like to see it before anybody else does. That's the whole page. I worry about people who need more pages than that."
+
+The page is on the low table between the teacups, one sheet, and her name is already on it.
+
+> Sign her page -> signed
+> [commerce:hard:quill] Put a limit on the markers, in writing -> limited | laughed
+> [awareness:hard] Look closer at the pin on her shawl -> pin_seen | pin_missed
+> [attunement:easy] The pin on her shawl: listen to it -> pin_felt | pin_missed ? skill attunement >= 1
+> Thank her for the tea, and go and think about it -> hub
+
+== limited
+One favor a marker. Nothing that costs a ship. Nothing asked for in the middle of a fight. You write it on the back of her page in your own hand and turn it round, and she reads it twice, moving her lips, the way she must have read ledgers in a cheaper parlor than this one.
+
+@Mother Quill: "You've done this before, dear." It isn't a question. She initials every line. "Fine. Fine. I like a captain who reads. The last one didn't."
+
+=> Quill's markers are limited, in writing, in her own initials.
+
+* flag markers_limited
+* xp 10: A limit in writing
+* contact Mother Quill friendly: You put a limit on her markers, and she liked you for it
+
+> Go on -> parlor_again
+
+== laughed
+She laughs. It's a real one, and it goes on a while, and the quiet woman in the corner doesn't join in.
+
+@Mother Quill: "The markers are the page, dear." She pats your hand. "Eat something."
+
+> Go on -> parlor_again
+
+== pin_seen
+It's a chip of pale stone, no bigger than a thumbnail, carved all over in lines too fine to follow. When she leans in to pat your hand it catches the light, the way a brooch does, and it's humming. Very faintly. The note a glass makes when somebody runs a wet finger round the rim.
+
+@Mother Quill: "A gift from a customer, dear. A long time ago." Her hand goes to it, and comes away. "Eat something."
+
+=> Mother Quill's pin is humming, and she doesn't say who gave it to her.
+
+* raw update_story {"clue": "quill_pin"}
+* flag saw_quill_pin
+* xp 10: The pin
+* journal: Mother Quill wears a chip of pale carved stone on her shawl, and it hums, very faintly. She says it was a gift from a customer, a long time ago, and she doesn't say which.
+
+> Go on -> parlor_again
+
+== pin_felt
+You feel it before you see it. A note, held, in a key you've heard somewhere you can't place, coming from the chip of pale carved stone at her throat. It isn't loud. It's patient.
+
+@Mother Quill: "A gift from a customer, dear. A long time ago." She watches you not quite manage to stop listening to it. "You've got an ear. Eat something."
+
+=> Mother Quill's pin sings, in a key you half know, and she saw you hear it.
+
+* raw update_story {"clue": "quill_pin"}
+* flag felt_quill_pin
+* xp 10: The pin
+* journal: Mother Quill wears a chip of pale carved stone on her shawl, and it sings a held note in a key I've heard somewhere I can't place. She says it was a gift from a customer, a long time ago, and she saw me hear it.
+
+> Go on -> parlor_again
+
+== pin_missed
+It's a brooch. She leans in, and it catches the light, the way brooches do.
+
+> Go on -> parlor_again
+
+== parlor_again
+The tea's gone cold, so she has it taken away and brought back hot, which is her way of saying the page is still on the table.
+
+> Sign her page -> signed
+> [commerce:hard:quill] Put a limit on the markers, in writing -> limited | laughed ? not seen limited and not seen laughed
+> [awareness:hard] Look closer at the pin on her shawl -> pin_seen | pin_missed ? not seen pin_seen and not seen pin_felt and not seen pin_missed
+> Thank her for the tea, and go and think about it -> hub
+
+== tannis
+AI: Tannis never says the word raid. She says "a quiet night" and "who she'd hate to see blamed". She laughs at her own jokes and hits people right after them, and a captain who laughs along is safe for the evening.
+* raw set_scene {"area": "Raiders' Row", "people": ["tannis"]}
+
+Raiders' Row is a docking gallery as long as the Meridian, where the raiders repaint their ships between jobs and nobody asks what the old name was. The Second Opinion has the best berth, and Rook Tannis is sitting on a drum in front of it with two cups, one of which is for you.
+
+@Rook Tannis: "What's the difference between a Syndicate contract and a hull breach?" She hands you the cup. "You can patch a hull breach." She laughs until she has to wipe her eyes, and the two raiders behind her laugh a beat later, because they've learned to.
+
+Then, to the ceiling, as if it were weather: the depot guards change at the fourth hour. The night shift's two old men and a dog she's fond of. And she'd hate, she'd really hate, to see a certain grandmother blamed for whatever a desperate fleet got up to on a quiet night.
+
+@Rook Tannis: "I'd hate to see you blamed either, Captain. I'd write to your mother." She finishes her cup. "Drink up. It's paid for."
+
+> [tactics:hard] Take the depot on the fourth hour, with her help and her blame -> raid_clean | raid_messy
+> Laugh, finish the drink, and keep your fuel to yourself -> hub
+
+== raid_clean
+The fourth hour. Tannis's people hold the Row and look at nothing. The two old men and the dog go into the tally office with a bottle and the door shut, and the dog gets the sandwiches. Tarrow's teams take the fuel gantry in eleven minutes without a shot, and by the time Kessara's lights come up, forty-one ships are full and the Second Opinion has gone somewhere else.
+
+Nobody's dead. Everybody knows.
+
+> Go on -> raided_clean
+
+== raid_messy
+FIGHT drift_raider
+  lead_in: The fourth hour, and the depot's night shift isn't two old men and a dog. Tannis's people are nowhere. The Syndicate's collectors come up the fuel gantry with lamps, and they already know your name.
+  enemy_followers: syndicate_collector, drift_raider
+  allies: tarrow
+  why: guarding
+  reason: It's Mother Quill's depot, and they're paid to keep it hers.
+  faction: drift
+  won -> raided_messy
+  lost -> raid_lost
+  fled -> raid_lost
+  talked -> raided_messy
+
+== raid_lost
+They throw you off the gantry, and the Syndicate throws the fleet off Kessara by morning. Nobody got any fuel. Rook Tannis sends a note, in a beautiful hand, saying how sorry she is about all of it, and by noon everyone in the warrens knows whose idea it was.
+
+* health -6: The fuel gantry
+* faction drift -15: A raid on Mother Quill's depot, and a failed one
+* flag framed_by_tannis
+* flag kessara_closed
+* contact Rook Tannis wary: She set you up for a raid that failed, and you both know it
+* contact Mother Quill hostile: You went for her depot
+* journal: The raid on Quill's depot failed, and Rook Tannis made sure the Syndicate knew whose idea it was. Kessara Drift is closed to the fleet.
+* quest main_two_weeks_of_fuel: The raid failed, and Kessara's closed. The Hegemony's fuel is still free, and Cinder Reach is still on strike.
+
+> Take the Hegemony's fuel, after all -> took_corvane
+> Limp to Cinder Reach -> to_cinder ? not seen shift_row
+> Leave it, and let Marrow keep counting -> leave_it
+
+== talia
+* raw set_scene {"area": "The Warrens", "people": ["talia"]}
+
+Talia Sen's stall sits at the busiest junction in the Warrens, under a string of lamps and a string of washing, and the queue goes round the corner for reasons that have nothing to do with noodles.
+
+@Talia Sen: "Eat." She puts a bowl in front of you before you've asked. "Two more, the big bowls, no egg! So. You're the fleet. Eat."
+
+The broth is the best thing you've tasted in six months, and three different people in the queue are watching what garnish went on your bowl.
+
+> [streetwise:moderate] Ask, between mouthfuls, what Quill's fences are buying these days -> fences | talia_nothing
+> Eat, pay, and go -> hub
+
+== fences
+@Talia Sen: "Pale stone." She doesn't lower her voice, because nobody at her stall would dare listen. "Carved. Little bits, the size of your thumb. Her people pay three times what it's worth, and they don't haggle, and she doesn't pay three times for anything. Four bowls, one egg! So. Eat."
+
+=> Mother Quill's fences are buying any little piece of carved pale stone they can find, at any price.
+
+* raw update_story {"clue": "quill_pin"}
+* flag knows_quill_fences
+* xp 10: What the fences are buying
+* journal: Talia Sen says Mother Quill's fences are buying any little carved piece of pale stone they can find, at three times what it's worth, and Quill doesn't overpay for anything.
+
+> Go on -> hub
+
+== talia_nothing
+@Talia Sen: "Eat." That's all you get, and a second bowl you didn't ask for.
+
+> Go on -> hub
+
+== corvane
+AI: Corvane never says transponder first. It's "fleet safety equipment". He's warm, he's frightened under it, and he never lies outright: pressed, he calls the fleet being found by the Hegemony "an unfortunate possibility".
+
+Legate Corvane answers within the hour, which tells you he was waiting for the call.
+
+@Legate Marius Corvane [comm]: "Captain. I'd hoped you'd ask." You can hear him smiling. "An opportunity, for everyone. Hegemony tankers, free of charge, enough for all forty-one. We'd fit each tank with fleet safety equipment, standard on our own ships, and ask nothing else. Page one asks for almost nothing, Captain. It's a very short page one."
+
+Somewhere behind him, somebody is already filing the forms.
+
+> Take the Hegemony's fuel -> took_corvane
+> [persuasion:moderate:corvane] Ask him what's in the tanks besides fuel -> corvane_pressed | corvane_smooth
+> Thank him, and decline for now -> hub
+
+== corvane_pressed
+A pause, the exact length of a man deciding not to lie to you.
+
+@Legate Marius Corvane [comm]: "Transponders, Captain. If the fleet were ever lost, we'd know where to find it." Another pause. "That anyone else might find it too is an unfortunate possibility. I've never pretended otherwise. I've only never said it first."
+
+=> Corvane's free fuel comes with a Hegemony transponder in every tank, and he's told you so.
+
+* flag knows_transponders
+* xp 10: What's in the tanks
+
+> Take it anyway -> took_corvane
+> Decline -> hub
+
+== corvane_smooth
+He talks for four minutes about opportunity, and you come away knowing nothing you didn't know, and liking him slightly more than you meant to.
+
+> Take the Hegemony's fuel -> took_corvane
+> Decline -> hub
+
+== to_cinder
+? at cinder -> shift_row
+
+@Ensign Pell Asante: "Cinder Reach. One jump, Captain, and it's a volcano, and it's on strike." She catches up with herself. "Sir."
+
+Set course for Cinder Reach from the Star map when you're ready, and press Continue the story when the fleet arrives. The strike will still be there. It's been there nineteen days.
+
+> Ask Legate Corvane what the Hegemony would want, first -> corvane ? not seen corvane
+> Go to Kessara Drift instead -> to_kessara ? not seen parlor
+> Leave it for now -> hub
+
+== shift_row
+AI: Ulla counts on her fingers and says things once. She won't scab, she won't take fleet charity, and she doesn't know who pays for her kitchen. Vale is up Company Hill and won't come down to the Line for anyone.
+* raw set_scene {"area": "Shift Row", "people": ["ulla"]}
+
+Ash falls on Shift Row like grey snow, on the barracks and the strike kitchen and the Gate, where the picket line has stood for nineteen days in shifts, and nobody has crossed it. The shift whistles have been silent the whole time. Behind the fence, the Stack burns orange, full of fuel, running on managers.
+
+Ulla Greaves comes out of the kitchen wiping her hands, and looks at the fleet's shuttle, and then at you.
+
+@Ulla Greaves: "Right. One: the Stack's behind that fence, and it's full. Two: nobody's crossed this line in nineteen days, and nobody's going to. Three: you." She holds up the three fingers and looks at them. "I'll say this once. The fleet can have fuel the day the strike's won, and not an hour before. And if your crews run the Stack for Vale, I'll remember every face. We're good at remembering here. It's all we've got."
+
+> [leadership:hard] Get Greaves and Vale to the same table -> table_pass | table_fail
+> Side with the strikers: the fleet backs Ulla against the company -> with_ulla
+> Go up Company Hill, and deal with Director Vale -> vale
+> Leave Cinder Reach to its strike -> hub
+
+== table_pass
+Two days of it. The strike kitchen, where Ulla counts her points on her fingers in order, every time, so that nobody can say she changed them. Company Hill's clean little dome, where Director Vale explains the Tap's pressure to you from first principles, twice, as if you'd come up to be taught. Then the same table, in the kitchen, because he came down and she didn't go up, and you don't tell either of them which of those was the concession.
+
+@Director Rennick Vale: "Let's start with what a reactor is." He stops. "No. Let's start with the vents. Miss Greaves, the vents."
+
+@Ulla Greaves: "Right. One: the vents."
+
+Back pay. The vents. The Tap kept running by her own engineers under his own numbers, which turn out to be true. And the fleet's crews work the Stack for a week under Ulla's foremen, at Ulla's rate, with the fuel to follow.
+
+> Go on -> settled_table
+
+== table_fail
+Vale won't come down the hill and Ulla won't go up it, and you spend a day carrying words between them that neither will say to the other's face. By evening they've both decided you're the other one's.
+
+> Side with the strikers: the fleet backs Ulla against the company -> with_ulla
+> Go up Company Hill, and deal with Director Vale -> vale
+> Leave Cinder Reach to its strike -> hub
+
+== with_ulla
+FIGHT strikebreaker
+  lead_in: Vale's boat landed an hour ago. The strikebreakers come up Shift Row in company coats, and one of them is wearing a Refugee Fleet coat with the patches torn off, which is the thing nobody on the Line forgives.
+  enemy_followers: strikebreaker, strikebreaker
+  allies: tarrow
+  why: paid
+  reason: The company's paying them by the hour to open the Gate.
+  won -> settled_ulla
+  lost -> cinder_lost
+  talked -> settled_ulla
+
+== cinder_lost
+They put you through the Gate backwards, and the Line closes behind you with Ulla's people carrying you, which is the only way anyone's crossed it in nineteen days. The strike holds. The Stack keeps burning behind its fence, full.
+
+@Ulla Greaves: "Right. One: you tried." She gives you water. "I'll remember that too."
+
+* health -6: Shift Row
+
+> Go up Company Hill, and deal with Director Vale after all -> vale
+> Leave Cinder Reach to its strike -> hub
+
+== vale
+* raw set_scene {"area": "Company Hill", "people": ["rennick"]}
+* flag crossed_the_picket
+
+You cross the Line. Nobody says a hard word. They stand back exactly far enough for you to pass, and they look at your face, and then they look at the faces of the people with you, and they don't say anything at all.
+
+Company Hill is a clean little dome above the ash, with gardens, and Director Vale's office looks down on Shift Row through a window that's been broken and repaired eleven times.
+
+@Director Rennick Vale: "Let's start with what a reactor is." He doesn't raise his voice, because he never does. "A reactor is a thing that can't stop. Miss Greaves believes it can. That's the whole strike." He slides a sheet across. "Your crews run the Stack for three days, in company scrip. The fuel is the fleet's. And Miss Greaves will remember every one of them, which I'd ask you to think about, because I have."
+
+> Take Vale's terms -> settled_vale
+> Walk back down the hill, and leave it -> hub
+
+== signed
+? flag markers_limited -> signed_limited
+
+You sign. Her hand comes down on yours while the ink's still wet, small and dry and warm.
+
+@Mother Quill: "There." She folds the page once and puts it inside her shawl, next to the pin. "Now nobody has to worry, dear."
+
+The tankers come across from the depot that night, and the next morning there are parcels of food on every ship in the fleet, tied with string, with a card. By the end of the week people who've never met her are calling her Grandmother.
+
+=> The fleet owes Mother Quill forty-one favors, and she'll name them at the worst possible moments.
+
+* fuel 6: Mother Quill's depot, on credit
+* raw change_fleet {"food": 40, "reason": "Parcels of food from Kessara, with a card"}
+* faction drift 8: The fleet signed with Mother Quill
+* flag signed_with_quill
+* flag fuel_sorted
+* contact Mother Quill friendly: You signed her page, and you ate something
+* journal: The fleet signed Mother Quill's one-page contract: fuel for forty-one ships on credit, a marker from every ship's master good for a favor to be named later, and first look at anything First Builder we ever find. Food parcels have started arriving. People are calling her Grandmother.
+* quest main_two_weeks_of_fuel done: Signed with Mother Quill. Forty-one markers, to be called in later.
+* xp 25: Two weeks of fuel
+
+> Go on -> after
+
+== signed_limited
+You sign. Her hand comes down on yours while the ink's still wet, small and dry and warm, and her initials are on the back of the page where you wrote your limit.
+
+@Mother Quill: "There." She folds the page once and puts it inside her shawl, next to the pin. "A captain who reads. I'll be careful what I ask you, dear. I'll still ask."
+
+The tankers come across from the depot that night, and the next morning there are parcels of food on every ship in the fleet, tied with string, with a card.
+
+=> The fleet owes Mother Quill forty-one favors, one each, with a limit on them in her own initials.
+
+* fuel 6: Mother Quill's depot, on credit
+* raw change_fleet {"food": 40, "reason": "Parcels of food from Kessara, with a card"}
+* faction drift 8: The fleet signed with Mother Quill
+* flag signed_with_quill
+* flag fuel_sorted
+* journal: The fleet signed Mother Quill's one-page contract: fuel for forty-one ships on credit, a marker from every ship's master good for one favor each, limited in writing, and first look at anything First Builder we ever find. Food parcels have started arriving.
+* quest main_two_weeks_of_fuel done: Signed with Mother Quill, with a limit on her markers in writing.
+* xp 30: Two weeks of fuel, on your terms
+
+> Go on -> after
+
+== raided_clean
+Marrow swears at the full tanks for an hour, happily. Mother Quill's lights stay dark for two days, and when they come up, Kessara's closed to the fleet, politely, the way a door closes on a guest who took the silver.
+
+Rook Tannis sends a bottle, and no note. She doesn't need one. She has a captain who owes her, and a grandmother who's just learned she can be robbed.
+
+=> Kessara Drift is closed to the fleet, Mother Quill knows who did it, and Rook Tannis is owed.
+
+* fuel 6: Mother Quill's depot, taken on a quiet night
+* faction drift -10: The fleet took Mother Quill's depot
+* flag raided_the_depot
+* flag tannis_owes
+* flag kessara_closed
+* flag fuel_sorted
+* contact Rook Tannis friendly: She held the Row while you took the depot, and nobody died
+* contact Mother Quill hostile: You took her depot, and she knows it
+* journal: We took Mother Quill's depot on the fourth hour with Rook Tannis's help, without a shot. The fleet's full, Kessara's closed to us, and Tannis is owed something she hasn't named.
+* quest main_two_weeks_of_fuel done: The depot, taken clean. Kessara's closed, and Tannis is owed.
+* xp 25: Two weeks of fuel
+
+> Go on -> after
+
+== raided_messy
+The gantry's yours by the fifth hour, and two of Quill's collectors are dead on it, and the tankers come across under Tarrow's guns while Kessara wakes up and works out what's happened. Rook Tannis turns up when it's over, delighted, with a bottle, and very loudly surprised.
+
+By morning everyone in the warrens knows whose idea the raid was, and it isn't hers.
+
+=> The Syndicate's at war with the fleet, two of Quill's people are dead, and Tannis has a captain to blame.
+
+* fuel 6: Mother Quill's depot, taken by force
+* faction drift -15: The fleet took Mother Quill's depot, and killed her people doing it
+* flag raided_the_depot
+* flag framed_by_tannis
+* flag kessara_closed
+* flag fuel_sorted
+* contact Rook Tannis wary: She was nowhere when it went wrong, and she's told everyone whose idea it was
+* contact Mother Quill hostile: You took her depot, and two of her people are dead
+* journal: We took Mother Quill's depot by force. Two of her collectors died on the gantry, Tannis's people were nowhere, and by morning the whole warren knew it was the fleet's doing. The fleet's full, and Kessara Drift is closed to us.
+* quest main_two_weeks_of_fuel done: The depot, taken by force. The Syndicate's at war with the fleet.
+* xp 20: Two weeks of fuel, paid for
+
+> Go on -> after
+
+== took_corvane
+The Hegemony's tankers arrive within the day, spotless, crewed by polite people in beautiful coats, and by evening every ship in the fleet is full. Each tank has a small grey box bolted to it that wasn't there before. Fleet safety equipment. Marrow looks at one for a long time and doesn't swear, which is worse.
+
+Speaker Halm says, on the open channel, that the council welcomes this spirit of cooperation. Legate Corvane sends his regards, and lunch.
+
+=> Every ship in the fleet carries a Hegemony transponder now, until somebody finds it.
+
+* fuel 6: Hegemony tankers, free of charge
+* faction hegemony 10: The fleet took the Hegemony's fuel
+* flag hegemony_transponders
+* flag halm_stronger
+* flag fuel_sorted
+* contact Marius Corvane friendly: You took his fuel, and he was gracious about it
+* journal: The fleet took Legate Corvane's free fuel. Every tank came with a small grey box bolted to it: Hegemony "fleet safety equipment", which Marrow won't call by any name. Speaker Halm is pleased.
+* quest main_two_weeks_of_fuel done: The Hegemony's fuel, free, with a transponder on every tank.
+* xp 20: Two weeks of fuel
+
+> Go on -> after
+
+== settled_table
+It takes three days, and the fuel comes late, and it comes honest. The fleet's crews work the Stack under Ulla's foremen and come back black to the eyes and quiet about it, and when the first tanker crosses, the shift whistle goes for the first time in three weeks, and the whole of Shift Row stops to listen to it.
+
+=> Cinder Reach is working again, and the fleet's fuel is the cleanest there is.
+
+* time 72 hours active: Three days at Cinder Reach, waiting for honest fuel
+* fuel 6: Refined fuel from the Stack, honestly bought
+* flag cinder_settled
+* flag fuel_sorted
+* contact Ulla Greaves friendly: You got Vale to her table, and the strike ended on her terms
+* contact Rennick Vale neutral: You made him come down the hill, and his numbers turned out true
+* journal: We settled the strike at Cinder Reach: Vale came down to Ulla's kitchen, the vents and the back pay were agreed, and the fleet's crews worked the Stack for a week. The fuel came late, and it came honest.
+* quest main_two_weeks_of_fuel done: The strike at Cinder Reach settled, and honest fuel in the tanks.
+* xp 30: The cleanest fuel there is
+
+> Go on -> after
+
+== settled_ulla
+The strike's won in three days, because the fleet's on the Line now and the company's boats stop coming. Vale signs from his window, which he doesn't repair this time. The fuel comes late, because the Stack has to be started by people who've been on strike for a month, and it comes with the shift whistle, which the whole of Shift Row stops to hear.
+
+=> Cinder Reach is Ulla Greaves's now, and Rennick Vale won't forgive the fleet for it.
+
+* time 72 hours active: Three days at Cinder Reach, while the strike's won
+* fuel 6: Refined fuel from the Stack, on the strikers' terms
+* flag sided_with_ulla
+* flag fuel_sorted
+* contact Ulla Greaves ally: The fleet stood on her Line, and the strike was won
+* contact Rennick Vale hostile: You put the fleet between him and his refinery
+* journal: The fleet took the strikers' side at Cinder Reach. The company's boats stopped coming, Vale signed from his window, and the fuel came a week late, with the shift whistle. Ulla Greaves won't forget it, and neither will Vale.
+* quest main_two_weeks_of_fuel done: The strike at Cinder Reach won, with the fleet on the Line.
+* xp 25: Two weeks of fuel
+
+> Go on -> after
+
+== settled_vale
+The fleet's crews run the Stack for three days in company scrip, and the fuel's the fleet's by the fourth. The picket stands back for them every shift, exactly far enough, and looks at every face, and says nothing. On the third night somebody paints the fleet's name on the Gate, carefully, in the strike kitchen's grey.
+
+=> The fleet crossed the Line at Cinder Reach, and Shift Row will remember every face.
+
+* time 72 hours work: Three days of the fleet's crews running the Stack
+* fuel 6: Refined fuel from the Stack, on the company's terms
+* flag fuel_sorted
+* contact Rennick Vale friendly: The fleet ran his Stack when nobody else would
+* contact Ulla Greaves hostile: You crossed her Line, and she remembers every face
+* journal: The fleet crossed the picket at Cinder Reach and ran the Stack for Director Vale for three days, in company scrip. The fuel's ours. Ulla Greaves's people painted the fleet's name on the Gate.
+* quest main_two_weeks_of_fuel done: Fuel from the Stack, on the company's terms, across the Line.
+* xp 15: Two weeks of fuel
+
+> Go on -> after
+
+== leave_it
+The page stays folded on the plot table. Marrow rubs out another day. The dumplings were very good, and nobody says so.
+
+* quest main_two_weeks_of_fuel: You walked away from every offer, and Marrow is still counting.
+
+END
+
+== after
+? quest main_the_council done and act < 2 -> act_two
+-> done
+
+== act_two
+With fuel in the tanks and the council's vote behind you, there's nothing left to wait for. Pell plots the Beacon's bearing without being asked, and leaves it on the plot table where everyone can see it, and nobody rubs it out.
+
+=> The fleet is following the Beacon now, and it's your doing.
+
+* act 2
+* journal: With fuel in the tanks and the council's vote behind us, the fleet is following the Beacon.
+
+END
+
+== done
+Marrow swears at the full tanks for an hour, happily, and then goes and sleeps for the first time in a week.
+
+END
+
+== hand_start
+Engineering, at the start of the watch, with the heat already off because the chief wanted to feel the problem. Three sums on the bulkhead in grease pencil, each ruder than the last, and you holding the lamp.
+
+@Chief Engineer Dunn Marrow: "Fourteen days. Mark it." A basket came down from the bridge an hour ago with dumplings in it and a card nobody read out, and he's put the basket on the reactor housing where it'll stay warm. "Upstairs has got its dumplings. We've got a kettle with a hole in it and we're going to find her four days she hasn't got. Get the slate. Heat down fleet-wide, slow ones in tow, every reactor trimmed to where she coughs. Go."
+
+* new quest main_two_weeks_of_fuel: Two Weeks of Fuel | The fleet has fourteen days of fuel, and Chief Marrow wants days that aren't there. What the captain does about the rest is upstairs business. | Help Marrow find the fleet some days.
+
+CHECK engineering:moderate
+  reason: The cold-burn schedule
+  pass -> hand_pass
+  fail -> hand_fail
+
+== hand_pass
+Six hours. Four days. Marrow reads your slate twice, and then he reads it to the reactor, gently, the way he reads things to her.
+
+@Chief Engineer Dunn Marrow: "You did that." He wipes his face. "Don't tell anybody. They'll only want you to do it again." Brandt's runner takes the schedule upstairs, and an hour later the heat goes down across the whole fleet, and nobody up there asks whose numbers they are.
+
+=> You found the fleet four days, and Marrow knows your name now.
+
+* fuel 2: A cold-burn schedule, worked out in Engineering: four more days
+* xp 15: Four days
+* flag cold_burn
+* contact Dunn Marrow friendly: You found him four days
+* quest main_two_weeks_of_fuel: You found the fleet four days. What the captain does about the rest is upstairs business.
+
+> Go on -> hand_end
+
+== hand_fail
+Six hours, and the numbers won't move. Marrow tries them your way twice, to be polite, and then his, which comes out the same.
+
+@Chief Engineer Dunn Marrow: "Fourteen days. Mark it." He takes the slate back without looking at you, which is kinder than looking. "Somebody upstairs is going to have to sign something. Pray it's the captain and not the council."
+
+* quest main_two_weeks_of_fuel: The numbers wouldn't move. What the captain does about the fuel is upstairs business.
+
+> Go on -> hand_end
+
+== hand_end
+The dumplings come down to Engineering in the end, cold, which is the only way anything reaches Engineering. The gossip comes with them: the Syndicate's page, the Hegemony's free tankers, a strike at Cinder Reach with the fuel behind a fence. Whatever upstairs signs, you'll be the one holding the hose.
+
+END
+
+== dock_start
+The Manifest Docks, and the fleet's shuttle berth is stacked with baskets. Dumplings, from Kessara Drift, forty-one of them, one for every ship, each with a lavender card and a Syndicate marker tucked under the cloth where anyone who's worked a dock would look for it.
+
+@Dockmaster Mott Jessup: "The office says baskets aren't cargo, so the office can't sign for them." He's eating one of the dumplings. "Mott says a basket with a Syndicate marker in it is a contract with a bow on, and the fleet's chief engineer is down on berth four swearing at a fuel gauge like it owes him money. Take the baskets across. Or don't. The office doesn't know."
+
+* new quest main_two_weeks_of_fuel: Two Weeks of Fuel | The fleet's down to two weeks of fuel, everyone on the docks knows it, and Mother Quill has sent over forty-one baskets with markers in them. | Carry the baskets to the fleet's shuttle, or find out what's in them first.
+
+> Carry the baskets across, and say nothing -> dock_carried
+> [streetwise:moderate] Have a look under the dumplings first -> dock_looked | dock_caught
+> Tell the fleet's chief engineer what Mott said about baskets -> dock_told
+
+== dock_looked
+Under the dumplings in the first basket there's a page, one sheet, folded twice: fuel for forty-one ships on credit, a marker from every ship's master for a favor to be named later, and first look at anything the First Builders left lying about. Mother Quill's name is already on it. You put it back exactly as it was, which is a skill.
+
+=> You've read Mother Quill's terms for the fleet, and nobody knows it.
+
+* flag knows_quill_terms
+* xp 10: Under the dumplings
+
+> Sell what you saw to the Hegemony's clerk on Consulate Row -> dock_sold
+> Tell the fleet's chief engineer -> dock_told
+> Keep it to yourself, and carry the baskets -> dock_carried
+
+== dock_caught
+@Dockmaster Mott Jessup: "The office didn't see that." He takes the basket out of your hands, gently, and the next one. "Mott did. Mott's disappointed. The office fines you ten, and Mott will carry these himself."
+
+* credits -10: A fine from the office
+
+> Go on -> dock_end
+
+== dock_sold
+The Hegemony's clerk on Consulate Row listens with his hands folded, and pays, and writes nothing down, which means he's remembering it.
+
+* credits 30: What the Hegemony paid for a look at Quill's page
+* faction hegemony 3: You told the Hegemony's clerk what the Syndicate offered the fleet
+* flag told_the_hegemony
+* journal: I sold the Hegemony's clerk what was under Mother Quill's dumplings: her terms for the fleet's fuel, forty-one markers and all.
+* quest main_two_weeks_of_fuel done: You sold Quill's terms to the Hegemony, and carried the baskets anyway.
+
+> Go on -> dock_end
+
+== dock_told
+The fleet's chief engineer stops swearing at the fuel gauge long enough to hear you out, which the gauge seems to appreciate.
+
+@Chief Engineer Dunn Marrow: "Markers. Forty-one of them." He looks at the baskets the way he'd look at a crack in a hull. "Flaming grandmother." He digs in a pocket and gives you a Meridian ration bar, which on this station is worth more than it looks. "You've got a dock hand's eyes. Keep them open."
+
+* item +ration_pack
+* contact Dunn Marrow friendly: You told him what was in the baskets
+* faction fleet 3: You warned the fleet's chief engineer about the markers
+* quest main_two_weeks_of_fuel done: You told the fleet what was under the dumplings.
+
+> Go on -> dock_end
+
+== dock_carried
+You carry forty-one baskets across to the fleet's shuttle, and the fleet's people thank you for every one, and nobody looks under the cloth.
+
+* credits 5: Mott's tip, for carrying
+* quest main_two_weeks_of_fuel done: You carried the baskets, and said nothing.
+
+> Go on -> dock_end
+
+== dock_end
+A week later the fleet's tanks are full, and nobody on the docks says how, and Mott has stopped eating the dumplings.
+
+END
+
+== other_start
+Two weeks of fuel, and everyone on the docks knows it. The fleet's people are drinking slowly, to make it last, and the fleet's chief engineer is at the end of the bar explaining to a fuel gauge, which he's brought with him, what he thinks of it. There's a basket of Mother Quill's dumplings on the bar with a lavender card, and a Syndicate man at the next table pretending he didn't bring it.
+
+* new quest main_two_weeks_of_fuel: Two Weeks of Fuel | The fleet's down to two weeks of fuel, and a fleet that desperate will sign anything. Mother Quill's dumplings are on the bar. | Listen, or don't. It isn't your fleet.
+
+> [streetwise:moderate] Listen to what the Syndicate man is saying about markers -> other_heard | other_nothing
+> It isn't your fleet -> other_end
+
+== other_heard
+Forty-one markers, one from every ship's master, a favor to be named later. Fuel tonight. And first look at anything the First Builders left lying about, which the Syndicate man says twice, as if it's the part that matters.
+
+* flag knows_quill_terms
+* xp 10: What the Syndicate wants from the fleet
+* journal: The Syndicate's terms for the fleet's fuel: forty-one markers for favors to be named later, and first look at anything First Builder the fleet ever finds.
+* quest main_two_weeks_of_fuel done: You heard Mother Quill's terms, which is more than most of the fleet has.
+
+> Go on -> other_end
+
+== other_nothing
+The Syndicate man talks about the weather, which there isn't any of, and then he leaves, and the basket stays.
+
+* quest main_two_weeks_of_fuel done: You listened, and the Syndicate man said nothing worth hearing.
+
+> Go on -> other_end
+
+== other_end
+A week later the fleet's tanks are full, and nobody says how, and the chief engineer has stopped bringing the gauge to the bar.
+
+END

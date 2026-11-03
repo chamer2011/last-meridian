@@ -1,0 +1,55 @@
+# Talking with Lieutenant Tarrow
+
+== start
+? flag downstairs_crew -> start_cadets
+? flag downstairs_enemies -> start_sweep
+
+@Lieutenant Kara Tarrow: "Captain." Her hand is near her sidearm, the way it always is. It isn't about you. "Security is quiet. I'd like it to stay that way, and I'd like your help with that."
+
+> Ask what help she wants -> help ? not seen help
+> Ask about the synthetics aboard -> synthetics ? not seen synthetics
+> Ask how she's doing -> doing ? not seen doing
+> Thank her, and go -> done
+
+== start_cadets
+@Lieutenant Kara Tarrow: "Captain. Thirty-one children with a treaty and the run of the ducts. I've read the treaty. Clause four is now correct." Perfectly polite. "I've assigned them a drill. They beat my marines by eleven seconds. I'd like it noted that my marines were carrying kit."
+
+> Ask what help she wants -> help ? not seen help
+> Ask about the synthetics aboard -> synthetics ? not seen synthetics
+> Ask how she's doing -> doing ? not seen doing
+> Thank her, and go -> done
+
+== start_sweep
+@Lieutenant Kara Tarrow: "Captain. The children haven't been found. They won't be, not by us. I'd like it on record that I said so at the time." She waits exactly one second. "What can I do for you."
+
+> Ask what help she wants -> help ? not seen help
+> Ask about the synthetics aboard -> synthetics ? not seen synthetics
+> Thank her, and go -> done
+
+== help
+@Lieutenant Kara Tarrow: "An order. Every machine with a mind in it, logged, and kept where I can see it. Not scrapped, Captain, I'm not asking for that today. Logged." Her voice doesn't rise. "The Choir wore faces I knew. I'd like to know which faces aboard this ship are faces."
+
+=> Tarrow wants every synthetic aboard logged, and she's asked you for it to your face.
+
+> Ask about the synthetics aboard -> synthetics ? not seen synthetics
+> Ask how she's doing -> doing ? not seen doing
+> Thank her, and go -> done
+
+== synthetics
+@Lieutenant Kara Tarrow: "A few hundred in the fleet. Mercy Seven speaks for them, very reasonably. Marrow thinks they're people." Each word is exactly placed. "I lost everyone I had to things that thought they were people. I'll be polite to them, Captain. I won't be wrong twice."
+
+> Ask what help she wants -> help ? not seen help
+> Ask how she's doing -> doing ? not seen doing
+> Thank her, and go -> done
+
+== doing
+For a moment she's very still, even for her.
+
+@Lieutenant Kara Tarrow: "Well, Captain. Thank you for asking." It's the politest thing she's ever said to you, and it closes like a hatch.
+
+> Ask what help she wants -> help ? not seen help
+> Ask about the synthetics aboard -> synthetics ? not seen synthetics
+> Thank her, and go -> done
+
+== done
+@Lieutenant Kara Tarrow: "Captain." She's already looking past you, at the hatch, at whatever might come through it.

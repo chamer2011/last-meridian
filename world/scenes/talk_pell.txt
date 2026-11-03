@@ -1,0 +1,37 @@
+# Talking with Ensign Pell
+
+== start
+@Ensign Pell Asante: "She's handling fine, sir, Captain, I mean the helm's a bit heavy to port since the Fall but I've got it, I've had it since Aurelis." She stops. "Sorry. Captain."
+
+> How's she handling, Ensign? -> handling ? not seen handling
+> When did you last sleep? -> sleep ? not seen sleep
+> Ask about her brother -> brother ? not seen brother
+> Tell her to carry on -> done
+
+== handling
+@Ensign Pell Asante: "Heavy to port, like I said, and she pulls when the reactor dips, which is every four hours about, Marrow says it's the capacitors, he says a lot of things about the capacitors." She takes a breath. "She'll jump clean. I've done the numbers twice. Three times. Captain."
+
+> When did you last sleep? -> sleep ? not seen sleep
+> Ask about her brother -> brother ? not seen brother
+> Tell her to carry on -> done
+
+== sleep
+@Ensign Pell Asante: "Last night, sir. Captain. Four hours, which is regulation, nearly, and Sorel doesn't sleep at all so I'm ahead of him." She tries a smile. "I dream about the helm, so technically I'm still on watch."
+
+> How's she handling, Ensign? -> handling ? not seen handling
+> Ask about her brother -> brother ? not seen brother
+> Tell her to carry on -> done
+
+== brother
+@Ensign Pell Asante: "Kofi. He's eleven. He's on the Wintermere, which is a school ship, which is good, it's got teachers, it's got drawings on the walls." Too fast, and then slower. "It's third slowest in the fleet, Captain. I check every morning. I'd like him somewhere that isn't third slowest."
+
+=> Pell's brother is on the Wintermere, and she counts the slow ships every morning.
+
+* journal: Ensign Pell's brother Kofi, eleven, is on the Wintermere, the third slowest ship in the fleet. She'd like him moved somewhere faster.
+
+> How's she handling, Ensign? -> handling ? not seen handling
+> When did you last sleep? -> sleep ? not seen sleep
+> Tell her to carry on -> done
+
+== done
+@Ensign Pell Asante: "Yes sir. Captain." Both hands back on the helm, where they're steadier than the rest of her.

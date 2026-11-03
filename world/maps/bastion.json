@@ -34,12 +34,19 @@
         "#############################1###########################################"
       ],
       "writing": [
-        [42, 9, "ALL PERMITS ARE PENDING"]
+        [
+          42,
+          9,
+          "ALL PERMITS ARE PENDING"
+        ]
       ],
       "labels": [
         {
           "text": "THE LONG ANCHORAGE",
-          "at": [4, 3]
+          "at": [
+            4,
+            3
+          ]
         }
       ],
       "exits": {
@@ -104,12 +111,19 @@
         "############3######################################################4########"
       ],
       "writing": [
-        [53, 0, "NOW SERVING: 41,207"]
+        [
+          53,
+          0,
+          "NOW SERVING: 41,207"
+        ]
       ],
       "labels": [
         {
           "text": "THE LINE",
-          "at": [3, 1]
+          "at": [
+            3,
+            1
+          ]
         }
       ],
       "exits": {
@@ -130,7 +144,13 @@
           "via": "1",
           "closed": {
             "look": "A steel stair up to the offices on the catwalk, with a sentry at the foot of it. He's very polite. He has a list, and you're not on it.",
-            "use": "I ask the sentry at the catwalk stair to tell the Commandant that I'd like to see him."
+            "use": "I ask the sentry at the catwalk stair to tell the Commandant that I'd like to see him.",
+            "ask": {
+              "check": "persuasion:moderate",
+              "reason": "Talk your way up the catwalk stair",
+              "pass": "The sentry listens, looks at his list again, and finds that you're on it after all. \"Top of the stair, and knock.\"",
+              "fail": "He's very sorry. You're not on the list, and the list is the list."
+            }
           }
         }
       },
@@ -180,12 +200,19 @@
         "######################################################"
       ],
       "writing": [
-        [5, 11, "ALL OF THE CONTRACT WILL BE READ TO YOU"]
+        [
+          5,
+          11,
+          "ALL OF THE CONTRACT WILL BE READ TO YOU"
+        ]
       ],
       "labels": [
         {
           "text": "THE CONTRACT HALL",
-          "at": [25, 3]
+          "at": [
+            25,
+            3
+          ]
         }
       ],
       "exits": {
@@ -256,7 +283,10 @@
       "labels": [
         {
           "text": "THE PARADE GROUND",
-          "at": [25, 2]
+          "at": [
+            25,
+            2
+          ]
         }
       ],
       "exits": {
@@ -309,13 +339,24 @@
         "##########################################################"
       ],
       "writing": [
-        [44, 1, "COMMANDANT"],
-        [18, 8, "THE LINE BELOW"]
+        [
+          44,
+          1,
+          "COMMANDANT"
+        ],
+        [
+          18,
+          8,
+          "THE LINE BELOW"
+        ]
       ],
       "labels": [
         {
           "text": "THE COMMANDANT'S GALLERY",
-          "at": [12, 4]
+          "at": [
+            12,
+            4
+          ]
         }
       ],
       "exits": {
@@ -374,27 +415,42 @@
     "rooms": [
       {
         "level": "anchorage",
-        "at": [23, 1],
+        "at": [
+          23,
+          1
+        ],
         "text": "THE LONG ANCHORAGE"
       },
       {
         "level": "gallery",
-        "at": [20, 3],
+        "at": [
+          20,
+          3
+        ],
         "text": "THE COMMANDANT'S GALLERY"
       },
       {
         "level": "line",
-        "at": [18, 6],
+        "at": [
+          18,
+          6
+        ],
         "text": "THE LINE"
       },
       {
         "level": "parade",
-        "at": [46, 6],
+        "at": [
+          46,
+          6
+        ],
         "text": "THE PARADE GROUND"
       },
       {
         "level": "hall",
-        "at": [24, 9],
+        "at": [
+          24,
+          9
+        ],
         "text": "THE CONTRACT HALL"
       }
     ]

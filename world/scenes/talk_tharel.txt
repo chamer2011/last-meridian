@@ -1,0 +1,123 @@
+# Talking with Archivist Tharel
+// Tharel in his Warm Room on Haven, after the Warm Room story: what he'll say about the lower layer, which is
+// nothing, and how he says it. Draft by the AI (Claude), 2026-11-02, not yet edited by the owner.
+
+== start
+? flag tharel_taken_by_quill -> gone
+? not captain -> other
+? flag tharel_trusts -> start_trusted
+AI: Tharel says nothing about the lattice, however he's asked. Asked straight, both his eyes stop blinking and he says the Ilun Codex. He digresses when he's frightened, and he's frightened of one thing in this room, which is the question. He calls everyone young one.
+
+@Archivist Oss Tharel: "Young one." He doesn't get up, because getting up is a project. "You've come back. People do, once. Sit. Mind the crate, it's older than the Concord and so am I."
+
+> Ask him again what the lower layer says -> lower ? not seen lower
+> Ask about Lenn Corso -> corso ? not seen corso
+> Ask what the Ilun Codex is -> codex ? not seen codex
+> Ask whether the Beacon's changed -> changed ? not seen changed
+> Let him be -> done
+
+== start_trusted
+AI: With a captain he trusts, Tharel is warmer and still says nothing about the lattice. He'll talk about the shard, Corso and the Codex, and he'd like the captain to come back with the Codex and nothing else.
+
+@Archivist Oss Tharel: "Young one. Sit." The kettle's on, which is the only thing in this room that is. "You've come back. Most people who earn this room don't, which I've always taken as a comment on the room."
+
+> Ask him again what the lower layer says -> lower ? not seen lower
+> Ask about the shard he gave you -> shard ? not seen shard and has beacon_shard
+> Ask about Lenn Corso -> corso ? not seen corso
+> Ask what the Ilun Codex is -> codex ? not seen codex
+> Ask whether the Beacon's changed -> changed ? not seen changed
+> Let him be -> done
+
+== lower
+? flag heard_two_voices -> lower_heard
+
+For a moment both his eyes stop blinking.
+
+@Archivist Oss Tharel: "Bring me the Ilun Codex, young one, and ask me again." He turns a chip over in his pale hands, which is what he does instead of answering. "The Navy's voice is the news. Everyone will tell you so. I'm telling you so."
+
+> Ask about the shard he gave you -> shard ? not seen shard and has beacon_shard
+> Ask about Lenn Corso -> corso ? not seen corso
+> Ask what the Ilun Codex is -> codex ? not seen codex
+> Ask whether the Beacon's changed -> changed ? not seen changed
+> Let him be -> done
+
+== lower_heard
+For a moment both his eyes stop blinking, and then he looks at you, properly, with both of them.
+
+@Archivist Oss Tharel: "You heard it. The old one." Very quietly. "Don't tell anyone else you can, young one. I mean that more than I've meant anything in two hundred years. Bring me the Codex, and I'll tell you what I think it's saying, and you can decide whether you'd rather not have known."
+
+> Ask about the shard he gave you -> shard ? not seen shard and has beacon_shard
+> Ask about Lenn Corso -> corso ? not seen corso
+> Ask what the Ilun Codex is -> codex ? not seen codex
+> Ask whether the Beacon's changed -> changed ? not seen changed
+> Let him be -> done
+
+== shard
+@Archivist Oss Tharel: "It points somewhere." He nods at your coat, where it is. "Hold it in the dark, and you'll see which way. It's pointed the same way for two hundred years, and I've never once liked where. Don't follow it on my account, young one. Follow it on yours, if you must, with the Codex in your other hand."
+
+> Ask him again what the lower layer says -> lower ? not seen lower
+> Ask about Lenn Corso -> corso ? not seen corso
+> Ask what the Ilun Codex is -> codex ? not seen codex
+> Let him be -> done
+
+== corso
+@Archivist Oss Tharel: "Dr. Lenn Corso. A Concord man, young, which to me means under sixty, with a grant from an office that didn't put its name on the grant." He blinks, one eye. "I told him what I'd tell you, if you brought me the Codex, and he went to find out whether I was right. Eleven years ago. He wrote once, from somewhere very wet, and then he didn't. I've been in this room since. Draw your own conclusions, young one. I've drawn mine."
+
+* journal: Tharel told Dr. Lenn Corso what he thinks the lower layer says, eleven years ago, and Corso went to find out, and wrote once, from somewhere very wet, and then stopped.
+
+> Ask him again what the lower layer says -> lower ? not seen lower
+> Ask about the shard he gave you -> shard ? not seen shard and has beacon_shard
+> Ask what the Ilun Codex is -> codex ? not seen codex
+> Ask whether the Beacon's changed -> changed ? not seen changed
+> Let him be -> done
+
+== codex
+@Archivist Oss Tharel: "The only reading of the old signal anyone has ever made, by people who had a thousand years to make it, and a reason to. The Order of Ilun, on their cold rock, with their stones." A long digression about the Order's handwriting, which was very bad, and their binding, which was very good. "They cut pages out of it, young one. One doesn't cut pages out of a book one is proud of. Bring me what's left, and I'll read you the gaps."
+
+* journal: The Ilun Codex is the Order of Ilun's reading of the Beacon's old layer, made over a thousand years. Tharel says the Order cut pages out of it, and that he'd read the gaps.
+
+> Ask him again what the lower layer says -> lower ? not seen lower
+> Ask about the shard he gave you -> shard ? not seen shard and has beacon_shard
+> Ask about Lenn Corso -> corso ? not seen corso
+> Ask whether the Beacon's changed -> changed ? not seen changed
+> Let him be -> done
+
+== changed
+@Archivist Oss Tharel: "Six seconds, then it starts again. It hasn't changed in two hundred years, and I've listened to it most nights of them." He puts the chip down. "What's changed is the top. Whoever's reading on top of it is reading faster than they were a month ago. People read faster, young one, when they're frightened. I'd know."
+
+* journal: Tharel says the Beacon's old layer hasn't changed in two hundred years, and that whoever's reading the Navy layer on top of it is reading faster than they were a month ago, the way people do when they're frightened.
+
+> Ask him again what the lower layer says -> lower ? not seen lower
+> Ask about the shard he gave you -> shard ? not seen shard and has beacon_shard
+> Ask about Lenn Corso -> corso ? not seen corso
+> Ask what the Ilun Codex is -> codex ? not seen codex
+> Let him be -> done
+
+== done
+@Archivist Oss Tharel: "Young one." He's already turned back to the frame. "Mind the crate."
+
+== other
+AI: To someone who isn't the captain, Tharel is courteous and gives nothing: he assumes they've been sent by one of the three parties, and he's too polite to say which.
+
+@Archivist Oss Tharel: "Young one. You're not the one with the fleet." He doesn't get up. "If somebody sent you, tell them I'm comfortable, and that the kettle's on. If nobody sent you, sit a minute. Nobody ever just sits."
+
+> Ask him what he does in here all day -> other_days ? not seen other_days
+> Ask him about the signal -> other_signal ? not seen other_signal
+> Leave him to it -> done
+
+== other_days
+@Archivist Oss Tharel: "I listen to a very old thing say the same thing, and I write down that it has. Two hundred years of that, young one, and a kettle. It's a life. It's been three or four."
+
+> Ask him about the signal -> other_signal ? not seen other_signal
+> Leave him to it -> done
+
+== other_signal
+@Archivist Oss Tharel: "Everyone on this station has a theory about the signal, and the station's speakers play it under all of them. I'll tell you what I tell the speakers." He turns a chip over in his pale hands. "Nothing. Mind the crate on your way out."
+
+> Ask him what he does in here all day -> other_days ? not seen other_days
+> Leave him to it -> done
+
+== gone
+The Warm Room is a boiler room again, with a kettle in it and a great many crates, and whoever's sitting among them in Tharel's coat isn't Tharel. He's comfortable, Mother Quill's people say, somewhere she's careful about.
+
+> Leave -> done

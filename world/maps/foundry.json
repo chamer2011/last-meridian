@@ -39,7 +39,10 @@
       "labels": [
         {
           "text": "THE COLD GATE",
-          "at": [18, 2]
+          "at": [
+            18,
+            2
+          ]
         }
       ],
       "exits": {
@@ -48,7 +51,13 @@
           "via": "1",
           "closed": {
             "look": "The way in, past the last of the still figures. It's turned its head to look at you, and the sound of that goes off down the dark in both directions. They don't ask who you are. They ask who sent you.",
-            "use": "I walk up to the Sentinel at the way in, and I tell it who sent me."
+            "use": "I walk up to the Sentinel at the way in, and I tell it who sent me.",
+            "ask": {
+              "check": "deception:hard",
+              "reason": "Tell the Sentinel who sent you",
+              "pass": "You say a name. The Sentinel considers it for longer than you'd like, and then its head turns away from you, back to the dark, and the way in is simply there.",
+              "fail": "You say a name. The Sentinel doesn't move at all, and after a while you understand that it isn't going to."
+            }
           }
         }
       },
@@ -103,12 +112,19 @@
         "###################################3#########################################"
       ],
       "writing": [
-        [40, 0, "YOU ASK. YOU NEVER TELL."]
+        [
+          40,
+          0,
+          "YOU ASK. YOU NEVER TELL."
+        ]
       ],
       "labels": [
         {
           "text": "THE ASSEMBLY FLOOR",
-          "at": [22, 1]
+          "at": [
+            22,
+            1
+          ]
         }
       ],
       "exits": {
@@ -180,12 +196,19 @@
         "##################################################################"
       ],
       "writing": [
-        [30, 0, "TAKE WHAT YOU NEED. KEEP THE TAG."]
+        [
+          30,
+          0,
+          "TAKE WHAT YOU NEED. KEEP THE TAG."
+        ]
       ],
       "labels": [
         {
           "text": "THE LONG RACK",
-          "at": [40, 1]
+          "at": [
+            40,
+            1
+          ]
         }
       ],
       "exits": {
@@ -245,12 +268,19 @@
         "##############################################2###########################"
       ],
       "writing": [
-        [31, 0, "VOTE ON RESTART: 2,114 FOR. 2,114 AGAINST."]
+        [
+          31,
+          0,
+          "VOTE ON RESTART: 2,114 FOR. 2,114 AGAINST."
+        ]
       ],
       "labels": [
         {
           "text": "THE SILENT LINE",
-          "at": [53, 1]
+          "at": [
+            53,
+            1
+          ]
         }
       ],
       "exits": {
@@ -263,7 +293,13 @@
           "via": "1",
           "closed": {
             "look": "A heavy door to the sublevels, with a keypad and a very new lock. The cable running under it is as thick as your arm, and it's warm. Knocking would at least be polite.",
-            "use": "I knock at the door to the sublevels and ask whether Hollis-Nine would be willing to see me."
+            "use": "I knock at the door to the sublevels and ask whether Hollis-Nine would be willing to see me.",
+            "ask": {
+              "check": "hacking:hard",
+              "reason": "Get the sublevel door open",
+              "pass": "The lock thinks about it, and the door swings a hand's width inward on its warm cable. Somebody below says, \"Well. Come down, then.\"",
+              "fail": "The keypad goes dark for a count of ten, and then asks you, politely, to stop."
+            }
           }
         }
       },
@@ -326,7 +362,10 @@
       "labels": [
         {
           "text": "THE SUBLEVELS",
-          "at": [3, 1]
+          "at": [
+            3,
+            1
+          ]
         }
       ],
       "exits": {
@@ -384,27 +423,42 @@
     "rooms": [
       {
         "level": "gate",
-        "at": [3, 1],
+        "at": [
+          3,
+          1
+        ],
         "text": "THE COLD GATE"
       },
       {
         "level": "floor",
-        "at": [7, 4],
+        "at": [
+          7,
+          4
+        ],
         "text": "THE ASSEMBLY FLOOR"
       },
       {
         "level": "rack",
-        "at": [40, 4],
+        "at": [
+          40,
+          4
+        ],
         "text": "THE LONG RACK"
       },
       {
         "level": "line",
-        "at": [22, 7],
+        "at": [
+          22,
+          7
+        ],
         "text": "THE SILENT LINE"
       },
       {
         "level": "sublevels",
-        "at": [23, 10],
+        "at": [
+          23,
+          10
+        ],
         "text": "THE SUBLEVELS"
       }
     ]

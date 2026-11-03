@@ -1,0 +1,85 @@
+# Talking with Commander Voss
+// A conversation: the same parts and choices as a scene, with no checks or fights. The person speaks
+// first, from start. "seen" means said in this conversation. Flags remember things across all of them.
+
+== start
+AI: Voss gives facts, not comfort. She doesn't gossip about the crew, she won't speak of her list unless the player already knows of it, and she won't say what she'd do with the chair unless asked straight. Short answers, and she keeps working at the plot while she talks.
+? not captain -> other
+? flag knows_about_the_list -> start_list
+
+@Commander Ilya Voss: "Captain." She doesn't stop what she's doing, which is the plot. "Go on."
+
+> What's our real situation, Commander? -> situation ? not seen situation
+> Is there anything I should be worried about? -> worried ? not seen worried
+> How did you get out, in the Fall? -> fall ? not seen fall
+> That's all for now -> done
+
+== start_list
+@Commander Ilya Voss: "Captain." She has the list out. She doesn't put it away. "Two more names on it since yesterday. Go on."
+
+> What's our real situation, Commander? -> situation ? not seen situation
+> Which ships are on the list? -> list ? not seen list
+> How did you get out, in the Fall? -> fall ? not seen fall
+> That's all for now -> done
+
+== situation
+@Commander Ilya Voss: "Fuel for two weeks. Food for three, if the Sundial's count is honest, and Brandt says it is, on paper. Medicine, Aduro won't say, which means less than that." She marks something on the plot. "The slow ships are the problem. They're always the problem. The Choir takes the slowest, and then there's a new slowest."
+
+> What's our real situation, Commander? -> situation ? not seen situation
+> Is there anything I should be worried about? -> worried ? not seen worried
+> Which ships are on the list? -> list ? flag knows_about_the_list and not seen list
+> How did you get out, in the Fall? -> fall ? not seen fall
+> That's all for now -> done
+
+== worried
+@Commander Ilya Voss: "Halm. Not because he's wrong. Because he's patient." A pause. "And the signal. Everyone aboard has decided what it is, and nobody's decided the same thing. That isn't a fleet, Captain. That's forty-one arguments in formation."
+
+> What's our real situation, Commander? -> situation ? not seen situation
+> Which ships are on the list? -> list ? flag knows_about_the_list and not seen list
+> How did you get out, in the Fall? -> fall ? not seen fall
+> That's all for now -> done
+
+== list
+@Commander Ilya Voss: "The Slow Harriet. The Patience of Ostra, if her drive goes again. Two of the pickets, and I won't say which, because the pickets can hear me think." She folds the list without looking at it. "There's a day written next to each. I'd rather you didn't ask me for those."
+
+* journal: Voss's list of the ships that can't keep up: the Slow Harriet, the Patience of Ostra if her drive goes, and two of the pickets. Each has a day written next to it.
+
+> What's our real situation, Commander? -> situation ? not seen situation
+> Is there anything I should be worried about? -> worried ? not seen worried
+> That's all for now -> done
+
+== fall
+For a moment the plot has her whole attention.
+
+@Commander Ilya Voss: "I had a ship. I don't have it now." The burn scar along her jaw doesn't move. "That's in my file, Captain, and the file's complete. If it ever isn't, you'll be the first I tell."
+
+=> Voss closed that door, and she closed it carefully.
+
+> What's our real situation, Commander? -> situation ? not seen situation
+> Is there anything I should be worried about? -> worried ? not seen worried
+> That's all for now -> done
+
+== done
+@Commander Ilya Voss: "Captain." It's the same word as before. It means something slightly different now.
+
+== other
+@Commander Ilya Voss: "Yes?" She looks at you the way she looks at a plot that's doing something unexpected. "Make it short. The captain's shorter."
+
+> Ask whether the fleet's as badly off as people say -> other_situation ? not seen other_situation
+> Ask what she needs from the crew -> other_needs ? not seen other_needs
+> Say it was nothing -> other_done
+
+== other_situation
+@Commander Ilya Voss: "Worse than people say, and better than they fear. Both at once. That's what a fleet is." She goes back to the plot. "Eat what you're given and sleep when you're told. That's most of it."
+
+> Ask what she needs from the crew -> other_needs ? not seen other_needs
+> Say it was nothing -> other_done
+
+== other_needs
+@Commander Ilya Voss: "Noticing. Whatever you do, do it with your eyes open, and if you see something that's wrong, tell someone who outranks you. Then tell me, if they don't do anything about it."
+
+> Ask whether the fleet's as badly off as people say -> other_situation ? not seen other_situation
+> Say it was nothing -> other_done
+
+== other_done
+@Commander Ilya Voss: "Then carry on."

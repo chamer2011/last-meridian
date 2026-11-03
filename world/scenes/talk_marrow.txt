@@ -1,0 +1,51 @@
+# Talking with Chief Marrow
+
+== start
+? flag marrow_knows_fourteen -> start_ghost
+
+@Chief Engineer Dunn Marrow: "If this is about the lights in the Hot Bunks, they're on a timer, and the timer's on a prayer." He doesn't look up from the coolant line. "What."
+
+> How's the reactor, really? -> reactor ? not seen reactor
+> What's this about a ghost in the ducts? -> ghost ? not seen ghost
+> Why do you talk to the machines like that? -> machines ? not seen machines
+> Leave him to it -> done
+
+== start_ghost
+@Chief Engineer Dunn Marrow: "My ghost is nine and he wants a torque wrench for his birthday." He says it to the coolant line, not to you, and he's smiling. "Don't tell Tarrow. What."
+
+> How's the reactor, really? -> reactor ? not seen reactor
+> How's Wick getting on? -> wick ? not seen wick
+> Why do you talk to the machines like that? -> machines ? not seen machines
+> Leave him to it -> done
+
+== reactor
+@Chief Engineer Dunn Marrow: "She's an old dog with a bad hip, and she'll run till she doesn't, and I'll know about four seconds before you do." He pats the housing. "Two-thirds. Don't ask her for more unless something's eating us. If something's eating us, ask, and she'll give it, and then we talk about what it cost."
+
+> What's this about a ghost in the ducts? -> ghost ? not seen ghost and not flag marrow_knows_fourteen
+> How's Wick getting on? -> wick ? flag marrow_knows_fourteen and not seen wick
+> Why do you talk to the machines like that? -> machines ? not seen machines
+> Leave him to it -> done
+
+== ghost
+@Chief Engineer Dunn Marrow: "Something's in my valves. Every time I schedule the vent cycle on Fourteen, they go sticky, like somebody's been in the works with a spoon." He wipes his hands, which doesn't help. "I've been calling it my ghost. It's a better class of ghost than most. It leaves things working."
+
+> How's the reactor, really? -> reactor ? not seen reactor
+> Why do you talk to the machines like that? -> machines ? not seen machines
+> Leave him to it -> done
+
+== wick
+@Chief Engineer Dunn Marrow: "He rerouted a coolant loop yesterday with a spoon and a length of my good wire, and it's better than what was there." He shakes his head. "I've had apprentices with certificates who couldn't do that. Don't tell him I said so. He's insufferable already."
+
+> How's the reactor, really? -> reactor ? not seen reactor
+> Why do you talk to the machines like that? -> machines ? not seen machines
+> Leave him to it -> done
+
+== machines
+@Chief Engineer Dunn Marrow: "Because they listen." He says it as if it's obvious. "A reactor's never lied to me. Can't say that about an officer. Can't say it about a council." He catches himself. "Present company. Mostly."
+
+> How's the reactor, really? -> reactor ? not seen reactor
+> What's this about a ghost in the ducts? -> ghost ? not seen ghost and not flag marrow_knows_fourteen
+> Leave him to it -> done
+
+== done
+@Chief Engineer Dunn Marrow: "Go on, then. Mind the third step down, it's flaming loose, and I've asked."

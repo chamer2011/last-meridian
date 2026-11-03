@@ -1,0 +1,280 @@
+HOW TO WRITE A SCENE
+====================
+
+A scene is a plain text file in this folder, like opening_captain.txt. Open it in Notepad, change
+it, save it, and the game uses the new version the next time the story reaches it. There's no need
+to restart. To find mistakes, run this in the game's folder:
+
+    npm run check-story
+
+It lists every problem with the file and the line it's on. Nothing is changed by it. The tests
+(npm test) check the scenes too.
+
+Files whose names start with _ are notes like this one, and aren't scenes.
+
+
+WHAT THE FILE'S NAME MEANS
+--------------------------
+
+opening_captain.txt    How the story opens for the captain. For another life, use its id from
+                       starts.json: opening_engine_hand.txt, opening_docker.txt, and so on.
+opening.txt            The opening for any life that has none of its own.
+thread_<story>.txt     Plays when a story from the Leads menu is taken up, for example
+                       thread_crew_naomi_under_crew.txt. The ids are the file names in world/threads.
+arrive_<place>.txt     Plays when the player arrives at that place, by jump, passage or shuttle, when
+                       they press Continue the story. The ids are the file names in world/places.
+talk_<person>.txt      What that person says in a talk. See CONVERSATIONS below.
+
+
+THE SHAPE OF A SCENE
+--------------------
+
+    # The title
+    start: bridge
+
+    == bridge
+    Paragraphs of what the player reads. Lines run together until a blank line, which
+    starts a new paragraph.
+
+    @Commander Ilya Voss: "Someone speaking gets a line like this, with their name after @."
+
+    => A line starting with => is a consequence, shown boxed, for something that will matter later.
+
+    > A choice -> the_part_it_leads_to
+    > Another choice -> somewhere_else
+
+    == somewhere_else
+    More text.
+    END
+
+Each part starts with == and a name made of letters, numbers and underscores. The first part is
+where the scene starts, unless a start: line says otherwise. A part either has choices, or ends the
+scene with END, or opens a check or a fight (see below), or has a rule that sends the story on.
+Lines starting with // are comments, and the game ignores them.
+
+Speech should be written exactly like the example, with the name after @ and the words in quotes.
+That's how the words go in a window over that person's head when they're in the room. The game
+knows the people in world/characters by their names and the names people call them.
+
+
+CHOICES
+-------
+
+    > [+Voss] Ask her what she'd do -> voss_answer
+    > [persuasion:moderate:voss] Ask what she isn't telling you -> voss_pressed_pass | voss_pressed_fail
+    > [reason] Tell the fleet the truth -> truth
+    > [! costs 200 credits] Pay him -> paid ? credits >= 200
+
+Things in square brackets before the words are tags, which the player sees:
+
+    [persuasion:moderate]        A skill check. The skill's id and the difficulty: easy, moderate,
+                                 hard, very_hard or nearly_impossible. Add a person's id after a
+                                 second colon when they're the one being persuaded, deceived or led,
+                                 and how they feel about the player changes the odds. A choice with
+                                 a check leads two ways: the part if it passes | the part if it fails.
+    [+Voss] or [-Tarrow]         Someone who would clearly approve or disapprove.
+    [reason]                     The belief the choice expresses: order, freedom, community, self,
+                                 mercy, iron, reason, faith, purity or ascension.
+    [! anything]                 A warning, such as a cost or a risk.
+
+A choice can end with ? and a condition, and then it's only offered when the condition holds.
+Conditions are explained below.
+
+
+WHAT A PART CHANGES
+-------------------
+
+Lines starting with * happen when the part begins, and the player sees each as a game message:
+
+    * journal: Words to write in the journal.
+    * xp 10: The reason
+    * credits -20: The reason               (a minus sign charges the player)
+    * item +medkit                          (gives an item from world/items.json or src/data.js)
+    * item -data_chip                       (takes one away)
+    * quest the_beacon: The new objective   (changes a quest the player already has)
+    * quest the_beacon done: How it ended   (or failed)
+    * new quest find_the_scholar: The Title | What it's about | What to do first
+    * contact Ilya Voss friendly: What happened between you     (hostile, wary, neutral, friendly or ally)
+    * belief reason 1: The reason           (1 for a telling choice, 2 for a major one, 3 for a defining moment)
+    * faction fleet 2: The reason           (a minus sign lowers it)
+    * stress 5: The reason                  (a minus sign relieves it)
+    * health -4: The reason                 (a minus sign hurts, and it can't kill)
+    * time 2 hours: The reason              (add work or rest after hours if that's what it was; 72 at most in one part)
+    * flag told_the_fleet                   (remembers something, for conditions later, in any scene)
+    * unflag told_the_fleet
+    * fuel 6: The reason                    (the fleet's fuel, which jumps use; a minus sign burns it)
+    * act 2                                 (the main story moves on to that act)
+    * raw add_lore {"term": "The Rim", "kind": "place", "text": "What the player would know."}
+
+The last one does anything the AI can do, with the fields from src/tools.js. The rules are the
+same as for the AI: there are limits on credits and XP in one turn, and a quest has to exist
+before it can change.
+
+
+CONDITIONS
+----------
+
+A condition goes after ? on a choice, or starts a rule line. Put "not" in front to turn one round,
+and join several with "and":
+
+    has data_chip                    The player carries that item.
+    credits >= 20                    Also <=, >, <, = and !=, for credits, stress, health (as a
+                                     percentage), day, and level.
+    skill persuasion >= 3            A skill's rank. Also stat presence >= 4, faction fleet >= 5,
+                                     and belief reason >= 2.
+    flag told_the_fleet              A flag set with * flag.
+    seen voss_answer                 The player has been through that part in this scene.
+    quest the_beacon active          Also done, failed, or none if they haven't got it.
+    met Voss                         They're in the player's contacts.
+    likes Voss                       Friendly or better. dislikes Voss is wary or worse.
+    captain                          The player is the captain.
+    life engine_hand                 The player started as that life. The ids are in starts.json.
+    at haven                         The player is at that place.
+    act < 2                          The main story's act, with the same comparisons as credits.
+    chance 30                        True 30 times in 100, at random.
+
+A condition with a mistake in it is never true, and check-story points it out.
+
+
+RULES: GOING SOMEWHERE ELSE
+---------------------------
+
+A line starting with ? and a condition, then an arrow, sends the story to another part instead of
+showing this one, when the condition holds. A plain -> is where to go otherwise. They're checked
+in order, before the text:
+
+    == plot
+    ? flag told_the_fleet -> plot_after_truth
+    ? credits < 10 -> plot_broke
+
+    @Ensign Pell Asante: "Plotted, sir."
+    END
+
+A part that only has rules, and a final -> part, is a fork in the road with no text of its own.
+
+The rules are read again when the player presses Continue the story while they're in that part,
+so a part can wait for something. A part with ? at kessara -> parlor and text telling the player
+to set course from the Star map sends the story on to the parlor once the fleet has jumped there
+and they press Continue. The part's choices stay on offer meanwhile, for anything else they'd
+rather do first.
+
+
+A CHECK THE STORY DEMANDS
+-------------------------
+
+When the story itself calls for a check, rather than a choice:
+
+    == hatch
+    The hatch is locked, and there's no other way.
+    CHECK engineering:moderate
+      reason: Open the hatch
+      pass -> open
+      fail -> stuck
+
+The indented lines belong to the CHECK. reason is what the player reads as the window opens.
+
+
+A FIGHT
+-------
+
+    == ambush
+    Three of them step out from behind the coolant tanks.
+    FIGHT dock_thug
+      lead_in: Nobody says anything. They don't need to.
+      enemy_followers: dock_thug, drift_raider
+      allies: voss
+      why: paid
+      reason: Somebody's paying them to break your legs.
+      won -> won
+      lost -> lost
+      fled -> fled
+      gaveUp -> gave_up
+      talked -> talked_them_down
+
+The enemy ids are the file names in world/enemies, and people are the file names in
+world/characters. won and lost are needed, and the others are only if you want them: otherwise
+running away or giving up counts as lost, and talking them down counts as won. why is why they're
+fighting, which decides how hard they are to talk down: desperate, afraid, paid, greed, orders,
+guarding, cause, belief, grudge or honor. The first line of text in a part with a FIGHT isn't
+needed: the lead_in is what the player reads as it starts.
+
+
+CONVERSATIONS
+-------------
+
+A file called talk_<id>.txt is what that person says when the player walks up to them, with the id
+from world/characters: talk_voss.txt, talk_marrow.txt. It's written like a scene, and plays in the
+talk window. The person speaks first, from the first part, and each choice is a thing the player can
+say. A part with no choices is where the conversation runs out, and the player says goodbye.
+
+    == start
+    ? flag knows_about_the_list -> start_list
+    @Commander Ilya Voss: "Captain. Go on."
+    > What's our real situation? -> situation ? not seen situation
+    > That's all for now -> done
+
+    == situation
+    @Commander Ilya Voss: "Fuel for two weeks."
+    > That's all for now -> done
+
+    == done
+    @Commander Ilya Voss: "Captain."
+
+In a conversation, "seen" means said in this conversation, so ? not seen situation hides a
+question once it's been asked. Flags set anywhere last, so a conversation can know what the
+story did. Effects (* lines) work, except time, travel and set_scene, because the clock stops
+in a talk. A conversation can't open a CHECK or a FIGHT: put those in a scene.
+
+Use ? not captain -> other at the start when the person would speak differently to someone who
+isn't the captain. Anyone without a file of their own gets stock lines, made from who they are and
+what they're doing, from the templates at the end of world/rooms.json. With an AI game master, the
+AI plays them instead, and a person with a file still speaks from it.
+
+
+THINGS AND DOORS
+----------------
+
+These are in the map files, world/maps/<place>.json, not here. A thing's used is what happens
+when the player uses it without an AI (usedOther for someone who isn't the captain), and a thing
+with an item is picked up. A closed door's ask is the rule when the player asks at it:
+
+    "ask": { "check": "persuasion:moderate", "reason": "Talk your way past", "pass": "...", "fail": "..." }
+    "ask": { "if": "flag quill_invited", "opens": "...", "else": "..." }
+    "ask": { "opens": "...", "flag": "crossed_the_picket" }
+    "ask": { "answer": "Not yet." }
+
+if can be any condition from above. A door with if and check tries the condition first, then
+the check. flag is remembered when the door opens.
+
+
+GAME MESSAGES
+-------------
+
+    NOTE: [STORY] A message shown with the part, in the colored lines, not in the story's own voice.
+
+
+NOTES FOR THE AI
+----------------
+
+    AI: Sable won't go below forty, and a threat makes her stop talking.
+
+With an AI game master, the written parts still play as written, and clicking a choice is free.
+But the player can also type their own words, and then the AI reads this part, these notes and
+the choices, and either takes the choice the words come to, or answers in a sentence or two
+without moving the story on. An AI: line is for the AI alone: the player never sees it. Use it
+for what the people here would and wouldn't do, what they know, and what can't happen here, so
+the AI's answers stay true to the part. Several AI: lines in one part are read together. Without
+an AI the line does nothing. A conversation (talk_<id>.txt) can have them too.
+
+
+WHAT THE PLAYER CAN TYPE
+------------------------
+
+Without an AI, the player picks from the choices, or types part of one. Typing is forgiving:
+"say nothing" is enough for "Say nothing, and listen to it". Anything else is refused in plain
+words, and nothing changes. So every part the player can stay in needs choices.
+
+With an AI game master, anything else they type goes to the AI, which fits it to one of the
+choices or answers it in a few words, and the written part still decides what happens next: the
+AI can't change the game from a written part any other way. So the choices still have to cover
+every way through, and an AI: line can say what the AI should and shouldn't allow in between.

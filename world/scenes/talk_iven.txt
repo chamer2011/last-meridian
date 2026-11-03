@@ -1,0 +1,37 @@
+# Talking with Lieutenant Sorel
+
+== start
+@Lieutenant Iven Sorel: "Captain." Low, as if someone's asleep nearby. One side of his headset is still on. "Go ahead."
+
+> Anything on comms, Lieutenant? -> comms ? not seen comms
+> You look like you could use a break -> break ? not seen break
+> Ask what the signal sounds like to him -> signal ? not seen signal
+> Leave him to his board -> done
+
+== comms
+@Lieutenant Iven Sorel: "The fleet band's clean. Sundial's lamp control talks too much, and the Harriet's transmitter is held together with. Hold on." He listens to something you can't hear, then carries on from the exact next word. "Hope. And the Beacon, every six seconds, under everything. Copy?"
+
+> You look like you could use a break -> break ? not seen break
+> Ask what the signal sounds like to him -> signal ? not seen signal
+> Leave him to his board -> done
+
+== break
+@Lieutenant Iven Sorel: "I take them, Captain. I walk the Names Bulkhead at four. It counts." A thread of a smile. "If I'm off this board for more than an hour, I don't know what I'd miss. That's the problem with noise. It's never nothing."
+
+> Anything on comms, Lieutenant? -> comms ? not seen comms
+> Ask what the signal sounds like to him -> signal ? not seen signal
+> Leave him to his board -> done
+
+== signal
+He takes the headset off, which he almost never does.
+
+@Lieutenant Iven Sorel: "Like someone reading, Captain. Not talking. Reading, off a list." He puts it back on. "That's not in my report, because it's not a reading, it's a feeling, and I don't put feelings in reports. Over."
+
+=> Sorel hears the signal as someone reading off a list, and he hasn't put that in a report.
+
+> Anything on comms, Lieutenant? -> comms ? not seen comms
+> You look like you could use a break -> break ? not seen break
+> Leave him to his board -> done
+
+== done
+@Lieutenant Iven Sorel: "Copy." Both sides of the headset go back on, and he's gone somewhere you can't follow.

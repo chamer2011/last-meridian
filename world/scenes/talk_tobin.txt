@@ -1,0 +1,39 @@
+# Talking with Chief Hask
+
+== start
+@Chief Tobin Hask: "Captain." The pocket scale is already on the bench, folded. He unfolds it. "I've a minute. I've generally a minute for the chair."
+
+> Ask how the deck crew are holding up -> crew ? not seen crew
+> Ask what your last order weighed -> weighed ? not seen weighed
+> Ask about the scale -> scale ? not seen scale
+> Let him get on -> done
+
+== crew
+@Chief Tobin Hask: "Tired. Fed, mostly. Frightened, and not saying so, which is the way of it." A long pause while he sets a washer in the left pan, for no reason you can see, and takes it out again. "They'll carry what I carry. That's not nothing to put on a man, Captain. I'd have you know it's there."
+
+> Ask what your last order weighed -> weighed ? not seen weighed
+> Ask about the scale -> scale ? not seen scale
+> Let him get on -> done
+
+== weighed
+He sets a folded paper on the scale, and a washer in the right pan, and another, and one in the left.
+
+@Chief Tobin Hask: "Two against six. It came up true." He says it as if it were a kindness he's doing you, and perhaps it is. "I'll carry it. I've carried heavier that came up lighter."
+
+=> Hask weighed your last order on his scale, and it came up true.
+
+> Ask how the deck crew are holding up -> crew ? not seen crew
+> Ask about the scale -> scale ? not seen scale
+> Let him get on -> done
+
+== scale
+He folds it before he answers, and puts it in his pocket, and keeps his hand on it.
+
+@Chief Tobin Hask: "A Korrun thing, Captain. Honest weight. It was my father's, and it came up true for forty years." The longest pause yet. "Marrow calls it my jewelry. He's a good engineer. Don't look at it too close. It's old."
+
+> Ask how the deck crew are holding up -> crew ? not seen crew
+> Ask what your last order weighed -> weighed ? not seen weighed
+> Let him get on -> done
+
+== done
+@Chief Tobin Hask: "Captain." He doesn't say sir, and he won't. The scale goes back in his pocket, and his hand stays on it.

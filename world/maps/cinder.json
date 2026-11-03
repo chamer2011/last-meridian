@@ -39,16 +39,26 @@
         "##################1#######################################################"
       ],
       "writing": [
-        [24, 0, "SHIFT WHISTLE SILENT NINETEEN DAYS"]
+        [
+          24,
+          0,
+          "SHIFT WHISTLE SILENT NINETEEN DAYS"
+        ]
       ],
       "labels": [
         {
           "text": "SHIFT ROW",
-          "at": [3, 4]
+          "at": [
+            3,
+            4
+          ]
         },
         {
           "text": "THE GATE",
-          "at": [53, 8]
+          "at": [
+            53,
+            8
+          ]
         }
       ],
       "exits": {
@@ -61,7 +71,11 @@
           "via": "1",
           "closed": {
             "look": "The picket line, three weeks old, across the only road to the Stack. Nobody's going to stop you, and nobody's going to say a hard word. They'll only watch you cross, and they'll remember.",
-            "use": "I walk through the picket line toward the Stack, in front of everyone."
+            "use": "I walk through the picket line toward the Stack, in front of everyone.",
+            "ask": {
+              "opens": "You walk through the picket line toward the Stack, in front of everyone. Nobody stops you, and nobody says a hard word. They watch you cross, and they'll remember it.",
+              "flag": "crossed_the_picket"
+            }
           }
         }
       },
@@ -134,12 +148,19 @@
         "#################################3##########################"
       ],
       "writing": [
-        [3, 0, "HARD HATS BEYOND THIS POINT"]
+        [
+          3,
+          0,
+          "HARD HATS BEYOND THIS POINT"
+        ]
       ],
       "labels": [
         {
           "text": "THE STACK",
-          "at": [25, 8]
+          "at": [
+            25,
+            8
+          ]
         }
       ],
       "exits": {
@@ -211,7 +232,10 @@
       "labels": [
         {
           "text": "COMPANY HILL",
-          "at": [22, 3]
+          "at": [
+            22,
+            3
+          ]
         }
       ],
       "exits": {
@@ -284,7 +308,10 @@
       "labels": [
         {
           "text": "THE TUBES",
-          "at": [39, 3]
+          "at": [
+            39,
+            3
+          ]
         }
       ],
       "exits": {
@@ -347,7 +374,10 @@
       "labels": [
         {
           "text": "THE TAP",
-          "at": [4, 2]
+          "at": [
+            4,
+            2
+          ]
         }
       ],
       "exits": {
@@ -401,27 +431,42 @@
     "rooms": [
       {
         "level": "hill",
-        "at": [27, 1],
+        "at": [
+          27,
+          1
+        ],
         "text": "COMPANY HILL"
       },
       {
         "level": "row",
-        "at": [10, 4],
+        "at": [
+          10,
+          4
+        ],
         "text": "SHIFT ROW"
       },
       {
         "level": "stack",
-        "at": [42, 4],
+        "at": [
+          42,
+          4
+        ],
         "text": "THE STACK"
       },
       {
         "level": "tubes",
-        "at": [10, 8],
+        "at": [
+          10,
+          8
+        ],
         "text": "THE TUBES"
       },
       {
         "level": "tap",
-        "at": [46, 8],
+        "at": [
+          46,
+          8
+        ],
         "text": "THE TAP"
       }
     ]

@@ -35,12 +35,19 @@
         "##########################################1###############################"
       ],
       "writing": [
-        [3, 0, "THERE IS ROOM"]
+        [
+          3,
+          0,
+          "THERE IS ROOM"
+        ]
       ],
       "labels": [
         {
           "text": "THE BERTHS",
-          "at": [28, 4]
+          "at": [
+            28,
+            4
+          ]
         }
       ],
       "exits": {
@@ -101,7 +108,10 @@
       "labels": [
         {
           "text": "THE LONG QUAY",
-          "at": [26, 8]
+          "at": [
+            26,
+            8
+          ]
         }
       ],
       "exits": {
@@ -114,7 +124,10 @@
           "via": "1",
           "closed": {
             "look": "A small ship tied up at the end of the quay, and a very long line, coiled, with its far end already out in the dark. It only goes one way, until somebody hauls you back. Nobody can quite tell you what's out there, and those who've been won't stop thinking about it.",
-            "use": "I take the small ship out on the long line, past the lamp."
+            "use": "I take the small ship out on the long line, past the lamp.",
+            "ask": {
+              "answer": "The line waits, coiled, with its far end out in the dark. Not yet. When it's time to go past the lamp, you'll know, and so will everyone else."
+            }
           }
         },
         "3": {
@@ -172,16 +185,39 @@
         "####################1######################################"
       ],
       "writing": [
-        [3, 1, "ILUN"],
-        [3, 4, "ILARI"],
-        [3, 7, "VESHTI"],
-        [3, 10, "KORRUN"],
-        [3, 13, "THESSAN"]
+        [
+          3,
+          1,
+          "ILUN"
+        ],
+        [
+          3,
+          4,
+          "ILARI"
+        ],
+        [
+          3,
+          7,
+          "VESHTI"
+        ],
+        [
+          3,
+          10,
+          "KORRUN"
+        ],
+        [
+          3,
+          13,
+          "THESSAN"
+        ]
       ],
       "labels": [
         {
           "text": "THE STAIR OF THE LAMP",
-          "at": [34, 13]
+          "at": [
+            34,
+            13
+          ]
         }
       ],
       "exits": {
@@ -248,7 +284,10 @@
       "labels": [
         {
           "text": "THE HIGHEST ROOM",
-          "at": [12, 2]
+          "at": [
+            12,
+            2
+          ]
         }
       ],
       "exits": {
@@ -314,7 +353,10 @@
       "labels": [
         {
           "text": "PAST THE LAMP",
-          "at": [28, 4]
+          "at": [
+            28,
+            4
+          ]
         }
       ],
       "exits": {
@@ -366,27 +408,42 @@
     "rooms": [
       {
         "level": "highest",
-        "at": [41, 2],
+        "at": [
+          41,
+          2
+        ],
         "text": "THE HIGHEST ROOM"
       },
       {
         "level": "stair",
-        "at": [41, 4],
+        "at": [
+          41,
+          4
+        ],
         "text": "THE STAIR OF THE LAMP"
       },
       {
         "level": "quay",
-        "at": [12, 6],
+        "at": [
+          12,
+          6
+        ],
         "text": "THE LONG QUAY"
       },
       {
         "level": "berths",
-        "at": [28, 9],
+        "at": [
+          28,
+          9
+        ],
         "text": "THE BERTHS"
       },
       {
         "level": "past",
-        "at": [28, 12],
+        "at": [
+          28,
+          12
+        ],
         "text": "PAST THE LAMP"
       }
     ]

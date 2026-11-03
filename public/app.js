@@ -5,7 +5,7 @@ import { checkNode, checkOpen, focusCheck, initCheck, resetCheck, startChoiceChe
 import { api, el, meter, money, readLines } from "./dom.js";
 import { fightNode, fightOpen, focusFight, initFight, resetFight, startSim } from "./fight.js";
 import { focusRaid, initFleet, raidNode, raidOpen, resetRaid } from "./fleet.js";
-import { MENUS, initMenus } from "./menus.js";
+import { MENUS, MENU_GROUPS, initMenus } from "./menus.js";
 import { choicesFor, dropStaleTooltip, initStory, loreCatalog, optionContent, setStoryContext, storyEntryNode, thinkingNode } from "./story-view.js";
 import { focusTalk, initTalk, resetTalk, startTalk, talkNode, talkOpen } from "./talk.js";
 import { beginScene, initPopups, openPopups, popupNext, popupsAttached, popupsOpen, updatePopups } from "./popups.js";
@@ -201,7 +201,9 @@ function titleScreen() {
       el("button", { onclick: runAction(async () => loadGame(s.slot)) }, "Load"),
     )),
     !ui.settings.hasKey && ui.settings.provider === "claude" && el("div", { class: "card small" },
-      "You'll need to choose an AI before you can play the story. Once you start, open the Settings menu to paste an Anthropic API key or pick a local model."),
+      ui.settings.storyApplies === "written"
+        ? "No AI is set up, so a new game uses the written story, which is free. For now that's the openings for three lives, the arrival at Haven, the whole of the main story's first act and a story aboard the Meridian, and the rest is being written. An AI, added in the Settings menu once you've started, with an Anthropic API key or a local model, reads whatever you type and writes what isn't written yet."
+        : "You'll need to choose an AI before you can play the story. Once you start, open the Settings menu to paste an Anthropic API key or pick a local model."),
   );
 }
 
@@ -235,8 +237,8 @@ async function startNewGame(draft) {
   ui.error = null;
   ui.consoleLines = [];
   resetCreator();
-  // Without an AI configured, open Settings first. The story starts when the player is ready.
-  if (ui.settings.provider === "claude" && !ui.settings.hasKey) {
+  // A game with an AI game master and no AI configured opens Settings first. The story starts when the player is ready.
+  if (game.mode !== "written" && ui.settings.provider === "claude" && !ui.settings.hasKey) {
     ui.tab = "settings";
     ui.sideOpen = true;
     render();
@@ -272,11 +274,15 @@ function currentOptions() {
   const g = ui.game;
   // A fight, a check, a raid or a talk has its own window, with its own choices.
   if (ui.streaming || ui.waiting || g.combat || g.check || g.talk || g.fleet.raid) return [];
-  // After a fight or a check, the game waits. The AI is only called when the player says to carry on.
-  const carryOn = [{ label: "Continue the story", detail: "the game master picks it up from here", run: () => sendChat({ event: "continue" }) }];
+  // After a fight or a check, the game waits. The story only goes on when the player says to carry on.
+  const written = g.mode === "written";
+  const carryOn = [{ label: "Continue the story", detail: written || g.scene ? "the story picks it up from here" : "the game master picks it up from here", run: () => sendChat({ event: "continue" }) }];
   if (g.pendingEvents > 0) return carryOn;
-  const choices = choicesFor(g.transcript).map((choice) => ({ ...choice, run: () => takeChoice(choice) }));
-  // Walking and talking can leave the story with nothing on offer, and there should always be something to click.
+  // In a written part of a game with an AI, clicking a choice costs nothing: only typing goes to the AI.
+  const choices = choicesFor(g.transcript).map((choice) => ({ ...choice, ...(g.scene && !written ? { detail: "free" } : {}), run: () => takeChoice(choice) }));
+  // Walking and talking can leave the story with nothing on offer, and there should always be something to click,
+  // unless the written story has nothing more to say yet.
+  if (written && !g.scene) return choices;
   return !choices.length && walkShown() && g.transcript.length ? carryOn : choices;
 }
 
@@ -339,7 +345,8 @@ function composerNode() {
   const putAway = popupsShown() && !popupsOpen() && g.transcript.length > 0;
   const hint = ui.streaming || ui.waiting ? "processing..."
     : g.pendingEvents > 0 ? "press 1 to carry on, or type what you do next"
-      : popupsShown() ? "type an action" : "type an action, a number, or /help";
+      : g.scene && g.mode !== "written" ? "a choice is free; your own words are one call to the AI"
+        : popupsShown() ? "type an action" : "type an action, a number, or /help";
   return el("div", { class: "composer" }, el("div", { class: "composer-inner" },
     options.length > 0 && !putAway && el("div", { class: "options" }, options.map((o, i) => el("button", { disabled: o.disabled, onclick: o.run }, el("span", { class: "option-number" }, `${i + 1})`), optionContent(o)))),
     needsStart
@@ -454,13 +461,19 @@ const act = (body) => runAction(async () => {
 
 const menuAlerts = (g) => ({ character: g.statPoints, skills: g.skillPoints, perks: g.perkPoints, fleet: g.role.captain ? g.fleet.shortages.length : 0 });
 
+// The menus, in their groups, each group under its own heading. What a menu holds is on its tooltip, not on the screen.
 function menuButtons(g) {
   const alerts = menuAlerts(g);
-  return Object.entries(MENUS).filter(([, menu]) => !menu.captainOnly || g.role.captain).map(([id, menu]) => el("button", {
-    class: ui.sideOpen && id === ui.tab ? "active" : "",
-    "aria-pressed": String(ui.sideOpen && id === ui.tab),
-    onclick: () => toggleMenu(id),
-  }, menu.label, alerts[id] > 0 && el("span", { class: "badge" }, String(alerts[id]))));
+  return MENU_GROUPS.flatMap((group) => {
+    const entries = group.ids.map((id) => [id, MENUS[id]]).filter(([, menu]) => !menu.captainOnly || g.role.captain);
+    if (!entries.length) return [];
+    return [el("div", { class: "rail-group" }, group.title), ...entries.map(([id, menu]) => el("button", {
+      class: ui.sideOpen && id === ui.tab ? "active" : "",
+      "aria-pressed": String(ui.sideOpen && id === ui.tab),
+      title: menu.about,
+      onclick: () => toggleMenu(id),
+    }, menu.label, alerts[id] > 0 && el("span", { class: "badge" }, String(alerts[id]))))];
+  });
 }
 
 const railNode = () => el("nav", { class: "rail", id: "rail", "aria-label": "Menus" }, menuButtons(ui.game));

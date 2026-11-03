@@ -568,7 +568,7 @@ test("older saves get a campaign, and the same save always gets the same one", (
   save.contacts.push({ name: "Old Friend", attitude: "friendly", note: "Knew you back then." });
   save.contacts[0].note = "Commander Ilya Voss. She's hiding something about the Choir.";
   const game = migrateGame(structuredClone(save));
-  assert.equal(game.version, 14);
+  assert.equal(game.version, 15);
   assert.ok(game.campaign.startsWith(slugify(save.name)));
   assert.equal(migrateGame(structuredClone(save)).campaign, game.campaign);
   assert.deepEqual(game.bestiary, {});

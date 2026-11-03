@@ -1,7 +1,7 @@
 // The fleet's screens: the Fleet menu, the star map, and the raid window. Everything here is drawn
 // from the game's state, and every button runs on this computer, without the AI.
 
-import { api, el, meter, signed, strainMeter } from "./dom.js";
+import { api, el, folded, meter, signed, strainMeter, twoColumns } from "./dom.js";
 
 const raid = { report: null, message: null, sending: false };
 
@@ -70,7 +70,7 @@ function choiceCard({ current, name, detail, desc, onclick, disabled }) {
 }
 
 function rationsSection(f) {
-  return section("Rations", f.rations.map((r) => choiceCard({
+  return folded("fleet-rations", `Rations: ${f.rations.find((r) => r.current)?.name ?? "none"}`, f.rations.map((r) => choiceCard({
     current: r.current,
     name: r.name,
     desc: r.desc,
@@ -81,7 +81,7 @@ function rationsSection(f) {
 }
 
 function crewsSection(f) {
-  return section("Work crews", f.crews.map((c) => choiceCard({
+  return folded("fleet-crews", `Work crews: ${f.crews.find((c) => c.current)?.name ?? "none"}`, f.crews.map((c) => choiceCard({
     current: c.current,
     name: c.name,
     desc: c.desc,
@@ -115,7 +115,7 @@ function ordersSection(g) {
 
 function councilSection(f) {
   const { off, recent } = f.council;
-  return section("Officers and council",
+  return folded("fleet-council", "Officers and council",
     muted(off
       ? "You've told them to wait for your word, whatever happens."
       : "If something's gone wrong and stayed wrong, they'll deal with it themselves after a day or two, and tell you. An order of your own stands for a few days before they'd change it."),
@@ -154,7 +154,7 @@ function outsiderFleet(g) {
 }
 
 function logSection(f) {
-  return section("Fleet log", f.log.length
+  return folded("fleet-log", `Fleet log (${f.log.length})`, f.log.length
     ? f.log.map((entry) => el("div", { class: "menu-entry small" }, el("span", { class: "muted" }, entry.day), el("span", {}, entry.text)))
     : muted("Shortages, losses and raids will be recorded here."));
 }
@@ -240,7 +240,7 @@ export function fleetMenu() {
     el("div", { class: "row" }, tabButton("command", g.role.captain ? "Command" : "How it stands"), tabButton("ships", `Ships (${f.shipCount})`)),
     tab === "ships"
       ? shipsSection(f)
-      : !g.role.captain ? outsiderFleet(g) : el("div", { class: "menu-columns" }, statusSection(g), suppliesSection(f), ordersSection(g), rationsSection(f), crewsSection(f), councilSection(f), logSection(f)),
+      : !g.role.captain ? outsiderFleet(g) : twoColumns([statusSection(g), suppliesSection(f)], [ordersSection(g), rationsSection(f), crewsSection(f), councilSection(f), logSection(f)]),
   ];
 }
 
@@ -380,8 +380,8 @@ export function mapMenu() {
   const ships = g.locations.filter((place) => place.withFleet);
   return [
     el("div", { class: "menu-intro small" }, g.role.captain
-      ? `The fleet is ${f.atText}, with ${g.ship.fuel} fuel. Click a star to see what it would take to get there. A jump moves the whole fleet, and it costs nothing in AI credit: the story picks it up when you're ready.`
-      : `You're at ${g.location.name}, with ${g.credits} credits, and the fleet is ${f.atText}. Click a star to see what a passage there costs, on whatever's going that way. You go by yourself, and it costs nothing in AI credit.`),
+      ? `The fleet is ${f.atText}, with ${g.ship.fuel} fuel.`
+      : `You're at ${g.location.name}, with ${g.credits} credits, and the fleet is ${f.atText}.`),
     el("div", { class: "map-layout" },
       chartNode(g, onChart, selected),
       el("div", { class: "map-side" },
@@ -394,7 +394,7 @@ export function mapMenu() {
               ? el("span", { class: "tag on" }, "you are here")
               : el("button", { disabled: cannotAct() || !place.canGo, title: place.why ?? "", onclick: order({ action: "course", id: place.id }) }, g.role.captain || !place.jump ? "Go aboard" : `Go aboard, ${place.fare} cr`)))))),
     placeTable(g.locations.filter((place) => !place.withFleet)),
-    section("News from around",
+    folded("map-news", `News from around (${g.world?.news.length ?? 0})`,
       g.world?.news.length
         ? g.world.news.map((entry) => el("div", { class: "menu-entry small" }, el("span", { class: "muted" }, `Day ${entry.day}`), el("span", {}, ` ${entry.text}`)))
         : muted(`Nothing's reached ${g.role.captain ? "the fleet" : "you"} yet. News comes in as the days go by.`)),

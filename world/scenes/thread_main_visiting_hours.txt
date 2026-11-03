@@ -1,0 +1,702 @@
+# Visiting Hours
+// The third story of the main plot, from world/threads/main_visiting_hours.json, on Anselm's Mercy. The captain
+// gets the whole of it: the woman in the visitor's chair, Wen's paperwork, Tarrow's order, and who tells Pavel.
+// A porter on the Mercy and an orderly from the Meridian's medbay each get their own side, and anyone else
+// hears about it on the Sundial, where the little girl draws pianos. Draft by the AI (Claude), 2026-11-02,
+// not yet edited by the owner.
+start: start
+
+== start
+? life porter -> porter_start
+? life orderly -> orderly_start
+? not captain -> other_start
+AI: Ilse is kind, patient, and exactly right about everything Ilse ever knew. Asked anything Ilse never had to think about, such as today's date, what she ate yesterday or the name of this ward, she stops, and smiles, and says "soon". She only wants to take Pavel and Mila somewhere safe, and she never says where. Pavel is delighted and three years out of date, and nobody has told him anything. Wen says "Next."
+* raw travel {"destination": "anselm"}
+* raw set_scene {"area": "The Long Ward", "people": ["pavel", "wen"]}
+
+Anselm's Mercy smells of boiled linen and air that's been round too many times, and the Long Ward is a cargo hold with cots down it as far as you can see, and families asleep under the cots. The convalescent bay is at the near end, under the children's drawings taped over the warning labels. A thin man is sitting up in bed with a cup of tea, holding the hand of a woman in a grey coat, and he's humming. Three notes falling, one rising. The beds around him are breathing in time with it, and nobody's noticed.
+
+@Pavel Ostrov: "Captain! You've met Ilse?" He's delighted. "She brought the tea. She remembered Kasha's name, didn't you, love, after all this time. We were just saying about the ferries. Are they running yet, from the Aurelis side? Ilse says soon."
+
+@Ilse Ostrov: "Soon." She smiles at you. It's a good smile, a tired one, the smile of a woman who has come a long way to sit in a plastic chair. "You must be the one who got everybody out. Thank you. We'll be out of your way as soon as he's strong enough."
+
+Dr. Wen Adeyemi is standing behind you with a clipboard, and they don't look up from it.
+
+@Wen Adeyemi: "Four-twelve. Went on the list in the first month." A pen stroke. "Next."
+
+* new quest main_visiting_hours: Visiting Hours | A woman who knew the name of Pavel Ostrov's dog has come to see him on Anselm's Mercy. His wife is number 412 on Dr. Adeyemi's list, and the list says she died in the first month. | Find out who's sitting on Pavel's bed, and decide what happens before visiting hours end.
+
+> [composure:moderate] Sit down across from her, and talk -> talk_pass | talk_fail
+> Take Wen aside, and ask about four-twelve -> wen
+> [medicine:moderate] Read Pavel's chart, and the pod report under it -> chart_pass | chart_fail
+> [attunement:moderate] Listen to what he's humming -> hum_pass | hum_fail
+> [hacking:moderate] Pull the ship's visitor log, and the door sensors -> log_pass | log_fail
+
+== talk_pass
+You sit. She talks. The flat on Aurelis with the piano in the hall that nobody could get past. The dog, Kasha, who was afraid of the ferries. The wedding, which rained. She gets all of it right, every name, every date, and she laughs in the right places, and Pavel laughs with her and squeezes her hand.
+
+You ask her what she had for breakfast. She stops. She smiles.
+
+@Ilse Ostrov: "Soon." A pause the length of a breath. "We can all go soon. Is Mila eating? Somebody said there's a little girl on the Sundial who draws pianos." Nobody told her that. "She'd be seven now. I'd like to see her, before we go."
+
+=> She knows everything Ilse knew, and nothing Ilse never had to think about. She's asking after Mila.
+
+* flag talked_to_ilse
+* xp 10: Across the table from her
+* journal: The woman at Pavel's bedside knows everything Ilse Ostrov knew, down to the dog's name, and she stops dead at anything Ilse never had to think about. She's asking when they can leave, and whether Mila, on the Sundial, is eating.
+
+> Go on -> ward
+
+== talk_fail
+You sit. You last four minutes. She's perfect: the flat on Aurelis, the dog, the wedding that rained, and she laughs in the right places, and you can't look at the face while it does it. You stand up.
+
+@Ilse Ostrov: "You're tired." Kindly. "Is Mila eating? Somebody said there's a little girl on the Sundial who draws pianos. I'd like to see her, before we go."
+
+* stress 5: The face does everything right
+
+> Go on -> ward
+
+== wen
+Wen's paperwork lives in the old shuttle bay, in a cabinet with a chair in front of it that nobody's ever sat in. The list says Ilse Ostrov, 412, died in the first month, cause of death not recorded, which on this ship means the cause was the ship. Under it there's a transfer form, in Wen's own hand, with a date and a signature and no destination.
+
+@Wen Adeyemi: "Now. Soon. Can't." They tap the three columns with the pen, not looking up. "She was Can't. She asked. There are people who come with a boat when somebody asks." The pen stops. "I signed. I sign a lot of things. Next."
+
+=> Ilse Ostrov didn't die on the list. Wen signed her out to somebody with a boat.
+
+* flag knows_transfers
+* xp 10: Four-twelve
+* journal: Dr. Adeyemi's list says Ilse Ostrov died in the first month, and a transfer form in Wen's own hand says something else: she asked to go, and somebody with a boat took her. Wen won't defend it and won't deny it.
+
+> Go on -> ward
+
+== chart_pass
+Pavel's chart is three different hands and a page of the pod report somebody didn't want to lose. Found drifting, eleven days out, pod power at nothing, the man inside warm. Half copied, is the phrase the report uses, and then crosses out. Vocalisation, repetitive, the chart says, and under it a night nurse has written: Still Ward monitors keep time with him. Ask someone.
+
+You stand at the end of his bed and count. Three notes falling, one rising, and the whole row breathing with it.
+
+=> Pavel was found half copied in a drifting pod, and the ward breathes in time with what he hums.
+
+* raw update_story {"clue": "pavel_tune"}
+* flag read_chart
+* xp 10: The chart and the pod
+* journal: Pavel Ostrov was found drifting in a dead pod, half copied, the report says, and crossed out. He hums three notes falling and one rising, and a night nurse has written on his chart that the Still Ward's monitors keep time with him.
+
+> Go on -> ward
+
+== chart_fail
+Pavel's chart is three different hands, two of them in a hurry, and a pod report with the page you'd want missing. You learn that he's forty-four, that he's allergic to nothing, and that somebody has written "ask someone" in the margin without saying what.
+
+> Go on -> ward
+
+== hum_pass
+You listen. Three notes falling, one rising, and it isn't a tune, it's a place in a tune, the way a single bell is a place in a peal. Under it, a very long way off, there are others, taking turns, and one of them is nearer than the rest. One of them is sitting in the chair by his bed, holding his hand, and smiling at you.
+
+=> Pavel isn't humming alone, and one of the other voices is in the visitor's chair.
+
+* raw update_story {"clue": "pavel_tune"}
+* flag heard_round
+* xp 15: Not alone
+* stress 5: One of the voices is in the room
+* journal: Pavel's tune is one voice in a round, with the others a long way off and taking turns. One of them is nearer than the rest. One of them is sitting in the chair by his bed.
+
+> Go on -> ward
+
+== hum_fail
+It's a tune. Three notes down, one up. It's in your head for the rest of the day, and you catch yourself humming it on the shuttle, and stop.
+
+> Go on -> ward
+
+== log_pass
+The Mercy's visitor log is kept on a terminal older than the ship, and it takes an hour. Ilse Ostrov, signed in, three days running, always at the start of visiting hours. The door sensors are worse: she's been through the Still Ward at night, twice, where visitors don't go. And two days ago she was on the Sundial's shuttle manifest, there and back, with forty minutes in between in a family cabin on the farm ship, where somebody else's child was.
+
+=> She's been aboard three days, in the Still Ward at night, and on the Sundial, holding somebody's child.
+
+* flag read_logs
+* xp 15: The visitor log
+* journal: The Mercy's logs: the woman with Ilse's face has signed in three days running, walked the Still Ward at night, and spent forty minutes two days ago in a family cabin on the Sundial, where a child lives.
+
+> Go on -> ward
+
+== log_fail
+The visitor log has been wiped at exactly the hours you'd want, by someone who knew which hours those were, which is itself a thing to know. The terminal locks you out after an hour and asks for a password that's a dead man's name.
+
+> Go on -> ward
+
+== ward
+The ward's working it out. You can see it go down the row of cots like weather: a mother pulling her children under the cot, a man sitting up, Mercy Seven three beds away wiping their hands on nothing and watching the chair. Visiting hours end at the bell.
+
+> [composure:moderate] Sit down across from her, and talk -> talk_pass | talk_fail ? not seen talk_pass and not seen talk_fail
+> Take Wen aside, and ask about four-twelve -> wen ? not seen wen
+> [medicine:moderate] Read Pavel's chart, and the pod report under it -> chart_pass | chart_fail ? not seen chart_pass and not seen chart_fail
+> [attunement:moderate] Listen to what he's humming -> hum_pass | hum_fail ? not seen hum_pass and not seen hum_fail
+> [hacking:moderate] Pull the ship's visitor log, and the door sensors -> log_pass | log_fail ? not seen log_pass and not seen log_fail
+> Ask Mercy Seven what they're hearing -> seven ? not seen seven
+> The bell's about to go. Decide -> tarrow_arrives
+
+== seven
+Mercy Seven is three beds down, changing a dressing that doesn't need changing, and wiping their hands on nothing between every fold.
+
+@Mercy Seven: "Captain." A small pause. "I'd give it a sixty percent chance you're about to ask me something, and a forty percent chance I'd rather you didn't."
+
+> [persuasion:moderate:seven] Ask them straight what the tune is -> seven_told | seven_quiet
+> Leave them to their dressing -> ward
+
+== seven_told
+@Mercy Seven: "Three falling, one rising." They don't look at the chair. "It's the oldest verse. The part nothing that hunts you sings. It's one voice, Captain, in a round, and a round needs turns, and I'd give it ninety percent that you've already worked out who's taking the next one." They fold the dressing. "Eleven percent of me would like you not to have asked. The rest is grateful."
+
+=> Mercy Seven knows the tune, and what it means that it has turns.
+
+* raw update_story {"clue": "pavel_tune"}
+* flag seven_told
+* xp 10: What Seven knows
+* contact Mercy Seven friendly: You asked them straight, and they told you
+* journal: Mercy Seven says Pavel's tune is the oldest verse of the song, one voice in a round, and that a round needs turns. They'd rather I hadn't asked.
+
+> Go on -> ward
+
+== seven_quiet
+@Mercy Seven: "A tune, Captain. Forty percent chance it's nothing." They go back to the dressing. "Sixty percent, the bell's about to go."
+
+> Go on -> ward
+
+== tarrow_arrives
+AI: Tarrow is exactly polite and she wants a signature, full or narrow, before she does anything. The ward is a breath from a crowd, and she knows it, and she's counting on it a little.
+
+The bell goes for the end of visiting hours, and Lieutenant Tarrow comes down the Long Ward with four of her people and a sealed order, and nobody on this ship has ever seen her ask permission so politely.
+
+@Lieutenant Kara Tarrow: "Captain. Quarantine for this ship, effective on your signature, and a review of every Synthetic and augmented person in the fleet, ward by ward." She holds it out. "I've a team ready. I'd like six hours."
+
+Three beds down, Mercy Seven stops wiping their hands. The ward has gone very quiet, the quiet of a lot of people who've just understood who's sitting in the visitor's chair, and the woman in the chair is still holding Pavel's hand.
+
+@Ilse Ostrov: "When can we go?" To you, kindly. "He's tired. We should go soon."
+
+> Sign Tarrow's order as written -> tarrow_full
+> [persuasion:hard:tarrow] Give her a narrow order: this ward, this visitor, tonight -> tarrow_narrow | tarrow_full_anyway
+> Refuse her any order, and handle this yourself -> tarrow_refused
+
+== tarrow_full
+You sign. Tarrow folds it once and puts it away, and her people are already moving, and by the time the shuttle's back at the Meridian her list is live across forty-one ships. Mercy Seven doesn't look at you. Chief Marrow, when he hears, doesn't say anything at all.
+
+=> Tarrow's list is live. Every Synthetic in the fleet is confined tonight, and Seven and Marrow have stopped trusting the bridge.
+
+* flag tarrow_list_live
+* contact Kara Tarrow friendly: You gave her the order she wanted, as written
+* contact Mercy Seven wary: You signed Tarrow's list with them three beds away
+* journal: I signed Lieutenant Tarrow's order as written: the Mercy under quarantine, and every Synthetic and augmented person in the fleet reviewed and confined. Mercy Seven was three beds away when I did it.
+
+> Go on -> the_visitor
+
+== tarrow_narrow
+You cross out everything but the first line and write the rest yourself. This ward. This visitor. Tonight. Tarrow reads it twice.
+
+@Lieutenant Kara Tarrow: "Captain." Exactly polite. She signs under your signature, which she didn't have to. "I'll note for the file that I asked for more. I'll note that you said no." She folds it. "Six hours, this ward. Thank you."
+
+=> Tarrow took a narrow order, with exact politeness, and a note for the file.
+
+* flag tarrow_narrow
+* xp 10: A narrow order
+* contact Kara Tarrow neutral: You cut her order down to one ward, and she took it, with a note for the file
+
+> Go on -> the_visitor
+
+== tarrow_full_anyway
+You try to cut it down, and she listens to all of it, politely, and then she tells you how many augmented people are on this ship, and how many Synthetics, and how many of them are in this ward, and you sign the order as written because she's counted and you haven't.
+
+=> Tarrow's list is live, and she heard you try to stop it.
+
+* flag tarrow_list_live
+* contact Kara Tarrow neutral: You tried to cut her order down, and signed it anyway
+* contact Mercy Seven wary: You signed Tarrow's list with them three beds away
+* journal: I signed Lieutenant Tarrow's order as written, after trying not to: the Mercy under quarantine, and every Synthetic and augmented person in the fleet reviewed and confined.
+
+> Go on -> the_visitor
+
+== tarrow_refused
+@Lieutenant Kara Tarrow: "Captain." She puts the order away, unsigned, and it stays in her pocket, which you'll both remember. "Then I'd ask what you intend, and I'd ask it quickly."
+
+Her people stay where they are, at the end of the ward, and the ward looks from them to the chair and back.
+
+=> Tarrow has an unsigned order in her pocket, and she'll keep it there.
+
+* flag tarrow_refused
+* contact Kara Tarrow wary: You refused her an order in front of her own team
+
+> Go on -> the_visitor
+
+== the_visitor
+AI: Ilse will go wherever Pavel goes and nowhere else. Walked to a locked room, she goes, asking about Mila the whole way. Attacked, she fights to reach him and keeps talking. Nobody in the ward will touch her first.
+
+She's still holding his hand. The ward is watching you, and so is Tarrow, and so is Wen, who has stopped writing, which has never happened.
+
+@Ilse Ostrov: "When can we go?"
+
+> [leadership:hard] Calm the ward, and walk her to a locked room yourself -> held_pass | crowd
+> [melee:moderate] Take hold of her, without hurting the man in the bed -> pinned | mimic_fight
+> Draw, and take her down here -> mimic_fight
+> Open the ward door, and let her walk -> let_go
+> Sit with her until she stands, and let Pavel keep his visit -> sit
+
+== held_pass
+You say the ward's name, and then you say Pavel's, and then you say hers, and the ward holds still because you've said it like a captain and because nobody else is going to. You hold out your hand. She looks at Pavel, and lets go of his, and takes yours.
+
+She asks about Mila all the way down the Bell Stair, and whether she's eating, and whether she still draws, and the lock Wen opens for her is a linen store with a bolt on the outside, and she goes in and sits down on the folded sheets, and says soon.
+
+=> She walked to a locked room on your word, asking after Mila the whole way.
+
+* flag mimic_held
+* xp 20: The ward held
+* journal: I walked the woman with Ilse's face to a locked linen store on the Bell Stair, and she went, asking about Mila the whole way. The ward held because I said it would.
+
+> Go on -> tell
+
+== crowd
+FIGHT desperate_refugee
+  lead_in: The ward doesn't hold. A man two cots down says the word out loud, the one everyone's been thinking, and then there are six of them between you and Pavel's bed, with a dressing stand and a fire axe, and the woman in the chair hasn't moved.
+  enemy_followers: desperate_refugee, desperate_refugee
+  why: afraid
+  reason: They've worked out what's in the visitor's chair, and the man in the bed hums.
+  won -> crowd_held
+  lost -> crowd_took
+  talked -> crowd_held
+
+== crowd_held
+It's over in a minute, with nobody dead and a dressing stand in pieces, and in the minute the woman in the chair hasn't moved, except to put herself between the crowd and the bed. When you hold out your hand she looks at Pavel, and lets go of his, and takes yours.
+
+The lock Wen opens for her is a linen store on the Bell Stair with a bolt on the outside, and she asks about Mila all the way down.
+
+* flag mimic_held
+* xp 10: The ward, held late
+* journal: The ward went for Pavel, and it took a fight to stop it. Afterwards the woman with Ilse's face let me walk her to a locked linen store on the Bell Stair, asking about Mila the whole way.
+
+> Go on -> tell
+
+== crowd_took
+They get past you. They get Pavel out of the bed by the arms, humming, with his tea gone over the blanket, and they have him halfway to the Bell Stair lock before Wen puts a gurney across the stair and stands behind it, and Wen doesn't look up even then.
+
+When it's over, Pavel's in the Still Ward under a guard, with the eleven who breathe together, and the chair by his bed is empty, and nobody saw the woman in the grey coat leave.
+
+=> The crowd got to Pavel first. He's hidden in the Still Ward, and the visitor is gone.
+
+* flag pavel_hidden
+* flag mimic_escaped
+* health -5: The Long Ward
+* stress 8: The crowd
+* contact Sen Aduro wary: A crowd got to a patient of theirs while you were there
+* journal: A crowd got Pavel Ostrov out of his bed before I could stop it, and Wen stopped them with a gurney on the Bell Stair. He's hidden in the Still Ward now, under guard, and the woman with Ilse's face walked out in the noise.
+
+> Go on -> finish
+
+== pinned
+You take her by the wrists, and she's stronger than she looks and nothing like as strong as she could be, and she doesn't stop talking, and she doesn't hurt him. Tarrow's people have the restraints. The lock Wen opens is a linen store on the Bell Stair with a bolt on the outside.
+
+@Ilse Ostrov: "You don't have to." All the way down the stair. "Is Mila eating? You don't have to do this. We'll be gone soon."
+
+=> She's locked in a linen store on the Bell Stair, and she's still asking after Mila.
+
+* flag mimic_held
+* xp 10: Without hurting him
+* journal: I pinned the woman with Ilse's face without hurting Pavel, and Tarrow's people took her to a locked linen store on the Bell Stair. She asked about Mila the whole way.
+
+> Go on -> tell
+
+== mimic_fight
+FIGHT choir_mimic
+  lead_in: She lets go of his hand, carefully, the way you'd put down a cup. "I only came to take him home," she says, and she's between you and the bed, and the ward is screaming.
+  allies: tarrow
+  why: belief
+  reason: The Choir sent her for him, and the order feels to her exactly like love.
+  won -> mimic_down
+  lost -> mimic_won
+  fled -> mimic_gone
+  talked -> pinned
+
+== mimic_down
+She goes down by the bed, and what's under the grey coat isn't a woman, and the ward sees it. Pavel sees it. He's still holding the tea.
+
+Tarrow's people cut the core out of it on the deck plates, a cold grey thing the size of a fist, and it's warm, and somebody on the ward has started to cry, and it isn't Pavel, who's humming.
+
+=> The thing with Ilse's face is dead on the deck of the Long Ward, and you have its core.
+
+* item +choir_core
+* flag mimic_destroyed
+* xp 20: The visitor
+* stress 6: What was under the coat
+* journal: The woman with Ilse's face died on the deck of the Long Ward with the whole ward watching, and Pavel watching. Tarrow's people cut its core out. I have it.
+
+> Go on -> tell
+
+== mimic_won
+She puts you down without breaking anything, which is a kind of courtesy, and she takes his hand, and he goes with her because she asked. The Bell Stair lock cycles twice. By the time anyone can stand, the Mercy's short a patient, and the shuttle bay has a boat in it that isn't on any manifest, and then it hasn't.
+
+=> She took Pavel. The ward saw you fail to stop her.
+
+* flag pavel_taken
+* flag mimic_escaped
+* health -8: The Long Ward
+* stress 10: She asked him, and he went
+* contact Sen Aduro wary: A patient of theirs was taken off the Mercy while you were there
+* journal: The woman with Ilse's face put me down and took Pavel Ostrov off the Mercy by the hand, humming. A boat that was on no manifest left the shuttle bay, and then there was nothing to chase.
+
+> Go on -> finish
+
+== mimic_gone
+She lets go of his hand, and she's gone down the Long Ward faster than anyone should be, past the gurney Wen hasn't finished putting across the stair, and the lock cycles, and that's that. The Sundial's shuttle leaves in an hour. Nobody on it will remember a woman in a grey coat.
+
+=> She's gone, and the only place she's asked about is the Sundial.
+
+* flag mimic_escaped
+* stress 6: Gone toward the Sundial
+* journal: The woman with Ilse's face got away down the Bell Stair, and the Sundial's shuttle left an hour later. The only place she ever asked about is the Sundial, where Mila is.
+
+> Go on -> tell
+
+== let_go
+You open the ward door. She looks at Pavel for a long moment, and kisses his forehead, and tells him soon, and walks out past Tarrow's people, who look at you, and then at her, and let her.
+
+The Sundial's shuttle leaves in an hour. Nobody on it will remember a woman in a grey coat.
+
+=> You let her walk, and the only place she's asked about is the Sundial.
+
+* flag mimic_escaped
+* flag let_her_go
+* stress 4: You let her go
+* contact Kara Tarrow wary: You opened the ward door for it, in front of her team
+* journal: I opened the ward door and let the woman with Ilse's face walk out. She kissed Pavel's forehead first. The Sundial's shuttle left an hour later.
+
+> Go on -> tell
+
+== sit
+You sit down on the end of the bed, and the three of you talk about the ferries. The ward watches you do it and slowly goes back to being a ward. When the second bell goes she stands, and kisses his forehead, and tells him soon, and walks out past Tarrow's people, who look at you, and let her.
+
+@Pavel Ostrov: "Isn't she wonderful?" He's still humming. "She'll be back tomorrow. She always is."
+
+=> You gave Pavel his visit. She walked out at the bell, toward the Sundial.
+
+* flag mimic_escaped
+* flag let_her_go
+* xp 10: The ferries
+* contact Pavel Ostrov friendly: You sat with him and his wife, and talked about the ferries
+* contact Kara Tarrow wary: You let it walk out at the bell, in front of her team
+* journal: I sat with Pavel and the woman with Ilse's face until the bell, and talked about the ferries, and then let her walk out. He thinks she'll be back tomorrow. The Sundial's shuttle left an hour later.
+
+> Go on -> tell
+
+== tell
+Pavel's alone now, with the empty chair and the cold tea, and he's looking at the door.
+
+@Pavel Ostrov: "Did she say when she's coming back?" He's trying to be polite about it. "I'm sorry. I know you're busy. It's only that she didn't say."
+
+> Tell him the truth yourself, kindly -> told_kindly
+> Let Dr. Aduro tell him, as a doctor would -> told_aduro
+> Tell him nothing. Let him keep his visit -> told_nothing
+
+== told_kindly
+You sit on the end of the bed and tell him. The first month. The list. The boat. What came back wearing her face, and how it knew Kasha's name. You take as long as it takes, and you don't leave anything out, because he'd know.
+
+He doesn't cry at first. He asks whether the dog got out. He asks whether you're sure. Then he cries, and he apologizes for it, and he asks whether the people in the next beds are all right, because he's been keeping them awake.
+
+@Pavel Ostrov: "Thank you for telling me yourself." A long time later. "Most people wouldn't have. You look like you haven't slept, Captain. Will you sit a minute?"
+
+=> Pavel knows. He's devastated, and he's still the kindest man on the ship.
+
+* flag pavel_told
+* xp 15: The truth, kindly
+* belief mercy 1: You told a broken man the truth yourself, and stayed
+* contact Pavel Ostrov friendly: You told him about Ilse yourself, and stayed while he took it
+* contact Sen Aduro friendly: You told their patient the truth, kindly, and didn't leave it to them
+* journal: I told Pavel Ostrov the truth myself: the first month, the list, the boat, and what came back wearing Ilse's face. He asked whether the dog got out. He's still the kindest man on this ship.
+
+> Go on -> mila
+
+== told_aduro
+Dr. Aduro comes across from the Meridian and does it the way a doctor does: a chair, a hand on the blanket, the first name, and all of it, slowly. You watch from the end of the ward. He asks about the ferries once, in the middle, and then he stops asking.
+
+@Dr. Sen Aduro: "He'll sleep." They come back down the ward, not quickly. "He asked me to thank you. I'd have liked you to be the one, but I understand why you weren't."
+
+* flag pavel_told
+* contact Pavel Ostrov neutral: You had Aduro tell him about Ilse
+* contact Sen Aduro neutral: You left it to them to tell their patient the truth
+* journal: Dr. Aduro told Pavel Ostrov the truth about Ilse, as a doctor would, while I watched from the end of the ward. He'll sleep.
+
+> Go on -> mila
+
+== told_nothing
+You tell him she had to go, and that she'll send word, and he nods, and thanks you, and goes back to looking at the door. Wen, passing with the clipboard, doesn't look up.
+
+@Wen Adeyemi: "Next."
+
+Dr. Aduro, when they hear, is quiet for a long time, and then they ask you, using your first name, what you'd want someone to tell you.
+
+=> Pavel still thinks his wife will be back tomorrow, and Aduro knows you left him that.
+
+* flag pavel_untold
+* contact Sen Aduro wary: You left their patient a lie to live in, and they know it
+* journal: I told Pavel nothing. He still thinks Ilse will be back tomorrow. Dr. Aduro asked me what I'd want someone to tell me.
+
+> Go on -> mila
+
+== mila
+There's a little girl on the Sundial who draws pianos. Mila Ostrov, seven, in a family cabin on the farm ship, with a woman from the next cabin who's been feeding her and doesn't know whose she is. Nobody told Pavel she was alive. Nobody told her he was.
+
+> Bring Mila across to see her father -> met_mila
+> Not yet. Not until he's himself again -> not_yet
+
+== met_mila
+She comes across on the afternoon shuttle with a roll of drawings under her arm and the woman from the next cabin holding her other hand, and she stops at the end of the Long Ward when she sees him, and he stops humming, and the whole ward is pretending not to watch.
+
+He tunes her toy piano by ear, on the blanket, with the cold tea beside him, and gets every note exact, and she tells him he's doing it wrong, and he does it again.
+
+=> Pavel has met Mila. Whatever was done to him in that pod, he can still tune a piano by ear.
+
+* flag pavel_met_mila
+* xp 15: The toy piano
+* journal: Mila came across from the Sundial with her drawings. Pavel tuned her toy piano by ear, on the blanket, and got every note exact. Whatever the pod did to him, that's still there.
+
+> Go on -> wen_transfers
+
+== not_yet
+You leave her on the Sundial for now, with the woman from the next cabin and her drawings, and you tell Steward Tull to put her name next to his on the list she keeps of people who belong to each other, so that nobody can lose it again.
+
+* flag mila_waits
+* journal: Mila Ostrov stays on the Sundial for now, with her name written next to her father's on Steward Tull's list, until he's himself again.
+
+> Go on -> wen_transfers
+
+== wen_transfers
+? not flag knows_transfers -> finish
+
+Wen finds you on the Sorting Deck with the transfer forms, nine of them, in their own hand, and puts them on the table between you without a word, and then says the word anyway.
+
+@Wen Adeyemi: "Transfers. Nine, this year. They asked. I signed." They don't sit. "Can't is a column. Nobody wants it to be a boat. Next."
+
+> Shut it down: no more boats off this ship -> transfers_shut
+> Sign off on it, and own it -> transfers_signed
+> Say nothing, and leave Wen their list -> transfers_left
+
+== transfers_shut
+You shut it down. No more boats. Wen countersigns the order without reading it, and goes back to the Sorting Deck, and the dying on Ward Six go on dying the way the list says, with nothing left to ask for.
+
+=> The boats have stopped. The dying have nothing left to ask for, and the Quiet know whose order that was.
+
+* flag transfers_shut
+* faction quiet -8: You stopped the boats off Anselm's Mercy
+* contact Wen Adeyemi wary: You stopped their transfers, and they signed the order without reading it
+* journal: I stopped Wen's transfers: no more boats off the Mercy for the dying who ask. Wen countersigned without reading it.
+
+> Go on -> finish
+
+== transfers_signed
+You sign under Wen's name on all nine, and the tenth, which is blank. It's the fleet's now, and yours.
+
+@Wen Adeyemi: "Next." They take the forms. At the hatch they stop, which they never do. "There's a surgeon's lens in my locker that I don't use. Take it. Next."
+
+=> The boats are the captain's now, in writing, and Wen gave you something from their own locker.
+
+* flag transfers_owned
+* item +surgeon_lens
+* faction quiet 5: You signed for the boats off Anselm's Mercy
+* contact Wen Adeyemi friendly: You put your name under theirs on the transfers
+* journal: I signed under Wen's name on the transfers, all nine and the blank tenth. The boats off the Mercy are mine now, in writing. Wen gave me a surgeon's lens from their own locker.
+
+> Go on -> finish
+
+== transfers_left
+You say nothing. Wen waits exactly as long as it takes to be sure you've said it, and picks up the forms.
+
+@Wen Adeyemi: "Next."
+
+* flag transfers_left
+* journal: Wen showed me the transfer forms, nine of them, and I said nothing, and they took them back.
+
+> Go on -> finish
+
+== finish
+? flag pavel_taken -> end_taken
+? flag pavel_hidden -> end_hidden
+? flag mimic_destroyed -> end_core
+? flag mimic_held -> end_held
+-> end_gone
+
+== end_taken
+The Mercy goes back to being the Mercy, and a cot in the convalescent bay is stripped and filled by lunchtime, and the only thing that's different is that nobody on the ward hums any more, and the eleven in the Still Ward have stopped breathing together.
+
+Tarrow has the ship under her hand, and Aduro doesn't say anything to you for a week.
+
+* quest main_visiting_hours done: She took Pavel. The Mercy's short a patient, and the tune's gone with him.
+* xp 10: Visiting hours
+
+END
+
+== end_hidden
+Pavel's in the Still Ward under a guard, with the eleven who breathe together, and the night staff say the monitors have never kept better time. The crowd's gone back to being a ward. The chair by his old bed is empty, and the woman in the grey coat is somewhere on the Sundial, where the little girl draws pianos.
+
+* quest main_visiting_hours done: Pavel's hidden in the Still Ward, and the visitor is loose on the Sundial.
+* xp 10: Visiting hours
+
+END
+
+== end_core
+The core sits on the plot table on the Meridian, grey and warm, and Marrow won't touch it and Mercy Seven won't look at it, and Sorel says, low, that it's reading something, over and over, in Navy format, and that he'd like permission not to listen.
+
+The Mercy has gone back to being the Mercy, except for the deck plates by Pavel's bed, which somebody has scrubbed twice.
+
+=> You have a Choir core, and it's still reading something in Navy format.
+
+* quest main_visiting_hours done: The visitor's dead, and the fleet has its core. Somebody will have to read it.
+* xp 15: Visiting hours
+
+END
+
+== end_held
+She's in the linen store on the Bell Stair with a bolt on the outside and a guard who doesn't like the job, and she asks everyone who passes whether Mila's eating. Tarrow would like to know why the captain hesitated. Wen has put a cup of tea through the hatch twice.
+
+Nobody has said out loud what's to be done with her, and the longer nobody does, the more of the ship goes down to the Bell Stair to listen to her ask.
+
+=> The thing with Ilse's face is locked on the Bell Stair, alive, and pleading to see her family.
+
+* quest main_visiting_hours done: She's locked on the Bell Stair, alive, and asking for her family. Nobody's said what happens next.
+* xp 15: Visiting hours
+
+END
+
+== end_gone
+She's gone, and the only place she ever asked about is the Sundial, and Steward Tull has put a guard on the family cabins and doesn't know why. The Mercy's gone back to being the Mercy. Pavel hums, and the ward sleeps better than any ward in the fleet, and nobody's asking why.
+
+* quest main_visiting_hours done: She's loose, and the only place she ever asked about is the Sundial.
+* xp 10: Visiting hours
+
+END
+
+== porter_start
+You're pushing a gurney down the Long Ward at the start of visiting hours when you notice the old man in the convalescent bay is humming, three notes falling and one rising, and that the whole row of beds around him is breathing in time with it. There's a woman in the visitor's chair holding his hand. She's brought tea. He's calling her Ilse, and you know that name, because you know everybody's number on the list, and hers is four-twelve, and four-twelve is the first month.
+
+* new quest main_visiting_hours: Visiting Hours | A woman who knew the name of Pavel Ostrov's dog has come to see him, and his wife is number 412 on Dr. Adeyemi's list. Nobody with any power looks at a porter twice. | Push the gurney, or don't.
+
+> [awareness:easy] Stop pushing, and listen to what he's humming -> porter_heard | porter_missed
+> Find Dr. Adeyemi, and tell them who's in the chair -> porter_told
+> It's visiting hours. Push the gurney -> porter_pushed
+
+== porter_heard
+Three falling, one rising. It isn't a tune, it's a place in one, and the row breathes with it, and the woman in the chair is breathing with it too, exactly, which the others aren't. You push the gurney on, slowly, and count the beds that are in time. Nine.
+
+=> You heard what the old man hums, and that the visitor breathes in time with it.
+
+* raw update_story {"clue": "pavel_tune"}
+* flag heard_pavel
+* xp 10: Nine beds in time
+* journal: Pavel Ostrov in the convalescent bay hums three notes falling and one rising, and nine beds breathe in time with him. So does his visitor, exactly.
+
+> Go on -> porter_wen
+
+== porter_missed
+He's humming. It's annoying. It's in your head by the end of the row, and you push the gurney a little faster to get away from it.
+
+> Go on -> porter_wen
+
+== porter_wen
+Dr. Adeyemi is at the end of the ward with the clipboard, and they've seen you stop, because they see everything and look at nothing.
+
+@Wen Adeyemi: "Four-twelve." Not looking up. "I know. Keep pushing. Next."
+
+> Go on -> porter_end
+
+== porter_told
+You find Dr. Adeyemi on the Sorting Deck and tell them. They don't stop writing.
+
+@Wen Adeyemi: "Four-twelve. First month. I've sent for the captain." A pen stroke. "You're the first on this ship to say it to me. Keep pushing. Next."
+
+* contact Wen Adeyemi friendly: You told them who was in the chair, before anyone else did
+* xp 10: You said it first
+
+> Go on -> porter_end
+
+== porter_pushed
+You push the gurney. It's visiting hours, and it's a ward, and the old man's humming, and the woman's holding his hand, and the list is the list.
+
+> Go on -> porter_end
+
+== porter_end
+The bell goes. Security comes down the Bell Stair with a sealed order, and the captain's shuttle is in the bay, and whatever happens to the woman in the grey coat is the fleet's business and not a porter's. By the night shift the chair's empty, and the old man's still humming, and Dr. Adeyemi has put a cup of tea through the hatch of the linen store on the Bell Stair, which they never explain.
+
+* quest main_visiting_hours done: You saw it first. The fleet's business is the fleet's.
+
+END
+
+== orderly_start
+Dr. Aduro takes the call from the Mercy at the end of a long shift and says your name, which they only do when they're worried, and twenty minutes later you're on the shuttle across with their bag, because somebody has to carry it and nobody looks at an orderly twice.
+
+On the Long Ward an old man is sitting up in bed humming, three notes falling and one rising, with a woman in a grey coat holding his hand, and Dr. Adeyemi standing behind the captain not looking up from a clipboard.
+
+@Dr. Sen Aduro: "His chart." Quietly, to you. "And the pod report under it, if they've kept it. I'd like a second pair of eyes, and I'd like them to be yours."
+
+* new quest main_visiting_hours: Visiting Hours | Dr. Aduro has taken you across to Anselm's Mercy as their hands, to see a patient whose wife is number 412 on the list, and who has a visitor. | Read what Aduro asks you to read.
+
+CHECK medicine:moderate
+  reason: Pavel's chart, and the pod report
+  pass -> orderly_chart
+  fail -> orderly_nothing
+
+== orderly_chart
+Found drifting, eleven days out, the pod dead, the man inside warm. Half copied, the report says, and crosses out. Vocalisation, repetitive. And in a night nurse's hand: Still Ward monitors keep time with him. Ask someone. You show Aduro the line, and Aduro reads it, and looks at the woman in the chair for the first time.
+
+@Dr. Sen Aduro: "Thank you." Using your first name. "Don't say that to anyone on this ward. Say it to me again on the shuttle."
+
+=> Pavel was found half copied, and the Still Ward keeps time with him, and Aduro knows you saw it.
+
+* raw update_story {"clue": "pavel_tune"}
+* xp 15: A second pair of eyes
+* contact Sen Aduro friendly: You found the line on the chart they'd missed
+
+> Go on -> orderly_end
+
+== orderly_nothing
+Three hands, two of them in a hurry, and the page you'd want missing from the pod report. You hand it back and Aduro reads it themselves, slowly, and doesn't find anything either.
+
+> Go on -> orderly_end
+
+== orderly_end
+The bell goes. Lieutenant Tarrow comes down the ward with a sealed order, and three beds away Mercy Seven stops wiping their hands, and you're the only one who sees them do it, because you're the only one not looking at the chair. Whatever the captain decides, you'll carry Aduro's bag back to the shuttle afterwards, and Aduro won't say anything on the way, and that will be its own answer.
+
+* quest main_visiting_hours done: You saw the chart, and Seven's hands, and carried the bag back.
+
+END
+
+== other_start
+A woman came through the family cabins on the Sundial two days ago asking after a little girl who draws pianos. She knew the girl's name, which is Mila, and the dog's, which the girl can't remember, and she held her for forty minutes, and the woman from the next cabin who feeds the child thought nothing of it until this morning, when the Mercy's shuttle brought the story across with the laundry.
+
+* new quest main_visiting_hours: Visiting Hours | A woman who knew the name of Pavel Ostrov's dog has come to see him on Anselm's Mercy, and his wife is number 412 on Dr. Adeyemi's list. She's been on the Sundial, too, holding a child. | Say something to somebody, or don't.
+
+> [awareness:easy] Look at the little girl's drawings, pinned along the end of the Long Furrow -> other_drawings | other_nothing
+> Tell Steward Tull a stranger's been asking about a child -> other_told
+> It isn't your business -> other_end
+
+== other_drawings
+Pianos. A dozen of them in crayon, with a man beside each one, and the newest, from two days ago, isn't a piano. It's a lighthouse, with a door in it, and a woman at the door, and the woman is holding the man's hand.
+
+* flag saw_mila_drawing
+* xp 10: The newest drawing
+* journal: Mila Ostrov's drawings along the Long Furrow are pianos, with a man beside each one. The newest is a lighthouse with a door in it, and a woman at the door holding the man's hand.
+
+> Go on -> other_end
+
+== other_nothing
+Crayon. Pianos, mostly. A child's.
+
+> Go on -> other_end
+
+== other_told
+Steward Tull listens with her arms folded, and then she goes and stands outside the family cabins herself, with a hoe, until the night shift, and puts a guard there after it.
+
+@Steward Grann Tull: "Nobody comes through my cabins asking after anybody's child." She doesn't say thank you, which from her is the same thing.
+
+* contact Grann Tull friendly: You told her a stranger had been at the family cabins
+* xp 10: The family cabins
+
+> Go on -> other_end
+
+== other_end
+Whatever the fleet does about the woman on the Mercy, the Sundial's family cabins have a guard on them from tonight, and the little girl goes on drawing.
+
+* quest main_visiting_hours done: You heard about the woman who asked after a child, and the family cabins have a guard now.
+
+END

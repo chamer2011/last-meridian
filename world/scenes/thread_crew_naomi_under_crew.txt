@@ -1,0 +1,702 @@
+# The Downstairs Crew
+// Plays when the lead is taken up from the Leads menu, aboard the Meridian. The notes it's written from
+// are in world/threads/crew_naomi_under_crew.json. The captain gets the whole story. Anyone else gets a
+// smaller one, from the part called heard.
+start: doorway
+
+== doorway
+? not captain -> heard
+
+Naomi Cass is in your doorway, which means she got past two hatches that were shut and one marine who was awake. She's twelve. The sleeves of her jacket are rolled five times, and there's duct grease in her hair.
+
+@Naomi Cass: "Section Fourteen will not be vented tomorrow."
+
+She says it flat, the way Commander Voss says things, and then she's a kid again, looking at the ration bar on your desk.
+
+@Naomi Cass: "Are you going to finish that? Technically it's a formal notice. I'm supposed to wait for an answer."
+
+* new quest crew_naomi_under_crew: The Downstairs Crew | A twelve-year-old has informed you that Section Fourteen will not be vented tomorrow. Chief Marrow's hull work says otherwise. | Find out what's in Section Fourteen, and why Naomi Cass cares.
+
+> Ask her what's in Section Fourteen -> asked
+> [leadership:moderate] Tell her the vent is the captain's decision, and ask who sent her -> ordered_pass | ordered_fail
+> [intimidation:moderate:naomi] Tell her Lieutenant Tarrow can clear a section in an hour -> scared_pass | scared_fail
+> Pick up the ration bar, and go with her now -> which_way
+
+== asked
+@Naomi Cass: "People." She thinks about it. "Technically. They won't come out, Upstairs Captain. The last time an adult found one of us, she got sent to the Wintermere and she stopped talking."
+
+Us. She hears it a second after you do, and lifts her chin as if she meant it.
+
+@Naomi Cass: "We'll negotiate. With you. Not the Scan Lady, not Swear Chief. In person." She looks at your boots, and then at your shoulders, and makes a face. "It's crawling, mostly."
+
+> Go with her -> which_way
+> Ask Chief Marrow about the hull work first -> marrow_first
+> Tell her the vent goes ahead, and whoever's down there has until morning -> ignored_warning
+
+== ordered_pass
+She stands up straighter. It costs her something, and she pays it.
+
+@Naomi Cass: "Nobody sent me. I'm the captain. Downstairs." A breath. "There are thirty-one of us. From the Ember Day. We have a council, and laws, and a court, and a doctor. Section Fourteen is where we sleep. Chief Marrow's hull work vents it at oh-six-hundred." The flat voice again. "Come and see, or don't vent it. Those are the choices, Upstairs Captain. Technically."
+
+* flag naomi_straight
+* journal: Naomi Cass says thirty-one children from the creche ship Ember Day live in the Meridian's crawlspaces, with a council of their own. Section Fourteen is their dormitory, and the hull work vents it tomorrow.
+
+> Go with her -> which_way
+> Ask Chief Marrow about the hull work first -> marrow_first
+
+== ordered_fail
+@Naomi Cass: "Nobody sent me. I'm the captain of." She stops. "Of downstairs."
+
+She's gone before you've worked out which hatch she used. The deck plate she came out of is back in place, and it doesn't look like a deck plate that moves.
+
+> Ask Chief Marrow where a twelve-year-old could get to from here -> marrow_first
+> Let it go. The vent goes ahead -> ignored_warning
+
+== scared_pass
+She goes white under the grease. For a moment she's exactly as old as she is.
+
+@Naomi Cass: "If the Lieutenant comes down, we go deeper. You won't find us, and the vent gets whoever's slow." Her voice doesn't shake, which is worse. "Thirty-one of us. From the Ember Day. There's a boy with a fever who can't go deeper. That's what you'd be doing."
+
+She'll take you down. She won't look at you while she does it.
+
+* flag scared_naomi
+* contact Naomi Cass wary: You threatened her with Lieutenant Tarrow, and she told you the truth anyway.
+* journal: Naomi Cass says thirty-one children from the creche ship Ember Day live in the Meridian's crawlspaces. Section Fourteen is where they sleep, and the hull work vents it tomorrow. One of them has a fever.
+
+> Go with her, and keep Tarrow out of it -> which_way
+> Send for Lieutenant Tarrow anyway -> tarrow_sweep
+
+== scared_fail
+@Naomi Cass: "No."
+
+That's all. She's twelve, and she looks at you the way Voss looks at a bad plot, and then she's gone through a deck plate that doesn't move.
+
+> Ask Chief Marrow where a twelve-year-old could get to from here -> marrow_first
+> Let it go. The vent goes ahead -> ignored_warning
+
+== tarrow_sweep
+Lieutenant Tarrow takes four marines and a cutting torch, and is very polite about it. They're down for two hours. They come back with a painted duct panel, a sock, and nothing else.
+
+@Lieutenant Kara Tarrow: "A dormitory, Captain. Thirty-one bedrolls, by my count, and a set of laws. Children's handwriting." She sets the sock on your desk, exactly square. "They heard us coming. I'd like it noted that I was told nothing, and that I'd have gone in quieter if I had been."
+
+The vent goes ahead on schedule. Nobody is in Section Fourteen when it does, because they've drilled for that. Where they are now, nobody upstairs knows.
+
+=> Thirty-one children know every secret on the ship, and now they know what you did with theirs.
+
+* quest crew_naomi_under_crew failed: You sent security into Section Fourteen. The children went deeper, and they aren't coming back out for you.
+* contact Naomi Cass hostile: You sent Lieutenant Tarrow after her people.
+* flag downstairs_enemies
+* stress 6: You know what the sock means
+* xp 5: It's over, and nobody died
+END
+
+== marrow_first
+* raw set_scene {"area": "Engineering", "people": ["Dunn Marrow"]}
+
+Engineering is a furnace of pipe-heat and swearing, as always. Marrow is up to his elbows in a coolant line, and he answers without taking them out.
+
+@Chief Engineer Dunn Marrow: "Fourteen? Dead run of duct and a vent cycle, Captain. Been on my list a month. Every time I schedule it, the valves are sticky." He pulls his arms out and looks at them. "Sticky. Like something's been in the works. I've been calling it my ghost, since you ask, which you didn't."
+
+He knows a way in, if you're set on it. The Cold Elbow, behind the coolant tanks. He'd like it noted that he said it was a bad idea, in case it is.
+
+* flag marrow_asked
+
+> Go down through the Cold Elbow -> which_way
+> Ask Quartermaster Brandt about Section Fourteen's rations first -> brandt
+
+== brandt
+* raw set_scene {"area": "The Aft Holds", "people": ["Odessa Brandt"]}
+
+Quartermaster Brandt doesn't look up from her ledger until you've said the number fourteen twice.
+
+@Quartermaster Odessa Brandt: "Thirty-one crates. Miscellaneous, perishable. Drawn weekly against Section Fourteen." She licks her pencil. "On paper."
+
+She watches to see whether you caught it. You did.
+
+@Quartermaster Odessa Brandt: "Four months. I never went to look, Captain. If I'd gone to look I'd have had to write down what I found, and I'd have had to find thirty-one of something else to feed it to." She writes your name in the margin. "Which count would you like?"
+
+* flag brandt_knows
+* journal: Quartermaster Brandt has been drawing thirty-one crates a week against Section Fourteen for four months, as miscellaneous, perishable, and has never gone to look.
+
+> Go down through the Cold Elbow -> which_way
+
+== which_way
+* raw set_scene {"area": "Engineering", "people": ["Naomi Cass"]}
+
+Behind the coolant tanks there's a hatch the size of a serving tray, and a crawl that goes down into the warm dark. Naomi goes through it like water. Marrow's welders are twenty meters away, with their backs turned, for now.
+
+@Naomi Cass: "The Cold Elbow's quick, but it's tight. The Whistler's longer and it goes round the back of them." She considers you again. "You're wider than a Cold Elbow person. Technically."
+
+> [stealth:easy] Take the Whistler, the long way round, so the welders don't see -> crawl | seen_going_in
+> [athletics:moderate] Take the Cold Elbow, however tight it gets -> tour | stuck
+
+== seen_going_in
+A welder turns round at exactly the wrong moment and watches the captain of the fleet put her head into a duct. By the second watch the whole ship will know, and by the third, Marrow will.
+
+@Naomi Cass: "That's Mister Washers' cousin. He tells everyone everything." She sighs. "Come on."
+
+* flag crew_saw
+
+> Go on anyway -> crawl
+
+== crawl
+The Whistler is named for the noise it makes when the air handlers cycle, which they do while you're in it. It's a long crawl through warm dark, past places where the metal has been polished smooth by small knees, and then there's light ahead, and voices, and a painted duct.
+
+> Go on -> tour
+
+== stuck
+You get your shoulders through the Cold Elbow and nothing else. For a long moment the ship holds you by the ribs.
+
+@Naomi Cass: "Breathe out. All the way. Now turn. No. The other way." A pause. "That's half a ration bar, for directions."
+
+You come out the other side with your dignity somewhere behind you, and light ahead.
+
+* stress 3: The Cold Elbow
+
+> Go on -> tour
+
+== tour
+* raw set_scene {"area": "Section Fourteen", "kind": "ducts", "people": ["Naomi Cass", "Pim", "Wick", "the Downstairs Council"], "things": [{"name": "The laws, painted on a duct", "look": "Eleven laws in three colors of paint, in handwriting that improves as it goes. Law one is NO FIRE. Law eleven is NOBODY GOES UPSTAIRS ALONE, underlined twice."}, {"name": "The court", "look": "Two crates and a blanket. Someone is being tried for a sock. The sock is in evidence, on a third crate, and nobody is allowed to touch it."}, {"name": "The curtain", "look": "An insulation blanket hung across the end of the section. There's coughing behind it, and the children don't look at it when it happens."}]}
+
+Section Fourteen is a dead run of duct the length of the mess hall, lit by stolen worklights, and thirty children stop what they're doing when you come out of the wall. Nobody runs. They look at Naomi, and Naomi nods, and they go back to it.
+
+There are laws painted on the duct, in three colors, and a court in session on two crates. A boy of about nine is up to his elbows in a junction box, and he looks at the wrench in your hand and says, not unkindly, that you're holding it wrong.
+
+@Naomi Cass: "That's Wick. He's the chief engineer. Don't tell Swear Chief." She points with her chin. "That's the council. That's the court. The sock thing is complicated." She doesn't point at the curtain at the end, where somebody is coughing. "They call you the Upstairs Captain. I said it was all right."
+
+> Ask about the coughing behind the curtain -> fever
+> Ask Wick about the junction box -> engineer
+> Ask the council what they want from the Upstairs Captain -> treaty
+> You've seen enough for now -> decide
+
+== fourteen
+The council waits on its crates. Naomi watches you watch them. Behind the curtain, when it's quiet, somebody coughs.
+
+> Ask about the coughing behind the curtain -> fever ? not seen fever
+> Ask Wick about the junction box -> engineer ? not seen engineer
+> Ask the council what they want from the Upstairs Captain -> treaty ? not seen treaty
+> You've seen enough. It's time to decide -> decide
+
+== engineer
+Wick shows you the junction box the way Marrow shows you the reactor, which is to say he explains everything and apologizes for none of it. He's rerouted three of Marrow's sticky valves so the air in Fourteen stays warm, and he did it with a spoon.
+
+@Naomi Cass: "He's been telling people the ship is kind to him. Technically it's him being kind to the ship. He doesn't like it when I say that."
+
+Wick says the ship has a name, and that it isn't Meridian, and that he isn't telling.
+
+* flag met_wick
+* journal: A nine-year-old called Wick has been rerouting the Meridian's valves from inside the ducts. Marrow's ghost is a child with a spoon.
+
+> Go on -> fourteen
+
+== treaty
+They've drafted a treaty. It has clauses. The council reads it to you in turns, standing on a crate to do it, and it is better than anything Speaker Halm has signed this year.
+
+Rations, by weight. Lessons, by the Wintermere's book, but down here. A drill for when the alarm goes. No adults below the Names Bulkhead without a child to vouch for them. Clause nine is in different handwriting from the rest, smaller and very careful: THE UPSTAIRS CAPTAIN WILL FIND OUT IF A MAN CALLED CASS IS ON ANY MANIFEST.
+
+Naomi doesn't look at clause nine while it's being read.
+
+* flag read_treaty
+* flag clause_nine
+
+> Ask Naomi about clause nine -> clause_nine
+> Fold the treaty and put it in your pocket -> fourteen
+
+== clause_nine
+@Naomi Cass: "My dad." Flat, and then not. "He was on the dock at Cassin when we were put through. Technically he could be on the Marigold. They didn't count everyone on the Marigold."
+
+You know who keeps the fleet's manifests. Quartermaster Brandt has every name aboard every ship, and she has had them for four months.
+
+@Naomi Cass: "You don't have to say anything now. It's in the treaty, is all. So it's not a favor."
+
+* flag asked_clause_nine
+* journal: Clause nine of the children's treaty asks whether a man called Cass is on any manifest. Naomi's father was on the dock at Cassin Station. Brandt would know.
+
+> Go on -> fourteen
+
+== fever
+Behind the curtain there's a boy called Teo, three days into a fever, and a girl of ten called Pim who is the doctor, and who has run out of ideas, and who would rather die than say so.
+
+@Naomi Cass: "Doctor Pim." It's a title. She uses it carefully. "He's not getting better. She knows that. Don't say it to her."
+
+The medicine is on the far side of the deep duct, in a crate they haven't been able to reach for two days, because something has been nesting in the duct. Something that eats insulation, and isn't particular.
+
+> [melee:easy] Take a broom handle, and go through with the children -> broom_pass | broom_fail
+> Draw your weapon, and go through first -> rats_fight
+> Send up for Dr. Aduro, whatever it costs you downstairs -> aduro_comes
+
+== broom_pass
+The rats are the size of dogs and the broom handles are the length of children, and it works anyway, because there are nine of them and they've done it before. You take the big one in the deep duct, and they'd like it noted that they didn't need help. You note it.
+
+* flag rats_cleared
+
+> Go on to the medicine -> bedside
+
+== broom_fail
+The rats are the size of dogs. One of them is on your arm before you've got the broom handle round, and it's Pim who gets it off, with a spanner. The children finish the rest. They'd like it noted that they didn't need help, and from where you're lying, that's fair.
+
+* health -4: A scrap rat in the deep duct
+* flag rats_cleared
+
+> Go on to the medicine -> bedside
+
+== rats_fight
+FIGHT scrap_rat
+  lead_in: You go into the deep duct first, and the dark in front of you turns out to be fur. Behind you, nine children with broom handles hold their breath.
+  enemy_followers: scrap_rat
+  won -> rats_won
+  lost -> rats_lost
+  fled -> rats_fled
+
+== rats_won
+The duct is quiet. Pim steps over the nearest rat without looking at it and goes for the medicine crate.
+
+@Naomi Cass: "We'd have got them." A pause. "Eventually."
+
+* flag rats_cleared
+
+> Go on -> bedside
+
+== rats_lost
+You come round in the dormitory with a child's blanket over you and the taste of insulation in your mouth. The children went through after you fell, with broom handles, and they got the medicine, and they'd like it noted. Pim is doing something to your arm with a spanner.
+
+* flag rats_cleared
+* stress 4: You were carried out of a duct by children
+
+> Go on -> bedside
+
+== rats_fled
+You back out of the deep duct. The children watch you do it, and then nine of them go through with broom handles, and they're back in ten minutes with the crate and the rats dealt with.
+
+Nobody says anything about it. Naomi doesn't have to.
+
+* flag rats_cleared
+* flag ran_from_rats
+* contact Naomi Cass neutral: She watched you back out of the deep duct, and her people go through it without you.
+
+> Go on -> bedside
+
+== bedside
+Teo is small and very hot and doesn't know you're there. The crate has what Pim needs, and Pim is looking at it, and at you, and working out whether to ask.
+
+> [medicine:moderate] Treat him yourself, and show Pim what you're doing -> treated | not_better
+> Hand Pim the crate, and send up for Dr. Aduro -> aduro_comes
+
+== treated
+It's an infection, and the fever is the fight. You do what the medbay would do with less than the medbay has, and you say each step out loud for Pim, who repeats it under her breath. By the time you're done his breathing has changed. Pim says it would have changed anyway. She writes it all down.
+
+=> Doctor Pim watched you work, and the Downstairs Crew saw you do it.
+
+* flag boy_treated
+* xp 15: Teo's fever
+* contact Naomi Cass friendly: You went through the deep duct and treated Teo, and showed Pim how.
+
+> Go back to the council -> fourteen
+
+== not_better
+You do what you can with what's in the crate, and it isn't enough, and Pim watches you find that out. She takes the crate back from you very gently.
+
+@Naomi Cass: "Doctor Sad could do it." She means Aduro. "Doctor Sad tells people things, though."
+
+> Send up for Dr. Aduro -> aduro_comes
+> Leave Teo to Pim, and keep this downstairs -> left_sick
+
+== left_sick
+You leave him with her. Pim doesn't say anything, and neither does Naomi, and the coughing follows you back up the duct.
+
+* flag boy_sick
+* stress 5: You left a sick child to a ten-year-old doctor
+
+> Go back to the council -> fourteen
+
+== aduro_comes
+Dr. Aduro comes down the Whistler on their hands and knees, in their good coat, with a bag, and doesn't say a word about any of it until Teo is sleeping properly and Pim has been shown the two things she was missing.
+
+@Dr. Sen Aduro: "You could have led with the child." Soft, unhurried. They look round the dormitory, at the laws, at the court, at thirty faces. "I'm going to want to see all of them, you understand. I'm going to want a list."
+
+The children have never heard an adult say that as if it were good news. Naomi looks at you. An adult knows now, and it's your fault, and it might be all right.
+
+=> Dr. Aduro knows about the Downstairs Crew, and has a list.
+
+* flag aduro_knows
+* flag boy_treated
+* contact Dr. Sen Aduro friendly: You brought them down to a sick child in the walls.
+* xp 10: Teo will live
+
+> Go back to the council -> fourteen
+
+== decide
+Tomorrow comes at oh-six-hundred, and this is a warship with children in its walls. The council is watching you. So is the court. So, from behind the curtain, is Pim.
+
+@Naomi Cass: "Well, Upstairs Captain."
+
+> [persuasion:hard:naomi] Put it to their council: come up as crew, with rations, lessons and a drill for when the alarm goes -> council_pass | council_fail ? not seen council_fail
+> [leadership:moderate] Swear them in as ship's cadets, here and now, by their own treaty -> sworn | cadets_fail ? flag read_treaty and not seen cadets_fail
+> [engineering:moderate] Reroute Marrow's hull work around Fourteen, and let them stay hidden -> reroute_pass | reroute_fail ? not seen reroute_fail
+> [intimidation:moderate:naomi] Order them out. The section is being vented, and that's final -> order_pass | order_fail ? not seen order_fail
+> [! this is a warship] Have Tarrow take them to the school ship Wintermere -> wintermere
+> Go back up, and let the vent go ahead as planned -> ignored
+
+== council_pass
+They vote on it. They vote on whether to vote on it first. It takes an hour and ten minutes, and there's a recess for the sock, and in the end it carries, nineteen to twelve, with Naomi abstaining because the captain of downstairs doesn't vote.
+
+@Naomi Cass: "Technically," she says, when it's done, "you still have to sign."
+
+> Sign -> sworn
+
+== council_fail
+They vote on it. It takes an hour and ten minutes, and it fails, fourteen to seventeen, because a girl of eight asks what happens to them if the Upstairs Captain dies, like the last one, and you don't have an answer she likes.
+
+@Naomi Cass: "You can come back." She shrugs. "With sweets. The council likes sweets, technically. And the truth. Those are the two things."
+
+> Go on -> decide
+
+== cadets_fail
+You say the words, and the words don't take. They're used to the laws on the duct, not to being told, and Wick says, politely, that cadets of what. The council goes back to its crates.
+
+@Naomi Cass: "It's not that they don't believe you. It's that believing you is upstairs business."
+
+> Go on -> decide
+
+== sworn
+? flag orchard_out -> reunion
+
+You swear them in by their own treaty, under their own laws, with the sock still in evidence. Wick is the first, because the chief engineer goes first. Naomi is the last, because the captain of downstairs goes last, and she says the words flat and perfect, the way Voss would.
+
+Voss, when she's told, reads the treaty twice, says nothing, and corrects a typo in clause four. By the end of the week there are thirty-one cut-down uniforms, and a drill for when the alarm goes, and a nine-year-old on the engineering roster that Marrow swears about and defends to anyone who asks. Speaker Halm demands they be moved to the Wintermere. Garrick Fenn puts the story out on the fleet band, and it's the most popular thing he's ever aired.
+
+The Meridian has thirty-one new crew who know every secret on the ship. If she ever takes a hit, you'll have to live with where you put them.
+
+=> The Downstairs Crew are the Meridian's cadets, by treaty, and the whole fleet knows it.
+
+* quest crew_naomi_under_crew done: Thirty-one children from the Ember Day are the Meridian's cadets, by their own treaty. They know every duct on the ship, and they're yours.
+* xp 40: The Downstairs Crew
+* contact Naomi Cass ally: You signed her treaty and made her people crew.
+* faction fleet 3: Thirty-one children came out of the walls as cadets
+* belief community 1: You made room for them instead of moving them
+* flag downstairs_crew
+* flag children_are_crew
+* journal: The Downstairs Crew were sworn in as cadets by their own treaty. Voss corrected a typo in clause four. Halm wants them moved to the Wintermere, and Garrick Fenn's story about them is the most popular he's ever aired.
+
+> Tell Naomi the truth about clause nine: there's no Cass on any manifest -> truth_told ? flag clause_nine
+> [deception:moderate:naomi] Tell her you're still looking -> lie_pass | lie_fail ? flag clause_nine
+> Leave clause nine for the treaty's first renewal -> renewal ? flag clause_nine
+> Climb back up -> back_up ? not flag clause_nine
+
+== reunion
+Before any of the rest of it, there's one thing to be done, and Marrow does it. He brings Orchard down the Whistler on a cargo sled, the nursery carer off the Ember Day, and in the worklight of Section Fourteen she counts them, out loud, the way she has every night in the dark of the aft hold. Thirty-one. All present.
+
+Even Tarrow, who came down to object, can't find anything to say.
+
+* journal: Orchard, the nursery synthetic from the Ember Day, counted the children of Section Fourteen in daylight. Thirty-one. All present.
+* stress -8: All present
+
+> Go on -> sworn_after_reunion
+
+== sworn_after_reunion
+You swear them in by their own treaty, under their own laws, with the sock still in evidence and Orchard watching. Wick is the first, because the chief engineer goes first. Naomi is the last, because the captain of downstairs goes last, and she says the words flat and perfect, the way Voss would.
+
+Voss reads the treaty twice, says nothing, and corrects a typo in clause four. By the end of the week there are thirty-one cut-down uniforms and a drill for when the alarm goes. Speaker Halm demands they be moved to the Wintermere. Garrick Fenn puts the story out on the fleet band, and it's the most popular thing he's ever aired.
+
+=> The Downstairs Crew are the Meridian's cadets, by treaty, and the whole fleet knows it.
+
+* quest crew_naomi_under_crew done: Thirty-one children from the Ember Day are the Meridian's cadets, by their own treaty. Orchard counted them in daylight.
+* xp 40: The Downstairs Crew
+* contact Naomi Cass ally: You signed her treaty and made her people crew.
+* faction fleet 3: Thirty-one children came out of the walls as cadets
+* belief community 1: You made room for them instead of moving them
+* flag downstairs_crew
+* flag children_are_crew
+* journal: The Downstairs Crew were sworn in as cadets by their own treaty, with Orchard watching. Halm wants them moved to the Wintermere.
+
+> Tell Naomi the truth about clause nine: there's no Cass on any manifest -> truth_told ? flag clause_nine
+> [deception:moderate:naomi] Tell her you're still looking -> lie_pass | lie_fail ? flag clause_nine
+> Leave clause nine for the treaty's first renewal -> renewal ? flag clause_nine
+> Climb back up -> back_up ? not flag clause_nine
+
+== truth_told
+You tell her. There's no Cass on any manifest in the fleet. Brandt checked four months ago, and checked again when you asked, and there isn't.
+
+Naomi goes very quiet. Then she says, "Technically that doesn't mean he's dead," and goes back to work.
+
+=> You told Naomi the truth about her father, and she'll remember that you did.
+
+* flag naomi_knows_father
+* belief reason 1: You told a child the truth when a kindness was on offer
+* contact Naomi Cass ally: You told her the truth about clause nine, and she went back to work.
+
+> Climb back up -> back_up
+
+== lie_pass
+You tell her you're still looking, and that manifests from the Fall are a mess, which is true, and that there's hope, which isn't. She nods, and goes back to work, and writes something small in the margin of the treaty.
+
+=> She'll check. She always checks.
+
+* flag lied_to_naomi
+
+> Climb back up -> back_up
+
+== lie_fail
+You tell her you're still looking. She watches your face while you say it, the way she's watched adults' faces since the Fall, and she knows.
+
+@Naomi Cass: "Okay." She folds the treaty. "Technically that's not in the treaty. Lying. I'll put it in for the renewal."
+
+=> Naomi caught you lying about her father.
+
+* flag naomi_caught_lie
+* contact Naomi Cass neutral: She caught you lying to her about clause nine, on the day you made her a cadet.
+
+> Climb back up -> back_up
+
+== renewal
+You say nothing about clause nine, and she doesn't ask. It stays in the treaty, in its careful handwriting, and the treaty says it comes up for renewal every ninety days.
+
+* flag clause_nine_open
+* journal: Clause nine stands unanswered in the children's treaty, and comes up at every renewal.
+
+> Climb back up -> back_up
+
+== back_up
+* raw set_scene {"area": "Engineering", "people": []}
+
+You come up out of the wall behind the coolant tanks with duct grease in your hair and thirty-one new problems, and Marrow's welders don't look round, because by now they've been told not to.
+END
+
+== reroute_pass
+You don't tell anyone. You take Marrow's hull schedule and you move the vent cycle for Fourteen to a run of duct nobody lives in, and you make the valves sticky yourself, and you sign it with his initials, because that's what he'd do.
+
+He finds out at the second watch, as he was always going to, and he comes to find you with the schedule in his fist and coolant on it, and he gets as far as "Captain, which flaming" before Naomi, who is behind you, says: "Wick did the valves. He's nine."
+
+Marrow stops. Something happens to his face.
+
+@Chief Engineer Dunn Marrow: "My ghost is NINE?"
+
+He goes down the Whistler himself that night, which takes a while, and comes back up swearing softly and with a list of parts.
+
+=> Section Fourteen stays hidden, and Chief Marrow is in on it.
+
+* quest crew_naomi_under_crew done: You rerouted the hull work around Section Fourteen. The children stay hidden in the walls, and Marrow knows, and swears he doesn't.
+* xp 25: You kept them hidden and alive
+* flag downstairs_hidden
+* flag marrow_knows_fourteen
+* contact Chief Engineer Dunn Marrow friendly: You let him find out about his ghost in his own time.
+* contact Naomi Cass friendly: You kept them hidden, the way they asked.
+* journal: The vent cycle for Section Fourteen was moved. The children stay hidden, and Chief Marrow has met his ghost and taken him a list of parts.
+END
+
+== reroute_fail
+You get as far as Marrow's valve board before you set off the one alarm on it that works, and Marrow comes round the coolant tanks at a speed you didn't know he had.
+
+@Chief Engineer Dunn Marrow: "Captain. With respect. Which flaming hatch did you come out of, and what have you done to my valves?"
+
+There's no way through it but the truth, and the truth takes him down the Whistler himself that night. He comes back up swearing softly, and the hull schedule changes in the morning, in his handwriting, and nobody is told why.
+
+@Chief Engineer Dunn Marrow: "My ghost is NINE. I want it on record that I'm the one that fixed it."
+
+* stress 4: Caught at the valve board by your own chief engineer
+
+> Go on -> rerouted_by_marrow
+
+== rerouted_by_marrow
+=> Section Fourteen stays hidden, and Chief Marrow is in on it, because he had to be.
+
+* quest crew_naomi_under_crew done: Marrow rerouted the hull work around Section Fourteen himself, after catching you at it. The children stay hidden in the walls.
+* xp 15: They're hidden and alive, with help
+* flag downstairs_hidden
+* flag marrow_knows_fourteen
+* contact Chief Engineer Dunn Marrow friendly: He caught you at his valve board and then met his ghost.
+* contact Naomi Cass friendly: You kept them hidden, the way they asked, more or less.
+* journal: Marrow caught you at his valve board, went down the Whistler himself, and moved the vent cycle for Section Fourteen. The children stay hidden.
+END
+
+== order_pass
+You give the order the way orders are given, and it works the way orders work on frightened people: some of them obey. Eleven children come up through the Cold Elbow behind you, in a line, holding hands, and Tarrow has them in the Hot Bunks by the second watch.
+
+Twenty don't. By the time the vent cycle runs, Section Fourteen is empty and the laws have been scraped off the duct, and the twenty who went deeper know every secret on the ship, and have one of their own now, which is what you did.
+
+@Naomi Cass: "Eleven," she says, from somewhere behind the wall, and that's the last you hear from her for a long time.
+
+=> Twenty children went deeper, and you've made enemies of people who know every duct on the ship.
+
+* quest crew_naomi_under_crew done: You ordered them out. Eleven came. Twenty went deeper into the Meridian, with Naomi, and they know what you did.
+* xp 10: Eleven children are in the Hot Bunks
+* contact Naomi Cass hostile: You ordered her people out of Section Fourteen, and most of them went deeper instead.
+* flag downstairs_enemies
+* flag eleven_came_up
+* belief order 1: You gave the order and let it stand
+* stress 6: Twenty children in the dark, because of you
+END
+
+== order_fail
+@Naomi Cass: "No."
+
+The council doesn't vote on it. Wick closes his junction box. Somebody takes the sock out of evidence and puts it in a pocket, and in the time it takes you to turn round, there are nine children in Section Fourteen instead of thirty, and then four.
+
+@Naomi Cass: "We go deeper. That's the rule. Law seven." She's the last one. "You can still pick something else, Upstairs Captain. Technically."
+
+> Go on -> decide
+
+== wintermere
+Tarrow is polite about it, and the children go to the Wintermere in two shuttle loads, with their laws rolled up under Wick's arm. Safe on paper. The Wintermere's teachers put them in a dormitory with drawings on the walls, and feed them, and count them every night, and that should be the end of it.
+
+Naomi doesn't speak to you on the shuttle. Within a week she's back, alone, in the walls, and you find out because Marrow's valves go sticky again. It isn't clear who else came with her.
+
+=> The children are on the Wintermere, on paper. Naomi isn't.
+
+* quest crew_naomi_under_crew done: The Downstairs Crew were sent to the school ship Wintermere. Naomi Cass is back in the Meridian's walls within a week, and maybe not alone.
+* xp 15: Thirty children are safe, on paper
+* contact Naomi Cass wary: You sent her people to the Wintermere, and she came back without you.
+* flag naomi_in_the_walls
+* belief order 1: You put them where the rules said they belonged
+* journal: The children of Section Fourteen were moved to the Wintermere. Naomi Cass came back to the Meridian's walls within a week, alone, or not.
+END
+
+== ignored
+You go back up the way you came, and you let the schedule stand.
+
+The vent cycle for Section Fourteen runs at oh-six-hundred. Nobody is in it. They got out with four minutes to spare, because they've drilled for it, in a line, holding hands, with the sock. Nobody died, and that's the whole of the good news.
+
+Marrow's valves are smooth for the first time in a month. Three days later Brandt's thirty-one crates stop being drawn, and she writes nothing in either ledger about why. Somewhere in the ship there's a new map on a duct, and your quarters are marked on it in red.
+
+=> The Downstairs Crew got out by themselves, and they've marked you as hostile.
+
+* quest crew_naomi_under_crew failed: You let the vent cycle run. The children got out with minutes to spare, and they've redrawn their map with your quarters marked hostile.
+* contact Naomi Cass hostile: You went back up and let the vent run on her people.
+* flag downstairs_enemies
+* stress 5: Four minutes to spare
+* xp 5: It's over, and nobody died
+END
+
+== ignored_warning
+You let the schedule stand. Whoever is down there has until morning, and you've said so, and that's the end of your part in it.
+
+The vent cycle for Section Fourteen runs at oh-six-hundred. Nobody is in it. Marrow's valves are smooth for the first time in a month, and three days later Quartermaster Brandt stops drawing thirty-one crates a week against a dead section, and writes nothing in either ledger about why. You never find out what the crates were for. Somebody has, though, and somewhere in the ship there's a map with your quarters marked on it in red.
+
+=> Whoever was in Section Fourteen got out, and they've marked you as hostile.
+
+* quest crew_naomi_under_crew failed: You let the vent cycle run without going down. Whoever was in Section Fourteen got out, and has marked your quarters on a map in red.
+* contact Naomi Cass hostile: You gave her until morning, and let the vent run.
+* flag downstairs_enemies
+* xp 5: It's over, and nobody died
+END
+
+// ---- Someone who isn't the captain ------------------------------------------------------
+
+== heard
+Naomi Cass has been telling everyone who'll listen that Section Fourteen will not be vented tomorrow. She's twelve, she says it the way Commander Voss says things, and nobody who outranks you is listening.
+
+She's in the passage outside, now, with duct grease in her hair, looking at your ration bar.
+
+@Naomi Cass: "You're not the Upstairs Captain." It isn't a question. "Technically I can only tell the Upstairs Captain. You can tell the Scan Lady, though, if you want. She listens. She just doesn't say so."
+
+* new quest crew_naomi_under_crew: The Downstairs Crew | A twelve-year-old says Section Fourteen won't be vented tomorrow, and nobody who outranks you is listening. | Find out what's in Section Fourteen, or find someone who'll listen.
+
+> Take it to Commander Voss -> told_voss
+> [stealth:moderate] Follow her when she goes back down -> followed | caught_following
+> It isn't your business -> not_mine
+
+== not_mine
+You finish the ration bar. She watches you do it, and then she's gone through a deck plate that doesn't move, and whatever's in Section Fourteen is upstairs business, the way everything is.
+
+The vent cycle runs at oh-six-hundred, and if anybody was in there, nobody says.
+
+* quest crew_naomi_under_crew failed: You let it go. The vent cycle ran, and whatever was in Section Fourteen is upstairs business.
+END
+
+== told_voss
+Commander Voss listens to all of it without a word, with the burn scar along her jaw not moving at all, and when you're done she says, "Noted," and goes back to her plot.
+
+That's all, for two days. On the third day there are thirty-one children in cut-down uniforms on the Names Bulkhead, in a line, being sworn in as cadets by their own treaty, and a nine-year-old on the engineering roster that Marrow swears about and defends. Voss corrects a typo in clause four. Nobody mentions that you were the one who told her.
+
+The girl with the grease in her hair finds you later and puts half a ration bar on the bench beside you, and says it's for directions, and goes.
+
+=> The Downstairs Crew came out of the walls as cadets, because you took it to Voss.
+
+* quest crew_naomi_under_crew done: You took Naomi's notice to Commander Voss. Thirty-one children from the Ember Day are the Meridian's cadets now, by their own treaty.
+* xp 15: You found someone who'd listen
+* contact Naomi Cass friendly: You took her notice to the Scan Lady, who listened.
+* flag downstairs_crew
+* flag children_are_crew
+* journal: Thirty-one children from the Ember Day were living in the Meridian's ducts. Voss had them sworn in as cadets after you told her. Naomi Cass paid you half a ration bar for it.
+END
+
+== caught_following
+You get as far as the Cold Elbow before a welder's light finds you, and then Chief Marrow does, at a speed you didn't know he had.
+
+@Chief Engineer Dunn Marrow: "Out. Out of my flaming ducts, before you're part of them." He has you by the collar. "Whatever you think's down there, it's a vent cycle and a month of sticky valves, and it's mine."
+
+He puts you out on the deck like a cat. By the time you've got the grease off, Naomi's long gone, and whatever's in Section Fourteen is still upstairs business.
+
+* quest crew_naomi_under_crew failed: You tried to follow Naomi into the ducts and Chief Marrow put you out on the deck by the collar.
+* stress 3: Put out of the ducts by the collar
+END
+
+== followed
+* raw set_scene {"area": "Section Fourteen", "kind": "ducts", "people": ["Naomi Cass", "Pim", "the Downstairs Council"], "things": [{"name": "The laws, painted on a duct", "look": "Eleven laws in three colors of paint. Law eleven is NOBODY GOES UPSTAIRS ALONE, underlined twice."}, {"name": "The curtain", "look": "An insulation blanket across the end of the section. There's coughing behind it."}]}
+
+You follow her down the Whistler on your knees, through warm dark polished by small hands, and come out into a dead run of duct the length of the mess hall, with thirty children in it and laws painted on the wall.
+
+They stop. Naomi turns round, and sighs, the way Voss sighs.
+
+@Naomi Cass: "You're not supposed to be here. Law eleven." She looks at the council, on its crates. "They won't talk to you. You're not the Upstairs Captain. Technically you're nobody."
+
+Behind a curtain at the end of the section, somebody is coughing, and a girl of about ten is standing in front of it with a spanner, as if that would help.
+
+> [medicine:moderate] Go past the girl with the spanner, and look at whoever's coughing -> helped | not_helped
+> Go back up, and bring Dr. Aduro down -> fetched_aduro
+> Go back up, and keep what you saw to yourself -> kept_quiet
+
+== helped
+The girl with the spanner is called Pim, and she's the doctor, and she has run out of ideas three days ago. The boy is called Teo. You do what you can with what's in their crate, and you say each step out loud, and Pim repeats it under her breath and writes it down, and by the time you're done his breathing has changed.
+
+@Naomi Cass: "Okay." She looks at you differently. "Technically you're still nobody. But you can come back."
+
+=> The Downstairs Crew know your face, and Doctor Pim has your method written down.
+
+* quest crew_naomi_under_crew done: You followed Naomi into the walls and treated a sick boy for a ten-year-old doctor. The Downstairs Crew keep their secret, and you keep it with them.
+* xp 20: Teo's fever
+* contact Naomi Cass friendly: You went down uninvited and treated Teo, and showed Pim how.
+* flag downstairs_friend
+* flag boy_treated
+* journal: Thirty-one children from the Ember Day live in the Meridian's ducts, with a council and a ten-year-old doctor called Pim. You treated a boy called Teo, and kept their secret.
+END
+
+== not_helped
+You do what you can, and it isn't enough, and Pim takes the crate back from you very gently.
+
+@Naomi Cass: "Doctor Sad could do it." She means Aduro. "Doctor Sad tells people things, though."
+
+> Go back up, and bring Dr. Aduro down -> fetched_aduro
+> Go back up, and keep what you saw to yourself -> kept_quiet
+
+== fetched_aduro
+Dr. Aduro listens to you with their skin patterns going slowly dim and bright, and then they take a bag and their good coat and go down the Whistler on their hands and knees without another word.
+
+They're down there four hours. When they come up, Teo is sleeping properly, and Pim has been shown the two things she was missing, and Aduro has a list of thirty-one names and the look of someone who is about to have a very long conversation with the captain.
+
+By the end of the week there are thirty-one cadets in cut-down uniforms, and a vent cycle that's been moved, and nobody mentions that you were the one who went for the doctor. Except Naomi, who leaves half a ration bar on your bench.
+
+=> Dr. Aduro knows about the Downstairs Crew, because you went and got them.
+
+* quest crew_naomi_under_crew done: You brought Dr. Aduro down to the children in the walls. Teo lived, Aduro took a list to the captain, and the Downstairs Crew came out as cadets.
+* xp 15: You went for the doctor
+* contact Dr. Sen Aduro friendly: You brought them to a sick child in the walls.
+* contact Naomi Cass friendly: You went and got Doctor Sad for Teo.
+* flag aduro_knows
+* flag boy_treated
+* flag downstairs_crew
+* journal: Thirty-one children from the Ember Day were living in the Meridian's ducts. You brought Dr. Aduro down to a sick boy, and within the week the children were cadets.
+END
+
+== kept_quiet
+You go back up the Whistler and you tell nobody. Behind you, somebody is coughing.
+
+The vent cycle for Section Fourteen doesn't run in the morning. Marrow's valves are sticky again, and he swears about his ghost, and you know what the ghost is, and you say nothing. Whatever happens to the boy behind the curtain, you don't hear about it.
+
+=> You know what's in Section Fourteen, and you've told nobody.
+
+* quest crew_naomi_under_crew done: You found the children in the walls, and kept their secret, and left them to it.
+* xp 5: You kept a secret that wasn't yours
+* flag knows_fourteen
+* stress 4: The coughing behind the curtain
+END
