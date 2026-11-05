@@ -1,0 +1,10 @@
+# Last Officer Standing
+order: 41
+needs skill: leadership 4, persuasion 3
+
+In a line:
+You got the chair because everyone above you died, and you've learned to read a room that knows it. +1 Leadership, and better tools in Persuasion, Leadership and Streetwise check windows, as if you were one tier better.
+
+Effects:
+skills: leadership 1
+better tools in: persuasion 1, leadership 1, streetwise 1

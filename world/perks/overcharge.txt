@@ -1,0 +1,7 @@
+# Overcharge
+order: 24
+needs perk: steady_aim
+ability: overcharged_shot
+
+In a line:
+Unlocks Overcharged Shot in combat: 3 energy, +6 damage.

@@ -1,0 +1,51 @@
+# Sunniva Reddick
+title: Captain
+also called: Captain Sunniva Reddick, Captain Reddick, Reddick
+pronouns: she/her
+species: human
+age: 53
+faction: fleet
+role: Captain of the Meridian, when the player isn't
+place: meridian
+color: #b8d0a0
+listed: no
+chair: yes
+
+In a line:
+Captain of the Meridian. A supply officer who got the chair because everyone above her died, and who runs from every fight she can.
+
+Appearance:
+Small and square, with reading glasses on a cord and a slate she never puts down. Her uniform's a size too big, because it belonged to someone else.
+
+Personality:
+Careful, patient and exact. She doesn't believe in luck or speeches, and she knows what everything costs. People find her cold until they notice who's still alive.
+
+Voice:
+She speaks in quantities. "That's eleven days of parts." She doesn't raise her voice, and she doesn't repeat herself.
+
+Goals:
+Keep as many people alive for as long as she can, and don't go anywhere near the Beacon until someone can tell her what it is.
+
+Secrets:
+She has never commanded anything bigger than a cargo section, and every raid terrifies her. She keeps a count of everyone she's left behind, on the inside of her cabin door, and she reads it every night.
+
+Beliefs:
+authority -3, loyalty -4, violence -2, belief -5
+
+Attributes:
+might 3, endurance 4, agility 3, perception 5, intellect 7, willpower 6, presence 4, resonance 1
+
+Skills:
+commerce 5, navigation 4, leadership 3, composure 5, awareness 4, firearms 2
+
+In a fight:
+threat: 2
+hp: 30
+attack: 3
+defense: 12
+damage: 3 to 7
+weapon: Concord Sidearm
+xp: 60
+credits: 0 to 30
+art: officer
+tags: 

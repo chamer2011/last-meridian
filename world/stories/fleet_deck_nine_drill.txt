@@ -1,0 +1,55 @@
+# The Drill on Deck Nine
+kind: survival
+places: fleet, anselm
+people: oskar, bastian, wen
+factions: fleet, quiet
+level: 3
+
+The lead:
+Two hundred people on Deck Nine of the Bright Tomorrow sat through your fleet-wide evacuation drill with their hands folded. They weren't protesting. Oskar Lind says they just don't see what they'd be running from, and he'd like to offer you some tea.
+
+For anyone who isn't the captain:
+Two hundred people on Deck Nine of the Bright Tomorrow sat through the fleet-wide evacuation drill with their hands folded. They weren't protesting. Oskar Lind says they just don't see what they'd be running from, and he'll offer anyone who asks some tea.
+
+What's really going on:
+Deck Nine has gone Quiet, and it's the best-run deck in the fleet. There's no theft, no fights and no locked doors. Food is shared, and the old aren't left alone. Oskar Lind is gentle and honest, and he has talked forty people back from airlocks this year. Nobody there wants to die. They've simply stopped being afraid, and if the Choir comes they'll wait with the doors open. The problem is practical: Deck Nine sits across the ship's main lifeboat spine, and in a real evacuation two hundred seated people will block a thousand running ones. Quiet volunteers are also the only people on Anselm's Mercy willing to sit with the dying. Ban them and the dying sit alone. The turn is that the next alarm is real: a fire in the aft spine. Everyone else panics. The Quiet get up, walk into the smoke and calmly carry three hundred people out, because they aren't afraid. Afterward they sit back down.
+
+How it might go:
+- Tea on Deck Nine. It's very good and very calm, and Oskar says you must be tired. The captain may notice they've stopped feeling on edge for the first time in months, that it's lovely, and that this is the problem.
+- The engineering report on the spine. The Bright Tomorrow's safety officer is a wreck. Half the other decks want Deck Nine removed. Some of the others have started asking if there's room.
+- Father Roe is challenged to a public debate by Oskar's followers, and comes to the captain in despair. "He believes every word he says. I don't believe one word I say."
+- The fire. No warning, real smoke, real panic, and two hundred calm people standing up.
+- Now what? The captain has a deck of heroes who won't run from the thing that's coming.
+
+Ways through:
+- Argue: persuasion and lore in Oskar's own circle or on the debate stage. He's honest and will concede a good point, which is more dangerous than it looks.
+- Engineer: engineering to reroute the lifeboat spine around Deck Nine and leave them be. It costs parts and a week.
+- Order it: leadership or intimidation to relocate them by force. They don't resist, and have to be carried, one at a time, thanking the marines.
+- Look deeper: stealth and attunement at an inner circle. Most of the Quiet simply wait. A small few want to call the Choir in, with a transmitter they've hidden on the Sundial and call the lantern, and Oskar doesn't know. The peace in that room isn't his, and it isn't the song's either: attunement hears the wrong note. Composure keeps the captain from sitting down and staying.
+
+Checks that fit:
+- composure:hard to leave Deck Nine once you've had the tea
+- persuasion:hard to win a public debate with a man who means it
+- engineering:hard to move a lifeboat spine in a week
+- stealth:moderate to reach the inner circle's meeting on the service deck
+- athletics:moderate to haul people out through the smoke yourself
+- attunement:hard to tell real peace from something else in that room
+
+If it comes to a fight:
+- quiet_zealot pair if the inner circle is disturbed
+- silent_one at the center of it
+
+Where it can end up:
+left_alone: Left alone: Deck Nine stays and spreads, to three more decks by month's end. Crime falls, and so does the number of people who'll fight when it counts.
+removed_by_force: Removed by force: the Quiet are moved and scattered across the fleet, which spreads them. Oskar forgives the captain publicly and sincerely, and it's devastating.
+spine_rerouted_truce: Spine rerouted, and a truce: they stay, and the evacuations work. The Quiet get an official role as sitters and fire crew, the only ones who run toward it. It's working, and the captain should keep watching it.
+inner_circle_exposed: Inner circle exposed: Oskar is horrified and hands them over himself, the first time anyone has seen him upset. It wins the captain his trust. He'll still be at peace when the Choir arrives.
+
+If nobody steps in:
+after 27 days: Deck Nine's quiet has spread to two more decks on the Bright Tomorrow.
+  lead: Three decks on the Bright Tomorrow sit through every drill now with their hands folded, and they're the best-run decks in the fleet. They also sit right across the lifeboat spine. Oskar Lind's offer of tea still stands.
+after 60 days: There was a fire in the Bright Tomorrow's aft spine. Everyone ran except the people from Deck Nine, who got up, walked into the smoke and carried three hundred people out. Then they sat back down.
+  lead: The people who sit through drills put out a real fire on the Bright Tomorrow: they walked into the smoke, carried three hundred people out, and sat back down. Half the ship wants them banned, and the other half has gone to ask them what they know. Oskar Lind's offer of tea still stands.
+
+Rewards:
+A quiet_token, which opens some doors and closes others. calm_tabs. Oskar's honest respect, and Father Roe's gratitude if he's spared the stage.

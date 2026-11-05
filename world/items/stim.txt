@@ -1,0 +1,8 @@
+# Combat Stim
+order: 13
+type: consumable
+price: 75
+effect: hp 8, energy 3
+
+In a line:
+Restores 8 health and 3 energy.

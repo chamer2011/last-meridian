@@ -1,0 +1,8 @@
+# Hull Repair Kit
+order: 15
+type: consumable
+price: 150
+effect: hull 20
+
+In a line:
+Restores 20 ship hull, plus twice your Engineering rank.

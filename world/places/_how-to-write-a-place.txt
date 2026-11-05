@@ -1,0 +1,48 @@
+HOW TO WRITE A PLACE
+====================
+
+Every place the fleet can reach is one file in this folder, named by its id: haven.txt is Haven Station, and the
+stories, the people and the star map name it by that id. The Story board in the game (The story, then Story board,
+then Places) shows and changes the same files, and npm run check-story reads them all and says what's wrong, with
+the file and the line. What a place looks like when the player walks around in it is in world/maps.
+
+A file starts with the name, then a few lines about it, then parts under headings that end with a colon:
+
+    # Haven Station
+    also called: Haven
+    faction: drift                      (who holds it: an id from world/factions.json, or none)
+    market: medkit, stim, energy_cell   (what's for sale there: ids from world/items.json; leave it empty for no market)
+    the fleet is here: no
+    a place to rest: no
+    dangerous: no
+    hidden: no                          (not on the star map until the story shows it)
+    people: sable, tharel, corvane      (who's there, by id)
+    enemies: dock_thug, syndicate_collector     (who might start a fight, by id from world/enemies)
+    items: data_chip, forged_papers     (what might turn up, by id)
+
+    In a line:
+    A neutral trade hub where every faction drinks in the same bar and pretends not to notice.
+
+    The feel of it:
+    Frying synth-fat, ozone and old beer, under lighting that was meant to be warm.
+
+    Districts:
+    The Neutral Ground: Jun Sable's bar, where weapons go in a locked rack by the door.
+    Consulate Row: The Hegemony's carpet, and the only quiet corridor on the station.
+
+    Complications:
+    - Mott Jessup has quietly raised your docking fee.
+
+    Secrets:
+    - Mother Quill's Syndicate holds the mortgage on Haven's docks.
+
+    Encounters:
+    - Jun Sable slides you a drink you didn't order and a bill for it that's much too high.
+
+    Rumors:
+    - Word at the Neutral Ground is that Sable has never once forgotten a tab.
+
+In a line is what the player reads on the star map. The feel of it, the districts, the complications and the
+secrets are for the game master, and the AI runs the place from them. Encounters are what can happen when the
+player arrives, and rumors are what people say, which the Leads menu shows: one line each, starting with - and a
+space. A part that has nothing in it can be left out.

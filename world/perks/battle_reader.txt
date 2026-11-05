@@ -1,0 +1,10 @@
+# Battle Reader
+order: 21
+needs skill: tactics 3
+
+In a line:
++1 to attack rolls and +1 defense.
+
+Effects:
+attack: 1
+defense: 1

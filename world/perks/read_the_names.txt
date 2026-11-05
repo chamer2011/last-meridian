@@ -1,0 +1,9 @@
+# Read the Names
+order: 49
+needs skill: leadership 4
+
+In a line:
+You've read out enough names at enough funerals to know how to carry them afterward. Stress fades 25% faster.
+
+Effects:
+stress recovery: 1.25

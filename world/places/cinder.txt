@@ -1,0 +1,70 @@
+# Cinder Reach
+also called: Cinder Reach, the Reach
+faction: none
+market: refined_fuel, fuel_cell, work_suit, emergency_patch, ration_pack, tool_roll, arc_welder, slug_thrower, shock_baton
+the fleet is here: no
+a place to rest: no
+dangerous: no
+hidden: no
+people: ulla, rennick
+enemies: strikebreaker, cinder_wyrm, dock_thug, salvage_mech, hegemony_trooper
+items: refined_fuel, fuel_cell, work_suit, emergency_patch
+
+In a line:
+A mining and fuel-refining colony on a volcanic moon, close to a strike and closer to a riot.
+
+The feel of it:
+Rotten eggs and hot rock, a smell that gets into your clothes and stays for weeks, with ash falling like grey snow on everything and the ground shivering on a schedule that only old miners can feel coming. Flare stacks burn orange over the refinery, and the shift whistles have been silent for nineteen days, which frightens everybody more than the noise ever did. There are two prices for everything here: company scrip, and the price you pay on the Line, and which one you use tells the whole moon whose side you're on.
+
+Districts:
+Shift Row: Miles of soot-black barracks, the strike kitchen and the Gate, where the picket line has stood for three weeks in shifts. Nobody here will say a hard word to you for crossing it. They'll only remember.
+The Stack: The refinery itself: towers, pipes and enough refined fuel to carry your whole fleet for months, all behind the same fence. It's running on a skeleton crew of managers and it sounds wrong.
+Company Hill: A clean little dome of offices and gardens with filtered air, above the ash. Director Vale's windows look down onto Shift Row, and they've been broken and repaired eleven times.
+The Tubes: Old lava tubes and exhausted mine workings that riddle the moon. Strike caches, Slag Crawlers and a century of lost equipment are all down here in the warm dark.
+The Tap: The heat exchanger and reactor complex that draws off the moon's pressure to run the Stack. Everyone blames it for everything, and very few people understand it.
+
+Complications:
+- The picket blocks your shuttle's fuel line, very politely, and the crew driving the fuel cart has just gone home.
+- A gas vent opens on Shift Row without warning, and the only working rescue gear is behind the company fence.
+- A boatload of strikebreakers lands, and one of them is wearing a Refugee Fleet coat.
+- The Tap's pressure alarm has started, and neither side will believe that the other one didn't cause it.
+- A Hegemony officer has arrived to offer peacekeeping services to whoever asks first.
+- A dead man is carried through Company Hill, and a very frightened guard has just taken the safety off his rifle.
+
+Secrets:
+- Director Vale is telling the truth about the Tap. If the reactor stops for three days, the pressure has nowhere to go, and Shift Row will be the first thing to blow. Shutting it down safely would take twelve weeks and four hundred trained people. Ulla's engineers think it's a company lie, and Vale's old lies make it impossible for him to prove that he's being honest now.
+- Most of the strike fund comes from Mother Quill, through three shell charities. While the Reach is stopped, her depot is the only big supply within reach of the fleet. Ulla doesn't know, her treasurer Ness Bray does, and it's what's been keeping the strike kitchen open.
+- Under the old workings of Tube Nineteen is a sealed Concord strategic reserve, full of refined fuel, that was lost in the paperwork a century ago. Only a coughing old surveyor believes it's there. It could solve everything, and getting it out would take miners and managers working side by side.
+
+Encounters:
+- Shift Boss Ulla Greaves hands you a strike ticket at the Gate and doesn't move out of the way. Nobody crosses, she tells you, and that goes for captains. Your fleet can have fuel at cost on the day the strike's won, if you'll stand up with them in front of everyone and say so. She's got your fuel in her tanks, and she knows it.
+- Director Rennick Vale receives you in a spotless room and pours you a glass of real water. He pushes a chart across the desk, and tells you that if he's forced to stop for three days, Shift Row is a crater. Nobody will read it. There's a child's drawing of him being hanged, framed on the wall behind him, and he doesn't seem to want it taken down.
+- A cook at the strike kitchen holds out a bowl to one of your crew. Nobody eats alone on the Row, she says. If they take it, they've eaten at the strike's table, in front of the whole line and in full view of a man with a Company lapel pin and a notebook.
+- A very young strikebreaker has been caught by the picket, and he's tied to a railing. He's in a Refugee Fleet coat, and he took the job because the company was paying in food. He sees your uniform and starts to cry. The miners want to know whether he's yours.
+- Ulla Greaves takes you aside, scowling, and pulls a folded report from her jacket, very creased, that she's been carrying for a month. Her eyes aren't what they were, she says. Her boy reads for her, and he's out on the Line. She'd like you to read it to her, here, now, and to tell nobody, and she's counting something on her fingers while she waits.
+- A widow shows you a stack of letters on company paper. Her husband died behind the door on Shaft Nine last year, and the company's records say that he transferred to another site. Every month they send a letter, in his name, saying how well he's getting on. She wants someone to help her read the handwriting, and she wants to know how many other women have them.
+- A Slag Crawler has got into the main feed pipe, and it's starving the Tap of coolant. Both sides need it dead, and neither will work with the other. Each of them has a team, a plan and a very good reason why you ought to be leading theirs. It's getting warmer in here.
+- One of Ulla's lieutenants pulls you aside, a big man with a burned neck and a steady voice. He thinks she's gone soft, and he wants to drop the Stack tonight. He's only short of a demolition tech, and he's heard that you've got one. You can't tell whether he's a true believer or on Vale's payroll.
+- An old surveyor coughs through a long story at the bar, as he has done every night for twenty years, about a Concord fuel reserve under Tube Nineteen. Nobody listens. He'll give you his map in exchange for a lung treatment on Anselm's Mercy. He's also told people he's been married to a volcano.
+- A smooth Hegemony officer offers to bring in a battalion to restore order, a day's jump from here. She's only looking for a neutral party to witness the request, and your name would look very well on it. Both Ulla and Vale have been told that the other one's already asked.
+- A shopkeeper on the Row has been caught in between for three weeks. Miners can't pay in anything but credit, the company has cut her supply and her front window has been smashed by both sides. She's still opening every morning. She asks you, quite calmly, which of them you'd like her to stop feeding.
+- A twelve-year-old girl runs a betting board on which day the riot will start, chalked up on a wall behind the laundry. Today's odds are three to one. She has very good sources, and she hasn't been wrong yet. She'd like to know if you'd care to place a bet, or to tell her something that'll change the price.
+- The miners are carrying a dead picket through Company Hill, in silence, ash on their shoulders. The guards up ahead are young and terrified. An old woman at the front of the march holds out a corner of the stretcher to you, because she's noticed that nobody's going to shoot a fleet captain. You think.
+- A refinery technician will slip you five cells of fuel a night through a hole in the fence. It's stolen from the company and stolen from the strike, and it's exactly what your fleet needs. She wants her family off the moon, and she's not going to tell you that her brother is on the picket line. Someone else will.
+- Rennick Vale's own daughter is on the picket with a loudhailer. He's asked you, through very careful channels, to get her off the moon before the third day. She's asked you, without being careful at all, to tell him that she knows about the third day, and that she's staying.
+
+Rumors:
+- The reactor won't blow. That's a company story. My brother's an engineer, and he says so. Well, he says probably.
+- Fourteen people died behind that door on Shaft Nine. Greaves can give you all of the names, on her fingers, without stopping for breath. She's said she won't sell a liter till Vale stands up and tells the Row who shut it.
+- There's an old miners' song about the silver man who comes and sits with you when the roof's come down. My grandmother sang it to me. Nobody sings it now, and it's a good few hundred years older than the Fall.
+- Vale's got a ship fueled and ready on Company Hill, and we've all seen it. Nobody's ever seen it leave. You tell me what kind of a villain doesn't run.
+- That strike fund's got more in it than it ought to. Somebody's paying for all that soup. Don't get me wrong, it's good soup.
+- Ash in your tea's good for you. Everybody's got lungs like a wet sack, and I'm sixty-one.
+- There's four thousand tons of fuel sitting behind that fence. You've got a warship, haven't you? We've all been wondering when you'd remember.
+- Don't cross the Line. Nobody's going to hit you. They'll just remember, and your children's children will be eating alone.
+- Old Ferris has been saying there's a Concord tank under Nineteen for twenty years. He also says that he's been married to a volcano. I'll tell you this, though, he's never once been late for dinner with her.
+- Crawlers love the deep tubes, warm and full of old fuel. If your lamp starts feeling hot in your hand, you run, and you don't go back for your friend. I've got a list of the friends.
+- There's a Hegemony battalion a day out. Somebody asked for them. Nobody's saying who, and everybody's saying it was the other side.
+- Six days, that's what the girl's board says, till the whole place goes up. She hasn't been wrong yet. She's got a very nice pair of new boots, for someone with no shoes last month.
+- They've been paying us in scrip printed on the backs of old Concord fuel vouchers. They're worth more as vouchers, if you can find anybody left to honor them. And I reckon you might be that anybody, wouldn't you?
+- If the fleet buys from Vale, we lose. If the fleet doesn't buy, the fleet dies. I don't know you, and I wouldn't have your job for all the fuel on this moon. But I've got a brick here.

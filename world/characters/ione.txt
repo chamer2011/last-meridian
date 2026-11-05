@@ -1,0 +1,50 @@
+# Ione
+title: Abbess
+also called: Abbess Ione
+pronouns: she/her
+species: human
+age: 81
+faction: ilun
+role: Leader of the surviving Order of Ilun
+place: ilun
+color: #c3a6ff
+prominent: yes
+
+In a line:
+Knows more about the First Builders than she says.
+
+Appearance:
+Tiny and ancient, in undyed robes, with eyes that seem to be listening to something behind you.
+
+Personality:
+Gentle, patient and unsettlingly certain. She's made terrible choices for good reasons, and she's made peace with them.
+
+Voice:
+Quiet, with long silences. Answers questions with other questions, and sometimes replies to something you were only about to say.
+
+Goals:
+Keep the Order's last monastery alive, and keep the listening going for as long as she can.
+
+Secrets:
+The Order was founded to listen for whatever the First Builders feared. She has the Ilun Codex hidden, and she suspects that the Beacon is a warning light. She's afraid of what would happen if the fleet followed it.
+
+Beliefs:
+belief 9, violence -6, flesh -5
+
+Attributes:
+might 1, endurance 3, agility 2, perception 8, intellect 7, willpower 10, presence 7, resonance 10
+
+Skills:
+attunement 10, manifestation 8, composure 9, lore 8, persuasion 5
+
+In a fight:
+threat: 4
+hp: 30
+attack: 7
+defense: 16
+damage: 5 to 10
+weapon: The Resonance Itself
+xp: 160
+credits: 0 to 0
+art: adept
+tags: resonance

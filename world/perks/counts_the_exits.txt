@@ -1,0 +1,10 @@
+# Counts the Exits
+order: 46
+needs skill: awareness 5
+
+In a line:
+You walk into every room checking what's changed, and how you'd get out. +1 Awareness, and better tools in Awareness check windows, as if you were one tier better.
+
+Effects:
+skills: awareness 1
+better tools in: awareness 1

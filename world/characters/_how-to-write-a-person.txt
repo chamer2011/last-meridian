@@ -1,0 +1,85 @@
+HOW TO WRITE A PERSON
+=====================
+
+Everyone the game knows by name is one file in this folder, named by their id: aduro.txt is Dr. Sen Aduro, and
+stories and places name people by that id. The Story board in the game (The story, then Story board, then People)
+shows and changes the same files, and npm run check-story reads them all and says what's wrong, with the file and
+the line. A person's written lines in a talk are a separate file, world/scenes/talk_<id>.txt.
+
+A file starts with the name, then a few lines about them, then parts under headings that end with a colon:
+
+    # Sen Aduro
+    title: Dr.                          (leave it empty if none)
+    also called: Dr. Aduro, Aduro       (other names the story may use)
+    pronouns: they/them
+    species: ilari                      (an id from world/species)
+    age: 52                             (or unknown)
+    faction: fleet                      (an id from world/factions.json, or none)
+    role: Chief medical officer
+    place: meridian                     (an id from world/places, or none)
+    crew: yes                           (one of the Meridian's crew; leave it out if not)
+    color: #7fe0c3                      (the color their words are shown in)
+    listed: no                          (keep them off the list the AI is given; leave it out if not)
+    prominent: yes                      (one of the few the character creator mentions; leave it out if not)
+    chair: yes                          (they chair the council; leave it out if not)
+    voice style: comm                   (comm, choir or machine, for how their words look; leave it out for a plain voice)
+
+    In a line:
+    Exhausted, kind, and the conscience of the ship whether you want one or not.
+
+    Appearance:
+    A slight Ilari whose skin patterns have gone dim and slow from lack of sleep.
+
+    Personality:
+    Gentle, tired and impossible to bully.
+
+    Voice:
+    Soft and unhurried. Asks questions rather than giving orders.
+
+    Goals:
+    Keep as many people alive as possible.
+
+    Secrets:
+    They know the day medical supplies run out.
+
+    Beliefs:
+    loyalty -5, violence -7, belief -2            (authority, loyalty, violence, belief, flesh: -10 to 10)
+
+    Attributes:
+    might 2, endurance 4, agility 4, perception 7, intellect 8, willpower 7, presence 5, resonance 4
+
+    Skills:
+    medicine 8, science 5, persuasion 4             (ids from the skills list; 0 to 10)
+
+    In a fight:
+    threat: 1
+    hp: 18
+    attack: 1
+    defense: 11
+    damage: 2 to 5
+    weapon: Surgical Laser
+    xp: 10
+    credits: 20 to 60
+    art: civilian                       (how they're drawn: civilian, soldier, officer, scoundrel, engineer, adept, ...)
+    tags: resonance, choir              (what they count as, for conditions and perks; leave it empty if none)
+    motive: choir                       (why they fight, for the parley; leave it out if none)
+    machine: yes                        (leave it out if not)
+    boss: yes                           (leave it out if not)
+    on hit: stress 3                    (what a hit also does to the player: stress or energy; leave it out if nothing)
+
+    When the fight starts:
+    - The doctor sighs, and picks up the laser.
+    When they hit:
+    - ...
+    When they miss:
+    - ...
+    When they hit hard:
+    - ...
+    When they're beaten:
+    - ...
+
+In a line is how the game sees them, in one sentence. Appearance, Personality, Voice, Goals and Secrets are for the
+game master, and the AI plays them from these. The numbers are the same ones the player has. The fight lines are
+read out in a fight, one picked at random each time; a person with no lines gets plain ones.
+
+A part that has nothing in it can be left out.

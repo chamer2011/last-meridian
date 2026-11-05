@@ -1,0 +1,18 @@
+# Thessan
+order: 5
+ageless terms: 8
+
+In a line:
+Cold-blooded archivists who live for centuries and take the long view of everything, including you.
+
+For the game master:
+Thessan: scaled, cold-blooded and very long-lived. They're slow to anger, remember everything and struggle in the cold. Younger species find them patronizing.
+
+Attributes:
+intellect 2, willpower 1, agility -1, presence -1
+
+Skills:
+lore 2
+
+Effects:
+standing with: ilun 5

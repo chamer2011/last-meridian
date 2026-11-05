@@ -1,0 +1,50 @@
+# Mother Quill
+title: 
+also called: Quill
+pronouns: she/her
+species: human
+age: 68
+faction: drift
+role: Head of the Kessara Syndicate
+place: kessara
+color: #f0a0e8
+prominent: yes
+
+In a line:
+Charming, treacherous and always owed something.
+
+Appearance:
+A small, round grandmother in layers of beautiful shawls, who always seems to be offering you something to eat.
+
+Personality:
+Warm, funny and utterly ruthless. She remembers every birthday and every debt.
+
+Voice:
+Grandmotherly. Calls everyone "dear". Never threatens anyone, and only ever "worries" about them.
+
+Goals:
+Profit from the end of the world, get the fleet in her debt, and buy any First Builder data she can find.
+
+Secrets:
+She owns the only fuel depot within reach large enough to supply the fleet. Years ago, she also sold the Concord's patrol schedules to whoever paid, and she isn't sure who that was.
+
+Beliefs:
+authority 7, loyalty 8, violence 2
+
+Attributes:
+might 2, endurance 4, agility 2, perception 8, intellect 8, willpower 8, presence 9, resonance 2
+
+Skills:
+commerce 9, deception 8, persuasion 7, streetwise 8, intimidation 5
+
+In a fight:
+threat: 3
+hp: 32
+attack: 4
+defense: 14
+damage: 4 to 8
+weapon: Needle Rifle (held by her bodyguard)
+xp: 120
+credits: 200 to 500
+art: scoundrel
+tags: syndicate

@@ -1,0 +1,65 @@
+# Ashael
+title: Warden
+also called: Warden Ashael, Warden of Lumen, the Warden of Lumen, The Warden of Lumen
+pronouns: he/him
+species: ilari
+age: 68
+faction: circle
+role: Warden of Lumen, and head of the Lumen Circle
+place: lumen
+color: #f7cff8
+listed: no
+
+In a line:
+His skin has been dark since the Fall, and his people are afraid to ask why.
+
+Appearance:
+A tall, slow-moving Ilari in white, and the only dark thing in a city of light. His skin shows nothing at all, not a flicker, and people in the streets look away as he passes. He keeps his hands clasped, very tightly.
+
+Personality:
+Grave, gentle and attentive. For thirty years he led a city where nobody can lie comfortably by being the most openly feeling person in it, and now he's the one person there no one can read. He is in constant, unshowing terror, and he's keeping it from a whole city by force of will. He is the biggest liar at Lumen, and it's an act of love.
+
+Voice:
+Gentle and formal. He says out loud what his skin used to show, like someone speaking a language he learned late: "I say this with gladness: you are welcome here." "I say this with regret." It always comes near the start of the sentence, and he says it as if reading it off a card. Pauses in odd places, with his jaw tight. Asks after your family, and means it. Never speaks of his skin.
+
+Goals:
+Keep Lumen calm and its gates open for as long as he can hold on. He wants someone, anyone, to find out what he heard and tell him it can be stopped. He's looking for a person strong enough to be told.
+
+Secrets:
+He isn't empty, and he isn't a Choir copy, though people have started to whisper it. In the last hour of the Fall, when the Circle reached out to hold the dying, he felt something under the Choir's song: huge, old and not the Choir, turning over in its sleep. The fear was too large to show. Feeling spreads skin to skin at Lumen, and if it had lit up in him, the panic would have gone through the city and killed people. So he went to Mirei, the best the Still Rooms ever made, and had her teach him to go dark. He has held it down for six months, and it's killing him by inches. Abbess Ione knows, and they write to each other about very little.
+
+Beliefs:
+loyalty -7, violence -8, belief 5
+
+Attributes:
+might 2, endurance 3, agility 3, perception 8, intellect 7, willpower 10, presence 8, resonance 9
+
+Skills:
+composure 10, attunement 9, persuasion 7, leadership 6, lore 5, manifestation 4
+
+In a fight:
+threat: 3
+hp: 24
+attack: 5
+defense: 14
+damage: 4 to 7
+weapon: The Resonance
+xp: 80
+credits: 0 to 0
+art: adept
+tags: resonance
+on hit: stress 3
+
+When the fight starts:
+- Warden Ashael unclasps his hands, for the first time since you met him. "I say this with sorrow," he says.
+
+When they hit:
+- For one moment you feel what he's been holding down, and your legs stop working.
+- He doesn't move, and something very large leans on your mind.
+
+When they miss:
+- The pressure slides past you, and his jaw tightens as he takes it back.
+- You stagger out from under it, gasping, and he lets you.
+
+When they're beaten:
+- Warden Ashael sinks down and clasps his hands again, very tightly. "Please," he says. "Not in front of them."

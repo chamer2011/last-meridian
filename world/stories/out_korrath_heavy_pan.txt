@@ -1,0 +1,52 @@
+# The Heavy Pan
+kind: faction
+places: korrath
+people: hesk, tobin
+factions: clans, fleet
+level: 3
+after: out_korrath_one_shift
+
+The lead:
+Clan Dur-Ansa says a man on your fleet broke his word to them, and they've brought it to the great scale in the Weigh House. Each side loads its pan with what it stakes, sworn and witnessed. A champion fights, and with each blow someone has to add weight or give up. Warden Varr says you may fight yourself, or name someone, or just start piling things on.
+
+For anyone who isn't the captain:
+Clan Dur-Ansa says a man from the fleet broke his word to them, and they've brought it to the great scale in the Weigh House. Each side loads its pan with what it stakes, sworn and witnessed, and a champion fights. He's going to need a champion.
+
+What's really going on:
+The accused is Odo Tarn, a Korrun refugee who swore on the Clan's forge-key to bring it home from Aurelis. He sold it at Haven to feed his children, and he has told nobody. Clan law says a fleet member's word is the fleet's word. Each token on the scale is a plug of iron stamped with a promise: ten shifts of labor, a reactor coupling, a ship's name, a person. Promises are witnessed and they're binding, and they're kept in the Weigh House forever. A blow in the ring forces the struck side to add weight or to yield. Words count too: anyone may speak at the scale instead of fighting, and a good enough speech makes the other side's champion lower their hammer. The player will assume the heavier pan wins and keeps its stake, and that this is how it works. It isn't. The heavy pan wins the argument, and then it pays: everything on the winning pan goes to the losing side. Because the one who proved they could bear the loss doesn't need it, and the one who lost does. It's the only way they've ever had to end a blood feud on this world. So to save Odo Tarn, the captain has to give up exactly what they've piled on. Chief Tobin Hask knows this and assumes they do. If asked, he takes out his own pocket scale, looks at it for longer than he needs to, and says: "You understand, Captain, the heavy pan pays."
+
+How it might go:
+- Odo Tarn, huge and ashamed, standing in the Meridian's hold with his children. He admits it all. Clan Dur-Ansa has asked for him to work out his word at their furnace, for the rest of his life.
+- The Weigh House: an iron hall, a public scale taller than any Korrun, and a roof black with old smoke. Thousands are watching. Warden Varr reads the rules out in a flat voice, and he leaves out what everybody here already knows.
+- The first exchanges. A clan champion and the fleet's champion, or the captain's own words. Each hit or point means another token goes on. The fleet's pan starts to look expensive.
+- The moment of realizing what the heavy pan means, from Tobin Hask, or from the way the Clan Dur-Ansa elders start to smile at the wrong moment, or from an elder quietly asking how the Meridian will manage without that coupling.
+- The last token. Does the captain add it, or yield? And Odo Tarn takes the hammer from someone's hand and asks to put on the only thing he has left.
+
+Ways through:
+- Fight it: melee and athletics in the ring, in heavy gravity, as the captain or a chosen champion, knowing every blow costs someone something.
+- Speak at the scale: persuasion, intimidation or lore on the old law, to shame or sway the crowd and bring the champion's hammer down without a blow.
+- Win by losing: commerce and leadership to read the true shape of the rule and yield at exactly the right moment, or to load the pan with something the clan truly needs and the fleet can bear to give.
+
+Checks that fit:
+- melee:hard to land a clean blow on a clan champion
+- athletics:moderate to stay on your feet in the ring
+- persuasion:hard to speak at the scale and be heard
+- intimidation:very_hard to stare down a whole clan
+- lore:moderate to know the old rule about the heavy pan before it's too late
+- commerce:moderate to work out what's truly worth staking
+
+If it comes to a fight:
+- korrun_champion in the ring, if the captain or their champion chooses to fight. There's always the option of speaking, or of yielding with honor.
+
+Where it can end up:
+captain_wins_pays: If the captain wins and pays, Odo Tarn goes free, the fleet loses whatever it staked, and every Korrun in known space learns what the captain will give up for a man who broke his word. The clans will now deal with the fleet as with kin.
+captain_yields_early: If the captain yields early, Tarn goes to the furnace, the fleet loses nothing and his children stay on the fleet. The clans think no less of the captain. The children do.
+captain_finds_stake_truly_fits: If the captain finds a stake that truly fits, such as the fleet's Korrun offering shifts or Tarn's own lifetime in a shorter form, both sides walk out able to look at each other. It's rare, and they'll sing about it, badly.
+captain_cheats: If the captain cheats, by loading a false token or staking something that isn't theirs, the scale is the one thing on this world nobody forgives, and Korrath closes to the fleet for a generation.
+
+If nobody steps in:
+after 30 days: Clan Dur-Ansa has started loading its pan at the Weigh House on Korrath, with nobody on the other side of the scale.
+  lead: Clan Dur-Ansa's started loading their pan at the Weigh House with nobody on the other side of the scale. If it stays empty they'll come for the man in your fleet, and Warden Varr says you may still fight, or name someone, or start piling things on.
+
+Rewards:
+Very little in goods, by design: it's a thread about what's given up. Lasting standing with clans, Tobin Hask's deep respect, and at most a forge_hammer pressed into the captain's hands by a clan elder after the last token.

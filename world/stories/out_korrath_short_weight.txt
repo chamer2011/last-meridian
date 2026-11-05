@@ -1,0 +1,54 @@
+# Short Weight
+kind: dilemma
+places: korrath, meridian
+people: brenna, hesk, tobin
+factions: clans, fleet
+level: 2
+
+The lead:
+Young smelter Brenna Tor is hiding in your cargo hold with a lump of metal the size of a loaf, wrapped in a child's blanket. She says every promise made on Korrath for a hundred years has been weighed against a lie, and she can prove it, and they're going to want her back.
+
+For anyone who isn't the captain:
+A young smelter named Brenna Tor has gone missing from the furnaces, with a lump of metal the size of a loaf wrapped in a child's blanket. She's been saying that every promise made on Korrath for a hundred years has been weighed against a lie, and the clans want her back.
+
+What's really going on:
+The lump is the Clan Standard, the master weight from which every scale on Korrath is set: the foundation of everything the Korrun believe about the value of a person's word. Brenna was apprenticed to the assayer, got curious and checked it against a fragment of the older stone. It's three grams light. It has been shaved. Under the clans' own law, every contract weighed against it since then is void, including trade deals, marriages, feud settlements and oaths of clan. She wants to leave Korrath, and she's taken proof that nobody can argue with, which also means Korrath has no true weight until it's back. What she doesn't know: Varr has chosen her as his heir and works her harder than anyone for that reason, she thinks he despises her, and he'll treat her leaving as theft in any case. And he knows about the Standard, as has every warden before him. A warden named Orla Varr shaved it in a famine a hundred years ago and sold the gold plating for food, and without that Korrath would have starved. Each warden since has been told the secret on taking office, and each has worked one extra shift, unrecorded, every week for the rest of their life, and sent the pay to whoever was shorted. It adds up, roughly, to three grams. That's why Hesk insists on shifts. His hands are worse than anybody's on this world, and now the captain knows why. Chief Tobin Hask has his own reason to go grey when he hears the words false weight, and if anyone looks closely at his face during this they may wonder.
+
+How it might go:
+- The stowaway. Brenna, cheerfully unrepentant, sits on a crate with her loaf of metal, and explains exactly how she's going to change the world. Chief Tobin Hask, shown the weight, sits down very suddenly and takes out his own pocket scale.
+- Polite clan hunters at the Meridian's airlock. They are honest, so they say just what they're looking for: a girl and a stone. They won't board by force. They'll wait, and every Korrun in the fleet will know within a day.
+- Proving it. Either the claim is true or it's a clever girl's mistake. A captain with the right tools can check it against a dozen independent standards, and each test makes things worse.
+- Warden Varr comes alone, with no guards, and asks to see his hands looked at by the ship's doctor. He tells the story, or the captain finds his unrecorded shift book. He doesn't ask for forgiveness.
+- What happens to the weight, and to the truth? Every Korrun on the Meridian is now looking at their scale.
+
+Ways through:
+- Prove it: science and lore to test the weight and track the shaving through a century of assays.
+- Hide it: stealth and deception to keep Brenna and the weight away from the hunters, or to make a false stone and buy time.
+- Face it: persuasion and composure to bring Brenna and Hesk together, with Tobin Hask as witness, and let Korrun decide what Korrun should know.
+
+Checks that fit:
+- science:moderate to measure the weight against independent standards
+- lore:hard to trace the shaving to the famine years
+- stealth:moderate to get Brenna off the Meridian under the hunters' eyes
+- deception:hard to pass a false stone in front of honest people who know their metals
+- persuasion:very_hard to change Brenna's mind, or Hesk's
+- composure:moderate to hear the whole truth and not let it show to the crew
+
+If it comes to a fight:
+- korrun_champion as a clan hunter, only if the captain or Brenna attacks first. Korrun don't take by force what can be asked for.
+
+Where it can end up:
+truth_goes_public: If the truth goes public, every contract on Korrath is void at a stroke. Marriages, clan lines and contracts all have to be renegotiated. It's chaos, and it's honest. The fleet may gain from the chaos, and no one on Korrath ever quite trusts the captain again.
+stone_goes_back_secret: If the stone goes back in secret, with three new grams on it paid for by the fleet in gold, the lie ends where it started. Brenna is furious, then thoughtful. Hesk works his shift that week, and he's a little lighter about it.
+captain_keeps_stone: If the captain keeps the stone, the fleet holds Korrath by the throat: the clans will sell almost anything to get it back quietly. It works. Tobin Hask resigns, without saying why, and he leaves his pocket scale on the captain's desk.
+brenna_stays_with_fleet_most: Brenna stays with the fleet in most versions, as a brilliant, difficult junior engineer. She and Dunn Marrow either become great friends or don't, and both versions are loud.
+
+If nobody steps in:
+after 8 days: Clan men at Korrath have started asking on the docks after a young smelter named Brenna Tor, and something she took.
+  lead: The clans have started asking on every dock after Brenna Tor, and something she took. She's still in your cargo hold, with that lump of metal wrapped in a child's blanket, and she'd like to know what you've decided.
+after 30 days: Korrun clan ships have started stopping fleet shuttles and searching them, very thoroughly, and weighing everything.
+  lead: Clan ships have started stopping fleet shuttles and weighing everything aboard. They know she's with the fleet now. Brenna Tor's still in your hold, and she's stopped sleeping.
+  fleet: morale -1
+
+Rewards:
+Brenna Tor as a crew contact, a tool_roll, a big swing in clans standing, and a deep and permanent bond with Hesk Varr if he's treated with respect.

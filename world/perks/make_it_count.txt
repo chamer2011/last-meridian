@@ -1,0 +1,10 @@
+# Make It Count
+order: 52
+needs perk: steady_aim
+needs skill: tactics 4
+
+In a line:
+Ammunition is rationed now, and so are second chances. +1 damage with every weapon.
+
+Effects:
+damage: 1

@@ -1,0 +1,10 @@
+# Homesteader
+order: 12
+starting: yes
+
+In a line:
+Frontier career: +2 Survival, +5 maximum health.
+
+Effects:
+skills: survival 2
+max hp: 5

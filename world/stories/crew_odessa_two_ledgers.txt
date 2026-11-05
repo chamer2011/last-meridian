@@ -1,0 +1,56 @@
+# Two Ledgers
+kind: mystery
+places: meridian, fleet
+people: odessa, bastian, tobin, naomi, halm
+factions: fleet
+level: 2
+
+The lead:
+Quartermaster Brandt slides two ledgers across your desk and says one is for the auditors and one is true. She's tired, someone has started stealing from the true one, and she can't report a theft from stores that don't exist.
+
+For anyone who isn't the captain:
+Someone is stealing from the Meridian's stores, and Quartermaster Brandt keeps checking a second ledger when she thinks nobody's looking.
+
+What's really going on:
+For five months Odessa Brandt has skimmed six percent of all food and medicine into an unlisted reserve, the Dark Pantry, in a sealed cargo pod on the Harrow's Bounty. It's enough to feed the fleet for nine days. She spent twenty years auditing Concord logistics, and she knows that every fleet that ever starved did it by eating at full ration until the last day. Twice now she has quietly used it to cover a shortfall that would have meant riots, and nobody knows. It also means children have been hungrier than they had to be, for five months, on her say. Now it's losing about forty kilos of flour a week. The thief is Father Roe (see crew_bastian_loaves), who learned of the pantry from Naomi Cass and is baking the flour into bread for his services. Chief Hask also knows about the pantry, since he weighs everything, and has said nothing. Halm's council has just ordered an audit, in three days.
+
+How it might go:
+- The two books on the desk. "Nine days. Not on paper." She doesn't ask for forgiveness. She wants to know which book the captain would like her to keep from now on, and she wants someone else to know where the food is, in case she's dead.
+- The pantry: rows of sealed crates in the cold, and a lot of careful labels. Aduro's child-growth figures, if the captain asks for them, are the other half of the ledger. The true book has other odd lines too: thirty-one crates, miscellaneous, perishable, which draw rations, and which she says, very levelly, she has never gone to look at.
+- The trail: flour on a service hatch, a young helper with burned fingers, the smell of baking in a part of the ship where nobody should be baking. Naomi knows, and finds all this hilarious.
+- The audit. The auditor is Edda Lunt, twenty-four, hungry and very good at sums.
+- The choice, with the thief known: keep the reserve secret, make it official, open it or give it to the council.
+
+Ways through:
+- Stake out the pantry: stealth and awareness in the cold. The thief comes on Tuesdays and leaves a note of what he took, which is the strangest part.
+- Follow the goods: streetwise and commerce to track where unrationed flour is turning up, and who has stopped using their chits.
+- Weigh it: ask Tobin Hask straight out. He'll say what it comes to, to the gram, and he'll say it once.
+- Beat the audit: deception and commerce to get the books past Edda Lunt, or persuasion to bring her in. She could be an ally, if she can stand to be.
+
+Checks that fit:
+- awareness:easy to see that someone's been in the cold holds
+- stealth:moderate to watch the pantry without being seen
+- streetwise:moderate to find where the flour is ending up
+- commerce:hard to make the false books survive a real audit
+- persuasion:hard to bring the auditor in on it
+- leadership:very_hard to declare a secret reserve to a hungry fleet and keep order
+
+If it comes to a fight:
+- desperate_refugee crowd if a hungry ship learns where the pantry is
+
+Where it can end up:
+kept_secret: Kept secret: the captain signs the false books. When the next shortage hits, nine days of food can save the fleet. If it's ever found out, the captain will be explaining to thirty thousand people why their children went without.
+opened: Opened: one great day of full bellies and singing on every ship, the best morale in months. Then nothing's left. Odessa hands in her keys and waits for someone to decide what she is.
+given_to_council: Given to the council: Halm controls the reserve by morning and thanks her warmly. It will be spent on whatever helps his majority.
+made_official: Made official: a declared reserve with a public reason. Some ships riot and some don't, and for the first time the fleet has a plan that isn't a secret. Odessa can finally burn one of the books. She keeps it anyway.
+
+If nobody steps in:
+after 24 days: Someone's stealing from the ration stores, and Quartermaster Brandt has stopped looking anyone in the eye.
+  lead: Someone's stealing from the ration stores, and Quartermaster Brandt's two ledgers are still in your desk. She's stopped looking anyone in the eye, and she's asked you twice if you've read them.
+  fleet: food -5
+after 54 days: A sealed cargo pod that isn't on any manifest has been found broken open, and half the fleet has heard about it.
+  lead: A sealed cargo pod that's on nobody's manifest has been found broken open, and half the fleet's heard about it. Quartermaster Brandt would like to talk about her two ledgers now, if you've got a minute.
+  fleet: food -10, morale -1
+
+Rewards:
+A ledger_of_favors from Odessa, a crate of ration_pack and nutrient_gel, and a quartermaster who will now tell the captain the truth, which is worth much more.

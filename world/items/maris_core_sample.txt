@@ -1,0 +1,7 @@
+# Maris Core Sample
+order: 59
+type: story
+price: 0
+
+In a line:
+A sealed tube of material drilled out of the drowned structure at Maris Deep, and it won't cool down.

@@ -1,0 +1,55 @@
+# The Soup Line
+kind: faction
+places: haven
+people: yara, corvane, garrick, mirei, cael
+factions: quiet, hegemony, fleet
+
+The lead:
+Four hundred hungry people eat at Haven every day, and not because of you. Down in the Hook, Sister Yara Solune ladles the soup herself, glowing with a calm that makes dockworkers cross the ring to avoid her, and a fleet mother wants you to get her son out of that line before he stops coming home.
+
+For anyone who isn't the captain:
+Four hundred hungry people eat at Haven every day. Down in the Hook, Sister Yara Solune ladles the soup herself, glowing with a calm that makes dockworkers cross the ring to avoid her, and a fleet mother wants someone to get her son out of that line before he stops coming home.
+
+What's really going on:
+Everyone believes Yara's peace is real, because Ilari skin can't lie. It's the only time it ever has. She was a novice of the Order when word came for the strongest to walk out and meet the Choir. She walked up to a Hunter with open arms. It began to copy her, stopped, looked at her for a long moment and walked past, and whatever could feel fear or grief never came back. The glow is what an Ilari looks like with nothing left underneath. She wants the Choir to come for her and finish it. The soup comes with no demands, and the Quiet grow because they're the only people who turned up. The money, though, comes through three shell traders from Legate Corvane's office: a fleet that wants to be copied won't fight, and its desperate make good recruits. Yara doesn't know, and that's the moment that should make the player sit up: when she's told, in front of the whole line, nothing happens. Not a flicker. "Then thank him for the soup," she says. The people closest to her see that she didn't feel it. The only thing that has ever moved her skin is someone who knew her before, calling her by her novice name. Her older sister is Mirei of the Lumen Circle, and Brother Cael has been looking for the lost novices.
+
+How it might go:
+- The son, Teo, is nineteen, cheerful and thinner than he should be. He isn't drugged or brainwashed. He's stopped being afraid for the first time in six months, and he gives half his bowl away.
+- Yara welcomes the captain and offers them soup. She answers every question honestly, which is worse than if she lied. She sits for a long while with anyone frightened, leaning close, like someone warming their hands.
+- The trail of the money: dock receipts at Haven, a shell trader who sweats, and a very familiar tailored coat. Garrick Fenn smells a story and wants it for his broadcast.
+- The confrontation at the kettles, with four hundred people watching, and Yara's perfectly level reply. Then what does the line do? Some stop chewing. Teo doesn't.
+- What feeds them tomorrow? The fleet has no spare food, the money can be cut off, and if someone comes who knows her old name, her skin might do something it hasn't done since the Fall.
+
+Ways through:
+- Argue with her in the open: persuasion and composure in a public debate, where she can't be shamed and the captain can.
+- Trace the money: commerce, streetwise and hacking to find Corvane's shell traders, then choose who to tell and when.
+- Look underneath: attunement or plain awareness to see that the calm has nothing behind it, and lore or streetwise to find out who she used to be, and then bring Brother Cael or Mirei to her and let them say her name.
+
+Checks that fit:
+- persuasion:hard to win Teo back with an argument he can respect
+- commerce:moderate to follow the soup money through the shell traders
+- composure:moderate to sit through Yara's gentle questions without saying too much
+- attunement:hard to feel what's really under her calm, and it isn't pleasant
+- lore:hard to trace her back to an outlying priory of the Order
+- awareness:easy to notice who in the line has stopped flinching at loud noises
+
+If it comes to a fight:
+- quiet_zealot if someone tries to shut the kitchen by force. They won't strike first and they won't run, and a captain who simply walks away has lost nothing.
+
+Where it can end up:
+corvanes_funding_exposed_publicly: If Corvane's funding is exposed publicly, the Quiet at Haven split. Some are chilled by what they saw and leave, the rest hold on harder, and Yara keeps ladling from whatever comes in, utterly unconcerned.
+kitchen_shut_down: If the kitchen is shut down, four hundred people go hungry at Haven, and many of them drift to the Hegemony's recruiters or the Syndicate's.
+captain_quietly_brings_fleet_food_to: If the captain quietly brings fleet food to share the line, the fleet loses rations it can't spare and wins a foothold in the argument. Teo starts coming home some nights.
+who_knew_her_calls_her_by: If someone who knew her calls her by her old name, her glow stutters for one breath, and she looks frightened, and then grateful, and then blank again. It can be done, slowly, and now somebody knows. Mirei will owe the captain more than she can say, and she won't say it.
+yara_treated_with_real_respect: If Yara is treated with real respect, she gives the captain a quiet_token, which opens doors among the Quiet everywhere, and which Lt. Tarrow will be very unhappy to find.
+
+If nobody steps in:
+after 23 days: The soup line in the Hook at Haven has doubled, and some of the people in it are wearing fleet coveralls.
+  lead: The soup line in the Hook has got to eight hundred a day, and some of them are wearing fleet coveralls. The mother who came to you about her son hasn't seen him in a week. Sister Yara's still ladling.
+  at haven: quiet +3
+after 53 days: There are shoes lined up along the Hook at Haven now, and the soup line's still growing.
+  lead: There are shoes lined up along the Hook now, and the soup line's still growing. Nobody can say who's paying for all that soup, and it's good soup.
+  at haven: quiet +4
+
+Rewards:
+A quiet_token, a grateful fleet mother, a little fleet morale if the line stays fed, Mirei's or Cael's gratitude, and a very pleasant note from Corvane if his money is left alone.

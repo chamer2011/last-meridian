@@ -1,0 +1,43 @@
+# House Enforcer
+threat: 3
+hp: 32
+attack: 5
+defense: 14
+damage: 4 to 9
+weapon: Gilded Fists
+xp: 85
+credits: 50 to 120
+art: brawler
+tags: syndicate
+motive: paid
+faction: drift
+
+In a line:
+Gilded Wheel security, with more money in their arms than you have in your ship.
+
+When the fight starts:
+- A very well-dressed person with very expensive arms asks you to step away from the table, and cracks each finger individually.
+- House security arrives without any fuss. One of them takes off a dinner jacket, folds it, and looks at you.
+
+When they hit:
+- A gilded fist hits you with a piston's thump, and you can hear the servos working.
+- They catch your wrist, turn it the way it doesn't go, and apologize on behalf of the House.
+- An arm extends further than any arm should, and collects you from across the table.
+
+When they miss:
+- The fist punches through the card table beside you, and chips rain down around your feet.
+- You slip under the swing, and the enforcer straightens a cuff as if that was the plan.
+- You duck, and the blow takes a chunk out of the gilded pillar behind you. Somebody makes a note of it, and of you.
+
+When they hit hard:
+- The arm hits you, then a second charge fires inside it, and the second hit is the one you feel.
+
+When they're beaten:
+- The augments whine down, and the enforcer tells you, quite politely, that the House will add this to your bill.
+- The enforcer drops, and a small gold light on their wrist starts blinking, calling someone on your behalf.
+
+When they join the fight:
+- {Enemy} appears at your elbow without seeming to have crossed the room.
+
+When they're stunned:
+- {Enemy} stops dead and resets their stance, servos ticking, while you catch your breath.

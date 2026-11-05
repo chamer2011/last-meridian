@@ -1,0 +1,52 @@
+# The Weighing
+kind: crew
+places: meridian
+people: tobin, odessa, marrow, naomi
+factions: fleet
+level: 2
+
+The lead:
+Chief Hask and Quartermaster Brandt would like you to marry them on Deck Four, in front of the whole crew, under Korrun custom. Chief Hask wants you to know that the custom requires a scale. Quartermaster Brandt wants you to know she's very worried about the scale.
+
+For anyone who isn't the captain:
+Chief Hask and Quartermaster Brandt are getting married on Deck Four, in front of the whole crew, under Korrun custom. Chief Hask says the custom requires a scale. Quartermaster Brandt is very worried about the scale.
+
+What's really going on:
+A Korrun wedding is a weighing. Each partner places on the pan the biggest thing they've kept from the other and says it aloud, and the officiant reads out what it came to. Odessa's thing is the second ledger. (Tobin has known for months, because he has weighed every crate on the ship. He has never said so.) Tobin's thing is worse. The scale is rigged. On the day of the Fall, at Harlow Yard, he weighed the order to leave four hundred of his deck crew on the dock, and it came up light. So he filed two grams off the counterweight until it balanced, and he has weighed every order on a false scale since. A sack under his bunk holds four hundred washers, each stamped with a name. The whole deck trusts that scale. It settles fights and rations. A man lost his rank on its word. So in front of the entire crew, with the captain holding the pans, the man who can't lie and the woman who can't stop may both confess in the same ten minutes. It's the funniest wedding anyone has been to, until it's the most honest moment on the ship.
+
+How it might go:
+- Preparations. Marrow insists on giving the bride away, loudly. Naomi is running a betting pool. A Korrun wedding feast requires an animal nobody has, and the deck crew are trying to carve one out of protein paste. The captain is expected to enter the lifting contest.
+- Odessa comes, privately, and asks if the pan could hold a blank book instead. She has never asked anyone for anything before.
+- Tobin comes, privately, the night before. He sets the scale on the desk, shows the captain the file marks on the counterweight, and empties a sack of washers beside it: four hundred, each stamped with a name. He asks them to weigh that.
+- The Weighing on Deck Four. The crew is packed in. Someone from Halm's audit office has been invited, because Odessa couldn't think of a reason not to. The captain holds the pans.
+- What gets said, and what it comes to.
+
+Ways through:
+- Let it all come out: leadership and persuasion to hold the crowd together through both confessions, and make it mean something besides scandal.
+- True the scale: engineering, or Marrow's help, to restore the two grams the night before without telling anyone. It's honest from now on, and it still lies about the past.
+- Sleight of hand: deception during the ceremony to swap what's on the pan, while athletics and good humor keep the crowd busy with the lifting contest and the customary wrestling with the groom.
+- Old custom: lore finds the sealed weight, an old Korrun provision for a thing that can't be spoken. It's allowed, and it puts both of them in the officiant's debt for seven years.
+
+Checks that fit:
+- athletics:moderate to avoid disgrace in the lifting contest
+- melee:moderate to last a round in the customary wrestling with the groom
+- engineering:easy to see the file marks once you've been shown them
+- lore:hard to recall the sealed weight provision
+- deception:hard to swap the pan in front of two hundred Korrun-trained eyes
+- leadership:hard to hold the deck together when the scale is named
+
+Where it can end up:
+both_confess: Both confess: a day of fury on the deck. Then the crew builds a new scale together from scrap, and everyone weighs it. It's the most trusted object in the fleet, and the deck is closer than it has been since the Fall. The reserve is no longer quite secret.
+wedding_goes_smoothly_with_both_secrets: The wedding goes smoothly with both secrets kept: it's a lovely day. The captain now holds both secrets. Tobin starts bringing every order to the captain to be weighed twice, and can't explain why.
+odessa_calls_off_pan: Odessa calls it off at the pan: she walks out. Tobin weighs the ring, tells the room what it came to, and goes back to work. It can be repaired, but not quickly.
+man_who_lost_his_rank: The man who lost his rank: if the scale is exposed, Petty Officer Wynn wants his case reweighed, and he's right. So does everyone who ever lost an argument on Deck Four.
+
+If nobody steps in:
+after 27 days: Chief Hask and Quartermaster Brandt have set a date for their wedding on Deck Four, with or without a captain to read the scale.
+  lead: Chief Hask and Quartermaster Brandt have set a date for their wedding on Deck Four, and they'd still like you to read the scale. Chief Hask wants you to know the custom hasn't changed.
+after 60 days: Chief Hask and Quartermaster Brandt were married on Deck Four by the oldest Korrun aboard, with very little on the pan.
+  lead: Chief Hask and Quartermaster Brandt were married without you, by the oldest Korrun aboard, and it was a lovely day. Chief Hask has been weighing things more than usual, though, and he's asked if he could borrow you for something small.
+  fleet: morale +2
+
+Rewards:
+A deck crew that would follow the captain anywhere, a tool_roll as a wedding favor, and the first good party anyone has had in six months.

@@ -1,0 +1,32 @@
+# Void Stalker
+threat: 3
+hp: 28
+attack: 4
+defense: 13
+damage: 4 to 8
+weapon: Claws
+xp: 55
+credits: 0 to 0
+art: stalker
+tags: 
+motive: hunger
+
+In a line:
+A vacuum-born predator that hunts by heat.
+
+When the fight starts:
+- Something long and pale unfolds from the dark, turning its eyeless head toward the heat of your body.
+
+When they hit:
+- Claws rake through your suit, and the cold comes in.
+- It hits you from a direction you weren't watching.
+
+When they miss:
+- It lashes out at where you were, and it's already gone again.
+- Claws screech across the hull beside your head.
+
+When they hit hard:
+- It gets its jaws around you and shakes.
+
+When they're beaten:
+- The stalker curls in on itself, and its pale skin goes dark.

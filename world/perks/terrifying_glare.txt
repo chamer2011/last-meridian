@@ -1,0 +1,7 @@
+# Terrifying Glare
+order: 29
+needs skill: intimidation 3
+ability: glare
+
+In a line:
+Unlocks Glare in combat: 2 energy, an Intimidation attempt that freezes a living enemy for a round.

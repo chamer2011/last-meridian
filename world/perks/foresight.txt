@@ -1,0 +1,7 @@
+# Foresight
+order: 28
+needs skill: attunement 3
+ability: foresight
+
+In a line:
+Unlocks Foresight in combat: 3 energy, attack with +3 and gain +5 defense this round.

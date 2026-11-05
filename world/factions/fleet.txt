@@ -1,0 +1,9 @@
+# Refugee Fleet
+order: 1
+starting standing: 20
+
+In a line:
+Forty-one ships and thirty thousand survivors, all looking to the Meridian.
+
+Beliefs:
+loyalty -6, violence -1

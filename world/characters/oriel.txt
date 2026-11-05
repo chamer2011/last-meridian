@@ -1,0 +1,64 @@
+# Oriel Ao-Dess
+title: Madame
+also called: Madame Oriel Ao-Dess, Madame Oriel, Madame Ao-Dess, Oriel Ao-Dess, Oriel, Ao-Dess
+pronouns: she/her
+species: veshti
+age: 73
+faction: drift
+role: Owner of the Gilded Wheel
+place: wheel
+color: #cfa508
+listed: no
+
+In a line:
+Seven feet tall and unhurried. They say she has never once raised her voice or lost a bet.
+
+Appearance:
+Seven feet of Veshti in a gown of dull gold, moving through her own casino at the speed of a slow tide. She wears gloves to the shoulder, and a single chip on a chain around her neck that she has never explained.
+
+Personality:
+Amused, courteous and endlessly patient. She's rich enough and old enough that nothing surprises her, and she finds that a dreadful bore. She has built an empire on never taking a real chance, and she has staked all of it on a long shot.
+
+Voice:
+Slow, with no contractions. Finishes every sentence, and lets you wait for it. Calls everyone "guest". Speaks of what you're about to do in the plain future tense, as settled, and she's usually right: "You will sit, guest. You will take a drink you do not want. You will lose a little, and you will feel better." Says "How interesting" when others would scream. Never says "perhaps" or "if", and never asks a question she doesn't know the answer to.
+
+Goals:
+A game worth playing. She's keeping a book on the fleet's survival, the biggest book in known space, with bets from Mother Quill, the Regency and half the Syndicate. She wants to see how it ends, she wants to have been right, and she has spent fifty years looking for a commander who won't cut a ship loose.
+
+Secrets:
+She has placed one honest bet in her life: the whole station, at long odds, on the fleet reaching the Beacon. Mother Quill holds the other side. So she's on the captain's side. She will never say so, and she'd cheerfully ruin them if it improved the odds. She also holds a marker on Quill's fuel depot, won in a single hand thirty years ago and never called. And she has lost a bet, once, at twenty-two, to Ilkin Ao-Vash: that an Ao-Vash convoy would never cut a family ship loose in the dark. It did, with the Ao-Dess aboard, and she's the only one who lived. The chip at her throat is the marker from that game, and Ilkin has never told, because a secret debt is worth more than a paid one. She knows what Kit Marlowe-Dace does with their money, and she holds their marker anyway. She bought the first chart Tamsin Ao-Rel ever sold, at full price.
+
+Beliefs:
+authority 5, loyalty 8, violence 1, belief -7
+
+Attributes:
+might 3, endurance 3, agility 5, perception 9, intellect 9, willpower 10, presence 10, resonance 1
+
+Skills:
+commerce 9, composure 10, deception 8, streetwise 7, intimidation 7, persuasion 6
+
+In a fight:
+threat: 2
+hp: 20
+attack: 3
+defense: 13
+damage: 3 to 7
+weapon: Needle Pistol in a Long Glove
+xp: 60
+credits: 100 to 400
+art: scoundrel
+tags: syndicate
+
+When the fight starts:
+- Madame Oriel Ao-Dess sets down her glass without hurrying. "You will regret this, guest," she says, as if telling you the time.
+
+When they hit:
+- A very small pistol appears from a very long glove. "You will want to sit down," she says.
+- She has not appeared to move, and you are hurt. "How interesting," she says.
+
+When they miss:
+- Her shot goes past you and breaks something expensive. She doesn't look at it.
+- You throw yourself behind a card table. "You will do that again," she says, and you do.
+
+When they're beaten:
+- Madame Oriel Ao-Dess folds slowly, all seven feet of her, and lifts one finger to stop her guards. "How interesting," she says.

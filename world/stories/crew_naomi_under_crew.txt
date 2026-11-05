@@ -1,0 +1,67 @@
+# The Downstairs Crew
+kind: crew
+places: meridian
+people: naomi, marrow, voss, aduro, tarrow, odessa
+factions: fleet
+
+The lead:
+Naomi Cass is standing in your doorway to inform you that Section Fourteen will not be vented tomorrow. She's twelve, and she says it the way Commander Voss says things.
+
+For anyone who isn't the captain:
+Naomi Cass has told everyone who'll listen that Section Fourteen will not be vented tomorrow. She's twelve, and she says it the way Commander Voss says things.
+
+What's really going on:
+Naomi isn't the only stowaway. Thirty-one children live in the Meridian's crawlspaces, all from the creche ship Ember Day, pushed through the Meridian's hatch during the evacuation by a nursery synthetic who then went back for more. (That's Orchard, now in Marrow's aft hold. They visit her every night. When she counts to thirty-one at lights-out and says "all present", she's right: see crew_marrow_aft_hold.) They have laws painted on a duct, an elected council, a court, and a doctor who is ten. Their chief engineer, who is nine, is why Marrow's ducts work better than they should. He's been telling people the ship is being kind to him. Naomi is their captain, and the oldest by two years. Section Fourteen is their dormitory, and Marrow's hull work will vent it tomorrow. They won't come out, because the last time adults found one of them, she was sent to the school ship Wintermere and stopped talking. Quartermaster Brandt has been feeding them on paper for months, as thirty-one crates, miscellaneous, perishable, and she has never gone to look. Their little constitution is better than Halm's, which is a problem all by itself.
+
+How it might go:
+- Naomi's order at the doorway. She won't explain. She'll negotiate, but only with the captain and only in person, which means crawling.
+- The tour: a long crawl through the warm dark. Painted rules. A nine-year-old who corrects the captain's grip on a wrench. A court in session over a stolen sock. They call the captain "the Upstairs Captain".
+- The thing they aren't saying: a boy with a fever, three days along, and a ten-year-old doctor who's out of ideas and too proud to say so.
+- Treaty talks. They've drafted one, and it has clauses. Voss, if told, reads it, says nothing and corrects a typo. Clause nine is in different handwriting: the Upstairs Captain will find out if a man called Cass is on any manifest. He isn't, on any ship in the fleet, and Quartermaster Brandt has known that for months.
+- Tomorrow comes, and this is a warship with children in its walls. What happens when the Choir does?
+
+Ways through:
+- Diplomacy: persuasion with their council. They vote on everything, at length, and can't be bribed with anything but the truth and sweets.
+- Go in and see: athletics and stealth through the crawlspaces, medicine for the sick boy, and a fight with what's been nesting in the deep ducts.
+- Engineering: reroute the hull work around Section Fourteen. Marrow is outraged and then delighted. "My ghost is NINE?"
+- Make it official: leadership to swear them in as ship's cadets, with rations, lessons and a drill for when the alarm goes. Voss says nothing and has thirty-one cut-down uniforms made.
+- Send them off by order: intimidation. Some go. The rest go deeper, and the captain has just made an enemy of people who know every secret on the ship.
+
+Checks that fit:
+- athletics:moderate to get through the narrow crawls at all
+- stealth:easy to reach Section Fourteen without Marrow's crew seeing
+- persuasion:hard to win a vote of the Downstairs Council
+- medicine:moderate to treat the boy with the fever
+- engineering:moderate to route the hull work around Section Fourteen
+- melee:easy to help drive off the rats with a borrowed broom handle
+
+If it comes to a fight:
+- scrap_rat nest in the deep ducts. The children have been holding them off with broom handles, and would like it noted that they didn't need help
+
+Where it can end up:
+treaty_cadets: Treaty and cadets: thirty-one new crew, and the captain's eyes and ears in every wall. Morale on the Meridian jumps. Halm demands they be moved, Garrick Fenn's story on it is the most popular he's ever aired, and if the ship takes a hit the captain will have to live with what they chose.
+sent_to_wintermere: Sent to the Wintermere: safe on paper. Naomi stops speaking to the captain. Within a week she's back, alone, in the walls, and it isn't clear who else came with her.
+ignored: Ignored: the vent goes ahead. The children get out by themselves with minutes to spare, because they've drilled for it. Nobody's dead. They redraw their map, with the captain's quarters marked as hostile.
+reunion: Reunion: if Orchard has been brought out into the open, she gets to count them in front of everyone, in daylight. All present. Even Tarrow can't find anything to say.
+clause_nine: Clause nine: if the captain tells her the truth about her father, she goes very quiet, says "Technically that doesn't mean he's dead," and goes back to work. If they lie, she'll check, and she'll know. If they never answer, it stays in the treaty, and she brings it up at every renewal.
+
+Facts it can leave:
+downstairs_crew: The Downstairs Crew, thirty-one children from the Ember Day, are the Meridian's cadets by their own treaty.
+downstairs_hidden: The children in Section Fourteen stay hidden in the walls, with the captain's leave.
+downstairs_enemies: The children in the walls count the captain an enemy.
+downstairs_friend: The children in the walls count the player a friend.
+orchard_out: Orchard has been brought out into the open, and counted the children in daylight.
+clause_nine: Naomi was told the truth about her father, under clause nine of the treaty.
+aduro_knows: Dr. Aduro knows about the children in the walls.
+brandt_knows: Brandt knows about the children in the walls.
+marrow_knows_fourteen: Chief Marrow knows what's in Section Fourteen.
+
+If nobody steps in:
+after 14 days: A vent cycle in Section Fourteen was held up by a jammed hatch, and then by another one.
+  lead: Section Fourteen's vent cycle has been held up twice now by hatches that were working fine the day before. Naomi Cass has informed you it won't be happening tomorrow either.
+after 38 days: Section Fourteen was vented on schedule at last, and a lot of very small footprints were found in the dust on the other side.
+  lead: Section Fourteen was vented in the end, and there were a lot of very small footprints in the dust on the far side. Naomi Cass isn't talking to you. Someone's still stealing from the galley, though, and it isn't only her.
+  fleet: morale -1
+
+Rewards:
+Naomi's full loyalty, a hand-drawn map of the crawlspaces that helps with anything sneaky on the Meridian, and a very serious treaty.

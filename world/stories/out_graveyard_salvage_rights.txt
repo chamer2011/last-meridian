@@ -1,0 +1,54 @@
+# Salvage Rights
+kind: faction
+places: graveyard
+people: elsbeth, rusk
+factions: guild, fleet, hegemony
+level: 2
+
+The lead:
+Factor Elsbeth Crane is very sorry, but the CFS Perrin's Vow is adrift, dark and claimed, and under Guild law everything aboard a claimed wreck is salvage. That includes the hundred and ninety Concord sailors still alive in her sealed aft section. She'll sell them to you at a fair price. Or to anyone else who asks.
+
+For anyone who isn't the captain:
+Factor Elsbeth Crane is very sorry, but the CFS Perrin's Vow is adrift, dark and claimed, and under Guild law everything aboard a claimed wreck is salvage. That includes the hundred and ninety Concord sailors still alive in her sealed aft section. She'll sell them at a fair price, to anyone who asks.
+
+What's really going on:
+The Perrin's Vow took a fatal hit in the last battle. Her surviving crew sealed the aft section and have held out for six months on emergency power, running drills and keeping watches, under a ferocious Chief Petty Officer named Renata Amadi. Amadi has orders not to surrender her ship, and she's refused to open the hatch to anyone. Her sailors don't know the Concord is gone, or they've been told and won't believe it. The Guild's law is iron: a ship with no running lights is a derelict, and whatever's aboard belongs to the claimant. Crane filed the claim, and it looks monstrous. The Hegemony wants trained crew and the Syndicate wants a working gun, and both are ready to pay. The twist is why she filed. A claimed wreck can't be touched by anyone else. She's been sending food and water to that hatch for four months through a dive crew she pays herself. Her contracts have never been broken, and she can't simply give them away: if she bends the law once, every diver in the Graveyard goes back to shooting each other. She needs somebody to beat her in her own court, and she won't ever say so.
+
+How it might go:
+- The Factor's Barge, where the claims register is written by hand in ink. She's dry, exact and apparently heartless. She names a price per head, and it's a bad joke: too low for what the sailors are worth, and far too high for what the fleet can pay.
+- The hatch. Rusk, who owes nobody, takes the captain there. A hand-cranked comm, and a voice that says "State your authority, and your orders." The captain's rank means very little to Amadi. She outranks them in every way but one.
+- A Hegemony buyer, wearing good boots, and a Syndicate buyer, wearing better ones, both arrive with money. The Court of Hulls is called for the third bell, and whoever wins it owns a hundred and ninety people.
+- The Court of Hulls: three old divers in full suits, sitting on the gutted bridge of a dead dreadnought, under a hole you can see stars through, taking their oath on a cut tether. It's the strangest legal proceeding in known space, and they take it completely seriously.
+- The verdict, and Amadi's decision, which may not be what anyone wants. She may not choose to follow the captain, even after being saved.
+
+Ways through:
+- Argue it: lore and persuasion in the Court of Hulls, finding what the law really says about the living, and whether sailors can be cargo.
+- Light her up: engineering and void_ops to get the Perrin's Vow's running lights burning, with a Guild witness present. A ship with lights is not a derelict, and the claim dies on the spot.
+- Pay for it: commerce and streetwise to outbid or undercut the other buyers, or to find a way to pay in hull plate and promises.
+
+Checks that fit:
+- lore:hard to find the old Guild precedent on living salvage
+- persuasion:hard to convince three old divers
+- engineering:hard to get the lights on in a ship that's been dead for six months
+- void_ops:moderate to work the outer hull with Guild witnesses watching
+- leadership:very_hard to get Renata Amadi to accept your authority
+- commerce:moderate to read what the other buyers will really pay
+
+If it comes to a fight:
+- wreck_diver hired by the losing buyer, out on the hull, and customs_marine if the Hegemony decides not to wait for the court. Guild law comes down hard on anyone who shoots during a hearing.
+
+Where it can end up:
+lights_come: If the lights come on, the Guild laughs for a week and Crane has never been happier, though you'd never know. The fleet gets a claim on a damaged warship and a hundred and ninety trained sailors.
+captain_wins_court: If the captain wins in court, the principle that people can't be salvaged becomes Guild law. A lot of old contracts stop working, and the Guild's divers split over whether this is justice or the end of the Guild.
+captain_buys: If the captain buys them, Amadi and her sailors are fleet property on paper, a bitter joke that goes around for months, and the fleet's accounts are empty.
+captain_walks_away: If the captain walks away, they go to the highest bidder, and in a month Renata Amadi turns up commanding a Hegemony gunboat, furious, excellent, and asking questions about who left them there.
+
+If nobody steps in:
+after 15 days: Factor Crane's notice is up at the Graveyard: a hundred and ninety Concord sailors, for sale as salvage, to anyone who asks.
+  lead: Factor Crane's notice is up: a hundred and ninety sailors on the Perrin's Vow, at a fair price, to anyone who asks. Someone has asked, and she says she'd hate to sell them to anyone else.
+after 45 days: The Hegemony has bought the salvage rights to the Perrin's Vow at the Graveyard, and sent a ship to collect.
+  lead: The Hegemony's bought the Perrin's Vow's salvage rights, sailors and all, and a ship's gone to collect them. They've been holding out in her sealed aft section for months, and they're not opening up for a contract. You could still get there first.
+  fleet: morale -1
+
+Rewards:
+A boarding_axe or service_rifle from the Vow's arms locker, Crane's guarded respect and better rates at the Graveyard, Chief Amadi's loyalty if she's earned, and a damaged warship that could be repaired, with enough time and enough parts.

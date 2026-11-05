@@ -1,0 +1,54 @@
+# The Road Past the Map
+kind: main
+places: meridian, pale_gate, ghostlight
+people: pell, tamsin, orsolya, marrow, voss, tobin, grann
+factions: fleet, families, ilun, remnant, hegemony
+level: 7
+after: main_everyone_whos_left
+
+The lead:
+Ensign Asante has laid three courses on the plot table and has asked you, very politely, to tell her which one won't kill everybody. None of them goes anywhere that's on a chart.
+
+What's really going on:
+There are four ways past the map. The Pale Gate, the old relief route: quick and ancient, and it needs a gate_key or a convincing answer to the Wardens (deep_the_patient_wardens). Tamsin's Thin Road, through the Ghostlight and on along the buoys of the old Veshti route plate: long, and hungry for fuel (deep_the_thin_road). The Tarn: if she's been left on station, Ibarra can lead the fleet down the song's own lanes, through silver traffic that makes way, the fastest and worst road, and nobody who takes it sleeps right again. Or the bearing: a beacon_shard on a string, a Silent One's gaze and a plain straight line, with no help from anyone. However it's done, forty-one ships (or however many remain) have to go, or not. Many refuse. The Regent's squadron is racing to get there first. Okonkwo has gone on ahead or is coming behind. Choir Hunters herd more than they hunt now. Marrow's engines are held together with swearing. This is the game's big journey, across the edge of the known. Make it awe-inspiring: stars thinning out, then stopping.
+
+How it might go:
+- The plot table. Pell, Voss, Marrow and Tamsin if they've been found. Who's coming? Ship by ship, the captain finds out. Tobin Hask sets the order on his scale and tells them what it came to.
+- The parting: ships that stay behind. Some people choose Bastion or Haven. Someone the player loves may go. It's the last time anyone sees the Sundial's lights in the fleet, if Grann Tull won't come. She'll say she's coming for the soil.
+- The crossing, a set piece. At the Gate, the ring turns around the fleet. On the Thin Road, fuel and dark and buoys older than the Veshti. In the lanes, silver all around, making way. A Hegemony squadron catches the tail of the fleet, and Okonkwo's ships turn round to hold it, or don't.
+- The stars thin out. Lira's instruments stop returning anything: 'Confirming: nothing.' People go to the viewports and don't talk. One ship's crew sits down. Someone gets them up, or they don't.
+- A light ahead, and a calm voice on the band, in Navy format, telling them they're nearly home.
+
+Ways through:
+- Pilot or navigator: fly it (piloting, navigation). It's Pell's finest hour, with the captain beside her or in her chair, and her certification stops mattering.
+- Engineer: keep forty-one patched ships alive on no fuel at all (engineering, void_ops), with Marrow, Tobin Hask and every Synthetic who stayed.
+- Commander: hold the convoy together and fight the rearguard (tactics, gunnery, leadership). Who do you send back to hold the line?
+- Talker: at the Gate, answer the Wardens. In the lanes, talk to Ibarra. On the decks, keep people from turning back (persuasion, lore, leadership).
+- Resonant: steer by feel when the instruments quit (attunement, manifestation). There's a current, and you can go with it or across it, at a heavy price each way.
+
+Checks that fit:
+- piloting:hard to take the fleet through whichever road they've chosen
+- navigation:very_hard to hold a course with no stars
+- engineering:hard to keep the slowest ships from falling behind
+- gunnery:hard to break the Hegemony squadron's pursuit
+- leadership:hard to keep the fleet from turning back
+- attunement:hard to feel the way when the instruments stop
+
+If it comes to a fight:
+- hegemony_hunter and customs_marine boarding the rear ships
+- gate_warden or choir_chorister, depending on the road taken
+
+Where it can end up:
+who_made_outcome: Who made it is the outcome. Keep a count of the ships and people arriving, and name the losses. These numbers matter in the last act.
+by_gate: By the Gate, the way stays open behind them, and the Regent can follow. By the Thin Road, few can follow, the fleet's almost out of fuel and nobody's leaving again. By the lanes, everyone hears the song on the way, and the Harbor's pull will be much stronger. By the bearing, it's slow, the captain arrives last, and others have arrived before them.
+okonkwo: Okonkwo, Tarrow or Tannis holds the line at the rear. A legend is made, or someone is lost, if the player's choices earn that.
+pell_brings_through: If Pell brings them through, the captain can sign her certification on real paper, and she may finally say sir on time.
+reaching_beacon_settles_biggest_bet: Reaching the Beacon settles the biggest bet in known space. Madame Oriel collects from Mother Quill, and she sends the captain a single gilded chip, with no note.
+
+If nobody steps in:
+after 45 days: Ships have started setting their own courses for the Beacon, and Ensign Asante can't talk them out of it.
+  lead: Ensign Asante's three courses are still on the plot table, and some ships have stopped waiting for you to choose. She has asked you again, very politely, which one won't kill everybody.
+  fleet: ships +2, morale -2
+
+Rewards:
+refined_fuel, emergency_patch and pilot_gloves for whoever earned them. Every ship that arrives.

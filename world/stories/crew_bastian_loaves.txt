@@ -1,0 +1,55 @@
+# The Bread on Father Roe's Table
+kind: dilemma
+places: meridian, fleet
+people: bastian, oskar, odessa, tobin, garrick, naomi
+factions: fleet, quiet
+level: 3
+
+The lead:
+Every service Father Roe holds on the lower decks, there's fresh bread on the table that nobody baked and no ration card paid for. People have started crossing between ships to see it, and they've started using a word the Father won't say.
+
+For anyone who isn't the captain:
+Every service Father Roe holds on the lower decks, there's fresh bread on the table that nobody baked and no ration card paid for. People have started crossing between ships to see it, and they've started using a word the Father won't say.
+
+What's really going on:
+Bastian Roe lost his faith in the Fall, and he performs the services anyway, because people still need them. Months ago he learned of Odessa's Dark Pantry from Naomi (see crew_odessa_two_ledgers), and he has been stealing forty kilos of flour a week, baking it at night in a dead galley on the Meridian with two sworn helpers, and putting it on the table. He did it to feed people, and to get them into a room with someone who'd listen. He has never called it a miracle. Others do. Attendance is now three thousand, the only thing slowing the Quiet on the lower decks, and a girl on the Second Thursday says the bread cured her cough. Here's the twist: he has been counting, and there's more bread than flour. Fifteen percent more. Most of that is Oskar Lind, the Quiet's preacher, who has been leaving sacks of Sundial flour outside the galley for weeks, because he wants people fed and doesn't care who gets the credit. That accounts for ten percent. Nobody can account for the last five, and the GM should never explain it.
+
+How it might go:
+- A service on the lower decks: the smell of bread in a place that has forgotten it, the hush, and then the crowd. Father Roe breaks it without looking at anybody.
+- A private talk, over very weak tea. If pressed, he admits it. "What would you have me do? Stop?" He looks worse than anyone on the ship. Naomi Cass calls him Father Pretend, to his face, and he answers to it.
+- A mother brings a dying child and asks him to give her the bread. The whole room watches. He looks at the captain.
+- Oskar's sacks come to light, and the two of them end up in one room: a priest who doesn't believe, and the man who used to set out his chairs, who does. They get along alarmingly well, and Oskar has gently offered him something else to believe in.
+- The count doesn't close. Tobin Hask weighs it twice and tells the captain what it came to, and then, for once, asks what the captain thinks that means.
+
+Ways through:
+- Detective work: awareness and streetwise to trace the flour, science to run the numbers and Tobin's scale to close the books. The last five percent won't close.
+- Keep the peace: persuasion and composure to calm a crowd that's starting to treat him as a saint, and lore to know what the Service actually says about miracles.
+- Take it over: leadership or commerce to make the bread an official fleet kitchen. It would feed more people, and kill the thing that brought them.
+- Expose it: Garrick Fenn would love this. Intimidation is also available, for anyone who'd rather scare Father Roe into stopping.
+
+Checks that fit:
+- awareness:moderate to catch the smell of flour on a helper's sleeves
+- science:moderate to see that the bread and the flour don't balance
+- lore:moderate to recall what the Service says about bread and wonders
+- persuasion:hard to send a crowd home when it thinks it's seen a miracle
+- attunement:hard to feel what's actually in that room when three hundred hungry people are praying
+- commerce:moderate to set up a fleet kitchen that doesn't starve the pantry
+
+If it comes to a fight:
+- desperate_refugee crowd if the bread runs out halfway through a service
+
+Where it can end up:
+keeps_going: He keeps going: the fleet has a priest who doesn't believe and a faith that's growing anyway. The Quiet slow on those decks. The captain is now complicit in a miracle.
+confesses_from_table: He confesses from the table: half of them walk out, many of them to Oskar. The other half stay and say it doesn't change anything. He's astonished, and for the first time in months he sleeps.
+exposed_by_fenn: Exposed by Fenn: the fleet is angry at him, and then at Odessa when they find out where the flour came from. The Quiet gain a thousand in a week.
+official_kitchen: Official kitchen: more people fed, and fewer people in a room together. The services shrink. Bastian says it's the first honest thing anyone has done, and he looks lost.
+
+If nobody steps in:
+after 27 days: People are crossing between ships for Father Roe's bread, and the ration office has started asking where it comes from.
+  lead: People are crossing between ships for Father Roe's services now, and it isn't the sermon they're coming for. The ration office has started asking where the bread comes from, and so has Quartermaster Brandt, a little too loudly.
+after 60 days: Garrick Fenn has asked on the air where Father Roe's bread comes from.
+  lead: Garrick Fenn has asked on the air where Father Roe's bread comes from, and the lines at his services have doubled. Sooner or later someone's going to follow the flour.
+  fleet: morale -1
+
+Rewards:
+Bastian's friendship, which comes with terrible honesty. calm_tabs. Fleet morale, and a possible truce with Oskar Lind.

@@ -1,0 +1,54 @@
+# Wake at Clearance
+kind: mystery
+places: pale_gate
+people: elsbeth, ione, vael
+factions: guild, ilun, hegemony
+level: 5
+
+The lead:
+Scavengers from the Pale Gate's Rimcamp have found a long hall of sealed cradles, nearly all of them dead. Nine are still warm, one has a handprint on the inside of the glass, and Factor Crane says the Guild won't touch it, and she'll tell you why for a fee.
+
+For anyone who isn't the captain:
+Scavengers from the Pale Gate's Rimcamp have found a long hall of sealed cradles, nearly all of them dead. Nine are still warm, one has a handprint on the inside of the glass, and Factor Crane says the Guild won't touch it, and she'll say why for a fee.
+
+What's really going on:
+It's the last relief crew of the Order of Ilun. 1,006 years ago they reached the Gate on their way to relieve the crew at the Harbor, and they got into the cradles in the Hall of Cradles to wait for clearance. The Stilling happened. Nobody came to tell them. Most of the cradles failed, quietly, over the centuries. Nine still run on a trickle of power from the ring, and only five of those are in any condition to wake safely. Elsbeth Crane won't touch it because Guild law says you don't salvage a crew that's still on duty, and she has never once broken a contract, even one she didn't sign. Their Proctor is Annis Kore, a hard, funny woman who carries the original of what the Inquisitors now use as a weapon: a slender pale tool, racked beside every cradle, that drains a singer going under and pulls them back. They speak an old church dialect of the Concord's ancestor tongue. They know the rite, the instrument, the Harbor's layout and everything the Order cut out. They'll ask when the ship is due. Somebody will have to tell them. Arc clues: overdue_crew, blade_origin.
+
+How it might go:
+- Elsbeth's fee and her reason: 'For the avoidance of doubt, Captain, there's a crew in that hall. They're on a manifest. It isn't salvage. It's just very late.' Then the hall: long and cold, lamps burning low at the far end as if someone's expected, and sleepers in robes of a cut nobody has worn since before the Concord's founding stories.
+- The cradles. Most are long dead. Nine show a pulse, and five look as if they might survive it. There's a checklist on the wall in an old hand, and its last line says: Wake at clearance.
+- Waking them. Proctor Kore first, or whoever the captain chooses. Cold, confusion and a hand on the hilt of a strange short blade. 'Has the ship come? What's the hour?'
+- Someone has to tell them. That the Order stopped. That there's no ship. That everyone they ever knew has been dead for a thousand years. That the Hegemony is descended from her colleagues. One of them laughs, one sits down on the floor and doesn't get up, and the Proctor asks to see the current rota.
+- What they want: to finish the job. They're a thousand years overdue, and they'd like a ride to the Harbor. What the Order says about them, what the Regent would pay and what Orsolya would do are all going to be problems.
+
+Ways through:
+- Doctor or engineer: wake them safely (medicine, engineering). Choose who gets the limited power. Each has a chance, and the order matters.
+- Scholar: speak their language (lore). Read the checklist, talk to them in words they know, and be the one to say it properly.
+- Talker: tell them the truth and keep them from breaking (persuasion, composure, leadership). A very old kind of duty can be a very good anchor, so give them something to do.
+- Resonant: feel which of them can still be reached (attunement) before you spend the power. Two of them have been dreaming the song for a thousand years, and they aren't sure they've ever been asleep.
+- Salvor: get past Elsbeth's contract or use it (commerce, streetwise). She might just sign them on. A contract would be the first legal standing anyone has given them in a thousand years.
+
+Checks that fit:
+- medicine:hard to bring a sleeper back after a thousand years
+- engineering:hard to shift the ring's trickle of power from one cradle to another
+- lore:moderate to speak to them in their own tongue
+- composure:moderate to be the one who tells them
+- attunement:moderate to feel who can still be reached
+- commerce:moderate to get a straight answer from Factor Crane
+
+If it comes to a fight:
+- gate_warden if the cradles are opened without clearance being answered, since it's only doing its job
+- wreck_diver if claim-jumpers get there first
+
+Where it can end up:
+kore_wakes_joins: If Kore wakes and joins, the captain gets a living expert on the rite and the means to pull people back from going Silent. She takes one look at an Inquisitor's blade and asks who's been using it as a weapon.
+everyone_who_wakes_breaks_dies: If everyone who wakes breaks or dies, there's still the checklist, the robes and the rota they carried. It isn't nothing, and the captain has to live with it.
+word_reaches_ione: If word reaches Ione, she comes, or she asks the captain what they've done. She knows their names: they're carved at Ilun as the Order's martyrs. Nobody told them they were dead.
+word_reaches_regent: If word reaches the Regent, they'd very much like the Proctor, and they'd treat her with every courtesy. She was their founder's colleague. Vael would give a great deal for a quiet word, and Kore might even give her one.
+
+If nobody steps in:
+after 30 days: Scavengers at the Pale Gate's Rimcamp say one of the nine warm cradles has gone cold.
+  lead: One of the nine warm cradles at the Pale Gate has gone cold. There are eight now, and the handprint's still on the glass. Factor Crane still won't touch it, and she'll still tell you why for a fee.
+
+Rewards:
+A gate_key from the Proctor's robes if she trusts the captain. The blade stays with her, and she'll use it where they ask. Fresh hands who know what the Harbor is.

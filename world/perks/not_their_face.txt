@@ -1,0 +1,9 @@
+# Not Their Face
+order: 48
+needs skill: composure 4
+
+In a line:
+You've learned to look at a face you loved and keep your hands steady. +2 on checks and attack rolls against the Choir.
+
+Effects:
+in a setting: choir 2

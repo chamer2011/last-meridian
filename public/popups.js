@@ -1,18 +1,21 @@
 // The story over the room, in the isometric view. A scene comes up a piece at a time, with what
-// someone says in a window over their head and the rest in a window along the bottom. Clicking
-// anywhere goes on to the next piece, and the choices are there the whole time.
+// someone says on a pane by their head and the rest in a window along the bottom. Clicking
+// anywhere goes on to the next piece, and the choices are there the whole time. A talk comes up
+// the same way, with the choices beside the pane.
 
 import { el } from "./dom.js";
 import { isoLook, isoSpot } from "./iso.js";
+import { drawLeader, paneNode, paneOffset, paneSpringing, panesPlacedBy } from "./pane.js";
 import { latestSceneStart, personSpeaking, sceneOf } from "./scene.js";
 import { blockNode, sceneBlocks, speakerOf, storyEntryNode, thinkingNode, wordNodes } from "./story-view.js";
+import { talkPanesNode } from "./talk.js";
 import { WRITING_SPEEDS, holdBack, newPen } from "./writer.js";
 
 // How long a note about what's happening stays up.
 const NOTE_TIME = 12000;
 const MOST_NOTES = 4;
 
-const pop = { open: false, start: null, at: 0, seen: -1, beats: [], notes: [], posted: 0, said: null, limit: 340, words: null, wordsOn: null, shownNotes: [] };
+const pop = { open: false, start: null, at: 0, seen: -1, beats: [], notes: [], posted: 0, said: null, limit: 340, words: null, wordsOn: null, shownNotes: [], paneFor: null };
 
 // What the popups need from the main screen. Set once, when the page loads.
 let app;
@@ -25,26 +28,27 @@ const pen = newPen({
 
 export function initPopups(hooks) {
   app = hooks;
+  panesPlacedBy(placeAll);
 }
 
 export function resetPopups() {
   pen.stop();
   for (const note of pop.shownNotes) clearTimeout(note.timer);
-  Object.assign(pop, { open: false, start: null, at: 0, seen: -1, beats: [], notes: [], posted: 0, said: null, words: null, wordsOn: null, shownNotes: [] });
+  Object.assign(pop, { open: false, start: null, at: 0, seen: -1, beats: [], notes: [], posted: 0, said: null, words: null, wordsOn: null, shownNotes: [], paneFor: null });
 }
 
 const living = () => app.ui.streaming && !app.ui.game?.talk;
 
 // ---- Keeping up with the story -------------------------------------------
 
-// As much as fits in a window over someone's head, going by the size of the room and of the text.
+// As much as fits on a pane by someone's head, going by the size of the room and of the text.
 function limitNow() {
   const box = document.getElementById("pops");
   const width = box?.clientWidth || 800;
   const height = box?.clientHeight || 500;
   const size = Math.max(12, app.reading.size - 3);
   const letter = size * 0.6;
-  const wide = Math.max(26 * letter, Math.min(width * 0.44, 46 * letter));
+  const wide = Math.max(26 * letter, Math.min(width * 0.36, 34 * letter));
   const lines = Math.floor((height * 0.42) / (size * 1.45));
   return Math.max(140, Math.min(420, Math.round(((wide - 22) / letter) * lines * 0.9)));
 }
@@ -106,7 +110,7 @@ function notesNode() {
 
 const drawNotes = () => {
   document.getElementById("pop-notes")?.replaceWith(notesNode());
-  placeBalloon();
+  placeAll();
 };
 
 function dropNote(note) {
@@ -138,10 +142,11 @@ function postNotes() {
 const current = () => pop.beats[pop.at] ?? null;
 
 // Whoever's saying this, if they're here to say it over their head. A voice over comms and a machine
-// don't have a head to put it over, and neither does anyone who isn't in the room.
+// don't have a head to put it over, and neither does anyone who isn't in the room. During a talk the
+// talk has the room, and the story's words stay in the window along the bottom.
 function speakerHere(beat) {
   const { game } = app.ui;
-  if (app.reading.story !== "popups" || beat?.type !== "speech" || beat.voice) return null;
+  if (app.reading.story !== "popups" || beat?.type !== "speech" || beat.voice || game?.talk) return null;
   if (personSpeaking(beat.speaker, [{ name: game.name, short: game.name }])) return { key: "you" };
   return personSpeaking(beat.speaker, game.walk.people);
 }
@@ -206,18 +211,33 @@ const clickedWords = (event) => {
   if (!event.target.closest("button, a, input, summary, [data-lore]")) popupNext();
 };
 
+// What's being said, on a pane by whoever's saying it. It slides out from their head the first time
+// it's theirs, and only then, since the pane is drawn again for every piece.
 function balloonNode() {
   const beat = current();
   const person = pop.open ? speakerHere(beat) : null;
-  if (!person) return null;
+  if (!person) {
+    pop.paneFor = null;
+    return null;
+  }
   const { color, name, voice } = speakerOf(beat);
   const still = living() && pop.at === pop.beats.length - 1;
-  return el("div", { class: `pop-balloon${pop.at < pop.beats.length - 1 ? " more" : ""}`, id: "pop-balloon", style: `--speaker:${color}`, onclick: clickedWords },
-    el("div", { class: "check-window pop-window pop-speaker" },
-      el("header", { class: "check-title" }, el("span", { class: "check-name" }, name), voice && el("span", { class: "check-skill" }, voice)),
+  const more = pop.at < pop.beats.length - 1;
+  const opening = pop.paneFor !== person.key && !calm();
+  pop.paneFor = person.key;
+  return paneNode({
+    id: "pop-balloon",
+    key: person.key,
+    color,
+    more,
+    opening,
+    onTap: () => popupNext(),
+    tag: [el("span", { class: "pop-tag-name" }, name), voice && el("span", { class: "pop-tag-note" }, voice)],
+    body: [
       el("div", { class: "pop-words", id: "pop-writing" }, wordNodes(beat.parts)),
-      el("div", { class: "pop-hint" }, `${pop.at + 1} of ${pop.beats.length}${still ? "..." : ""}`, pop.at < pop.beats.length - 1 && el("span", {}, "click to go on"))),
-    el("div", { class: "pop-tail", "aria-hidden": "true" }));
+      el("div", { class: "pop-hint" }, `${pop.at + 1} of ${pop.beats.length}${still ? "..." : ""}`, more && el("span", {}, "click to go on")),
+    ],
+  });
 }
 
 // What's in the window along the bottom: this piece, or if this piece is over someone's head, the
@@ -272,53 +292,110 @@ function commandWindow(composer) {
     composer);
 }
 
-// Where the window over someone's head goes: above them if it fits and below them if it doesn't,
-// and always on the screen. This runs each time the room's drawn, so it stays with them as they move.
-function placeBalloon() {
-  const balloon = document.getElementById("pop-balloon");
+// Where a pane by someone's head goes: up and to their right, with its corner a hand from the head,
+// or up and to their left when the right has no room, and always on the screen, out from under the
+// clock and the notes. This runs each time the room's drawn, so it stays with them as they move, and
+// again while it's being pulled aside or sliding back. A pane with nobody to belong to, which a talk
+// can be when the room can't show the person, goes in the middle.
+function placePane(node, key, { choices = false, anywhere = false } = {}) {
   const box = document.getElementById("pops");
-  const notes = document.getElementById("pop-notes");
-  const person = balloon && box ? speakerHere(current()) : null;
-  const spot = person && isoSpot(person.key);
-  if (!spot) {
-    notes?.classList.remove("covered");
+  if (!node || !box) return;
+  const spot = key ? isoSpot(key) : null;
+  if (!spot && !anywhere) {
+    node.classList.remove("placed");
     return;
   }
   const row = document.getElementById("pop-row");
-  const inner = balloon.querySelector(".pop-speaker");
-  if (inner) inner.style.maxHeight = "";
+  const notes = document.getElementById("pop-notes");
+  const clock = document.getElementById("walk-clock");
+  const pane = node.querySelector(".pop-pane");
+  if (pane) pane.style.maxHeight = "";
   const width = box.clientWidth;
   const floor = box.clientHeight - (row?.offsetHeight ?? 0) - 12;
-  const wide = balloon.offsetWidth;
-  const full = balloon.offsetHeight;
-  const middle = spot.x + spot.w / 2;
-  const left = Math.max(6, Math.min(width - wide - 6, middle - wide / 2));
+  const wide = node.offsetWidth;
+  const head = spot ? { x: spot.x + spot.w / 2, y: spot.y + 2 } : { x: width / 2, y: floor / 2 };
+  // Your own pane goes on the side away from theirs, since you're standing right beside them.
+  const theirs = node.id === "pop-you" ? paneCalled("talk")?.placedAt ?? null : null;
+  let side = theirs && theirs.left + theirs.wide / 2 > head.x ? "left" : "right";
+  let left = side === "right" ? head.x + 28 : head.x - 28 - wide;
+  if (side === "right" && left + wide > width - 6) {
+    side = "left";
+    left = head.x - 28 - wide;
+  } else if (side === "left" && left < 6) {
+    side = "right";
+    left = head.x + 28;
+  }
+  left = Math.max(6, Math.min(width - wide - 6, left));
   // It stays out from under the clock and the notes, which are at the top.
-  const clock = document.getElementById("walk-clock");
   const under = (other) => (other && other.offsetHeight && left + wide > other.offsetLeft && left < other.offsetLeft + other.offsetWidth ? other.offsetTop + other.offsetHeight + 5 : 6);
+  let tall = node.offsetHeight;
   let roof = Math.max(under(clock), under(notes));
   // The words come first. When the room's too short for them under the notes, the notes step aside until the words
-  // have gone, and when it's too short even for that, the window shrinks and its words scroll, so it never runs
-  // into the story below.
-  const covering = floor - roof < full && under(notes) > under(clock);
-  if (covering) roof = under(clock);
-  notes?.classList.toggle("covered", covering);
-  let tall = full;
-  if (floor - roof < full && inner) {
-    inner.style.maxHeight = `${Math.max(60, floor - roof)}px`;
-    tall = balloon.offsetHeight;
+  // have gone, and when it's too short even for that, the pane shrinks and its words scroll, so it never runs into
+  // the story below.
+  if (node.id !== "pop-you") {
+    const covering = floor - roof < tall && under(notes) > under(clock);
+    if (covering) roof = under(clock);
+    notes?.classList.toggle("covered", covering);
   }
-  const above = spot.y - tall - 12;
-  const below = spot.y + spot.h + 12;
-  const up = above >= roof || below + tall > floor;
-  const top = Math.max(roof, Math.min(floor - tall, up ? above : below));
-  balloon.style.transform = `translate(${Math.round(left)}px, ${Math.round(top)}px)`;
-  balloon.style.setProperty("--tail", `${Math.round(Math.max(10, Math.min(wide - 20, middle - left - 5)))}px`);
-  balloon.classList.toggle("below", !up);
-  balloon.classList.add("placed");
+  if (floor - roof < tall && pane) {
+    pane.style.maxHeight = `${Math.max(60, floor - roof)}px`;
+    tall = node.offsetHeight;
+  }
+  let top = Math.max(roof, Math.min(floor - tall, head.y - 16 - tall));
+  // And it keeps clear of their words: under your feet, if over your head would cover them.
+  if (theirs && spot) {
+    const crosses = (at) => left < theirs.left + theirs.wide && left + wide > theirs.left && at < theirs.top + theirs.tall && at + tall > theirs.top;
+    const below = spot.y + spot.h + 12;
+    if (crosses(top) && !crosses(below) && below + tall <= floor) top = below;
+  }
+  node.placedAt = { left, top, wide, tall };
+  const pulled = paneOffset(node);
+  node.style.transform = `translate(${Math.round(left + pulled.x)}px, ${Math.round(top + pulled.y)}px)`;
+  // The line to the head is drawn from where the pane really is, which while it slides back is somewhere between.
+  let at = { left: left + pulled.x, top: top + pulled.y };
+  if (paneSpringing(node)) {
+    const zoom = Number(document.documentElement.style.zoom) || 1;
+    const here = node.getBoundingClientRect();
+    const there = box.getBoundingClientRect();
+    at = { left: (here.left - there.left) / zoom, top: (here.top - there.top) / zoom };
+  }
+  if (spot) drawLeader(node, { ...at, wide, tall, side }, { x: head.x, y: top > head.y ? spot.y + spot.h + 3 : head.y - 5 });
+  node.classList.toggle("no-head", !spot);
+  if (choices) placeChoices(node, { left, top, wide, tall, width, floor, roof: Math.max(under(clock), under(notes)) });
+  node.classList.add("placed");
 }
 
-export const popupDrawn = placeBalloon;
+// A talk's choices hang off the pane, on whichever side has the room, or under it, or over it, when
+// neither side has. They line up with the top of the pane, stay out from under the clock, never go
+// past the floor, and when there are more than the room has height for, the list scrolls.
+function placeChoices(node, { left, top, wide, tall, width, floor, roof }) {
+  const panel = node.querySelector(".pop-choices");
+  if (!panel) return;
+  panel.style.maxHeight = `${Math.max(80, floor - roof - 12)}px`;
+  const panelWide = panel.offsetWidth;
+  const panelTall = panel.offsetHeight;
+  let where = left + wide + 12 + panelWide <= width - 6 ? "at-right" : left - 12 - panelWide >= 6 ? "at-left" : "below";
+  if (where === "below" && top + tall + 12 + panelTall > floor && top - panelTall - 12 >= roof) where = "above";
+  for (const one of ["at-right", "at-left", "below", "above"]) panel.classList.toggle(one, one === where);
+  const start = where === "below" ? tall + 12 : where === "above" ? -panelTall - 12 : 0;
+  panel.style.top = `${Math.round(Math.max(roof - top, Math.min(start, floor - top - panelTall)))}px`;
+}
+
+// A pane is only placed when it's one of ours, and not the talk's own window in another view.
+const paneCalled = (id) => {
+  const node = document.getElementById(id);
+  return node?.classList.contains("pop-balloon") ? node : null;
+};
+
+function placeAll() {
+  const { game } = app.ui;
+  placePane(paneCalled("pop-balloon"), speakerHere(current())?.key ?? null);
+  placePane(paneCalled("talk"), game?.talk?.key ?? null, { choices: true, anywhere: true });
+  placePane(paneCalled("pop-you"), "you");
+}
+
+export const popupDrawn = placeAll;
 
 // Puts the words in the window that's writing them, picks up the writing where it was, and tells
 // the camera who to keep in view and how much of the room the windows are covering.
@@ -331,8 +408,10 @@ function settle() {
   if (pop.words) pen.aim(pop.words.total);
   const beat = current();
   const row = document.getElementById("pop-row");
-  isoLook({ person: pop.open ? speakerHere(beat)?.key ?? null : null, bottom: row ? row.offsetHeight + 12 : 0 });
-  placeBalloon();
+  // The camera keeps whoever's talking in view: the person in a talk, or whoever the story has speaking.
+  const talking = app.ui.game?.talk?.key ?? null;
+  isoLook({ person: talking ?? (pop.open ? speakerHere(beat)?.key ?? null : null), bottom: row ? row.offsetHeight + 12 : 0 });
+  placeAll();
 }
 
 function drawScene() {
@@ -368,6 +447,7 @@ export function popsNode(composerNode, legend, clock) {
   sync();
   return el("div", { class: `pops${pop.open ? " pop-open" : ""}`, id: "pops" },
     balloonNode(),
+    talkPanesNode(),
     notesNode(),
     legend,
     clock,

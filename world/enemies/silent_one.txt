@@ -1,0 +1,44 @@
+# Silent One
+threat: 4
+hp: 40
+attack: 6
+defense: 15
+damage: 5 to 10
+weapon: Empty Hands
+xp: 140
+credits: 0 to 15
+art: hollow
+tags: resonance
+motive: belief
+faction: quiet
+on hit: stress 3
+
+In a line:
+A person who has listened to the Quiet for too long, and who no longer makes any sound.
+
+When the fight starts:
+- You notice the silence first. Then you notice that someone has been standing very close to you for some time.
+- A person in fleet clothes walks toward you, and their footsteps make no sound, and neither does anything else near them, including you.
+
+When they hit:
+- They touch you, and the sound of your own heartbeat goes away, and then the pain comes in with no noise at all.
+- You shout, and nothing comes out of you, and their hand is already on your chest.
+- Everything goes soft and still, and you're so tired, and then you realize you've been hit.
+
+When they miss:
+- Their hand passes your face, and you feel the air go dead where it was.
+- You stagger out of the silence around them, and all the noise of the world comes back at once.
+- You can't hear your own feet, but you get clear, and they turn to follow you without a sound.
+
+When they hit hard:
+- The quiet closes over you completely, and it's the most restful thing you've ever felt, and you have to fight very hard to want to come back.
+
+When they're beaten:
+- They fold up without a sound, and slowly the noise of the room comes back to you.
+- They lie still with their lips moving. You lean in, and there's nothing to hear.
+
+When they join the fight:
+- The noise around you starts to fade on one side, and you turn to find {enemy} standing there.
+
+When they're stunned:
+- {Enemy} stands with their head tilted, listening to something, and the quiet lets go of you.

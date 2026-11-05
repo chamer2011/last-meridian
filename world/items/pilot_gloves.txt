@@ -1,0 +1,10 @@
+# Pilot's Gloves
+order: 50
+type: gadget
+price: 280
+
+In a line:
+Worn flight gloves with the fingertips rewired for feel: +2 on Piloting checks while carried.
+
+Effects:
+skills: piloting 2

@@ -1,0 +1,33 @@
+# Security Drone
+threat: 2
+hp: 20
+attack: 3
+defense: 13
+damage: 3 to 5
+weapon: Twin Stunners
+xp: 30
+credits: 0 to 20
+art: drone
+tags: machines
+motive: programmed
+machine: yes
+
+In a line:
+Hovering sentry with twin stunners.
+
+When the fight starts:
+- A security drone drops from the ceiling on humming fans and swings its twin stunners toward you.
+
+When they hit:
+- The stunners crackle, and your muscles lock.
+- The drone tags you with a bolt that makes your teeth ache.
+
+When they miss:
+- The stunner bolts scorch the deck at your feet.
+- The drone's targeting light slides past you, then snaps back too late.
+
+When they hit hard:
+- Both stunners hit at once, and you hit the deck.
+
+When they're beaten:
+- The drone sparks, spins and falls out of the air.

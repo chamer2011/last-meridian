@@ -1,0 +1,50 @@
+# The Scanner at Oh-Three-Hundred
+kind: mystery
+places: meridian
+people: marrow, voss, aduro, tarrow, naomi
+factions: fleet
+
+The lead:
+Chief Marrow wants to know which rust-licking genius is running the medbay's full-body scanner at three every morning. It's eating a fifth of his night power, and the log swears nobody's there.
+
+For anyone who isn't the captain:
+Chief Marrow wants to know which rust-licking genius is running the medbay's full-body scanner at three every morning. It's eating a fifth of his night power, and the log swears nobody's there.
+
+What's really going on:
+The 0300 user is Commander Voss, who wipes the log afterward. She commanded the picket ship CFS Tarn in the Fall. The Choir boarded it, took everyone but her and let her walk out, and for six months she has checked herself for changes every night. Every scan is clean, and that's the cruelty: nobody knows what a copy looks like from the inside, so it's a test with no passing grade, and she knows that too. The twist is in Marrow's power chart: there are two spikes a night. The second, at 0340, is Lt. Tarrow, who has had a Concord neural bridge pinned into her spine since the Fall and fears the same thing about herself. They've missed each other by minutes for months. Dr. Aduro has known about both from the start. They leave the scanner warm, read both results every morning as any doctor would, and have never said a word.
+
+How it might go:
+- Marrow's complaint, in full and with gestures. The log is spotless, which is suspicious all by itself. A careful look at his power chart shows two spikes, not one.
+- Asking around. Naomi has seen someone through a vent and will trade what she saw for something she actually wants. Aduro answers every question with a gentler question, and has clearly known for a long time.
+- The captain catches Voss on the table at 0300 in a paper gown, the only time anyone has seen her out of uniform. She states the facts in five sentences and asks whether she's relieved.
+- If the captain stays past 0330, Tarrow comes in, sets her sidearm on the tray where she can reach it, and lies down. She counts her own pulse out loud.
+- The choice: what to do about an XO who hid the largest fact about herself, a security chief who'd shoot her for it, and a doctor who let them both.
+
+Ways through:
+- Stakeout: stealth and awareness in the service crawl above the medbay, with Naomi as a guide if she's paid with a real answer to a real question.
+- Follow the data: engineering to read Marrow's chart, hacking to restore the wiped logs, science to study the scans themselves and see what they can and can't prove.
+- Ask Aduro as a friend. Persuasion gets the truth without a stakeout, but first Aduro asks what the captain will do with it, and they mean the question.
+- Feel it out: attunement can tell the captain what no scanner can. Voss feels entirely, painfully human, with one place in her like a door that's been closed very gently from the other side.
+
+Checks that fit:
+- engineering:easy to spot the second power spike on Marrow's chart
+- stealth:moderate to watch the medbay from the service crawl
+- hacking:hard to recover the wiped session logs
+- science:hard to see that the scans can't prove what she needs them to prove
+- persuasion:hard to get Aduro to break a patient's confidence
+- attunement:very_hard to sense the closed place in Voss without her knowing
+
+Where it can end up:
+captain_keeps_her_secret_keeps_her: If the captain keeps her secret and keeps her on, Voss starts telling the captain the truth about everything else, in very few words. The captain now holds a secret that could end them both.
+captain_relieves_reports_her: If the captain relieves or reports her, she hands over her sidearm without argument and goes to the brig. The fleet loses its best tactical mind for as long as this lasts, Tarrow has a prisoner she'd very much like to open up, and the crew wants to know why.
+captain_orders_proper_test: If the captain orders a proper test, Aduro and Seven spend a week designing one. It comes back clean, and it makes no difference to her. Seven's reaction on hearing Voss's name is odd, and worth remembering (see crew_seven_consult).
+captain_brings_voss_tarrow_together: If the captain brings Voss and Tarrow together over that table, the two most frightening officers on the ship learn each other's worst fear. Nothing is said. From then on, each leaves the scanner warm for the other.
+
+If nobody steps in:
+after 21 days: Chief Marrow has cut the medbay's night power, and somebody's been going around him.
+  lead: Chief Marrow cut the medbay's night power, and someone's still running the full-body scanner at three every morning, going around him and wiping the log. He'd like to know who, and he's got a wrench.
+after 45 days: The whole night watch knows somebody runs the medbay scanner at three in the morning, and there's a betting pool on who.
+  lead: There's a betting pool on the night watch over who runs the medbay scanner at three in the morning. Nobody's bet on the right person yet, and Chief Marrow's stopped asking and started watching.
+
+Rewards:
+Voss's loyalty, which is worth more than anything in stores. Aduro's trust if it's handled gently, and a surgeon_lens from the medbay's back shelf.

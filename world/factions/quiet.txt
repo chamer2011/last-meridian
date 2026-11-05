@@ -1,0 +1,10 @@
+# The Quiet
+order: 11
+also called: the Quiet, The Quiet
+starting standing: -5
+
+In a line:
+A growing movement in the fleet and beyond, whose followers believe that being copied by the Choir is salvation.
+
+Beliefs:
+loyalty -7, violence -6, belief 8, flesh 9

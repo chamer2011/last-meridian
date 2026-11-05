@@ -1,0 +1,10 @@
+# The Second Move
+order: 39
+needs skill: melee 3, tactics 3
+
+In a line:
+You've learned that the first thing anyone shows you is a feint, whether it's a blade or a battle line. +1 Melee, and better tools in Melee and Tactics check windows, as if you were one tier better.
+
+Effects:
+skills: melee 1
+better tools in: melee 1, tactics 1

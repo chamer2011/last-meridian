@@ -1,0 +1,9 @@
+# Hegemony Doctrine
+order: 10
+starting: yes
+
+In a line:
+Hegemony career: +1 Intimidation, Tactics and Composure.
+
+Effects:
+skills: intimidation 1, tactics 1, composure 1

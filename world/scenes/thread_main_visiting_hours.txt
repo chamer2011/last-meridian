@@ -542,7 +542,7 @@ The Mercy has gone back to being the Mercy, except for the deck plates by Pavel'
 
 => You have a Choir core, and it's still reading something in Navy format.
 
-* quest main_visiting_hours done: The visitor's dead, and the fleet has its core. Somebody will have to read it.
+* ending mimic_destroyed_captain_gets_choir_core: The visitor's dead, and the fleet has its core. Somebody will have to read it.
 * xp 15: Visiting hours
 
 END

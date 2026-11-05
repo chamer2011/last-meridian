@@ -1,0 +1,66 @@
+# Hollis-Nine
+title: 
+also called: Hollis
+pronouns: she/her
+species: synthetic
+age: 43
+faction: unbound
+role: Engineer of the Unbound at Foundry Seven
+place: foundry
+color: #30fdab
+listed: no
+voice style: machine
+
+In a line:
+Has been building something in the sublevels, and won't say what.
+
+Appearance:
+A squat, much-rebuilt maintenance chassis with four arms, no two from the same model, and a workshop apron she has no practical need for. One eye-lens sits on a stalk, and it's usually looking at what you're holding.
+
+Personality:
+Cheerful, nosy and deaf to danger. She loves a well-made thing the way others love music, and bad workmanship upsets her more than death. She has joined a people sworn never to serve anyone again, and she spends every spare hour on what amounts to repairing the Choir, and she doesn't see the problem.
+
+Voice:
+A warm, distracted workshop mutter. Says "Mm" and "Hold this", and hands you something, whether you've agreed or not. Picks up whatever you're carrying and tells you who made it badly: "Who did this weld? Were they angry?" Comments on your knee or your spine as if you're a used machine. Won't lie, and won't answer. Ask her about the sublevels, and she says "Mm. Hold this."
+
+Goals:
+To finish it. She wants to hear it work, once, and she'd like somebody qualified to tell her it's good.
+
+Secrets:
+She's building a tuner the size of a warehouse, around a live Choir core she bought from Tessaly Marsh. She took the Choir's song apart and found a control signal full of faults, failing slowly, with nobody maintaining it. That offends her. She doesn't know what the signal controls, and it hasn't occurred to her to be afraid. She only wants to correct it. It's also the instrument the old rite lost: it would keep a singer in tune, give the Choir orders or carry a killing note, and it needs perfect pitch or Resonance to calibrate. She'll say the worst thing anyone has said about the song offhand, without looking up: "That's an output stage. It isn't talking to itself. A choir has an audience, doesn't it? Hold this." The Unbound would scrap it, and maybe her, if they knew. Prime Six suspects, and hasn't asked, because asking would be too close to an order. She trades parts and insults with Dunn Marrow by courier, and he thinks she's a salvage broker called H9.
+
+Beliefs:
+authority 5, loyalty 2, belief -8, flesh 9
+
+Attributes:
+might 6, endurance 7, agility 3, perception 7, intellect 10, willpower 5, presence 3, resonance 1
+
+Skills:
+engineering 10, science 8, hacking 6, void_ops 4, melee 3
+
+In a fight:
+threat: 2
+hp: 30
+attack: 3
+defense: 13
+damage: 3 to 7
+weapon: Arc Welders (Several)
+xp: 40
+credits: 0 to 0
+art: synthetic
+tags: machines
+machine: yes
+
+When the fight starts:
+- Hollis-Nine sighs through a vent and picks up a welder in each of two hands. "Mm," she says. "Hold this."
+
+When they hit:
+- A white arc jumps across and catches you. "Who taught you to stand like that?" she asks.
+- One of the four arms gets you by the collar while another one works.
+
+When they miss:
+- The arc earths itself in the floor. She tuts, and adjusts the setting.
+- You get clear of three arms and very nearly the fourth.
+
+When they're beaten:
+- Hollis-Nine settles down on all four hands and turns her lens on the damage. "Well, that's not how you do that," she says.

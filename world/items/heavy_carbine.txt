@@ -1,0 +1,10 @@
+# Heavy Carbine
+order: 4
+type: weapon
+price: 550
+damage: 6 to 11
+stat: might
+skill: firearms
+
+In a line:
+Loud, heavy and very persuasive.

@@ -359,7 +359,7 @@ The tankers come across from the depot that night, and the next morning there ar
 * flag fuel_sorted
 * contact Mother Quill friendly: You signed her page, and you ate something
 * journal: The fleet signed Mother Quill's one-page contract: fuel for forty-one ships on credit, a marker from every ship's master good for a favor to be named later, and first look at anything First Builder we ever find. Food parcels have started arriving. People are calling her Grandmother.
-* quest main_two_weeks_of_fuel done: Signed with Mother Quill. Forty-one markers, to be called in later.
+* ending sign_with_quill: Signed with Mother Quill. Forty-one markers, to be called in later.
 * xp 25: Two weeks of fuel
 
 > Go on -> after
@@ -379,7 +379,7 @@ The tankers come across from the depot that night, and the next morning there ar
 * flag signed_with_quill
 * flag fuel_sorted
 * journal: The fleet signed Mother Quill's one-page contract: fuel for forty-one ships on credit, a marker from every ship's master good for one favor each, limited in writing, and first look at anything First Builder we ever find. Food parcels have started arriving.
-* quest main_two_weeks_of_fuel done: Signed with Mother Quill, with a limit on her markers in writing.
+* ending sign_with_quill: Signed with Mother Quill, with a limit on her markers in writing.
 * xp 30: Two weeks of fuel, on your terms
 
 > Go on -> after
@@ -400,7 +400,7 @@ Rook Tannis sends a bottle, and no note. She doesn't need one. She has a captain
 * contact Rook Tannis friendly: She held the Row while you took the depot, and nobody died
 * contact Mother Quill hostile: You took her depot, and she knows it
 * journal: We took Mother Quill's depot on the fourth hour with Rook Tannis's help, without a shot. The fleet's full, Kessara's closed to us, and Tannis is owed something she hasn't named.
-* quest main_two_weeks_of_fuel done: The depot, taken clean. Kessara's closed, and Tannis is owed.
+* ending raid_depot: The depot, taken clean. Kessara's closed, and Tannis is owed.
 * xp 25: Two weeks of fuel
 
 > Go on -> after
@@ -421,7 +421,7 @@ By morning everyone in the warrens knows whose idea the raid was, and it isn't h
 * contact Rook Tannis wary: She was nowhere when it went wrong, and she's told everyone whose idea it was
 * contact Mother Quill hostile: You took her depot, and two of her people are dead
 * journal: We took Mother Quill's depot by force. Two of her collectors died on the gantry, Tannis's people were nowhere, and by morning the whole warren knew it was the fleet's doing. The fleet's full, and Kessara Drift is closed to us.
-* quest main_two_weeks_of_fuel done: The depot, taken by force. The Syndicate's at war with the fleet.
+* ending raid_depot: The depot, taken by force. The Syndicate's at war with the fleet.
 * xp 20: Two weeks of fuel, paid for
 
 > Go on -> after
@@ -440,7 +440,7 @@ Speaker Halm says, on the open channel, that the council welcomes this spirit of
 * flag fuel_sorted
 * contact Marius Corvane friendly: You took his fuel, and he was gracious about it
 * journal: The fleet took Legate Corvane's free fuel. Every tank came with a small grey box bolted to it: Hegemony "fleet safety equipment", which Marrow won't call by any name. Speaker Halm is pleased.
-* quest main_two_weeks_of_fuel done: The Hegemony's fuel, free, with a transponder on every tank.
+* ending take_corvanes_fuel: The Hegemony's fuel, free, with a transponder on every tank.
 * xp 20: Two weeks of fuel
 
 > Go on -> after
@@ -457,7 +457,7 @@ It takes three days, and the fuel comes late, and it comes honest. The fleet's c
 * contact Ulla Greaves friendly: You got Vale to her table, and the strike ended on her terms
 * contact Rennick Vale neutral: You made him come down the hill, and his numbers turned out true
 * journal: We settled the strike at Cinder Reach: Vale came down to Ulla's kitchen, the vents and the back pay were agreed, and the fleet's crews worked the Stack for a week. The fuel came late, and it came honest.
-* quest main_two_weeks_of_fuel done: The strike at Cinder Reach settled, and honest fuel in the tanks.
+* ending settle_cinder_reach: The strike at Cinder Reach settled, and honest fuel in the tanks.
 * xp 30: The cleanest fuel there is
 
 > Go on -> after
@@ -474,7 +474,7 @@ The strike's won in three days, because the fleet's on the Line now and the comp
 * contact Ulla Greaves ally: The fleet stood on her Line, and the strike was won
 * contact Rennick Vale hostile: You put the fleet between him and his refinery
 * journal: The fleet took the strikers' side at Cinder Reach. The company's boats stopped coming, Vale signed from his window, and the fuel came a week late, with the shift whistle. Ulla Greaves won't forget it, and neither will Vale.
-* quest main_two_weeks_of_fuel done: The strike at Cinder Reach won, with the fleet on the Line.
+* ending settle_cinder_reach: The strike at Cinder Reach won, with the fleet on the Line.
 * xp 25: Two weeks of fuel
 
 > Go on -> after
@@ -490,7 +490,7 @@ The fleet's crews run the Stack for three days in company scrip, and the fuel's 
 * contact Rennick Vale friendly: The fleet ran his Stack when nobody else would
 * contact Ulla Greaves hostile: You crossed her Line, and she remembers every face
 * journal: The fleet crossed the picket at Cinder Reach and ran the Stack for Director Vale for three days, in company scrip. The fuel's ours. Ulla Greaves's people painted the fleet's name on the Gate.
-* quest main_two_weeks_of_fuel done: Fuel from the Stack, on the company's terms, across the Line.
+* ending settle_cinder_reach: Fuel from the Stack, on the company's terms, across the Line.
 * xp 15: Two weeks of fuel
 
 > Go on -> after

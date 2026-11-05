@@ -1,0 +1,50 @@
+# Ouma Thressel
+title: First Keeper
+also called: First Keeper Ouma Thressel, First Keeper Thressel, First Keeper Ouma, the First Keeper, The First Keeper, Ouma Thressel, Ouma, Thressel
+pronouns: she/her
+species: thessan
+age: 380
+faction: archive
+role: First Keeper of the Long Archive of Sarn
+place: sarn
+color: #c0b6a2
+listed: no
+
+In a line:
+Will trade almost anything in the Archive, except access to the Ninth Vault.
+
+Appearance:
+A tiny, upright Thessan with scales the color of old paper, sitting very close to a heat vent. A small brass recording machine clicks beside her at all times, and a ring of vault keys hangs at her neck.
+
+Personality:
+Remote, formal and faintly bored by mortality, including yours. She has negotiated with nine empires, outlived them all and filed their surrenders. Her whole creed is that what's forgotten is dead twice, and she has spent three centuries making sure that one thing stays forgotten.
+
+Voice:
+Dictates your meeting as it happens, for the record, in the past tense, in a dry, level voice: "The captain asked, at this point, for something that could not be had." "The visitor then raised their voice. It did not help." Addresses you directly only when she's closing a deal. Dates things by the Archive's own count of years. Never says "sorry", and never says "lost": things are only "not yet recovered".
+
+Goals:
+To have everything written down before it's too late, above all the Fall itself. She'll pay dearly for first-hand accounts of it, for the voices on the wires of Asterion, and for every name in the fleet. She wants this done before she dies, and she's started to wonder whether it matters.
+
+Secrets:
+She has never dared read the Ninth Vault, and no other Keeper knows that. She knows what's in it from the only person who ever came out: a Keeper who asked to have the door welded shut, and whose name was struck from the index. Shelved in there are accounts from every people that ever answered the Beacon, each one ending the same way, and each written to make the reader want to go. Every generation that read them tried to follow the light. So she has kept it shut for three hundred years, against every principle she has. She put Sefu Anand next to that wall sixty-two years ago, because someone has to listen, and she has never told him why. Oss Tharel was her closest colleague for over a century. He asked the wrong question, she let him leave Sarn, and she has kept his room exactly as it was. Mother Quill and the Regency have standing offers for Ninth Vault material, and she's been selling them forgeries.
+
+Beliefs:
+authority -6, violence -1, belief -4
+
+Attributes:
+might 1, endurance 2, agility 1, perception 8, intellect 10, willpower 10, presence 6, resonance 3
+
+Skills:
+lore 10, composure 9, commerce 7, science 6, persuasion 5
+
+In a fight:
+threat: 1
+hp: 12
+attack: 0
+defense: 10
+damage: 1 to 2
+weapon: Ring of Vault Keys
+xp: 20
+credits: 0 to 0
+art: civilian
+tags: 

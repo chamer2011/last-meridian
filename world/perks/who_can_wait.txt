@@ -1,0 +1,10 @@
+# Who Can Wait
+order: 35
+needs skill: composure 4
+
+In a line:
+You've learned to hold three emergencies in your head at once, and to know which one can wait. Stress builds 10% slower, and you get better tools in Medicine, Survival and Composure check windows, as if you were one tier better.
+
+Effects:
+better tools in: medicine 1, survival 1, composure 1
+stress rate: 0.9

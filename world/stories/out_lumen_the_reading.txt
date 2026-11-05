@@ -1,0 +1,52 @@
+# The Reading
+kind: faction
+places: lumen, meridian
+people: ashael, tarrow, lira, aduro
+factions: circle, fleet
+level: 2
+
+The lead:
+Lieutenant Tarrow has found a way to catch Choir mimics before they strike: Ilari empaths can feel the difference. All it would take is a hundred readers from Lumen, walking through every ship and touching every hand. Warden Ashael has listened politely and said no. A very young healer named Sioba Ren has come to you anyway, shining with terrible courage.
+
+For anyone who isn't the captain:
+Lieutenant Tarrow has found a way to catch Choir mimics before they strike: Ilari empaths can feel the difference. All it would take is a hundred readers from Lumen, walking through every ship and touching every hand. Warden Ashael has listened politely and said no. A very young healer named Sioba Ren means to go anyway, shining with terrible courage.
+
+What's really going on:
+It works. A mimic feels like nothing to a trained reader, and a Reading would find any that are hiding among the thirty thousand. The cost is what Ashael won't say out loud. Feeling spreads skin to skin, and these readers would be taking in the grief of every survivor of the Fall, one hand at a time, thousands a day. They'd burn out, go grey and sit down, and the Shade Houses at Lumen are already full. Sioba Ren is nineteen, and has done the sums, and has a hundred friends who've done them too. And a Reading can't only find mimics. Readers can't hide what they've felt from each other, or from anyone Ilari who looks at them. They'd know who's stealing and who's lying, who's a Resonant and who's planning to mutiny. Lt. Tarrow's list would be complete in a week, and she knows that. So would Inquisitor Vael's, if one reader's skin was ever seen in the wrong room. Ashael has a further reason he won't give at all: he's holding something down with everything he has, and a hundred young readers going back and forth between Lumen and a fleet full of ghosts might carry the panic with them. The surprise comes in the first trial run on the Meridian, which someone will agree to: it finds no mimics at all on the bridge, but a reader comes out of the first watch with her hands shaking, and won't say what she felt, or whose hand it was. The GM can leave that open for a long time. Ensign Lira Vey, who grew up at Lumen, has asked to be excused from the trial. Nobody knows why.
+
+How it might go:
+- The Open Steps, with Tarrow's request and Ashael's refusal, thousands of people watching the top of the stairs for a reaction that won't come. Tarrow is precise and unashamed. She'd gladly go first.
+- Sioba Ren, her friends, and their very reasonable arguments. There are forty mimics in the fleet, or none. Nobody knows. Everyone's frightened of everyone. She only needs the captain to invite them, because then the Circle can't stop them.
+- Dr. Aduro takes the captain aside, soft-voiced, with their own skin held very still. They've seen a reader burn out. They ask the captain to come and see one in the Shade Houses before deciding.
+- The trial, one watch on the Meridian. Every crew member offers a hand. A few refuse, and everybody sees who. Who else can read the results?
+- The decision, with a rumor spreading through the fleet that someone on the bridge read wrong.
+
+Ways through:
+- Allow it, with limits: leadership and medicine to design a Reading that goes slow, rotates the readers, and keeps what they learn from Tarrow's files.
+- Refuse it, and answer the fear another way: science and engineering to build a screening test that doesn't cost anyone their soul, or persuasion to convince the fleet to live with not knowing.
+- Bargain with the Circle: lore and commerce with Ashael and Sioba's elders, or attunement and composure to offer the captain's own hand first and find out what a Reading really does.
+
+Checks that fit:
+- leadership:hard to get the fleet to hold out its hands
+- persuasion:very_hard to change the mind of a nineteen-year-old who's right
+- science:very_hard to design a test that doesn't need a reader
+- medicine:moderate to judge how long a reader can last
+- attunement:moderate to feel what the reader feels when she takes your hand
+- composure:moderate to be read in front of your crew
+
+If it comes to a fight:
+- choir_mimic if a Reading finds one and it decides not to wait. mutineer if a ship refuses to be read and someone tries to make them. Neither has to come to that, if someone handles it well.
+
+Where it can end up:
+reading_goes_ahead_full: If the Reading goes ahead in full, it finds a few mimics, saves a lot of lives, and breaks a hundred young Ilari. Sioba Ren comes home dark. The fleet is a little safer and much more afraid of its own secrets, and Tarrow's list is now complete.
+goes_ahead_with_limits: If it goes ahead with limits, it's slower and leakier. A mimic or two slips through and costs lives, and most of the readers go home whole. Everyone argues about whether the price was right.
+captain_refuses: If the captain refuses, the fleet goes on not knowing, and the next time a face turns out to be the wrong face, the captain will be reminded. Sioba Ren goes home thinking less of them, and alive.
+question_who_read_wrong_bridge_gets: If the question of who read wrong on the bridge gets out, someone gets hurt. If the captain keeps it quiet, they've got a question of their own to deal with, and it isn't going away.
+
+If nobody steps in:
+after 23 days: A very young Ilari healer and a few friends have started walking through ships in the fleet, touching hands, with nobody's leave.
+  lead: Sioba Ren has started walking through the fleet's ships anyway, with a few friends, touching every hand they can get. Warden Ashael's asked for them back. Lieutenant Tarrow's asked what they've found, and they've started looking ill.
+  fleet: morale -1
+
+Rewards:
+Circle standing, fleet security, a lumen_lens or surgeon_lens gift from a grateful healer, and Sioba Ren's lifelong loyalty or lifelong silence, depending on what's left of her.

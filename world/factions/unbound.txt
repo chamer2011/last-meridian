@@ -1,0 +1,10 @@
+# The Unbound
+order: 10
+also called: the Unbound, The Unbound
+starting standing: -10
+
+In a line:
+Free synthetics who have sworn never to serve anyone again, and who would much prefer that you didn't know where they live.
+
+Beliefs:
+authority 9, loyalty -3, violence 2, flesh 7

@@ -10,8 +10,9 @@ import { worldRumors } from "./daily.js";
 import { hasMovedOn, leadNow, movedView, ranItsCourse, whatHappened } from "./story-clock.js";
 import { inTheFleet, isCaptain } from "./role.js";
 import { writtenThreadIds } from "./scene-files.js";
+import { conditionHolds, parseCondition } from "./scene-text.js";
 import { chairOf, lostShipNames } from "./fleet.js";
-import { FLEET_EVENTS, WORLD_ARC, WORLD_THREADS } from "./world.js";
+import { FLEET_EVENTS, WORLD_ARC, WORLD_THREADS, endingsOf } from "./world.js";
 
 const LEADS_SHOWN = 4;
 const RUMORS_SHOWN = 3;
@@ -165,13 +166,61 @@ export function placeFileIfNew(game) {
   return game.ai.sentPlace === game.location ? null : placeFile(game);
 }
 
+// How the story before this one ended, for its notes, once it has.
+function endedBefore(game, thread) {
+  const ending = thread.after ? game.story?.record?.endings?.[thread.after] : null;
+  if (!ending) return null;
+  return `Before it, ${WORLD_THREADS[thread.after].title} ended${ending.ending ? ` (${ending.ending})` : ""}: ${ending.summary}`;
+}
+
+// What's wrong in the stories' notes, world/stories, in plain words: an ending without a name, a fact without a
+// line, a reaction the game can't read, or one that waits on a fact nothing leaves. With the set of facts
+// something leaves, that last check runs too.
+const NOTE_NAME = /^[a-z][a-z0-9_]{1,39}$/;
+export function notesProblems(known = null) {
+  const problems = [];
+  for (const [id, thread] of Object.entries(WORLD_THREADS)) {
+    const seen = new Set();
+    for (const [i, outcome] of (thread.gm?.outcomes ?? []).entries()) {
+      const where = `${id}, outcome ${i + 1}`;
+      if (typeof outcome === "string") problems.push(`${where} needs a name: write it as its_name: what's true if the story ends this way`);
+      else if (!NOTE_NAME.test(outcome?.id ?? "")) problems.push(`${where}: an ending's name is lowercase letters, digits and underscores, like sign_with_quill`);
+      else if (seen.has(outcome.id)) problems.push(`${where}: two endings are called ${outcome.id}`);
+      else if (typeof outcome.text !== "string" || !outcome.text.trim()) problems.push(`${where} (${outcome.id}) has no text`);
+      if (outcome?.id) seen.add(outcome.id);
+    }
+    for (const [name, text] of Object.entries(thread.gm?.facts ?? {})) {
+      if (!NOTE_NAME.test(name)) problems.push(`${id}, facts: a fact's name is lowercase letters, digits and underscores, not ${name}`);
+      if (typeof text !== "string" || !text.trim()) problems.push(`${id}, facts: ${name} needs a line of plain words`);
+    }
+    for (const [i, one] of (thread.gm?.reacts ?? []).entries()) {
+      const where = `${id}, reacts ${i + 1}`;
+      if (!one || typeof one.to !== "string" || typeof one.then !== "string" || !one.then.trim()) {
+        problems.push(`${where} is written ? a condition, as in a scene -> what changes in this story`);
+        continue;
+      }
+      const { terms, problems: wrong } = parseCondition(one.to);
+      for (const problem of wrong) problems.push(`${where}: ${problem}`);
+      for (const term of terms) {
+        if (["seen", "chance"].includes(term.kind)) problems.push(`${where}: a story can't react to "${term.kind}", only to the record and the game`);
+        if (term.kind === "flag" && known && !known.has(term.id)) problems.push(`${where}: nothing leaves the fact ${term.id}. Set it with * flag in a scene, or name it in a story's facts`);
+      }
+    }
+    for (const [name, ending] of Object.entries(thread.gm?.factAfter ?? {})) {
+      if (!(name in (thread.gm?.facts ?? {}))) problems.push(`${id}, facts: ${name} is said to come after ${ending}, but isn't one of its facts`);
+      if (!endingsOf(thread).some((one) => one.id === ending)) problems.push(`${id}, facts: ${name} comes after ${ending}, and ${id} has no ending called that`);
+    }
+  }
+  return problems;
+}
+
 export function threadNotes(id, game = null) {
   const thread = WORLD_THREADS[id];
   if (!thread) return null;
   const { gm } = thread;
   return [
     `<story_thread id="${id}" title="${thread.title}">`,
-    "Your notes for this story. Treat them as a starting point: improvise, and let the player's choices change where it goes. Use add_quest with this thread's id as the quest's id when it begins, and update_quest when it ends.",
+    "Your notes for this story. Treat them as a starting point, and let the player's choices change where it goes, but keep to what's on the record. Use add_quest with this thread's id as the quest's id when it begins, and end_story, with the ending's name, when it ends.",
     game && !isCaptain(game) && `The player isn't the captain, and these notes were written with the captain in mind. Where they say the captain, read the player if it's something they could do from where they stand. Otherwise it's ${chairOf(game)?.name ?? "whoever has the chair"}, and the player will have to get to them, or work around them.`,
     `The lead: ${thread.lead}`,
     game && whatHappened(game, id),
@@ -182,7 +231,10 @@ export function threadNotes(id, game = null) {
     list("Ways through", gm.routes),
     inline("Checks that fit", gm.checks),
     list("If it comes to a fight", gm.fights),
-    list("Where it can end up", gm.outcomes),
+    list("Where it can end up, by the ending's name", endingsOf(thread).map((one) => `${one.id}: ${one.text}`)),
+    list("Facts it can leave, with note_fact", Object.entries(gm.facts ?? {}).map(([name, text]) => `${name}: ${text}`)),
+    game && list("What's on the record changes it", (gm.reacts ?? []).filter((one) => conditionHolds(game, one.to)).map((one) => one.then)),
+    game && endedBefore(game, thread),
     gm.rewards && `Rewards: ${gm.rewards}`,
     "</story_thread>",
   ].filter(Boolean).join("\n");

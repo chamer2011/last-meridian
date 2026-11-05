@@ -1,0 +1,8 @@
+# Calm Tabs
+order: 37
+type: consumable
+price: 40
+effect: energy 2
+
+In a line:
+Restores 2 energy, but does nothing for stress.

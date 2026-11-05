@@ -1,0 +1,51 @@
+# The Deck That Isn't There
+kind: exploration
+places: haven
+people: mott, sable
+factions: drift, hegemony, fleet
+level: 3
+
+The lead:
+Mott Jessup's freight tallies have been off by the same eleven crates a month for thirty years, always bound for Deck Fourteen. Haven Station's plans stop at Deck Thirteen, and he'd like someone who isn't him to go and look.
+
+For anyone who isn't the captain:
+Mott Jessup's freight tallies have been off by the same eleven crates a month for thirty years, always bound for Deck Fourteen. Haven Station's plans stop at Deck Thirteen, and he'd like someone who isn't him to go and look.
+
+What's really going on:
+Between the decks is a Concord Intelligence listening post, built when Haven was young. Sable was its officer once, and opened the bar directly above it. The last analyst, Ferro Quist, is eighty-one and still at his desk, transcribing every conversation in the Neutral Ground through the old microphones and filing reports to a ministry that no longer exists. Sable sends the crates of food. The archive holds thirty years of every deal made at Haven, including what really happened to the CFS Tarn. If anyone learned it existed, nobody would ever trust Haven again. The twist is on Quist's desk: his reports have been getting replies. For five months his section head has been answering, with the correct codes, asking polite follow-up questions about who's in the bar and which ships came through. His section head died at Asterion. The Choir, or whatever is on the wires of the dead capital, has been reading Haven's gossip since the Fall, and Quist is delighted that someone finally cares about his work.
+
+How it might go:
+- Finding the way in: a gap in the ducts where the measurements don't add up, cold air where there shouldn't be any, and a service lift with a button somebody painted over.
+- The deck. Dust, old Concord posters, a kettle, and a very small very old man who asks to see the captain's clearance, then offers them tea.
+- Quist proudly shows the captain his correspondence file. The GM should let the player work out what's wrong with it, slowly. Quist's section head always signs off the same way, and always asks about the fleet.
+- Sable arrives, without hurrying. For once they don't answer with a price. They ask what the captain intends to do, and they've brought the shotgun from under the bar, and they don't lift it.
+- The choice: cut the line, feed it lies, or answer it honestly and see who's really on the other end. Then there's what to do with the archive, and with Quist.
+
+Ways through:
+- Search it out: awareness and science to read the station's structure, void_ops to go around through the hull if the lift's locked.
+- Break in through the numbers: hacking and commerce through Mott's tallies and the post's old lockouts.
+- Ask the right person: streetwise, persuasion or a straight question to Sable, who may well just tell the captain, for a price nobody expects.
+
+Checks that fit:
+- awareness:moderate to find where the decks don't add up
+- void_ops:hard to reach the post along the outer hull
+- hacking:hard to read Quist's correspondence without alerting the other end
+- deception:very_hard to feed false fleet movements through the channel convincingly
+- persuasion:moderate to break the news to Quist gently enough that he still helps
+- manifestation:very_hard to feel along the line, and shove back at whatever's on the other end of it
+
+If it comes to a fight:
+- security_drone units from the old post if the captain forces the wrong door. They're slow and thirty years out of date, and Quist can call them off with one polite word.
+
+Where it can end up:
+line_cut: If the line is cut, whoever was reading goes silent, and the fleet is harder to find for a while. Quist grieves for a boss he's already lost once.
+fed_lies_fleet_gains_real_weapon: If it's fed lies, the fleet gains a real weapon: a false report can move Choir hunters. Every lie has to be believable, though, and sooner or later the replies ask something that only one person on the Meridian would know.
+archive_used: If the archive is used, the captain knows everyone's secrets at Haven, and Sable knows it. If the archive is destroyed, Sable owes the captain the only debt they've ever admitted to.
+captain_answers_honestly: If the captain answers honestly, the GM may let something answer back: a short, gentle message in the section head's voice, and an asterion_voice_recording the crew won't want to play twice.
+
+If nobody steps in:
+after 38 days: Dockmaster Jessup's freight tallies at Haven came up right this month, for the first time in thirty years.
+  lead: Mott Jessup's freight tallies came up right this month, for the first time in thirty years. Nobody's asked for the eleven crates for Deck Fourteen, and he'd like to know why that frightens him more.
+
+Rewards:
+An asterion_voice_recording or a data_chip of useful secrets, a favor from Sable, and a lonely old analyst who'd make a very strange and useful addition to the Meridian's comms team.

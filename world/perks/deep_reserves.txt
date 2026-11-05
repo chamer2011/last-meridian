@@ -1,0 +1,8 @@
+# Deep Reserves
+order: 14
+
+In a line:
++5 maximum energy.
+
+Effects:
+max energy: 5

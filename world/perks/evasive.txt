@@ -1,0 +1,7 @@
+# Evasive Maneuvers
+order: 25
+needs perk: hard_target
+ability: evade
+
+In a line:
+Unlocks Evade in combat: 2 energy, +5 defense this round.

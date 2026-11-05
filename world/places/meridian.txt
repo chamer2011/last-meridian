@@ -1,0 +1,73 @@
+# CFS Meridian
+also called: the Meridian, The Meridian, Meridian
+faction: fleet
+market: 
+the fleet is here: yes
+a place to rest: yes
+dangerous: no
+hidden: no
+people: voss, marrow, aduro, tarrow, pell, seven, halm, odessa, iven, tobin, lira, naomi, bastian
+enemies: mutineer, desperate_refugee, quiet_zealot, choir_mimic
+items: ration_pack, emergency_patch, tool_roll, calm_tabs, old_concord_medal, data_chip
+
+In a line:
+Your battered frigate and the flagship of what's left. Medbay, mess hall, one working cannon.
+
+The feel of it:
+Recycled air that tastes of coolant and boiled grain, and a deck plate that rings underfoot in the same three places everyone has learned to step over. Built for three hundred crew and carrying nine hundred, so people sleep in shifts in the corridors and a hot bunk is worth more than money. Nothing aboard is the color it was painted, and someone is always hammering.
+
+Districts:
+The Bridge: Cramped, cold and quiet, with a cracked repeater nobody has time to replace. Everyone on it has learned to look busy when the captain is thinking.
+The Long Mess: One hall, four sittings, and every argument in the fleet. The council meets at the far table because it's the only one that doesn't wobble.
+Engineering and the Aft Holds: Marrow's kingdom: heat, swearing and a reactor he calls by a name he won't repeat in front of officers. The aft holds past it are officially empty.
+The Names Bulkhead: A stretch of bare corridor wall where the crew chalk the names of the dead. Nobody ordered it, and nobody dares wash it.
+The Crawlways: Service ducts too narrow for a Korrun, and warm enough to sleep in. Naomi Cass knows all of them, and she charges for directions.
+
+Complications:
+- A coolant leak in the crawlways forces two hundred sleeping civilians into a corridor that's already full.
+- Lt. Tarrow's security team starts a surprise inspection on the same deck where something is being hidden.
+- A council delegation arrives wanting an answer today to a question you were hoping to leave until next week.
+- The cannon's capacitor bank drops off line, and Marrow won't say how long for in front of the crew.
+- A ration crate goes missing, and the mess hall has already decided who took it.
+- A proximity alarm sounds during a funeral. It's probably nothing, and everyone looks at you to find out.
+
+Secrets:
+- The Meridian's dead captain left a sealed private log in the ready room locker. It shows he picked up the Beacon a full day before anyone else and ordered it kept off the record, and nobody living knows why.
+- The Meridian's cannon can fire one full-power shot safely. Marrow knows the second one will crack the capacitor housing and take the forward section's power with it, and he's told nobody because morale is held up by that gun.
+- The burst transmission Tarrow's people keep almost catching comes from a council aide's cabin on Halm's orders. A second, fainter one in the small hours comes from a spare antenna patched into the comms deck. Nobody's noticed where it starts, and the man doing it doesn't fully know that he is.
+
+Encounters:
+- Chief Tobin Hask stops you at a hatch, sets a paper copy of your last order on his pocket scale, and announces that it came up light. He'll carry it out, but he wants to hear the reason first, and his whole deck crew has stopped working to listen.
+- Naomi Cass drops out of a ceiling panel holding two folded notes. One she was paid a ration bar to deliver to you. The other she stole on the way, and she'll only hand over one of them.
+- The cook has started naming each day's thin soup after someone from the Names Bulkhead, going in alphabetical order. Today's is someone you served with, and the whole sitting is waiting to see whether you'll eat it.
+- Father Bastian Roe asks you to read at tonight's funeral, because the family wants someone who still believes in something. He says it mildly, and then he says he's not the right man to ask why.
+- Ensign Lira Vey hurries over to report, but her skin has already gone the thin blue of a bad reading and the entire sensor pit has seen it. You can clear the pit, or let them hear what they've already guessed.
+- Tarrow wants your signature on a routine sweep of the aft holds. Marrow wants the form to get lost. They arrive at your door at the same moment, each pretending they came about something else.
+- Quartermaster Odessa Brandt brings you the ration count, stops with the slate half offered, and asks in a perfectly level voice which count you'd like.
+- You find Ensign Pell asleep on her feet at the helm, one hand still on the trim, in the middle of a delicate burn. You could wake her, relieve her in front of the bridge crew, or stand beside her and quietly take the board.
+- An old Concord gunner who lives in a corridor bunk says he can get a second shot out of the cannon. He'll show the crew how, if you move his grandson to the Sundial, where there are other children and real light.
+- Lt. Iven Sorel asks to be relieved for an hour. He hands you a meal chit with something written on the back in tiny careful letters, then changes his mind and asks for it back.
+- Mercy Seven asks you to walk across the civilian deck with them, because, as they put it, the chance of being spat on falls by eighty percent when the captain is there. Halfway across, someone spits anyway.
+- A deckhand and a synthetic galley hand ask you to marry them under Concord law, which technically still lets a captain do it. The mess has gone very quiet, and Tarrow is on the far side of the room.
+- Someone has chalked your name on the Names Bulkhead, in among the dead, in neat handwriting. Voss wants it scrubbed, and she also wants to know who wrote it. A small crowd has already seen it.
+- A civilian woman has been trading her bunk hours to keep her son's hot-bunk slot, and hasn't slept lying down in nine days. She collapses at your feet in the corridor, and she begs you not to tell anyone why.
+- A maintenance tech calls you down to look inside a duct behind Frame Thirty. A set of laws has been painted on the metal in a child's careful hand, with a court schedule underneath. Rule four says that the captain may be visited but not trusted. The paint is fresh, and the tech would like to know what to do about it.
+- Marrow, red-faced and swearing, drags you down to hear the reactor. There's a new note in it, very faint, and a terrified junior tech insists it changes when someone on the bridge says the word Beacon.
+
+Rumors:
+- Chief Marrow told my brother she's got a year left in her if we stop jumping, and three jumps if we don't. Then he swore at the wall and said he'd never said that.
+- The old captain kept a private log, you know. Locked up in the ready room, and I'd bet my bunk hours Commander Voss has read it.
+- Don't ask for extra at second sitting. The quartermaster's got a list, and I've heard it's the only honest thing on this ship.
+- There's a kid in the crawlways who can get you anything for half a ration bar, and tell you who else bought it for a whole one.
+- Speaker Halm's got a private line to someone. Everybody knows it. Nobody's going to be the one who asks him who.
+- My cousin swears the Beacon got louder the day they gave you that chair. I'm not saying anything. I'm just saying.
+- Lieutenant Tarrow's people have been asking who's got what done to them, in the nicest way. If you've got a pin in your hip, I wouldn't mention it at dinner.
+- Father Roe does the prettiest funerals in the fleet. Watch his hands while he does them, though. He's reading it off a card, and he never used to need the card.
+- There's something behind the coolant tanks in the aft hold that Chief Marrow talks to at night, and it talks back. That's what a stoker told me, and he's drunk, but he's drunk on something Marrow gave him.
+- That cannon's never been fired twice in one day since the refit. People say it's because it doesn't need to. People say a lot of things.
+- Father Roe's got fresh bread at his services now. Real bread. Nobody's asking where it's from, and some people have started using a word for it that he won't say.
+- Watch Ensign Pell at the helm some time. She's stopped looking at the board, and she's started looking at Ensign Vey's arm. I don't know what that means, but we haven't hit anything.
+- If you hear humming in the number two duct, don't hum along. Nobody's sure why, but the last fellow who did got moved to Anselm's Mercy and hasn't come back.
+- Commander Voss runs a medical scan on herself at three in the morning, every night. My friend mops medbay. Now, what kind of person needs to check that?
+- Young Pell's the best pilot we've got, and I heard she learned on a cargo hauler. Sir, I don't care if she learned on a kitchen table, so long as nobody tells her it's impossible.
+- Somebody's selling places on a ship that's meant to be leaving the fleet for the Hegemony. Two hundred credits and your name goes on a list. I know three people who paid. I don't know anyone who left.

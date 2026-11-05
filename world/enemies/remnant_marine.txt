@@ -1,0 +1,43 @@
+# Remnant Marine
+threat: 3
+hp: 30
+attack: 5
+defense: 15
+damage: 4 to 8
+weapon: Concord Battle Rifle
+xp: 85
+credits: 10 to 40
+art: trooper
+tags: authority
+motive: orders
+faction: remnant
+
+In a line:
+A Concord marine who never stopped following orders, in armor kept like new.
+
+When the fight starts:
+- A marine in spotless Concord plate challenges you by the book, asks for your authorization, and doesn't wait long for it.
+- A Concord marine gives you the last lawful warning. You haven't heard that phrase since the Fall.
+
+When they hit:
+- Two rounds, one breath, and a correction. You'd admire it if it weren't aimed at you.
+- The marine advances by the manual and puts a burst through your cover, and you recognize the drill.
+- A rifle butt snaps out, short and exact, and puts you on your back.
+
+When they miss:
+- Rounds snap past your head in a tight group, just one hand's width too high.
+- The marine shifts to the next position on the count, which gives you one second to get clear.
+- You throw yourself behind a bulkhead, and the burst walks along it and stops exactly at the edge.
+
+When they hit hard:
+- You know this one. It's the shot from the recruiting posters, and you've just been hit by it.
+
+When they're beaten:
+- The marine goes down on one knee, and asks you for your name and rank, for the report.
+- The marine sets the rifle down, safety on, before falling. You've never seen anyone do that.
+
+When they join the fight:
+- {Enemy} falls in from behind cover, calling out your position to someone you can't see.
+
+When they're stunned:
+- {Enemy} holds position with a blank visor, waiting for an order that isn't coming, and you have a moment.

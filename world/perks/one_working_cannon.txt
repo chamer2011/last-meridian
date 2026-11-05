@@ -1,0 +1,10 @@
+# One Working Cannon
+order: 38
+needs skill: gunnery 3, firearms 3
+
+In a line:
+You've fought a war with one good gun, and you've learned to put the shot where they're going to be. +1 Gunnery, and better tools in Gunnery and Firearms check windows, as if you were one tier better.
+
+Effects:
+skills: gunnery 1
+better tools in: gunnery 1, firearms 1

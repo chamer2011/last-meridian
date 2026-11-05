@@ -1,0 +1,10 @@
+# Don't Slow Down
+order: 36
+needs skill: piloting 3, athletics 3
+
+In a line:
+You've flown through wreckage and run through burning decks, and the trick is the same. +2 to escape fights, and better tools in Piloting and Athletics check windows, as if you were one tier better.
+
+Effects:
+better tools in: piloting 1, athletics 1
+flee: 2

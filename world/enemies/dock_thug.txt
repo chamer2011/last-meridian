@@ -1,0 +1,32 @@
+# Dock Thug
+threat: 1
+hp: 14
+attack: 2
+defense: 11
+damage: 2 to 5
+weapon: Stun Baton
+xp: 20
+credits: 10 to 40
+art: brawler
+tags: 
+motive: paid
+
+In a line:
+Hired muscle with a stun baton.
+
+When the fight starts:
+- A thug with a stun baton steps out from between the cargo stacks.
+
+When they hit:
+- The baton catches you across the ribs, and your whole side goes numb.
+- A fist you didn't see coming snaps your head back.
+
+When they miss:
+- The baton whistles past your ear.
+- The thug lunges, overbalances and crashes into a crate.
+
+When they hit hard:
+- The baton connects with your temple, and for a moment everything goes white.
+
+When they're beaten:
+- The thug folds up and stays down.

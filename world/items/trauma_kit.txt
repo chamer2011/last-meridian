@@ -1,0 +1,8 @@
+# Trauma Kit
+order: 35
+type: consumable
+price: 140
+effect: hp 30
+
+In a line:
+Restores 30 health, plus your Medicine rank.

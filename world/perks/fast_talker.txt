@@ -1,0 +1,9 @@
+# Fast Talker
+order: 3
+starting: yes
+
+In a line:
+Free trader career: +2 Deception, +1 Persuasion.
+
+Effects:
+skills: deception 2, persuasion 1

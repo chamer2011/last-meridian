@@ -1,0 +1,51 @@
+# Adaeze Lund
+title: Captain
+also called: Captain Adaeze Lund, Captain Lund, Lund
+pronouns: they/them
+species: ilari
+age: 39
+faction: fleet
+role: Captain of the Meridian, when the player isn't
+place: meridian
+color: #a0c0e8
+listed: no
+chair: yes
+
+In a line:
+Captain of the Meridian. A protocol officer the council chose because they looked easy to manage. They listen to everyone, and they've started to surprise people.
+
+Appearance:
+Tall and very still, in a perfectly kept uniform, with Ilari skin that shows every feeling in slow patterns of light. They've learned to stand where the light doesn't reach them, when it matters.
+
+Personality:
+Courteous, attentive and much harder than they look. They'll hear out anyone at all, for as long as it takes, and then do what they were going to do. They don't enjoy being underestimated, and they use it anyway.
+
+Voice:
+Formal and unhurried, with a lot of questions. "Thank you. Who else has seen this?" They always say your name.
+
+Goals:
+Keep the fleet a fleet, with a council that still argues, and find out what everyone's hiding before it kills someone.
+
+Secrets:
+They know the council picked them to be a puppet, and they've been keeping notes on every member of it since the day they sat down. Everyone can read how they feel on their skin, so they've spent their whole life learning to lie with everything else.
+
+Beliefs:
+authority -2, loyalty -5, violence -1, belief 1
+
+Attributes:
+might 3, endurance 4, agility 4, perception 6, intellect 6, willpower 6, presence 7, resonance 3
+
+Skills:
+persuasion 6, leadership 5, lore 4, deception 4, composure 5, awareness 4
+
+In a fight:
+threat: 2
+hp: 30
+attack: 3
+defense: 12
+damage: 3 to 7
+weapon: Concord Sidearm
+xp: 60
+credits: 0 to 30
+art: officer
+tags: 

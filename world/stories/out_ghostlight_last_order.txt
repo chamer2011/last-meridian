@@ -1,0 +1,54 @@
+# The Last Order
+kind: faction
+places: ghostlight
+people: okonkwo, dorn, six, voss, echo
+factions: remnant, unbound, fleet
+level: 8
+after: out_ghostlight_commodores_channel
+
+The lead:
+Admiral Okonkwo-Reyes has issued her last order: every ship that still answers to the Concord will go to Asterion and take it back. It's illegal to refuse and suicide to obey. Late that night a very young signals rating asks to speak to you, shaking. The Admiral talks to someone, she says, on the small comm she keeps in her pocket. And someone answers.
+
+For anyone who isn't the captain:
+Admiral Okonkwo-Reyes has issued her last order: every ship that still answers to the Concord will go to Asterion and take it back. It's illegal to refuse and suicide to obey. A very young signals rating is shaking. The Admiral talks to someone, she says, on the small comm she keeps in her pocket. And someone answers.
+
+What's really going on:
+Her husband, Dr. Emil Reyes, died at Asterion. On certain nights the voice on the wires uses his voice. She listens alone, every one of those nights, on the small comm in her pocket. It's asked her, gently, to come home. She doesn't believe it's him. She isn't a fool. She believes it's a Choir lure, and that if she brings every ship she has, she can reach the wires, and at the end of that road there's either a fight or her husband, and she's stopped being able to tell which of those she wants. There's no plan beyond that. The order is lawful, and the sailors will obey it, because they're the best in the galaxy and she's their Admiral. Three thousand people will die. Here's the bookend to the court-martial. Regulation has one clause that can stop her: a commander may be relieved if a court of her officers finds her unfit. It takes five officers, a witness and evidence. The captain now knows what evidence exists, and some of it is in very surprising hands. Prime Six has wanted for six months to stand in front of her and read her own order back in her own voice. Commodore Dorn would sit on the court, and he'd rather die. Commander Voss came up under her, and the Admiral has always assumed that Voss will come when called. So the player gets to do to her exactly what she did to them, by the same rules, with the same polish, and it should hurt. The GM should make clear that she was a great officer, and that she'll be very good at this, too.
+
+How it might go:
+- The order goes out with the anthem. Sailors pack their kit. Nobody says anything. A chief polishes a railing that's been polished ten thousand times.
+- The signals rating, and the recording, if anyone is brave enough to play it. A warm man's voice, on a very bad line, saying her name, and asking if it's still a good time.
+- Gathering the court: Dorn, two of the wavering officers from before, Voss's silence and Prime Six, who requires a guarantee of safe passage and arrives in a Navy wardroom for the first time since they were ordered to power down.
+- The hearing, in the wardroom, with the Admiral at the table in full dress. She's magnificent. She takes apart each witness in turn, and she's still right about a lot of it. Then Six plays the recording, in her own voice.
+- What's left, and what she does with her pocket comm. There may be one last private conversation, or a shuttle missing from the flight deck, and the player's words matter here more than any roll.
+
+Ways through:
+- Try her: lore, persuasion and leadership to bring the case under her own regulations and win it in front of her own officers.
+- Reach her: composure and attunement, or a very gentle kind of persuasion, to talk to the woman rather than the Admiral, and get her to take that comm out of her pocket and put it on the table.
+- Take the choice away: tactics, hacking or gunnery to stop six warships from jumping, by disabling, deceiving or blockading, with remnant_codes if the captain has them, and face what comes after.
+
+Checks that fit:
+- lore:very_hard to bring the relief clause in a way the panel can't dismiss
+- persuasion:nearly_impossible to win this argument against her, in front of her people
+- leadership:very_hard to speak to three thousand sailors who've been told to die
+- tactics:hard to hold six warships in place without firing on them
+- hacking:very_hard to lock out the squadron's jump drives, even with the codes
+- composure:hard to hear that voice on that line
+
+If it comes to a fight:
+- remnant_commando if her most loyal officers try to force the jump, and remnant_marine at the wardroom door. A clear verdict and a respected officer saying the words stands most of them down.
+
+Where it can end up:
+shes_relieved: If she's relieved, the Remnant comes under Dorn, and most likely into the fleet. Three thousand people live, and they'll never entirely forgive anyone for it. She's confined to quarters, with her comm, and whether anyone takes it from her is up to the captain.
+goes_anyway: If she goes anyway, with whoever will follow, a good part of the Remnant dies at Asterion, and what reaches the wires might come back on them in very familiar voices. deep_voices_on_the_wire may have new callers.
+captain_goes_with_her_turns_assault: If the captain goes with her and turns the assault into something else, such as a raid for what's on the wires, it's the most dangerous thing the fleet has ever done, and it should cost terribly and teach a great deal.
+shes_reached: If she's reached, and she hands over the comm herself, she gives the captain her command in the proper form. It's the first time she has ever done something without being certain, and she asks to be assigned to Anselm's Mercy, as an orderly.
+
+If nobody steps in:
+after 23 days: Admiral Okonkwo-Reyes has gone to Asterion to take it back, with every ship that would still follow her, and nobody has heard from them.
+  lead: Admiral Okonkwo-Reyes has gone to Asterion, with every ship that would still follow her, and nobody's heard from them. Commodore Dorn has what's left of the Remnant in the Ghostlight, and he's asked what you'd do. That very young signals rating has asked for you too.
+  big
+  at ghostlight: remnant -10
+
+Rewards:
+Six warships or their wreckage, Admiral's rank in law if she hands it over, remnant_plate, an asterion_voice_recording that nobody wants, and an end to the question of who commands the Concord's last ships.

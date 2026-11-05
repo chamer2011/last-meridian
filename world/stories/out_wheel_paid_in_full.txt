@@ -1,0 +1,54 @@
+# Paid in Full
+kind: faction
+places: wheel, meridian
+people: kit, oriel, odessa
+factions: drift, fleet, remnant
+
+The lead:
+A polite young man named Emeric Dole comes aboard with a folder and an apology. The Gilded Wheel has bought up the Concord's unpaid debts for almost nothing, he explains, and under Syndicate law a debt falls on whoever's left. He has come early as a courtesy, Captain, because your frigate has a mortgage.
+
+For anyone who isn't the captain:
+A polite young man named Emeric Dole goes from ship to ship with a folder and an apology. The Gilded Wheel has bought up the Concord's unpaid debts for almost nothing, he explains, and under Syndicate law a debt falls on whoever's left.
+
+What's really going on:
+The Concord financed its last naval expansion with loans, and when it fell they sold for a fraction of a credit each. Madame Oriel holds a lien on the Meridian herself, along with the mortgages and loans of thousands of dead Concord citizens, which she can now collect from surviving relatives. Here's the trap. If the fleet is the Concord's heir, it owes the debt. If it isn't, it has no legal claim to any Concord ship and they can all be seized. Emeric Dole is a real collector who is very good at his job and hates about half of it. He visits families on a printed schedule and always tells them what time he'll be back, so that they can be out. He brings food on his rounds and logs it as a business expense. He has come to warn the captain, because enforcement starts in ten days and his supervisor is a wheel_enforcer who likes the work. The twist that makes a solution possible: the debts are worth almost nothing, and Kit Marlowe-Dace bought a huge block of them for pennies, as a joke, to win a bet. Kit now accidentally holds paper on half the fleet, and has no idea. Separately, Factor Elsbeth Crane holds a Guild note on the Meridian's last refit, and she hasn't presented it. Yet.
+
+How it might go:
+- Emeric's visit. He shows the paperwork, accepts a cup of bad coffee and tells the captain exactly how long they have. Odessa Brandt reads the folder and uses a word the captain hasn't heard from her before.
+- A fleet family is visited by the collector who isn't Emeric. They owe for a dead son's flight school, and they've just handed over their wedding rings.
+- At the Gilded Wheel, an audience with Oriel's accountants, who are courteous and completely serious. Nobody can say the fleet doesn't owe it. They can only say who the fleet is.
+- Kit, drunk and laughing, tries to pay a bar tab with a stack of old Concord loan paper. Someone sharp notices the names.
+- The deadline. A captain with no money has to answer the legal question nobody wants to answer: what is the fleet?
+
+Ways through:
+- Buy the paper: commerce and streetwise, getting Kit's block and the rest at pennies on the credit, and then forgiving it or keeping it.
+- Fight the law with the law: lore and persuasion to argue the fleet is a new people with new debts, at the risk of disowning the Concord in public, which won't please anyone who still believes in it.
+- Make it not worth collecting: leadership and deception, with Emeric's quiet help, teaching every family to pay one credit a week and file forms so that collecting costs more than it brings in.
+
+Checks that fit:
+- commerce:moderate to buy up debt paper without driving up the price
+- lore:hard to find a Concord precedent on successor states and debt
+- streetwise:moderate to find out who else has bought debts cheap
+- persuasion:moderate to get Emeric to bend his route without losing his job
+- leadership:hard to organize thousands of frightened people into refusing together
+- hacking:very_hard to alter the House's debt ledger, and nobody at the Wheel forgives that
+
+If it comes to a fight:
+- syndicate_collector or a wheel_enforcer at a fleet family's door if talking fails. Emeric can usually send them somewhere else for an afternoon, for a price he pays himself.
+
+Where it can end up:
+captain_buys_paper_forgives: If the captain buys the paper and forgives it, thousands of refugees wake up with no debts, and morale leaps. The captain now knows exactly how much everyone owed, and the fleet's accounts are empty.
+captain_renounces_concords_debts_public: If the captain renounces the Concord's debts in public, it works, and Admiral Okonkwo-Reyes and every die-hard in the fleet now have a sworn statement that this captain doesn't speak for the Concord.
+families_hold_out_together: If the families hold out together, the House gives up after a season. Oriel sends a note of real admiration, and Emeric Dole loses his job and turns up asking for work.
+all_ignored: If it's all ignored, the lien comes due. Repossession agents don't board by force. They just start turning up at every port with paperwork, and every dockmaster reads it.
+
+If nobody steps in:
+after 18 days: Collection notices from the Gilded Wheel have started reaching people in the fleet, very politely, for debts the dead left behind.
+  lead: Emeric Dole's colleagues have started going through the fleet with folders and apologies, collecting on debts the dead left behind. People are getting notices about their mothers' mortgages. Your frigate's still in the folder.
+  fleet: morale -1
+after 48 days: Families in the fleet have started signing over next year's wages to the Gilded Wheel, rather than argue with someone so polite.
+  lead: People have started signing over next year's wages to the House, rather than argue with someone so polite. Other people have started meeting in the holds to talk about not paying at all, and they'd like to know whose side you're on.
+  fleet: morale -1
+
+Rewards:
+A ledger_of_favors from Emeric if he's helped, the Meridian's lien paper, a jump in fleet morale if the debts go away, and Emeric Dole himself as an honest bookkeeper, which is rare.

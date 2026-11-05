@@ -1,0 +1,10 @@
+# The Veshti Long Families
+order: 7
+also called: the Veshti Long Families, Veshti Long Families, the Long Families, Long Families
+starting standing: -5
+
+In a line:
+Spacer dynasties who haven't touched a planet in generations, who own the Deepyards, and who take a long time to learn a stranger's name.
+
+Beliefs:
+authority 2, loyalty 6, flesh 3

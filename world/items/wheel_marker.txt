@@ -1,0 +1,7 @@
+# Wheel Marker
+order: 57
+type: story
+price: 40
+
+In a line:
+A gilded chip that records a debt at the Gilded Wheel, and the House always remembers who holds it.

@@ -1,0 +1,10 @@
+# Tool Roll
+order: 45
+type: gadget
+price: 220
+
+In a line:
+A canvas roll of well-kept tools that someone once trusted with their life: +2 on Engineering checks while carried.
+
+Effects:
+skills: engineering 2

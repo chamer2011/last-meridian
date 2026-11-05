@@ -1,0 +1,54 @@
+# The Keeper Who Answers
+kind: mystery
+places: sarn
+people: sefu, ouma, lenn
+factions: archive
+level: 3
+
+The lead:
+In the Deep Stacks of Sarn, far past where the heating stops, Keeper Sefu Anand has been alone for sixty-two years. The Keeper who brings his lamp oil says he has started losing arguments, and would somebody please go and see who to.
+
+For anyone who isn't the captain:
+In the Deep Stacks of Sarn, far past where the heating stops, Keeper Sefu Anand has been alone for sixty-two years. The Keeper who brings his lamp oil says he has started losing arguments, and would somebody please go and see who to.
+
+What's really going on:
+Sefu is sociable, scatterbrained and sweet, and he talks to his shelves as if they're people. Mostly that's loneliness. But one of them really answers. The Deep Stacks share a wall with the Ninth Vault, and for decades something on the other side has been speaking through it, very slowly. He thinks it's a record with an unusually long opinion, and he calls it she. It's the Roster's clerk, a First Builder machine that has kept that book for a very long time. Once a year it has him write out one line and post it through a crack in the stones, as every Keeper on this post has done for 1,006 years, and he thinks that's a perfectly normal thing to do. And it has one question, which he passes on to every visitor with an apology: 'She'd like to know if you've come about the vacancy. I'm so sorry, she asks everyone. There's only ever been me.' He has no idea what it means. He has taken down everything she's ever said, in two hundred volumes, shelved under a false mark, with an index he made for his own convenience: the only real index to the Ninth Vault that exists. First Keeper Ouma put him here on purpose, because he's the only one who can stand it, and she has never told him. He also has a pear stone and a copy of the Maris Tide Tables, left by a visitor eleven years ago, Dr. Lenn Corso, and that book is the key to Corso's messages. He's been reading the news through the wall for company, so the clerk knows about the Fall and the fleet and its captain. Arc clues: sefu_vacancy, maris_numbers.
+
+How it might go:
+- The descent on the Vault Roads: a driverless rail cart, tunnel after tunnel, each colder and older than the last, with a Keeper guide in a humming coat who turns back at the Sixth. The shelves go from paper to plate to stone to things that aren't writing. Frost on a ten-thousand-year-old poem. Then, far ahead, a too-loud whisper.
+- A lamp in the dark and a very old Thessan in a dozen coats, thrilled. 'Captain, have you met the Treaty of Orsk? She's been dying to speak to you.' He introduces the neighbors and passes on their gossip. He asks them to stay for dinner.
+- The wall. He stops in the middle of a sentence to let someone finish. After a very long time there's a sound like a stone thinking. 'She'd like to know if you've come about the vacancy.' Ask what vacancy, and wait. The answer takes most of a day, and it's one word. 'She says yours. I'm so sorry, she's very forward.'
+- The trap of this place: it's comfortable, in a way. Someone in the party has been murmuring replies to the wall for an hour, and they're very nearly fluent.
+- What to tell Ouma, and what to do about a man who has sat next to the most dangerous room in the galaxy for sixty-two years and thinks it's a neighbor. He'd give his index to anyone who promises to come back for dinner.
+
+Ways through:
+- Survival: make the descent in killing cold with what's on your back (survival, athletics, void_ops for the sealed sections). Thessan characters suffer more, and a torpid guide is a real problem.
+- Scholar: read your way down (lore). The catalog is a puzzle a hundred centuries deep, and the shelves have hints about every people's past. Find the false mark yourself and read a few of the two hundred volumes. They're very boring, and then they aren't.
+- Talker or doctor: stay for dinner (persuasion, medicine). He hasn't had a real conversation in sixty-two years. Say his name, warm him slowly, and write him down somewhere.
+- Resonant: answer the wall on purpose (attunement). It's the oldest voice anyone alive has spoken to. Manifestation keeps the lamp lit when the cold gets into everything.
+- Technical: trace the sound (science, engineering, or hacking on the Archive's catalog). Something's drawing a trickle of power from nothing. Recording what it says is safe. Playing it back is not.
+
+Checks that fit:
+- survival:hard to reach the Deep Stacks in that cold
+- lore:hard to find the false mark on the two hundred volumes
+- persuasion:moderate to get a straight story out of Sefu
+- attunement:moderate to answer the voice through the wall
+- manifestation:moderate to keep a lamp burning where nothing burns
+- composure:hard to stop answering once you've started
+
+If it comes to a fight:
+- security_drone on the Vault Roads if the captain came without leave
+- ministry_blade if the Regent's people have followed the captain down
+
+Where it can end up:
+sefu_gets_his_dinner_his_promise: If Sefu gets his dinner and his promise, he hands over the ninth_vault_index and lends them the Tide Tables, and he'll greet the captain like family when they come back. He'd like to be written down, so someone should write him down.
+hes_brought_upstairs: If he's brought upstairs, he's terrified and it half kills him, and for the first time in a thousand years no one is sitting by that wall. The voice goes on talking, nobody's taking it down, and this year's line doesn't get written. That should feel worse than it sounds.
+ouma_told_everything: If Ouma is told everything, she retires him, seals the lowest levels and closes the easy way to the Ninth Door. If she's told nothing, she notes, for the record, that the captain did not appear to be telling the truth.
+party_keeps_answering: If someone in the party keeps answering, they leave with a phrase stuck in their head: the first line of the old watch call. It may be useful later, and it may be the hears_the_song trait.
+
+If nobody steps in:
+after 38 days: The Keeper who takes lamp oil down to the Deep Stacks at Sarn has started leaving it at the top of the stairs.
+  lead: The Keeper who takes Sefu Anand his lamp oil has started leaving it at the top of the stairs, and won't say why. Down in the Deep Stacks he's still talking, and he's still losing the arguments. Somebody should go and see who to.
+
+Rewards:
+The ninth_vault_index, the loan of Sefu's Maris Tide Tables, a field_scanner from the Keepers' stores, and access to the Navy registry in the lesser vaults if Ouma is pleased.

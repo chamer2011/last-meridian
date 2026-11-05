@@ -1,0 +1,10 @@
+# The Bad Route
+order: 40
+needs skill: navigation 5
+
+In a line:
+The safe lanes are watched, so you've learned to plot what nobody else would try. +1 Navigation, and better tools in Navigation check windows, as if you were one tier better.
+
+Effects:
+skills: navigation 1
+better tools in: navigation 1

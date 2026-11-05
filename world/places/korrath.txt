@@ -1,0 +1,71 @@
+# Korrath Forge
+also called: Korrath Forge, Korrath
+faction: clans
+market: forge_hammer, korrun_harness, boarding_axe, heavy_carbine, marine_plate, arc_welder, repair_kit, emergency_patch, tool_roll, work_suit, refined_fuel
+the fleet is here: no
+a place to rest: no
+dangerous: no
+hidden: no
+people: hesk, brenna
+enemies: korrun_champion, cinder_wyrm, salvage_mech, dock_thug, hegemony_hunter
+items: forge_hammer, korrun_harness, boarding_axe, refined_fuel
+
+In a line:
+The Korrun clan-world, under crushing gravity and rivers of slag. It sells the best heavy gear in known space.
+
+The feel of it:
+Sulfur, hot iron and bread baked on furnace walls, under a gravity that makes your knees ache by noon and your heart pound on the stairs. Rivers of orange slag light the underside of a permanent cloud, and every sound is a hammer, a shout or a very large person telling you exactly what they think. Nobody here will trade with a stranger until they've seen that stranger work, and any promise that matters is spoken aloud over a public scale, where a clerk tells the street what it came to.
+
+Districts:
+The Weigh House: A great iron hall with a public scale taller than a Korrun, where contracts are spoken, weighed in iron tokens and kept for ever. In the inner Hall of Weights hangs a far older scale with one sealed pan, and they call that the Long Debt.
+The Long Furnaces: Eleven kilometers of roaring smelters. Every outsider who wants to do business with the clans starts here, with a shovel, under the eye of a bored foreman who's seen a lot of visitors faint.
+Slag Bridge: A broad black span over the main slag river, lined with stalls and duelists. The railings are too hot to touch, and it's the only market on Korrath where you're allowed to haggle.
+The Cradles: Huge slips where the clans build hulls, in pieces, for lifting up the orbital tether. Half the Concord's old navy was born here, and the shipwrights still know each of them by name.
+The Low Halls: Family homes dug deep into the rock, with ceilings low enough to make a human stoop. Every hall has a wall of the tools of its dead, melted down and recast for the next apprentice.
+
+Complications:
+- The gravity's getting to someone in your party, and they're too proud to say so until they pass out on the stairs.
+- Something you said in passing has been taken as a promise, and it's already been weighed.
+- A furnace breach on your shift leaves a choice between saving the pour or saving the shift's only exit.
+- A clan champion has challenged your whole crew over an old Concord debt, and refusing would count as admitting it.
+- A Slag Crawler has come up through the floor of the Low Halls, after the warmth of a family's ovens.
+- A Hegemony purchasing agent wants the same plate you've come to buy, and they weighed their contract first.
+
+Secrets:
+- When the Concord called in the Clans' oath during the Fall, the call reached Warden Varr under Tobin Hask's seal. He told no one, and he sealed fifty-four finished war hulls in a dry pit under the slag fields, telling himself that a call never spoken over the scale doesn't bind. Whoever finds those hulls has the start of a navy, and Brenna Tor has seen them and thinks they're scrap.
+- Varr also has a contract, weighed and sealed before the Fall, to deliver six warship hulls to the Hegemony. He hates it, the Clans would be shamed by breaking it, and every hull they lift up the tether for Vantor is steel your fleet can't have.
+- A deep shaft on the Fourth Level broke into a lava tube with a smooth, warm, First Builder chamber at the end of it. The Slag Crawlers aren't attracted by the forges. They're drawn to that chamber, and they've started to dig toward it from every side.
+
+Encounters:
+- Warden Hesk Varr looks at your hands before your face, and he's not impressed. "Show me," he says, and he gives you a shovel and a place on the line, and it's eight hours in punishing gravity. One of your Korrun crew quietly offers to wear your coat and take your shift, and nobody would be able to tell from the smoke.
+- Brenna Tor stops you at a loading bay and asks what a three-hundred-kilo stowaway would cost your ship in fuel. She's already worked it out. She'd like you to check her numbers, and she's brought a very small bag.
+- A clerk at the Weigh House asks you to state your business over the scale. For each clause, an iron token goes on the pan, and the crowd hums along with the count. Then she reads back the last promise the Concord made to this clan, and asks whether you'd like to take it up where they left off.
+- A grim elder unrolls a bill on a slab. The Meridian's keel was laid here, she says, and the last payment never arrived, so the clan holds a lien on your ship. She isn't threatening you. She only wants to inspect her and see how she's been treated, and she has already heard about the cannon.
+- An enormous old smith asks you to carry a small sealed tin back to Chief Marrow, and to tell him that she still has the rest of what he owes her. Inside, when you finally look, are two fingers, carefully preserved. He'll either laugh or leave the room.
+- A contract dispute here is worth five thousand credits, and it's settled by a Clan Champion's fists. You may name a stand-in. A Korrun deckhand from your crew, who hasn't been home in thirty years, steps up without being asked. She seems to know the champion, and she's smiling, and he isn't.
+- A Slag Crawler has moved into a baker's oven in the Low Halls, and the neighbors want it killed. The baker won't hear of it, since it keeps the oven hot without fuel, and she's named it. It's a good size now, and her neighbors have children.
+- A family of refugee children from your fleet was taken in by a clan as apprentices, and they're proud, strong and well fed. A medic tells you quietly that what the gravity is doing to their knees and spines won't ever heal. The children don't want to leave, and the clan is teaching them a trade.
+- A Hegemony purchasing agent in a powered walking frame wheezes a compliment at you across Slag Bridge. He's got an excellent contract, and he'd be delighted to sub-let some of the plate to you, at a modest markup, if you could see your way to answering a few questions about your fleet.
+- A Korrun who served and died on your ship has come home in a box. Her tools are being melted down in the Low Halls for the next apprentice, and the family has asked her captain to pour the metal. It's a heavy ladle. You realize that you never knew her first name, and they're going to ask you to say it.
+- Two brothers have each sold the same ingot and each sworn to it over the scale, so that one of them is lying. The Warden's ruling is that they both work the deep shift until one confesses, and it's been a month. Their mother asks you to tell her what a Concord court would have done.
+- There's a breach on your shift. A foreman who's been shouting at you all night is trapped behind the failing wall, and the pour on the line is the hull plate you've been promised for your fleet. You've got time for one of them. He's stopped shouting, and he tells you, quite calmly, to save the plate.
+- A blind old shipwright runs her hand along your shuttle's hull and tells you where it's been, what's wrong with it and what kind of person your chief engineer is. She can give you a repair nobody else knows. All she wants in return is the truth about how the ship she built for her son was lost.
+- Brenna Tor mentions, while you're both shoveling, that the Warden put her on a punishment shift once, hauling ore through a sealed pit under the slag fields. There's a lot of scrap down there, she says, ship-shaped scrap, fifty-odd hulls with no engines. She wants to know if that's worth anything to you. She's asking because she's got a price in mind.
+- A young Korrun at the furnace asks you, in all seriousness, whether it's true that in the fleet people say things they don't mean, just to be polite. He's trying to learn how to do it. He's going to be sent to a Hegemony trade mission, and he's terrified.
+
+Rumors:
+- Say it once. Say it plain. If you need to say it twice, you were lying the first time.
+- Clan scale reads true. Everyone says so. Ask them who checked, and watch how long a Korrun can go without answering.
+- Warden Varr once ran a shift with a broken back. He doesn't deny it. On Korrath that means it's true, or it isn't worth his breath.
+- The Hegemony's bought six hulls off the slips. They're paid for and weighed. Don't bother asking the Warden about it, unless you'd like to see someone hate a thing and do it anyway.
+- Crawlers are coming up the deep shafts, a lot more than they used to. People say it's the heat from the new furnaces. The new furnaces are on the other side of the world.
+- You can get a hammer here that'll outlive your grandchildren. It'll break your wrist first, if you've got wrists like those.
+- A human worked a full month on the Long Furnaces once. We named a shovel after him. It's a small shovel, but it's a real honor.
+- Young Brenna Tor's the best smelter of her year, and she's got a picture of an ocean on her wall. Nobody's told her what the gravity's like on a ship. She knows. She asks everyone anyway.
+- If someone offers you bread off the furnace wall, eat it, and don't complain about your teeth. It means you've stopped being a stranger, and they don't offer it twice.
+- Half the warships that ran from the Graveyard had Korrath keels. We've been saying that they didn't break. The Concord did the running. The ships were fine.
+- Why didn't the Clans come, when the Concord called? You'll hear that the call never reached us. Notice who tells you that, and notice that they don't look at you when they say it, and we always look at you.
+- That scale in the back of the Hall of Weights has a sealed pan, and it's been sealed for longer than there's been a Korrath. We call it the Long Debt. Nobody's ever told me who owes it. It's the only thing here that nobody's allowed to weigh.
+- Don't ever tell a Korrun you'll try. That's not a word here. You will, or you won't, and if you try they'll write down that you won't.
+- They reckon there's a new smooth tunnel down on the Fourth Level with no tool marks on it at all. The clan's bricked it up. The bricks keep cracking, from the outside, and the crew's stopped talking about it.
+- Your Chief Marrow left here thirty years ago, with two fewer fingers than he came with and a lot to say about management. There's still people here who'd buy him a drink, and there's others who'd like to discuss the fingers.

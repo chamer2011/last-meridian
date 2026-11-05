@@ -1,0 +1,9 @@
+# Ace Pilot
+order: 17
+needs skill: piloting 2
+
+In a line:
++3 Piloting.
+
+Effects:
+skills: piloting 3

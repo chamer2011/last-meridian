@@ -1,0 +1,55 @@
+# The Sixth Level
+kind: mystery
+places: maris
+people: lenn
+factions: quiet
+level: 5
+after: deep_the_sounding_line
+
+The lead:
+Dr. Corso keeps waking up on the sixth level of his station with no suit on and no idea how he got there. He'd like you to take the elevator at high tide, when it comes, and tell him what he's been going down to see.
+
+For anyone who isn't the captain:
+Dr. Corso keeps waking up on the sixth level of his station with no suit on and no idea how he got there. He'd like someone to take the elevator at high tide, when it comes, and tell him what he's been going down to see.
+
+What's really going on:
+The elevator in the Shaft is called from below, by nobody, at every high tide, and it waits two minutes with its doors open. It goes down through the sea floor to the Long Chamber, a vast dry First Builder hall two kilometers under the sea, with breathable air and a clean floor. At the far end is the reason the gauge was built here: a city's worth of figures, thousands upon thousands, of no shape anyone has seen, older than the First Builders, worn smooth as river stones. They're seated in rings, all facing the same way. It happened in one night, before anyone was keeping count. It's what the Audience does, and this is the only place anyone can go and look at it. The First Builders found them and built the gauge around them, so they'd never forget what it was for. Corso's five colleagues sit in the outermost ring. They're alive, in their station clothes, because the Drowned Things, which the structure grows to look after itself, carry down the food he leaves at the galley door and feed them. Those are wearing the five's spare clothes, habits and badges: a small, old, clumsy version of what the Choir does. There's a gap at the end of the ring, about the right size, and Corso has been sleepwalking to it. Anyone who lingers here starts looking for a seat, and it feels wonderful. On a low platform at the center, a First Builder tablet holds the only grief they ever wrote down. Arc clues: silent_bearing, silent_unwanted, blade_origin.
+
+How it might go:
+- High tide. The elevator's doors open, and you have two minutes. It goes down for a long time, and your ears don't pop.
+- The Long Chamber: clean, cool, lit from nowhere and too large for the lamp. At first it looks like a field of worn pillars. Then the lamp catches a shape that's sitting down. Then the next. They go on past where the light ends, ring after ring.
+- The outer ring: five people in Corso Station sweaters, with a plate beside each. A wet figure with a badge is spooning broth into someone's mouth, very carefully. It turns its head. It's wearing Hana's cardigan.
+- The peace comes on slowly. The cold stops mattering. Comms chatter slows. The party's count is one short, and they find them walking, calmly, toward the gap in the ring. It's the right size. It would be so easy.
+- The platform and its tablet, if anyone gets that far. Then who to bring back, and how many can be carried? Each one taken away, the ring closes behind them. Corso reads their names over the comm, one at a time, in a small voice: 'Note: that's all of them.'
+
+Ways through:
+- Steady hand: just get there and back as yourself (composure, survival). Rope up, set a timer, sing something rude and keep talking. Everyone needs a reason to go home, and the GM should ask what it is.
+- Resonant: hold the party together as the pull builds (attunement, manifestation). You'll feel it soonest, and you'll feel them slipping.
+- Scholar: read the tablet and the layout of the hall (lore, science). They weren't killed. They stopped. The rings are the last thing they built, in a hurry, and they built them to face it.
+- Doctor: try to wake one of the five (medicine), with a name, a stim or a captured blade.
+- Fighter: the Drowned Things don't want you taking their charges, and they're very gentle until you try (firearms, melee, tactics). Someone also has to hold the elevator: the next one's in twelve hours.
+
+Checks that fit:
+- composure:very_hard to stand in that hall and want to leave
+- attunement:hard to feel who in the party is slipping
+- manifestation:hard to shove a friend back to themselves
+- lore:hard to read the tablet
+- medicine:hard to rouse one of the five
+- firearms:moderate to hold the shaft with the lights going out
+
+If it comes to a fight:
+- drowned_thing in numbers if the seated are moved
+- silent_one: one of the five stands up when they're carried
+
+Where it can end up:
+some_five_recovered: If some of the five are recovered, each wakes weeks later and says the same thing: 'I wasn't unhappy. Please understand. I wasn't anything.' They're good witnesses, they can't sleep without a light, and they prove someone can come back, at least early on.
+party_sits_down_isnt_recovered: If someone in the party sits down and isn't recovered, it's a real loss, and it can only be undone later, at a price. If nobody stops Corso, he's in the sixth seat within a month. His messages keep coming for a while, written by something that's looking after him.
+recording_hall_reaches_fleet: If a recording of the hall reaches the fleet, Oskar Lind sees it, and it ends his faith or hardens it. Yara Solune sees it, says 'It's all right', and asks where the boat leaves from.
+captain_comes_back_having_felt: The captain comes back having felt it. They may earn the hears_the_song trait. They'll recognize that peace anywhere now, and they'll miss it.
+
+If nobody steps in:
+after 30 days: Dr. Corso's station reports from Maris Deep have got shorter.
+  lead: Dr. Corso's reports have got shorter. He still wakes on the sixth level with no suit on, and he's stopped sounding surprised. He'd still like you to take the elevator at high tide, and tell him what he's been going down to see.
+
+Rewards:
+A rubbing of the tablet, worth a fortune to Ouma or Quill. Nothing else you'd want.

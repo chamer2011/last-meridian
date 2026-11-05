@@ -1,0 +1,10 @@
+# Focus Blade
+order: 2
+type: weapon
+price: 300
+damage: 4 to 7
+stat: resonance
+skill: melee
+
+In a line:
+A crystal edge that sharpens to its wielder's will.

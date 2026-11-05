@@ -1,0 +1,7 @@
+# Rally
+order: 30
+needs skill: leadership 3
+ability: rally
+
+In a line:
+Unlocks Rally in combat: 3 energy, heal 6 plus your Leadership rank and relieve 15 stress.

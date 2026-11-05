@@ -1,0 +1,117 @@
+HOW TO WRITE A STORY
+====================
+
+Every story the game can offer is one file in this folder, named by the story's id: two_weeks_of_fuel.txt is the
+story main_two_weeks_of_fuel. These are the game master's notes, not the words the player reads: the AI runs the
+story from them, and the written scene in world/scenes, if there is one, plays it out. The Story board in the game
+(The story, then Story board) shows and changes these same files as boxes and arrows, and npm run check-story reads
+them all and says what's wrong, with the file and the line.
+
+A file starts with the title, then a few lines about the story, then its parts, each under a heading that ends with
+a colon. Here is a short one, with every kind of line:
+
+    # Two Weeks of Fuel
+    kind: main                          (main, crew, dilemma, mystery, exploration, survival, politics, job, faction)
+    places: kessara, haven, cinder      (where it happens: the first is where the lead comes up)
+    people: quill, tannis, marrow       (ids from world/characters)
+    factions: drift, fleet, hegemony    (ids from world/factions.json)
+    level: 3                            (leave it out for 1: the level the player should have)
+    after: main_the_old_scholar         (a story that has to be over first; leave it out if none)
+    waits: Needs the fleet at the Harbor.     (why its clock never starts on its own; rare)
+    clock from: 30 days                 (when its clock starts, if not by the level; rare)
+
+    The lead:
+    Chief Marrow has done the sums three times: the fleet has two weeks of fuel.
+
+    For anyone who isn't the captain:
+    The fleet's down to two weeks of fuel, and everyone on the docks knows it.
+
+    What's really going on:
+    Quill owns the only depot within reach, and she knows it.
+
+    How it might go:
+    - Tea in Quill's Parlor, on embroidered cushions.
+    - Marrow's numbers get worse.
+
+    Ways through:
+    - Talker: haggle with Quill (commerce, persuasion), or play her against Corvane.
+    - Fighter: take the depot with Tannis's help (tactics, gunnery, melee).
+
+    Checks that fit:
+    - commerce:hard to put a limit on Quill's markers in writing
+
+    If it comes to a fight:
+    - drift_raider and syndicate_collector if the depot raid goes wrong
+
+    Where it can end up:
+    sign_with_quill: If they sign with Quill, the fleet has fuel and Quill has forty-one markers.
+    raid_depot: If they raid the depot, the fleet is fueled and at war with the Syndicate.
+
+    Facts it can leave:
+    kessara_closed, after raid_depot: Kessara Drift is closed to the fleet since the depot.
+    markers_limited: Mother Quill's markers have a limit, in writing.
+
+    What on the record changes it:
+    ? ended main_the_old_scholar quills_people_get_him -> Tharel is in Quill's hands, so the price goes up.
+
+    If nobody steps in:
+    after 18 days: Mother Quill's depot has started selling to whoever asks first.
+      lead: The fuel's still there, but the depot is selling it to anyone who asks.
+      at kessara: fuel -15
+    after 45 days: The council took a shipment of fuel from Legate Corvane without the captain.
+      if: not ended main_two_weeks_of_fuel
+      fleet: fuel +3, morale -1
+      big
+      fact hegemony_transponders: Every ship in the fleet carries a Hegemony transponder.
+      ending: take_corvanes_fuel
+
+    Consequences:
+    ? ended main_two_weeks_of_fuel raid_depot, after 7 days: Kessara Drift's docks are closed to the fleet.
+      place: kessara
+      fact kessara_closed: Kessara Drift is closed to the fleet since the depot.
+
+    Rewards:
+    Fuel for the fleet, and a place on Quill's list.
+
+The parts, in the order the game master reads them
+--------------------------------------------------
+
+The lead is what the player hears when the story comes up. For anyone who isn't the captain is the same for a
+player who isn't in charge; leave it out and they get the lead. What's really going on is for the game master only.
+How it might go is the beats, Ways through the routes the player might take, Checks that fit the skill checks
+(a skill, a colon, easy, moderate or hard, then what it's for), and If it comes to a fight who they'd fight (enemy
+ids from world/enemies). Each of those is a list: one line per item, starting with - and a space. Rewards is one
+line of what the player gets.
+
+A part that has nothing in it can be left out, except The lead, What's really going on and Rewards.
+
+Where it can end up is the story's endings, each with a name the rest of the game uses: lowercase letters, digits
+and underscores. The AI ends the story with one of these names, the written scene does with * ending, the record
+keeps it, and other stories ask for it with ended main_two_weeks_of_fuel raid_depot.
+
+Facts it can leave names the facts this story can put on the record, each with a line of plain words that the
+player reads in the Quests menu. The AI uses these names, and a scene that sets the flag without words gets the
+line from here. Add ", after an_ending" when one ending in particular leaves it; the board draws it from there.
+
+What on the record changes it is how this story reacts to what happened before: a condition, written the same way
+as in a scene (flag a_fact, ended a_story, ended a_story its_ending, not ..., and ...), then -> and what changes in
+this story. The game master only sees the ones that hold when the story begins.
+
+If nobody steps in is the story's clock: what happens by itself, on the day given, if nobody has taken the story up.
+Every line under a stage is optional: lead is what the lead says from then on, if is a condition the stage needs
+(skipped otherwise, so two stages on the same day with opposite ifs are a fork), place is where it happens if not
+the story's first place, big means everyone who knows the place hears it, at a_place changes what a place has
+(food, fuel, medicine, parts) or who holds it (a faction, by its id), fleet changes the fleet (morale, food,
+medicine, parts, fuel, pursuit, ships, picked), named marks one ship lost or gone, fact puts a fact on the record,
+and ending ends the story by one of its own endings.
+
+Consequences follow from the record, whether or not anyone has taken the story up: once the condition holds, that
+many days later the news happens, once, and if the condition stops holding before then the count starts over.
+They take the same lines as a stage, except if and ending.
+
+Where to look when something's wrong
+------------------------------------
+
+Run npm run check-story. It names the file and the line for anything it can't read, and it checks what the parts
+say against the rest of the world: a story, an ending, a place or a fact that doesn't exist, and a fact that
+nothing leaves. The game still starts with a story file that has a mistake in it, as far as the file can be read.

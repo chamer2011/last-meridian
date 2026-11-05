@@ -1,0 +1,9 @@
+# Kessara Syndicate
+order: 3
+starting standing: 0
+
+In a line:
+Smugglers and raiders who respect only profit and nerve.
+
+Beliefs:
+authority 8, loyalty 6, violence 2

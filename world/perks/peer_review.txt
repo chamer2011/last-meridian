@@ -1,0 +1,9 @@
+# Peer Review
+order: 5
+starting: yes
+
+In a line:
+Science career: +2 Science, +1 Lore.
+
+Effects:
+skills: science 2, lore 1

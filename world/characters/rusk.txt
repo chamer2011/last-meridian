@@ -1,0 +1,64 @@
+# Rusk
+title: 
+also called: Old Rusk
+pronouns: he/him
+species: korrun
+age: 66
+faction: guild
+role: Wreck-diver of the Salvage Guild
+place: graveyard
+color: #3fb519
+listed: no
+
+In a line:
+A legend at the Graveyard, with two dead partners and a map he won't show anyone.
+
+Appearance:
+A huge, stooped Korrun with scarred grey skin and one eye clouded from a suit breach. Two empty helmets are clipped to his harness, and of his three air gauges, only one still works.
+
+Personality:
+Silent, gentle with tools and wholly at ease with the dead. He's the best diver alive, and he has gone down with two partners and come back alone, both times. He keeps faith with them in every way but the one that counts.
+
+Voice:
+Almost no words, in short flat sentences. Speaks for his two dead partners as if they're standing behind him: "Dell says you're lying. Ansa says you're not, but Ansa's soft." Measures time in air: "You've got eleven minutes of me." Never says they're dead: "They're still on the job." He won't finish a sentence about the map.
+
+Goals:
+To go to the place where Ansa's voice stopped and bring her out, and Dell too, if he can. He needs a ship that can hold station in the Long Silence, and a third person on the line who won't sell him out to the Factor.
+
+Secrets:
+He came back alone both times, and he had air enough for three. Nineteen years ago, when a dive went wrong, he cut Dell's tether to save himself. That's why he always gives Dell the last word. He doesn't know that Dell's widow, Elsbeth Crane, has known all along. Four months ago, in the Long Silence, Ansa went on ahead, and her voice kept coming over the suit radio for nine hours after her air should have run out, calmly reading off ships, bearings and times, as if the dead were telling her. He wrote it all down. That's the map: a chart of the battle's last hour, showing the squadron that broke off and ran, and ending at a spot with no wreck on it, where her voice stopped. Divers say a ship with her lights on comes and goes there. He hasn't yet made himself go back. Dunn Marrow once pulled him out of a fouled airlock, and he's been leaving good parts where Marrow will find them ever since.
+
+Beliefs:
+authority 6, loyalty 5, belief 3, flesh -2
+
+Attributes:
+might 8, endurance 9, agility 3, perception 6, intellect 5, willpower 8, presence 3, resonance 3
+
+Skills:
+void_ops 10, survival 7, engineering 6, awareness 6, composure 6, melee 4
+
+In a fight:
+threat: 3
+hp: 40
+attack: 5
+defense: 14
+damage: 4 to 8
+weapon: Cutting Torch
+xp: 80
+credits: 10 to 60
+art: brawler
+tags: vacuum
+
+When the fight starts:
+- Rusk lights his cutting torch and checks the one gauge that still works. "You've got four minutes," he says. "Dell gives you three."
+
+When they hit:
+- The cutting torch rakes across you, and Rusk doesn't hurry it.
+- A hand the size of a hatch cover finds your shoulder and bounces you off the bulkhead.
+
+When they miss:
+- The torch burns a bright line through the air where you were.
+- Rusk swings and misses. "Ansa says you're quick," he says, and resets his feet.
+
+When they're beaten:
+- Rusk sits down heavily and closes his good eye. "Tell Dell he was right," he says.

@@ -1,0 +1,69 @@
+# Anselm's Mercy
+also called: Anselm's Mercy, the Mercy, The Mercy
+faction: fleet
+market: medkit, stim, trauma_kit, nutrient_gel, calm_tabs, surgeon_lens
+the fleet is here: yes
+a place to rest: no
+dangerous: no
+hidden: no
+people: wen, pavel, tessaly
+enemies: desperate_refugee, quiet_zealot, choir_mimic, mutineer
+items: trauma_kit, medkit, surgeon_lens, calm_tabs, quiet_token
+
+In a line:
+The fleet's hospital ship: overcrowded, understaffed, and the place where hope is rationed.
+
+The feel of it:
+Boiled linen, watered-down antiseptic and the faint sweetness of a ward that's had the air recycled too often. Built for four hundred patients and holding almost three thousand, with cots down every corridor and children's drawings taped over the warning labels. You pay for what you get here in blood, literally, or in hours in the laundry, and everyone knows their number on the list and everyone else's.
+
+Districts:
+The Sorting Deck: Triage, in the old shuttle bay. Patients get a colored tag from Dr. Wen Adeyemi or someone working for them, and the color decides nearly everything after that.
+The Long Ward: A converted cargo hold with row upon row of cots, and families sleeping underneath them. Ward Six at the far end holds the dying, and lately fewer of them have been dying, and nobody's asking why.
+The Still Ward: A dim, peaceful compartment for the comatose, kept running at a cost no one has asked about. There are eleven people here who've been unconscious since the Fall. Their monitors keep a very steady time.
+The Bell Stair: A stairwell with a salvaged ship's bell at the top, rung by anyone well enough to walk out. It's been rung eleven times since Aurelis, and you can hear it on every deck.
+The Gallery: The upper walkway, where visiting families camp and trade: places in the queue, blood chits, laundry hours and news. Almost nothing up here is legal, and the nurses need all of it.
+
+Complications:
+- A power cut drops the Still Ward's support to battery, with nine hours left and a hard choice about what else to turn off.
+- A shuttle arrives without warning, carrying sixty burned crew from a reactor accident, and there's no room for sixty.
+- A desperate family rushes the pharmacy cage. The orderly guarding it is seventeen, and he's got a mop.
+- Lt. Tarrow's security team has arrived to check heavily augmented patients against a list, ward by ward.
+- An outbreak of something quick and nasty closes a deck, and it happens to be the one you're standing on.
+- Dr. Adeyemi collapses mid-sentence, and it turns out that there isn't anybody else who knows how the list works.
+
+Secrets:
+- Dr. Adeyemi keeps three pharmacy counts: a padded one on the wall so that the staff won't give up, a low one for the council so that there's a reserve nobody can order spent, and the true one. None of them matches the Meridian's clean ledger, so the real day the medicine runs out is well before the forecast Dr. Aduro has been dreading.
+- The eleven in the Still Ward breathe in unison, and they have since the Fall. When Pavel Ostrov hums, their heart monitors slowly fall into step with him. No one has laid the ward logs side by side, and the night staff simply think the equipment is faulty.
+- Half the night nurses belong to the Quiet. They're the best nurses on the ship, and they don't flinch. When a dying patient asks, Dr. Adeyemi signs a transfer, and Oskar Lind's people take the patient out on a drift-boat to wait for the Choir. There have been thirty-seven so far, and it frees a bed.
+
+Encounters:
+- Dr. Wen Adeyemi hasn't slept in two days. They hand you the triage pen and ask you to sit in for one hour, and they say it's only fair that you see it. There's one course of antibiotics, and three people have just been wheeled in.
+- A mother who's dying asks you to transfer her place on the list to her teenage son, who's less sick and doesn't know she's doing it. She's also the best surgical nurse on the ship. She'd rather you didn't mention that part, and so would he.
+- A woman presses her wedding ring into your hand and begs you to move her husband up the list. Behind her, a nurse catches your eye and shakes her head very slightly. He died an hour ago. Nobody has told her yet, and she's still holding out the ring.
+- Pavel Ostrov is cheerfully peeling potatoes in Ward Six, among the dying, and humming. He has no idea he's doing it. The other patients have moved their cots away, except for a small boy who's sitting close by, and has begun to hum along, and whose mother is coming up the stairs.
+- The bell rings, for the first time in nine days, and the whole ship cheers. A nine-year-old rang it. She's fully well, her family's gone, and this is the only place left where anyone knows her name. She's sitting on the top stair, and she won't let go of the rope.
+- An old stage actor goes from cot to cot doing the voices of patients' dead husbands and wives from what they tell him, and they ask for him by name. The nurses are split on whether it's a kindness or a horror. He'd like the captain to decide, and he says he can also do your voice.
+- A wounded raider has been brought in off a boarding action, and he's been put in the cot next to a man whose family was killed by raiders. Dr. Adeyemi says patients are patients. The man hasn't said anything at all. He's been awake all night, looking.
+- A synthetic with a smashed chest lies on a cot in the corridor, because there's no list for synthetics. They're being repaired very badly by an old woman with one working arm and no training, who says they held her up during the evacuation. She'd like a soldering iron, and she'd like you to get it for her.
+- A young crewman from your own ship faints in the blood line. It's his third donation this month, and that's how he's paying for his brother's bed. The rule is one a month, for excellent reasons. He wakes up and begs you not to report it.
+- An orderly has been selling ward painkillers to crews on other ships, and he's been caught. He's used every credit to buy food for the children's bay, and the accounts prove it. The people who bought them are soldiers who can't sleep, and now the children's bay is short of painkillers.
+- A dying Concord judge has insisted on seeing you. She wants to swear out a final deposition about what was said in the Senate shelter on the last night of the Fall, and who said it. She has perhaps an hour left, and Speaker Halm's aide has just arrived with a basket of fruit.
+- On the Gallery, a woman has spent six months knitting a child's sweater, and it's now eleven meters long, because she won't finish it. The nurses need the wool for dressings, and they've asked you to be the one who speaks to her. She offers you a chair, and she asks after your family.
+- A volunteer with a calm face and a Quiet token around her neck has just sat with the ninth death of her shift. Lt. Tarrow's people want her off the ship. Patients are calling for her by name. She tells you she'll go wherever you say, and she doesn't seem afraid of anything at all.
+- Tessaly Marsh is on the Gallery with a bag of unlabeled ampoules, and all she wants for them is ten minutes alone with a man in Ward Six. The drugs are genuine, the source isn't, and Dr. Adeyemi has already seen you talking to her. The look they give you isn't a no.
+- A boy of twelve has made himself useful for months, carrying bedpans and running messages. He's not a patient and no one's sure who he belongs to. He's just worked out that his tag is the wrong color, and he's come to ask you what it means.
+
+Rumors:
+- There's a list. Everyone knows that there's a list. If you want to live, be young, be useful or be related to somebody.
+- They've rung that bell eleven times since Aurelis. I've counted. I've got nothing else to do. Twelve would be nice.
+- That fellow in Ward Six hums while he's sleeping, and hums when he's awake. He doesn't believe you when you tell him. I've started to find I know the tune.
+- The night nurses are Quiet, half of them. I don't care. I've seen one sit up with a stranger till it was over, and then go straight to the next. You find me a believer in anything else who'd do that.
+- A bed on the Long Ward's going for two hundred credits and a month in the laundry. That's just the bed. The medicine's separate.
+- Dr. Adeyemi writes every name down in a little book. Not the ones they save. The other ones. They've got good handwriting, and they don't use a pencil.
+- Medicine's going to run out by next month. That's not gossip, I've got a friend in the pharmacy cage, and she's started counting aspirin. She's counting it twice.
+- They've got a proper cure for the grey lung locked up in there, only it's being kept for officers. I know that's how it works, because that's how it worked on Aurelis.
+- Don't go in the Still Ward at three in the morning, not if you want to go on sleeping. They all breathe out together, those eleven. It sounds like the ship's sighing.
+- If you can give blood, give blood. I've got no feeling in this arm, and my wife's still got a cot. There's no better rate of exchange in the fleet.
+- A doctor came through here a while back, a Marsh or some such, with a bag full of what we needed. Saved my boy. I don't want to know where it came from, and I've thought about it, and I still don't.
+- One of the ward doctors told me that the Hegemony would take every patient on this ship tomorrow, medicine and all, if the fleet signed. I asked him why he was telling me. He said he'd stopped being able to not tell people.
+- My mother came out of the Still Ward last month, after five months asleep. She was perfectly fine, and she knew my name. I've brought her home, and she's lovely, and I don't know why I can't stand to be in the room with her.

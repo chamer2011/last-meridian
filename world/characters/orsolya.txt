@@ -1,0 +1,64 @@
+# Orsolya
+title: Mother
+also called: Mother Orsolya
+pronouns: she/her
+species: human
+age: 79
+faction: none
+role: Head of the heretic cloister on Saint Orrin's Comet
+place: orrin
+color: #e8fa17
+listed: no
+
+In a line:
+Claims that the Order of Ilun has been wrong for a thousand years. She'll tell you why at length, and she enjoys it.
+
+Appearance:
+A tiny, wiry old woman with burn-scarred hands, a broken nose and a shaved head, wrapped in a patched thermal robe. She has few teeth left, and she shows all of them. The air around her is a little too warm.
+
+Personality:
+Gleeful, foul-tempered and great company. She has spent fifty-five years in a freezing cave on a comet to win an argument, and she's never been happier. She mocks everything holy, and she's the most devout person you'll ever meet. She tells her followers that their burning is holy, and she knows it isn't.
+
+Voice:
+Loud, gleeful and constantly heckling. Her favorite word is "Wrong.", usually on its own, often before you've finished. Cackles. Argues with Abbess Ione as if she's in the room: "Little Ione would say it's a sacred silence. Wrong. It's a woman who won't answer her mail." Calls her followers "my idiots" with great tenderness. Asks "Who told you that?", then laughs at the answer.
+
+Goals:
+To make Ione admit she's wrong, face to face, before one of them dies. Failing that, to get one person with a ship to carry the proof out to where it will count.
+
+Secrets:
+She and Ione were novices together, closer than sisters. At twenty-four, to win an argument with her, Orsolya forged a testament of Saint Orrin: that the field isn't left over from the First Builders, that it's still being made, and that the Order has been listening to the wrong end of it. She carried it to the comet, where a dwindling few were still singing, and found that it was true. She has told no one, and she can't decide if she's frightened or delighted. She holds the pages cut from the Ilun Codex, which describe the old rite of singing a shift, and a key to the Pale Gate, the relief crews' pass. The heretics lost the instrument that kept a singer in tune, so every one of them burns. She tells her idiots the burning is holy. She knows it's an equipment failure, and she keeps sending them up, because if they stop, nobody's on duty. There are eleven left. She thinks the thing at the other end should be woken and asked. The burning has reached her lungs, and she has one great working left in her.
+
+Beliefs:
+authority 8, violence 3, belief 9
+
+Attributes:
+might 2, endurance 4, agility 3, perception 8, intellect 8, willpower 10, presence 8, resonance 9
+
+Skills:
+manifestation 9, lore 8, attunement 7, persuasion 6, composure 6, intimidation 5
+
+In a fight:
+threat: 4
+hp: 34
+attack: 6
+defense: 15
+damage: 5 to 10
+weapon: Burning Hands
+xp: 140
+credits: 0 to 0
+art: adept
+tags: resonance
+
+When the fight starts:
+- Mother Orsolya cackles and spreads her scarred hands, and the air between you starts to shimmer. "Wrong," she says cheerfully, to nothing in particular.
+
+When they hit:
+- Heat slams into you out of empty air, and she whoops like a girl.
+- Something invisible closes around your chest and burns. "Who told you that?" she asks.
+
+When they miss:
+- The air beside you catches and goes out, and she swears at it happily.
+- You dodge, and the wall behind you blisters. "Wrong!" she shouts.
+
+When they're beaten:
+- Mother Orsolya folds up, smoking at the cuffs, and laughs until she coughs. "Tell little Ione I was winning," she says.

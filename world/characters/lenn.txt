@@ -1,0 +1,65 @@
+# Lenn Corso
+title: Dr.
+also called: Dr. Lenn Corso, Dr. Corso, Doctor Corso, Lenn Corso, Lenn, Corso
+pronouns: he/him
+species: human
+age: 51
+faction: none
+role: The last researcher at Maris Deep
+place: maris
+color: #30b4ad
+listed: no
+
+In a line:
+His messages stopped making sense months ago, but they haven't stopped.
+
+Appearance:
+A gaunt, gentle man in a station jumpsuit that's never quite dry, with salt in his beard and pale, wrinkled fingers. He doesn't blink as much as he should, and he's very pleased to see you.
+
+Personality:
+Polite, methodical and not entirely here. He was a first-class scientist, and part of him still is. He sounds completely mad, and he's the sanest person ever to work at Maris. He's still making dinner for six.
+
+Voice:
+Dictates a log out loud, even in conversation. "Note:" before a fact, and "Correction:" before he changes it: "Note: you've arrived. Correction: you were expected Thursday. Correction: there are no Thursdays at this depth." Gives depths instead of directions. Calm, courteous and a little cross at being interrupted. Every message ends the same way: "Please do not come. Please send socks."
+
+Goals:
+To finish the work, see that someone outside knows what he's found, and keep the others fed. More than anything he wants to be relieved, and he can't bring himself to leave them.
+
+Secrets:
+He's less mad than he sounds. Eleven years ago Oss Tharel told him what the Beacon's lattice might be, and he came to Maris Deep on a secret Concord Intelligence grant, Project Plumbline, paid for by Jun Sable's office, to check it against the structure. It matched. Something down there reads the station's outgoing signals, so he hides his real reports inside the nonsense: the first word of each line, looked up in the Maris Tide Tables, gives the true depth readings. He left a copy of that book with Sefu Anand at Sarn. The rest, the tide tables and the socks, he takes down in his sleep: it's what the structure keeps repeating, and he's trying to write around it. His five colleagues went into the flooded levels months ago. What comes to the galley door at shift change wears their clothes and keeps their routines, and he calls it by their names and leaves food out. He has begun going down to the sixth level without a suit, and he hasn't noticed.
+
+Beliefs:
+violence -4, belief -4, flesh 5
+
+Attributes:
+might 2, endurance 5, agility 3, perception 7, intellect 9, willpower 6, presence 3, resonance 4
+
+Skills:
+science 9, lore 6, survival 5, composure 5, void_ops 4, medicine 3
+
+In a fight:
+threat: 2
+hp: 20
+attack: 2
+defense: 11
+damage: 2 to 5
+weapon: Sample Corer
+xp: 40
+credits: 0 to 5
+art: civilian
+tags: 
+on hit: stress 2
+
+When the fight starts:
+- "Note: you're armed," Lenn Corso says kindly, and lifts the sample corer. "Correction: you were expected Thursday."
+
+When they hit:
+- The corer catches you, cold and wet and heavier than it looks. "Note: contact," he says.
+- His fingers close on your wrist, pale and soft and far too strong.
+
+When they miss:
+- The corer punches into the wall, and water starts to weep out around it. "Correction," he says.
+- You slip away on the wet deck, and he watches you go with mild interest.
+
+When they're beaten:
+- Lenn Corso sits down in the water and folds his hands. "Please do not come," he says. "Please send socks."

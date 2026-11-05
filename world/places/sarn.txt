@@ -1,0 +1,69 @@
+# The Long Archive of Sarn
+also called: the Long Archive, Long Archive, Sarn
+faction: archive
+market: data_chip, field_scanner, nav_slate, calm_tabs, energy_cell
+the fleet is here: no
+a place to rest: no
+dangerous: no
+hidden: no
+people: ouma, sefu
+enemies: security_drone, wreck_diver, hegemony_hunter, ministry_blade, choir_mimic
+items: ninth_vault_index, data_chip, asterion_voice_recording, field_scanner, nav_slate
+
+In a line:
+A Thessan library-moon of cold vaults, where the Keepers guard everything anyone ever wrote down.
+
+The feel of it:
+Cold dust, old paper and the medicinal oil Thessans rub on their coat-heaters, in tunnels so quiet you can hear a page turn two rooms away. The cold that saves the records would kill the people who look after them, so the Keepers shuffle through the vaults in humming heated coats, in short careful shifts, and they speak as if they've got a century to finish the sentence. Money is useless here: to take a true thing out of the Archive you must deposit a true thing it doesn't already have, and they can tell.
+
+Districts:
+The Deposit Hall: A long room of writing desks and patient clerks, where visitors dictate what they've come to trade. These days it's full of refugees reciting the names of their dead.
+The Warm Stair: The Keepers' living quarters, stacked along a single great heat pipe that runs up through the moon. It smells of tea and scales, and everyone here is very old.
+The Vault Roads: Hundreds of kilometers of frozen tunnel, served by small rail carts that run without drivers. Every shelf is labeled, and every label is still correct.
+The Deep Stacks: The oldest occupied levels, so cold and so far down that only Keeper Sefu Anand has been working there for years. You can hear him talking long before you can see him.
+The Ninth Door: At the end of the longest road is a plain metal door, with a stool in front of it, and a Keeper on the stool. Nobody's ever given a reason, and nobody's ever seen the stool empty.
+
+Complications:
+- The Keeper at the desk has decided that what you've just deposited isn't quite true, and they'd like you to take your time and start again.
+- A Thessan Keeper in your party's vault has gone torpid from the cold, and has the only key to the section you're locked in.
+- A rail cart delivers a record to you that you didn't request, and now a Keeper wants to know how you knew to ask for it.
+- A refrigeration plant's failing, and whichever vault gets saved is going to be chosen by a committee that meets every eleven years.
+- A Ministry scholar has requested the same record you came for, using a perfectly legitimate deposit, and got here first.
+- You've been asked to keep your voice down, and you realize that the Keeper who asked is already writing down what you said.
+
+Secrets:
+- The Ninth Vault is a small cold room with a long table, a very long book and a few loose pages: a duty roster, the Score of the song and a handover note. First Keeper Thressel has never dared read it. She believes what she was told by the one Keeper who came out and asked for the door to be welded shut: that it holds accounts of every people who ever followed the Beacon, each ending the same way.
+- The Deep Stacks share a wall with the Ninth Vault, and something on the other side has been speaking through it for decades. Keeper Sefu Anand has taken it all down in two hundred volumes, shelved under a false mark, and his private index to them is the only index to the Vault that exists. He writes one line a year in the Roster, and he thinks that's a perfectly normal thing to do.
+- Almost everything on Sarn is true, and the Keepers break their one sacred rule in two places. A forged treaty in Vault Three has kept the Korrun clans and the Veshti Long Families from open war for six hundred years, and First Keeper Thressel has been selling forged Ninth Vault pages to Mother Quill and the Regency to keep them from looking for the real ones.
+
+Encounters:
+- A Keeper in a humming coat asks for your deposit: one true thing the Archive doesn't have yet. It needn't be important, only true. Their pen hovers. They suggest that you might begin by saying what you were doing on the day the Fall began, and this time without the part you tell people.
+- Keeper Sefu Anand shuffles up out of the Deep Stacks, arguing with a three-hundred-year-old tax ledger. He looks up from the cold, and asks you politely whether you've come about the vacancy. Then he says the ledger has stopped answering him since it took up with you, and he'd like you to stay for dinner. The clerks behind him have stopped writing.
+- A Keeper shows you up the Warm Stair to a room that's been kept exactly as it was left a century ago, with a heated coat on the hook and a pair of spectacles on an open book. It belongs to Oss Tharel. First Keeper Thressel dusts it herself. She asks how he is, without looking at you, and she doesn't ask anything else.
+- A fleet widow has brought four thousand names on scraps of ration paper, and the Keepers will take every one. But each name must come with one true fact, and for some of them she can't remember one. She's asking you to help her make some up, because otherwise those people are dead twice.
+- First Keeper Ouma Thressel offers you what she calls an uncomplicated exchange. She'll give you any chart, formula or record you ask for, except one. In return your fleet will carry a full copy of the Concord census, and it will take up the cargo space you were keeping for food.
+- A very young Keeper, barely ninety, has found out that a famous old treaty on the shelves is a forgery. If she corrects the record, the people who signed it have no reason not to go back to war. She's asked you, because you're leaving soon and will be dead in a few decades, and so you seem safe.
+- A plant engineer shows you a failing cold pump in a poorly heated gallery. Vault Seven will warm up in nine days, taking four hundred years of Ilari poetry with it, unless she gets a coolant your fleet needs too. She reads you some, in a shaking voice, and it's very good.
+- A Hegemony scholar with beautiful manners has paid for the Concord's medical records with a genuine, unknown Vantor manuscript. Everything's in order. You know what she'll do with a list of everyone who ever tested positive for Resonance. The Keepers have no rule against reading, and they don't plan to start one.
+- An old man from your fleet just wants to read his daughter's school reports one last time. He's already told the Archive everything he has that's true, and he has nothing left to deposit. The clerk is sorry. He's just sitting there with his hat in his lap, and you've got plenty of secrets.
+- A Keeper has burned a record, and that's the only crime on Sarn. Her sentence is to be struck: her name will be removed from every document, and no Keeper may ever speak it again. She whispers it to you on her way through, and she asks you to remember it, since you're not bound by the rule.
+- A clerk hands you a log entry for your own ship, filed in the proper place, in the proper form and dated eleven months from now. It's probably a clerical error, she says. She'd be happy to correct it, if you could just tell her what really happened.
+- A Keeper asks you to sit for your testimony, as a Concord survivor. They've kindly set aside nine days. They can't understand why you can't stay, and they've noticed that you keep saying the fleet needs you. They're writing that down too, and they ask, gently, what it needs you for.
+- Two Syndicate book-thieves have been caught out in the Vault Roads by the cold. One's already gone, and the other's dying in a stalled rail cart with a First Builder tablet under his coat. He'll tell you who hired him, if you carry him out. The tablet's heavy, and you can't carry both.
+- A rail cart rolls up to you with nobody on it, carrying a single book that's been left open. The page is a dull account of grain prices from a thousand years ago, and one line has been underlined in fresh ink. It's about a ship with your family's name on it.
+- In a side gallery you find a Thessan in a dead coat, sitting upright at a reading desk and furred with frost. She's been at her post, torpid, for what the shift log says is seven years. She's still alive. If you warm her up, she'll ask for the last seven years, and somebody will have to tell her about the Fall.
+
+Rumors:
+- You can read anything on Sarn, only you have to give them something they haven't got. I told them how my mother made her soup, and they made me say it twice.
+- The Ninth Vault's empty. It's been empty for a thousand years, and that's the great secret, and the Keepers are simply too embarrassed to say.
+- They've got a record of every person who ever lived in the Concord. Every one. If you want to know whether your sister got off Aurelis, it'll cost you the truth about something, and you might not like the exchange rate.
+- Old Sefu's been down there so long he's started answering the records. What frightens me is that I was down there for a day, and I heard one of them correct him.
+- A Thessan will tell you to be patient. That's a person who'll still be being patient when your grandchildren are dead.
+- Don't bring a naked flame past the Warm Stair. Nobody will fine you. They'll just write it down, and it'll still be written down in a thousand years.
+- If they strike your name, you're gone: every record, every mention, and nobody will admit to having known you. I saw it happen once to someone, I think. I can't for the life of me remember who.
+- The Hegemony's offered to build the Keepers a whole new wing, in return for a little light reading. I've heard they've been sending very polite letters, for about a hundred and fifty years.
+- The Keepers know what the Beacon is. They've had it on file for longer than there's been a Concord. Go and ask them, and see how long it takes them to find the form.
+- They read my grandfather's love letters, you know, when he deposited them. They corrected the spelling, and then they sent a note to say that she'd have been better off with someone else.
+- Every so often, a person comes in here looking for a record of themselves, and finds out they're not who they thought. That's why the Keepers leave a chair by the door.
+- My friend's a pilot, and she saw the old maps here. The whole Concord is on them, every world. Only there's more on those maps than there ever was in the Concord, and the old part's not in any language.
+- They say that the moon's getting warmer, a bit more every year. The Keepers say it's the refugees. It's been happening for a good deal longer than there have been refugees.

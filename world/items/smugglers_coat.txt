@@ -1,0 +1,8 @@
+# Smuggler's Coat
+order: 8
+type: armor
+price: 140
+defense: 1
+
+In a line:
+Armored lining and many hidden pockets.

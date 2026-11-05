@@ -1,0 +1,11 @@
+# Refugee Coat
+order: 31
+type: armor
+price: 30
+defense: 0
+
+In a line:
+Warm and patched from three other coats, it stops nothing, but nobody in a crowd looks at it twice: +1 on checks in crowds while carried.
+
+Effects:
+in a setting: crowd 1

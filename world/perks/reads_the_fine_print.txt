@@ -1,0 +1,9 @@
+# Reads the Fine Print
+order: 50
+needs skill: persuasion 4
+
+In a line:
+You've read enough Hegemony contracts to fear the kindest clause most. +2 on checks and attack rolls against the Hegemony, and +1 when facing authority.
+
+Effects:
+in a setting: hegemony 2, authority 1

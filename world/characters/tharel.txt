@@ -1,0 +1,49 @@
+# Oss Tharel
+title: Archivist
+also called: Archivist Oss Tharel, Archivist Tharel, Oss Tharel, Tharel
+pronouns: he/him
+species: thessan
+age: 310
+faction: none
+role: A Thessan archivist at Haven Station
+place: haven
+color: #a6d4c0
+
+In a line:
+An ancient Thessan scholar at Haven Station, and possibly the only person left who could decode the Beacon.
+
+Appearance:
+A very old Thessan in a heated coat, with scales gone pale and eyes that blink slowly and separately.
+
+Personality:
+Courteous, pedantic and much more frightened than he shows. To him, the Concord was a brief and promising experiment.
+
+Voice:
+Slow and formal, full of long digressions. Calls everyone "young one", including people older than the Concord's oldest ship.
+
+Goals:
+Preserve what's left of Concord knowledge, and get a look at the Ilun Codex before he dies.
+
+Secrets:
+He recognized the Beacon's lattice the moment he saw it, and he believes that it's a warning, not an invitation. He won't say so until he trusts someone, because the last person he told disappeared.
+
+Beliefs:
+violence -4, belief -5, flesh 1
+
+Attributes:
+might 1, endurance 2, agility 1, perception 7, intellect 10, willpower 7, presence 4, resonance 3
+
+Skills:
+lore 10, science 8, navigation 4, composure 5
+
+In a fight:
+threat: 1
+hp: 12
+attack: 0
+defense: 9
+damage: 1 to 2
+weapon: Walking Cane
+xp: 10
+credits: 0 to 20
+art: civilian
+tags: 

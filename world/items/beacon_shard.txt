@@ -1,0 +1,7 @@
+# Beacon Shard
+order: 19
+type: story
+price: 0
+
+In a line:
+A warm fragment of alien crystal. It points somewhere.

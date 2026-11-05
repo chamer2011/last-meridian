@@ -195,7 +195,7 @@ The vote's a show of hands, and Halm counts them twice, slowly, which is theatre
 * xp 25: Where we're going
 * faction fleet 4: The council voted to follow the captain toward the Beacon
 * journal: The council voted to follow the Beacon, by a show of hands that wasn't close. Halm says the chair's mine and that I should remember who gave it to me.
-* quest main_the_council done: The council voted to follow the Beacon.
+* ending fleet_fuel_council_votes_to_follow: The council voted to follow the Beacon.
 
 > Go on -> after
 
@@ -210,7 +210,7 @@ The vote's a show of hands, and Halm counts them three times, because it's close
 * flag halm_abstained
 * xp 15: Where we're going, narrowly
 * journal: The council voted to follow the Beacon by four ships. Halm abstained, and he'll remind me.
-* quest main_the_council done: The council voted to follow the Beacon, narrowly, and Halm abstained.
+* ending fleet_fuel_council_votes_to_follow: The council voted to follow the Beacon, narrowly, and Halm abstained.
 
 > Go on -> after
 
@@ -224,7 +224,7 @@ The vote's a show of hands, and it isn't about the Beacon at all, because Chief 
 * flag council_waits_for_fuel
 * xp 10: Fuel first
 * journal: The council voted to find fuel before it follows anything. When the tanks are full, it'll ask again.
-* quest main_the_council done: The council voted fuel first. It follows the Beacon when the tanks are full.
+* ending fleet_no_fuel_yet: The council voted fuel first. It follows the Beacon when the tanks are full.
 
 END
 

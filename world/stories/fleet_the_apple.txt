@@ -1,0 +1,54 @@
+# The Apple
+kind: job
+places: sundial, fleet
+people: grann, garrick, halm, quill
+factions: fleet, drift
+
+The lead:
+The only fruit tree on the Sundial ripened its only apple last week, and Steward Tull posted a guard on it. Someone stole it anyway, and the fleet is closer to a riot than it has been over anything you've ever done.
+
+For anyone who isn't the captain:
+The only fruit tree on the Sundial ripened its only apple last week, and Steward Tull posted a guard on it. Someone stole it anyway, and the fleet is closer to a riot than it has been over anything.
+
+What's really going on:
+Old Contrary is a spindly tree that has been dying for years, and this spring it set one apple. For three weeks Garrick Fenn has reported on it nightly as the only good news in the fleet. Ships drew lots for who'd get a slice, and a lot of people with nothing have bet heavily on it. Now it's gone, and six ships are accusing each other. A kid is selling "genuine peel", Mother Quill's agent has offered three fuel cells, and a wax apple is in circulation. The thief is Grann Tull. She picked it herself at night, because it had a worm: rotten right through at the core. One look, and the fleet's one piece of good news would be a joke. So she stole her own apple and has been letting them riot. But the seeds were sound. There are five, sprouted in a tray under her bed. She'd rather be thought a fool with a bad guard than let anyone see what she's really doing: growing something for a place nobody's sure exists.
+
+How it might go:
+- The empty branch, the embarrassed guard, the crowd. Everyone has a suspect. Speaker Halm makes a speech about unity, which doesn't help.
+- Suspects: a Veshti skipper who offered to buy it, a Korrun dock hand who says he has never seen fruit and would like to know what the fuss is about, the child with the peel, a Syndicate bookmaker who stands to lose a fortune. Each has something else to hide.
+- The wax apple. Someone has paid a fortune for it and doesn't know yet. Someone else steals that too. A chase through the bean rows follows.
+- The guard recalls that Steward Tull brought him tea that night, and she has never brought anyone tea. A small mud stain, a worm-eaten core in the compost, a tray under a bed.
+- What does the fleet need to hear? And now there are five seedlings and forty-one ships.
+
+Ways through:
+- Play detective: streetwise and awareness among the suspects, with athletics in the bean rows when someone makes a run for it. Survival or science can tell a great deal from a worm-eaten core.
+- Calm it down: leadership or persuasion with the six ships, and commerce to settle the betting before someone gets hurt.
+- Invent a better story: deception. A ceremony, a new apple, a convenient culprit. A wax apple can work at a distance.
+- Have it out with Grann: composure and persuasion. She'll confess only to someone who has already worked it out, hand them a turnip, and leave it to them to decide what to tell people.
+
+Checks that fit:
+- streetwise:easy to find out who's been selling genuine peel
+- awareness:moderate to notice that the guard's story has tea in it
+- athletics:moderate to catch a wax apple thief in the bean rows
+- survival:moderate to read a worm-eaten core in the compost
+- commerce:moderate to settle the bets before the bookmaker runs
+- deception:hard to pass off a wax apple to a crowd
+
+If it comes to a fight:
+- dock_thug pair collecting for the bookmaker, if the betting isn't settled
+- syndicate_collector who wants the wax apple and won't believe it's wax
+
+Where it can end up:
+truth_told: Truth told: the fleet laughs, then a lot of them cry, and then someone asks about the seeds. "A worm in the only apple" becomes a saying, and people find it oddly comforting.
+culprit_found: A culprit is found: somebody who didn't do it gets blamed, and the riot stops. Grann never says a word. That somebody will remember.
+seedlings: The seedlings: whichever way it comes out, there are five. The Syndicate offers a thousand credits for one, and every ship claims a share. One might go to Tessen, and one might wait for the safe harbor the Beacon promises. It's a small decision that everyone will care about more than any council vote.
+left_unsolved: Left unsolved: Fenn keeps the story going for a month as a fleet-wide guessing game, and it's the best thing on the channel. Betting on the next apple starts at once.
+
+If nobody steps in:
+after 9 days: The apple on the Sundial is still missing, and there's been a fight at the Water Table over it.
+  lead: The only apple on the Sundial is still missing, and there's been a fight at the Water Table over who took it. Garrick Fenn's reporting it nightly, and Steward Tull has doubled the guard on an empty tree.
+after 27 days: Someone's been arrested for the apple on the Sundial who almost certainly didn't do it, and the fleet's stopped arguing.
+  lead: Someone's been arrested for the apple who almost certainly didn't do it, and the fleet's calmed down. Steward Tull hasn't asked for anyone to be let go, and she's taken the guard off the tree, which is odd for someone who's just been robbed.
+
+Rewards:
+A seedling on the captain's desk, a rare favor from Grann Tull, and a crate of ration_pack from the bookmaker's settlement.

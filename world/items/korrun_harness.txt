@@ -1,0 +1,11 @@
+# Korrun Harness
+order: 32
+type: armor
+price: 700
+defense: 3
+
+In a line:
+Load-bearing plate from the Korrath forges, built to hold a body up under crushing weight: +3 defense, and +2 on checks in heavy gravity while carried.
+
+Effects:
+in a setting: heavy_gravity 2

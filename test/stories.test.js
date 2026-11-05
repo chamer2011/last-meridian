@@ -93,7 +93,7 @@ test("every stage is well formed, and only touches things that exist", () => {
     let last = 0;
     for (const stage of entry.stages) {
       check(id, stage);
-      assert.ok(stage.after > last, `${id}: its stages have to come in order`);
+      assert.ok(stage.after > last || (stage.after === last && stage.if), `${id}: its stages have to come in order, unless two on the same day are a fork`);
       last = stage.after;
       assert.ok(typeof stage.lead === "string" && stage.lead.length > 40, `${id}: every stage changes the lead`);
       assert.notEqual(stage.lead, WORLD_THREADS[id].lead);

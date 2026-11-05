@@ -1,0 +1,10 @@
+# Sealant and Prayer
+order: 33
+needs skill: engineering 5
+
+In a line:
+You've kept reactors running on less than anyone thought possible. +1 Engineering, and better tools in Engineering check windows, as if you were one tier better.
+
+Effects:
+skills: engineering 1
+better tools in: engineering 1

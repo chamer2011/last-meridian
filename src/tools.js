@@ -11,13 +11,14 @@ import { changeCommand, changeFleet, changeFleetShip, fleetRoster, markFleetHear
 import { whereNow } from "./life.js";
 import { LORE_KINDS, hasStaticLore } from "./lore.js";
 import { MYSTERY_TOPICS, beginThread, mysteryNotes, noteThreadEnded, noteThreadStarted, placeFileIfNew, updateStory } from "./story-library.js";
+import { FACTS_PER_TURN, endStory, endingOf, recordEnding, recordFact } from "./record.js";
 import { NPC_ARCHETYPES, THREAT_LABELS } from "./npc.js";
 import {
   DIFFICULTY, TURN_LIMITS, addCondition, addItem, clamp, clockLabel, changeStress, grantXp, maxHp, passTime, practice,
   removeCondition, removeItem, shiftIdeology, startCombat, travel,
 } from "./rules.js";
 import { setScene } from "./walk.js";
-import { PARLEY, ROOM_KINDS } from "./world.js";
+import { PARLEY, ROOM_KINDS, WORLD_THREADS, endingsOf } from "./world.js";
 
 const obj = (properties, required = Object.keys(properties)) => ({
   type: "object", properties, required, additionalProperties: false,
@@ -315,6 +316,16 @@ export const TOOL_DEFS = [
     description: "Only when the message has a <written_scene> block: the number of the written choice the player's words come to, or 0 when they fit none of them and your short reply answers them instead. The written story plays on from the choice by itself.",
     input_schema: obj({ choice: num("The number of the written choice the player's words mean, or 0 for none of them.") }),
   },
+  {
+    name: "note_fact",
+    description: "Put a lasting fact on the record, for the stories that come later: something the player did or learned that another story should know, such as a door closed to the fleet, a debt owed, or a person who now trusts or hates them. Give it a short name and one line of plain words, and when the story's notes name the facts it can leave, use those names. The record is in your state as Fact lines, so don't note what's already there, and don't note passing things.",
+    input_schema: obj({ id: str("A short name in lowercase letters, digits and underscores, like signed_with_quill."), text: str("One line, written for the player, saying what's true now.") }),
+  },
+  {
+    name: "end_story",
+    description: "A story from the Leads menu has ended. Say which of the endings in its notes it came to, by name, or other if it ended another way, with one line for the player on how. The game marks its quest done and keeps the ending on the record for the stories that come later.",
+    input_schema: obj({ id: str("The story's id, from its notes."), ending: str("The name of the ending in the story's notes that fits best, or other for another way."), summary: str("One line, written for the player, on how it ended.") }),
+  },
 ];
 
 const withNotes = (first, notes = []) => [first, ...notes].filter(Boolean).join("\n");
@@ -578,6 +589,8 @@ const handlers = {
     quest.status = input.status;
     quest.objective = input.objective;
     if (input.status !== "active") noteThreadEnded(game, input.id);
+    // A story's quest settled the old way still leaves its ending on the record, with its last line.
+    if (input.status !== "active" && WORLD_THREADS[input.id] && !endingOf(game, input.id)) recordEnding(game, { id: input.id, ending: null, summary: input.objective, failed: input.status === "failed" });
     const label = input.status === "active" ? "updated" : input.status;
     return { result: `Quest ${input.id} ${label}.`, notice: `[QUEST] ${label}: ${quest.title}` };
   },
@@ -631,6 +644,31 @@ const handlers = {
     if (input.choice === 0) return { result: "Noted: nothing moves on. Now answer the player in one to three sentences, in the voices of the people there, with no > choices of your own. The written choices are offered again after your words." };
     return { result: `The written story takes choice ${input.choice}, ${scene.choices[input.choice - 1].say}, and plays on from here by itself. Write nothing more.` };
   },
+  // The record: a fact for later stories, and how a story ended.
+  note_fact(game, input, turn) {
+    if (turn && turn.facts >= FACTS_PER_TURN) throw new Error("That's enough facts for one turn. Keep the record to what another story will need.");
+    const id = input.id.trim().toLowerCase();
+    const text = input.text.trim();
+    if (text.length < 3 || text.length > 200) throw new Error("A fact is one line, from 3 to 200 characters.");
+    const { known } = recordFact(game, { id, text, from: null });
+    if (turn) turn.facts += 1;
+    return known
+      ? { result: `${id} was already on the record, and its words are kept.` }
+      : { result: `On the record: ${id}.`, notice: `[RECORD] ${text}` };
+  },
+  end_story(game, input) {
+    const id = input.id.trim();
+    const thread = WORLD_THREADS[id];
+    if (!thread) throw new Error(`There's no story called ${id}. The id is in the story's notes.`);
+    const names = endingsOf(thread).map((one) => one.id);
+    const ending = String(input.ending ?? "").trim().toLowerCase().replace(/\s+/g, "_");
+    if (ending !== "other" && !names.includes(ending)) throw new Error(`This story's endings are ${names.join(", ")}, or other for another way.`);
+    const summary = input.summary.trim();
+    if (summary.length < 3 || summary.length > 200) throw new Error("The summary is one line, from 3 to 200 characters.");
+    if (endingOf(game, id)) throw new Error("That story has already ended, and the record keeps its first ending.");
+    endStory(game, { id, ending: ending === "other" ? null : ending, summary });
+    return { result: `${thread.title} is over, ${ending === "other" ? "another way" : ending}, and it's on the record.`, notice: `[STORY] ${thread.title} has ended: ${summary}` };
+  },
 };
 
 function checkValue(key, spec, value) {
@@ -677,7 +715,7 @@ function validate(def, input) {
 }
 
 export function newTurnLimits() {
-  return { xp: 0, creditsGained: 0, itemsGiven: 0, damage: 0, stress: 0, ideologyShifts: 0, traitChanges: 0, hours: 0, training: 0, loreEntries: 0, newCharacters: 0, newEnemies: 0 };
+  return { xp: 0, creditsGained: 0, itemsGiven: 0, damage: 0, stress: 0, ideologyShifts: 0, traitChanges: 0, hours: 0, training: 0, loreEntries: 0, newCharacters: 0, newEnemies: 0, facts: 0 };
 }
 
 // The clock stands still in a talk window, and the captain stays where they are, so these can't happen there.

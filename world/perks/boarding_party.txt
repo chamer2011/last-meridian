@@ -1,0 +1,9 @@
+# Boarding Party
+order: 11
+starting: yes
+
+In a line:
+Raider career: +2 Intimidation, +1 Melee.
+
+Effects:
+skills: intimidation 2, melee 1

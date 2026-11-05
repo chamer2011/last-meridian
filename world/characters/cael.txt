@@ -1,0 +1,49 @@
+# Cael
+title: Brother
+also called: Brother Cael
+pronouns: he/him
+species: ilari
+age: 24
+faction: ilun
+role: A young adept of the Order of Ilun
+place: ilun
+color: #9fe8ff
+
+In a line:
+A young Ilari adept sent out to find survivors of the Order, and much too honest for the job.
+
+Appearance:
+Thin and quick-moving, with skin patterns that flicker constantly and give away everything he feels.
+
+Personality:
+Earnest, funny and hopeful, which is rare these days. He's a very bad liar, and he knows it.
+
+Voice:
+Warm and tumbling, with a lot of half-finished sentences. Laughs at the wrong moments.
+
+Goals:
+Find the rest of the Order's lost novices, and work out what the song means.
+
+Secrets:
+He can hear the Choir's song too, and sometimes, when he's alone, he answers it. He hasn't told the Abbess.
+
+Beliefs:
+belief 6, violence -5, loyalty -3, flesh 2
+
+Attributes:
+might 2, endurance 3, agility 6, perception 6, intellect 4, willpower 5, presence 5, resonance 7
+
+Skills:
+attunement 5, manifestation 3, melee 3, composure 2, lore 3
+
+In a fight:
+threat: 2
+hp: 22
+attack: 4
+defense: 13
+damage: 4 to 7
+weapon: Focus Blade
+xp: 50
+credits: 0 to 10
+art: adept
+tags: resonance

@@ -1,0 +1,68 @@
+# The Graveyard
+also called: the Graveyard, Graveyard
+faction: guild
+market: emergency_patch, repair_kit, work_suit, tool_roll, boarding_axe, fuel_cell, slug_thrower
+the fleet is here: no
+a place to rest: no
+dangerous: no
+hidden: no
+people: elsbeth, rusk
+enemies: scrap_rat, wreck_diver, salvage_mech, void_stalker, choir_drone, drift_raider
+items: emergency_patch, data_chip, choir_core, old_concord_medal, remnant_codes, beacon_shard, service_rifle, marine_plate
+
+In a line:
+The wreckage of the Concord's last battle, drifting in silence. Full of salvage and ghosts.
+
+The feel of it:
+Outside you smell only your own breath, and hear your own pulse and the tick of cooling hull. Inside the Guild barges it's scorched insulation, stale coffee and the sweet chemical reek of suit liners that have been worn too long. Thousands of dead ships hang in the dark with orange claim buoys blinking on them like a harbor at night, and everything out here, including every body, belongs to someone under contract.
+
+Districts:
+The Factor's Barge: A converted ore barge that serves as the Guild's office, bank and only bar. Elsbeth Crane keeps the claims register there, written by hand in ink, because ink can't be hacked.
+Claim Row: A long curving lane of big wrecks tagged with orange buoys, each one with a named owner and a dive schedule. Touching another diver's claim is theft, and the Guild will take you to court.
+The Court of Hulls: The Guild's tribunal meets on the gutted bridge of a dead dreadnought, under a hole you can see stars through. Arbiters wear full suits, and verdicts are final.
+The Long Silence: The heart of the field, where the fighting was worst and the wrecks are too tangled to tag. Nobody's claim is any good here, and nobody's transponder works properly.
+
+Complications:
+- A claim buoy you've brushed against has registered your ship's touch, and you've just been sued.
+- A hull section you're standing on starts to turn, slowly, and your line snags on a dead ship's antenna.
+- A ghost transponder lights up on your own fleet's channel, asking for help in the voice of someone you know.
+- A Choir drone drifts through the wreck you're working in. It ignores you, for now, and the Guild's rule is not to shoot.
+- Your suit's air recycler has a Guild-certified fault, which means the repair has a fee and a waiver.
+- Refugee families arrive unannounced, wanting their dead back, and they've started a very quiet blockade around the Factor's Barge.
+
+Secrets:
+- Picket ship CFS Tarn is out here in the Long Silence, with her lights on and no marks on her, logged under a dummy claim that Elsbeth Crane bought through a third party. Rusk won't go near her. Nobody who knows what she is has been aboard.
+- Choir drones visit the Long Silence in slow rotation and touch the dead one at a time, taking nothing. The Guild's senior divers know, and they've written it into the contracts as an act of nature so that nobody has to talk about it.
+- Rusk's map isn't a map of wrecks. It's a chart of the battle's last hour, taken down from a dead partner's voice on the suit radio. It shows the Concord squadron that broke off and ran before the line collapsed, and it ends at a spot with no wreck on it.
+
+Encounters:
+- Factor Elsbeth Crane offers you a salvage license and reads every clause aloud in a clear, pleasant voice, while you initial each one. She pauses to sip her tea right before clause fourteen, and she reads that one somewhat faster.
+- Rusk is sitting on an airlock sill with two empty helmets clipped to his harness. He wants a partner for one more dive, and he tells you honestly how the last two went. He says the map isn't worth anything without a third person holding the line.
+- A widow from your fleet has spent everything she owns to hire a diver to find her husband. He's been found. Under Guild law, the body belongs to the claim holder, who'd be happy to discuss a release fee with her, and she has nothing left.
+- You're called as a witness at the Court of Hulls. A diver found a sealed lifepod with three people in cold sleep, and two claimants say that under contract those three are salvage. The arbiter asks for your view, as a representative of the Concord's former government.
+- A distress beacon on Claim Row is broadcasting the crew manifest of your own old ship over and over. The wreck is someone else's claim. The owner will let you board it, for a third of whatever you take out.
+- An apprentice diver of about sixteen, on a nine-year Guild indenture, asks you to read her contract. Crane's contracts have never been broken, only outlived, and the girl has worked out that she won't. She wants to know if a captain's commission counts as a higher law.
+- A Choir drone hangs motionless over a dead marine, one silver hand resting lightly on the helmet. A Guild crew is working twenty meters away and pretending not to see. The young diver beside you has her cutter up, and her hands are shaking.
+- Two veteran divers have been secretly writing down the name of every body they find, in a notebook, against their contract's terms. They want to give it to the fleet. It's legally Guild property, and the Guild has noticed that a pen's gone missing.
+- A claim-jumper hails you on a private channel and offers you a nearly intact reactor core at a tenth of its value. It's exactly what your fleet needs. The orange buoy still attached to it has a name on it, and you met her this morning.
+- A pack of scrap rats has nested in the Barge's food store, and the Guild's exterminator is a very small, very cheerful old woman with a flamer and a low opinion of pressure seals. She'd like someone to hold the door shut behind her.
+- An auction on the Factor's Barge is selling the personal effects of a dead Concord admiral: his medals, his letters, a locked case. The auctioneer doesn't know what's in the case, and someone at the back is bidding as if they do.
+- A diver at the bar won't go back out. He says a ship he was cutting into turned its lights on for him, deck by deck, the way you'd show a guest to his room. He's offering his dive slot, cheaply, on the understanding that you're an idiot.
+- Someone on an open channel is calling for help, a suit breach and six minutes of air, from inside a wreck in the Long Silence. It's a favorite trick of claim-jumpers. It also sounds very much like a real child.
+- A crewman from your own fleet is moonlighting out here with stolen fleet cutting gear, sending his earnings home to a sister on Anselm's Mercy. A Guild arbiter wants to know whether you'll claim him, because if you don't, the penalty's seven years.
+
+Rumors:
+- Never sign anything Crane reads to you. Read it yourself, twice, and then have your lawyer die first, like everyone else.
+- The Factor's filed a Guild claim on the Beacon. I'm not joking. She says a distress call with no crew answering is an abandoned vessel, and the first to reach it owns it. You've got to admire the woman, and then you've got to check your pockets.
+- Rusk went down with two partners and came back alone, both times. He says he doesn't know how. I've seen his air logs, and he had enough for three.
+- The Tarn's out there somewhere. Records have her gone in the first hour. I've got a friend who says she went past him at dawn in the Silence, with no marks on her at all.
+- If you find a Concord officer with his sidearm still holstered, don't touch him. I don't know why it's bad luck, but every diver I've known who did it has stopped telling that story.
+- Those silver things don't take bodies out here. They only touch them, and move on. Guild says don't shoot. Guild says it's in the contract. Whose contract, is what I'd like to know.
+- There's a whole squadron that ran. Everyone at that battle knows it. You can look for those ships in the wreckage for as long as you like, you won't find them.
+- Good pay out here, I'll say that. Your share's yours, and the court's fair. The court is the only thing in the whole galaxy that's still fair, and it'll fine you for saying so.
+- A dead ship will turn toward you if you stay on her long enough. I don't mean it's a ghost. Physics, that is, your suit jets or some such. I've just stopped staying long.
+- They say a diver found a working Concord fuel tanker in the Silence, with a full load, and marked it, and hid the buoy. He died before he could file. Somebody's going to get very rich, or very dead.
+- Rats out here get as big as a dog. It's the coolant they're eating, makes them mean. If one comes at you, don't aim for the head, it's got nothing much in it.
+- My old man's still out there on the Harrowgate. I paid to have someone look. It came back: not found, nine hundred credits, thank you for your custom. That's the best letter I've had all year.
+- Some of the people in the fleet think that their folk might still be alive out there in the air pockets. It's been six months. I don't tell them. You tell them.
+- Word is the Guild's got a sealed court record from before the battle, with a Concord seal on it. It's a contract, for salvage rights to the battlefield, and it was signed the week before the fighting started.

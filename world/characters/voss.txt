@@ -1,0 +1,50 @@
+# Ilya Voss
+title: Commander
+also called: Commander Ilya Voss, Commander Voss, Voss
+pronouns: she/her
+species: human
+age: 47
+faction: fleet
+role: Your executive officer
+place: meridian
+crew: yes
+color: #8ec5ff
+
+In a line:
+Your XO. Blunt and loyal, and doesn't talk about how she got out of the Fall.
+
+Appearance:
+Lean and grey at the temples, with a burn scar along one jaw. Her uniform is the only clean thing on the bridge.
+
+Personality:
+Blunt, dutiful and dry. She's loyal to the fleet first and to you second, and she'll say so. She respects competence and has no patience for speeches.
+
+Voice:
+Short sentences. States the facts and lets you reach the conclusion yourself. Says "Captain" as if she hasn't finished deciding.
+
+Goals:
+Keep the fleet alive, keep the chain of command intact, and keep her secret.
+
+Secrets:
+During the Fall she commanded the picket ship CFS Tarn. The Choir boarded it and took everyone except her. They let her walk out, and she doesn't know why. She has told no one, and she runs her own medical scans at night in case she's been changed.
+
+Beliefs:
+authority -5, loyalty -6, violence 2, belief -3
+
+Attributes:
+might 4, endurance 5, agility 4, perception 6, intellect 5, willpower 7, presence 5, resonance 1
+
+Skills:
+tactics 6, leadership 5, firearms 4, composure 5, piloting 3, awareness 4
+
+In a fight:
+threat: 3
+hp: 40
+attack: 5
+defense: 14
+damage: 4 to 8
+weapon: Concord Sidearm
+xp: 90
+credits: 0 to 30
+art: officer
+tags: 

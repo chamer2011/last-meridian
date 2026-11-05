@@ -1,0 +1,10 @@
+# Two Sets of Books
+order: 42
+needs skill: deception 5
+
+In a line:
+You keep one story for the council, and another for what really happened. +1 Deception, and better tools in Deception check windows, as if you were one tier better.
+
+Effects:
+skills: deception 1
+better tools in: deception 1

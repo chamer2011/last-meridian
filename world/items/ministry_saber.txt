@@ -1,0 +1,11 @@
+# Ministry Saber
+order: 29
+type: weapon
+price: 1100
+damage: 7 to 13
+stat: agility
+skill: melee
+restricted: yes
+
+In a line:
+The thin dueling blade of Vantor's secret police, and people will ask how you got it: 7 to 13 damage, using Agility and Melee.

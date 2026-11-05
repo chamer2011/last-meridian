@@ -1,0 +1,10 @@
+# Field Scanner
+order: 44
+type: gadget
+price: 350
+
+In a line:
+A battered handheld scanner, still in calibration: +2 on Awareness checks and +1 on Science checks while carried.
+
+Effects:
+skills: awareness 2, science 1

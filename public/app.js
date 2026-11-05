@@ -5,6 +5,7 @@ import { checkNode, checkOpen, focusCheck, initCheck, resetCheck, startChoiceChe
 import { api, el, meter, money, readLines } from "./dom.js";
 import { fightNode, fightOpen, focusFight, initFight, resetFight, startSim } from "./fight.js";
 import { focusRaid, initFleet, raidNode, raidOpen, resetRaid } from "./fleet.js";
+import { openBoard } from "./board.js";
 import { MENUS, MENU_GROUPS, initMenus } from "./menus.js";
 import { choicesFor, dropStaleTooltip, initStory, loreCatalog, optionContent, setStoryContext, storyEntryNode, thinkingNode } from "./story-view.js";
 import { focusTalk, initTalk, resetTalk, startTalk, talkNode, talkOpen } from "./talk.js";
@@ -527,6 +528,12 @@ function showFocusedCard() {
 }
 
 function openMenu(id, focus = null) {
+  // The story board is a whole screen of its own, not a drawer.
+  if (MENUS[id]?.board) {
+    closeMenu();
+    openBoard();
+    return;
+  }
   const wasOpen = ui.sideOpen;
   ui.tab = id;
   ui.menuFocus = focus;
@@ -686,7 +693,7 @@ initPopups({
     openMenu("settings");
   },
 });
-initTalk({ ui, reading, render, openMenu });
+initTalk({ ui, reading, render, openMenu, popupsShown });
 
 initCreator({
   render,

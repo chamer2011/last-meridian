@@ -1,0 +1,7 @@
+# Encrypted Data Chip
+order: 22
+type: story
+price: 40
+
+In a line:
+Someone would pay to read this, or pay more to destroy it.

@@ -3,13 +3,17 @@
 // Nothing's ever lost. A story that's moved on can still be taken up, from wherever it's got to. Once
 // someone has taken it up, it's in their hands and its clock stops. All of this runs on this
 // computer at each midnight, with no AI. world/story-clock.json has the stages and the words.
+// The clock reads the record too: a stage can wait on a condition, two stages on the same day can be a fork,
+// a consequence follows from how a story ended or from a fact, days later, and any of them can leave facts.
 
 import { knownPlace, pushPlace, tellNews } from "./daily.js";
 import { LOCATIONS } from "./data.js";
 import { lostShipNames, storyHitsFleet } from "./fleet.js";
+import { FACT_ID, endStory, recordFact } from "./record.js";
 import { isCaptain } from "./role.js";
+import { conditionHolds, parseCondition } from "./scene-text.js";
 import { storyOf } from "./story-library.js";
-import { STORY_CLOCK, WORLD_ARC, WORLD_THREADS } from "./world.js";
+import { STORY_CLOCK, WORLD_ARC, WORLD_THREADS, endingsOf } from "./world.js";
 
 const THREADS = STORY_CLOCK.threads ?? {};
 const ACTS = STORY_CLOCK.acts ?? [];
@@ -74,6 +78,17 @@ function logMoved(clock, entry) {
   if (clock.moved.length > MAX_MOVED) clock.moved.splice(0, clock.moved.length - MAX_MOVED);
 }
 
+// What a stage or a consequence leaves on the record, for the stories after it: facts with their lines, and
+// the story's own ending, by name, when the world settled it. A name the checker would refuse is left out.
+function leave(game, id, stage, summary) {
+  for (const [name, text] of Object.entries(stage.facts ?? {})) {
+    if (FACT_ID.test(name) && typeof text === "string") recordFact(game, { id: name, text, from: `thread_${id}` });
+  }
+  if (stage.ending && !storyOf(game).threads[id] && endingsOf(WORLD_THREADS[id]).some((one) => one.id === stage.ending)) {
+    endStory(game, { id, ending: stage.ending, summary });
+  }
+}
+
 function threadDay(game, clock, id, day, notes, told) {
   const file = THREADS[id];
   const thread = WORLD_THREADS[id];
@@ -85,12 +100,48 @@ function threadDay(game, clock, id, day, notes, told) {
     state = { from: day, stage: 0 };
     clock.threads[id] = state;
   }
-  const stage = file.stages?.[state.stage];
-  if (!stage || day - state.from < Math.round(stage.after * stretch(game, id))) return;
-  state.stage += 1;
-  if (shipIsGone(game, stage.news)) return;
-  happen(game, stage, newsPlace(thread), notes, told);
-  logMoved(clock, { day, id, title: thread.title, text: stage.news, place: stage.place ?? newsPlace(thread) });
+  // One stage a day. A stage whose day has come but whose condition doesn't hold is skipped, and the next one
+  // gets its turn at once, so two stages on the same day with opposite conditions are a fork.
+  for (;;) {
+    const stage = file.stages?.[state.stage];
+    if (!stage || day - state.from < Math.round(stage.after * stretch(game, id))) return;
+    const index = state.stage;
+    state.stage += 1;
+    if (stage.if && !conditionHolds(game, stage.if)) {
+      (state.skipped ??= []).push(index);
+      continue;
+    }
+    if (shipIsGone(game, stage.news)) return;
+    happen(game, stage, newsPlace(thread), notes, told);
+    leave(game, id, stage, stage.news);
+    logMoved(clock, { day, id, title: thread.title, text: stage.news, place: stage.place ?? newsPlace(thread) });
+    return;
+  }
+}
+
+// What the record sets in motion. A consequence waits for its condition to hold, then its days, as long as the
+// condition still holds, and happens once, whatever state its story is in: most follow from how it ended.
+function consequenceDay(game, clock, id, day, notes, told) {
+  const thread = WORLD_THREADS[id];
+  const list = THREADS[id]?.consequences ?? [];
+  if (!thread || !list.length) return;
+  clock.consequences ??= {};
+  for (const [i, one] of list.entries()) {
+    const key = `${id}:${i}`;
+    if (clock.consequences[key]?.done !== undefined) continue;
+    if (typeof one.of !== "string") continue;
+    if (!conditionHolds(game, one.of)) {
+      delete clock.consequences[key];
+      continue;
+    }
+    clock.consequences[key] ??= { since: day };
+    if (day - clock.consequences[key].since < Math.round((one.after ?? 0) * stretch(game, key))) continue;
+    clock.consequences[key].done = day;
+    if (typeof one.news !== "string" || shipIsGone(game, one.news)) continue;
+    happen(game, one, newsPlace(thread), notes, told);
+    leave(game, id, one, one.news);
+    logMoved(clock, { day, id, title: thread.title, text: one.news, place: one.place ?? newsPlace(thread) });
+  }
 }
 
 // The main story's pressure builds whether anyone's looking or not, and in the end it moves on too.
@@ -124,13 +175,71 @@ export function advanceStories(game, today = dayNow(game), told = { today: 0, al
     told.today = 0;
     actDay(game, clock, clock.day, notes, told);
     for (const id of Object.keys(THREADS)) threadDay(game, clock, id, clock.day, notes, told);
+    for (const id of Object.keys(THREADS)) consequenceDay(game, clock, id, clock.day, notes, told);
   }
   return notes;
 }
 
+// ---- What the clock says about the record, for the checker --------------------------
+
+// The names of the facts the clock can leave, so the checker knows something leaves them.
+export const clockFacts = () => Object.values(THREADS).flatMap((entry) => [...(entry.stages ?? []), ...(entry.consequences ?? [])].flatMap((one) => Object.keys(one?.facts ?? {})));
+
+// What's wrong in world/story-clock.json where it reads or writes the record, in plain words. With the set of
+// facts something leaves, a condition on a fact nothing leaves is reported too.
+export function clockProblems(known = null) {
+  const problems = [];
+  const condition = (where, text) => {
+    const { terms, problems: wrong } = parseCondition(text);
+    for (const problem of wrong) problems.push(`${where}: ${problem}`);
+    for (const term of terms) {
+      if (term.kind === "seen") problems.push(`${where}: the clock can't look at "seen", only at the record and the game`);
+      if (term.kind === "flag" && known && !known.has(term.id)) problems.push(`${where}: nothing leaves the fact ${term.id}. Set it with * flag in a scene, or name it in a story's facts`);
+    }
+  };
+  const leaves = (where, id, one) => {
+    for (const [name, text] of Object.entries(one.facts ?? {})) {
+      if (!FACT_ID.test(name)) problems.push(`${where}: a fact's name is lowercase letters, digits and underscores, not ${name}`);
+      if (typeof text !== "string" || !text.trim()) problems.push(`${where}: the fact ${name} needs a line of plain words`);
+    }
+    if (one.ending !== undefined) {
+      const names = endingsOf(WORLD_THREADS[id]).map((ending) => ending.id);
+      if (!names.includes(one.ending)) problems.push(`${where}: ${id} has no ending called ${one.ending}. Its endings are ${names.join(", ")}`);
+    }
+  };
+  for (const [id, entry] of Object.entries(THREADS)) {
+    if (!WORLD_THREADS[id]) {
+      problems.push(`${id} is on a clock but isn't a story`);
+      continue;
+    }
+    (entry.stages ?? []).forEach((stage, i) => {
+      const where = `${id}, stage ${i + 1}`;
+      if (stage.if !== undefined) {
+        if (typeof stage.if !== "string") problems.push(`${where}: "if" is a condition, written as in a scene`);
+        else condition(where, stage.if);
+      }
+      leaves(where, id, stage);
+    });
+    (entry.consequences ?? []).forEach((one, i) => {
+      const where = `${id}, consequence ${i + 1}`;
+      if (typeof one?.of !== "string") problems.push(`${where} needs "of": a condition, written as in a scene, such as ended ${id} ${endingsOf(WORLD_THREADS[id])[0]?.id ?? "its_ending"}`);
+      else condition(where, one.of);
+      if (!Number.isFinite(one?.after) || one.after < 0) problems.push(`${where} needs "after": how many days later, 0 or more`);
+      if (typeof one?.news !== "string" || !one.news.trim()) problems.push(`${where} needs "news": what people hear`);
+      if (one?.place && !LOCATIONS[one.place]) problems.push(`${where}: there's no place called ${one.place}`);
+      leaves(where, id, one ?? {});
+    });
+  }
+  return problems;
+}
+
 // ---- How a story stands now ------------------------------------------------------
 
-const stagesReached = (game, id) => (THREADS[id]?.stages ?? []).slice(0, game.story?.clock?.threads[id]?.stage ?? 0);
+// The stages that happened: the ones the clock has passed, less the ones it skipped.
+const stagesReached = (game, id) => {
+  const state = game.story?.clock?.threads[id];
+  return (THREADS[id]?.stages ?? []).slice(0, state?.stage ?? 0).filter((_, index) => !state?.skipped?.includes(index));
+};
 
 export const hasMovedOn = (game, id) => stagesReached(game, id).length > 0;
 

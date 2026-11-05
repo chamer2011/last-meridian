@@ -1,0 +1,56 @@
+# Open Palms
+kind: dilemma
+places: sundial, fleet, anselm
+people: aduro, wen, seven, tarrow
+factions: fleet
+level: 2
+
+The lead:
+Half the lower decks are wearing a bandage on the left palm. A woman named Hesper Dane stops you at the Sundial's dock, perfectly polite, with a small clean knife and a roll of gauze, and asks if you'd mind.
+
+For anyone who isn't the captain:
+Half the lower decks are wearing a bandage on the left palm. A woman named Hesper Dane stands at the Sundial's dock, perfectly polite, with a small clean knife and a roll of gauze, and she asks everyone who comes by if they'd mind.
+
+What's really going on:
+The Open Palm movement is Hesper Dane's. Her husband's face came at her children on an escape shuttle, and what she cut that day didn't bleed. So she asks everyone to cut their palm, just a little: a machine won't bleed, and a bandage proves you've been asked. It has spread to fourteen ships. It began as reassurance and it works, in that people sleep better. People without bandages get refused at food counters. Synthetics can't pass, nor can anyone with a prosthetic hand, and Ilari bleed pale, which has gone badly. Infected palms are filling Anselm's Mercy, and Aduro is furious. A market in pre-stained bandages has started up. The test doesn't even work, as Seven could tell anyone: mimics bleed something convincing now. Then comes the turn. The week the captain moves against the movement, Hesper's people catch a real Choir Mimic on the Sundial. It had been a night-shift pump tech for four months, always in gauze, and it had never hurt anybody. It believes it's him, and it has been waiting for the right moment to take his wife and son somewhere safe. A child spotted it by how it held a cup. The movement now has all the proof it needs.
+
+How it might go:
+- The knife at the dock, with a crowd watching. How the captain answers becomes a story on every ship by supper.
+- Anselm's Mercy: a ward of swollen hands. Dr. Adeyemi sends the captain a bill, with a note. Aduro would like a word.
+- What the bandage has come to mean: a food counter refuses a Korrun dock hand, an Ilari family gets a locked door, and a nine-year-old shows the captain her bandage, proud and feverish.
+- The mimic, caught in a pump room. It's the first one most of them have seen. It asks them to please check the third pump, which is overdue, and to tell his wife it's all right.
+- What now? Hesper isn't gloating. She offers the captain the knife again.
+
+Ways through:
+- Lead from the front: leadership and composure. Cut your palm publicly and then order it stopped, or refuse publicly and say why. Either one costs something.
+- A better test: medicine and science with Seven and Aduro to design something that actually works and doesn't hurt anybody, then persuasion to get Hesper to adopt it. She's reasonable, if she's shown it works.
+- Street level: streetwise and deception to find the stained-bandage market and use it, or just to let it undermine the whole thing. Bandages can be faked, and so can peace of mind.
+- Force: intimidation and firearms when the crowd at a food counter turns ugly, with awareness to catch a second mimic, if there is one. There may not be.
+
+Checks that fit:
+- composure:moderate to give your answer with a knife in front of you
+- medicine:moderate to show the wounds are killing more people than the mimics have
+- science:hard to come up with a test that really does find a mimic
+- streetwise:easy to find where people are buying stained bandages
+- firearms:moderate to drop the mimic in a crowded pump room without hitting anyone
+- awareness:hard to notice how a thing that doesn't need a cup holds one
+
+If it comes to a fight:
+- choir_mimic in the pump room, which only fights when it's cornered
+- desperate_refugee crowd when a counter refuses the wrong family
+
+Where it can end up:
+banned: Banned: the bandages vanish from view, and the knives just go indoors. Some people take it as proof the captain is one of them, and ask to see their palm.
+captain_cuts: The captain cuts: a stirring moment, on Garrick Fenn's channel within the hour, and the fleet's commander has now endorsed the test. Mercy Seven asks to see the captain, and gives them a percentage.
+better_test: A better test: an honest one takes weeks to roll out. It finds nothing for a month, then finds something. It's now the fleet's identity check, and who holds the results is a new problem.
+left_alone: Left alone: fourteen ships becomes thirty. Synthetics and augmented people stop showing themselves on the lower decks. Tarrow's list gets a lot less necessary, and Tarrow notices.
+
+If nobody steps in:
+after 21 days: Bandaged palms have spread from the lower decks to the officers' mess.
+  lead: There are bandaged palms in the officers' mess now, and Hesper Dane still stands at the Sundial's dock with her small clean knife. People have started asking to see your hands.
+after 45 days: Someone was found bleeding in a corridor on the Sundial after refusing the cut, and nobody saw a thing.
+  lead: Someone who refused the cut was found bleeding in a corridor on the Sundial, and nobody saw a thing. Hesper Dane says she's very sorry to hear it, and she's holding out her knife.
+  fleet: morale -2
+
+Rewards:
+Aduro's thanks for every hand saved. Standing with whichever part of the fleet the captain sided with. A scar, if the captain cut, that Hesper's people will salute.

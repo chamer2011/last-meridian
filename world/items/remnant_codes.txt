@@ -1,0 +1,7 @@
+# Remnant Codes
+order: 52
+type: story
+price: 0
+
+In a line:
+Recognition codes for the Concord Remnant's warships, good until someone notices they've gone missing.

@@ -1,0 +1,50 @@
+# Who Paid
+kind: mystery
+places: kessara, haven
+people: quill, sable, talia, tannis
+factions: drift, fleet
+level: 5
+
+The lead:
+Ines Karras lost two sons when the Concord's patrols failed to come, and she has spent six months tracing who sold their schedules. The trail ends at Mother Quill's door. Quill has invited you to dinner, and she says she'd very much like to know who bought them too.
+
+For anyone who isn't the captain:
+Ines Karras lost two sons when the Concord's patrols failed to come, and she has spent six months tracing who sold their schedules. The trail ends at Mother Quill's door, and she's asking for help with the last part of it.
+
+What's really going on:
+Quill did sell the Navy's rotation schedules, six years before the Fall, through a broker, for four thousand credits and a chip of carved pale stone, and thought nothing of it. The stone is pinned to her shawl. She's thought about it every night since the Fall. She wants the buyer found, and she wants someone else to do the looking, because she's a little afraid to. The trail runs from the broker's ledger to a meeting at the Neutral Ground, and then to one grainy security image in Sable's files. The buyer has the face of Lieutenant Aldo Renn, a Concord patrol officer who was lost beyond the border on a routine sweep, nine years before the sale. His family buried an empty box. So either somebody wore a dead man's identity, or something that copies faces was already walking around, buying patrol schedules with cash, long before the Fall. It was preparing all that time. It knew how to use money. Quill doesn't want to know that she sold the end of the world for four thousand credits, dear, and she does want to know. Ines just wants someone to pay, and she has a needle rifle she barely knows how to use. This thread should end with the captain believing the Choir bought its own way in. That conclusion is wrong, and main_who_paid is where it falls apart, so the GM shouldn't close the question here.
+
+How it might go:
+- Dinner with Quill, with far too much food. She admits it all, almost cheerfully, and only her hands give her away. She offers to fund the search and asks the captain not to tell Ines where she sleeps.
+- Ines Karras, sitting in a Kessara lodging house with her list. She's sane, tired and polite, and she'll go on with or without the captain's help.
+- The broker's trail, cold and dangerous: old ledgers carved on the Tally Wall, a dead drop, a retired courier who only remembers that the buyer signed himself Hob, never hurried, and tipped exactly ten percent.
+- Sable, asked directly, names a price, and pays it themselves by looking at the image for a long time. Then the name. Then a Concord service record that doesn't make sense.
+- The confrontation, with Ines and her rifle in the room. Mother Quill says, for the first time in anyone's memory, that she's sorry. What does that buy?
+
+Ways through:
+- Do the detective work: lore and hacking through old Concord records and the broker's ledgers, and awareness to catch the detail that doesn't fit.
+- Work the warrens: streetwise, commerce and persuasion with people who remember, from Talia Sen's regulars to the retired courier.
+- Work the people: composure and persuasion to keep Ines from firing and Quill from worrying, and to get the two of them into the same room to hear the truth.
+
+Checks that fit:
+- streetwise:hard to find the broker's retired courier
+- hacking:hard to pull the sealed Concord service record for Aldo Renn
+- lore:very_hard to find other records of the dead turning up alive, before the Fall
+- persuasion:very_hard to talk Ines down with nothing but the truth
+- composure:moderate to hear what the record means and keep a straight face at dinner
+
+If it comes to a fight:
+- drift_raider sent by Tannis, who'd love a copy of Quill's confession. Passing them something false, or leaving by the noodle kitchen, avoids them.
+
+Where it can end up:
+truth_made_public: If the truth is made public, the fleet and every faction learn that the Choir was among them long before the Fall. Fear spreads, suspicion of everyone old enough to have a past grows, and Lt. Tarrow is proved right about something.
+quills_confession_reaches_tannis: If Quill's confession reaches Tannis, Quill's grip weakens and the coup moves up. If it stays private, Quill owes the captain the largest debt she's ever admitted to, and she hates owing.
+ines_fires: If Ines fires, whether she hits is up to the dice and the captain. Mother Quill's fate is only in play if the captain lets it be. Whatever happens, Ines goes on living with it, and the captain decides what the fleet does with her.
+ines_hears_whole_truth_lives_with: If Ines hears the whole truth and lives with it, she becomes the captain's fiercest investigator of who else came back from a routine patrol.
+
+If nobody steps in:
+after 38 days: Ines Karras has been seen outside Mother Quill's door at Kessara Drift three nights running, with her coat buttoned up.
+  lead: Ines Karras has been seen outside Mother Quill's door three nights running, with her coat buttoned up and one hand in her pocket. Quill's invitation to dinner still stands, and she's still very interested in who bought those schedules.
+
+Rewards:
+A data_chip holding Renn's record, a solid clue toward how long the Choir has been among people, Quill's reluctant fuel discount, and Ines Karras as a contact who never stops looking.

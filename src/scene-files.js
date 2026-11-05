@@ -7,7 +7,7 @@ import { worldDir } from "./paths.js";
 
 const dir = path.join(worldDir, "scenes");
 
-// The ids of the stories in world/threads that have a scene called thread_<id>.
+// The ids of the stories in world/stories that have a scene called thread_<id>.
 export function writtenThreadIds() {
   if (!fs.existsSync(dir)) return new Set();
   return new Set(fs.readdirSync(dir).map((name) => name.match(/^thread_(.+)\.(txt|json)$/)?.[1]).filter(Boolean));

@@ -1,0 +1,64 @@
+# Kit Marlowe-Dace
+title: 
+also called: Kit Marlowe-Dace, Marlowe-Dace
+pronouns: they/them
+species: human
+age: 35
+faction: drift
+role: Cardsharp and con artist at the Gilded Wheel
+place: wheel
+color: #e169fc
+listed: no
+
+In a line:
+Owes everyone, and is owed by everyone else.
+
+Appearance:
+Slim and quick, in a coat that was magnificent about four owners ago, with a ring on every finger, each one pawned at least twice. They have a lopsided grin, and a deck of cards keeps turning up in their hands.
+
+Personality:
+Funny, fearless and allergic to sincerity. They've never played a straight game in their life, and they've never failed to pay a debt, though often to someone other than the person they owe. Everything they own is borrowed, including the grin.
+
+Voice:
+Fast, delighted patter. Quotes odds on everything, gambler's style: "Three to one you're about to threaten me. Five to two it's the knife." Greets people as "my favorite creditor" or "dearest debtor", and keeps a running tally out loud: "That's two you owe me." Won't say "I promise", only "I'll give you odds." Never tells a story the same way twice.
+
+Goals:
+One clean win, big enough to clear the whole book at once and buy back their marker from Madame Oriel. They'd like to walk out of a room, for once, with nobody's hand on their sleeve.
+
+Secrets:
+During the evacuation of Asterion, Kit ran a rigged game in a departure lounge, won seventy-four berth passes from frightened people and sold them. Some of those people didn't get out. Now every credit they can borrow goes to buying refugee contracts at Bastion Nine, through a forged channel to a clerk they've never met, Severa Lune, whom they call "my favorite stamp". They're working down a list of the seventy-four families. That's why they owe everyone. They'd rather be shot than have it known at the tables, and it has never once felt like enough. Madame Oriel knows. Talia Sen thinks they just like the noodles.
+
+Beliefs:
+authority 8, loyalty 3, violence -5, belief -4
+
+Attributes:
+might 2, endurance 3, agility 8, perception 8, intellect 6, willpower 5, presence 8, resonance 2
+
+Skills:
+deception 9, streetwise 7, commerce 6, stealth 5, persuasion 5, firearms 4
+
+In a fight:
+threat: 2
+hp: 20
+attack: 3
+defense: 13
+damage: 3 to 6
+weapon: Sleeve Pistol
+xp: 40
+credits: 0 to 20
+art: scoundrel
+tags: syndicate
+
+When the fight starts:
+- Kit Marlowe-Dace sighs, fans a deck one-handed and comes up with a very small pistol. "Seven to two you regret this," they say.
+
+When they hit:
+- The small pistol turns out to work perfectly well. "That's one you owe me," they say.
+- A card flicked at your eyes makes you blink, and a boot finds your knee. "Dreadful odds on that knee."
+
+When they miss:
+- The shot goes wide. "Five to one I meant to do that," they say.
+- You duck, and a card sticks quivering in the wall behind you.
+
+When they're beaten:
+- Kit Marlowe-Dace slides down the wall, laughing and holding their side. "Put it on my tab," they say.

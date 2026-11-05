@@ -1,0 +1,7 @@
+# Ilun Codex
+order: 20
+type: story
+price: 0
+
+In a line:
+A monastery's record of what the First Builders feared.

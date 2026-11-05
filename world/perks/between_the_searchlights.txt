@@ -1,0 +1,10 @@
+# Between the Searchlights
+order: 37
+needs skill: stealth 3, void_ops 3
+
+In a line:
+You've crossed enough hulls and patrol lines to see the gaps in them. +1 on checks in vacuum and in the dark, and better tools in Void Ops and Stealth check windows, as if you were one tier better.
+
+Effects:
+better tools in: void_ops 1, stealth 1
+in a setting: vacuum 1, low_light 1

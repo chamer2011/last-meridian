@@ -1,0 +1,50 @@
+# Sen Aduro
+title: Dr.
+also called: Dr. Sen Aduro, Dr. Aduro, Doctor Aduro, Aduro
+pronouns: they/them
+species: ilari
+age: 52
+faction: fleet
+role: Chief medical officer
+place: meridian
+crew: yes
+color: #7fe0c3
+
+In a line:
+Exhausted, kind, and the conscience of the ship whether you want one or not.
+
+Appearance:
+A slight Ilari whose skin patterns have gone dim and slow from lack of sleep. Their hands are the steadiest thing on the ship.
+
+Personality:
+Gentle, tired and impossible to bully. They see patients where other people see numbers, and they'll argue with anyone about it.
+
+Voice:
+Soft and unhurried. Asks questions rather than giving orders, and uses your first name when they're worried about you.
+
+Goals:
+Keep as many people alive as possible, and stop anyone in the fleet from treating people as acceptable losses.
+
+Secrets:
+They know the day medical supplies run out: forty-one days from now, if nothing changes. They haven't told the council, because they know what the council would do with that number.
+
+Beliefs:
+loyalty -5, violence -7, belief -2
+
+Attributes:
+might 2, endurance 4, agility 4, perception 7, intellect 8, willpower 7, presence 5, resonance 4
+
+Skills:
+medicine 8, science 5, persuasion 4, composure 6, attunement 2
+
+In a fight:
+threat: 1
+hp: 18
+attack: 1
+defense: 11
+damage: 1 to 4
+weapon: Surgical Laser
+xp: 20
+credits: 0 to 10
+art: civilian
+tags: 

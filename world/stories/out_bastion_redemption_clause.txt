@@ -1,0 +1,48 @@
+# The Redemption Clause
+kind: politics
+places: bastion, meridian
+people: severa, halm, corvane, okonkwo
+factions: hegemony, fleet, remnant
+level: 2
+
+The lead:
+Old contract law is the only hobby Severa Lune admits to, and she's found something. Any sovereign power can redeem its citizens from Hegemony service at cost, forty credits a head. It has never been used, because nobody has ever asked. There's just one question, Captain: is your fleet a sovereign power?
+
+For anyone who isn't the captain:
+Old contract law is the only hobby Severa Lune admits to, and she's found something. Any sovereign power can redeem its citizens from Hegemony service at cost, forty credits a head. It has never been used, because nobody has ever asked.
+
+What's really going on:
+Clause Thirty-One of the Border Accord is real and binding. To use it, a power must be recognized as sovereign by two existing powers, such as the Korrun Forge-Clans, the Veshti Long Families, the Lumen Circle, or a lawful successor of the Concord. Becoming sovereign changes everything. Somebody has to sign as head of state. There would have to be a constitution, or at least a piece of paper. Speaker Halm is overjoyed and has already drafted one, with an election in it. Admiral Okonkwo-Reyes, if she hears of it, considers it treason against the Concord. Lt. Tarrow asks whether Synthetics count as citizens, and so does Mercy Seven, for opposite reasons. Six thousand people at forty credits each is two hundred and forty thousand credits, more than anyone has, but the clause says "at cost", and cost can be argued. The surprise: Legate Corvane is helping. He files the paperwork promptly and smiles. A fleet with a head of state can sign treaties, and he's been waiting for someone with the legal power to sign the fleet's surrender. Halm's private channel suddenly becomes much more dangerous.
+
+How it might go:
+- Severa explains it, delighted for the first time anyone's seen. Forty credits a head. She has already filled in the first form, leaving the sovereign's name blank.
+- The Meridian's council, in full cry. What are we? Who signs? Halm has a draft, Voss has opinions about the chain of command, and Mercy Seven wants one clause changed, and it isn't a small clause.
+- The search for two recognitions. Each possible backer wants something real. This can be folded into visits to Korrath, the Deepyards or Lumen, and each one asks the captain what kind of nation they're trying to be.
+- Corvane brings good news: the Hegemony won't contest the application. A careful reader, or Severa, or Sable for a price, can work out why.
+- Signing day. Whoever's name goes on that line is the head of a nation of forty-one ships, and everything they sign from now on counts.
+
+Ways through:
+- The law: lore and persuasion to win the argument over what "at cost" means and get the price down to something possible.
+- The politics: leadership and persuasion to hold a real vote in the fleet and get something like a founding charter through a starving, frightened assembly.
+- The deals: commerce, streetwise and deception to buy recognition from whoever's selling, or to forge just enough legitimacy to get the first batch redeemed before anyone looks closely.
+
+Checks that fit:
+- lore:hard to argue the clause in front of Bastion's contract court
+- commerce:hard to get the redemption price down to something the fleet can pay
+- leadership:very_hard to get a charter through the fleet's assembly
+- persuasion:moderate to win one faction's recognition
+- awareness:moderate to notice how happy Corvane is
+- deception:hard to pass off a very thin claim of sovereignty
+
+Where it can end up:
+fleet_becomes_sovereign: If the fleet becomes sovereign, thousands can be redeemed in batches, and the fleet is now a nation with enemies, a flag and a treaty obligation or two. Elections are coming, which Halm has wanted all along.
+captain_signs_head_state: If the captain signs as head of state, they hold real legal power, and they're the one who can be held to any treaty, or to any surrender someone negotiated in their name.
+halm_signs: If Halm signs, he's gained the legal standing he's always wanted, and the captain answers to him in law. The channel to Corvane is now a real threat that only the player can uncover in time.
+idea_fails_dropped: If the idea fails or is dropped, a few hundred contracts might still be bought quietly by Severa's method, and the idea stays alive in the fleet, as a thing people argue about at dinner.
+
+If nobody steps in:
+after 45 days: Someone has read out Clause Thirty-One of the Border Accord on the open channel, and people are asking what it would take to make the fleet a sovereign power.
+  lead: Word's got out about Clause Thirty-One: forty credits a head to buy a citizen out of Hegemony service, for any sovereign power. People are asking whether that means the fleet, and Speaker Halm has started to take an interest in the answer. Severa Lune could still tell you how it's done.
+
+Rewards:
+A few hundred to several thousand redeemed refugees, depending on money and skill, fleet morale, some fleet and hegemony standing shifts, and a permanent change in what the fleet legally is.

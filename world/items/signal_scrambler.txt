@@ -1,0 +1,10 @@
+# Signal Scrambler
+order: 41
+type: gadget
+price: 250
+
+In a line:
+A pocket jammer that smears your trace on anyone's sensors: +2 on Stealth checks while carried.
+
+Effects:
+skills: stealth 2

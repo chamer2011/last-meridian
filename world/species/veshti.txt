@@ -1,0 +1,17 @@
+# Veshti
+order: 3
+
+In a line:
+Long-limbed spacers whose families haven't touched a planet in nine generations. Open skies make them queasy.
+
+For the game master:
+Veshti: tall, thin and long-limbed, born in orbit. Planetary gravity tires them and open skies unsettle them. Excellent in zero gravity.
+
+Attributes:
+agility 2, perception 1, might -1, endurance -1
+
+Skills:
+void_ops 2, piloting 1
+
+Effects:
+in a setting: vacuum 1, heavy_gravity -3

@@ -1,0 +1,53 @@
+# The Second Ward
+kind: dilemma
+places: haven, anselm
+people: wen, mott, tessaly, aduro
+factions: fleet
+level: 2
+
+The lead:
+Someone is stealing from the hospital ship. Dr. Wen Adeyemi has counted the missing doses twice and hands you a list of lot numbers, because Dockmaster Mott Jessup at Haven sees every crate that changes hands, and for the right payment he remembers them.
+
+For anyone who isn't the captain:
+Someone is stealing from the hospital ship. Dr. Wen Adeyemi has counted the missing doses twice and has a list of lot numbers, and Dockmaster Mott Jessup at Haven sees every crate that changes hands, and for the right payment he remembers them.
+
+What's really going on:
+The doses are sold at Haven to the relatives of patients who fell below the line on Wen's triage list. The relatives carry them to Tessaly Marsh, who runs a hidden ward in an empty cargo module behind Ring Four, with sixty-three patients that triage gave up on. She's keeping most of them alive. The thief on Anselm's Mercy is Wen. They steal from their own stores and log it as theft, because the rules they wrote won't let them treat those people and they can't stop reading the names. They sent the captain with the list because part of them wants to be caught. The arithmetic is real on both sides: the second ward burns doses that could save about three patients above the line for every one saved below it.
+
+How it might go:
+- Mott doesn't want credits. He wants a true thing about the captain that nobody else knows, or a favor, or a joke that actually makes him laugh. Whatever he's paid in, he names a buyer.
+- The buyer is a frightened grandfather with a bag of doses. Following him leads through Ring Four's back corridors to a cargo module that smells of disinfectant and soup.
+- Tessaly Marsh, sleeves rolled, doesn't bother to deny anything. She shows the captain the beds. Half the patients know exactly who the captain is, and some of them salute.
+- The lot numbers don't lie. Only one login on Anselm's Mercy can move those crates without an alarm, and it belongs to the person who sent the captain here.
+- Wen, quietly, with the list open: "I wrote the line. Tell me where you'd draw it, and I'll do that instead."
+
+Ways through:
+- Follow the money: streetwise and commerce through Mott's dock, then stealth to tail the grandfather without spooking anyone.
+- Follow the medicine: medicine and science to audit Tessaly's ward and Wen's numbers, and find out how many people each choice really saves.
+- Change the question: persuasion and leadership to bring the second ward into the open as a council matter, and let the fleet decide with its eyes open.
+
+Checks that fit:
+- streetwise:moderate to find who's buying at Haven
+- stealth:moderate to tail the buyer through Ring Four
+- medicine:hard to work out honestly what each dose buys in each ward
+- persuasion:hard to get Wen to say it out loud
+- commerce:moderate to pay Mott less than he asked
+
+If it comes to a fight:
+- dock_thug sent by a rival fence who wants Tessaly's supply. Tessaly's patients and a loud alarm can drive them off without a shot.
+
+Where it can end up:
+second_ward_closed: If the second ward is closed, the doses go back and the numbers improve. Most of the sixty-three die over the next weeks, and the families know whose order it was.
+brought_into_open: If it's brought into the open, the fleet learns for the first time that there's a line and who's below it. Morale falls and the council fights, and Dr. Aduro's supply date moves closer, but nobody is deciding alone any more.
+captain_lets_run_secret: If the captain lets it run in secret, they now share Wen's crime. Wen sleeps a little, and when it comes out, as it will, the captain's name is on it.
+wen_exposed_removed: If Wen is exposed and removed, Anselm's Mercy loses its best triage doctor at the worst moment, and whoever replaces them keeps a much shorter list.
+
+If nobody steps in:
+after 23 days: More doses have gone missing from Anselm's Mercy, and Dr. Adeyemi has started sleeping in front of the cold room.
+  lead: More doses are gone from Anselm's Mercy, and Dr. Adeyemi's sleeping in front of the cold room now. The lot numbers are still good, and Mott Jessup still remembers every crate, for the right payment.
+  fleet: medicine -2
+after 53 days: People at Haven are saying there's somewhere you can take someone who's been given up on, if you've got the doses.
+  lead: People at Haven are saying there's somewhere you can take someone who's been given up on, if you've got the doses. Dr. Adeyemi hasn't heard it yet, and their list of lot numbers is still in your hands.
+
+Rewards:
+Wen's or Tessaly's lasting loyalty, a surgeon_lens from Tessaly's kit if she's left in business, and fleet standing that moves depending on who hears what.

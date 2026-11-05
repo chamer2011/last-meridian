@@ -1,0 +1,12 @@
+# Remnant Plate
+order: 34
+type: armor
+price: 1600
+defense: 4
+restricted: yes
+
+In a line:
+Concord assault armor kept like new by people who won't admit the war is over, and people still salute it: +4 defense, and +1 on Leadership checks while carried.
+
+Effects:
+skills: leadership 1

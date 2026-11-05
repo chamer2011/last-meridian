@@ -1,0 +1,54 @@
+# The Eleven of Saint Orrin
+kind: mystery
+places: orrin
+people: orsolya, cael, ione
+factions: ilun
+level: 4
+
+The lead:
+Mother Orsolya of Saint Orrin's Comet has sent you a nine-page letter. It begins 'Wrong.', it says the Order of Ilun has been lying for a thousand years and she can prove it, and it ends by asking if you can spare any burn dressings.
+
+For anyone who isn't the captain:
+Mother Orsolya of Saint Orrin's Comet sends out nine-page letters. They begin 'Wrong.', they say the Order of Ilun has been lying for a thousand years and she can prove it, and they end by asking for burn dressings.
+
+What's really going on:
+A thousand and six years ago, when the Order's council broke, Sister Orrin and her followers refused to stop singing. They took the cut pages of the Codex and the relief crews' pass, a gate_key, and fled to a comet. They've kept a singer in the Loft, a wire cage on the surface, in shifts, without a break ever since, singing a sliver of the watch into the dark. They lost the instrument that kept a singer in tune, so they burn: Resonance with nowhere to go turns to heat, and the Burn Ward is full of terrible jokes. There are eleven left. They're the only people in the galaxy still doing their job. Mother Orsolya came here fifty-five years ago, at twenty-four, with a testament of Saint Orrin she'd forged in a weekend to win an argument with her friend Ione: that the field isn't left over, that it's still being made, and that the Order is listening to the wrong end of it. Decades later she checked the numbers, and it's true. She has told no one, and she can't decide if she's frightened or delighted. She's right that the Order was founded to sing, and she has the pages to prove it. She thinks whatever's on the other end should be woken and asked. She wants Ione to admit she was wrong, face to face, before one of them dies, and she wants someone with a ship to carry the proof out. The burning has reached her lungs, and she has one great working left in her. The gate_key is holding up the kitchen's soup pot. Arc clues: orrin_rite, codex_cut_pages, blade_origin.
+
+How it might go:
+- Landing on a comet with a long bright tail. Ammonia, scorched wool and burnt toast. Scarred heretics arguing in the corridors and singing badly at all hours. Someone has laid out a neat row of burn dressings, and there aren't nearly enough.
+- Orsolya, scarred, cackling and delighted to see you. 'Who told you that? Wrong.' She asks how much Resonance the captain has before she asks their name. To get anything here you go to the Disputation Pit and you're wrong out loud in front of everyone, and the loser cooks.
+- The Loft. A young heretic in a wire cage under the black sky, singing, with her hands smoking. Put a hand on the wire and you can feel the sliver of the watch she's holding, so small and so heavy. She has about a week left in her. She tells a joke.
+- The pages. They match the Codex edge to edge. The word is 'sing', everywhere. What the rite was, what the crews did, who came home, a rule that says singers who burn must stop, and a description of an instrument no one here has seen.
+- Her price: the pages and the key for a shift in the Loft, or for getting Little Ione in front of her. What does the captain give? A volunteer, a lie, a plan or a theft? Cael, if he's there, has already started walking to the ladder.
+
+Ways through:
+- Resonant: take a shift in the Loft (attunement, manifestation). The real thing, short and agonizing. You'll know what the song is from the inside, and you'll carry a burn for the rest of the game. It earns everything here.
+- Doctor: bring dressings and use them (medicine). Nobody has treated these people properly in a thousand years. It's the only thing they've ever been given for free, and Orsolya doesn't know what to do about it.
+- Scholar or talker: go into the Pit and beat her at her own text (lore, persuasion). What did the rite say about singers who burn? It said stop. If you lose you cook, and you'll still have learned a lot.
+- Thief: take the ring from under the soup pot (stealth, deception) in the steam and the noise. Anyone can see it. She sleeps about an hour a day, and she'll know by supper.
+- Fighter: force it (melee, firearms). Heretic adepts burn as they fight, and none of them has anything to lose. It'll work, nobody stops you leaving, and the Loft goes on singing behind you.
+
+Checks that fit:
+- attunement:hard to take a shift and hear what you're holding
+- manifestation:hard to come down from the Loft with your hands
+- medicine:moderate to treat the Burn Ward and earn a hearing
+- lore:hard to beat Orsolya in the Pit on her own text
+- stealth:moderate to lift the ring from under the soup pot
+- athletics:moderate to get up the ladder to the Loft in a comet's gravity
+
+If it comes to a fight:
+- resonant_cultist if the captain comes to take the key or a heretic
+
+Where it can end up:
+captain_gets_pages: If the captain gets the pages, the Codex is made whole and the Order's lie is proven. Cael reads it, and it goes through him like a blade.
+gate_key_freely_given: If the gate_key is freely given, the Eleven will come to the end. If it's stolen, they'll be on the docks at the Harbor anyway, with flames.
+cael_sings: If Cael sings, he's very good, and he burns. If there's no Tuner or Proctor's blade to pull him back, the captain might lose him, if their choices earn that. If he's pulled back, he's changed.
+captain_brings_tuner_proctor_kore_from: If the captain brings the Tuner or Proctor Kore from the Pale Gate, Orsolya weeps with rage, then asks if she can see it. The Eleven would be the first watch, and nobody would have to burn.
+orsolya_ione_ever_meet: If Orsolya and Ione ever meet: two old women, a great deal of shouting, then one of them says something quiet. Keep them both alive for that, if the player arranges it. She'll also tell a captain she likes what she really thinks should be done about the other end, and what her one great working is for.
+
+If nobody steps in:
+after 38 days: Mother Orsolya of Saint Orrin's Comet has sent out another letter. This one begins 'Still wrong', and it's gone to everyone.
+  lead: Mother Orsolya's sent another letter. It begins 'Still wrong', it's gone to everyone this time, and it's still asking if you can spare any burn dressings. She says she can still prove it.
+
+Rewards:
+The gate_key, the cut pages, an old resonance_tuner from a dead heretic's kit, and a burn scar for anyone who took a shift. Flour is welcome here.

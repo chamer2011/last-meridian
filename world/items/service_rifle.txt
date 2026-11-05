@@ -1,0 +1,10 @@
+# Service Rifle
+order: 23
+type: weapon
+price: 250
+damage: 5 to 9
+stat: perception
+skill: firearms
+
+In a line:
+The old navy's standard long gun, easy to find now that so few are left to carry one: 5 to 9 damage, using Perception and Firearms.

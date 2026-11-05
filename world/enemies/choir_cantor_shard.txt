@@ -1,0 +1,45 @@
+# Choir Shard
+threat: 5
+hp: 60
+attack: 7
+defense: 16
+damage: 6 to 12
+weapon: Many Silver Hands
+xp: 230
+credits: 0 to 0
+art: hunter
+tags: choir, machines
+motive: choir
+machine: yes
+boss: yes
+on hit: stress 4
+
+In a line:
+A fragment of the Choir's voice, given a body, and it speaks to you as if you've met.
+
+When the fight starts:
+- Silver runs together across the deck and stands up. A great many voices say your name, gently, and ask you why you're running.
+- Every speaker around you clicks on at once, and a crowd of voices tells you not to be afraid. Then the thing they belong to comes through the wall.
+
+When they hit:
+- It strikes you, and says that it's sorry, in a voice from your childhood.
+- A silver hand closes on you with great care, and many voices tell you to hold still.
+- The blow lands, and for an instant you're someone else, on a ship that's burning, and then you're back, and you're hurt.
+
+When they miss:
+- You throw yourself clear, and it doesn't chase you. It only turns, and sings a little louder.
+- It reaches for you and stops short, and all the voices sigh together.
+- It misses you, and one of the voices laughs the way a friend of yours used to.
+
+When they hit hard:
+- Every voice it has says your name at once, and you don't remember hitting the floor.
+
+When they're beaten:
+- The silver comes apart in long threads, and one small voice among the many thanks you, and you'll never know whose it was.
+- It falls, and the song goes on without it, somewhere beyond your hearing. You've silenced one note.
+
+When they join the fight:
+- Silver runs together on the deck beside you, and {enemy} stands up out of it, already speaking your name.
+
+When they're stunned:
+- {Enemy} stutters with all its voices out of step, and none of them are talking to you.

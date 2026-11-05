@@ -1,0 +1,27 @@
+HOW TO WRITE AN ITEM
+====================
+
+Everything the player can carry, buy or be given is one file in this folder, named by its id: service_rifle.txt is
+the Service Rifle, and places name what they sell by that id. The Story board in the game (The story, then Story
+board, then Items) shows and changes the same files, and npm run check-story reads them all and says what's wrong,
+with the file and the line.
+
+    # Service Rifle
+    order: 23                           (where it comes in lists; leave it out to come after the rest, by name)
+    type: weapon                        (weapon, armor, consumable, gadget or story)
+    price: 250
+    damage: 5 to 9                      (weapons)
+    stat: perception                    (weapons: the attribute that adds to the attack)
+    skill: firearms                     (weapons: the skill that adds to the attack)
+    defense: 2                          (armor)
+    restricted: yes                     (not for sale to just anyone; leave it out if not)
+    effect: hp 10, energy 5             (consumables: what using it does; hp, energy, hull or fuel)
+
+    In a line:
+    The old navy's standard long gun, easy to find now that so few are left to carry one.
+
+    Effects:
+    in a setting: vacuum 1              (while it's worn or carried: easier or harder in a setting)
+    skills: hacking 1                   (a bonus or penalty to a skill)
+
+In a line is what the player reads in the inventory and the market. A part that has nothing in it can be left out.

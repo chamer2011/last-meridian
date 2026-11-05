@@ -1,0 +1,8 @@
+# Nutrient Gel
+order: 38
+type: consumable
+price: 30
+effect: hp 6, energy 1
+
+In a line:
+Restores 6 health, plus your Medicine rank, and 1 energy.

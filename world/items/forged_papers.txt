@@ -1,0 +1,10 @@
+# Forged Transit Papers
+order: 18
+type: gadget
+price: 180
+
+In a line:
++2 on Persuasion and Deception checks while carried.
+
+Effects:
+skills: persuasion 2, deception 2

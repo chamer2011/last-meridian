@@ -1,0 +1,8 @@
+# Energy Cell
+order: 14
+type: consumable
+price: 70
+effect: energy 6
+
+In a line:
+Restores 6 energy.

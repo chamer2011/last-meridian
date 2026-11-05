@@ -1,0 +1,10 @@
+# First, Do No Harm
+order: 6
+starting: yes
+
+In a line:
+Medical career: +2 Medicine, and medkits heal 25% more.
+
+Effects:
+skills: medicine 2
+heal rate: 1.25

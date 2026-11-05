@@ -1,0 +1,59 @@
+# The Generous Offer
+kind: main
+places: haven, bastion, meridian
+people: corvane, halm, severa, dain, jaska, vael
+factions: hegemony, fleet
+level: 2
+
+The lead:
+Legate Corvane's offer runs to nine hundred pages, and Speaker Halm says the council deserves to hear it read aloud. It promises food, medicine and a berth for every refugee, and page one asks for almost nothing.
+
+For anyone who isn't the captain:
+Legate Corvane's offer runs to nine hundred pages, and Speaker Halm says the council deserves to hear it read aloud. It promises food, medicine and a berth for every refugee, and page one asks for almost nothing. Anyone can go and listen.
+
+What's really going on:
+Everyone assumes the Hegemony wants soldiers: thirty thousand conscripts, and a chance to absorb the last Concord survivors. Corvane believes in the deal as far as he lets himself. He has seen where the unmarked ships go, he's terrified, and he does his job very well. Halm has already opened a private channel to him (fleet_arrest_us) and truly thinks a live fleet under a bad government beats a dead free one. The people at Bastion Nine really are fed and calm. The catch is on page 614, clause 41(c): the Regency may 'remit the bearer's service to an external obligation'. Nobody reading it will understand it yet. Clerk Severa Lune does: she has been moving people off the rolls for twenty months to keep them out of it, and she's about to be caught, because Inspector Jaska Moor is following twelve tons of fuel that don't add up, and those forms lead to Severa's window. Inquisitor Vael turns up to 'audit' the fleet's Resonants, which is the real price of the deal: she says the Beacon is a contagion, and she has very good numbers. The player should come away believing this is about conscription and Resonants, and that it's ugly but understandable. Arc clues: clause_41c, vael_contagion.
+
+How it might go:
+- The reading: Corvane in a beautiful coat, in a council chamber full of people who've been hungry for six months. He brings lunch. It's real food. That's the argument. 'It's an opportunity, Captain, for everyone in this room.'
+- A tour of Bastion Nine. The Line, the hot soup, a calm recorded voice calling numbers. Commandant Halloran shows everyone around: 'Officially, you may leave at any time. That means your ticket lapses and you start again. Sit down.' Some of the fleet's people sign on the spot.
+- A mousy clerk gives a family the wrong form on purpose. 'Case eight-one-one-four, you'll want a Nine-C, not a Nine-B. I didn't say that.' If she's noticed, she begs the captain not to notice.
+- Vael makes her case with charts and a courteous apology, and asks for a full list of the fleet's Resonants, by full legal name. Inspector Moor offers the captain a boiled sweet and asks one small question about a fuel log, thanks them, leaves and comes back.
+- The council votes, or the captain forces the issue. Halm's private channel may come to light.
+
+Ways through:
+- Scholar or merchant: read the whole thing (lore, commerce). Someone should. Page 614 catches the eye of anyone who finishes it, and the annex Corvane hasn't shown anyone is worth asking about.
+- Infiltrator: go to Bastion under a false name (deception, stealth) and see what the clerks see: people who've signed, and aren't on any roster now.
+- Talker: work Corvane (persuasion), Dain Halloran, who wants someone to say it out loud, or Halm. Corvane, approached alone and scared enough, drops a hint that there's more, and asks what the captain could do for a man who needed to leave.
+- Hacker: Bastion's contract registry and the category codes (hacking).
+- Fighter: there's no fight unless someone forces one. A customs stop goes wrong, or Vael's troopers try taking a Resonant by force on Haven's docks, very publicly, and the captain has to choose in front of everyone.
+
+Checks that fit:
+- commerce:hard to read nine hundred pages and find what's on page 614
+- lore:hard to work out what 'remit' means in Hegemony law
+- deception:moderate to pass through Bastion under a false name
+- streetwise:moderate to learn from the Line Mothers who has stopped writing home
+- persuasion:moderate to get a straight word from Halloran
+- composure:moderate to keep your face still while Vael reads out your crew's full legal names
+
+If it comes to a fight:
+- customs_marine if someone's caught on Bastion's record decks
+- inquisitor and hegemony_trooper if Vael's audit turns into an arrest on Haven's docks
+
+Where it can end up:
+council_accepts: If the council accepts, ships peel off to Bastion, and the fleet loses a thousand people a week and gains food. Later this will be the worst thing the captain ever allowed (main_the_remittance). Those people can still be got back.
+refuses: If it refuses, hunger gets worse, Halm takes it to a public vote and Corvane shrugs: 'An unfortunate possibility.' A customs blockade starts. Severa's copy can still reach the captain.
+negotiate_something_partial_food_data: If they negotiate something partial (food for data, a delay), it buys medicine and satisfies no one. The clause stays in, unless someone has noticed it.
+severa_protected: If Severa is protected, she later hands over her copies. If she's exposed, Moor has her, the trail runs through Halloran instead, and nine hundred and eighty-seven saved files start to unravel.
+list_fleets_resonants_handed_over: If the list of the fleet's Resonants is handed over, Vael comes for them one by one, each with an apology. Cael, Lira and perhaps the captain are on it.
+
+If nobody steps in:
+after 18 days: The first ship has peeled off toward Bastion Nine with Corvane's contract signed, and her people waved from the ports.
+  lead: Legate Corvane's nine hundred pages are still being read aloud, and one ship has already stopped listening and signed. Speaker Halm says the council deserves to hear the rest.
+  fleet: ships +1
+after 45 days: Speaker Halm has taken Corvane's offer to a public vote, and the Legate's people are handing out food on the way to the ballot.
+  lead: Corvane's offer is going to a public vote, with or without you, and there's food being handed out on the way to the ballot. You could still read page after page until you find out what it really costs.
+  fleet: morale -1
+
+Rewards:
+forged_papers from Severa, medicine and food for the fleet if a deal is struck, and Corvane's private promise, for what it's worth.

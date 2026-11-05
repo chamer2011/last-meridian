@@ -1,0 +1,53 @@
+# Sixty-One Percent
+kind: dilemma
+places: meridian
+people: seven, aduro, tarrow, pell
+factions: fleet
+level: 5
+after: crew_seven_two_hundred_twelve
+
+The lead:
+Mercy Seven asks for ten minutes, and opens by telling you there's a sixty-one percent chance you'll order them shut down before this conversation ends. They'd like your help getting that number lower before they say anything else.
+
+For anyone who isn't the captain:
+Mercy Seven reads something on a private band every morning, and they've been asking people they trust what the odds are of being shut down if they tell anyone what it says.
+
+What's really going on:
+For months Seven has been receiving encrypted fragments of the Choir's song on a private band. They've decrypted about four percent, and it isn't commands or hymns. It's medical consults, in the standard Concord format Seven has used for eighty years: patient name, date of admission, presenting problem, prognosis, request for advice. The patients are the people the Choir has kept. The presenting problem, thousands of times over, is "loss of coherence": patient repeats, no new material, response falling. Something in the song is running a ward of billions, each of them alone in a bed, and losing them, and it has gone looking for a doctor. Seven is the doctor it found. The charts are signed Surg. Lt. A. Menon, CFS Tarn, who was kept with her crew and has gone on doing rounds. Seven can answer: it's what any ward nurse knows about patients left alone. "Put them in a room together. Let them talk." They've drafted the reply, one line, and they want permission and a second opinion. They give it forty percent that this is a lure, "but the charting is very good, and it's the charting of someone who is frightened." Every fragment also carries a header Seven has been filing as noise: WHO HAS THE WATCH? (see seven_roll_call). One chart bothers them most: "Voss, Ilya. Admitted at CFS Tarn. Note: donor body remains viable." That's why they've been watching the XO. They're starting to wonder whether the Choir is kin, or merely a colleague.
+
+How it might go:
+- The percentages. Seven adjusts the number aloud as the captain reacts: "Fifty-four. Thank you." It's funny until they show the first chart.
+- The charts. The captain may look up someone they've lost, if that person is in the decrypted four percent. Use this carefully. Aduro reads one, goes very still, and asks what the oath says about a patient you can't see.
+- The consult itself: about three hundred patients with the same failing, and the treatment is one line of advice. It would work. Seven would like to know whether that's treason.
+- Tarrow's monitors catch a new burst. There's now a time limit on a quiet decision.
+- The reply: send it, refuse it, poison it or hand the whole thing to Tarrow.
+
+Ways through:
+- Medicine: read the charts and take Aduro's counsel. Is a copied patient a patient? The oath doesn't say, and Aduro has an answer anyway.
+- Hacking and science: decrypt more and build a relay so that a reply can't be traced back to the fleet, which means Pell flying it a long way out, with navigation and piloting.
+- Attunement: hold a fragment and listen. It's not a hymn. It's a hospital at night.
+- Deception: send false advice. A single wrong line could do terrible harm to the song. It's the most effective weapon anyone has ever offered the fleet, and Seven would never forgive it.
+
+Checks that fit:
+- persuasion:moderate to get Seven's number below fifty percent
+- medicine:hard to understand what loss of coherence means in a mind with no body
+- hacking:hard to decrypt another fragment
+- navigation:moderate to plot a relay point that doesn't lead back to the fleet
+- attunement:very_hard to hear a fragment as what it is
+- deception:very_hard to write a false consult the song would trust
+
+If it comes to a fight:
+- choir_drone scouts if the relay is followed
+
+Where it can end up:
+reply_sent: Reply sent: weeks later a fragment arrives that decrypts in a second: "Thank you, Doctor." Three hundred charts show improvement: they've been moved in together, and they've started to say new things. The Choir now knows Seven's name, its machine law calls what happened a fault, and the consults get harder. It's the best clue yet to what's wrong with the song, and a first step toward relieving it.
+refused: Refused: Seven obeys. The fragments keep coming, and each morning Seven tells the captain the overnight mortality, whether asked or not.
+poisoned: Poisoned: the song falters across a whole sector for a day, and the fleet gets six days with no scouts. Thousands of held minds are gone. Seven learns of it from the next chart, and offers the captain a percentage they'd rather not have calculated.
+handed_to_tarrow: Handed to Tarrow: she has what she needs, and crew_tarrow_standing_order gets much worse. Seven's last number before the Cradle is the chance the captain would betray them. They got it right.
+
+If nobody steps in:
+after 45 days: Mercy Seven has stopped asking for ten minutes of the captain's time.
+  lead: Mercy Seven asked for ten minutes weeks ago and hasn't asked again. They still read something on a private band each morning, and they've stopped telling you the odds.
+
+Rewards:
+Seven's absolute loyalty, a surgeon_lens, and the biggest clue about the song that anyone in the fleet can offer.

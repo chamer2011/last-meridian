@@ -1,0 +1,9 @@
+# Chain of Command
+order: 1
+starting: yes
+
+In a line:
+Navy career: +2 Leadership.
+
+Effects:
+skills: leadership 2

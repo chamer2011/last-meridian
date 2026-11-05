@@ -5,7 +5,9 @@
 import { POLES, SKILLS } from "./character-data.js";
 import { FACTIONS, ITEMS, LOCATIONS, STATS } from "./data.js";
 import { START_LIST } from "./role.js";
-import { DIFFICULTY } from "./rules.js";
+import { endedWith } from "./record.js";
+import { DIFFICULTY, attr, maxHp, skillRank } from "./rules.js";
+import { WORLD_THREADS, endingsOf } from "./world.js";
 
 const ATTITUDES = ["hostile", "wary", "neutral", "friendly", "ally"];
 const QUEST_STATES = { active: "active", done: "completed", completed: "completed", failed: "failed", none: "none" };
@@ -49,6 +51,16 @@ export function parseCondition(text) {
         if (!rest.length) problems.push(`"${term.kind}" needs a name after it`);
         term.id = rest.join(" ");
         break;
+      case "ended": {
+        const [story, ending, extra] = rest;
+        const names = endingsOf(WORLD_THREADS[story]).map((one) => one.id);
+        if (!WORLD_THREADS[story]) problems.push(`there's no story called ${story ?? "nothing"}. The ids are the file names in world/stories`);
+        else if (ending && !names.includes(ending)) problems.push(`${story} has no ending called ${ending}. Its endings are ${names.join(", ")}`);
+        else if (extra) problems.push(`"ended" takes a story's id and, if you want, one of its endings: "${raw.trim()}"`);
+        term.id = story;
+        term.ending = ending ?? null;
+        break;
+      }
       case "captain":
         break;
       case "life":
@@ -125,6 +137,7 @@ function termHolds(game, term, helpers) {
   switch (term.kind) {
     case "has": result = (game.inventory?.[term.id] ?? 0) > 0; break;
     case "flag": result = Boolean(game.flags?.[term.id]); break;
+    case "ended": result = endedWith(game, term.id, term.ending); break;
     // In a conversation, "seen" is what's been said in it; in a scene, the parts the player has been through.
     case "seen": result = Boolean((helpers.seen ?? game.scene?.seen)?.includes(term.id)); break;
     case "met": result = Boolean(contact(term.id)); break;
@@ -145,7 +158,7 @@ function termHolds(game, term, helpers) {
 }
 
 // Whether a whole condition holds. A condition with a mistake in it never holds, so a misspelt one can't open a door by accident.
-export function conditionHolds(game, text, helpers) {
+export function conditionHolds(game, text, helpers = { attr, skillRank, maxHp }) {
   const { terms, problems } = parseCondition(text);
   if (problems.length) return false;
   return terms.every((term) => termHolds(game, term, helpers));
@@ -215,10 +228,19 @@ export function parseEffect(text) {
       if (hours > 72) return { problem: "time can pass at most 72 hours in one part: use another part for the rest, or let the story say it took longer" };
       return hours > 0 && /^hours?$/i.test(words[2] ?? "") && after ? { do: { tool: "pass_time", hours, activity, reason: after } } : { problem: "time is written * time 2 hours: A long talk, with work or rest after hours if that's what it was" };
     }
+    case "ending": {
+      // The scene's own story ends, by one of the endings named in its notes; failed marks the quest lost.
+      const name = words[1]?.toLowerCase();
+      const failed = words[2]?.toLowerCase() === "failed";
+      if (!name || !after || words.length > (failed ? 3 : 2)) return { problem: "ending is written * ending its_name: How it ended, with a name from the story's file in world/stories, and failed before the colon if the player lost it" };
+      return { do: { ending: name, ...(failed ? { failed: true } : {}), text: after } };
+    }
     case "flag":
     case "unflag": {
       const name = words.slice(1).join(" ");
-      return need(name, `${verb} needs a name after it`) ? { problem: `${verb} needs a name after it` } : { do: verb === "flag" ? { set: name } : { clear: name } };
+      if (!name) return { problem: `${verb} needs a name after it` };
+      // A flag with words after a colon is a fact the player can read on the record.
+      return { do: verb === "flag" ? { set: name, ...(after ? { text: after } : {}) } : { clear: name } };
     }
     case "fuel": {
       const amount = signed(words[1] ?? "");

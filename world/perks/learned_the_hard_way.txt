@@ -1,0 +1,9 @@
+# Learned the Hard Way
+order: 51
+needs attribute: willpower 6
+
+In a line:
+Every mistake since the Fall has cost someone something, so you don't make them twice. All skills improve 15% faster.
+
+Effects:
+learn rate: 1.15

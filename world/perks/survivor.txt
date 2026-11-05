@@ -1,0 +1,5 @@
+# Survivor
+order: 31
+
+In a line:
+Once per battle, a killing blow leaves you at 1 health instead.

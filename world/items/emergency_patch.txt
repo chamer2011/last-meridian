@@ -1,0 +1,8 @@
+# Emergency Hull Patch
+order: 39
+type: consumable
+price: 60
+effect: hull 8
+
+In a line:
+Restores 8 ship hull, plus twice your Engineering rank.

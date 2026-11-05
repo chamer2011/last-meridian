@@ -1,0 +1,9 @@
+# Polymath
+order: 22
+needs attribute: intellect 6
+
+In a line:
+All skills improve 20% faster.
+
+Effects:
+learn rate: 1.2

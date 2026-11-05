@@ -1,0 +1,36 @@
+# Drift Raider
+threat: 2
+hp: 20
+attack: 3
+defense: 12
+damage: 3 to 6
+weapon: Boarding Knife
+xp: 35
+credits: 20 to 70
+art: blade
+tags: syndicate
+motive: greed
+faction: drift
+
+In a line:
+Kessara pirate in patched armor.
+
+When the fight starts:
+- A Kessara raider in patched armor comes at you with a boarding knife and a lot of practice.
+
+When they hit:
+- The knife finds a gap and bites deep.
+- The raider slams you against the bulkhead and drives an elbow in.
+
+When they miss:
+- The knife skids across your armor in a shower of sparks.
+- You catch the raider's wrist and shove them off.
+
+When they hit hard:
+- The raider gets inside your guard, and the knife goes in to the hilt.
+
+When they're beaten:
+- The raider drops the knife, stares at it, and goes down.
+
+When paying works:
+- The raider takes the credits and tells you it's been a pleasure, and that you should stay out of the Drift, for your own sake.

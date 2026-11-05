@@ -1,0 +1,18 @@
+# Ilari
+order: 4
+
+In a line:
+Empaths whose skin carries slow patterns of light that show what they feel. They make wonderful friends and terrible liars.
+
+For the game master:
+Ilari: skin patterns of soft light shift with emotion, so feelings are hard to hide. Naturally sensitive to Resonance, which makes them a target for Hegemony Inquisitors.
+
+Attributes:
+resonance 2, presence 1, willpower -1
+
+Skills:
+attunement 1
+
+Effects:
+standing with: hegemony -15, ilun 10
+skills: deception -2, persuasion 1

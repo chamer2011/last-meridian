@@ -369,7 +369,7 @@ The Meridian has thirty-one new crew who know every secret on the ship. If she e
 
 => The Downstairs Crew are the Meridian's cadets, by treaty, and the whole fleet knows it.
 
-* quest crew_naomi_under_crew done: Thirty-one children from the Ember Day are the Meridian's cadets, by their own treaty. They know every duct on the ship, and they're yours.
+* ending treaty_cadets: Thirty-one children from the Ember Day are the Meridian's cadets, by their own treaty. They know every duct on the ship, and they're yours.
 * xp 40: The Downstairs Crew
 * contact Naomi Cass ally: You signed her treaty and made her people crew.
 * faction fleet 3: Thirty-one children came out of the walls as cadets
@@ -400,7 +400,7 @@ Voss reads the treaty twice, says nothing, and corrects a typo in clause four. B
 
 => The Downstairs Crew are the Meridian's cadets, by treaty, and the whole fleet knows it.
 
-* quest crew_naomi_under_crew done: Thirty-one children from the Ember Day are the Meridian's cadets, by their own treaty. Orchard counted them in daylight.
+* ending treaty_cadets: Thirty-one children from the Ember Day are the Meridian's cadets, by their own treaty. Orchard counted them in daylight.
 * xp 40: The Downstairs Crew
 * contact Naomi Cass ally: You signed her treaty and made her people crew.
 * faction fleet 3: Thirty-one children came out of the walls as cadets
@@ -543,7 +543,7 @@ Naomi doesn't speak to you on the shuttle. Within a week she's back, alone, in t
 
 => The children are on the Wintermere, on paper. Naomi isn't.
 
-* quest crew_naomi_under_crew done: The Downstairs Crew were sent to the school ship Wintermere. Naomi Cass is back in the Meridian's walls within a week, and maybe not alone.
+* ending sent_to_wintermere: The Downstairs Crew were sent to the school ship Wintermere. Naomi Cass is back in the Meridian's walls within a week, and maybe not alone.
 * xp 15: Thirty children are safe, on paper
 * contact Naomi Cass wary: You sent her people to the Wintermere, and she came back without you.
 * flag naomi_in_the_walls
@@ -560,7 +560,7 @@ Marrow's valves are smooth for the first time in a month. Three days later Brand
 
 => The Downstairs Crew got out by themselves, and they've marked you as hostile.
 
-* quest crew_naomi_under_crew failed: You let the vent cycle run. The children got out with minutes to spare, and they've redrawn their map with your quarters marked hostile.
+* ending ignored failed: You let the vent cycle run. The children got out with minutes to spare, and they've redrawn their map with your quarters marked hostile.
 * contact Naomi Cass hostile: You went back up and let the vent run on her people.
 * flag downstairs_enemies
 * stress 5: Four minutes to spare
@@ -574,7 +574,7 @@ The vent cycle for Section Fourteen runs at oh-six-hundred. Nobody is in it. Mar
 
 => Whoever was in Section Fourteen got out, and they've marked you as hostile.
 
-* quest crew_naomi_under_crew failed: You let the vent cycle run without going down. Whoever was in Section Fourteen got out, and has marked your quarters on a map in red.
+* ending ignored failed: You let the vent cycle run without going down. Whoever was in Section Fourteen got out, and has marked your quarters on a map in red.
 * contact Naomi Cass hostile: You gave her until morning, and let the vent run.
 * flag downstairs_enemies
 * xp 5: It's over, and nobody died
@@ -600,7 +600,7 @@ You finish the ration bar. She watches you do it, and then she's gone through a 
 
 The vent cycle runs at oh-six-hundred, and if anybody was in there, nobody says.
 
-* quest crew_naomi_under_crew failed: You let it go. The vent cycle ran, and whatever was in Section Fourteen is upstairs business.
+* ending ignored failed: You let it go. The vent cycle ran, and whatever was in Section Fourteen is upstairs business.
 END
 
 == told_voss
@@ -612,7 +612,7 @@ The girl with the grease in her hair finds you later and puts half a ration bar 
 
 => The Downstairs Crew came out of the walls as cadets, because you took it to Voss.
 
-* quest crew_naomi_under_crew done: You took Naomi's notice to Commander Voss. Thirty-one children from the Ember Day are the Meridian's cadets now, by their own treaty.
+* ending treaty_cadets: You took Naomi's notice to Commander Voss. Thirty-one children from the Ember Day are the Meridian's cadets now, by their own treaty.
 * xp 15: You found someone who'd listen
 * contact Naomi Cass friendly: You took her notice to the Scan Lady, who listened.
 * flag downstairs_crew
@@ -678,7 +678,7 @@ By the end of the week there are thirty-one cadets in cut-down uniforms, and a v
 
 => Dr. Aduro knows about the Downstairs Crew, because you went and got them.
 
-* quest crew_naomi_under_crew done: You brought Dr. Aduro down to the children in the walls. Teo lived, Aduro took a list to the captain, and the Downstairs Crew came out as cadets.
+* ending treaty_cadets: You brought Dr. Aduro down to the children in the walls. Teo lived, Aduro took a list to the captain, and the Downstairs Crew came out as cadets.
 * xp 15: You went for the doctor
 * contact Dr. Sen Aduro friendly: You brought them to a sick child in the walls.
 * contact Naomi Cass friendly: You went and got Doctor Sad for Teo.

@@ -1,0 +1,10 @@
+# Unbreakable
+order: 19
+needs skill: composure 2
+
+In a line:
++2 Composure, and stress builds 20% slower.
+
+Effects:
+skills: composure 2
+stress rate: 0.8

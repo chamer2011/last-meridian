@@ -1,0 +1,42 @@
+# Claim-Jumper
+threat: 2
+hp: 22
+attack: 3
+defense: 12
+damage: 3 to 7
+weapon: Hull Torch
+xp: 40
+credits: 20 to 70
+art: engineer
+tags: vacuum
+motive: greed
+
+In a line:
+A salvager who finds it easier to rob divers than to dive.
+
+When the fight starts:
+- A patched hard suit drifts out from behind the wreck with a hull torch lit, and a voice on your comms says this claim is theirs now.
+- You find a second set of mag-boot tracks in the dust on the hull, just before their owner finds you.
+
+When they hit:
+- The hull torch rakes across you, and your suit alarm starts chirping.
+- They kick off the bulkhead and slam into you, and a pry bar finds the joint in your armor.
+- A magnetic grapple pins your arm to the hull, and the torch comes in right behind it.
+
+When they miss:
+- The torch carves a bright line across the plate beside your head.
+- They swing the pry bar at you, and the recoil sends them spinning away, cursing.
+- You duck behind a spar, and the torch cuts it in half instead of you.
+
+When they hit hard:
+- The torch finds your air line, and for three long breaths you're doing sums about how much you have left.
+
+When they're beaten:
+- Their boots lose the hull, and they drift slowly away from you, still offering to split it.
+- They let go of the torch and raise both hands, and ask you whether the Guild really needs to hear about this.
+
+When they join the fight:
+- {Enemy} swings in on a salvage line with a torch already lit, looking to take a share of whatever you've got.
+
+When they're stunned:
+- {Enemy} hangs off their line, blinking at you, as the torch gutters in their hand.

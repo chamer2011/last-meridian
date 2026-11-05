@@ -1,0 +1,10 @@
+# The Korrun Forge-Clans
+order: 6
+also called: the Korrun Forge-Clans, Korrun Forge-Clans, the Forge-Clans, Forge-Clans, the Clans
+starting standing: 0
+
+In a line:
+Heavy-world smelters and shipwrights of Korrath, who weigh every promise and remember what it came to.
+
+Beliefs:
+authority -4, loyalty -7, violence 3

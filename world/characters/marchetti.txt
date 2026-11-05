@@ -1,0 +1,51 @@
+# Teo Marchetti
+title: Captain
+also called: Captain Teo Marchetti, Captain Marchetti, Marchetti
+pronouns: he/him
+species: human
+age: 44
+faction: fleet
+role: Captain of the Meridian, when the player isn't
+place: meridian
+color: #e0a070
+listed: no
+chair: yes
+
+In a line:
+Captain of the Meridian. A gunnery officer who stands and fights, and whose gun crews would follow him anywhere. The transports aren't so sure.
+
+Appearance:
+Big, loud and always a little sooty, with burn scars on both forearms and his sleeves rolled up over them. He laughs more than anyone else in the fleet, and nobody's sure why.
+
+Personality:
+Warm, quick and impatient. He remembers everyone's name and hates meetings. He'd rather be shot at than sit through a council vote, and he's said so to the council.
+
+Voice:
+Loud and friendly, with a lot of first names. "Come on, then. What's the worst that can happen? No, don't answer that, Marrow."
+
+Goals:
+Hurt the Choir, keep the fleet's spirits up, and never again be the one who didn't fire.
+
+Secrets:
+He froze for nine seconds in the last battle at the Graveyard, and a ship he could have covered died in those nine seconds, with everyone aboard. Nobody knows. It's why he never runs now, whether or not he should.
+
+Beliefs:
+authority 1, loyalty -3, violence 5, belief 0
+
+Attributes:
+might 5, endurance 6, agility 4, perception 6, intellect 4, willpower 5, presence 6, resonance 1
+
+Skills:
+gunnery 7, tactics 4, leadership 5, firearms 4, athletics 3, composure 3
+
+In a fight:
+threat: 3
+hp: 44
+attack: 5
+defense: 13
+damage: 4 to 9
+weapon: Concord Sidearm
+xp: 90
+credits: 0 to 30
+art: officer
+tags: 

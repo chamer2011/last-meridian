@@ -1,0 +1,59 @@
+# Rook Tannis
+title: Captain
+also called: Captain Rook Tannis, Captain Tannis, Rook Tannis, Tannis
+pronouns: she/her
+species: korrun
+age: 41
+faction: drift
+role: Raider captain, and Mother Quill's enforcer
+place: kessara
+color: #ff9e5e
+
+In a line:
+Captain of the raider Second Opinion, and the one Mother Quill sends when she's worried about you.
+
+Appearance:
+A huge Korrun with gold in her teeth and a boarding axe she calls "the negotiator".
+
+Personality:
+Cheerful, loud and genuinely dangerous. She enjoys her work, and she likes people who stand up to her.
+
+Voice:
+Booming good humor. Tells terrible jokes right before hitting people, and laughs at them herself.
+
+Goals:
+Get rich, get her own fleet, and one day stop taking orders from anyone.
+
+Secrets:
+She's planning to take over the Syndicate from Mother Quill, and she's looking for someone to blame when it happens.
+
+Beliefs:
+authority 6, loyalty 5, violence 6
+
+Attributes:
+might 8, endurance 7, agility 3, perception 4, intellect 4, willpower 6, presence 6, resonance 1
+
+Skills:
+melee 7, intimidation 7, gunnery 5, piloting 4, streetwise 5
+
+In a fight:
+threat: 3
+hp: 44
+attack: 6
+defense: 13
+damage: 5 to 9
+weapon: Boarding Axe
+xp: 110
+credits: 50 to 150
+art: blade
+tags: syndicate
+
+When the fight starts:
+- Rook Tannis grins with every gold tooth and swings the negotiator up onto her shoulder.
+
+When they hit:
+- The negotiator comes down hard, and Tannis roars with laughter.
+- A shoulder like a cargo door slams into you.
+
+When they miss:
+- The axe bites deep into the wall beside your head. "Nearly!" Tannis says happily.

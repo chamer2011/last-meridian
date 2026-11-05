@@ -1,0 +1,10 @@
+# The Salvage Guild
+order: 5
+also called: the Salvage Guild, Salvage Guild, the Guild, The Guild
+starting standing: 0
+
+In a line:
+Wreck-divers who live by iron contracts and settle everything in their own courts, out at the Graveyard.
+
+Beliefs:
+authority -4, loyalty 5, belief -3

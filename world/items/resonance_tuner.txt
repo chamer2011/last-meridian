@@ -1,0 +1,10 @@
+# Resonance Tuner
+order: 47
+type: gadget
+price: 700
+
+In a line:
+A forked crystal from the old monasteries that you hold against your teeth to hear the field: +2 on Attunement checks while carried.
+
+Effects:
+skills: attunement 2

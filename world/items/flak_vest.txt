@@ -1,0 +1,8 @@
+# Flak Vest
+order: 7
+type: armor
+price: 100
+defense: 1
+
+In a line:
+Stops shrapnel, mostly.

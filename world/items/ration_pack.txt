@@ -1,0 +1,8 @@
+# Ration Pack
+order: 36
+type: consumable
+price: 15
+effect: hp 4
+
+In a line:
+Restores 4 health, plus your Medicine rank.

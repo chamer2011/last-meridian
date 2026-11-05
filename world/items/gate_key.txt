@@ -1,0 +1,7 @@
+# Gate Key
+order: 53
+type: story
+price: 0
+
+In a line:
+A fist-sized ring of pale, seamless metal that grows heavier the closer it gets to the Pale Gate.

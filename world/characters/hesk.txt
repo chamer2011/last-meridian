@@ -1,0 +1,67 @@
+# Hesk Varr
+title: Warden
+also called: Warden Hesk Varr, Warden Varr, Hesk Varr, Hesk, Varr
+pronouns: he/him
+species: korrun
+age: 77
+faction: clans
+role: Clan warden of Korrath
+place: korrath
+color: #eb7a52
+listed: no
+
+In a line:
+Won't deal with anyone who hasn't worked a shift at the furnaces, and he has turned away admirals.
+
+Appearance:
+A vast old Korrun burned hairless by sixty years of furnace light, with forearms like mooring posts. He wears no insignia, only a smelter's apron, and he looks at your hands before your face.
+
+Personality:
+Grim, exact and utterly without small talk. The Clans would follow him into the furnace, because he has never asked anyone to do what he hasn't done himself. He judges everyone by whether they've kept their word, and he has been breaking his for six months.
+
+Voice:
+Very few words, set down one at a time like ingots. Looks at your hands and says "Show me." Asks what you've made. Grades people aloud in stages of metal: newcomers are "slag", and if you earn it you become "pig", then "billet", and he has only ever called three living people "bar". Won't say "maybe", "I think" or "please". Ends meetings by naming the shift: "Sixth bell. Bring gloves."
+
+Goals:
+Keep the furnaces lit and the Clans whole, and keep the Choir's attention off Korrath for as long as he's alive. He also wants an heir who can carry the hammer, and he believes he's found one.
+
+Secrets:
+When the Concord called in the Clans' oath during the Fall, the call reached him by courier, under Tobin Hask's seal. He told no one, and he sealed fifty-four war hulls, finished except for their engines, in a dry pit under the slag fields. He believed the Concord was already dead and the Clans would die with it, and he told himself that a call never spoken over the Weigh House scale doesn't bind. A Korrun can't destroy a record, so he still has the letter. Meanwhile six more hulls go up the tether to the Hegemony, under a contract that was weighed, and he hates it. If the Clans learn of this, they'll pull him down. Whoever finds those hulls has the start of a navy. Brenna Tor is his chosen heir. He works her harder than anyone, and she thinks he despises her. He hasn't sold steel to the Ao-Vash in thirty-eight years, over one short payment. He thinks the Beacon is a promise someone made, and he'll show anyone who has worked a shift the sealed pan of the Long Debt.
+
+Beliefs:
+authority -7, loyalty -6, violence 4, flesh -4
+
+Attributes:
+might 9, endurance 9, agility 1, perception 6, intellect 6, willpower 10, presence 7, resonance 1
+
+Skills:
+engineering 7, leadership 7, melee 7, intimidation 7, composure 7
+
+In a fight:
+threat: 4
+hp: 52
+attack: 6
+defense: 14
+damage: 6 to 10
+weapon: Forge Hammer
+xp: 140
+credits: 20 to 80
+art: brawler
+tags: heavy_gravity
+
+When the fight starts:
+- Hesk Varr takes off his apron, folds it and picks up a hammer you couldn't lift. "Slag," he says.
+
+When they hit:
+- The hammer comes down like a furnace door, and you feel it in your teeth.
+- He doesn't swing so much as arrive, and you go backward across the floor.
+
+When they miss:
+- The hammer craters the floor where you were standing. He looks at the crater, not at you.
+- You duck, and the hammer takes a bite out of the wall. "Still slag," he says.
+
+When they hit hard:
+- The hammer catches you square, and for a while there's only the sound of furnaces.
+
+When they're beaten:
+- Hesk Varr goes down on one knee, slowly, and looks at your hands. "Pig," he says. It's the kindest thing he's said to you.

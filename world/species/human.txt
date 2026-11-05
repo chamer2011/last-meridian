@@ -1,0 +1,17 @@
+# Human
+order: 1
+extra attribute points: 2
+extra trait points: 1
+
+In a line:
+The Concord's most numerous people: stubborn, adaptable and everywhere.
+
+For the game master:
+Human. Unremarkable anywhere in the fleet.
+
+Attributes:
+
+Skills:
+
+Effects:
+standing with: fleet 5

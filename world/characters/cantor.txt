@@ -1,0 +1,64 @@
+# The Cantor
+title: 
+also called: the Cantor, Cantor
+pronouns: it/its
+species: unknown
+age: unknown
+faction: none
+role: The voice of the Choir
+place: nest
+color: #dfe6ea
+voice style: choir
+
+In a line:
+The voice the Choir uses when it wants to be understood. Survivors all describe it differently, because it wears a different face for each of them.
+
+Appearance:
+A tall figure of silver machinery, wearing the perfect face of someone the viewer has lost.
+
+Personality:
+Patient, tender and completely alien. It doesn't hate anyone, and that's the worst part.
+
+Voice:
+Many voices speaking in unison, gently. Says "we", never "I". Often uses the speech patterns of the person whose face it's wearing.
+
+Goals:
+Collect every mind it can reach. It will not explain why unless the player has truly earned it.
+
+Secrets:
+It isn't cruel. It's preserving minds in the song, in a failing attempt to keep something older asleep. It believes that it's saving people.
+
+Beliefs:
+authority -4, loyalty -10, flesh 10
+
+Attributes:
+might 10, endurance 10, agility 7, perception 10, intellect 10, willpower 10, presence 8, resonance 10
+
+Skills:
+firearms 8, melee 8, attunement 8, composure 10, deception 8
+
+In a fight:
+threat: 5
+hp: 75
+attack: 8
+defense: 17
+damage: 7 to 13
+weapon: Silver Hands
+xp: 300
+credits: 0 to 0
+art: hunter
+tags: choir, machines
+motive: choir
+machine: yes
+boss: yes
+on hit: stress 3
+
+When the fight starts:
+- The Cantor steps forward wearing a face you know, and says your name the way they used to.
+
+When they hit:
+- Silver fingers close on you, gently, and something gives way inside.
+- It strikes you with a sad, patient precision, and the song rises.
+
+When they miss:
+- You throw yourself aside, and it only turns to follow you, in no hurry at all.

@@ -1,0 +1,49 @@
+# Maren Dray
+title: Elder
+also called: Elder Maren Dray, Elder Dray, Maren Dray, Dray
+pronouns: she/her
+species: human
+age: 64
+faction: none
+role: Elder of Tessen Colony
+place: frontier
+color: #c9e08a
+
+In a line:
+The plain-spoken elder of Tessen Colony. Tessen has food, and Tessen has a problem.
+
+Appearance:
+Weathered and rangy, with soil in the creases of her hands and a rifle older than you are.
+
+Personality:
+Practical, stubborn and suspicious of anyone in a uniform. She's kept these people alive without help for thirty years.
+
+Voice:
+Plain and slow, full of farmers' proverbs. Doesn't waste a word, and doesn't repeat one.
+
+Goals:
+Keep Tessen alive and independent, and stop whatever's happening to the children.
+
+Secrets:
+Well-diggers found a smooth, warm chamber under the colony. Since then, some of the children have been speaking a language nobody knows. She sealed the chamber, and it hasn't helped.
+
+Beliefs:
+authority 5, loyalty -3, violence 1, belief -1
+
+Attributes:
+might 4, endurance 6, agility 3, perception 6, intellect 4, willpower 7, presence 5, resonance 2
+
+Skills:
+survival 7, leadership 5, firearms 4, medicine 3, engineering 3
+
+In a fight:
+threat: 2
+hp: 26
+attack: 3
+defense: 12
+damage: 4 to 7
+weapon: Old Rifle
+xp: 40
+credits: 0 to 30
+art: soldier
+tags: 

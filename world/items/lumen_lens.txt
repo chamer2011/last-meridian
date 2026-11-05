@@ -1,0 +1,7 @@
+# Lumen Lens
+order: 58
+type: story
+price: 0
+
+In a line:
+A disc of Ilari glass from Lumen Sanctuary that shows the feelings of whoever you look at through it, as if they had Ilari skin.

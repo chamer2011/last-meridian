@@ -15,7 +15,7 @@
 //   factions: { fleet: 10 }    one-time change in faction standing
 // "gm" is a note for the AI game master about how to play this in the story.
 
-import { WORLD_CHARACTERS, WORLD_FACTIONS } from "./world.js";
+import { WORLD_CHARACTERS, WORLD_FACTIONS, WORLD_SPECIES } from "./world.js";
 
 export const ATTR_START = 2;
 export const ATTR_MIN = 1;
@@ -94,61 +94,8 @@ export const CONTEXTS = {
   loved_one: "when a loved one is at stake",
 };
 
-export const SPECIES = {
-  human: {
-    name: "Human",
-    desc: "The Concord's most numerous people: stubborn, adaptable and everywhere.",
-    gm: "Human. Unremarkable anywhere in the fleet.",
-    attrs: {},
-    bonusAttrPoints: 2,
-    bonusTraitPoints: 1,
-    skills: {},
-    fx: { factions: { fleet: 5 } },
-  },
-  korrun: {
-    name: "Korrun",
-    desc: "Broad, heavy-boned people from high-gravity worlds. They treat ordinary ships as gently floating and doorways as an insult.",
-    gm: "Korrun: wide and immensely strong, built for high gravity. Normal ship corridors are a tight fit. Korrun culture prizes blunt speech and keeping your word.",
-    attrs: { might: 2, endurance: 1, agility: -1 },
-    skills: { athletics: 1 },
-    fx: { maxHp: 5, context: { heavy_gravity: 3 } },
-  },
-  veshti: {
-    name: "Veshti",
-    desc: "Long-limbed spacers whose families haven't touched a planet in nine generations. Open skies make them queasy.",
-    gm: "Veshti: tall, thin and long-limbed, born in orbit. Planetary gravity tires them and open skies unsettle them. Excellent in zero gravity.",
-    attrs: { agility: 2, perception: 1, might: -1, endurance: -1 },
-    skills: { void_ops: 2, piloting: 1 },
-    fx: { context: { vacuum: 1, heavy_gravity: -3 } },
-  },
-  ilari: {
-    name: "Ilari",
-    desc: "Empaths whose skin carries slow patterns of light that show what they feel. They make wonderful friends and terrible liars.",
-    gm: "Ilari: skin patterns of soft light shift with emotion, so feelings are hard to hide. Naturally sensitive to Resonance, which makes them a target for Hegemony Inquisitors.",
-    attrs: { resonance: 2, presence: 1, willpower: -1 },
-    skills: { attunement: 1 },
-    fx: { skills: { deception: -2, persuasion: 1 }, factions: { hegemony: -15, ilun: 10 } },
-  },
-  thessan: {
-    name: "Thessan",
-    desc: "Cold-blooded archivists who live for centuries and take the long view of everything, including you.",
-    gm: "Thessan: scaled, cold-blooded and very long-lived. They're slow to anger, remember everything and struggle in the cold. Younger species find them patronizing.",
-    attrs: { intellect: 2, willpower: 1, agility: -1, presence: -1 },
-    skills: { lore: 2 },
-    agelessTerms: 8,
-    fx: { factions: { ilun: 5 } },
-  },
-  synthetic: {
-    name: "Synthetic",
-    desc: "A free machine person, granted citizenship by the Concord. The Choir has made every human in the fleet look at you differently.",
-    gm: "Synthetic: an artificial person. They don't tire like organics, medkits barely help them and they have no Resonance at all. Since the Choir, many in the fleet fear or hate synthetics, and some suspect the player is a Choir infiltrator. Play this as real tension.",
-    attrs: { intellect: 1, might: 1, endurance: 1, presence: -1 },
-    attrCaps: { resonance: 1 },
-    skills: { hacking: 1 },
-    agelessTerms: 99,
-    fx: { fatigueRate: 0.25, healRate: 0.5, stressRate: 0.85, factions: { fleet: -15 } },
-  },
-};
+// The species are files in world/species, read by src/world.js, in the order their files give them.
+export const SPECIES = WORLD_SPECIES;
 
 export const HOMEWORLDS = {
   aurelis: {
@@ -312,13 +259,13 @@ export const CONVICTIONS = {
 };
 
 // What each faction believes. Sharing their beliefs improves your standing and your social checks.
-export const FACTION_BELIEFS = {
-  fleet: { loyalty: -6, violence: -1 },
-  hegemony: { authority: -8, loyalty: -3, violence: 5, belief: -3, flesh: -2 },
-  drift: { authority: 8, loyalty: 6, violence: 2 },
-  ilun: { belief: 9, violence: -4, flesh: -3 },
-  ...Object.fromEntries(Object.entries(WORLD_FACTIONS).map(([id, faction]) => [id, faction.beliefs ?? {}])),
-};
+export const FACTION_BELIEFS = {};
+// Filled in place from the factions' files, so a faction saved from the story board counts at once.
+export function refreshFactionBeliefs() {
+  for (const key of Object.keys(FACTION_BELIEFS)) delete FACTION_BELIEFS[key];
+  for (const [id, faction] of Object.entries(WORLD_FACTIONS)) FACTION_BELIEFS[id] = faction.beliefs ?? {};
+}
+refreshFactionBeliefs();
 
 // The important people in the world, whether the player has met them or not. Each has a
 // file in world/characters, with their personality, secrets and stats.

@@ -1,0 +1,47 @@
+# Quiet Zealot
+threat: 2
+hp: 22
+attack: 3
+defense: 11
+damage: 2 to 6
+weapon: Sharpened Deck Tool
+xp: 35
+credits: 0 to 10
+art: cultist
+tags: 
+motive: belief
+faction: quiet
+on hit: stress 2
+
+In a line:
+A believer in the Quiet, unarmed-looking and completely unafraid.
+
+When the fight starts:
+- A calm person with a silver disc at their throat walks toward you with open hands, and tells you that it doesn't hurt. You're fairly sure they don't mean the fight.
+- A believer of the Quiet steps out of the crowd, smiling at you as if you've finally arrived.
+
+When they hit:
+- They don't flinch at all. They simply reach you, and a sharpened tool comes out of a sleeve.
+- A hand closes on your collar with no hurry in it, and the blade follows. "Shh," they tell you.
+- You hear humming very close to your ear, just as the pain arrives.
+
+When they miss:
+- They reach for you, and you shove them back. They nod, as if you've made a good point.
+- The blade passes your ribs. They don't look disappointed, and that's what bothers you.
+- You knock them down. They get up again at the same pace, still smiling at you.
+
+When they hit hard:
+- They rest their forehead against yours, gently, and the blade goes in, and they tell you that it's nearly over.
+
+When they're beaten:
+- They go down with the same calm smile, and you find that you don't want to look at it.
+- They lie on the deck looking past you, and thank you.
+
+When they join the fight:
+- {Enemy} walks in without hurrying, and doesn't so much as glance at your weapon.
+
+When they're stunned:
+- {Enemy} stands with their eyes closed, humming, and doesn't seem to know that you're there.
+
+When persuading works:
+- You ask what the Quiet would say about all this noise. They stop, and they tilt their head, and they listen for a long time. When they speak, it's to say that you may go.

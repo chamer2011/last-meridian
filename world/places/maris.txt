@@ -1,0 +1,69 @@
+# Maris Deep
+also called: Maris Deep, Maris
+faction: none
+market: ration_pack, nutrient_gel, work_suit, emergency_patch
+the fleet is here: no
+a place to rest: no
+dangerous: no
+hidden: no
+people: lenn
+enemies: drowned_thing, salvage_mech, wreck_diver, hegemony_hunter, security_drone
+items: maris_core_sample, data_chip, field_scanner, work_suit
+
+In a line:
+An ocean moon with a drowned First Builder structure and a research station that's stopped answering.
+
+The feel of it:
+Brine, iodine and rotting kelp out on the rafts, and inside the station a smell of damp carpet and old coffee. A huge gas giant hangs in the sky, and it hauls the whole sea up and down forty meters twice a day, so everything on Maris runs by the tide table, and the station's lower levels drown and drain on schedule. The kelp farmers bargain only at slack water, they don't go past the marker buoys, and they leave food on the station dock each week without ever asking who takes it.
+
+Districts:
+The Rafts: A town of kelp-farmers on tethered barges that rise and fall with the sea, three generations old. They're friendly, weathered and very reluctant to talk about the station.
+Corso Station: The research station on great stilts above the water, with the lights still running on a timer. The lights come on at seven and go off at ten, and the coffee machine's been used.
+The Tide Levels: Station levels two to five, which flood and drain twice a day. Doors, desks and filing cabinets are slimed with weed, and there's always more moved around than the water could have done.
+The Shaft: An elevator and a service shaft, going straight down through the sea floor. The elevator is called from below, by nobody, at every high tide, and it waits for two minutes with its doors open.
+The Long Chamber: A vast dry First Builder hall, two kilometers under the sea, with breathable air and a clean floor. Nobody's found out who built the door, or why it seals itself from the inside.
+
+Complications:
+- You've misread the tide table, and the water on Level Three is rising faster than it's supposed to.
+- A storm comes across the rafts, and they've got to cut their tethers or be pulled under.
+- Your suit radio has picked up the morning briefing, and it's being held by someone on a level that's underwater.
+- A door that was open behind you is now closed, and it's got a neat handwritten sign on it saying DO NOT OPEN UNTIL LOW WATER.
+- The Hegemony's science ship has sent a submersible down the Shaft, and something's sending parts of it back up.
+- Someone in your party has stopped feeling the cold of the water, and they've started to find the idea of it restful.
+
+Secrets:
+- Lenn Corso is less mad than he sounds. Something in the structure reads the station's outgoing signals, so he hides his real reports inside the nonsense: the first word of each line, looked up in the Maris Tide Tables, gives the true depth readings. He left a copy of that book with Sefu Anand at Sarn. The tide tables and the socks he takes down in his sleep, because that's what the structure keeps repeating, and he's trying to write around it.
+- The other five researchers went into the flooded levels months ago, and what came back still comes to the galley door at shift change. The Drowned Things aren't quite those people. They're something the structure has always grown to look after itself, and they've picked up the staff's clothes and habits, in a small, old, clumsy version of what the Choir does.
+- The structure is a sounding line, a First Builder gauge for how deep the sleep is. Its core shows a hundred thousand years of steady rhythm, a break 1,006 years ago and a long slide since. Six months ago, there's a sudden spike, deeper than it's been in a thousand years, and it's wearing off fast. By Corso's figures, there are about eleven years left.
+
+Encounters:
+- A message from the station reaches your ship while you're still in orbit: next year's tide table, accurate to the minute, and then a request for more socks. It ends by asking you to tell his wife she must take the children to the high ground. Dr. Lenn Corso has never been married.
+- A kelper elder scrapes her pipe at slack water, and tells you that they've left food on the station dock every week since spring. It's always gone by the next tide. They've stopped leaving knives with it. It's been the best harvest in thirty years, and she'd very much rather you didn't go over there.
+- You find a handwritten tide table taped up in a corridor, with a note in careful capitals: DO NOT BE ON FOUR AT HIGH WATER. DO NOT BE ON THREE EITHER, YOU WILL HEAR WHY. There's a stuck door behind you on Four, someone's tapping on the other side of it, and the water's fifty minutes off.
+- Dr. Corso sits at the conference table with two cups of tea, holding the morning briefing for five colleagues whose names are written on cards at their empty chairs. He's thin, courteous and rather cross at the interruption. His data's excellent. He asks you to take a seat, and he points to one that has your name on it.
+- At shift change there's a knock on the galley door. Dr. Corso gets up without any fuss, calls out five names and starts setting out five plates. Something wet is breathing on the other side of the door, patiently. He asks you not to stare, as it upsets them, and then he asks if you'd mind passing him the salt.
+- A kelper girl of sixteen dives the deep water on dares, and she says that she's been inside the Chamber by a swim route nobody knows about. She'll take you there for a good knife. She's got a long pale scar and she's not nearly as scared as she should be. Her mother catches your sleeve on the way out, and begs you to say no.
+- A Salvage Guild crew has arrived to claim the station under abandonment law, and in forty-eight hours it's theirs, along with everything aboard. Anyone they find still inside counts as abandoned goods. Their chief diver went down the Shaft yesterday, and they're still calling it a routine delay.
+- A courteous Hegemony scientist from the ship in orbit proposes pooling your data. She's lost two submersibles, and she's got a very bad feeling. She's got an Inquisitor on board as well, she says in a whisper, and she's a great deal more frightened of what's going to happen when he gets bored than of anything down here.
+- At low water, a figure in a station coverall is standing at the far end of the corridor on Level Three, holding a coffee mug. It has a name badge. It's dripping. It lifts the mug and tips it toward its face, again and again, and it doesn't seem to know what's meant to happen next.
+- The elevator comes up empty at high tide, lights on and doors open, and it waits for its two minutes. Your science officer has packed a bag, and she's stepping toward it. The crew have all taken a step back. She looks round at you, and she's only got about a minute and ten seconds left to be told no.
+- In the Long Chamber, the far wall shows each visitor's reflection about a second late. You all wave, and laugh nervously, and the reflections wave back. A young rating in your party has just noticed that his reflection isn't there. He wants to know whether you can see it, and it's clear that he's hoping you'll lie.
+- A fisher offers you an unusual catch from below two kilometers: a heavy silver fish, with a perfectly regular pattern in its scales that anybody who's seen First Builder work would know. His family has been eating them for months. His children are in excellent health, and they can hold their breath for twenty minutes.
+- The rafts' healer has never seen so many seasick children, on a moon where nobody's ever been seasick. It started when the hum changed. She needs your doctor. The raft council doesn't want off-worlders on board, and they've pointed out that everything was fine until the Concord built the station.
+- A storm's coming, and you've got the only heavy tow line on the moon. The rafts will need it within the hour, or lose the tethers and three hundred people. At exactly that moment, your comms pick up Dr. Corso's voice, clear and calm for the first time, saying that it's open, it's open now, and he doesn't think it will be for long.
+- In a drained office on Level Two you find a junior researcher's voice diary, and you play it. Her last entry says that she's going down to fetch Lenn. The next one's dated a month later, and so is the next, and they go on up to yesterday. She sounds quite well, and she keeps on asking whoever's listening to bring her a towel.
+
+Rumors:
+- Maris Station's still sending mail, you know, regular as the tides. The last one was forty pages, mostly about socks.
+- Kelpers say never go in the water on a rising tide. They've got no word for why. They've got eleven words for rising tide.
+- The research people came here to study an old hole in the sea floor, and the hole's been studying them back. That's only what my uncle says. He's got one eye and a very big boat.
+- You know what's at the bottom of that Shaft? A floor. Dry as a biscuit. Two kilometers under the sea, and not a drop of water on it. You tell me who's been mopping.
+- My daughter says she saw Dr. Okoye walking along Level Two. Dr. Okoye's boat went down in the spring. She says that she waved.
+- It's the best kelp in thirty years. Don't ask me. I don't ask it.
+- It's not a research station now. Nobody's paying for it. But the lights go on at seven and they go off at ten, and somebody's been making the coffee.
+- The Hegemony's got a ship up there, sending down subs. We keep finding bits of them on the dock, very neatly stacked, with the bolts in a jar.
+- If somebody tells you that they saw a person walking up out of the water on Maris, ask them how many fingers. I'm serious. Just ask.
+- That Corso used to come over to the rafts for a drink, and he was good company. He sang terribly. He came over last month, stood on the dock all night and didn't come in. He was singing a lot better.
+- A Thessan fellow came out here last year wanting to see the sea-floor samples, and he took one look, went very quiet and left without his hat. We've still got the hat. Do you want it?
+- When the great tide comes, once every nineteen years, the whole of the top of that thing shows above the water. My grandfather saw it. It's next year. Nobody's talking about that, either.
+- Don't take the fish from below the marker buoys. I don't care how good they taste. Actually, that's what I'm worried about: how good they taste.

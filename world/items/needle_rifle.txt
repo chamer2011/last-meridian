@@ -1,0 +1,10 @@
+# Needle Rifle
+order: 5
+type: weapon
+price: 700
+damage: 5 to 12
+stat: perception
+skill: firearms
+
+In a line:
+Silent long-range flechettes favoured by Drift assassins.

@@ -1,0 +1,22 @@
+HOW TO WRITE A FACTION
+======================
+
+Every faction is one file in this folder, named by its id: fleet.txt is the Refugee Fleet, and people, places,
+enemies and stories name factions by that id. The Story board in the game (The story, then Story board, then
+Factions) shows and changes the same files, and npm run check-story reads them all and says what's wrong, with the
+file and the line. The four the game always knew, fleet, hegemony, drift and ilun, are the ones every captain
+starts out knowing; the rest come up as the story goes on.
+
+    # The Salvage Guild
+    order: 5                            (where it comes in lists; leave it out to come after the rest, by name)
+    also called: the Salvage Guild, the Guild
+    starting standing: 0                (how a new captain stands with them, from -100 to 100)
+
+    In a line:
+    Wreck-divers who live by iron contracts and settle everything in their own courts.
+
+    Beliefs:
+    authority -4, loyalty 5, belief -3  (how far they lean on each axis, -10 to 10: authority, loyalty, violence,
+                                         belief, flesh; the game compares them with the player's own)
+
+A part that has nothing in it can be left out.

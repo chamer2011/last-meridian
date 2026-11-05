@@ -57,7 +57,7 @@ test("the fleet is 41 ships and 30,000 people, each with what the Fleet menu sho
 
 function storyText() {
   const parts = [fs.readFileSync(path.join(worldDir, "arc.json"), "utf8"), fs.readFileSync(path.join(worldDir, "fleet-events.json"), "utf8")];
-  for (const folder of ["threads", "places", "characters"]) {
+  for (const folder of ["stories", "places", "characters"]) {
     for (const file of fs.readdirSync(path.join(worldDir, folder))) parts.push(fs.readFileSync(path.join(worldDir, folder, file), "utf8"));
   }
   return parts.join("\n");

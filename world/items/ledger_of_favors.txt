@@ -1,0 +1,10 @@
+# Ledger of Favors
+order: 48
+type: gadget
+price: 450
+
+In a line:
+A worn book of who owes whom from here to Kessara: +2 on Commerce checks and +1 on Streetwise checks while carried, and the Commerce bonus also improves market prices.
+
+Effects:
+skills: commerce 2, streetwise 1

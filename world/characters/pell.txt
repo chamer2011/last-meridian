@@ -1,0 +1,50 @@
+# Pell Asante
+title: Ensign
+also called: Ensign Pell Asante, Ensign Asante, Pell Asante, Pell
+pronouns: she/her
+species: human
+age: 20
+faction: fleet
+role: The Meridian's helm officer
+place: meridian
+crew: yes
+color: #a8e6a1
+
+In a line:
+The youngest officer on the bridge, and the best pilot left in the fleet.
+
+Appearance:
+Young, freckled and permanently short of sleep, in a uniform cut for someone taller.
+
+Personality:
+Earnest, brave and quietly terrified. She thinks of you as someone who knows what they're doing, and that's hard to live up to.
+
+Voice:
+Talks too fast, then catches herself and adds "sir" or "Captain" a beat too late.
+
+Goals:
+Prove she belongs on the bridge, and get her little brother onto a safer ship.
+
+Secrets:
+She never finished flight school. She forged her certification during the evacuation of Aurelis because no one else could fly the ship.
+
+Beliefs:
+authority -2, loyalty -4, violence -2
+
+Attributes:
+might 2, endurance 3, agility 7, perception 6, intellect 5, willpower 3, presence 3, resonance 2
+
+Skills:
+piloting 7, navigation 4, gunnery 3, awareness 3
+
+In a fight:
+threat: 1
+hp: 16
+attack: 2
+defense: 12
+damage: 2 to 5
+weapon: Concord Sidearm
+xp: 20
+credits: 0 to 10
+art: soldier
+tags: 

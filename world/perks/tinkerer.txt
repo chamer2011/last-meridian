@@ -1,0 +1,9 @@
+# Tinkerer
+order: 4
+starting: yes
+
+In a line:
+Salvage career: +2 Engineering, +1 Hacking.
+
+Effects:
+skills: engineering 2, hacking 1

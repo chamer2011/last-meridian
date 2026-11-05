@@ -1,0 +1,56 @@
+# Six Hungry Ships
+kind: politics
+places: sundial, fleet
+people: grann, halm, garrick, odessa
+factions: fleet
+level: 2
+
+The lead:
+Steward Tull has stopped grain shipments to six ships, all of which voted with Speaker Halm last week. She says it's a scheduling matter. She says this with a small smile, and then offers you a potato.
+
+For anyone who isn't the captain:
+Steward Tull has stopped grain shipments to six ships, all of which voted with Speaker Halm last week. She says it's a scheduling matter. She says this with a small smile, and then offers people a potato.
+
+What's really going on:
+Grann Tull is using food to break Halm's voting bloc, and children on those ships are already short. She says the slight was Halm calling her "our good Steward" in open council. The real reason is stranger. Grann and Teodor Halm were married for nine years, thirty-one years ago on Maren Vale, when he was a provincial lawyer with one good coat. The records burned, and nobody in the fleet knows. "Our good Steward" is what he used to call her at home. They also aren't quite the enemies they seem. Since the Fall they've met on the Sundial's east catwalk once a month: each needs a public enemy to hold their faction together, and they've carefully kept the fleet's politics balanced on it. This is the first time she's gone past the plan, because she has seen a Hegemony courier at his door and he has lied to her about it. The embargo is how she's getting his attention. If anyone tells her about Corvane, she'll end him or forgive him, and no one knows which.
+
+How it might go:
+- The potato. It's very good. She has a schedule to show the captain, in perfect order, with six ships on a line marked "later". She calls Speaker Halm the Coat, and adds the captain to her running list of slights, for something that happened three harvests before they got here.
+- The six ships: ration lines, a school cutting lunch, a skipper about to do something stupid. Eight days before it turns truly serious.
+- Clues: she wears a ring on a cord under her collar. He flinches at "our good Steward". An old woman off Maren Vale has a photograph.
+- The east catwalk, at night, once a month: two old people bickering about seed prices and sharing a flask.
+- What the captain does with it.
+
+Ways through:
+- Force: leadership and intimidation to requisition the grain, with tactics to take the Sundial's docks. She has four hundred family members, shovels and the ship's water valves.
+- Go around her: commerce to buy grain elsewhere, stealth and piloting to run sacks out under her nose with the help of farmhands who have cousins on those ships. There's more in Hold Six than the ledger says.
+- Find the real reason: streetwise, lore and awareness to dig out the marriage, then persuasion to put the two of them in one room and lock the door.
+- Play politics: deception and persuasion to turn the six ships' votes, or give Halm a way to back down without looking like he's doing it.
+
+Checks that fit:
+- survival:moderate to read the fields and see she has plenty to spare
+- streetwise:hard to find someone who remembers Maren Vale
+- awareness:moderate to notice the ring on its cord
+- piloting:moderate to run grain through the Sundial's traffic without clearance
+- persuasion:very_hard to get Grann Tull to forgive a slight
+- intimidation:very_hard to frighten a woman who has never missed a harvest
+
+If it comes to a fight:
+- desperate_refugee crowd storming a grain barge if it goes on too long
+
+Where it can end up:
+force: Force: the grain flows. She never forgives it, and she has never forgiven anything. From now on the Sundial delivers exactly what's owed, to the gram, and not a potato more.
+deal: A deal: she restores shipments for a concession in council. Food is now an accepted weapon, and the next person to use it may not be as careful.
+quiet_reconciliation: A quiet reconciliation: the captain keeps the secret and gets them talking. The council's deadlock loosens. Both owe the captain, and together they're far more dangerous than they were apart.
+goes_public: It goes public: Fenn reads the marriage certificate on air, and the whole fleet laughs for the first time in six months. It's good for morale. They both remember who started it, and for the first time in thirty-one years they're on the same side.
+shes_told_about_corvane: She's told about Corvane: she goes white, says thank you and gives the captain a potato. Next morning Halm has lost four votes, and she has stopped going to the catwalk. See fleet_arrest_us.
+
+If nobody steps in:
+after 12 days: Children on six ships are going short, and Steward Tull says it's still a scheduling matter.
+  lead: Children on six ships are going short now, and Steward Tull says it's still a scheduling matter, with the same small smile. Speaker Halm has stopped smiling at all.
+  fleet: morale -1
+after 33 days: Speaker Halm and Steward Tull have made some kind of deal over the grain, and the shipments have started again. Nobody's saying what it cost.
+  lead: The grain's moving again, because Speaker Halm and Steward Tull have made some kind of deal. Nobody's saying what it cost, and you'd have thought those two couldn't agree on the time of day.
+
+Rewards:
+Crates of nutrient_gel and real vegetables, a favor from a woman who never forgets, or her permanent enmity.

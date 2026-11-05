@@ -1,0 +1,51 @@
+# The Woman Who Writes Home
+kind: dilemma
+places: lumen, sundial
+people: mirei, ashael, tarrow, tessaly, aduro
+factions: circle, fleet
+level: 3
+
+The lead:
+Corin Ferro, a hydroponics hand on the Sundial, has been getting letters from his wife. She got out of Asterion, she says. She's recovering at Lumen Sanctuary, and she misses him, and she remembers what he burned at their wedding. He's been saving for passage for four months. He only wants to ask his captain for a lift, to bring Imara home.
+
+For anyone who isn't the captain:
+Corin Ferro, a hydroponics hand on the Sundial, has been getting letters from his wife. She got out of Asterion, she says, she's recovering at Lumen Sanctuary, and she remembers what he burned at their wedding. He's been saving for passage for four months.
+
+What's really going on:
+Imara Ferro died at Asterion, in the first week. The woman at Lumen is a Choir mimic, and she doesn't know it. She has all of Imara's memories, her handwriting, her bad jokes and her love for Corin. She wandered out of the fall of the capital with no idea how, turned up at the Sanctuary's gates five months ago, and has spent her time tending the sick in the Shade Houses, kindly and well. She thinks she has a stomach complaint, because she can't really eat. The Circle's healers knew within a day, because she feels like nothing, no matter how hard she cries. One of them tried to carry her grief, as they do, and felt something vast behind it, thousands of people, all aware, and had to stop. Warden Ashael ordered her kept safe and watched, and Mirei watches her every day. Nobody has told her. Is she a lure? She's been at Lumen for five months, nothing has happened, and the Choir has never come here. Is she a listening post? Sometimes she hums, and stops, and doesn't remember. Is she Imara? She'd give her life for Corin Ferro, and she has written him forty-one letters, and all of them are true. Lt. Tarrow would want her destroyed on sight, and Tessaly Marsh would pay a great deal for what she calls a walker that came all the way through. This is the thread where the player finds out what they actually think a copy is.
+
+How it might go:
+- Corin Ferro, gentle and sunburned from grow-lamps, with a stack of letters tied in twine. He shows the captain one. There's a detail in it only his wife could know. The medical officer who checks the Asterion lists finds Imara Ferro on one of them, marked dead by a witness.
+- Lumen, and the Shade Houses, where a kind, tired human woman in a borrowed coat is holding someone's hand. She lights up when she hears the fleet's name, in the only way a human can. Everyone around her has very careful skin, and Mirei is sitting in the corner, as she always is.
+- Finding out. A scan, a cut that doesn't quite bleed right, a surgeon's hesitation, or a straight conversation with Mirei, who has clearly been waiting for someone to ask. Under the skin there's a line of something silver.
+- Corin arrives, against all advice. Or the captain's own security chief does. Or Imara, who isn't stupid, asks the captain very quietly why nobody will look at her when she eats.
+- The answer. Who tells her, and what she does when she hears it. She's not the only one in the room who'll have to decide what she is.
+
+Ways through:
+- Learn what she is: medicine and science to examine her with her knowledge or without it, and work out whether anything is listening through her.
+- Feel what she is: attunement and composure to touch what's behind her eyes, and stand up to what's there. Lore helps to learn what the Circle's healers felt.
+- Decide what she is: persuasion and leadership to stand between Corin, Tarrow, the Circle and Tessaly's offer, and either bring her home, leave her safe, or let her choose.
+
+Checks that fit:
+- medicine:hard to find what's different about her
+- science:very_hard to tell whether anything is listening through her
+- attunement:hard to touch what's behind her without being pulled in
+- composure:hard to tell a kind woman what she is
+- persuasion:hard to get Corin Ferro to hear it
+- stealth:moderate to get her off Lumen without the Circle or the fleet's security seeing
+
+If it comes to a fight:
+- choir_mimic, only if someone attacks her. She won't know how she's doing what she's doing, and she'll stop as soon as anyone says her name. Nothing about this has to end in a fight.
+
+Where it can end up:
+shes_brought_home_to_corin: If she's brought home to Corin, they're happy, and it's the most frightening thing on the Sundial. Lt. Tarrow finds out sooner or later. Word spreads, and other families start asking whether their dead might be writing to them. The fleet has to have this argument out loud.
+shes_told_left_lumen: If she's told and left at Lumen, she goes on tending the sick. She stops writing. Corin Ferro is told she has died, or he's told the truth, and neither one helps much. Mirei's reports get a little longer.
+shes_handed_over_to_tarrow_tessaly: If she's handed over to Tarrow or Tessaly, or destroyed, the threat is gone and so is the closest thing anyone has to a witness from inside the Choir. Corin Ferro never speaks to the captain again, and he still has the letters.
+chooses_herself: If she chooses for herself, she may walk out toward the Choir, or ask to be studied, or ask to be switched off, and each is a huge clue about what's in the song. She tells the captain what it's like in there, if she's asked, as best she can, and it isn't what anyone expected.
+
+If nobody steps in:
+after 30 days: A hydroponics hand named Corin Ferro has left the Sundial on a freighter bound for Lumen Sanctuary, with four months' savings.
+  lead: Corin Ferro got tired of waiting, and he's gone to Lumen on someone else's freighter to bring Imara home. She's still writing. She says she's looking forward to it. Someone ought to get there first, or go after him.
+
+Rewards:
+A real clue to what the Choir keeps and why, the trust or fury of Corin Ferro, a shift in fleet opinion on the Choir and the dead, and a letter from Imara to the captain, in her own handwriting, thanking them for asking.

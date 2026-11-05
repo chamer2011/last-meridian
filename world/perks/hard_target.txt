@@ -1,0 +1,8 @@
+# Hard Target
+order: 16
+
+In a line:
++1 defense.
+
+Effects:
+defense: 1

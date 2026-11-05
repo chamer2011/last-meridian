@@ -1,0 +1,11 @@
+# Veshti Skin
+order: 33
+type: armor
+price: 500
+defense: 2
+
+In a line:
+The thin pressure layer the Long Families wear under everything: +2 defense, and +2 on checks in vacuum while carried.
+
+Effects:
+in a setting: vacuum 2

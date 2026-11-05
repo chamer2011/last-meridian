@@ -1,0 +1,7 @@
+# Tessen Seed Vault Key
+order: 60
+type: story
+price: 0
+
+In a line:
+The old iron key to Tessen Colony's seed vault, which holds enough to plant a world and the whole of the colony's future.

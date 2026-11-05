@@ -1,0 +1,11 @@
+# Choir Lance
+order: 6
+type: weapon
+price: 1600
+damage: 8 to 14
+stat: resonance
+skill: manifestation
+restricted: yes
+
+In a line:
+A weapon stripped from a Choir Hunter. It sings when fired.

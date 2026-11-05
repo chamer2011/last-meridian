@@ -1,0 +1,8 @@
+# Marine Plate
+order: 10
+type: armor
+price: 650
+defense: 3
+
+In a line:
+Concord boarding armor, scorched but sound.

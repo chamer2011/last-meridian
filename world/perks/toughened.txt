@@ -1,0 +1,8 @@
+# Toughened
+order: 13
+
+In a line:
++10 maximum health.
+
+Effects:
+max hp: 10

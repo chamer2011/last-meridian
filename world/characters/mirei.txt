@@ -1,0 +1,64 @@
+# Mirei
+title: 
+also called: 
+pronouns: she/her
+species: ilari
+age: 39
+faction: circle
+role: A member of the Lumen Circle
+place: lumen
+color: #bfb2c5
+listed: no
+
+In a line:
+An Ilari whose skin shows nothing at all, by choice. Other Ilari find her terrifying, and they're very polite about it.
+
+Appearance:
+Average in every way she can manage, in plain traveling clothes, with skin as blank as a switched-off screen. In a crowd of Ilari she's a gap in the light. Her stillness makes you check your own face.
+
+Personality:
+Attentive, patient and cold by long practice. She gave up the one thing that makes an Ilari belong, so that the rest of them could go on having it, and they can't stand to be near her for it. She's the Circle's best spy, and nobody at Lumen will touch her hand.
+
+Voice:
+Even, unhurried and faintly too polite. She reads your feelings back to you like gauges, then waits: "You're frightened. It's in your shoulders. Go on." Never says "I feel". If you ask how she is, she asks which answer would be most useful to you. She picks up a little of your rhythm and phrasing as you talk, and it takes a while to notice.
+
+Goals:
+Keep Lumen off the Hegemony's lists by any means at all. Find out what the Quiet did to her sister, the one thing she has never been able to find out.
+
+Secrets:
+She went into the Still Rooms as a child, and the Hegemony finished the work: two years in a holding cell at Vantor, where Ilari who showed fear were treated differently. Sabine Vael let her walk out, and Mirei knows why: she's the only person outside the Ministry who knows that Vael is a Resonant. Each keeps the other's secret, and Mirei feeds Vael just enough to keep Inquisitors out of Lumen, which has sometimes meant other people's names. She taught Ashael to go dark, and she alone knows why he asked. Yara Solune, the Quiet's glowing missionary, is her younger sister, who greets her kindly and feels nothing, and Mirei has been watching her for a long time. She hasn't let herself find out what's still under the blank skin. She'd like to, once, in front of someone, and she's afraid there's nothing there.
+
+Beliefs:
+authority 2, loyalty -8, violence 4, belief -3
+
+Attributes:
+might 3, endurance 5, agility 7, perception 9, intellect 7, willpower 10, presence 6, resonance 6
+
+Skills:
+composure 9, deception 8, stealth 7, awareness 7, attunement 6, melee 5, hacking 3
+
+In a fight:
+threat: 3
+hp: 28
+attack: 5
+defense: 15
+damage: 4 to 8
+weapon: Thin Blade
+xp: 80
+credits: 10 to 60
+art: blade
+tags: resonance
+
+When the fight starts:
+- Mirei draws a thin blade without hurry, and nothing moves in her face or on her skin. "You're frightened," she says. "Go on."
+
+When they hit:
+- The thin blade goes in and out before you feel it. "There," she says, watching your shoulders.
+- She was on your left, and then she wasn't, and now you're hurt.
+
+When they miss:
+- You twist away at the last moment, and she adjusts, as if making a note.
+- The blade misses by a hair. "You flinch to the right," she says. "Go on."
+
+When they're beaten:
+- Mirei steps back and lowers the blade, still perfectly blank. "You're relieved," she says. "It won't last."

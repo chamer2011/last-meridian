@@ -15,6 +15,7 @@ import { hasADay, livesHere, peopleAboard } from "./life.js";
 import { isCaptain, toOutsider } from "./role.js";
 import { addItem, audienceBonus, clockRuns } from "./rules.js";
 import { conditionHolds } from "./scene-text.js";
+import { recordFact } from "./record.js";
 import { rumorsFrom } from "./story-library.js";
 import { colorForName, parseNarration } from "../public/story.js";
 import { COMBAT_ART, LOOKS, ROOM_KINDS, ROOM_TALK, WORLD_MAPS } from "./world.js";
@@ -170,7 +171,7 @@ export function askAtDoor(game, key) {
   const rule = exit.closed.ask ?? {};
   const open = (said) => {
     openDoorsTo(game, exit.to);
-    if (rule.flag) (game.flags ??= {})[rule.flag] = true;
+    if (rule.flag) recordFact(game, { id: rule.flag });
     return { said: said ?? "The way is open.", opened: true };
   };
   // In order: a condition that opens it, a check whose result decides, a door that simply opens when asked, or an answer that leaves it closed.
@@ -197,7 +198,7 @@ export function answerDoor(game, success) {
     game.opened ??= {};
     game.opened[asked.place] ??= [];
     if (!game.opened[asked.place].includes(asked.to)) game.opened[asked.place].push(asked.to);
-    if (asked.flag) (game.flags ??= {})[asked.flag] = true;
+    if (asked.flag) recordFact(game, { id: asked.flag });
   }
   return success ? asked.pass : asked.fail;
 }
@@ -1042,6 +1043,7 @@ export function talkView(game) {
     written,
     typed: game.mode !== "written",
     id: talk.id,
+    key: talk.key,
     name: talk.name,
     short: talk.short,
     where: talk.where,

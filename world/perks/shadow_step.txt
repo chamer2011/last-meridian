@@ -1,0 +1,9 @@
+# Shadow Step
+order: 18
+needs skill: stealth 2
+
+In a line:
++3 Stealth.
+
+Effects:
+skills: stealth 3

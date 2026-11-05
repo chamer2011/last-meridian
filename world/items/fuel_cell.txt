@@ -1,0 +1,8 @@
+# Fuel Cell
+order: 16
+type: consumable
+price: 100
+effect: fuel 3
+
+In a line:
+Adds 3 fuel to the ship.

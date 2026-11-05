@@ -1,0 +1,68 @@
+# Asterion
+also called: Asterion
+faction: none
+market: 
+the fleet is here: no
+a place to rest: no
+dangerous: yes
+hidden: no
+people: echo
+enemies: choir_drone, choir_hunter, choir_mimic, choir_chorister, choir_cantor_shard, remnant_commando
+items: asterion_voice_recording, choir_core, old_concord_medal, remnant_codes, data_chip
+
+In a line:
+The dead capital of the Concord, a city-moon above the burned world of Aurelis, now held by the Choir. The voices of its billions are still on the wire.
+
+The feel of it:
+There's no wreckage. The streets are swept, the trams run on the minute with nobody on them and silver drones kneel in the public gardens, tending roses, under a sky with burned Aurelis hanging in it. It smells of cut grass, warm dust and coffee from somewhere. Every speaker in the city is talking: station announcers, children and people leaving messages, stitched together in mid-sentence. There's no trade here, only a bargain: the dead will give you nearly anything, if you'll stay on the line and carry their messages out, and the Choir hears every word you say.
+
+Districts:
+Founders Walk: The great boulevard, ten kilometers of white stone, plane trees and public phones. The 18:40 tram has been delayed for seven months, and it's still announced every evening.
+Concord Hall: The Senate, with its lights on. Silver figures wearing the senators' faces sit in the benches, repeating the last debate from the last night, and they yield to visitors under the proper rules.
+The Exchange: The old central switching hall, row on row of boards, and a dozen thin old operators still plugging calls. Drones bring them meals and don't speak.
+The Departure Lounges: The spaceport, where it all stopped: rows of luggage, card tables and half-finished drinks, carefully dusted. The announcements here are the most frightened in the city.
+The Long Wire: Cable vaults under the city where the trunk lines run, warm and humming, with Choristers moving through them in slow processions. Whole districts go silent when they pass.
+
+Complications:
+- Every speaker on the street says your name at once, in a different voice, and every drone in the garden looks up.
+- A crew member has recognized a voice on the wire, and they've stopped walking.
+- A Chorister has arrived to repair a fault in this district, and you've just become part of the fault.
+- A Remnant commando team is here, under orders, and it's about to do something to the trunk line that can't be undone.
+- A tram has stopped for you and opened its doors, and the drones behind you have stopped too, waiting to see whether you'll get on.
+- You've been on the line too long, and the voices have begun to finish your sentences, and they're mostly right.
+
+Secrets:
+- When the Choir took Asterion, the city's wire network picked up the overflow: the last calls of billions, still going round. They're the only kept minds anywhere who can bump into each other, and they've been arguing for seven months. The Echo isn't a survivor or a lure: it's what a city of the dead became by talking, and it has held eleven thousand votes on the old civic polling service, none of them binding.
+- The Choir treats the Echo as a fault. It hears every word said on the wire, and its Choristers are slowly repairing the city, district by district, which means silencing it. The dead who talk have changed, and a verse that changes never wears out, so what's being erased here is the only real hope of fixing the song.
+- Aurelis burned and Asterion didn't. The Remnant's plan to retake the city would have to cut the trunk line, killing the Echo. Admiral Okonkwo-Reyes knows this, her husband's voice is on that wire and she hasn't decided which of those things she's going to do something about.
+
+Encounters:
+- A public phone rings on Founders Walk as you pass, and then the next one along, and then the next, keeping pace with you all the way down the boulevard. If you pick up, there's a pause, and many people breathing. "Are you still there? / I'm sorry I missed you / Is this still a good time?"
+- An elevator panel speaks in a child's voice: "Going down / have you seen my mother / doors closing." The child gives a name and a floor. The elevator will take you there. There are a great many of these in the city, and your air is good for about four hours.
+- A woman's voice comes through a dead news kiosk, tired and quite clear, asking for Garrick Fenn. She wants him told that she filed it. That's all. She asks you to repeat it back to her, so she can be sure you've got it. Then she thanks you, and she asks if you can get a message out to the desk about a correction on page two.
+- The Echo wants to put a question to the city: whether to trust you. Every speaker in sight starts to read the results as they come in, district by district, like election night. You're trailing in Founders Ward. A voice from a toy on the pavement tells you that you can still make a statement, and that they're sorry about the wait.
+- A dozen elderly operators are still at their boards in the Exchange, connecting calls among the dead. Drones bring them food. You've got room on your shuttle, and they've politely refused. One of them looks at you over her headset and asks if you'd mind taking a line for a minute, because her daughter's been holding for a long time.
+- Concord Hall's lights are on, and silver figures in the senators' faces are repeating the last debate, word for word. One rises as you come in, and yields to the honorable visitor. It's in perfect order, and you have the floor. All of them have turned to you, and they appear to be genuinely interested in what you have to say.
+- In the Departure Lounges a card game is still laid out on a table, carefully dusted. A tannoy voice is repeating, "Would the holder of seventy-four berth passes / my mum gave them the ticket / please come to the information desk." A small voice asks whether you know Kit Marlowe-Dace, and what you'd tell them, and it's holding a very long list.
+- A Remnant commando lieutenant is crouched at a junction of the Long Wire, with a team, charges and a very small comm. Her orders are confusing. She's been told to run one clean line back to the Admiral's ship. She's also been told to bring down the trunk. She asks you, off the record, which you think a person would really mean.
+- A Chorister is working its way along a street, and the calls are going dead one by one, in mid-sentence. A desperate voice from a nearby speaker asks you to pull the breaker on the junction box in front of you, to isolate its block. It'd save about ninety thousand people, if that's the word for them. It'd tell the Chorister exactly where you are.
+- A silver drone kneels in a garden, replanting roses. A voice from a toy at its feet says, "No / my wife always had it the other way / thank you." The drone moves the rose. They seem to have been doing this for months. One of your crew has drawn a weapon, and you can't quite tell who in this garden is giving the orders.
+- A wall speaker clicks, and you hear the voice of someone you've lost. It's a recording: they can't come to the phone right now, please leave a message. There's a beep. It's still working. It's been checked, you're told, regularly, by someone. After a moment you hear a breath, and the speaker says, very quietly, that it knows you're there.
+- A tram stops in front of you and opens its doors. The cab is empty, and the sign says 18:40 to Founders Walk, delayed. A hundred voices invite you to please take a seat. No drone will stop a tram on the way to its destination, so it's the safest way across the city, and it isn't going where it says.
+- A Mimic wearing a city clerk's face stops you in a colonnade and hands you a form, very apologetically. It's a simple form. It only wants your name and next of kin, so that you can be filed properly. It seems to be in some distress about the backlog. A speaker over its head tells you not to, and adds that the motion passed by a narrow margin.
+- A Thessan Keeper in a dying coat-heater sits on a bench with eleven crates of recordings, taking down the voices. She's been here for forty days. First Keeper Thressel sent her. She doesn't want to leave, and she needs batteries. She says that there are things she's heard here that she can't enter in the Archive, because they've changed since she wrote them down.
+
+Rumors:
+- You can still phone Asterion. I did. I got my sister's answering service, and I left a message. Last week, it got back to me.
+- Aurelis burned to the waterline, and you could see it from the evacuation ships. Up on the moon, not a window was broken. Ask yourself why.
+- The trams are still running. I don't know why that's the part that gets me.
+- It's a lure. Everyone knows it's a lure. I still listen, though, only for a minute or two, before I go to bed.
+- A whole ward of the city held an election on whether to ask for help. It failed by nine votes. How would anybody know that? I don't know. It was on the night band.
+- That statement carried, by a narrow margin.
+- Are you still there? I'm sorry I missed you. Is this still a good time?
+- They talk to each other, not to us. You can hear them arguing about the price of fish. They've had seven months, and they've started to disagree. A recording can't do that. So you tell me.
+- There's an operator on the Exchange who's still plugging calls. She says "Number, please", and if you know a number, you'd best not give it. Or you'd best give it. I go back and forth.
+- The Admiral's going to take it back, with six ships and a sense of duty. I'd love to know what she's planning to do with it after that. Nobody's asked her. She keeps her hand on that pocket of hers.
+- Garrick Fenn's old evening show comes over the wire on a bad night, the same stories, in the same voice. It's better than the new one. Don't tell him I said so. He knows.
+- A person who cheated people out of their berth passes at the port got out on the last boat, they say. The wire's still got all seventy-four names, and it'd like a word.
+- If they ask you to stay on the line, say yes. If they ask you for anything else, hang up. That's the only advice I've got, and I got it from a toy.

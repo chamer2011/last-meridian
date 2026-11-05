@@ -1,0 +1,11 @@
+# Listens Past the Hum
+order: 47
+needs skill: attunement 4
+needs attribute: resonance 5
+
+In a line:
+You've sat with the hum for long enough to hear the shape of what's underneath it. +1 Attunement, and better tools in Attunement check windows, as if you were one tier better.
+
+Effects:
+skills: attunement 1
+better tools in: attunement 1

@@ -1,0 +1,10 @@
+# Quartermaster
+order: 20
+needs skill: commerce 2
+
+In a line:
++1 Commerce, and market prices are 10% better.
+
+Effects:
+skills: commerce 1
+price bonus: 0.1

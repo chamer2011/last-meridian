@@ -1,0 +1,10 @@
+# Nav Slate
+order: 46
+type: gadget
+price: 300
+
+In a line:
+A scratched slate of jump tables, with corrections in four different hands: +2 on Navigation checks while carried.
+
+Effects:
+skills: navigation 2

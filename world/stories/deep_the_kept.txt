@@ -1,0 +1,56 @@
+# A Guided Tour
+kind: exploration
+places: nest
+people: cantor, tarrow, voss, oskar
+factions: fleet, quiet
+level: 7
+
+The lead:
+Nobody has come back from the Choir Nest, and the Cantor says that's because nobody has ever asked to. It has offered to show you around, and Lieutenant Tarrow has offered to come along and bring explosives.
+
+For anyone who isn't the captain:
+Nobody has come back from the Choir Nest, and the Cantor says that's because nobody has ever asked to. It has offered to show anyone around, and Lieutenant Tarrow has offered to go along and bring explosives.
+
+What's really going on:
+The Nest is a dead star wrapped in a shell of silver lattice the size of a solar system, and everyone has imagined it as a fortress or a hive. It's a hospital, or a reliquary. Nothing here is trying to frighten anyone. The drones step politely around you, and they all know your name. In the Gallery of Faces, faces rise to the surface of endless silver walls, turn to follow you and sink again, and every one is someone kept. The Waiting Rooms are perfect copies of places people loved, and a kept person can be visited there. Say a name and a machine takes you. They're so glad to see you. They tell you the story about the boat. Five minutes later they tell you the story about the boat. They aren't unhappy. They can't change, the dust doesn't settle, and that's the horror of it and the whole reason it's failing. In the Failing Choir, a dark section of the shell, machines repeat broken phrases and rebuild the same spar over and over: that's what loss of coherence looks like from the outside. At the Heart, the great silent space around the dead star, the song starts. The oldest verse is the First Builders who climbed in, worn smooth by repetition and polite about it. The whole lattice focuses the song inward through the star and out the far side, at one point in the dark, and it has never once turned away. A captured visitor isn't killed: they wake in a Waiting Room, unharmed, with the door open. Tarrow's bomb won't touch the Heart, though she may not believe that. The Cantor will let her try. Arc clues: who_it_sings_to, cantor_no_deal, boredom_not_noise, and a map for any of the endings.
+
+How it might go:
+- Flying in. There's no defense. Silver ships make way, and spars miles long slide past with drones moving along them like ants. The Cantor, on the band, points things out like a proud and nervous guide. Every gunner on the Meridian is sweating.
+- The Gallery of Faces. The horizon goes up instead of down. Hot metal and ozone get in through a sealed suit, then the smell of a kitchen you knew as a child. Sooner or later you see a face you know.
+- A visit, in a Waiting Room: whoever the captain has lost, or Tarrow's sister, or Oskar's daughter if he came. A porch, a dormitory, a ship's galley. They're so glad. They ask if you've been eating. They tell the story about the boat. Then they tell it again.
+- The Failing Choir, then the Heart. A drone holding your sleeve, getting one child's sentence wrong. Then the sound becomes something you can't stand next to. It's very old. It's tired, and it's polite about it. On the long plates, the whole shell is aimed at one place, and you could draw that line yourself.
+- The choice, with Tarrow's hand on a detonator and her own dead a few rooms away. She asks the captain what the right thing is. She has never asked anyone that before.
+
+Ways through:
+- Guest: accept the tour and keep the rules (composure, persuasion). Ask questions, take nothing, and leave when you say you will. You'd be the first.
+- Spy: map the place while being shown around (science, awareness, stealth, hacking): where the Heart is, how the lattice is focused, and what would carry a note or a conversation.
+- Resonant: go into the song as far as you dare from here (attunement). You can hear anyone, and you might not come back the same. Manifestation can draw a voice out of the wall for a moment, and you should think about whether that's a kindness.
+- Saboteur: Tarrow's way (engineering, stealth, firearms). The bomb does little. A precise cut does more. Everything's gentle until you hurt something. Then it's still gentle, and there's a lot more of it.
+- Anyone: just sit with them for a while (composure). It's the hardest check in the game, and the cost of failing is that you stay a bit longer.
+
+Checks that fit:
+- composure:very_hard to leave the Waiting Room
+- attunement:very_hard to go into the song and come back with your name
+- science:hard to map where the lattice is aimed
+- stealth:hard to place a charge with every machine in the shell knowing your name
+- persuasion:moderate to keep the Cantor's tour going where you want it
+- manifestation:very_hard to draw one voice out of the wall
+
+If it comes to a fight:
+- choir_chorister if the truce is broken
+- choir_hunter and choir_drone if anyone sets off what they carried in
+
+Where it can end up:
+return: If they return, they're the first people ever to come back. That alone changes the fleet's view of everything. The Quiet rush to hear about it, and Tarrow doesn't speak for a week.
+tarrows_bomb_goes_off: If Tarrow's bomb goes off, a few thousand kept minds are lost, for real, and it makes no difference to the song. Tarrow has to live with having killed the dead. The Cantor asks why. It isn't angry.
+asks_to_stay_with_person_found: If someone asks to stay with the person they found, can the captain stop them? Should they? Whoever it is wakes every morning in that room, glad. If it's a main character, only if the player's choices earn it.
+map_nest_whats_needed_strike: A map of the Nest is what's needed for the strike in the Destroy ending, or for opening the wire in the Relief ending. Whoever holds it will be asked for it.
+captain_tells_cantor_what_saw_failing: If the captain tells the Cantor what they saw in the Failing Choir, it says: 'We know. We have asked for a doctor. Nobody has come.'
+
+If nobody steps in:
+after 45 days: The Cantor's offer to show anyone around the Choir Nest has started playing on the Beacon band, and a few people have asked.
+  lead: The Cantor's offer to show you around the Nest is still open, and now it's offering the same to anyone else who asks. A few people have asked. Lieutenant Tarrow's still offering to come along, and she's checked her explosives.
+  fleet: morale -1
+
+Rewards:
+A map on a data_chip. A choir_core, given freely if the Cantor is asked: 'Yes, you may study us. Nobody has ever asked.' Nothing else should leave this place.

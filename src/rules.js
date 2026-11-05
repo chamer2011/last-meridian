@@ -18,6 +18,7 @@ import { advanceLife, lifeOf } from "./life.js";
 import { startingLoreIds } from "./lore.js";
 import { THREAT_LABELS } from "./npc.js";
 import { START_LIST, inTheFleet, isCaptain, jobHere, roleBrief, startOf, toOutsider } from "./role.js";
+import { recordLines, recordView } from "./record.js";
 import { advanceStories, clockOf } from "./story-clock.js";
 import { emptyStory, storyView } from "./story-library.js";
 import { startInRoom, talkView, walkLine, walkView } from "./walk.js";
@@ -971,7 +972,7 @@ export function publicState(game) {
     role: roleView(game),
     world: { here: placeNow(game, game.location), news: newsView(game) },
     location: { id: game.location, ...place },
-    story: storyView(game),
+    story: { ...storyView(game), record: recordView(game) },
     equipped: game.equipped,
     inventory: Object.entries(game.inventory).filter(([id]) => ITEMS[id]).map(([id, count]) => ({
       id,
@@ -1065,6 +1066,7 @@ export function aiSnapshot(game) {
     `Faction standing: ${factions}.`,
     ...(quests.length ? quests : ["Active quests: none."]),
     `Finished quests: ${finished}.`,
+    ...recordLines(game),
     ...(contacts.length ? contacts : ["Known people: none yet."]),
     `Character files added in this campaign: ${addedPeople}.`,
     `Enemy types added in this campaign: ${addedEnemies}.`,

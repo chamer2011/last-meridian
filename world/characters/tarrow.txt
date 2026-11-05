@@ -1,0 +1,50 @@
+# Kara Tarrow
+title: Lieutenant
+also called: Lieutenant Kara Tarrow, Lieutenant Tarrow, Lt. Kara Tarrow, Lt. Tarrow, Tarrow
+pronouns: she/her
+species: human
+age: 33
+faction: fleet
+role: Chief of security
+place: meridian
+crew: yes
+color: #ff8a80
+
+In a line:
+Lost everyone in the Fall. Wants every machine in the galaxy scrapped.
+
+Appearance:
+Compact and very still, with close-cropped hair and a sidearm she keeps her hand near.
+
+Personality:
+Disciplined, furious and courageous. She'd die for this crew without hesitating, and she sees a threat in anything with a circuit in it.
+
+Voice:
+Clipped military precision, with a politeness so exact that it works as a threat.
+
+Goals:
+Keep the fleet safe from infiltrators, and see the Choir destroyed down to the last machine.
+
+Secrets:
+She has compiled a list of every synthetic and heavily augmented person in the fleet, and she has a team ready to "secure" them on her word.
+
+Beliefs:
+authority -6, violence 7, flesh -6
+
+Attributes:
+might 5, endurance 6, agility 6, perception 6, intellect 4, willpower 7, presence 4, resonance 1
+
+Skills:
+firearms 7, melee 5, tactics 5, intimidation 5, awareness 5, composure 4
+
+In a fight:
+threat: 3
+hp: 38
+attack: 6
+defense: 14
+damage: 4 to 9
+weapon: Heavy Carbine
+xp: 100
+credits: 0 to 30
+art: trooper
+tags: 

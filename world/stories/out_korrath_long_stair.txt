@@ -1,0 +1,51 @@
+# The Long Stair
+kind: survival
+places: korrath
+people: hesk, tobin, marrow, aduro
+factions: clans, fleet
+level: 2
+
+The lead:
+Four hundred Korrun from your fleet have come home to a world most of them have never seen. Clan law says any Korrun who climbs the Long Stair under full gravity, carrying their own weight, gets a bed and a place at the furnace. Warden Varr won't make exceptions. Old Mabby Kesh is ninety-one, and she's already on the first step.
+
+For anyone who isn't the captain:
+Four hundred Korrun from the fleet have come home to a world most of them have never seen. Clan law says any Korrun who climbs the Long Stair under full gravity, carrying their own weight, gets a bed and a place at the furnace. Warden Varr won't make exceptions. Old Mabby Kesh is ninety-one, and she's already on the first step.
+
+What's really going on:
+The Stair is two thousand steps cut into a cliff above the slag river. Most of the fleet's Korrun grew up on ships and stations, and the clans call them the Light: broad as any Korrun, but raised on a third of the gravity. Perhaps half of them can make it. The strong will get a home and a future, and the old, the sick and the young will go back to a hungry fleet alone. It breaks families in half. The law has hardened over the years, but the words are older. Read in the old clan tongue, "carry your own weight" is the phrase for pulling your share, and has nothing to do with the climb's being a solitary thing. The Stair has a handrail on both sides and a landing every fifty steps wide enough for three, because it was built by people who carried each other up. Warden Hesk Varr knows this better than anyone. A slag burst broke both his legs when he was seven, they took two years to mend, and when his year came his clan-mates carried him up the Stair on their backs. Almost nobody alive remembers. It's why he's warden, and it's why he won't say anything. A warden who bends the law for the people he pities doesn't deserve the scale. He needs someone to read it to him out loud, in front of the crowd.
+
+How it might go:
+- The foot of the Stair. Four hundred people with their bags, a wall of heat, and a line of silent clan watchers. Dr. Aduro's medics say a few hearts will stop on this climb, and they can't say whose.
+- The first hundred steps, and the first ones to falter. Mabby Kesh has made twenty-three. Her grandson, halfway up, has stopped and turned around, and the watchers don't say whether that's allowed.
+- The captain climbs too, or stands at the bottom and gives the order. Chief Tobin Hask, sixty-three and short for a Korrun, who climbed this at sixteen, has gone very quiet and has started up the steps with someone's grandmother. Dunn Marrow is swearing, and he has started up the steps as well.
+- A collapse on a landing, and a question for the watchers: does it break the law if someone picks her up? The watchers look at the Warden. The Warden looks at the captain, for rather a long time.
+- The top, or wherever people have got to by the time the shift bell rings. Who has a home now, and who's going back?
+
+Ways through:
+- Climb it: athletics and survival to make the climb in heavy gravity, and show people that it can be done, or carry someone yourself.
+- Read it: lore and persuasion to find what the law's old words meant, and say it where Hesk Varr has to hear.
+- Organize it: leadership, medicine and engineering to turn four hundred frightened people into teams, rig harnesses and rest stops, and get as many people up as possible without breaking the rule.
+
+Checks that fit:
+- athletics:hard to climb the Stair in full gravity
+- survival:moderate to pace the climb so that nobody's heart gives out
+- lore:hard to read the old clan text and see what it really says
+- persuasion:hard to say it to Hesk Varr in front of everyone
+- leadership:moderate to turn a crowd into climbing teams
+- medicine:moderate to keep the weakest going
+
+Where it can end up:
+old_meaning_wins: If the old meaning wins, the whole four hundred climb in chains of hands, slowly, all through the night, and Hesk Varr has a very brief, formal word with the captain. The clans gain four hundred Korrun, and the fleet loses some of its best workers and makes a lifelong friend of a world.
+only_strong_make: If only the strong make it, about half stay and half go back to the fleet, families broken. The Light who were left behind are bitter, and those who stayed send food when they can.
+captain_orders_fleets_korrun_not_to: If the captain orders the fleet's Korrun not to climb, they stay with the fleet, angry, and Marrow says nothing for several days. Some of them go anyway, at night.
+mabby_kesh_dies_stair: If Mabby Kesh dies on the Stair, the crowd stops, and what happens next is up to the captain's words. If she makes it, she spits over the top of the cliff and demands to know what's for dinner.
+
+If nobody steps in:
+after 9 days: The fleet's Korrun have started up the Long Stair at Korrath, and the old and the sick have started to fall behind.
+  lead: The fleet's Korrun have started up the Long Stair without you, and the old and the sick are falling behind. Mabby Kesh is ninety-one, and she's still climbing. Warden Varr's still not making exceptions.
+after 24 days: About half of the fleet's Korrun reached the top of the Long Stair and got their beds at the furnace. The rest have come back to the fleet, and they aren't talking.
+  lead: About half of the fleet's Korrun made it up the Long Stair, and they've got beds at the furnace. The rest came back, and they aren't talking about it. Mabby Kesh is still somewhere on the stair, by all accounts, and someone ought to go and see.
+  fleet: morale -1
+
+Rewards:
+Clans standing, some fleet morale, food and hull plate sent back from the Korrun who stayed, and a korrun_harness from Mabby Kesh's family, who have no one left who can wear it.

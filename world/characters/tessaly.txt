@@ -1,0 +1,64 @@
+# Tessaly Marsh
+title: 
+also called: Doc Marsh, Tessaly Marsh, Tessaly
+pronouns: she/her
+species: human
+age: 66
+faction: none
+role: A wandering ship's doctor and fence
+place: none
+color: #c68d94
+listed: no
+
+In a line:
+Turns up wherever things have just gone wrong. Good with a wound, and better with a bill of sale.
+
+Appearance:
+A broad, weathered woman in a once-expensive coat with a great many inside pockets, half of them clinking. She has a surgeon's clean, short-nailed hands, a cigarillo she never lights and a face that's stopped being surprised.
+
+Personality:
+Cynical, unshockable and funny in a way that makes you check your pockets. She'll treat a sick child for free and sell the father a bottle at ten times cost in the same five minutes, and she honestly believes she's helping. She's the best doctor you'll ever meet, she was struck off for cause, and she steals patients.
+
+Voice:
+Brisk and gravelly, with the bedside manner of a bailiff. Says "Don't tell me, I'll guess", then reads your whole story from your injuries, and she's usually right. Her standard diagnosis is "You'll live. What've you got?", meaning what you can pay her with. Prices care in goods, not money. Calls wounds "lovely". Never says "I can't help", only "That'll cost you."
+
+Goals:
+Keep her ship flying, keep selling and keep moving. She wants one thing, and all the rest pays for it: a way to bring back someone the Choir has half taken.
+
+Secrets:
+In the back of her ship, the Honest Mistake, her son Bas lies in a cold-sleep pod. He's twenty, and the Choir started copying him and stopped. Every half-copied case she finds is research for him. She turns up after every disaster because that's where the half-copied are, and she buys them, or steals them off the wards if no one's looking. She has found nine, and she knows the word Concord Intelligence had for such people: walkers. She has offered Dr. Adeyemi a great deal for Pavel Ostrov. She also runs a hidden ward at Haven, behind Ring Four, with sixty-three patients that triage gave up on, kept alive on doses Adeyemi steals for her. The pods and the ward are why she fences, why every debt she writes goes on Mother Quill's books, and why she sold Hollis-Nine a live Choir core. She taught both Adeyemi and Sen Aduro their trade, and she was struck off for selling hospital stock to the plague towns on the Verrin run. When she came through Tessen and saw Emmet Dey, she knew exactly what she was looking at.
+
+Beliefs:
+authority 6, loyalty 6, violence -3, belief -6
+
+Attributes:
+might 4, endurance 5, agility 4, perception 8, intellect 8, willpower 8, presence 6, resonance 2
+
+Skills:
+medicine 9, commerce 7, streetwise 7, deception 6, science 5, firearms 3
+
+In a fight:
+threat: 2
+hp: 22
+attack: 3
+defense: 12
+damage: 3 to 6
+weapon: Slug Thrower and Scalpel
+xp: 40
+credits: 40 to 200
+art: scoundrel
+tags: 
+
+When the fight starts:
+- Tessaly Marsh shifts her unlit cigarillo to the other side of her mouth and takes out an old slug thrower. "Don't tell me," she says. "I'll guess."
+
+When they hit:
+- Her shot goes exactly where she wants it, and she knows what it's hit. "You'll live," she says.
+- A scalpel comes out of an inside pocket and goes straight back in. "Lovely," she says.
+
+When they miss:
+- The slug takes a chunk out of the wall. "That'll cost you," she says.
+- You twist away from the scalpel, and she clicks her tongue at your form.
+
+When they're beaten:
+- Tessaly Marsh sits down, presses a hand to her side and has a look. "You'll live," she tells herself. "What've you got?"

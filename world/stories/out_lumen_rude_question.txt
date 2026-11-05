@@ -1,0 +1,51 @@
+# The Rude Question
+kind: mystery
+places: lumen
+people: ashael, mirei
+factions: circle, fleet, hegemony
+level: 2
+
+The lead:
+An old healer was found dead in the Water Courts nine days ago, and Lumen's people are saying it must have been one of the Dim, a guest with skin that shows nothing, like your fleet's cook who found her. The Circle has asked you to look into it, of all people. "We would take it as a kindness," says a woman with a face like still water, "if you asked some very rude questions."
+
+For anyone who isn't the captain:
+An old healer was found dead in the Water Courts nine days ago, and Lumen's people are saying it must have been one of the Dim, a guest with skin that shows nothing. The Circle is looking for someone willing to ask some very rude questions.
+
+What's really going on:
+A city of people whose skin shows every feeling should be the one place a murderer can't hide. Everyone at Lumen knows who did it. They've known for nine days. Ilen Sova, the beloved keeper of the bathing canals, has been walking around lit up with horror and guilt in patterns anyone can read from across a courtyard. And nobody will say so, because the first rule of Lumen, the only rule that lets a city of empaths live side by side, is that what shows on the skin is never spoken of unless it's offered. To say "you look guilty" is the rudest thing a person can do here, and if it's done once, every private grief in the city becomes fair game, and the panic could be felt on the far side of the world. So the city is quietly letting Prisca Hale, the fleet cook, take the blame, and hating itself, and glowing with it. They've brought in the captain because an outsider can't read skin and can't be rude in the way that counts. The victim, the healer Sael Ithren, was passing the names of hidden Resonants and refugees to Vantor. Ilen found the list. Two hundred people are alive because of the killing. And there's a floor below that, for a player who keeps digging: Sael thought she was protecting Lumen, because someone told her to, and that someone is the woman with the still face. Mirei feeds the Ministry just enough names to keep the Inquisitors out of Lumen. She's the one person in the city who shows nothing, so she's the one person nobody can read. She brought the captain here to close this before anyone looks further. And the final twist: humans are the only people in Lumen who can lie comfortably. If the captain turns down the tell-band offered on the Stranger's Terrace, whatever they say at the Open Steps will simply be believed or not. The city can't check. That's why it watches the Dim so closely, and that's what it needs.
+
+How it might go:
+- Arrival on the Stranger's Terrace, and the polite offer of a tell-band. Prisca Hale, frightened and in a borrowed room, knows nothing, and thousands of glowing people look away from her as she passes.
+- Asking around. Everyone is unbearably kind and says nothing. A player with any sense of attention will notice that all of them go a little sick and grey whenever one particular name comes up, and that it isn't a human name.
+- Ilen Sova, poling a little boat along the warm canals, lit up like a bad wound. They answer every question truthfully, since nobody has ever asked the right one. Asking it, out loud, makes a whole courtyard flinch and fall silent.
+- Sael's list, with its neat rows of names, and the question of how an old healer came to be in touch with Vantor at all. Mirei is always just nearby, with a courteous word and nothing on her face. If the captain has met Yara Solune, they might notice a resemblance.
+- The Open Steps, in front of everyone, with Warden Ashael dark at the top. The captain gets to say what happened, and nobody here can tell if it's true.
+
+Ways through:
+- Be rude: persuasion and composure to ask the unaskable question openly, and bear what it does to the people around you.
+- Read the city: awareness and lore to learn enough skin-speech and custom to work it out without breaking anything, and then work out what to do about it. Attunement helps, and shows too much.
+- Tell a story: deception and streetwise to clear Prisca with a lie that the city badly wants to believe, a human's lie that no skin can contradict, and leave Lumen's peace intact.
+
+Checks that fit:
+- awareness:moderate to see the whole city go grey at one name
+- lore:moderate to learn the first rule of Lumen and what breaking it would do
+- persuasion:hard to ask Ilen Sova the question in a way they can answer
+- deception:hard to lie to thousands of people on the Open Steps
+- attunement:hard to feel the difference between grief and guilt across a crowd
+- hacking:very_hard to trace how Sael's list reached the Ministry
+
+If it comes to a fight:
+- ministry_blade, sent quietly if the captain starts tracing the list back to Vantor. A public place or a word to Mirei makes the blade withdraw, with apologies.
+
+Where it can end up:
+captain_names_ilen_openly: If the captain names Ilen openly, Ilen is relieved beyond words, and the first rule of Lumen is broken. For a while people start saying things out loud. It's a dreadful season, some of it is healthy, and the Shade Houses overflow.
+captain_lies_clears_everyone_with_story: If the captain lies and clears everyone with a story about a Hegemony assassin, the city glows with gratitude and shame. The captain has now used a power nobody else here has, and the Circle knows exactly what it's looking at.
+prisca_hale_takes_blame: If Prisca Hale takes the blame, she's expelled and so is every human refugee in Lumen, about nine hundred people. The city doesn't enjoy it. Nobody looks at each other for a very long time.
+captain_uncovers_mireis_part: If the captain uncovers Mirei's part, they hold a secret that could wreck the Circle and put the Inquisitors in Lumen's streets. She doesn't plead. She asks what they'd have done, and how many names they'd have spent to keep this city safe.
+
+If nobody steps in:
+after 30 days: Lumen's people have started refusing service to guests whose skin shows nothing, since the old healer's death in the Water Courts.
+  lead: Nobody at Lumen will serve one of the Dim now, and your fleet's cook is under a polite sort of guard. Everyone in the city knows something about that old healer, you can see it on their skin, and nobody's said it. They'd still take it as a kindness if you asked some very rude questions.
+
+Rewards:
+A lumen_lens from the Circle, for someone who's earned the right to read a little of what's on a person's skin. Circle standing, nine hundred grateful refugees, and Mirei's closely held regard, or her closely held attention.

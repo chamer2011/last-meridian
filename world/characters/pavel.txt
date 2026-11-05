@@ -1,0 +1,50 @@
+# Pavel Ostrov
+title: 
+also called: Pavel Ostrov, Pavel, Ostrov
+pronouns: he/him
+species: human
+age: 38
+faction: fleet
+role: A patient on Anselm's Mercy
+place: anselm
+color: #e5f0db
+listed: no
+
+In a line:
+Woke from a long coma with no idea how much has changed. He's the friendliest man on the ship, though the other patients keep moving their cots away.
+
+Appearance:
+A slight, smiling man with a coma patient's wasted arms and a shock of newly grown hair. He taps out rhythms with two fingers on whatever's nearest, and he looks at everyone as if he's glad they came.
+
+Personality:
+Sweet, chatty and endlessly interested, and the only person in the fleet who isn't afraid, because he slept through the reason. He was a piano tuner at Aurelis, with perfect pitch and strong opinions on hotel pianos. He may be the most dangerous person on the ship, and he's worried he's being a nuisance to the nurses.
+
+Voice:
+Friendly, gossipy and a little out of date. Talks about the Concord in the present tense, asks how the ferries are running, and apologizes for taking up your time. Mid-sentence he drifts into a hum, always the same three falling notes and one rising, then picks up at the next word without noticing. Write the hum as an action beat. If you mention it, he's puzzled: "Was I? Sorry. Terrible habit. What key?"
+
+Goals:
+To be discharged, go home to Aurelis and find his wife Ilse and his daughter Mila. He wants someone to tell him why everyone changes the subject.
+
+Secrets:
+He doesn't know he's humming a phrase of the Choir's song, perfectly, and he doesn't believe you when you tell him. He was found in a drifting pod, half-copied: the Choir began on him and stopped, and part of him is still in the song. When he hums, people nearby sleep and lose their fear, and the dying in Ward Six stop dying, because holding minds together is what the song is for. Those who recover keep humming, in perfect time, even across ships. The heart monitors of the eleven in the Still Ward fall into step with him. Iven Sorel could sleep beside him. The Quiet's followers stand outside the ward to listen, and Lt. Tarrow would lock him up if she knew. His wife Ilse is number 412 on Dr. Adeyemi's list: she was dying in the first month, and she asked for a transfer. His daughter Mila is seven, and alive on the Sundial. No one has told either of them about the other, because no one knows what he is.
+
+Beliefs:
+loyalty -3, violence -5, belief 2
+
+Attributes:
+might 1, endurance 2, agility 3, perception 9, intellect 5, willpower 4, presence 6, resonance 6
+
+Skills:
+awareness 4, persuasion 4, engineering 3, lore 2
+
+In a fight:
+threat: 1
+hp: 9
+attack: 0
+defense: 9
+damage: 1 to 2
+weapon: Bare Hands
+xp: 10
+credits: 0 to 5
+art: civilian
+tags: 

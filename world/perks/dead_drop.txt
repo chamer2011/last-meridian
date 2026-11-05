@@ -1,0 +1,9 @@
+# Dead Drop
+order: 9
+starting: yes
+
+In a line:
+Intelligence career: +1 Stealth, Deception and Hacking.
+
+Effects:
+skills: stealth 1, deception 1, hacking 1

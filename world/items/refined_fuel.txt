@@ -1,0 +1,8 @@
+# Refined Fuel
+order: 40
+type: consumable
+price: 170
+effect: fuel 5
+
+In a line:
+Adds 5 fuel to the ship.

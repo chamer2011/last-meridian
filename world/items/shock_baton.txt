@@ -1,0 +1,10 @@
+# Shock Baton
+order: 25
+type: weapon
+price: 90
+damage: 3 to 6
+stat: might
+skill: melee
+
+In a line:
+A dockside baton with a charge in the grip and a smell of burned air: 3 to 6 damage, using Might and Melee.

@@ -1,0 +1,69 @@
+# The Veshti Deepyards
+also called: the Deepyards, The Deepyards, Deepyards, Veshti Deepyards
+faction: families
+market: veshti_longrifle, veshti_skin, pilot_gloves, nav_slate, repair_kit, emergency_patch, energy_cell, fuel_cell
+the fleet is here: no
+a place to rest: no
+dangerous: no
+hidden: no
+people: ilkin, tamsin
+enemies: wreck_diver, drift_raider, salvage_mech, void_stalker, hegemony_hunter
+items: veshti_longrifle, veshti_skin, nav_slate, pilot_gloves
+
+In a line:
+Shipyards inside an ice ring, home to the Long Families, who dislike planets and strangers equally.
+
+The feel of it:
+Ice melt, cutting oil and smoky spiced tea, in soft blue light with no up or down, and long pale people drifting past you on corridors lined with nine generations of family portraits. Great bergs turn slowly past every window, and the ring outside creaks like a ship at anchor. You can't simply walk up to a Veshti: you need a sponsor, you speak through a Second, and they give you a short rude name that gets a little longer each time you've done something to deserve it.
+
+Districts:
+The Rinse: The arrivals lock, where visitors are scrubbed by tall bored attendants to get the planet off them. It takes hours, and it's not only for show. They keep the swabs.
+The Long Drydock: Ao-Vash Family's great yard, the last in known space that can refit a frigate. It's a kilometer of gantries and sparks, and each cutter on it answers to the Yardmother.
+The Hearth Rings: Slow-spinning family habitats with ancestors' names hung on every rail. Each ring is lit and warm and very tidy, though you rarely see many people in them.
+The Ice Cut: Trawler berths and melt-works at the rough edge of the ring, where the low branches of the Families work and drink. Exiles can get a meal here, as long as nobody says their name.
+The Dark Moorings: A long row of mothballed family ships, tethered in the ice's shadow for generations. No one goes there, and all of them are kept fueled.
+
+Complications:
+- A swab from the Rinse has come back dirty, and an entire Family has been insulted by whoever brought in your party.
+- Someone in your crew has used a Family elder's whole name, in a friendly way, in front of their children.
+- The ring shifts, and a berg the size of a warship begins a slow, stately drift toward the drydock.
+- Your Korrun crew member has jammed in a Veshti corridor, and is blocking a procession.
+- Your berth in the Long Drydock has been given to a rival Family's ship, to settle a debt from two hundred years ago.
+- Without any warning, the magnetic grip on your boots is being described as an act of vandalism against someone's great-grandmother's carpet.
+
+Secrets:
+- The Long Families are dying out. Births have fallen for three generations, and more than half of the Hearth Rings are empty, kept lit and tidy so that outsiders won't notice. It's why Ilkin's real price for her drydock is children.
+- The ring's ice isn't natural. It formed around a First Builder frame, and the oldest anchor points of the Long Drydock are bolted to something nobody built. The first Families knew, and it's why they came here.
+- The routes Tamsin Ao-Rel was exiled for inventing come from the Ao-Vash route plate, the First Builder relic that the first Veshti followed off their homeworld. The Long Families have quietly used them for nine generations. Tamsin copied the plate and flew it, and they weren't exiled for lying, but for telling people.
+
+Encounters:
+- A very tall attendant at the Rinse hands you a rough sponge and asks, with distaste, how recently you've touched a planet. Lying is easy, but she's keeping a swab, and if she passes you she's staking her Family's honor on it. She's about nineteen, and it's her first week.
+- Yardmother Ilkin Ao-Vash won't speak to you. A small nephew acts as her Second, and translates her silences. When she does finally speak, it's your name, pronounced badly on purpose. Her price for the drydock is two hundred children from your fleet, to be raised as Family. They'd be safe, and they'd be fed.
+- In an Ice Cut bar, a long stooped Veshti in three coats, whom no one will look at, takes a grease pencil and draws a jump route up your forearm. Tamsin Ao-Rel says that it's real, and that nobody's flown it but them. Anyone who talks to them loses a name, and they'd like you to know that you've just lost yours.
+- A refugee girl from your fleet stowed away on an ice trawler, and has discovered that she's a natural in zero gravity. The trawler Family wants to adopt her, and she wants to be adopted. Her father is at the hatch with his one good coat on, and he hasn't got any idea what to say to her.
+- A kind old aunt is shocked to hear that your name is still one syllable. She'd like to lend you one of hers for tonight's dinner. There are eleven rules for borrowing a name, and she's only going to explain nine of them.
+- You lose your way and float through a beautifully kept home: a table set for six, tea still warm and a child's shoes neatly tethered by the door. Nobody has lived here for sixty years. A very old Veshti appears behind you with a fresh pot, and she begs you not to tell anyone what you've seen.
+- Two Family heads have been locked in a forty-year dispute over who must bow first, and they've met head-on in a docking corridor, with your supply shipment stuck behind them. Neither can move without losing face. Some outsider might commit an unforgivable offense that would give them both a way out.
+- A trawler captain has cut a body out of the ring's deep ice. It's in a suit nobody recognizes, and it's the wrong proportions for any people she knows. She's very frightened. The Family would pay her a lot to forget it, and she's asking you to take it away before they find out she's looked inside.
+- A berg has broken loose and is on course for the drydock, with your ship in it. Three Families are arguing over whose honor is at stake in moving it. They reckon they'll have a decision in a day or so, and it hits in about forty minutes.
+- A Veshti teenager has a stolen picture of rain. She's never been anywhere with weather, and she's heard that you can just stand in it. She corners you at a family dinner and asks you to describe it to her exactly, with thirty appalled relatives listening and her grandmother slowly putting down her tea.
+- A Hegemony envoy, grey and shaking with space-sickness, has been kept waiting for days in a slow-spinning parlor where the Family keep offering him more soup. He's here to buy the drydock. He's also reached the point where he'd tell you anything, if you'd just help him find a place to be sick.
+- It's a birth, the first on this ring in nine years, and the whole yard has stopped work. Custom holds that the first stranger the child's family sees carries either luck or ruin, and that's you, floating in the wrong corridor. Four hundred people have turned to look at you, and an old woman holds out the baby.
+- A drydock foreman offers to work on your hull at night, with his own crew and without the Yardmother's leave. He hated hearing the price she named. He'd like just one thing, and that's for you to take his daughter off the ring, to somewhere with a future, without her ever knowing he asked.
+- A Korrun on your crew got wedged in a family parlor an hour ago, and the Family have politely begun treating him as furniture. There's a tray on him now. The matriarch has taken a liking to him, she's talking to him about her late husband, and he has signaled to you, with some urgency, not to interrupt, because she's just mentioned the Dark Moorings.
+
+Rumors:
+- Never use a Veshti's whole name until she gives it to you. She'll tell you it's fine. She'll have you killed in about forty years, and she'll send flowers.
+- It's the only drydock left that can take a frigate. The Yardmother knows that better than anyone. She's got a price, and from what I hear it isn't money.
+- I've been rinsed four times. Last time I asked what the fuss was. She said you people live on top of something that's dead and you call it home, and you get it all over everything.
+- Half of those family rings are all lit up with nobody home. I crew for a trawler, and we can see the heat from out there. You can't heat a place that well and have nobody breathing in it, unless you're trying to tell someone something.
+- Tamsin Ao-Rel flew out past the edge of every chart there is, and came back with the ship's clocks wrong. The Families painted over that name for it. Or for saying so. Not the same thing, is it?
+- Old spacers' rule says that a fixed light on every band means shoal water, not a port. So what would you call a fixed light on every band that everyone's sailing toward? But then, Veshti say that sort of thing about everything, don't they?
+- There's something in the ice. Everyone on the Cut has a story. Mine's that I saw a straight line going through a berg, a kilometer long and as thick as a hair, and it was not a crack.
+- Veshti don't lie. It just takes them nine generations to get around to telling you the truth.
+- A planet-walker tried to bribe a Family elder once. She accepted. She's still accepting, and his grandchildren are still paying.
+- Those longrifles are the best in the galaxy, made for shooting two kilometers across nothing. They're no use in a breeze. I've never met a Veshti who knows what a breeze is.
+- If they give you a second syllable, have a drink. If they give you a third, watch your back, because somebody's decided you're worth marrying.
+- Those ships at the Dark Moorings are fully fueled, every one. Enough to get the whole of the Long Families away, if something were to happen. I don't know what they're waiting for. I think they know.
+- They'd take in your kids, you know. Treat them like gold, too. I've met them, the ones who've been adopted. They look through you like glass, and they can't remember what their mothers called them.
+- I hear the Hegemony's got an envoy here who's been waiting two months. They haven't said no. They've just kept on bringing him soup.

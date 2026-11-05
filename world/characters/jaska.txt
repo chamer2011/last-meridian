@@ -1,0 +1,64 @@
+# Jaska Moor
+title: Inspector
+also called: Inspector Jaska Moor, Inspector Moor, Jaska Moor, Jaska
+pronouns: she/her
+species: human
+age: 44
+faction: hegemony
+role: A Hegemony customs inspector
+place: none
+color: #fdd1d6
+listed: no
+
+In a line:
+Keeps turning up, always polite, always with one more question.
+
+Appearance:
+A round-faced, pleasant woman in a slightly crumpled grey uniform, with a paper notebook held shut by a rubber band and a bag of boiled sweets in her pocket. You'd forget her at once, if she'd let you.
+
+Personality:
+Friendly, humble and absolutely relentless. She can't be bought or bullied, and it has never once occurred to her that the rules might not apply to someone important. She believes in the Hegemony's law more completely than anyone in the Hegemony does, and that's about to become a serious problem for her.
+
+Voice:
+Warm, apologetic and slightly scatterbrained. Offers you a boiled sweet before she asks anything. Talks about tiny discrepancies: twelve kilos on a bill of lading, a date written the wrong way round. Thanks you, leaves and comes back: "Sorry. I've written something here, and I can't read my own hand." Her phrase is "I'm sure there's a simple answer." Never raises her voice, and always remembers your mother's name.
+
+Goals:
+To make the numbers come out. It started as twelve tons of fuel that didn't match on a Hegemony refueling log at Haven, and she'll follow that one discrepancy all the way up, wherever it goes. Her day job is the fleet, and she does that well too.
+
+Secrets:
+By day she tracks the fleet's jumps, and she turns up at its disasters with a transport and a stack of service contracts, and she honestly likes saving people. What she's really following is the discrepancy, and that's the Regent's unmarked ships. She doesn't know that yet, though she has a bad feeling. She has noticed the transfers out of Bastion Nine, and the same forms led her to Severa Lune, whom she could destroy whenever she likes. She's taking the audit to Bastion in person. She has asked Mott Jessup about his fuel logs twice. If someone showed her where those ships go, she'd file a formal complaint, through channels, addressed to the Regency. It would get her killed, and it could shake the whole Hegemony. She has started keeping a second notebook at home. Her own brother was arrested years ago and his ration line stopped, and she has never said so. She dislikes Inquisitor Vael, who never fills in her forms.
+
+Beliefs:
+authority -8, loyalty -1, violence -4, belief -5
+
+Attributes:
+might 3, endurance 4, agility 4, perception 10, intellect 8, willpower 9, presence 6, resonance 1
+
+Skills:
+awareness 9, composure 7, persuasion 6, streetwise 6, lore 5, firearms 4
+
+In a fight:
+threat: 2
+hp: 22
+attack: 3
+defense: 13
+damage: 3 to 6
+weapon: Service Pistol, Rarely Drawn
+xp: 40
+credits: 5 to 40
+art: officer
+tags: hegemony, authority
+
+When the fight starts:
+- Inspector Jaska Moor sighs, offers you a boiled sweet and unclips a pistol she has clearly never needed. "I'm sure there's a simple answer," she says.
+
+When they hit:
+- Her shot is careful and unhurried, and it hits you. "Oh, I am sorry," she says, and writes something down.
+- She steps inside your reach and does something exact to your wrist, quite politely.
+
+When they miss:
+- Her shot goes wide. She frowns at the pistol as if it's filled in the wrong form.
+- You roll clear. "Sorry," she says. "I'm slow at this."
+
+When they're beaten:
+- Inspector Jaska Moor sits down against the wall and feels for her notebook. "I'll have to put this in my report," she says, quite gently.

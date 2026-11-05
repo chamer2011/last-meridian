@@ -1,0 +1,11 @@
+# Knows the Price
+order: 44
+needs skill: manifestation 4
+needs attribute: resonance 5
+
+In a line:
+Resonance always costs something, and you've learned to stop just short of what you can't pay. +2 maximum energy, and better tools in Manifestation check windows, as if you were one tier better.
+
+Effects:
+better tools in: manifestation 1
+max energy: 2

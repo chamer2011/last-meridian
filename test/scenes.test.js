@@ -482,11 +482,11 @@ test("the Downstairs Crew ends every way it can end with the quest settled, and 
   assert.ok(endings.length >= 14, `${endings.length} endings`);
   for (const [name, part] of endings) {
     if (name === "back_up") continue;
-    const settled = (part.do ?? []).find((step) => step.tool === "update_quest" && step.id === DOWNSTAIRS && step.status !== "active");
+    const settled = (part.do ?? []).find((step) => (step.tool === "update_quest" && step.id === DOWNSTAIRS && step.status !== "active") || step.ending);
     assert.ok(settled, `${name} doesn't settle the quest`);
   }
   // The parts that lead to back_up settle it on the way.
-  for (const name of ["sworn", "sworn_after_reunion"]) assert.ok(scene.parts[name].do.some((step) => step.tool === "update_quest" && step.status === "completed"), name);
+  for (const name of ["sworn", "sworn_after_reunion"]) assert.ok(scene.parts[name].do.some((step) => step.ending === "treaty_cadets"), name);
   const words = fs.readFileSync(path.join(projectDir, "world", "scenes", `thread_${DOWNSTAIRS}.txt`), "utf8");
   assert.ok(words.split(/\s+/).length > 4000, "it's a whole story, not a sketch");
 });

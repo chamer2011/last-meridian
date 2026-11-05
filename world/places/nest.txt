@@ -1,0 +1,67 @@
+# The Choir Nest
+also called: the Choir Nest, Choir Nest, the Nest, The Nest
+faction: none
+market: 
+the fleet is here: no
+a place to rest: no
+dangerous: yes
+hidden: no
+people: cantor
+enemies: choir_drone, choir_hunter, choir_mimic, choir_chorister, choir_cantor_shard
+items: choir_core, choir_lance, beacon_shard
+
+In a line:
+A dead star wrapped in silver machinery. Nobody has come back from here. Yet.
+
+The feel of it:
+A shell of silver lattice the size of a solar system, wrapped round a star that burned out long ago, with the song coming up through the deck plates and into your back teeth. Hot metal and ozone get in through a sealed suit, which shouldn't be possible, and then, without warning, the smell of a kitchen you knew as a child. Nothing here is trying to frighten you. The machines step politely around you, and they're very patient, and they all know your name.
+
+Districts:
+The Outer Lattice: Silver spars miles long with drones moving along them like ants on a branch. They don't fire on approaching ships unless they're fired on first, and that frightens veterans more than anything.
+The Gallery of Faces: Endless curved walls of smooth silver, where faces rise to the surface, turn to follow you and sink again. Sooner or later you see one you know.
+The Waiting Rooms: Perfect copies of places that visitors have loved: a porch, a dormitory, a ship's galley. Everything is right except that the dust doesn't settle.
+The Failing Choir: A dark section of the shell where the machines have gone wrong, repeating broken phrases and rebuilding the same spar over and over. Drones here seem almost to be grieving.
+The Heart: The great silent space around the dead star, where the song starts. The Cantor can be found here when it wishes to be found.
+
+Complications:
+- Your suit radio begins to relay the voice of someone from your crew, from a part of the shell they aren't in.
+- A section of the lattice closes behind you, gently, without any sign of ill will.
+- A member of your party stops walking and says they can hear their family, and they're not wrong.
+- A Chorister notices you've stopped moving with the song, and every drone in the gallery turns its head.
+- Your ship's navigation computer starts offering you the way back to the Nest as your home port.
+- The song falters, for one terrible second, and everything in the shell stops. Whatever you were doing, you've been noticed.
+
+Secrets:
+- The Nest doesn't aim outward at the galaxy. The whole lattice focuses the song inward through the dead star and out the far side, at one single point in the dark, and the Choir has never once turned it away.
+- Those copied here aren't all gone. Each mind is a thread in the song, and a voice can be drawn out, briefly, by someone who knew it well. The Failing Choir is spreading because the machines are running out of the original song and filling the gaps with copies of the dead.
+- A captured visitor isn't killed. If the player falls here, they wake in a Waiting Room, unharmed, with the door open. The Choir's deepest law is the watch bill, which is why it let Commander Voss walk off the Tarn: she was off watch. It isn't a kindness, or at least not one a person would recognize.
+
+Encounters:
+- Someone you lost is sitting on an upturned crate on the Outer Lattice, in the clothes they died in, with no suit. They ask you whether you've been eating. There's no air here, and you can hear them perfectly.
+- A drone stops in front of you, holding out a small object in its silver hands: a thing you lost as a child. It waits. If you take it, it moves on. If you don't, it follows you, holding it out, for the rest of your visit.
+- A member of your party finds a door in the Gallery of Faces with their own mother's handwriting on a note pinned to it. It says to come in out of the cold. They're asking your permission, and their hand's already on the frame.
+- In a Waiting Room, a perfect copy of the Meridian's mess hall, a figure with Commander Voss's face is eating alone. It looks up and asks for your orders in her voice, then waits for you to say something only she'd know.
+- You find a human being here: a Concord engineer in a rotted suit, very much alive, repairing a spar with bare hands. He's been here since the Fall. He's quite happy, and he asks you to pass him the wrench. He'd like to know what's happened to his dog.
+- In the Failing Choir a damaged drone is trying to speak, and it keeps getting one child's sentence wrong. It holds on to your sleeve. If you say the sentence correctly for it, something in the section around you lights up, and something else goes dark.
+- A Choir Hunter stands blocking the corridor, with its head on one side, listening to you breathe. Your sidearm isn't drawn. It's waiting to find out whether you'll draw it, and it has plainly been waiting a long time.
+- A wall of faces turns all at once toward someone in your party. Several hundred mouths say the same quiet sentence: a question about a promise that person made and never kept. They've gone white. Do you ask what it was?
+- The Cantor walks beside you for a while, wearing the face of someone you haven't thought of in years. It says "Captain" as though it hasn't finished deciding, and you know exactly who says it like that. It's asking for nothing. It says you must be very tired, and it offers you the chance to put everything down, here, just for a moment.
+- A member of your party is offered a trade by a voice on their radio, a voice they know: they stay, and the voice's owner gets to walk out with you, whole and breathing. The voice is begging them not to do it. A figure is already walking toward you down the spar.
+- You come across a long silver table with hundreds of objects laid out: rings, keys, tools, children's shoes, a Thessan reading-glass. It's been carefully dusted. A chorister hums over it, and if you touch anything the humming breaks and starts over.
+- A voice among the thousands is saying numbers, the same ones, a long way off. If you stop to write them down, your navigator will recognize them as old Concord bearings. If you keep walking, the voice speeds up, and it sounds frightened.
+- You hear a nursery song drift along the shell from a section where no one's been. Your engineer swears it's coming through the hull of your own ship, and it's getting closer to the right tune. It seems to be learning it from somebody aboard.
+
+Rumors:
+- Nobody's come back from the Nest. Nobody but you lot have ever even tried. So who told us that's where they come from, then? I've been wondering about that.
+- They say you hear your mother first. That's the first night out. After that it's whoever you've wronged.
+- A scout crew went within a light-hour and came back with nothing wrong with them. They've all stopped locking their doors, and they can't say why.
+- Fire one shot at that thing and they'll come for every ship in the fleet. Don't fire, and they just let you walk in. I don't know which of those I like least.
+- It's a dead star. You know what kills a star? I don't either. I'm a hydroponics tech. But I've asked a lot of people smarter than me, and none of them wanted to talk about it.
+- I heard the machines there have got all of us on file: every face, every voice. So there's a me in there, walking around, who hasn't made any of my mistakes.
+- If you see somebody you love in there, don't answer them. I've heard that from three different people, and I don't know how any one of them would know.
+- Come in out of the cold, love. It's only us. You've been so very good, and you must be so tired.
+- Tell the captain the kettle's on. Tell them the kettle's been on all this time, and there's no hurry at all. Tell them we kept their chair.
+- Admiral Tennick flew a whole battlegroup at that thing in the first week, and the machines parted around her like water, let her go right in. She was on the channel for three days, and she sounded very pleased. Then she stopped.
+- There's a part of it that's gone dark, if you believe the long-range plates. Whole sections. Some say we hurt it. Nobody can say when, or with what.
+- My gunner's mate swears that if you get close enough, you can hear it make mistakes. I said, what do you mean, mistakes? He said you'd know, if you sang.
+- The Quiet want to go there, you know. They've got a whole boat ready. They've got a list of people who get to go first, and they've been saving up for it, like a holiday.

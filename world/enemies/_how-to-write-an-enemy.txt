@@ -1,0 +1,48 @@
+HOW TO WRITE AN ENEMY
+=====================
+
+Every kind of enemy the player can fight is one file in this folder, named by its id: dock_thug.txt is the Dock
+Thug, and places and stories name enemies by that id. The Story board in the game (The story, then Story board,
+then Enemies) shows and changes the same files, and npm run check-story reads them all and says what's wrong, with
+the file and the line. People with a file of their own in world/characters fight from that file instead.
+
+    # Dock Thug
+    threat: 1                           (1 to 5: how dangerous, and how the game scales them)
+    hp: 14
+    attack: 2
+    defense: 11
+    damage: 2 to 5
+    weapon: Stun Baton
+    xp: 20                              (what beating one is worth)
+    credits: 10 to 40                   (what they carry)
+    art: brawler                        (how they're drawn: brawler, soldier, trooper, drone, synthetic, hunter, ...)
+    tags: machines, choir               (what they count as, for conditions and perks; leave it empty if none)
+    motive: paid                        (why they fight: paid, greed, orders, belief, cause, honor, hunger, desperate,
+                                         guarding, programmed or choir; the parley works from it)
+    faction: drift                      (who they fight for, by id; leave it out if nobody)
+    machine: yes                        (leave it out if not)
+    boss: yes                           (leave it out if not)
+    on hit: stress 2                    (what a hit also does to the player: stress or energy; leave it out if nothing)
+
+    In a line:
+    Hired muscle with a stun baton.
+
+    When the fight starts:
+    - A thug with a stun baton steps out from between the cargo stacks.
+    When they hit:
+    - The baton catches you across the ribs.
+    When they miss:
+    - The baton whistles past your ear.
+    When they hit hard:
+    - ...
+    When they're beaten:
+    - ...
+    When they join the fight:
+    - ...
+    When they're stunned:
+    - ...
+    When persuading works:              (and When persuading fails, When paying works, When a threat works,
+    - ...                                When a lie works, When calming works, When a shutdown works)
+
+The lines are read out in a fight, one picked at random each time; a kind of line that's left out gets a plain
+one. A part that has nothing in it can be left out.

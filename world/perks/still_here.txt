@@ -1,0 +1,11 @@
+# Still Here
+order: 53
+needs perk: toughened
+needs attribute: endurance 5
+
+In a line:
+You've been listed among the dead twice so far, and both times the paperwork was wrong. +8 maximum health, and fatigue builds 10% slower.
+
+Effects:
+max hp: 8
+fatigue rate: 0.9

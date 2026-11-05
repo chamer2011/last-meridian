@@ -1,0 +1,50 @@
+# The Extended Cruise
+kind: exploration
+places: ghostlight
+people: tessaly, garrick, aduro
+factions: fleet
+
+The lead:
+Your boarding party finds the lost liner Halcyon Promise lit up and warm in the Drift of Lost Ships, and a steward in a spotless bow tie is waiting at the lock. He asks to see your reservation. There's a string quartet playing somewhere. He's terribly sorry, but dinner seating ended at eight, and could he offer you a drink at the bar?
+
+For anyone who isn't the captain:
+The lost liner Halcyon Promise is lit up and warm in the Drift of Lost Ships, and a steward in a spotless bow tie is waiting at the lock. He asks to see everyone's reservation. There's a string quartet playing somewhere.
+
+What's really going on:
+When the Fall came, the Halcyon Promise was two weeks into a luxury cruise with three thousand passengers. She fled into the Ghostlight with her crew and her stores. Her captain died of a heart attack in the first week. The purser, a thin, immaculate man named Lucien Sarr, took one look at three thousand frightened rich people and told them the cruise had been extended because of a navigation issue. That was six months ago. It's still going. There are three shows a night, the same ones. Portions have grown smaller, and the menu describes them with more care each week. There's a bridge tournament and a very long-running romance on Deck Five. About a third of the passengers have worked it out, and they've quietly agreed not to say so. They're the ones smiling hardest. The rest honestly believe that it's the best-managed delay in the history of travel. Lucien Sarr hasn't slept properly in six months. He's kept three thousand people alive and sane, with no deaths by violence, on a lie, and he's the bravest person the captain will ever meet. The liner has a hospital, a hydroponic garden, forty engineers and doctors among the passengers, and a hold full of fine wine, which the fleet could use. She has twelve weeks of food left. Tessaly Marsh has been aboard for a month as the ship's physician, and she's been selling the passengers' jewelry to smugglers at the Cold Market to buy that food. Someone has to tell them. If they're told, it could all fall apart in an hour.
+
+How it might go:
+- The lock, the bow tie and the quartet. The boarding party in their patched suits are shown to the bar and asked to mind the carpet. A cheerful old lady asks the captain whether they've heard when the ship will reach Vesper Sound.
+- Dinner. A very small piece of something on a very large plate, described at length. Someone at the table catches the captain's eye and gives the tiniest shake of her head.
+- Lucien Sarr, in his office, with the door closed. His hands shake when nobody's looking. He begs them not to tell anyone, and he asks about the fleet's food, and he has a spreadsheet.
+- Word starts to get out, or Garrick Fenn gets wind of it and wants the greatest story of the war, or the third of the passengers who know come to the captain in a body and ask what they should do.
+- The announcement. Who says it, and what do they say? The quartet is still playing, and the steward is still waiting with his tray.
+
+Ways through:
+- Keep the lie going: deception and commerce to pose as the shipping line's agents, and bring the liner into the fleet as a "scheduled transfer", with Lucien Sarr's blessing.
+- Tell the truth well: persuasion, leadership and composure in the grand ballroom, with Dr. Aduro's medics standing by, to bring three thousand people slowly into the real world.
+- Solve the practical problem first: medicine, engineering and navigation to stabilize the ship and plot a way out of the Drift, and let the passengers find out at their own pace, or never.
+
+Checks that fit:
+- deception:moderate to pass as an agent of the shipping line
+- persuasion:hard to bring a ballroom of people through the worst news of their lives
+- leadership:hard to keep order when the truth breaks
+- medicine:moderate to see who's close to breaking
+- commerce:moderate to work out what the liner's stores can do for the fleet
+- navigation:hard to plot a way out of the Drift for a ship that size
+
+If it comes to a fight:
+- desperate_refugee if a third-class deck panics at the news, and drift_raider if Tessaly's smuggler contacts decide to come and take the lot. An orderly lifeboat drill solves more than a pistol can.
+
+Where it can end up:
+liner_joins_fleet_with_lie_intact: If the liner joins the fleet with the lie intact, the fleet gains doctors, engineers and fine wine, and there's now a ship full of people who think they're on holiday. It's very funny, then it isn't. When they find out, the captain's name is on the brochure.
+truth_told_well: If the truth is told well, there's a terrible week, three thousand people mourn all at once, and then they become one of the fleet's strongest ships. Lucien Sarr sleeps for two days.
+told_badly: If it's told badly, the ship tears itself apart, fast, and the fleet takes on whoever's left, and takes the blame.
+captain_leaves_undisturbed: If the captain leaves them undisturbed, Sarr's twelve weeks run out somewhere out of sight, and the fleet hears a quartet on a dead channel in about three months. It's a ship knowingly left behind, if anyone's keeping score.
+
+If nobody steps in:
+after 45 days: A diver back from the Ghostlight says the lost liner Halcyon Promise is still lit up in the Drift of Lost Ships, and her string quartet's still playing.
+  lead: The Halcyon Promise is still lit up and warm in the Drift of Lost Ships, and her steward's still asking to see reservations. He's asked, very nicely, if your ship would carry a passenger's letter of complaint about the delay.
+
+Rewards:
+A hospital ship's worth of doctors, or just a surgeon_lens and some trauma_kit from the liner's stores. Lucien Sarr as a very capable friend, a bottle of something extraordinary, and Tessaly's reluctant respect.

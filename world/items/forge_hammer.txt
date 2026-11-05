@@ -1,0 +1,10 @@
+# Forge Hammer
+order: 27
+type: weapon
+price: 450
+damage: 6 to 10
+stat: might
+skill: melee
+
+In a line:
+A Korrun smith's hammer, balanced for arms built on a heavy world: 6 to 10 damage, using Might and Melee.

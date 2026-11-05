@@ -1,0 +1,49 @@
+# Jun Sable
+title: 
+also called: Jun Sable, Sable
+pronouns: they/them
+species: veshti
+age: 55
+faction: none
+role: Owner of the Neutral Ground, the bar at Haven Station
+place: haven
+color: #b8c4ff
+
+In a line:
+Runs the only bar at Haven Station where every faction drinks together. Knows everything, and sells it.
+
+Appearance:
+A very tall Veshti folded behind a very low bar, polishing a glass that has never once been clean.
+
+Personality:
+Dry, unflappable and scrupulously fair. Neutrality isn't their principle, it's their business model.
+
+Voice:
+Laconic and deadpan. Answers questions with prices.
+
+Goals:
+Keep the bar open and the peace kept, and stay useful to everyone at once.
+
+Secrets:
+They're a former Concord Intelligence officer, and they know exactly what happened to the CFS Tarn.
+
+Beliefs:
+authority 3, loyalty 3, violence -3, belief -2
+
+Attributes:
+might 2, endurance 3, agility 7, perception 8, intellect 6, willpower 6, presence 6, resonance 1
+
+Skills:
+streetwise 8, commerce 6, deception 6, awareness 7, firearms 4, stealth 4
+
+In a fight:
+threat: 2
+hp: 24
+attack: 4
+defense: 14
+damage: 4 to 8
+weapon: Shotgun Under the Bar
+xp: 60
+credits: 50 to 150
+art: scoundrel
+tags: 

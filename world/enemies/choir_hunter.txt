@@ -1,0 +1,35 @@
+# Choir Hunter
+threat: 5
+hp: 60
+attack: 7
+defense: 16
+damage: 6 to 12
+weapon: Silver Hands
+xp: 220
+credits: 0 to 0
+art: hunter
+tags: choir, machines
+motive: choir
+machine: yes
+boss: yes
+on hit: stress 3
+
+In a line:
+A towering machine wearing the face of someone you lost.
+
+When the fight starts:
+- A towering silver machine ducks through the hatch, wearing the face of someone you lost, and smiles at you with it.
+
+When they hit:
+- Silver hands close on you with terrible gentleness, and something breaks.
+- It speaks your name in a dead friend's voice as it strikes.
+
+When they miss:
+- You throw yourself aside, and the deck buckles where you stood.
+- It reaches for you, and misses, and only turns to follow.
+
+When they hit hard:
+- It lifts you up and looks at you with that face, and then it lets you fall.
+
+When they're beaten:
+- The Hunter stops, mid-word. The borrowed face goes slack, and at last the singing stops.

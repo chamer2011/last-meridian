@@ -1,0 +1,50 @@
+# The Serene Regent
+title: 
+also called: the Serene Regent, Serene Regent, the Regent, The Regent
+pronouns: they/them
+species: human
+age: 70
+faction: hegemony
+role: Ruler of the Hegemony
+place: vantor
+color: #ffd966
+prominent: yes
+
+In a line:
+Offers safety. Asks for everything.
+
+Appearance:
+Nobody outside the inner court knows. Official portraits show a calm, ageless figure in plain white.
+
+Personality:
+Serene, reasonable and absolutely without mercy. They've never needed to raise their voice.
+
+Voice:
+Calm and gentle. Never says "I", only "the Regency", and speaks of terrible things as if discussing the weather.
+
+Goals:
+Absorb the fleet, gather up every Resonant left alive, and keep the Hegemony standing after everything else has fallen.
+
+Secrets:
+The Choir has left Vantor alone because the Regent pays it. Each month, political prisoners are loaded onto unmarked ships and sent out past the border, and the Choir takes them. The Regent thinks of it as a tax.
+
+Beliefs:
+authority -10, belief -5, violence 4, flesh -6
+
+Attributes:
+might 3, endurance 4, agility 3, perception 8, intellect 9, willpower 10, presence 10, resonance 1
+
+Skills:
+leadership 9, persuasion 8, deception 8, intimidation 7, lore 6, composure 9
+
+In a fight:
+threat: 3
+hp: 30
+attack: 4
+defense: 15
+damage: 3 to 7
+weapon: Ceremonial Pistol
+xp: 150
+credits: 100 to 300
+art: officer
+tags: hegemony

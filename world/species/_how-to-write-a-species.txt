@@ -1,0 +1,40 @@
+HOW TO WRITE A SPECIES
+======================
+
+Every kind of people a character can be is one file in this folder, named by its id: ilari.txt is the Ilari, and
+the people in world/characters name their species by that id. The character creator offers them in the order their
+files give. The Story board in the game (The story, then Story board, then Species) shows and changes the same
+files, and npm run check-story reads them all and says what's wrong, with the file and the line.
+
+    # Ilari
+    order: 4                            (where it comes in the character creator's list)
+    extra attribute points: 2           (what a new character of this species gets to spend; leave it out for none)
+    extra trait points: 1
+    ageless terms: 8                    (how many terms of a career before age starts to tell; leave it out for the usual)
+
+    In a line:
+    Empaths whose skin carries slow patterns of light that show what they feel.
+
+    For the game master:
+    Ilari: skin patterns of soft light shift with emotion, so feelings are hard to hide.
+
+    Attributes:
+    resonance 2, presence 1, willpower -1          (added to a new character's attributes)
+
+    Attribute caps:
+    resonance 1                                     (an attribute that can't go above this; leave it out for none)
+
+    Skills:
+    attunement 1                                    (skill ranks a new character starts with)
+
+    Effects:
+    max hp: 5                           (more or fewer hit points)
+    fatigue rate: 0.25                  (fractions of the usual: 0.5 is half)
+    heal rate: 0.5
+    stress rate: 0.85
+    in a setting: heavy_gravity 3, vacuum 1         (easier or harder in a setting: an id from the contexts list)
+    standing with: fleet 5, hegemony -15            (how factions start out feeling about them, by faction id)
+    skills: deception -2, persuasion 1              (a bonus or penalty to a skill)
+
+In a line is what the player reads when choosing. For the game master is how the AI plays them. A part that has
+nothing in it can be left out.

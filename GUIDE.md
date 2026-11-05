@@ -195,14 +195,15 @@ In Isometric and Walk-around, the main window shows the room you're in, with you
 In Isometric, the room gets the whole window and the story comes up over it, in the same console windows as the rest of the game.
 
 - **A scene comes up a piece at a time.** Click anywhere, on the room or on the story, or press Space or Enter, to go on to the next piece. **Back** goes back. Nothing makes you read it all: you can pick a choice at any point.
-- **What someone says** goes in a window over their head, in their color, and it writes itself out a letter at a time. A click finishes the line at once, and the next click goes on. If they're far away, the camera moves to keep them in view, and a long speech is cut into pieces that fit.
+- **What someone says** comes up on a pane by their head, in their color: four corners, a tag with their name, and a thin line down to their head. It slides out from the head, and the words write themselves out a letter at a time. A click finishes the line at once, and the next click goes on. If they're far away, the camera moves to keep them in view, and a long speech is cut into pieces that fit.
+- **Pull the pane aside** with the mouse to see what's under it. It slides back when you let go.
 - **Narration** goes in the window along the bottom. So does anyone with no head in the room to put it over, such as a voice over comms or someone who isn't on the map.
 - **Your choices** are in **What do you do?**, the same as ever: click one, or type its number, or type whatever you like. Typing is only there if you want it.
 - **What's happening:** news, supplies and what your choices did come up as short lines at the top left and go away by themselves. Click one to dismiss it. They all stay in the whole story. A line waits for the piece of the story it goes with, so it doesn't give anything away, and time stops while a scene waits to be read, so the world's news comes while you're walking.
 - **Walking puts the story away,** and the **Story** button brings it back, saying how many choices are waiting. **Close** or Esc does the same, and a new scene brings it back by itself. Until you've read to the end of a scene, a click on the room goes on with the story and doesn't walk anywhere, so to walk off in the middle of one, press **Close** or an arrow key.
 - **Whole story** shows everything so far, in place of the room.
 - **With less room,** such as in the smallest window, it's one thing at a time: narration goes away while someone's talking, and the choices wait until you've read to the end.
-- **In a talk,** what people say writes itself out too. Click on it to finish it at once.
+- **In a talk,** what the person says comes up on a pane by their head the same way, and the things you can say hang off it once their words are all there. See below.
 
 Under **Reading** in the Settings menu:
 
@@ -212,9 +213,9 @@ Under **Reading** in the Settings menu:
 - **What each place is made of** and how it's lit is in `world/looks.json`: a cold blue Bridge, an orange furnace, red carpet at the Wheel. Change a word or a color there, and restart the game. It can also put one big thing in a room in place of what's on its plan, which is how the Great Wheel gets to be round.
 - **It doesn't use the AI or change your save,** and the choice is kept with your other reading settings.
 
-**The talk window** shows the person, how they feel about you, what's been said, and things you can click to say. You can type your own words instead if you'd like.
+**Talking to someone.** In Isometric, with the story over the room, a talk comes up by the person's head: what they say on a pane in their color, with how they feel about you on its tag, and **What do you say?** beside it, on whichever side has the room, once their words are all there. It has the things you can click to say, a line to type your own words if you'd like, and **What was said** folded under them. Your own line comes up over your own head while they answer. Click their pane to finish a line at once, and pull it aside to see what's under it. In Walk-around and Classic, and with the story under the room, the talk has its own window instead, showing the person, how they feel about you, what's been said, and the same things to say.
 
-- **What it costs:** each thing you say is one call to the AI, and the window shows what the talk has cost so far. Opening a talk, closing it, and **Ask what they've heard** are free, and so are the written lines of someone with a written conversation, which are marked.
+- **What it costs:** each thing you say is one call to the AI, and the talk shows what it has cost so far. Opening a talk, closing it, and **Ask what they've heard** are free, and so are the written lines of someone with a written conversation, which are marked.
 - **Time:** the clock stops during a talk, so talking can never use up a day in the fleet. The game refuses if the AI tries to pass time or move you, and sleeping and the Fleet menu's orders wait until you've closed the window.
 - **Checks and fights:** if something you say leads to a skill check or a fight, its own window takes over, and the talk ends there.
 - **Afterwards:** the story keeps one line about the talk, with **What was said** folded under it.
@@ -254,10 +255,16 @@ The world isn't waiting for you. Each story has what happens if nobody steps in,
 - **It really changes things.** A story that moves on can change what a place has and who holds it, and it can cost the fleet morale, supplies, or ships.
 - **Nothing's ever closed.** A lead that's moved on says how things stand now, and it's marked **it's moved on** in the **Leads** menu. You can still take it up from there, and the game master starts from how it stands.
 - **Once you've taken a story up, it's in your hands,** and its clock stops.
+- **What you did has consequences, on a timer.** A story's clock can say what follows from how a story ended, or from a fact on the record, and how many days later: a week after the fleet raids Quill's depot, Kessara's docks close to it. Each happens once, in the news and under **Moved on without you**, and it can leave facts of its own on the record.
+- **A stage can depend on the record.** A stage with a condition happens only if the condition holds when its day comes, and is skipped otherwise. Two stages on the same day with opposite conditions are a fork, so what the world does on its own fits what you did: the council without you votes to hear Corvane out if the fleet runs on his fuel. `npm run check-story` checks the clock's conditions along with the rest.
 - **Bigger stories start moving later,** and a story that follows another one opens once that one's finished or has run its course.
 - **The main story moves too.** Its pressure builds with events of its own, and if nobody moves it on, it moves on to the next act by itself, as far as the fourth. The last one needs someone to take the fleet there.
 - **You won't be swamped.** Only a few of these come up in the story at once. All of it is under **Moved on without you** in the **Leads** menu, and in the **News** on the **Star map**.
 - **Every game's world goes at its own pace,** so you won't see the same things on the same days twice.
+
+## The record
+
+The game keeps a record of what you did: how each story ended, and the lasting facts that left, such as a door closed to the fleet or a debt owed. It's in the **Quests** menu: a finished story's card carries its ending's name and its last line, and **Facts on record** lists the facts. Every story's file in `world/stories` names its endings (under *Where it can end up*), can name the facts the story leaves (*Facts it can leave*, a name and a line of plain words each) and can say what on the record changes the story (*What on the record changes it*, each a condition written like a scene's, such as `ended main_two_weeks_of_fuel raid_depot` or `flag kessara_closed`, and a line on what changes). The written story ends a story with `* ending its_name: How it ended` and puts facts on the record with `* flag` lines, and its scenes can ask `? ended a_story its_ending`. The AI game master has two actions of its own, `end_story` with the ending's name, or `other`, and `note_fact` with a name and a line, three a turn at most, both checked by the game. Its notes for a story list the endings by name, the facts it can leave, and the reactions that hold on the record now, and its instructions are to play those and never contradict the record, like a game master running a campaign it didn't write. `npm run check-story` checks the notes along with the scenes: an ending without a name, a reaction the game can't read, or one waiting on a fact nothing leaves.
 
 ## Leads and the wider world
 
@@ -270,10 +277,11 @@ There's a lot more out there than the places you start out knowing about, and yo
 The world is kept in files you can open with any text editor. Be warned that most of them contain spoilers, including everyone's secrets and how the whole story ends.
 
 - `world/scenes/` has the written story, one plain text file for each scene: its parts, what each says, the choices, the checks and fights they lead to, the conditions on them, and what they change in the game. `talk_<id>.txt` is what that person says in a talk, and `arrive_<place>.txt` plays when the player arrives somewhere. `_how-to-write-a-scene.txt` there explains it all, including a thing's `used` and a door's `ask` in the map files, and the stock lines at the end of `rooms.json`. These are read again whenever the story needs them, so there's no restart. `npm run check-story` lists every mistake with its line, and `npm test` checks them too.
-- `world/characters/` has one file for each important person, whether you've met them or not.
-- `world/enemies/` has one file for each type of enemy, with its stats, why it usually fights (`motive`) and who for (`faction`). Against you, threat levels 2 and up fight harder than their files say, by the amounts in `FIGHT_DIFFICULTIES` in `src/combat.js`, depending on the difficulty you've chosen.
-- `world/places/` has one file for each place: what it's like, who's there, what could happen and what people say.
-- `world/threads/` has one file for each story that can come up, with its twist and where it can end up. `anyone` is how it reaches someone who isn't the captain, and a story without one stays the captain's own.
+- `world/characters/` has one plain-text file for each important person, whether you've met them or not: who they are, how they look, speak and think, their numbers, and how they fight. `_how-to-write-a-person.txt` there explains every line.
+- `world/enemies/` has one plain-text file for each type of enemy, with its numbers, why it usually fights (`motive`), who for (`faction`), and what it says in a fight. `_how-to-write-an-enemy.txt` there explains every line. Against you, threat levels 2 and up fight harder than their files say, by the amounts in `FIGHT_DIFFICULTIES` in `src/combat.js`, depending on the difficulty you've chosen.
+- `world/places/` has one plain-text file for each place: what it's like, its districts, who's there, what could happen and what people say. `_how-to-write-a-place.txt` there explains every line.
+- `world/species/` has one plain-text file for each kind of people a character can be, with what the character creator gives them. `_how-to-write-a-species.txt` there explains every line.
+- `world/stories/` has one plain-text file for each story that can come up: its lead, what's really going on, how it might go, its endings by name, the facts it leaves, what on the record changes it, and what happens if nobody steps in. *For anyone who isn't the captain* is how it reaches someone who isn't the captain, and a story without one stays the captain's own. `_how-to-write-a-story.txt` in that folder explains every line, and the **Story board** in the game shows and changes the same files as boxes and arrows.
 - `world/arc.json` is the main story: its acts, its clues and its endings.
 - `world/fleet-events.json` has the small things that happen around the fleet.
 - `world/fleet.json` has all 41 ships, what the fleet starts with, the ration levels, the work crews' orders, the rules for raids, and everything the fleet says in the story. A ship with `"story": true` is named in the story's files, so raids can hurt it but won't destroy it. `council` is what the officers and the council will do by themselves, and when. `chair` is how someone else in the captain's chair runs the fleet, with each captain's own habits.
@@ -285,7 +293,7 @@ The world is kept in files you can open with any text editor. Be warned that mos
 - `world/life/` has one file for each place, with everyone's day: where they sleep, eat and work, and what they do at what time. Instructions are at the top of `meridian.json`. A place with no file here keeps its people at their posts, with no clock.
 - `world/looks.json` has what each place and room is made of, and how it's lit, in the Isometric view. Instructions are at the top.
 - `world/rooms.json` has the kinds of room the game can draw for anywhere that isn't on a map, such as ducts, a brig or a chapel, with the things you'd usually find in each. It also has what anyone can be asked in a talk, and how people look when you come over.
-- `world/factions.json`, `world/items.json` and `world/perks.json` have the factions, items and perks added to the ones in `src/data.js`.
+- `world/items/`, `world/factions/` and `world/perks/` have one plain-text file for each item, each faction and each perk, with a how-to in each folder.
 - `world/checks.json` has everything said in the skill check windows, and which game each skill uses.
 - `world/combat-text.json` has everything that gets said in a fight.
 - `world/parley.json` has everything about talking in a fight: every reason to fight and how much harder each makes each option, the options themselves, and what gets said. Instructions are at the top.
@@ -395,18 +403,28 @@ After a break of more than an hour, Claude has to load everything again. Once a 
 
 The download is several GB. Local models make more mistakes with game actions than Claude does.
 
+## The story board
+
+**Story board**, under **The story** on the rail, shows any of the 128 stories, 24 places, 61 people, 6 species, 34 enemies, 60 items, 12 factions and 53 perks as boxes and arrows, and lets you change it by clicking. Pick what to look at and which one at the top. On **The story**, the boxes are the lead, what's really going on, the beats, the ways through, the checks and fights, the rewards, and the endings by name. Click an ending and the facts it leaves, what follows days later, and the other stories that react to it unfold beside it. What on the record changes this story sits on the left, and the clock's stages along the bottom. Click any box and its words open on the right, with **Keep** and **Undo**; names are made from the words, conditions are picked from lists, and the buttons add an ending, a fact, a consequence, a stage of the clock, or a reaction. A stage's or a consequence's changes at a place and in the fleet, and a ship lost by name, are picked there too. Drag a box to move it, and the board remembers where you left it next time; **Tidy up** puts everything back in its columns. Drop a fact or a consequence on an ending to link them. Drag the dark background to look around, and use the **−**, **+** and **Fit** buttons for the size.
+
+**The written scene** shows a story's scene file, when it has one: each box a part, each arrow a choice, a check's two ways, or a rule. Click a part and its lines open as they are in the file, with the words on its arrows; click an arrow to change where a choice goes, drop its words on another part to send it there, or drop a part on another part to give it a choice that leads there. **As the file** shows the same story written the way its file holds it.
+
+**A place** shows what the player sees, the feel of it, its districts, what can happen there, and the people and stories here, each a box you can open. **A person** shows how the game sees them, their looks, personality, voice, goals and secrets, their numbers and how they fight, with boxes with arrows for every number and nothing to type, and where they belong: their place, their species, their stories, and **The written lines** tab when they have a talk written out. **A species** shows what the player reads, how the game master plays them, their numbers and effects, and the people who are one. **An enemy** shows what the player sees, what they say in a fight, one box of lines per moment, who they fight for and where they turn up, with their numbers in the box on the left. **An item** shows what the player reads, its effects, and where it's sold or found, with its type, price and numbers picked from lists. **A faction** shows what the player reads, what they believe, and their people, places, enemies and stories. **A perk** shows what the player reads, what it changes, with every number in a box with arrows, and the perks it needs or leads to.
+
+**Save** writes the file in `world/stories`, `world/scenes`, `world/characters`, `world/places`, `world/species`, `world/enemies`, `world/items`, `world/factions` or `world/perks`, through the same reader the game uses, so a file that can't be read is never written, and the game uses the new version from the next turn. The checker's problems are marked in red on the boxes and listed on the right. Nothing is saved until you press Save, and Close asks again if something isn't. A changed person, item or faction reaches the AI's own instructions and actions, and the codex, when the game next starts.
+
 ## Changing the game
 
 - `world/` holds the characters, enemies, places, stories and game text, as described under [Your files](#your-files). These are the safest files to edit.
-- `src/data.js` holds the items, perks, locations and story background. Restart the game after you change it.
-- `src/character-data.js` holds the skills, species, origins, traits, beliefs and ready-made characters.
+- `src/data.js` holds the fight abilities, the skills' checks and the story background. Restart the game after you change it.
+- `src/character-data.js` holds the skills, origins, traits, beliefs and ready-made characters. The species are files in `world/species`.
 - `src/life-data.js` holds the careers and everything that can happen in the life simulation.
 - `src/lore.js` holds the entries of **What you know**. Only put what your character would know in there, because players can read it.
 - `src/creator.js` works out a character from the choices made in the creator, and `src/role.js` works out who that makes them in the world, and what the game master is told about it.
 - `src/rules.js` holds the rules: dice, leveling, stress and beliefs.
 - `src/combat.js` holds the rules for fights, including talking in them, and `public/fight.js` draws the fight window.
 - `src/fleet.js` runs the fleet day by day, and `public/fleet.js` draws the Fleet menu, the star map and the raid window.
-- `src/walk.js` runs walking around, the levels, where you are, and talks. `public/walk.js` draws the levels, the clock's buttons and the map of each place, `public/iso.js` draws the isometric view, `public/popups.js` draws the story over the room, with `public/scene.js` cutting each scene into pieces and `public/writer.js` writing people's words out, and `public/talk.js` draws the talk window.
+- `src/walk.js` runs walking around, the levels, where you are, and talks. `public/walk.js` draws the levels, the clock's buttons and the map of each place, `public/iso.js` draws the isometric view, `public/popups.js` draws the story over the room, with `public/scene.js` cutting each scene into pieces, `public/writer.js` writing people's words out and `public/pane.js` drawing the pane by someone's head, its line and the pulling aside, and `public/talk.js` draws a talk, on a pane by the person's head or in its own window.
 - `src/life.js` runs everyone's days, and how they get around. `src/daily.js` runs each place's supplies, prices and factions, day by day. `src/story-clock.js` moves the stories on when nobody has stepped in. None of them has any screens, and none of them uses the AI.
 - `src/checks.js` runs the skill check windows, `src/check-games/` has the game behind each one, and `public/check.js` draws them.
 - `src/story-library.js` decides which leads, rumors and notes the player and the game master get.

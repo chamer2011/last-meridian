@@ -1,0 +1,7 @@
+# Unbound Safe-Conduct
+order: 56
+type: story
+price: 0
+
+In a line:
+A signed data tag from the Unbound that their sentries will honor once, and only for the person it was given to.

@@ -1,0 +1,76 @@
+# Visiting Hours
+kind: main
+places: anselm, sundial
+people: pavel, wen, aduro, tarrow, seven, oskar
+factions: fleet, quiet
+
+The lead:
+A woman signed in to see Pavel Ostrov on Anselm's Mercy this morning. She brought his favorite tea and knew the name of his dog, and Dr. Adeyemi wants you there now, because Pavel's wife is number 412 on their list.
+
+For anyone who isn't the captain:
+A woman signed in to see Pavel Ostrov on Anselm's Mercy this morning. She brought his favorite tea and knew the name of his dog, and Pavel's wife is number 412 on Dr. Adeyemi's list.
+
+What's really going on:
+Ilse Ostrov was dying in the first month, and she asked. Wen signed a 'transfer', Oskar Lind's people took her out on a drift-boat, and the silver came for her. Now she has come back. She's a Choir Mimic with all of Ilse's memories and conscience, and as far as she can tell she's Ilse, who got better and has come to take her husband and daughter somewhere safe. She has the Choir's order to bring people in, and that order feels to her exactly like love. Nobody can know that yet. Everyone will see the Choir reaching into the hospital ship. Pavel is a half-copied piano tuner from Aurelis who woke with no idea what has happened, and who hums: three falling notes and one rising. It's a phrase of the song's oldest verse, part of him is still in the song, and that's how she found him. He thinks his wife has come to visit, because nobody has told him she's dead. Nobody has told him his daughter Mila, seven, is alive on the Sundial, either, and the visitor is about to ask to see her. Wen knows exactly how this happened, and would rather the captain didn't ask how someone on their list came to be anywhere at all. Tarrow will use this to demand that her list go live. Arc clues: pavel_tune, hunter_core.
+
+How it might go:
+- The convalescent bay. Pavel, delighted: 'You've met Ilse?' He hums. She's holding his hand, she's perfect, and they're discussing the ferries. Wen stands behind the captain and doesn't look up: 'Four-twelve. Went on the list in the first month. Next.'
+- Wen's paperwork. The list says she died. A transfer form, in Wen's hand, says something else. The captain can find out about the drift-boats here, or not yet, and Wen won't defend any of it.
+- She's asking when they can leave, and whether Mila's eating. She has heard there's a little girl on the Sundial who draws pianos. Nobody told her that. Something has to be done before visiting hours end.
+- Tarrow arrives with a sealed order for the captain's signature: quarantine the ship, and review every Synthetic and augmented person in the fleet. Mercy Seven, three beds away, stops wiping their hands for a moment. The ward is starting to understand who's sitting on that bed.
+- The captain decides what happens to the thing with Ilse's face, who tells Pavel, who tells Mila, and how much of the fleet gets handed to Tarrow.
+
+Ways through:
+- Talker: sit down with her and talk (persuasion, composure). She doesn't know what she is, or she's careful not to. Ask something only Ilse would know, and she gets it right. Ask something Ilse never had to think about, and watch her stop. She can be talked into a locked room, and she'll keep asking to see them.
+- Medical: work the case with Aduro and Wen (medicine, science). His chart, the drifting pod and the tune. Treating everyone in that room as a patient is a kind of leadership. Following the paperwork leads to the transfers.
+- Fighter or security: clear the ward and take her down with the least harm to anyone else (tactics, firearms, melee), with Tarrow or without. She'll fight to reach him, and she'll keep talking the whole time. Cut out the core afterward (engineering).
+- Resonant: hum it back (attunement). There's more than one voice at the other end, and she's one of them, very far away, and here too. Cael, if asked about it, goes very still and changes the subject.
+- Hacker: the visitor log, the transfer records and the ship's door sensors (hacking). She has been aboard for three days. She has also been on the Sundial, and she's held someone's child.
+
+Checks that fit:
+- composure:moderate to sit across from her and keep talking
+- medicine:moderate to read Pavel's chart and the pod report
+- melee:moderate to pin her without hurting the man in the bed
+- attunement:moderate to hear that Pavel isn't humming alone
+- leadership:hard to calm a ward that has just worked out what's in the visitor's chair
+- persuasion:hard to get Tarrow to accept a narrow order
+
+If it comes to a fight:
+- choir_mimic wearing the face of Ilse Ostrov
+- desperate_refugee if a frightened crowd comes for Pavel
+
+Where it can end up:
+pavel_told_truth_kindly: If Pavel is told the truth kindly, he's devastated, he's still the kindest man on the ship, and he gets to meet Mila. Much later he's the living proof that being copied doesn't have to kill, and his perfect pitch is exactly what Hollis-Nine has been waiting for.
+crowd_tarrow_gets_to_pavel_first: If a crowd or Tarrow gets to Pavel first, he's put out of a lock or locked away. That proof is gone or hidden, the tune goes on without him, and Aduro doesn't forgive it.
+tarrow_gets_full_order: If Tarrow gets a full order, her list goes live (crew_tarrow_standing_order): Synthetics are confined, medical and engineering capacity drop by a third, and Seven and Marrow stop trusting the bridge. If she gets a narrow one, she takes it with exact politeness and a note for the file.
+mimic_destroyed_captain_gets_choir_core: If the Mimic is destroyed the captain gets a choir_core, which holds Navy procedure and a looping query. If it's held alive it pleads to see its family and Tarrow asks why the captain hesitated. If it escapes, it goes to the Sundial.
+wens_transfers_come_out: If Wen's transfers come out, the captain can shut them down, which leaves the dying with no mercy left and cuts off the Quiet's boats, or sign off on them and own it. Wen's only comment: 'Next.'
+
+Facts it can leave:
+mimic_destroyed: The Mimic that wore Ilse's face is dead, and the fleet has its core.
+mimic_held: The Mimic is locked on the Bell Stair, alive, and asking for her family.
+mimic_escaped: The Mimic got away, and the only place she ever asked about is the Sundial.
+let_her_go: The captain let the visitor go.
+pavel_taken: The Mimic took Pavel with her.
+pavel_hidden: Pavel is hidden in the Still Ward.
+pavel_told: Pavel was told what came to visit him.
+pavel_untold: Pavel was never told what came to visit him.
+pavel_met_mila: Pavel met Mila.
+tarrow_list_live: Lieutenant Tarrow's standing order is live: synthetics are to be reported.
+tarrow_narrow: Lieutenant Tarrow's order is narrow: the ward only.
+tarrow_refused: The captain refused Lieutenant Tarrow her order.
+transfers_shut: Dr. Wen's transfers were shut down.
+transfers_owned: The captain owned Dr. Wen's transfers in public.
+transfers_left: Dr. Wen's transfers were left to run.
+seven_told: Seven was told about the visitor.
+knows_transfers: The captain knows about Dr. Wen's transfers.
+
+If nobody steps in:
+after 9 days: A woman who knew the name of Pavel Ostrov's dog has come back to see him on Anselm's Mercy, and the whole ward's talking about her.
+  lead: The woman who knew the name of Pavel Ostrov's dog keeps coming back to see him, always in visiting hours, always with his favorite tea. Dr. Adeyemi would still like you there.
+after 27 days: A crowd went looking for the man who hums on Anselm's Mercy, and Dr. Adeyemi had to bar the ward door.
+  lead: There's a crowd outside the ward on Anselm's Mercy, asking for the man who hums, and Dr. Adeyemi has barred the door with a gurney. They've asked you to come, and to come now.
+  fleet: morale -1
+
+Rewards:
+A choir_core if it's taken, a surgeon_lens from Wen's private stores, and Aduro's or Tarrow's respect, though probably not both.

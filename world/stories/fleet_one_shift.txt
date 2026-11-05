@@ -1,0 +1,53 @@
+# Take the List
+kind: dilemma
+places: anselm
+people: wen, tarrow, tessaly
+factions: fleet
+level: 2
+
+The lead:
+Dr. Adeyemi hands you a clipboard and a cold cup of something. They've decided who gets the last of everything on Anselm's Mercy for six months, and before you sign the next ration cut, they'd like you to do it for one shift.
+
+For anyone who isn't the captain:
+Dr. Adeyemi decides who gets the last of everything on Anselm's Mercy, and they've started asking people to come and do it for one shift, so that somebody else knows what it costs.
+
+What's really going on:
+It's exactly what it sounds like. Today there are seven patients and three courses of the last good antibiotic, and they all need it by end of shift. Wen won't advise. They want someone in command to know what a signature costs. The seven: Hanne Brill, the only tech who can service the fleet's water reclaimers; Tomasz, nine, who has never been sick before; old Mr. Voigt, who says to give his to the boy and means it; Sergeant Ado, who's on Tarrow's team and has three kids; Kesh, a Hegemony deserter who says he knows Bastion Nine's duty rosters; Councillor Duval's mother, whose son will pay for it and can be very useful; and a seventh chart, filed without comment at the bottom of the stack. Patient seven: Adeyemi, W. Forty-nine. Treatable. Not essential, in the author's opinion. They've been coughing for a month. They wrote their own chart and triaged themself below the line. That's why they finally need someone else to learn this.
+
+How it might go:
+- The clipboard, the ward, a shift clock on the wall. Wen explains how the list works in a few flat words ("Now. Soon. Can't. Write it down. Next."), then sits down on a bench. They're asleep within a minute.
+- The beds. The captain can talk to all of them. Each is a person and each has a reason, and none of them is lying. Tomasz wants to know if it's true the captain has a cannon. Voigt tells a joke, then asks if the captain would sign his transfer form. A calm night nurse with a Quiet token stands behind him, and nobody explains what a transfer is unless asked.
+- The offers. Councillor Duval's man arrives: forty courses of antibiotics, delivered tonight by Tessaly Marsh, if his mother's name goes first. It would save more people than the three courses. Tarrow sends a very polite note about her sergeant.
+- The last chart, when the captain finally turns it over. The name. Wen is still asleep on the bench, with a rattle in their chest the captain hadn't noticed.
+- End of shift. Wen wakes, asks for the names, all seven, in the order they were decided, and writes down the ones who went on the list. Then they ask if the captain still wants to sign the ration cut.
+
+Ways through:
+- Decide on merit: medicine to read the charts and work out who'd actually live. The honest answer isn't what anyone expects, and it shows that Voigt won't make it regardless.
+- Decide on use: tactics or leadership to weigh who the fleet needs most. Hanne Brill keeps thirty ships in water. Nobody would blame the captain, and everyone would know how they chose.
+- Take the offer: commerce to pin down Duval's forty courses and make sure they're real. If they are, the sums say yes. It's also a price on the list, and the next rich man will know what it is.
+- Make more: streetwise to find what the ward clerks have put by, and science to split a course across more people, with a real risk it works for no one. Or deception, telling six people they're getting it.
+
+Checks that fit:
+- medicine:moderate to work out who actually has a chance
+- science:very_hard to stretch three courses across four patients
+- commerce:hard to find out whether Duval's forty courses exist
+- streetwise:moderate to find what the ward clerks have put by
+- awareness:moderate to notice the cough from the bench
+- composure:hard to read out seven names at the end of the shift
+
+If it comes to a fight:
+- desperate_refugee at the ward door: Tomasz's father, who has done nothing wrong in his life until now
+
+Where it can end up:
+wen_chosen: Wen chosen: if the captain spends a course on them, Wen wakes up angry and lives. It was someone else's course, and Wen adds that name to their list in their own hand. They go on being what the fleet needs, and they don't forgive it for a long while.
+wen_passed_over: Wen passed over: they nod, as if it's what they'd have done. They have a month or two, and they start to train someone. The obvious successor is Aduro, and Wen took this job so that Aduro would never have to. If the captain finds a real supply in time, that can change.
+duvals_offer_taken: Duval's offer taken: forty more people live. Word gets around within a week, and now there's a rate. A man turns up at the ward with a receipt. The list has a price, and the captain set it.
+ration_cut: The ration cut: whatever the captain chose, they now have to decide whether to sign the next cut. If they soften it, the numbers get worse. If they sign it, they know exactly who pays, by name.
+
+If nobody steps in:
+after 11 days: Dr. Adeyemi has signed for the last of the antibiotics on Anselm's Mercy alone, and hasn't slept since.
+  lead: Dr. Adeyemi signed for the last of the antibiotics alone, and hasn't slept since. The clipboard's still there before your next ration cut, and they'd still like you to do one shift.
+  fleet: medicine -3
+
+Rewards:
+Wen's respect, which has never been given to anyone in command. A trauma_kit, and a slip of paper with seven names on it, in the captain's own handwriting.

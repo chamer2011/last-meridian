@@ -1,0 +1,10 @@
+# Surgeon's Lens
+order: 43
+type: gadget
+price: 300
+
+In a line:
+A jeweler's eyepiece rebuilt for field surgery: +2 on Medicine checks while carried.
+
+Effects:
+skills: medicine 2

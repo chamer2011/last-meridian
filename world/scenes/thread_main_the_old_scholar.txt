@@ -325,7 +325,7 @@ The fleet's spirits go up like a flare. The food queue on the Sundial stops bein
 
 * faction fleet 4: You gave them hope, and said it in your own voice
 * flag announced_navy_survivors
-* quest main_the_old_scholar done: Tharel read the Beacon: an old lattice, and on top of it a Navy recall. You told the fleet. Bring him the Ilun Codex, and he'll read the rest.
+* ending captain_announces_navy_survivors: Tharel read the Beacon: an old lattice, and on top of it a Navy recall. You told the fleet. Bring him the Ilun Codex, and he'll read the rest.
 * xp 25: The Warm Room
 END
 
@@ -339,7 +339,7 @@ You take it to the council first, in the Long Mess, at the far table that doesn'
 * faction fleet 2: The fleet heard, from the council
 * flag council_told_first
 * contact Speaker Teodor Halm friendly: You brought the Beacon's news to the council before the fleet.
-* quest main_the_old_scholar done: Tharel read the Beacon: an old lattice, and on top of it a Navy recall. The council told the fleet. Bring him the Ilun Codex, and he'll read the rest.
+* ending captain_announces_navy_survivors: Tharel read the Beacon: an old lattice, and on top of it a Navy recall. The council told the fleet. Bring him the Ilun Codex, and he'll read the rest.
 * xp 25: The Warm Room
 END
 
@@ -352,7 +352,7 @@ Garrick Fenn breaks it anyway, four days later, with a signals tech from the Neu
 
 * faction fleet -2: They heard it from Fenn, and that you'd known
 * flag kept_the_two_layers
-* quest main_the_old_scholar done: Tharel read the Beacon: an old lattice, and on top of it a Navy recall. You sat on it, and Garrick Fenn broke it. Bring Tharel the Ilun Codex, and he'll read the rest.
+* ending tharel_kept_safe_trusts_captain: Tharel read the Beacon: an old lattice, and on top of it a Navy recall. You sat on it, and Garrick Fenn broke it. Bring Tharel the Ilun Codex, and he'll read the rest.
 * xp 20: The Warm Room
 END
 
@@ -379,7 +379,7 @@ Sable finds you at the bar afterwards, and doesn't ask how you are.
 * raw update_story {"clue": "two_layers"}
 * flag sable_favor
 * journal: Sable sold you what Tharel would have said: the Beacon is two signals, an old lattice and a plain Navy recall on top. SAFE HARBOR. ALL CONCORD VESSELS COME HOME. Tharel is in Mother Quill's hands.
-* quest main_the_old_scholar done: Tharel was taken by the Syndicate. Sable sold you the Beacon's two layers: an old lattice, and a Navy recall on top. Getting Tharel back is a job of its own now.
+* ending quills_people_get_him: Tharel was taken by the Syndicate. Sable sold you the Beacon's two layers: an old lattice, and a Navy recall on top. Getting Tharel back is a job of its own now.
 * xp 10: The Warm Room, the hard way
 END
 
@@ -389,7 +389,7 @@ You go back to the fleet with nothing. Four days later Garrick Fenn has it anywa
 * faction fleet -2: Fenn told the fleet what you couldn't
 * raw update_story {"clue": "two_layers"}
 * flag kept_the_two_layers
-* quest main_the_old_scholar done: Tharel was taken by the Syndicate, and Garrick Fenn broke the Beacon's Navy layer to the fleet. Getting Tharel back is a job of its own now.
+* ending quills_people_get_him: Tharel was taken by the Syndicate, and Garrick Fenn broke the Beacon's Navy layer to the fleet. Getting Tharel back is a job of its own now.
 * xp 5: The Warm Room, lost
 END
 
@@ -520,7 +520,7 @@ Sable is waiting there, which you didn't expect, with a glass.
 * flag sable_favor
 * contact Oss Tharel ally: You pulled him through the ventilation in his heated coat.
 * contact Jun Sable friendly: You saved the old man for nothing, and they keep favors.
-* quest main_the_old_scholar done: You got Tharel out of the Warm Room ahead of the snatch team, and he told you what the Beacon is: an old lattice with a Navy recall on top. Sable owes you a favor.
+* ending tharel_kept_safe_trusts_captain: You got Tharel out of the Warm Room ahead of the snatch team, and he told you what the Beacon is: an old lattice with a Navy recall on top. Sable owes you a favor.
 END
 
 == outsider_fight
@@ -542,7 +542,7 @@ The stair is quiet, and Tharel is in his doorway with the kettle, which he was a
 * xp 20: The doorway
 * flag saved_tharel
 * contact Oss Tharel ally: You held his doorway against the snatch team.
-* quest main_the_old_scholar done: You held the Warm Room's door against the snatch team, and Tharel told you what the Beacon is: an old lattice with a Navy recall on top. He'll see the captain now.
+* ending tharel_kept_safe_trusts_captain: You held the Warm Room's door against the snatch team, and Tharel told you what the Beacon is: an old lattice with a Navy recall on top. He'll see the captain now.
 END
 
 == outsider_lost
@@ -552,7 +552,7 @@ What he told you, you still know, and so, by the next watch, does the signals te
 
 * stress 5: They walked over you
 * flag tharel_taken_by_quill
-* quest main_the_old_scholar done: The Syndicate took Tharel from the Warm Room over you. He'd already told you what the Beacon is: an old lattice with a Navy recall on top. Getting him back is somebody's job now.
+* ending quills_people_get_him: The Syndicate took Tharel from the Warm Room over you. He'd already told you what the Beacon is: an old lattice with a Navy recall on top. Getting him back is somebody's job now.
 END
 
 == outsider_leaves
@@ -561,5 +561,5 @@ You go back up the stair past the boots, and nobody stops a nobody. Behind you t
 * belief self 1: You got out while there was a way
 * stress 4: The Warm Room going quiet behind you
 * flag tharel_taken_by_quill
-* quest main_the_old_scholar done: You left the Warm Room as the snatch team came down the stair. The Syndicate took Tharel. You know what the Beacon is: an old lattice with a Navy recall on top.
+* ending quills_people_get_him: You left the Warm Room as the snatch team came down the stair. The Syndicate took Tharel. You know what the Beacon is: an old lattice with a Navy recall on top.
 END

@@ -1,0 +1,52 @@
+# The Marshal's Count
+kind: dilemma
+places: frontier
+people: sorrel, dray, aduro, tessaly
+factions: fleet
+level: 2
+after: out_tessen_warm_wells
+
+The lead:
+Marshal Sorrel Dey told Elder Dray that six children are affected, and she told you the same. But a farm boy with a split lip swears the sleeping lofts have been empty at midnight for a month, and somebody has been walking the road from the north section before dawn, in boots caked with wet clay.
+
+For anyone who isn't the captain:
+Marshal Sorrel Dey told Elder Dray that six children are affected. But a farm boy with a split lip swears the sleeping lofts have been empty at midnight for a month, and somebody has been walking the road from the north section before dawn, in boots caked with wet clay.
+
+What's really going on:
+It's not six. It's thirty-one, nearly every child under twelve. Every night, at the same hour, they rise in their sleep, walk out to the Well-Head and stand around the poured stone cap that's fenced off with a sign saying DRY. For weeks Sorrel and the one tired schoolteacher have been carrying them home before dawn, then scrubbing the clay off their feet so that their parents don't see. The stone has cracked from below twice, and she repoured it herself. She hasn't slept more than three hours a night since the first frost. Her son Emmet, who's eight, was the first, and the others learned it from him. She lied because she knows Maren Dray: the moment Dray hears the real number she'll blast the chamber or send the children away, and Sorrel doesn't know which she fears more, and there's the harvest that feeds the fleet to think of as well. When Tessaly Marsh came through two months ago and offered to take Emmet off her hands, Sorrel drew on her. She'll hint at the truth to anyone who has earned a little trust, and she'll give the real number if you ask her twice. The turn that should stop the player cold: two children on the Sundial, who've never been within a light-year of Tessen, have started drawing the same shape. It isn't the grain, as far as anyone can test. Dr. Aduro can't find it in any test they run, and they can't find anything else either.
+
+How it might go:
+- The rumor, and the farm boy, who got that split lip from the Marshal when he followed her. She apologized. He'd like to know why she was crying.
+- The night road. A captain who follows the lantern sees it: children in nightclothes walking through the frost with their eyes shut, and thin high singing from the Well-Head. It's the most beautiful thing the captain has ever heard. Call for composure.
+- Sorrel, caught, too tired to deny it. Ask her once and she says six. Ask her twice and she takes out her count, kept in pencil. She asks for just one thing: wait until the harvest is in.
+- A message from Dr. Aduro about the Sundial's children, with a drawing attached. The fleet doesn't know yet. The grain is already in the mess halls.
+- Who gets told what. The parents have a right to know. Dray has a right to know. And when they do, she'll go for the blasting charges, or the fields will burn.
+
+Ways through:
+- Find out: stealth and awareness to follow the lantern, and medicine or attunement to learn what's happening to the children as they sing.
+- Help carry it: leadership and composure to share Sorrel's burden, walking the road with her, and helping her find a way to tell Dray that won't end with everyone in the badlands.
+- Tell it, and hold the colony together: persuasion and survival to bring the truth to Dray with a plan already in hand, so that she doesn't have to choose between blasting everything and doing nothing.
+
+Checks that fit:
+- stealth:moderate to follow the Marshal without being seen
+- composure:hard to hear the singing and not walk toward it
+- persuasion:very_hard to tell Maren Dray and have her still listen
+- medicine:hard to learn anything useful from sleeping children
+- attunement:hard to feel what the song is doing
+- science:moderate to test the Tessen grain against the Sundial's two children
+
+If it comes to a fight:
+- desperate_refugee as a frantic parent with a rifle, once word gets out, if nobody talks them down first. Nobody here is really an enemy.
+
+Where it can end up:
+dray_learns_from_captain: If Dray learns it from the captain, gently and with a plan, she doesn't blast the Well-Head. She walks out to it herself that night, and the next thread opens with Dray on the captain's side.
+finds_out_by_accident: If she finds out by accident, she goes for the charges and the colony splits, and the fleet loses its food. The children go on walking wherever they are.
+captain_helps_sorrel_keep_secret_until: If the captain helps Sorrel keep the secret until harvest, the fleet gets fed and the lie gets bigger. When it comes out, the captain's name is on it, and the grain tastes different.
+whichever: Whichever it is, the Sundial's two children have to be dealt with, quietly or not. If it gets out, the fleet might turn on the Tessen grain, or on the children, and the captain has to stand in the way.
+
+If nobody steps in:
+after 23 days: Someone on Tessen has counted the empty beds in the sleeping lofts, and it isn't six.
+  lead: Word's got round Tessen that there are more than six. Marshal Dey still says six, and she's stopped looking anyone in the eye. Elder Dray's still keeping her hand on her rifle, and nobody's told her.
+
+Rewards:
+Sorrel Dey's absolute loyalty, Dray's respect if she's told honestly, some grain, and a recording of the song, which Abbess Ione or Brother Cael would very much like to hear, and Lt. Iven Sorel in the Meridian's comms room would rather not.

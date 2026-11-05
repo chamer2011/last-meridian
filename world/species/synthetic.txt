@@ -1,0 +1,24 @@
+# Synthetic
+order: 6
+ageless terms: 99
+
+In a line:
+A free machine person, granted citizenship by the Concord. The Choir has made every human in the fleet look at you differently.
+
+For the game master:
+Synthetic: an artificial person. They don't tire like organics, medkits barely help them and they have no Resonance at all. Since the Choir, many in the fleet fear or hate synthetics, and some suspect the player is a Choir infiltrator. Play this as real tension.
+
+Attributes:
+intellect 1, might 1, endurance 1, presence -1
+
+Attribute caps:
+resonance 1
+
+Skills:
+hacking 1
+
+Effects:
+fatigue rate: 0.25
+heal rate: 0.5
+stress rate: 0.85
+standing with: fleet -15

@@ -1,0 +1,9 @@
+# Silver Tongue
+order: 8
+starting: yes
+
+In a line:
+Diplomatic career: +2 Persuasion, +1 Deception.
+
+Effects:
+skills: persuasion 2, deception 1

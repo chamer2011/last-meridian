@@ -1,0 +1,18 @@
+# Korrun
+order: 2
+
+In a line:
+Broad, heavy-boned people from high-gravity worlds. They treat ordinary ships as gently floating and doorways as an insult.
+
+For the game master:
+Korrun: wide and immensely strong, built for high gravity. Normal ship corridors are a tight fit. Korrun culture prizes blunt speech and keeping your word.
+
+Attributes:
+might 2, endurance 1, agility -1
+
+Skills:
+athletics 1
+
+Effects:
+max hp: 5
+in a setting: heavy_gravity 3

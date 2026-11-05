@@ -1,0 +1,61 @@
+# Sabine Vael
+title: Inquisitor
+also called: Inquisitor Sabine Vael, Inquisitor Vael, Sabine Vael, Vael
+pronouns: she/her
+species: human
+age: 39
+faction: hegemony
+role: The Hegemony's foremost hunter of Resonants
+place: vantor
+color: #e57fb0
+
+In a line:
+A Hegemony Inquisitor with a blade that drinks energy, and a reputation for always arriving politely.
+
+Appearance:
+Tall and immaculate in Ministry grey, with white gloves she removes before any unpleasantness.
+
+Personality:
+Courteous, patient and frighteningly sincere. She believes that she's protecting people from something monstrous.
+
+Voice:
+Precise and formal. Addresses everyone by their full legal name, and apologizes before doing anything terrible.
+
+Goals:
+Bring in every Resonant in known space, starting with the ones hiding in the fleet.
+
+Secrets:
+She's a Resonant herself. That's how she finds the others. She keeps it suppressed with the same dampeners she uses on her prisoners.
+
+Beliefs:
+authority -8, violence 5, belief -4, flesh -5
+
+Attributes:
+might 5, endurance 6, agility 7, perception 7, intellect 6, willpower 8, presence 6, resonance 6
+
+Skills:
+melee 7, stealth 4, intimidation 6, composure 7, awareness 6, attunement 3
+
+In a fight:
+threat: 4
+hp: 46
+attack: 6
+defense: 15
+damage: 5 to 10
+weapon: Drinking Blade
+xp: 150
+credits: 80 to 180
+art: inquisitor
+tags: hegemony, resonance
+on hit: energy -2
+
+When the fight starts:
+- Sabine Vael takes off her gloves, finger by finger, and apologizes for what's about to happen.
+
+When they hit:
+- Her blade opens a line across you, and you feel your strength go with it.
+- She moves through your guard without hurrying, and the blade drinks.
+
+When they miss:
+- Her blade stops a finger's width from your throat. She looks faintly disappointed.
+- You twist away, and her blade hums hungrily past you.

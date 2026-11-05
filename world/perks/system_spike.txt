@@ -1,0 +1,7 @@
+# System Spike
+order: 27
+needs skill: hacking 2
+ability: spike
+
+In a line:
+Unlocks Spike in combat: 3 energy, a Hacking attack that disables a machine for a round.

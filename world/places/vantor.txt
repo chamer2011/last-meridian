@@ -1,0 +1,68 @@
+# Vantor Prime
+also called: Vantor
+faction: hegemony
+market: medkit, energy_cell, repair_kit, marine_plate, heavy_carbine, service_rifle, trauma_kit, emergency_patch
+the fleet is here: no
+a place to rest: no
+dangerous: no
+hidden: no
+people: regent, vael, jaska
+enemies: hegemony_trooper, security_drone, customs_marine, inquisitor, ministry_blade, hegemony_hunter
+items: ministry_saber, forged_papers, data_chip, calm_tabs
+
+In a line:
+Capital of the Hegemony: gleaming towers, surveillance, and a very polite secret police.
+
+The feel of it:
+The air smells of lemon polish and absolutely nothing else, and after a month in the fleet that's what makes your skin crawl. White towers, spotless trams to the second, and citizens who step aside for you with a small smile and remember your face. Everything has a form, every form has a receipt, and every purchase is logged; refuse the receipt, and someone will come and ask you very kindly why.
+
+Districts:
+The Serene Mile: Six kilometers of white ministries and fountains that lead to the Regency Palace. Visitors are met here by a courtesy escort, whether or not they arranged one.
+The Ministry Steps: A broad public staircase in front of the Ministry of Inquiry, where people wait patiently on benches for news of relatives. They're given numbered tickets, and tea.
+The Lower Stacks: Clean, tidy, identical housing for those granted provisional status, including many former Concord citizens. Children here learn the anthem before they learn to read.
+The Evening Line: The tram network, which is flawless. One freight route with painted windows runs after the last chime, and it isn't on any map.
+The Outer Yards: Orbital docks and marshalling yards, where the Hegemony's fleet lies in beautiful rows. Plain unmarked transports keep to a bay of their own.
+
+Complications:
+- Your courtesy escort has filed a report on your day, and it's more accurate than your own log.
+- A permit you were given this morning has expired, and the officer explaining it is so sorry about it.
+- A dampener sweep passes through a crowd, and a Resonant in your party goes grey and stops being able to think.
+- You've been invited to the Palace. It's not an order. Nobody has ever found out what happens if you decline.
+- A citizen has reported you for failing to take a receipt, and a very gentle follow-up visit has been scheduled.
+- A trooper checks your party against a list, and one name is on it, for something they did as a child on another world.
+
+Secrets:
+- The evening chimes, played across the whole city, are a pattern the Regent believes tells the machines that this world is paid up, and only four people have been told so. It's really a line from the old watch call, carried off by the Order's Proctors 1,006 years ago: OFF WATCH, DO NOT DISTURB. Anyone could ring it.
+- Plain unmarked transports leave the Outer Yards on a fixed monthly schedule, carrying prisoners whose files have been closed as resettled. The clerk who stamps them has started keeping the names.
+- Each Regent reads a letter on taking office, in the hand of the first: "We hold this seat until the Sovereign wakes, and our whole duty is that it shall not." The Regency was founded by the Order's own Proctors, who decided that Resonants were the noise that would wake it, and that's why Vantor hunts them and does its sums about people.
+
+Encounters:
+- A courteous young liaison has been assigned to show you around. He apologizes to you for each camera by name, and at the end of the day he asks, not quite looking at you, what the food is like in the fleet.
+- A tram conductor gives you a citation for walking against the flow of foot traffic. The fine may be paid in credits, or by writing down who you had breakfast with. She's holding out a pen, and she truly doesn't mind which.
+- A handwritten note arrives on heavy cream paper, addressed to your full legal name. Inquisitor Vael apologizes for the inconvenience, and says she'll need to speak with one of your crew at ten tomorrow. She asks whether ten is convenient.
+- A well-dressed woman drops her glove in front of you on the Serene Mile. Inside it are a man's name and a date, in tiny letters. She walks on without looking back, and your escort hasn't noticed, or says he hasn't.
+- A choir of schoolchildren sings the anthem in your honor on the Ministry Steps. One small boy in the back row is singing different words, quite clearly, and his teacher's smile has stopped moving.
+- A former Concord ambassador lives in a lovely apartment here, with a view. He's free to leave, as he's been told many times, and he's asked you to dinner so he can show you the door to prove it. He'd like you to take a letter to his daughter, if she's alive.
+- A Ministry clerk offers to sell you a copy of your own file. It's thorough, it's mostly correct, and it contains an account of something you did last year that you've never told anyone, and one thing you don't remember doing at all.
+- A platform attendant on the Evening Line takes your ticket and says, in her pleasant voice and without changing expression, that you shouldn't be on this platform after the last chime. It's the only warning she'll ever give anyone. She has two children.
+- A woman who left your fleet four months ago finds you in the Lower Stacks. Her kids are fat, her flat is warm and she's crying with happiness at seeing a Concord uniform. She begs you to tell the others to sign. She means every word of it.
+- A Hegemony general you've never met asks for ten private minutes in a parked staff car. He's never been allowed to see the reports from the Concord front, and his forces are the best in known space. He'd like to know, as one officer to another, why nobody has attacked him.
+- A baker in the Stacks has hidden her daughter in a flour store since she was six, because the girl always knows when an Inquisitor's on the tram. The girl has just told her mother that you're the one who gets her out, and the mother is furious about it.
+- You're told that you'll be receiving a Civic Courtesy Award, at a small ceremony this afternoon. There's a short statement you'd read aloud. It's nicely worded, it praises the Hegemony's generosity, and every word of it could be defended in court.
+- An unusually old street-sweeper recognizes your ship's name from the old war, and begins to tell you, in full view of a camera, exactly how it's done: which sweepers report, which corners are blind, and what to say at the third checkpoint. She seems not to care any more what happens to her.
+- A junior Ministry doctor stops you in a washroom with her hands shaking. Her job is checking prisoners are fit to travel, and she wants to know what's out there, past the border, that needs them to be in good health.
+
+Rumors:
+- The trams are never late. A man was late once, and there's a small park named after him now, and you can't go in.
+- One doesn't ask about the evening chimes. One simply makes sure one is at home before the last of them.
+- The Regent isn't one person. There have been at least three, and the portraits get repainted every so often, and you may wish to lower your voice.
+- There's never been a Choir attack on Hegemony space, not one. The Ministry says that's our superior defensive doctrine. I'm sure it's that.
+- Take the receipt. I don't care how silly it feels. Take the receipt, thank them, and put it in the left pocket, where they can see you've done it.
+- My sister's boy got resettled to the Outer Colonies, and we had a very nice form about it. There's a stamp on it and everything. We're told letters are delayed.
+- They treat you well here if you sign, and that's the truth. I've got a flat and a job and a pension, and there's only two neighbors I have to write reports on.
+- If an Inquisitor knows your full name before you've said it, that's normal. If she apologizes, that's normal too. If she takes her gloves off, I'd make my peace with things.
+- There's a whole floor of the Ministry that does nothing but keep track of fleet ships. They've got a map with your ship on it, and I heard it's accurate to within a day.
+- A Regency ball costs more than your whole fleet eats in a year, I'd imagine. I've been to two. They serve a very small fish.
+- The Ilari district's the safest part of the city after dark, on account of the cameras can't make sense of them. Everybody's heard that one. That's why they arrest so many people there.
+- I knew a clerk in the Outer Yards who could get a name off a list for the right price. I knew him for about a year.
+- They say Legate Corvane doesn't sleep in Vantor when he comes home. He gets a room at the spaceport, and he leaves on the first shuttle out. A man with that much carpet, you'd think he'd be happier.

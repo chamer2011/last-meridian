@@ -1,0 +1,48 @@
+# The Warm Wells
+kind: job
+places: frontier
+people: dray, sorrel, aduro, grann
+factions: fleet
+
+The lead:
+Tessen Colony has the best harvest it has seen in thirty years, and the fleet is hungry. Elder Maren Dray will sell you grain at a fair price, on one condition: that your ship's doctor comes down and looks at some children. She won't say what's wrong with them, and she keeps her hand on her rifle while she doesn't say it.
+
+For anyone who isn't the captain:
+Tessen Colony has the best harvest it has seen in thirty years. Elder Maren Dray keeps her hand on her rifle when anyone asks about some of the children, and she's been asking every doctor who comes through to go and look at them.
+
+What's really going on:
+Well-diggers found a smooth, warm chamber under the north section. Dray capped it in poured stone and put up a sign saying DRY. Since then, some children have been speaking a language nobody knows, and they don't seem sick at all. What Dray hasn't let herself see is that the warmth is the harvest: since that well was opened, the water runs warm, the north fields never freeze and the crops have doubled. The miracle that could feed the fleet and the thing that's happening to the children come from the same place, and anyone who seals it properly, or digs it out, or blows it up, ends the harvest. So the first honest question is whether to buy this grain at all. A doctor's exam finds the children perfectly healthy: well-nourished, bright, a little dreamy, and alert at exactly the same moments as each other. They're very polite. They stop talking when adults come in. They have started drawing the same shape, and any one of them will happily draw it for the captain.
+
+How it might go:
+- Landing. Long fields of absurdly healthy grain under a cold grey sky, with frost on everything except the ground. Elder Dray looks the captain over, and she looks at the uniform.
+- The bargain. Steward Grann Tull has sent a price list and a demand for seed stock, addressed to "whoever's in charge down there", because she hasn't said Maren Dray's name in thirty-four years. Dray reads it, nearly smiles, and has no use for credits. She wants medical help, tools and a straight answer.
+- The examination. The children sit in a row at the schoolhouse, with something scrubbed off the floor under their desks. They answer questions, and they are lovely. When Dray steps out, a very small boy says something in a language that makes the hair on the captain's arms rise, and the others all nod.
+- Marshal Sorrel Dey walks the captain back to the landing field, and tells them it's only a few children and nothing to worry about, and she says it a little too well.
+- The grain is ready to load. Does the captain ask where it came from before they fill the holds?
+
+Ways through:
+- Trade fair: commerce and persuasion to strike a real deal with Dray, and earn her respect by not pretending to know more than you do.
+- Do the medicine: medicine, science and lore to examine the children and the soil, and work out the connection between warm wells and strange words.
+- Work the land: survival and engineering to help with the harvest in person, which earns more from these people than any speech, and lets the captain see what nobody will show them.
+
+Checks that fit:
+- commerce:moderate to agree a fair grain price
+- medicine:moderate to examine the children and find nothing wrong, which is what's wrong
+- science:hard to link the warm water to the crops and the chamber
+- survival:easy to see that this soil shouldn't be producing this
+- awareness:moderate to catch the children all looking up at the same moment
+- persuasion:hard to get Dray to name what she's afraid of
+
+Where it can end up:
+captain_buys_grain: If the captain buys the grain, the fleet eats well for the first time in months. Morale rises, and everyone's food now depends on whatever is under this colony.
+captain_tells_dray_what_suspect_about: If the captain tells Dray what they suspect about the soil, she goes white and silent, and it ends the easy trade. It also starts the next thread with her trust.
+captain_takes_seed_stock_to_sundial: If the captain takes seed stock to the Sundial, it won't grow as well there. Grann Tull wants to know why, and she's very good at finding out, and she knows these seed lines better than anyone, because thirty-four years ago they were hers.
+captain_refuses_grain_suspicion_alone: If the captain refuses the grain on suspicion alone, the fleet goes on starving, Dray thinks better of them and sells to someone else, and some of those someones are worse.
+
+If nobody steps in:
+after 30 days: Tessen's best harvest in thirty years has gone on the market, and other buyers have started landing.
+  lead: Tessen's best harvest in thirty years is going on the market, and other buyers have started landing. Elder Dray will still sell to you at a fair price, if your doctor comes down first. She still won't say what's wrong with those children, and she's still got her hand on her rifle.
+  at frontier: food +15, hegemony +2
+
+Rewards:
+Enough grain to lift fleet morale and ease the food shortage for a few weeks, ration_pack and nutrient_gel in plenty, and a shape drawn by a child, which anyone who knows the Beacon's lattice would very much like to see.

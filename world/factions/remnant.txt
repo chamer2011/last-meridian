@@ -1,0 +1,10 @@
+# The Concord Remnant
+order: 12
+also called: the Concord Remnant, Concord Remnant, the Remnant, The Remnant
+starting standing: -15
+
+In a line:
+Navy die-hards under Admiral Okonkwo-Reyes, who call themselves the lawful Concord and call your command an accident.
+
+Beliefs:
+authority -9, loyalty -4, violence 6, flesh -3

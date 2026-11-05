@@ -1,0 +1,10 @@
+# Veshti Longrifle
+order: 28
+type: weapon
+price: 900
+damage: 7 to 12
+stat: perception
+skill: firearms
+
+In a line:
+A rifle nearly as long as its Veshti owner, made for shots across open vacuum: 7 to 12 damage, using Perception and Firearms.

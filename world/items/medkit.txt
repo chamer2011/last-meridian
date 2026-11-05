@@ -1,0 +1,8 @@
+# Medkit
+order: 12
+type: consumable
+price: 60
+effect: hp 15
+
+In a line:
+Restores 15 health, plus your Medicine rank.

@@ -1,0 +1,8 @@
+# Work Suit
+order: 30
+type: armor
+price: 80
+defense: 1
+
+In a line:
+Patched dock coveralls with padding at the joints: +1 defense.

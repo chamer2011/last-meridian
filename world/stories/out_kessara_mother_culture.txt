@@ -1,0 +1,49 @@
+# The Mother Culture
+kind: job
+places: kessara, sundial
+people: talia, quill, grann
+factions: drift, fleet
+
+The lead:
+Steward Grann Tull wants a jar of slime. Every noodle stall in Kessara makes its broth from the same grey culture that grows on nearly nothing, and she swears it could feed a ship if the Sundial had some. Talia Sen laughs until she has to put down her ladle, then asks if you're serious.
+
+For anyone who isn't the captain:
+Steward Grann Tull wants a jar of slime. Every noodle stall in Kessara makes its broth from the same grey culture that grows on nearly nothing, and she swears it could feed a ship if the Sundial had some. Talia Sen laughed until she had to put down her ladle.
+
+What's really going on:
+The culture is two hundred years old and grows on waste heat, wet rock and almost nothing else. It's why a lawless asteroid has very good noodles and no famine. Grown in the Sundial's spare tanks it could add real protein to the fleet's rations. Mother Quill holds the whole warren together with it: every stall rents its culture from her at a price that keeps them in debt, and the jars are counted weekly. It's the most closely guarded thing in Kessara, far more than her fuel, because stalls can't riot on an empty stomach and neither can she. The twist is that Talia, who laughs so hard, has been keeping a secret stolen strain alive in a hollowed-out stockpot for eleven years, and has been waiting for someone to get it out of Kessara. She'll only give it up if the fleet will also spread it back to the warrens free of charge, which would break Quill's hold and start a small war over soup.
+
+How it might go:
+- Talia's stall, and the taste of the broth. The captain learns what the culture is and why nobody has ever walked out with a jar: Quill's inspectors weigh every pot, every week.
+- An audience with Mother Quill, who offers the captain dinner, worries about their health, and names a rental price for the fleet that amounts to owning the Sundial.
+- The attempt. A jar has to get out past inspectors who can tell a stall's culture by smell, through a warren where everybody owes somebody.
+- Talia's stockpot, and her terms. Grann Tull wants the culture for the fleet alone, and she doesn't forgive anyone for sharing.
+- The batch on the Sundial starts growing, and it either thrives or eats a tank. Either way, Quill knows. She sends a card and a very small jar, with her best wishes.
+
+Ways through:
+- Steal it: stealth and deception past the inspectors, with a false jar for the weighing.
+- Grow it from scratch: science to work out the strain from a bowl of leftover soup, with engineering at the Sundial's tanks to keep it alive. It's slower and it's legal, more or less.
+- Buy it fair: commerce and persuasion with Quill for an honest license, or with the stall owners for a share that Quill can't quite forbid.
+
+Checks that fit:
+- science:hard to isolate the culture from a bowl of broth
+- stealth:moderate to get a jar through the warren's inspection line
+- deception:moderate to fool an inspector who has a very good nose
+- commerce:very_hard to get a decent price out of Mother Quill
+- engineering:moderate to keep the Sundial's tanks warm enough without killing the batch
+
+If it comes to a fight:
+- drift_raider or syndicate_collector if a theft is discovered in the warrens. A stall full of hungry friends, or running very fast, works just as well.
+
+Where it can end up:
+culture_reaches_sundial: If the culture reaches the Sundial, the fleet gets a slow, reliable source of rather grey food. Rations stretch further, morale rises then falls when people taste it, and Grann Tull is insufferable and thankful.
+spread_free_across_warrens_talia_wants: If it's spread free across the warrens as Talia wants, Quill loses a grip she's held for decades. Stalls riot happily, and she doesn't get angry. She just begins to worry about the captain, in writing.
+captain_signs_quills_license: If the captain signs Quill's license, the fleet eats and the Sundial's debt goes on Quill's books, where debts always grow.
+goes_badly: If it goes badly, a contaminated tank on the Sundial costs a week's harvest and starts a very public argument, and Grann Tull has one more slight to never forgive.
+
+If nobody steps in:
+after 38 days: One of Steward Tull's people tried to buy a jar of broth culture off a noodle stall at Kessara Drift, and got a polite word from Mother Quill's people.
+  lead: Steward Tull's still asking for her jar of slime. One of her people tried to buy some on the quiet at Kessara, and got a polite word from Mother Quill's people. Talia Sen's stopped laughing about it, and she's still got her ladle.
+
+Rewards:
+A lasting bump to fleet food and morale, Talia's or Grann's loyalty, some nutrient_gel from the first batches, and a share of Kessara's stall owners who'd now hide the captain from anyone.

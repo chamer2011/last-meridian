@@ -1,0 +1,58 @@
+# The Clamps in Cargo Three
+kind: crew
+places: meridian, fleet
+people: tarrow, seven, marrow, voss
+factions: fleet, unbound
+level: 3
+
+The lead:
+A nervous marine stops you in a corridor and asks a question he clearly thinks you can answer: when the word comes to secure the machines, does it come from you or from Lieutenant Tarrow?
+
+For anyone who isn't the captain:
+The marines have started asking each other a question: when the word comes to secure the machines, does it come from the captain or from Lieutenant Tarrow?
+
+What's really going on:
+Tarrow has a list of 612 names: every synthetic and heavily augmented person in the fleet. Forty marines on six ships are ready to secure them on her word, and Cargo Three has been fitted with clamps. She'd rather have the captain's order, and won't move without it unless she must. What counts as "must" is the issue. She has real evidence: her monitors caught encrypted bursts arriving at Mercy Seven's quarters, on a band that matches the Choir. She's right about the facts and wrong about what they mean (see crew_seven_consult). For Seven she has built the Cradle, a hardline rig that reads a synthetic's memory by stripping it, which would kill the person being read. She takes no pleasure in that. The twist: line one of the list reads "Tarrow, K." Her neural bridge makes her heavily augmented, she wrote herself in first, and her standing orders tell her team to start with her. She isn't a hypocrite, and that's what makes her so frightening. Father Roe knows about the list, because she asked him if it was a sin. He won't say what he told her.
+
+How it might go:
+- The marine's question, then the clamps. Everything in Cargo Three is well made and properly logged, just not anywhere the captain would look.
+- Tarrow hides nothing when asked. She hands over the list with both hands and thanks the captain for coming. Line one is there to be read.
+- The list leaks. A welder with a replacement arm turns up in the medbay demanding it be taken off. A crowd gathers outside Seven's door, some of them there to protect Seven. Marrow has locked himself in engineering with a very large spanner.
+- Tarrow shows the captain the bursts and sets a time: the end of this watch. She says "sir" with great care. She'd like an order, and she's going to get one from someone.
+- The word: give it, forbid it or change what it means, in front of forty armed people who have been waiting for months.
+
+Ways through:
+- Command: leadership or intimidation to order her to stand down. She'll obey. Some of her marines may not, and the clamps stay installed.
+- Evidence: hacking and science to read the bursts and prove they only come in. Seven has never transmitted. That doesn't clear them of everything, and Tarrow knows it.
+- Law: lore to find that synthetic citizens can't be held without a magistrate, then persuasion in council over who gets to be one. It's slow, and slow is the point.
+- Get there first: stealth and streetwise to warn the people on the list and scatter them to the Sundial, Anselm's Mercy or further. Tarrow will treat this as an act of war, very politely.
+- Give the word on your own terms: tactics for a bloodless sweep with Seven's cooperation and no Cradle.
+
+Checks that fit:
+- leadership:hard to make forty marines stand down in front of her
+- hacking:hard to read the bursts without Seven's help
+- lore:moderate to find the magistrate clause in Concord law
+- intimidation:very_hard to stare her down
+- streetwise:moderate to find out which marines would refuse the order
+- tactics:hard to plan a sweep where nobody gets shot
+
+If it comes to a fight:
+- mutineer squad if her marines move without orders
+- security_drone pair she has posted on Cargo Three, if the captain goes in by force
+
+Where it can end up:
+stand_down_obeyed: Stand-down obeyed: she salutes, and stops telling the captain things. The clamps stay, oiled, and she keeps the list in a sealed envelope with a date on it.
+word_given: Word given: 612 people in custody by morning with hardly a shot fired. The fleet loses a third of its surgeons and engine hands overnight, Marrow walks off the job, Seven is next in line for the Cradle unless the captain stops it, and the fleet is calm in a way that frightens anyone paying attention.
+moves_without_orders: She moves without orders: one long night of corridors and locked doors, with marines on both sides. The captain ends it, and has to decide what to do with an officer who told them exactly what she'd do.
+registry_without_confinement: Registry without confinement: everyone on the list is known and tagged and free. Nobody's happy. The list is now public, and some people use it as a shopping list. Tarrow stays, and for now that's a win.
+
+If nobody steps in:
+after 30 days: Marines on six ships have started carrying a list, and they've been told not to discuss it.
+  lead: Marines on six ships are carrying a list now, and the nervous one who stopped you in the corridor has stopped asking who gives the word. He's started asking when.
+after 68 days: Lieutenant Tarrow's marines spent a long night in the corridors of two ships, without orders from anyone, and a lot of synthetics are in locked holds this morning.
+  lead: Lieutenant Tarrow moved without orders, on two ships, and a lot of synthetics are in locked holds this morning. She's waiting outside your door to report it, at attention. Someone has to decide what happens next.
+  big
+  fleet: morale -3
+
+Rewards:
+Either Tarrow's respect or Seven's gratitude, rarely both. A service_rifle from Tarrow's armory if she thinks the captain earned it.

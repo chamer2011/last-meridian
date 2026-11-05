@@ -1,0 +1,10 @@
+# Nobody Asks Twice
+order: 43
+needs skill: intimidation 5
+
+In a line:
+You've given orders nobody wanted to hear, and you know what your silence does to a room. +1 Intimidation, and better tools in Intimidation check windows, as if you were one tier better.
+
+Effects:
+skills: intimidation 1
+better tools in: intimidation 1

@@ -1,0 +1,8 @@
+# Woven Robes
+order: 9
+type: armor
+price: 130
+defense: 1
+
+In a line:
+Light fabric threaded with dampening filament.

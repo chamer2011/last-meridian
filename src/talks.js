@@ -5,6 +5,7 @@
 // same as the AI's would.
 
 import { findCharacter } from "./campaign.js";
+import { clearFact, recordFact } from "./record.js";
 import { toOutsider } from "./role.js";
 import { HELPERS, StoryError, loadScenes, matchChoice, openChoices, partText, ruleThatHolds, withoutChoices } from "./scenes.js";
 import { newTurnLimits, runTool } from "./tools.js";
@@ -68,13 +69,15 @@ function enterTalkPart(game, talk, scene, id, emit, hops = 0) {
   for (const step of part.do ?? []) {
     const { tool, set, clear, line: _line, ...input } = step;
     if (set) {
-      game.flags[set] = true;
+      recordFact(game, { id: set, text: step.text ?? null, from: talk.written?.id ?? null });
       continue;
     }
     if (clear) {
-      delete game.flags[clear];
+      clearFact(game, clear);
       continue;
     }
+    // Only a story's own scene ends it, and the checker says so; a conversation's * ending line does nothing.
+    if (step.ending) continue;
     const outcome = runTool(game, tool, input, turn);
     if (outcome.isError) throw new Error(`In the conversation ${talk.written.id}, part ${id}, ${tool} failed: ${outcome.result}`);
     if (outcome.narration) emit({ type: "text", text: outcome.narration });

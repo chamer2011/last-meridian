@@ -1,0 +1,10 @@
+# Powder Pistol
+order: 24
+type: weapon
+price: 80
+damage: 2 to 6
+stat: agility
+skill: firearms
+
+In a line:
+An antique pistol that fires real metal, loud and cheap to feed: 2 to 6 damage, using Agility and Firearms.

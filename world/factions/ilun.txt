@@ -1,0 +1,9 @@
+# Order of Ilun
+order: 4
+starting standing: 5
+
+In a line:
+The last monks who remember what Resonance is for.
+
+Beliefs:
+belief 9, violence -4, flesh -3

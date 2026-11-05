@@ -1,0 +1,53 @@
+# The Ship in the Pot
+kind: job
+places: wheel
+people: kit, oriel
+factions: drift, fleet
+
+The lead:
+Captain Lorne Abbey of the freighter Tolliver's Ark came back from the Gilded Wheel without his ship. He wagered her at cards, with four hundred refugees asleep in her holds, and whoever is holding the deed at tonight's reckoning bell can send someone to take delivery.
+
+For anyone who isn't the captain:
+Captain Lorne Abbey of the freighter Tolliver's Ark came back from the Gilded Wheel without his ship. He wagered her at cards, with four hundred refugees asleep in her holds, and whoever is holding the deed at tonight's reckoning bell can send someone to take delivery.
+
+What's really going on:
+Under Wheel law, a marker on a ship carries everything aboard, and the deed is now a brass token circulating through the tables and the Marker Exchange, changing hands every hour or two. If nobody redeems it, the Ark ends up on the Ticket Docks with a brass tag on her airlock, and her people go on board as tenants. The current chain includes Kit Marlowe-Dace, a retired Korrun boxer who won't play for anything but soup, a Veshti heiress who thinks it's a joke, and a House floor manager with orders to buy it quietly. Everyone plays it as a lark. The twist is Lorne Abbey himself. He isn't a drunk or a fool. He lost on purpose. The Wheel keeps its property fed: under Oriel's rules, anything the House owns has to be maintained in sellable condition, including the people. His four hundred have been on half rations for two months, and there have been funerals. He tried to lose his ship to the House. He just didn't reckon on Kit cheating him out of the pot, because Kit thought they were doing him a kindness. Now the deed is loose. If the captain gets it back, the Ark's people go on starving with the fleet. If the House gets it, they'll be fed and go down to the Cellars, polite and indebted for life, each with a number of years they can tell you without looking.
+
+How it might go:
+- Abbey in the Meridian's brig or a corner bar, shaking and strangely calm, repeating that it was his ship to lose. His first mate wants him out an airlock.
+- The floor of the Gilded Wheel: chandeliers, noise, and everyone's a character. The deed has just moved again. Kit knows who has it, and owes them money.
+- A chase across the tables. Each holder wants something different: a game, a laugh, a story, a price. The GM should make each stop a different kind of scene.
+- Someone at the Ark gets a message through, or Abbey finally breaks. He tells the captain what he was trying to do, and asks them to look in the Ark's holds before they win her back.
+- The reckoning bell. Whoever holds the deed owns four hundred people, and Madame Oriel has come down to watch, which she almost never does.
+
+Ways through:
+- Win it: deception and awareness to play a sharp's game at the tables, reading tells and cheating just well enough.
+- Buy it or trade for it: commerce and streetwise to work out who wants what, and put together a chain of swaps from a bottle of real coffee up to a freighter.
+- Challenge it: lore and persuasion to argue before the House that nobody can wager people who never agreed, under the Wheel's own old charter, in front of the crowd.
+
+Checks that fit:
+- deception:moderate to cheat a professional without being seen
+- awareness:moderate to read who's bluffing at the table
+- commerce:hard to build a chain of trades up to the deed in time
+- streetwise:easy to find out who's holding it right now
+- lore:hard to find the clause on wagering persons
+- persuasion:hard to sway the crowd and the House at the bell
+
+If it comes to a fight:
+- wheel_enforcer if the captain is caught cheating badly. The House prefers to throw people out with a bill, and paying the bill ends it.
+
+Where it can end up:
+captain_wins_back_deed: If the captain wins back the deed, the fleet keeps its ship and the Ark's starving people. Unless something is done about food, the funerals go on, and now they're the captain's.
+house_gets_deed: If the House gets the deed, the four hundred are fed, clothed and contracted, and they work the Wheel for decades. Some of them are grateful, and they tell the captain so.
+arks_people_asked_what_want: If the Ark's people are asked what they want, which nobody has done, they split, and the captain may end up with half a crew and two sets of grief.
+however_goes: However it goes, Lorne Abbey's fate is the captain's to decide: a court on the Ark, a broken man forgiven, or a quiet transfer to somewhere he can't sign anything.
+
+If nobody steps in:
+after 6 days: The House at the Gilded Wheel holds the deed to Tolliver's Ark now, and someone's come aboard with good food, new clothes and contracts for the four hundred in her holds.
+  lead: The House holds the deed to that freighter Captain Abbey lost at cards, and someone's come aboard with good food, new clothes and contracts for the four hundred refugees in her holds. Captain Abbey's stopped talking. Nobody's asked the four hundred what they want.
+after 30 days: Tolliver's Ark has left the fleet for the Gilded Wheel, with four hundred people aboard on contract.
+  lead: The freighter Captain Abbey lost at cards has gone to the Gilded Wheel, with four hundred people aboard on contract. The deed's still a brass token going round the tables, and it can still be won, or bought.
+  named: tollivers_ark gone
+
+Rewards:
+A wheel_marker or a small pile of chips worth up to 300 credits, Kit's lasting and unreliable friendship, a working freighter for the fleet, and a very interested look from Oriel.

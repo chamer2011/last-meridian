@@ -1,0 +1,50 @@
+# Talia Sen
+title: 
+also called: Talia Sen, Talia
+pronouns: she/her
+species: human
+age: 47
+faction: drift
+role: Noodle-stall owner in the Kessara warrens
+place: kessara
+color: #feb79e
+listed: no
+
+In a line:
+The broth is the best in the Drift, and she seems to hear everything that's said over it.
+
+Appearance:
+A wiry woman with forearms scarred by broth splashes, a cleaver through her apron string and her hair tied up in a rag. The stall is six stools and a pot she says hasn't been empty in twenty years.
+
+Personality:
+Brisk, rude and openly fond of almost everyone. Feeding you is how she takes your measure. She looks like the last honest business in Kessara, and she's a spy for a country that no longer exists.
+
+Voice:
+Says "Eat." as both hello and goodbye, and won't discuss anything on an empty stomach. Her sentences get broken up by orders shouted over her shoulder: "So your ship's leaking... TWO NO EGG! ... and you want to know who's buying." Reads you by what you order. Calls everyone "skinny". The shouted orders and the garnish are a code for her runners: "no egg" means you're clear, and a pinch of something green in your bowl means you should leave by a different tunnel.
+
+Goals:
+Get her son Davi off Rook Tannis's ship, the Second Opinion, before whatever's coming to the Syndicate comes. She'd sell nearly anyone for that, and she's keeping a list of who.
+
+Secrets:
+She's a Concord Intelligence asset who was never stood down. For twenty-two years she has run the warrens' gossip through delivery children and old women, and every month she still files a report to a dead drop. The Concord's gone, and she knows that. Jun Sable, her old handler, still reads them, and neither has ever mentioned it. She knows about Mother Quill's fuel depot, and that Rook Tannis plans to take the Syndicate. For eleven years she has kept a stolen strain of the warren's broth culture alive in a hollowed-out stockpot, waiting for someone who could get it out from under Quill's inspectors. Kit Marlowe-Dace owes her nine years of noodles. She's ashamed of her patriotism the way other people are ashamed of a crime.
+
+Beliefs:
+authority -2, loyalty -4, violence -1, belief -3
+
+Attributes:
+might 3, endurance 5, agility 5, perception 9, intellect 7, willpower 7, presence 6, resonance 1
+
+Skills:
+streetwise 9, awareness 7, deception 6, melee 4, stealth 4, commerce 4
+
+In a fight:
+threat: 2
+hp: 20
+attack: 3
+defense: 12
+damage: 3 to 6
+weapon: Kitchen Cleaver
+xp: 40
+credits: 10 to 60
+art: scoundrel
+tags: syndicate

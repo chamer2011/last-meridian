@@ -1,0 +1,10 @@
+# Arc Welder
+order: 3
+type: weapon
+price: 150
+damage: 3 to 8
+stat: intellect
+skill: engineering
+
+In a line:
+A tool first, a weapon whenever necessary.

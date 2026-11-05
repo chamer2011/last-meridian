@@ -1,0 +1,8 @@
+# Ghostweave Suit
+order: 11
+type: armor
+price: 1400
+defense: 4
+
+In a line:
+Bends light and targeting sensors alike.

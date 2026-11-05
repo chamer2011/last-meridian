@@ -1,0 +1,50 @@
+# Not a Flicker
+kind: crew
+places: meridian
+people: lira, aduro, seven, tarrow, wen
+factions: fleet
+level: 3
+after: crew_aduro_forty_one_days
+
+The lead:
+Ensign Vey asks to speak to you away from the bridge, and every line on her skin is shaking. A child died under Dr. Aduro's hands this morning, and Dr. Aduro's skin did not change at all.
+
+For anyone who isn't the captain:
+A child died under Dr. Aduro's hands this morning, and Ensign Vey says the doctor's skin didn't change at all. Everyone on the wards has started watching it.
+
+What's really going on:
+Ilari can't hide what they feel, and Aduro's patients have spent six months learning to read the doctor's skin. They could see when they'd been given up on before a word was said. Three weeks ago a boy read it, turned his face to the wall and stopped fighting, and he might have lived. So Aduro started dosing themself with palewort, a nerve-blocker meant for calming Ilari infants in surgery, to keep their skin still. It works. It also stops the feeling itself, which they've noted as a useful side effect, and that's the part that should worry everyone. They've been on it for eleven days. Past thirty, the patterns don't come back. By every measure their medicine has improved since they started. And they've stopped using the captain's first name, which nobody may have noticed yet. To a frightened Ilari, a still-skinned Aduro looks like nothing alive, and the first thing the crew will think is that a copy wouldn't get the patterns right.
+
+How it might go:
+- Lira's fear. To her it's like seeing someone with no pulse. She hasn't told anyone else, but she's an Ilari, so everyone on the bridge can already see that something is wrong.
+- The captain watches Aduro work. Kind words, perfect hands, nothing on their skin. They're better at their job than they have ever been. They address the captain by rank. Naomi Cass has stopped calling them Doctor Sad, and won't say why.
+- Rumor: "The doctor's been swapped." Tarrow comes to ask, with exact politeness, when Dr. Aduro was last tested.
+- The truth comes out, in a locked drawer or a quiet talk. Aduro explains it calmly. "Conscience is what you do. It isn't what shows." The palewort they're using is also what Dr. Adeyemi needs for infant surgery.
+- The choice, with a clock: Aduro is already on day eleven, and it's their body and their patients.
+
+Ways through:
+- Diagnose: medicine or science, or ask Seven, who noticed on day two, has been checking the dose for safety, and has said nothing because a patient has rights.
+- Reach them: persuasion and composure, an honest talk with no rank in it. Attunement finds nothing behind the skin, like pressing on a numb tooth, and a Resonant can carry a little of what they've shut out, at a price in stress.
+- Go behind their back: stealth and deception to swap the palewort for a placebo. It will work, and they'll know exactly what was done to them, on the worst day of their life.
+- Change the job: leadership to force a real rest rotation, moving Wen's staff up and putting someone else at the bedside, so that Aduro can afford to feel things again.
+
+Checks that fit:
+- awareness:easy to notice they've stopped using your first name
+- medicine:moderate to spot the signs of palewort
+- persuasion:hard to reach someone who can't currently be reached
+- stealth:moderate to get into the medbay's locked drawer
+- attunement:hard to feel what's been shut off, and carry a little of it
+- composure:moderate to keep a steady face while Tarrow asks her questions
+
+Where it can end up:
+off_drug: Off the drug: it comes back like blood into a numb hand. For a week they weep in corridors. Some patients lose hope on seeing it, and some are comforted for the first time in months. The first sign they're back is that they use the captain's first name, and the captain should notice.
+stays: Stays on: the fleet's medical numbers improve, measurably. On day thirty it becomes permanent, and Aduro reports this in a calm voice, as a finding. Their beliefs don't change. Their reasons do.
+exposed: Exposed: Tarrow has them tested in public, and they pass. The rumor doesn't die. Patients start refusing treatment, and the ship's conscience is now a suspect.
+thinks_to_ask: If someone thinks to ask, Lira offers to stand beside Aduro at the bedside and show on her skin what they can't. It's the strangest and kindest arrangement on the ship, and it can't last.
+
+If nobody steps in:
+after 30 days: People on the wards have noticed that Dr. Aduro's skin doesn't show anything any more, and they've stopped asking how bad it is.
+  lead: Dr. Aduro's patients spent months learning to read the doctor's skin, and now there's nothing on it to read. Ensign Vey says people have stopped asking how bad it is, and that's worse.
+
+Rewards:
+Aduro's friendship for life if it's done kindly, calm_tabs from the drawer, and Lira's trust.

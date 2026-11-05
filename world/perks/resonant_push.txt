@@ -1,0 +1,7 @@
+# Resonant Push
+order: 26
+needs skill: manifestation 2
+ability: push
+
+In a line:
+Unlocks Push in combat: 4 energy, a Manifestation attack that stuns the enemy for a round.

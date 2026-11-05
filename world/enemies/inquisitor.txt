@@ -1,0 +1,34 @@
+# Hegemony Inquisitor
+threat: 4
+hp: 42
+attack: 6
+defense: 15
+damage: 5 to 10
+weapon: Drinking Blade
+xp: 140
+credits: 80 to 180
+art: inquisitor
+tags: hegemony, resonance
+motive: belief
+faction: hegemony
+on hit: energy -2
+
+In a line:
+A hunter of Resonants, with a blade that drinks energy.
+
+When the fight starts:
+- An Inquisitor in Ministry grey draws a pale blade, and addresses you politely by your full name.
+
+When they hit:
+- The blade opens a line across you, and you feel your strength drain into it.
+- The Inquisitor steps through your guard and the pale blade drinks.
+
+When they miss:
+- The pale blade stops a finger's width from your throat.
+- You twist away, and the blade hums hungrily past you.
+
+When they hit hard:
+- The blade sinks in, and everything you have goes cold and far away.
+
+When they're beaten:
+- The Inquisitor sinks to one knee and says, very quietly, that this changes nothing.

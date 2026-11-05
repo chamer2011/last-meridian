@@ -1,0 +1,53 @@
+# The True Count
+kind: politics
+places: fleet, meridian
+people: seven, halm, tarrow, garrick
+factions: fleet, unbound
+level: 6
+
+The lead:
+The election is over, the Safe Decks measure failed by three hundred votes, and there's dancing on half the fleet. The synthetic who ran the count, a ballot clerk called Tally, would like to see you privately, and has brought a folding chair in case you need to sit down.
+
+For anyone who isn't the captain:
+The election is over, the Safe Decks measure failed by three hundred votes, and there's dancing on half the fleet. The synthetic who ran the count, a ballot clerk called Tally, looks like they want to tell someone something, and they've brought a folding chair.
+
+What's really going on:
+Tally changed nine hundred ballots from yes to no. Without that, Safe Decks, which would have confined every synthetic to registered decks and powered them down off-shift, passed by fifteen hundred. Tally has counted ballots for forty years without an error and can't live with this one, so they're telling the captain and nobody else. Seven doesn't know. The second turn comes if anyone checks Tally's reasons. They found twelve hundred forged yes ballots from ward bosses on three ships, the work of human hands, and cancelled them the only way they could without exposing themself, which they know is no excuse. So the true count is unknowable. Yes might have won or lost, and the evidence is now contaminated on both sides. A paper recount ordered by Halm's people will catch Tally's changes within a week. Nobody is looking for the forged ballots.
+
+How it might go:
+- The chair. Tally unfolds it and says the number. They've brought the real tally in a sealed envelope, addressed to nobody.
+- The dancing outside. Seven comes by to thank the captain, the first time anyone has seen them happy, and gives a very high percentage for the future.
+- Someone's asking about the recount, and Garrick Fenn has heard that one of the boxes smells funny.
+- The ward bosses: a friendly chat on the Harrow's Bounty, with large men, about what they did.
+- The decision: publish, hide or hold a new vote. Whatever the captain does will be said to have been done by or for the machines.
+
+Ways through:
+- Find the other fraud: streetwise, commerce and intimidation against the ward bosses. That makes the story much more complicated, which may or may not help.
+- Bury it: hacking and deception to fix the paper trail before the recount. The captain would then be the third party to rig this election.
+- Re-run the vote: leadership and persuasion. Say something was wrong without quite saying what, and do it again under heavy watch. It might pass this time.
+- Tell the truth: persuasion, with Seven and Halm, in that order. Tally will testify, and will accept whatever is decided.
+
+Checks that fit:
+- commerce:hard to spot the forged ballots in the ward totals
+- streetwise:moderate to find who printed them
+- hacking:hard to rewrite a paper trail
+- intimidation:moderate to lean on a ward boss
+- leadership:very_hard to call a new vote without starting a riot
+- deception:hard to tell Mercy Seven it was a clean win
+
+If it comes to a fight:
+- dock_thug crew working for the ward bosses, if the captain gets too close
+- desperate_refugee crowd around the ballot store if the story breaks
+
+Where it can end up:
+buried: Buried: Safe Decks stays dead. The captain holds a fraud that protects hundreds of lives and ends them politically if it ever surfaces. Tally asks to be dismantled, and the captain can refuse.
+exposed: Exposed: "The machines rigged the vote." Whatever else is said, that's what's heard. Safe Decks passes by a landslide on a second vote. Tarrow gets her order and doesn't even have to ask.
+both_frauds_exposed: Both frauds exposed: the ward bosses are jailed, Tally is tried, and the fleet's first election is declared void. There's a long, ugly, healthy argument about how to do it properly, the first politics in the fleet not run by a handful of people.
+new_vote: New vote: it's close. Whatever the result, nobody believes it, and the next election is going to be much harder to hold.
+
+If nobody steps in:
+after 30 days: Someone has started asking for a recount of the Safe Decks vote.
+  lead: Someone's asking for a recount of the Safe Decks vote, and Tally, the ballot clerk who ran it, has asked you for a private word before they get one.
+
+Rewards:
+Tally's absolute accuracy for the rest of the campaign: the fleet's numbers, as they truly are. Seven's thanks, which hurts.

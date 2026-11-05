@@ -1,0 +1,7 @@
+# Field Medic
+order: 23
+needs skill: medicine 2
+ability: field_patch
+
+In a line:
+Unlocks Field Patch in combat: 3 energy, heal 10 plus your Medicine rank.

@@ -1,0 +1,44 @@
+# Choir Chorister
+threat: 4
+hp: 38
+attack: 6
+defense: 15
+damage: 5 to 10
+weapon: Killing Note
+xp: 130
+credits: 0 to 0
+art: choir
+tags: choir, machines
+motive: choir
+machine: yes
+on hit: stress 2
+
+In a line:
+A tall Choir singer that coordinates the others, and everything nearby moves to its song.
+
+When the fight starts:
+- A tall silver shape unfolds at the end of the hall with its throat open, and you feel the note it's holding in the fluid of your eyes.
+- You hear the hum change key around you, and everything silver in the room starts to move in time. Then you see what's conducting it.
+
+When they hit:
+- It changes key, and something in your chest changes with it, and you drop to one knee.
+- A spear of sound crosses the room and goes through you. It's a beautiful note, and that's the worst of it.
+- You hear the harmony shift just before the blow, and you understand that it's singing about you now.
+
+When they miss:
+- The note passes over you, and the bulkhead behind you starts to ring, and then to crack.
+- It holds the note and turns slowly, and the sound slides past you, searching.
+- You clap your hands over your ears and stumble clear, and the note bends after you, too late.
+
+When they hit hard:
+- The song stops for one beat, and everything it's aimed at stops too, which right now is you.
+
+When they're beaten:
+- Its throat closes on a note that never ends, and you're still hearing it after it falls.
+- It falls mid-phrase. Somewhere very far away, you hear the song pick up the missing part.
+
+When they join the fight:
+- You hear {enemy} before you see it, and your hands start keeping time against your will.
+
+When they're stunned:
+- {Enemy} stops on a held breath with its throat working, and for one moment you can hear yourself think.

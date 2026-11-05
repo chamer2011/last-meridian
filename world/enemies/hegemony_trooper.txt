@@ -1,0 +1,36 @@
+# Hegemony Trooper
+threat: 3
+hp: 30
+attack: 5
+defense: 15
+damage: 4 to 9
+weapon: Ministry Rifle
+xp: 80
+credits: 30 to 90
+art: trooper
+tags: hegemony
+motive: orders
+faction: hegemony
+
+In a line:
+Polished armor, perfect discipline, no doubts.
+
+When the fight starts:
+- A Hegemony trooper in polished armor advances at a measured pace and orders you to lie down.
+
+When they hit:
+- A precise burst hits you center mass, with no wasted rounds.
+- The trooper steps forward and fires again, in exactly the same rhythm.
+
+When they miss:
+- Rounds pass close enough to feel, in a tight and tidy pattern.
+- The trooper corrects a fraction, unhurried, and fires again.
+
+When they hit hard:
+- A single round finds the gap, as though the trooper had been told where it was.
+
+When they're beaten:
+- The trooper falls without a sound, and the polished armor rings on the deck.
+
+When a lie works:
+- You rattle off a clearance code, a section and a superior's name, with just enough impatience. The trooper checks their slate, finds nothing, and doesn't want to be the one who asks.

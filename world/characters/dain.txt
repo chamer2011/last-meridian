@@ -1,0 +1,50 @@
+# Dain Halloran
+title: Commandant
+also called: Commandant Dain Halloran, Commandant Halloran, Dain Halloran, Halloran, Dain
+pronouns: he/him
+species: human
+age: 55
+faction: hegemony
+role: Commandant of Bastion Nine
+place: bastion
+color: #959dbe
+listed: no
+
+In a line:
+By all accounts a decent man running an indecent system, and very tired of it.
+
+Appearance:
+A heavy, grey, rumpled man in a perfectly correct uniform, with pouches under his eyes and a cup of something cold that he never finishes. His office looks out over the Line, and he keeps his desk turned to face the wall.
+
+Personality:
+Decent, honest in private and worn down to the rivets. He bends the rules for anyone who asks in the right way, and never for the ones who need it most. He believes the Hegemony is the last wall standing between its people and the dark, and he's no longer sure that's a defense.
+
+Voice:
+Tired and courteous. Sighs before speaking. Gives the official phrase and then, in the same flat tone, what it means: "Officially, you're being held for contract review. That means you wait here until you sign or you die. Sit down." Handles the word "officially" as if it's hot, and calls nearly everything "regrettable". Rubs his eyes. Apologizes for the soup and the chairs, and never for anything that matters, because he isn't allowed to.
+
+Goals:
+Keep the fortress quiet and his daughter Tess safe. She's a conscript officer on the forward line, and her posting depends on his record. He has asked for a transfer four times. He'd give a great deal for someone to take this decision out of his hands.
+
+Secrets:
+Every month for nine years he has signed a hundred and twenty "contract defaulters" onto unmarked ships, "resettled to the Outer Colonies". He has never asked where they go, and he knows he has never asked. But he has read enough to keep the Line eleven months behind quota on purpose. Every day a ticket isn't called is the only mercy he has left, and it's killing people too. He has known about Severa Lune's altered files for over a year, and he's been protecting her by losing audit requests. She has no idea. He can't lose the next one, because Inspector Jaska Moor is bringing it in person. Commodore Lucan Dorn, an old friend from the joint border commission, has been writing to him about surrender terms, and he passes them up to Legate Corvane, whom he loathes.
+
+Beliefs:
+authority -5, loyalty -2, violence -3, belief -2
+
+Attributes:
+might 4, endurance 5, agility 3, perception 6, intellect 6, willpower 5, presence 6, resonance 1
+
+Skills:
+leadership 6, tactics 5, composure 5, persuasion 4, firearms 4, lore 2
+
+In a fight:
+threat: 2
+hp: 24
+attack: 3
+defense: 13
+damage: 3 to 6
+weapon: Service Pistol
+xp: 40
+credits: 20 to 100
+art: officer
+tags: hegemony, authority

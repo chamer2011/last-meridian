@@ -31,13 +31,23 @@ const AXES = ["authority", "loyalty", "violence", "belief", "flesh"];
 const KINDS = ["job", "mystery", "crew", "politics", "survival", "exploration", "dilemma", "faction", "main"];
 const CONTEXTS = ["choir", "machines", "hegemony", "syndicate", "resonance", "vacuum", "confined", "crowd", "authority", "low_light", "heavy_gravity", "loved_one"];
 
-const characters = folder("characters");
-const enemies = folder("enemies");
-const places = folder("places");
-const threads = folder("threads");
-const items = single("items.json");
-const perks = single("perks.json");
-const factions = single("factions.json");
+const { PERSON, PLACE, parseWorldText } = await import("../public/world-text.js");
+const textFolder = (name, spec) => Object.fromEntries(fs.readdirSync(path.join(world, name))
+  .filter((file) => file.endsWith(".txt") && !file.startsWith("_"))
+  .map((file) => [file.slice(0, -".txt".length), parseWorldText(fs.readFileSync(path.join(world, name, file), "utf8"), spec, file.slice(0, -".txt".length)).value]));
+const characters = textFolder("characters", PERSON);
+const { ENEMY, FACTION, ITEM } = await import("../public/world-text.js");
+const enemies = textFolder("enemies", ENEMY);
+const places = textFolder("places", PLACE);
+const { parseStoryText } = await import("../public/story-text.js");
+const threads = Object.fromEntries(fs.readdirSync(path.join(world, "stories"))
+  .filter((name) => name.endsWith(".txt") && !name.startsWith("_"))
+  .map((name) => [name.slice(0, -".txt".length), parseStoryText(fs.readFileSync(path.join(world, "stories", name), "utf8"), name.slice(0, -".txt".length)).story]));
+const items = textFolder("items", ITEM);
+const { PERK } = await import("../public/world-text.js");
+const { ABILITIES } = await import("../src/data.js");
+const perks = textFolder("perks", PERK);
+const factions = textFolder("factions", FACTION);
 const art = single("art.json");
 const arc = single("arc.json");
 const events = single("fleet-events.json");
@@ -137,7 +147,7 @@ test("items and perks are complete", () => {
   for (const [id, perk] of Object.entries(perks)) {
     const where = `perks/${id}`;
     if (!text(perk.name) || !text(perk.desc)) report(where, "needs a name and a desc");
-    if (perk.ability) report(where, "new perks can't use ability");
+    if (perk.ability && !ABILITIES[perk.ability]) report(where, `unknown ability ${perk.ability}: abilities are part of the game's code`);
     for (const skill of Object.keys(perk.requiresSkill ?? {})) if (!SKILLS.includes(skill)) report(where, `unknown skill ${skill}`);
     for (const skill of Object.keys(perk.fx?.skills ?? {})) if (!SKILLS.includes(skill)) report(where, `unknown skill ${skill}`);
     for (const skill of Object.keys(perk.fx?.windowTier ?? {})) if (!SKILLS.includes(skill)) report(where, `unknown skill ${skill}`);
@@ -148,7 +158,7 @@ test("items and perks are complete", () => {
 test("story threads are complete, and everything they mention exists", () => {
   const leads = new Map();
   for (const [id, thread] of Object.entries(threads)) {
-    const where = `threads/${id}`;
+    const where = `stories/${id}`;
     if (!text(thread.title)) report(where, "needs a title");
     if (!text(thread.lead)) report(where, "needs a lead");
     if (!KINDS.includes(thread.kind)) report(where, `unknown kind ${thread.kind}`);

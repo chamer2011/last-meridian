@@ -1,0 +1,38 @@
+HOW TO WRITE A PERK
+===================
+
+Every perk a character can have or learn is one file in this folder, named by its id: dead_ship_passwords.txt is
+Dead Ship Passwords, and careers in the code name their starting perks by that id. The Story board in the game
+(The story, then Story board, then Perks) shows and changes the same files, and npm run check-story reads them all
+and says what's wrong, with the file and the line.
+
+    # Dead Ship Passwords
+    order: 12                           (where it comes in lists; leave it out to come after the rest, by name)
+    starting: yes                       (a perk a career gives at the start, not one to learn; leave it out if not)
+    needs perk: chain_of_command        (a perk to have first; leave it out if none)
+    needs skill: hacking 5              (skill ranks needed to learn it)
+    needs attribute: intellect 6        (attributes needed to learn it)
+    ability: spike                      (a fight ability from the game's code; only the ones that exist)
+
+    In a line:
+    You've opened enough dead ships to guess what a tired engineer would type. +1 Hacking, and better tools in Hacking check windows.
+
+    Effects:
+    skills: hacking 1                   (skill bonuses)
+    better tools in: hacking 1          (check windows for that skill, as if one tier better)
+    in a setting: vacuum 1              (easier in a setting: an id from the contexts list)
+    max hp: 5
+    max energy: 2
+    attack: 1
+    defense: 1
+    damage: 1
+    flee: 2
+    heal rate: 1.25                     (rates are fractions of the usual: 1.25 is a quarter more, 0.9 a tenth less)
+    stress rate: 0.8
+    stress recovery: 1.25
+    fatigue rate: 0.9
+    learn rate: 1.2
+    price bonus: 0.1
+
+In a line is what the player reads in the Perks menu, so say in it what the perk does. A part that has nothing in
+it can be left out.

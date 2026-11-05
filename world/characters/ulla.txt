@@ -1,0 +1,64 @@
+# Ulla Greaves
+title: Shift Boss
+also called: Shift Boss Ulla Greaves, Shift Boss Greaves, Boss Greaves, Ulla Greaves, Ulla, Greaves
+pronouns: she/her
+species: human
+age: 49
+faction: none
+role: Strike leader of the Cinder Reach miners
+place: cinder
+color: #fb718c
+listed: no
+
+In a line:
+Honest, furious and sitting on the fleet's best fuel supply.
+
+Appearance:
+A short, thick-armed woman with a miner's cough, cropped iron-grey hair and ash in every line of her face. She wears her hard hat to meetings, on purpose.
+
+Personality:
+Loud, straight and incapable of a soft word. She has never taken a bribe, lied to her crew or backed down from a fight she thought was right, and she's as good at being angry as other people are at music. She's been hiding one small thing for forty years, and she'd rather lose the strike than have it known.
+
+Voice:
+Starts with "Right." Counts her points on her fingers, always in order: "Right. One: the vents. Two: the back pay. Three: him." Says "I'll say this once", then says it twice, word for word. Interrupts. Calls the Director "Rennick" to his face and "that man" to everyone else. No euphemisms of any kind. Says "my people" the way others say "my hands".
+
+Goals:
+Safe vents, back pay and the truth about the Shaft Nine blowout, where fourteen people died behind a door Rennick Vale ordered shut. She wants to hear him say it, and she won't sell one liter of fuel until she does.
+
+Secrets:
+She can't read. Nobody ever taught her, and she has hidden it for forty years: she knows numbers and gauges, her son Nils reads her everything else, as his brother did before he went down in Tube Nineteen, and she holds it all in her head, which is why she counts on her fingers. Rennick Vale's report on the reactor has been in her jacket for a month, unread, because Nils is out on the picket line and no one else can know. Her engineers say it's a company lie, and she has no way to check. She carried Vale out of a blowout in Shaft Two twenty-six years ago, when they were on the same crew. He still limps, and she's never forgiven him for getting promoted. She doesn't know that most of the strike fund comes from Mother Quill, through three shell charities, because Quill would rather the fleet had no other fuel to buy. Her treasurer, Ness Bray, does.
+
+Beliefs:
+authority 7, loyalty -8, violence 4, belief -3
+
+Attributes:
+might 6, endurance 8, agility 4, perception 6, intellect 5, willpower 9, presence 8, resonance 1
+
+Skills:
+leadership 8, intimidation 6, melee 5, survival 5, engineering 4
+
+In a fight:
+threat: 2
+hp: 28
+attack: 4
+defense: 12
+damage: 3 to 7
+weapon: Rock Drill
+xp: 40
+credits: 0 to 20
+art: brawler
+tags: 
+
+When the fight starts:
+- "Right," Ulla Greaves says, and thumbs the rock drill on. "I'll say this once. I'll say this once."
+
+When they hit:
+- The drill housing catches you in the chest. "One," she says.
+- A fist like a mining charge lands under your ribs. "Two."
+
+When they miss:
+- The drill screams past your head and chews into the wall.
+- You get clear, and she's already counting. "Three's coming," she says.
+
+When they're beaten:
+- Ulla Greaves sits down hard and coughs up ash. "You can beat me," she says. "You still can't buy the fuel."

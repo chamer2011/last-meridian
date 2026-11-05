@@ -1,0 +1,10 @@
+# Old Concord Medal
+order: 49
+type: gadget
+price: 200
+
+In a line:
+A service medal from the old navy, and people still straighten up when they see it: +2 on Leadership checks while carried.
+
+Effects:
+skills: leadership 2

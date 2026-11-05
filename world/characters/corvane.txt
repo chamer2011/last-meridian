@@ -1,0 +1,49 @@
+# Marius Corvane
+title: Legate
+also called: Legate Marius Corvane, Legate Corvane, Marius Corvane, Corvane
+pronouns: he/him
+species: human
+age: 49
+faction: hegemony
+role: The Hegemony's envoy to the fleet
+place: haven
+color: #f0c9a0
+
+In a line:
+A smooth Hegemony diplomat at Haven Station, always carrying a generous offer and a long contract.
+
+Appearance:
+Handsome, well fed and beautifully tailored, which is its own kind of insult to anyone from the fleet.
+
+Personality:
+Charming, reasonable and tireless. He has never once lost his temper in public.
+
+Voice:
+Warm and conversational, as though you're already friends. Everything is an "opportunity", and every threat is "an unfortunate possibility".
+
+Goals:
+Bring the fleet under Hegemony protection without firing a shot, and be rewarded for it.
+
+Secrets:
+He's terrified of the Regent. He has seen what happens to the unmarked ships, and he would trade almost anything for a way out.
+
+Beliefs:
+authority -6, loyalty 3, violence -1, belief -3
+
+Attributes:
+might 3, endurance 3, agility 4, perception 6, intellect 6, willpower 4, presence 8, resonance 1
+
+Skills:
+persuasion 7, deception 7, commerce 5, lore 3, firearms 2
+
+In a fight:
+threat: 2
+hp: 20
+attack: 3
+defense: 13
+damage: 3 to 6
+weapon: Concealed Pistol
+xp: 50
+credits: 60 to 200
+art: officer
+tags: hegemony

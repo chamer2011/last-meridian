@@ -1,0 +1,9 @@
+# Open Mind
+order: 7
+starting: yes
+
+In a line:
+Order of Ilun: +2 Attunement, +1 Manifestation.
+
+Effects:
+skills: attunement 2, manifestation 1

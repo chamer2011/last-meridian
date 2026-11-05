@@ -770,18 +770,76 @@ button.fighter:hover:not(:disabled), button.fighter:focus-visible { background: 
 .pop-story .thinking { color: var(--c-dim); }
 .pop-story .entry.error { font: var(--pop-size)/1.45 var(--pop-font); margin: 0 0 .4em; }
 .pop-story .console-text { margin: 0 0 .4em; }
-/* The window over someone's head, in their color. */
-.pop-balloon { position: absolute; left: 0; top: 0; z-index: 2; width: clamp(26ch, 44cqw, 46ch); visibility: hidden; font: var(--pop-size)/1.45 var(--pop-font); }
+/* The pane by someone's head, in their color: four corners, a tag with their name, their words on a dark
+   pane, and a line down to their head. It slides out from the head when it first appears, it can be pulled
+   aside with the mouse, and it slides back when it's let go. */
+.pop-balloon { position: absolute; left: 0; top: 0; z-index: 2; width: clamp(26ch, 36cqw, 34ch); visibility: hidden; font: var(--pop-size)/1.45 var(--pop-font); cursor: grab; touch-action: none; }
 .pop-balloon.placed { visibility: visible; }
+.pop-balloon.pop-talk { z-index: 3; }
+.pop-balloon.dragging { cursor: grabbing; }
+.pop-balloon.springing { transition: transform .32s cubic-bezier(.2, .9, .3, 1.08); }
+.pop-balloon.more .pop-words { cursor: pointer; }
+.pop-balloon.no-head .pop-leader { display: none; }
+.pop-leader { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; }
+.pop-leader line { stroke: var(--speaker); stroke-width: 1.2; }
+.pop-leader circle { fill: var(--speaker); }
 .pop-speaker {
   --c: var(--speaker); --c-dim: color-mix(in srgb, var(--speaker) 62%, #000); --c-line: color-mix(in srgb, var(--speaker) 40%, #000);
   --c-bg: color-mix(in srgb, var(--speaker) 7%, #030403); --c-panel: color-mix(in srgb, var(--speaker) 12%, #030403); --c-bright: color-mix(in srgb, var(--speaker) 25%, #fff);
-  width: 100%; max-height: 58cqh;
 }
-.pop-speaker .pop-words .quote { color: inherit; }
-.pop-tail { position: absolute; left: var(--tail, 20px); bottom: -5px; width: 10px; height: 10px; background: var(--speaker); transform: rotate(45deg); }
-.pop-balloon.below .pop-tail { bottom: auto; top: -5px; }
-.pop-hint { flex: none; display: flex; justify-content: space-between; gap: 12px; padding: 1px 10px 3px; color: var(--c-dim); font: 12px/1.4 var(--mono); }
+.pop-pane { position: relative; display: flex; flex-direction: column; min-height: 0; max-height: 58cqh; background: rgba(3, 4, 3, .84); color: var(--c); box-shadow: 0 10px 30px rgba(0, 0, 0, .55); }
+.pop-corner { position: absolute; z-index: 1; width: 11px; height: 11px; border: 2px solid var(--speaker); pointer-events: none; }
+.pop-corner.tl { left: -1px; top: -1px; border-right: 0; border-bottom: 0; }
+.pop-corner.tr { right: -1px; top: -1px; border-left: 0; border-bottom: 0; }
+.pop-corner.bl { left: -1px; bottom: -1px; border-right: 0; border-top: 0; }
+.pop-corner.br { right: -1px; bottom: -1px; border-left: 0; border-top: 0; }
+.pop-tag { position: absolute; z-index: 1; left: 12px; top: -8px; max-width: calc(100% - 24px); display: flex; gap: 0 10px; align-items: baseline; padding: 0 6px; background: var(--speaker); color: var(--bg); font: 700 11px/15px var(--mono); text-transform: uppercase; letter-spacing: .08em; white-space: nowrap; overflow: hidden; }
+.pop-tag-name { flex: none; }
+.pop-tag-note { flex: 0 1 auto; min-width: 0; font-weight: 400; text-transform: none; letter-spacing: 0; overflow: hidden; text-overflow: ellipsis; }
+.pop-pane .pop-words { padding: 12px 12px 4px; }
+.pop-pane .pop-words .quote { color: inherit; }
+.pop-pane .speech { border-left: 0; padding-left: 0; }
+.pop-pane .speaker-line { display: none; }
+.pop-pane .passage > * { margin: 0 0 .4em; }
+.pop-pane .entry.aside, .pop-pane .thinking { color: var(--c-dim); }
+.pop-pane .player-text { color: var(--c-bright); }
+.pop-hint { flex: none; display: flex; justify-content: space-between; gap: 12px; padding: 1px 12px 5px; color: var(--c-dim); font: 12px/1.4 var(--mono); }
+.pop-balloon.opening .pop-pane { animation: pop-slide-out .2s ease-out .12s both; }
+.pop-balloon.opening .pop-leader line { animation: pop-draw .14s linear both; }
+.pop-balloon.opening .pop-corner { animation: pop-snap .22s ease-out .3s both; }
+@keyframes pop-slide-out { from { transform: translate(var(--from-x, 0px), var(--from-y, 0px)) scale(.3); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes pop-draw { from { stroke-dashoffset: var(--len, 0); } to { stroke-dashoffset: 0; } }
+@keyframes pop-snap { from { transform: scale(1.8); opacity: 0; } to { transform: none; opacity: 1; } }
+.pop-mine { transition: opacity .3s, visibility 0s; }
+.pop-mine.away { opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .3s, visibility 0s .3s; }
+/* A talk's choices hang off the pane, on whichever side has the room, and slide in once the words are all there. */
+.pop-choices {
+  position: absolute; top: 0; z-index: 1; width: clamp(24ch, 30cqw, 34ch); display: flex; flex-direction: column; cursor: default;
+  --speaker: var(--text); --c: #8df5ac; --c-dim: #4f9a68; --c-line: #2a6a43; --c-bg: #03110a; --c-bright: #e6ffef;
+  color: var(--c); font: 13px/1.4 var(--mono); background: rgba(3, 17, 10, .88); box-shadow: 0 10px 30px rgba(0, 0, 0, .55);
+  opacity: 0; pointer-events: none; transition: transform .22s ease-out, opacity .22s ease-out;
+}
+.pop-choices .options { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
+.pop-choices.at-right { left: calc(100% + 12px); transform: translateX(-16px); }
+.pop-choices.at-left { right: calc(100% + 12px); transform: translateX(16px); }
+.pop-choices.below, .pop-choices.above { left: 0; transform: translateY(-10px); }
+.pop-choices.in { opacity: 1; pointer-events: auto; transform: none; }
+.pop-choices .options { display: flex; flex-direction: column; gap: 1px; padding: 12px 8px 4px; }
+.pop-choices .options button { display: block; font-size: 13px; padding: 1px 3px; }
+.pop-choices .options button > * { margin-right: 1ch; }
+.pop-choices .option-number, .pop-choices .option-detail { color: var(--c-dim); }
+.pop-choices .option-label { color: var(--c-bright); }
+.pop-choices .options button:hover:not(:disabled) *, .pop-choices .options button:focus-visible * { color: var(--bg); }
+.pop-choices .check-prompt { padding: 3px 8px 2px; }
+.pop-choices .check-prompt input { background: transparent; }
+.pop-choices .talk-message { padding: 2px 8px; }
+.pop-choices-foot { display: flex; justify-content: space-between; gap: 2px 8px; flex-wrap: wrap; padding: 3px 8px 5px; font-size: 11px; color: var(--c-dim); }
+.pop-record { padding: 0 8px 6px; font-size: 12px; }
+.pop-record summary { color: var(--c-dim); cursor: pointer; }
+.pop-record-lines { max-height: 26cqh; overflow-y: auto; margin-top: 4px; display: flex; flex-direction: column; gap: 4px; color: var(--c-bright); font: 12.5px/1.45 var(--mono); }
+.pop-record-lines .speech .quote { font-family: var(--mono); }
+.pop-record-lines .player-name, .pop-record-lines .player-text { color: var(--c); }
+.pop-record-lines .entry.aside { color: var(--c-dim); }
 .unwritten { visibility: hidden; }
 .write-cursor { display: inline-block; width: 0; }
 .write-cursor::after { content: "\2588"; font-family: var(--mono); font-size: .85em; animation: blink 1s steps(1) infinite; }
@@ -806,6 +864,8 @@ button.fighter:hover:not(:disabled), button.fighter:focus-visible { background: 
 }
 @media (prefers-reduced-motion: reduce) {
   .write-cursor::after { animation: none; }
+  .pop-balloon.opening .pop-pane, .pop-balloon.opening .pop-leader line, .pop-balloon.opening .pop-corner { animation: none; }
+  .pop-balloon.springing, .pop-choices, .pop-mine { transition: none; }
 }
 
 /* The talk window borrows the check window's look, in a color for how the person feels about you. */

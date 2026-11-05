@@ -1,0 +1,10 @@
+# Weighs Every Promise
+order: 45
+needs skill: commerce 4
+
+In a line:
+You've picked up the Korrun habit of weighing what people say before you pay for it. Market prices are 5% better, and you get better tools in Commerce check windows, as if you were one tier better.
+
+Effects:
+better tools in: commerce 1
+price bonus: 0.05

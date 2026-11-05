@@ -1,0 +1,10 @@
+# The Keepers of Sarn
+order: 9
+also called: the Keepers of Sarn, Keepers of Sarn, the Keepers
+starting standing: 0
+
+In a line:
+Thessan archivists on the moon of Sarn, who believe that what's forgotten is dead twice.
+
+Beliefs:
+authority -3, violence -5, belief -6

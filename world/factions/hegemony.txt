@@ -1,0 +1,9 @@
+# Hegemony
+order: 2
+starting standing: -10
+
+In a line:
+An orderly empire that offers safety in exchange for everything else.
+
+Beliefs:
+authority -8, loyalty -3, violence 5, belief -3, flesh -2

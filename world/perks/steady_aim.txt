@@ -1,0 +1,8 @@
+# Steady Aim
+order: 15
+
+In a line:
++2 to attack rolls.
+
+Effects:
+attack: 2

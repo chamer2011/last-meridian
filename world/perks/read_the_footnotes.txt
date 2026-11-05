@@ -1,0 +1,10 @@
+# Read the Footnotes
+order: 34
+needs skill: science 3, lore 3
+
+In a line:
+Everyone who knew the answers is dead, so you've learned to read what they left behind. +1 Lore, and better tools in Science and Lore check windows, as if you were one tier better.
+
+Effects:
+skills: lore 1
+better tools in: science 1, lore 1

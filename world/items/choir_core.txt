@@ -1,0 +1,7 @@
+# Choir Core
+order: 21
+type: story
+price: 0
+
+In a line:
+A Hunter's brain. Still humming, still listening.

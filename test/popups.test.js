@@ -184,12 +184,19 @@ test("the choices in the Settings menu are ones the game knows, and it starts wi
   assert.ok(WRITING_SPEEDS.slow < WRITING_SPEEDS.normal && WRITING_SPEEDS.normal < WRITING_SPEEDS.fast);
 });
 
-test("the popups are in the game's own windows, in its own font", () => {
+test("the popups are in the game's own windows, in its own font, and what's said is on a pane by the head", () => {
   const css = fs.readFileSync(new URL("../public/style.css", import.meta.url), "utf8");
   const popups = fs.readFileSync(new URL("../public/popups.js", import.meta.url), "utf8");
+  const pane = fs.readFileSync(new URL("../public/pane.js", import.meta.url), "utf8");
+  const talk = fs.readFileSync(new URL("../public/talk.js", import.meta.url), "utf8");
   assert.ok(popups.includes('check-window pop-window pop-story'));
-  assert.ok(popups.includes('check-window pop-window pop-speaker'));
   assert.ok(popups.includes('check-window pop-window pop-command'));
+  // The speech, and a talk, go on the same pane: four corners, a tag, a line to the head, in the speaker's color.
+  assert.ok(pane.includes('class: "pop-pane pop-speaker"'));
+  assert.ok(popups.includes("paneNode({") && talk.includes("paneNode({"));
+  assert.ok(talk.includes('id: "talk-choices"'));
+  assert.match(css, /\.pop-corner\.tl \{/);
+  assert.match(css, /\.pop-balloon\.springing \{ transition: transform/);
   assert.match(css, /--pop-font: var\(--mono\)/);
   // And they stay under the windows that have to go over them.
   const zOf = (selector) => Number(css.match(new RegExp(`\\${selector} \\{[^}]*z-index: (\\d+)`))?.[1]);

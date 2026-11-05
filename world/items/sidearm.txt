@@ -1,0 +1,10 @@
+# Concord Sidearm
+order: 1
+type: weapon
+price: 120
+damage: 3 to 7
+stat: agility
+skill: firearms
+
+In a line:
+Standard-issue pulse pistol. Reliable, unremarkable.

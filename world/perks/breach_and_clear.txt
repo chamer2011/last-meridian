@@ -1,0 +1,9 @@
+# Breach and Clear
+order: 2
+starting: yes
+
+In a line:
+Marine career: +1 Firearms, +1 Athletics.
+
+Effects:
+skills: firearms 1, athletics 1
