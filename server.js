@@ -22,6 +22,9 @@ import {
   buy, buyPerk, captainSheet, clockFor, combatAction, equip, notePeopleSeen, publicState, raiseSkill, raiseStat, rest, sell, setDifficulty, startCombat, useItem, workShift,
 } from "./src/rules.js";
 import { closeTalk, talkBrief, talkCommand, talkHeard, talkLineOver, talkSaid, walkCommand, walkTick } from "./src/walk.js";
+import { enterAfterHack, enterDoorPanel } from "./src/computers.js";
+import { airBadHere, controlSystem, settlePart, systemsOf } from "./src/systems.js";
+import { computerCommand } from "./src/computer-use.js";
 
 const savesDir = path.join(dataDir(), "saves");
 const settingsFile = path.join(dataDir(), "settings.json");
@@ -329,12 +332,16 @@ const requireGame = () => {
 const RAID_WAITING = "The fleet's under attack. Give your orders first.";
 // The clock stands still during a talk, so anything that could move it waits until it's over.
 const TALK_WAITING = "Finish the talk first.";
+// The clock stands still on a computer too, and the AI only hears about it at log-off.
+const COMPUTER_WAITING = "Log off the computer first.";
 
 function menuAction(body) {
   const g = requireGame();
   // Sleeping lets time pass, and that has to wait until the raid's been answered.
   if (g.fleet?.raid && (body.action === "rest" || body.action === "work")) throw new Error(RAID_WAITING);
   if (g.talk && (body.action === "rest" || body.action === "work")) throw new Error(TALK_WAITING);
+  if (g.computer && (body.action === "rest" || body.action === "work")) throw new Error(COMPUTER_WAITING);
+  if (body.action === "rest" && airBadHere(g)) throw new Error("You can't rest here: the air's bad. Get somewhere it's moving first.");
   switch (body.action) {
     case "equip": equip(g, body.id); return null;
     case "use": return useItem(g, body.id);
@@ -476,6 +483,7 @@ async function handleApi(req, res, route) {
     if (requireGame().combat) throw new Error("Finish the fight first.");
     if (game.check) throw new Error("Finish the check first.");
     if (game.talk) throw new Error(TALK_WAITING);
+    if (game.computer) throw new Error(COMPUTER_WAITING);
     const { message, notes = [], report = null, moved = false } = fleetCommand(game, body);
     if (notes.length) log("notice", notes.join("\n"));
     autosave();
@@ -497,6 +505,7 @@ async function handleApi(req, res, route) {
   if (route === "/api/check/start") {
     if (requireGame().fleet?.raid) throw new Error(RAID_WAITING);
     if (game.talk) throw new Error(TALK_WAITING);
+    if (game.computer) throw new Error(COMPUTER_WAITING);
     if (body.practice) {
       if (!SKILLS[body.practice]) throw new Error("Unknown skill.");
       startCheck(game, { skill: body.practice, difficulty: body.difficulty ?? "moderate", reason: `Practice: ${SKILLS[body.practice].name}`, source: "practice" });
@@ -510,7 +519,39 @@ async function handleApi(req, res, route) {
   }
   if (route === "/api/check") {
     const reply = checkCommand(requireGame(), body.command);
+    // Work on a part or a door by hand is settled by the place's systems; a door panel that was hacked opens as a computer.
+    const worked = reply.over ? settlePart(game, reply.outcome, (place, to, hack) => enterDoorPanel(game, place, to, hack)) : null;
+    if (worked) reply.outcome.notes.push(...worked);
+    // A hack that got in doesn't end at the result: the screen becomes the computer's own system.
+    if (worked === null && reply.over && reply.outcome?.hack && reply.outcome.success && !reply.outcome.training) {
+      try {
+        enterAfterHack(game, reply.outcome.hack);
+      } catch (err) {
+        reply.outcome.notes.push(`[COMPUTER] ${err.message}`);
+      }
+    }
     if (reply.over) autosave();
+    return json(res, 200, { game: publicState(game), ...reply });
+  }
+  // The captain runs the Meridian's systems from the Ship menu: no hack, and nobody switches back what they do.
+  if (route === "/api/systems") {
+    if (requireGame().combat) throw new Error("Finish the fight first.");
+    if (game.check) throw new Error("Finish the check first.");
+    if (game.fleet?.raid) throw new Error(RAID_WAITING);
+    if (!systemsOf("meridian")) throw new Error("The Meridian has no systems to run.");
+    if (game.role?.captain === false) throw new Error("The Meridian isn't yours to run.");
+    const all = [{ systems: systemsOf("meridian").systems.map((one) => one.id), rooms: null }];
+    const notes = controlSystem(game, "meridian", all, String(body.row ?? ""), String(body.to ?? ""), { by: "owner" });
+    if (notes.length) log("notice", notes.join("\n"));
+    autosave();
+    return json(res, 200, { game: publicState(game), notes });
+  }
+  // A computer the player is on: reading, running and logging off happen here, and the AI hears one line at the end.
+  if (route === "/api/computer") {
+    if (requireGame().combat) throw new Error("Finish the fight first.");
+    if (game.check) throw new Error("Finish the check first.");
+    const reply = computerCommand(game, body);
+    autosave();
     return json(res, 200, { game: publicState(game), ...reply });
   }
   if (route === "/api/sim") {
@@ -518,6 +559,7 @@ async function handleApi(req, res, route) {
     if (game.check) throw new Error("Finish the check first.");
     if (game.fleet?.raid) throw new Error(RAID_WAITING);
     if (game.talk) throw new Error(TALK_WAITING);
+    if (game.computer) throw new Error(COMPUTER_WAITING);
     if (!publicState(game).location.rest) throw new Error("The simulator is aboard the Meridian.");
     startCombat(game, body.enemy, { training: true, ...(body.followers ? simulatorFollowers(game, body.enemy) : {}) });
     autosave();
@@ -543,12 +585,13 @@ async function handleApi(req, res, route) {
     if (game.check) throw new Error("Finish the check first.");
     if (game.fleet?.raid) throw new Error(RAID_WAITING);
     if (game.talk) throw new Error(TALK_WAITING);
+    if (game.computer) throw new Error(COMPUTER_WAITING);
     const reply = walkCommand(game, body);
     // Using a thing or asking at a door changes more than where the player stands, and the story keeps a line about it.
-    if (body.action === "use" || body.action === "ask") {
+    if (body.action === "use" || body.action === "ask" || body.action === "work") {
       if (reply.said) log("notice", reply.said);
       autosave();
-      return json(res, 200, { game: publicState(game), said: reply.said ?? null, check: Boolean(game.check) });
+      return json(res, 200, { game: publicState(game), said: reply.said ?? null, check: Boolean(game.check), computer: Boolean(game.computer) });
     }
     saveAfterWalking();
     return json(res, 200, reply);
@@ -578,6 +621,7 @@ async function handleApi(req, res, route) {
     if (game.combat) throw new Error("Finish the fight first.");
     if (game.check) throw new Error("Finish the check first.");
     if (game.fleet?.raid) throw new Error(RAID_WAITING);
+    if (game.computer) throw new Error(COMPUTER_WAITING);
     // Anything that would move the story on leaves the talk first.
     closeTalk(game);
     const text = typeof body.text === "string" ? body.text.trim().slice(0, 2000) : "";

@@ -130,7 +130,9 @@ function skillsMenu() {
             el("strong", { title: "Your total bonus on checks with this skill" }, signed(s.bonus)),
             s.raiseCost && g.skillPoints >= s.raiseCost && el("button", { "aria-label": `Raise ${s.name}`, title: `Costs ${s.raiseCost} skill point${s.raiseCost === 1 ? "" : "s"}`, onclick: act({ action: "skill", id: s.id }) }, "+"))),
         muted(s.desc),
-        el("div", {}, el("button", { class: "small", disabled: Boolean(g.combat || g.check), title: "Try this skill's check window. Nothing that happens in practice counts.", onclick: () => app.startPractice(s.id) }, "Practice")),
+        s.id === "hacking" && ui.setup.hackingClasses?.length
+          ? el("div", { class: "row small practice-classes" }, el("span", { class: "muted" }, "Practice on:"), ui.setup.hackingClasses.map((one) => el("button", { class: "small", disabled: Boolean(g.combat || g.check), title: `A ${one.difficulty.replace("_", " ")} hack. Nothing that happens in practice counts.`, onclick: () => app.startPractice(s.id, one.difficulty) }, one.name)))
+          : el("div", {}, el("button", { class: "small", disabled: Boolean(g.combat || g.check), title: "Try this skill's check window. Nothing that happens in practice counts.", onclick: () => app.startPractice(s.id) }, "Practice")),
         el("div", { class: "small" }, `Moderate ${oddsFor(s.bonus, difficulty.moderate)}%, hard ${oddsFor(s.bonus, difficulty.hard)}%, very hard ${oddsFor(s.bonus, difficulty.very_hard)}%`),
         s.raiseCost && el("div", { class: "muted small" }, `Practice ${asciiBar(s.xp, s.xpNext)} ${s.xp}/${s.xpNext}. Next rank costs ${s.raiseCost} point${s.raiseCost === 1 ? "" : "s"}.`)))))),
   ];
@@ -433,6 +435,26 @@ function inventoryMenu() {
 
 // ---- Ship ---------------------------------------------------------------
 
+// The Meridian's own systems, which the captain runs from here with no hacking: each one folded, with what isn't
+// working said on its line.
+function shipSystems(g) {
+  const systems = g.shipSystems;
+  if (!systems?.length) return null;
+  const turn = (row, to) => app.runAction(async () => {
+    const { game } = await api("/api/systems", { row, to });
+    app.ui.game = game;
+  });
+  return section("Systems",
+    systems.map((system) => {
+      const down = system.rows.filter((row) => !row.works).length;
+      return folded(`ship-systems-${system.id}`, `${system.title}${down ? ` (${down} down)` : ""}`,
+        system.rows.map((row) => el("div", { class: "menu-row small ship-system-row" },
+          el("span", { class: "ship-system-name" }, row.name, row.feed?.length ? el("span", { class: "muted" }, `, on camera: ${row.feed.join(", ")}`) : null),
+          el("span", { class: `tag${row.works ? "" : " bad"}` }, row.word),
+          row.actions.map((action) => el("button", { class: "small", onclick: turn(row.id, action.to) }, action.label)))));
+    }));
+}
+
 function shipMenu() {
   const g = app.ui.game;
   const s = g.ship;
@@ -442,6 +464,7 @@ function shipMenu() {
       muted("Each jump uses 1 to 3 fuel, depending on how far it is. If fuel runs out, the fleet can't jump anywhere.")),
     section("Current location",
       el("div", { class: "card" }, el("strong", {}, g.location.name), muted(g.location.desc), small(g.clock.label))),
+    shipSystems(g),
     section("Crew",
       g.people.filter((p) => p.crew).map((p) => el("div", { class: "menu-row small" },
         el("span", {}, p.name, el("span", { class: "muted" }, `, ${p.role}`)),

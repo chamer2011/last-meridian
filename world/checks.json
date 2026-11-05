@@ -8,7 +8,26 @@
       "runLabel": "Execute",
       "prompt": "root@meridian:~$",
       "promptOther": "root@terminal:~$",
-      "help": "Find the password in the memory dump. Click a word to try it, or type it. Typing part of a word is fine.",
+      "help": "Find the password in the memory dump. Click a word to try it, or type it. Typing part of a word is fine. Disconnect gives up before the trace completes.",
+      "_classes": "What each class of computer is like. The keys are the difficulty words a scene or the game master uses: length is the password's, words the size of the dump, tries how many wrong tries the trace allows before training adds its own, decoys how many words look nearly right, layers how many passwords stand between you and the inside, and mark whether a completed trace leaves a fact on the record.",
+      "classes": {
+        "easy": { "name": "Door panel", "length": 5, "words": 8, "tries": 4, "decoys": 0, "layers": 1, "mark": false },
+        "moderate": { "name": "Crew terminal", "length": 6, "words": 12, "tries": 4, "decoys": 2, "layers": 1, "mark": false },
+        "hard": { "name": "Ship's main system", "length": 7, "words": 14, "tries": 3, "decoys": 3, "layers": 2, "mark": true },
+        "very_hard": { "name": "Ministry or Navy server", "length": 8, "words": 16, "tries": 3, "decoys": 4, "layers": 2, "mark": true },
+        "nearly_impossible": { "name": "The Beacon or the Choir", "length": 9, "words": 16, "tries": 3, "decoys": 5, "layers": 3, "mark": true }
+      },
+      "_training": "What training adds, from untrained to master: wrong tries the trace allows on top of the class's, free probes, and how many wrong words a probe clears.",
+      "training": { "extraTries": [0, 1, 2, 3, 3], "freeProbes": [0, 0, 1, 1, 2], "probeClears": [1, 1, 2, 2, 3] },
+      "layerNames": ["the account", "root", "the vault"],
+      "_hints": "What the advisor says, by training level. Each level's lines come after the ones below it. Blanks: {count} words still possible, {possible} a line listing them, {best} the word to try next, {left} wrong tries left, {trace} the trace in percent, {probes} free probes, {clears} words a probe clears, {layer}, {layers}, {layerName}, {className}.",
+      "hints": {
+        "0": ["The server says how many letters of your word are right, and in the right place. Start with a word that shares letters with many others.", "Reading a file can cost a try: the useful ones are watched."],
+        "1": ["{count} of the words still fit everything the server has said."],
+        "2": ["{possible}", "notes.txt and passwd.bak are safe for you to open: one gives the first letter, the other retires two wrong words."],
+        "3": ["Try {best} next. Whatever the answer is, its likeness rules out the most.", "A probe clears {clears} wrong words, and you have {probes} free."],
+        "4": ["{left} wrong tries left before the trace completes.", "Layer {layer} of {layers}: {layerName}."]
+      },
       "consoles": { "terminal": "Programming Console", "dump": "Coding Console", "decode": "Decoding Console" },
       "results": {
         "success": "ACCESS GRANTED",

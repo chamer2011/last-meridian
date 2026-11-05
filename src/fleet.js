@@ -12,6 +12,7 @@ import { LOCATIONS, FACTIONS } from "./data.js";
 import { inTrouble, levelName, noneLeft, placeNow, supplyFactor, tellNews, tradedAt } from "./daily.js";
 import { inTheFleet, isCaptain } from "./role.js";
 import { addCondition, buyPrice, changeStress, clamp, clockLabel, jumpHours, passTime, practice, sellPrice, skillRank, travel } from "./rules.js";
+import { navigationDown } from "./systems.js";
 import { FLEET_DATA, STAR_MAP } from "./world.js";
 
 const { rules: RULES, rations: RATIONS, crews: CREWS, supplies: SUPPLIES, raid: RAID, text: TEXT, council: COUNCIL, chair: CHAIR } = FLEET_DATA;
@@ -711,9 +712,10 @@ export function jumpCost(game, destination) {
   }
   if (LOCATIONS[destination]?.fleet || destination === fleet.at) return { fuel: 0, hours: 1, jump: false };
   const to = mapSpot(destination);
-  if (!to) return { fuel: 1, hours: jumpHours(game), jump: true };
-  const band = fleetJumpCost(fleet, destination);
-  return { fuel: band.fuel, hours: Math.round(jumpHours(game) * band.hours), jump: true };
+  const band = to ? fleetJumpCost(fleet, destination) : { fuel: 1, hours: 1 };
+  // With the Meridian's navigation down, the jump's plotted by hand: a fuel more, and half as long again.
+  const byHand = navigationDown(game);
+  return { fuel: band.fuel + (byHand ? 1 : 0), hours: Math.round(jumpHours(game) * band.hours * (byHand ? 1.5 : 1)), jump: true, ...(byHand ? { byHand: true } : {}) };
 }
 
 // The fleet has arrived somewhere new, and anything following has lost the trail for a while.

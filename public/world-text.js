@@ -146,7 +146,26 @@ export const PERK = {
   ],
 };
 
-export const SPECS = { person: PERSON, place: PLACE, species: SPECIES_SPEC, enemy: ENEMY, item: ITEM, faction: FACTION, perk: PERK };
+// A computer the player can use: where it is, who owns it, how hard it is to get into, and what's on it.
+// Files, mail and programs are named entries whose text can run on over several lines. A program's text
+// is what it says when it runs, then -> and the effects a scene could cause, separated by ;, and ? and a
+// condition at the end if it's only offered sometimes.
+export const COMPUTER = {
+  kind: "computer",
+  title: "name",
+  header: [
+    { path: "class", key: "class", type: "string" }, { path: "owner", key: "owner", type: "name" }, { path: "yours", key: "yours", type: "flag" },
+    { path: "place", key: "place", type: "name" }, { path: "room", key: "room", type: "string" }, { path: "thing", key: "thing", type: "string" }, { path: "door", key: "door", type: "string" },
+    { path: "user", key: "login", type: "string" }, { path: "password", key: "password", type: "string" }, { path: "flavor", key: "flavor", type: "string" },
+  ],
+  sections: [
+    { path: "desc", phrase: "What the player sees", type: "text" },
+    { path: "files", phrase: "Files", type: "named" }, { path: "mail", phrase: "Mail", type: "named" }, { path: "logs", phrase: "Logs", type: "items" },
+    { path: "programs", phrase: "Programs", type: "named" }, { path: "network", phrase: "Network", type: "named" },
+  ],
+};
+
+export const SPECS = { person: PERSON, place: PLACE, species: SPECIES_SPEC, enemy: ENEMY, item: ITEM, faction: FACTION, perk: PERK, computer: COMPUTER };
 
 // ---- Reading one value ------------------------------------------------------------------------
 function readValue(type, text, problem) {
@@ -331,3 +350,5 @@ export const parseSpeciesText = (text, id) => parseWorldText(text, SPECIES_SPEC,
 export const writePersonText = (person) => writeWorldText(person, PERSON);
 export const writePlaceText = (place) => writeWorldText(place, PLACE);
 export const writeSpeciesText = (species) => writeWorldText(species, SPECIES_SPEC);
+export const parseComputerText = (text, id) => parseWorldText(text, COMPUTER, id);
+export const writeComputerText = (computer) => writeWorldText(computer, COMPUTER);

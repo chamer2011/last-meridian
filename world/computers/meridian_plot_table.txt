@@ -1,0 +1,30 @@
+# The plot table
+class: moderate
+owner: fleet
+yours: yes
+place: meridian
+room: The Bridge
+thing: The plot table
+login: captain
+flavor: yours
+
+What the player sees:
+Forty-one green dots on a scratched glass table, and the course Pell keeps for you drawn through them in chalk, because the table's own line stopped working years ago.
+
+Files:
+course.txt: The course as the bridge keeps it: where the fleet is, where it's going, and how many jumps of fuel are in the tanks. Pell updates it when he remembers, which is most days.
+fleet_manifest.txt: Forty-one ships, with what each carries, who captains it, and the day it last reported. Half the entries are in Voss's hand, and hers are the ones that are right.
+
+Mail:
+From Voss to the captain: The list is on the table. Which ships can't keep up, and the day we stop trying to make them. I'd rather you read it than heard it from Fenn.
+
+Logs:
+- berths
+- news
+
+Programs:
+Run the sensor sweep: Six seconds of nothing, and then the signal, on every band, the way Sorel described it. The table draws it as a line that goes off the edge of the glass.
+Log the day's orders: Your orders go into the ship's log, in your own words, where the council can read them if it ever asks. -> * journal: Logged the day's orders at the plot table.
+
+Network:
+meridian_reactor_gauges: Engineering, two decks down.

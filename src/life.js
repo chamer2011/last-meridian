@@ -9,6 +9,7 @@
 
 import { LOCATIONS } from "./data.js";
 import { atPost, canStand, findPath, mapFor, seedFrom } from "./walk.js";
+import { detourFor, partSquares } from "./systems.js";
 import { WORLD_LIFE } from "./world.js";
 
 const MINUTES_IN_A_DAY = 1440;
@@ -66,6 +67,12 @@ function lifeFileFor(place) {
   return lifeFiles.get(place);
 }
 
+// Read again after a place's systems change, since parts on the floor change where people can stand.
+export function clearLife() {
+  lifeFiles.clear();
+  settledAt.clear();
+}
+
 export const livesHere = (place) => Boolean(lifeFileFor(place) && mapFor(place));
 
 // Life goes on in these places wherever the captain is.
@@ -108,6 +115,23 @@ function planAt(entry, hours) {
   return { key: `${startDay}.${index}.${stop}`, block, where };
 }
 
+// The room a plan sends someone to, so the place's systems can turn them aside: the guards to the alarm, an engineer
+// to a repair, anyone headed into bad air somewhere better. detour comes from src/systems.js, and is null when
+// nothing's going on.
+function levelOfPlan(map, file, entry, plan) {
+  const where = plan.where;
+  if (!where) return null;
+  if (where === "post") return postOf(map, entry.id)?.level ?? null;
+  if (/^[@>]/.test(where)) return where.slice(1);
+  return file.spots[where]?.level ?? file.groups[where]?.[0]?.level ?? null;
+}
+function planFor(map, file, entry, hours, detour) {
+  const plan = planAt(entry, hours);
+  if (!detour) return plan;
+  const turn = detour(entry.key, levelOfPlan(map, file, entry, plan), Boolean(plan.block.asleep));
+  return turn && map.levels[turn.where.slice(1)] ? { key: `systems:${turn.where}:${turn.doing}`, block: { doing: turn.doing, go: turn.where }, where: turn.where } : plan;
+}
+
 const homeOf = (map, id) => Object.values(map.levels).flatMap((level) => level.homes).find((home) => home.id === id);
 
 function postOf(map, id) {
@@ -136,6 +160,7 @@ function fixedSquares(file, map) {
     for (const level of Object.values(map.levels)) {
       const covers = (x, y, length = 1) => Array.from({ length }, (_, i) => file.fixed.add(seatKey({ level: level.id, x: x + i, y })));
       for (const thing of level.things) covers(thing.x, thing.y);
+      for (const key of map.place ? partSquares(map.place, level.id) : []) covers(...key.split(",").map(Number));
       for (const exit of level.exits) covers(exit.side === "left" ? exit.x - exit.label.length - 1 : exit.x, exit.y, exit.label.length + 2);
       for (const label of level.labels) covers(label.x, label.y, label.text.length);
       level.layers.writing.forEach((row, y) => [...row].forEach((ch, x) => {
@@ -225,10 +250,10 @@ const atGoal = (state) => state.level === state.goal.level && state.x === state.
 
 // Everyone exactly where they should be at this moment, as they are after any long gap. Anyone who's
 // still doing the same thing as before keeps the place they already had.
-function settle(place, hours, before = {}) {
+function settle(place, hours, before = {}, detour = null) {
   const file = lifeFileFor(place);
   const map = mapFor(place);
-  const plansNow = file.roster.map((entry) => ({ entry, plan: planAt(entry, hours) }));
+  const plansNow = file.roster.map((entry) => ({ entry, plan: planFor(map, file, entry, hours, detour) }));
   const stays = ({ entry, plan }) => before[entry.key]?.task === plan.key;
   const taken = new Set(fixedSquares(file, map));
   for (const one of plansNow.filter(stays)) squaresOf(map, one.entry, before[one.entry.key].goal).forEach((key) => taken.add(key));
@@ -319,13 +344,13 @@ function walkOn(map, state, steps) {
 // ---- The clock moves ---------------------------------------------------------------
 
 // Everyone moves on to whatever's next, and walks a little of the way there.
-function moveOn(place, people, hours, steps) {
+function moveOn(place, people, hours, steps, detour = null) {
   const file = lifeFileFor(place);
   const map = mapFor(place);
   for (const entry of file.roster) {
     const state = people[entry.key];
     if (!state) continue;
-    const plan = planAt(entry, hours);
+    const plan = planFor(map, file, entry, hours, detour);
     if (plan.key !== state.task) {
       // Everyone else's place is taken. Their own isn't, in case what's next happens right there too.
       const others = file.roster.filter((one) => one !== entry && people[one.key]);
@@ -369,15 +394,16 @@ export function advanceLife(game) {
   life.carry -= steps;
   const place = game.location;
   const people = life.places[place];
-  if (livesHere(place) && people && gap <= LONG_GAP) moveOn(place, people, hours, steps);
-  life.places = livesHere(place) ? { [place]: people && gap <= LONG_GAP ? people : settle(place, hours, people) } : {};
+  const detour = livesHere(place) ? detourFor(game, place) : null;
+  if (livesHere(place) && people && gap <= LONG_GAP) moveOn(place, people, hours, steps, detour);
+  life.places = livesHere(place) ? { [place]: people && gap <= LONG_GAP ? people : settle(place, hours, people, detour) } : {};
   companyMovesOn(game, hours);
 }
 
 // ---- What the rest of the game gets to see --------------------------------------
 
-function seenAs(game, map, entry, state) {
-  const plan = planAt(entry, game.clock.hours);
+function seenAs(game, map, entry, state, detour = null) {
+  const plan = detour ? planFor(map, lifeFileFor(game.location), entry, game.clock.hours, detour) : planAt(entry, game.clock.hours);
   const settled = atGoal(state);
   // Someone going out of sight can still be seen on their way there.
   if (settled && plan.block.hidden) return null;
@@ -403,9 +429,10 @@ export function peopleAboard(game, place, levelId) {
   const file = lifeFileFor(place);
   const map = mapFor(place);
   const people = peopleOf(game, place);
+  const detour = place === game.location ? detourFor(game, place) : null;
   return file.roster
     .filter((entry) => people[entry.key]?.level === levelId && (!entry.id || atPost(game, entry.id)))
-    .map((entry) => seenAs(game, map, entry, people[entry.key]))
+    .map((entry) => seenAs(game, map, entry, people[entry.key], detour))
     .filter(Boolean);
 }
 

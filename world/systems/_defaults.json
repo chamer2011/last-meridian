@@ -1,0 +1,150 @@
+{
+  "_help": [
+    "What a place's systems are when it has no file of its own in this folder, the numbers every place starts from, and what each kind of part looks like and how it can be worked by hand. A place's own file can change the numbers. _how-to-write-systems.txt explains it all. Restart the game after changing this file.",
+    "numbers: how many minutes the alarm rings before it stops by itself; how many minutes a room's air takes to go bad once it stops moving, and to come back once it moves again; how many hours the place's engineers take to fix something broken; and how many hours before the place's people switch back what the player switched off. thin and bad are how good the air is (out of 100) when it starts to hurt, and how much stress and health it costs each 10 minutes.",
+    "dark and watched are what a dark room and a camera on the player do to their checks. seen is what being seen tampering costs with whoever holds the place.",
+    "open air are the places where the air needs no machine; no systems are the places whose machinery isn't wired the way anyone's is; cameras everywhere are the places with a camera in every room. guard words and engineer words find the guards and engineers in the people's days, when a place's file doesn't name them.",
+    "parts: each kind of part, by its name in the files, with other names it can go by. look is what the player reads, and on, off and damaged are what's added for its state. switch is a switch the player can work by hand, break is tampering with it, which takes a check, and fix is putting it right; tampering where a camera can see raises the alarm. A part whose name isn't here behaves like the first part of its system."
+  ],
+  "numbers": { "alarm rings": 30, "air goes bad": 20, "air comes back": 10, "repairs take": 3, "switched back": 6 },
+  "air": { "thin": 60, "bad": 30, "stress": 2, "health": 2 },
+  "dark": { "stealth": 2, "awareness": -2 },
+  "watched": { "stealth": -2 },
+  "seen": { "standing": -2 },
+  "open air": ["vantor", "ilun", "frontier", "korrath", "lumen"],
+  "no systems": ["nest", "pale_gate"],
+  "cameras everywhere": ["vantor", "bastion", "wheel"],
+  "plant rooms": ["engineering", "sump", "still", "stack", "furnace", "plant", "tubes", "tap", "line", "rings", "rack", "melt", "deep"],
+  "guard words": ["guard", "patrol", "security", "sentry", "on watch", "keeping watch", "standing watch"],
+  "engineer words": ["engine", "reactor", "repair", "fixing", "mechanic", "maintenance", "welding", "pipes", "duct", "pump", "machine"],
+  "systems": {
+    "power": "junction box",
+    "air": "vent",
+    "lights": "light switch",
+    "cameras": "camera",
+    "alarm": "speaker",
+    "comms": "relay",
+    "engines": "engines",
+    "navigation": "nav core",
+    "docking": "docking clamps",
+    "other": "machine"
+  },
+  "parts": {
+    "junction box": {
+      "names": ["breaker panel", "fuse box", "power board", "breakers", "generator", "main bus"],
+      "look": "A grey box on the wall, with a hazard stripe and a heavy lever.",
+      "on": "It hums, and the rooms it feeds have power.",
+      "off": "Its lever is down, and the rooms it feeds are dead.",
+      "damaged": "Its cables are cut, and it's dead.",
+      "switch": { "off": "Pull the lever down", "on": "Push the lever back up", "tampering": true },
+      "break": { "label": "Cut the cables", "check": "engineering:easy", "damage": "cut", "done": "The cables part with a crack and a smell of burnt plastic, and everything it feeds goes dead.", "failed": "The cables are thicker than they looked, and nothing gives." },
+      "fix": { "label": "Splice the cables back together", "check": "engineering:easy", "done": "The splice holds, and the box hums again.", "failed": "The splice won't take. It needs another go, or someone who does this for a living." }
+    },
+    "air plant": {
+      "names": ["scrubber", "recycler", "air recycler", "life support"],
+      "look": "A machine the size of a cupboard, breathing for everyone, with ducts running out of it into the walls.",
+      "on": "Its fans are turning.",
+      "off": "It's been shut down, and nothing's moving in the ducts.",
+      "damaged": "Its intake is jammed, and it's straining against nothing.",
+      "switch": { "off": "Hit the shutdown switch", "on": "Start it up again", "tampering": true },
+      "break": { "label": "Jam the intake", "check": "engineering:moderate", "damage": "jammed", "done": "The intake chokes on what you've fed it, and the fans wind down.", "failed": "The intake spits it back out. It's built for worse than you." },
+      "fix": { "label": "Clear the intake", "check": "engineering:moderate", "done": "The intake clears, and the fans spin up.", "failed": "Whatever's in the intake is wedged too deep for now." }
+    },
+    "vent": {
+      "names": ["air vent", "grille", "aeration shaft", "air shaft", "duct"],
+      "look": "A vent grille in the wall, where the room's air comes in.",
+      "on": "Air's coming through it.",
+      "off": "It's been closed from somewhere else.",
+      "damaged": "It's been sealed over.",
+      "words": { "on": "open", "off": "closed" },
+      "break": { "label": "Seal the vent", "check": "engineering:easy", "damage": "sealed", "done": "You seal it over. The room goes very quiet, the way a room does when the air stops.", "failed": "The seal won't sit flat, and the air pushes it off." },
+      "fix": { "label": "Pull the seal off", "done": "The seal comes away, and the air comes back in." }
+    },
+    "light switch": {
+      "names": ["lights", "lamps", "lamp switch", "lights switch"],
+      "look": "A switch for the room's lights, by the wall.",
+      "on": "The lights are on.",
+      "off": "The lights are off.",
+      "switch": { "off": "Switch the lights off", "on": "Switch the lights on" }
+    },
+    "camera": {
+      "names": ["security camera", "eye", "lens"],
+      "look": "A camera high on the wall, with a red light and a lens on the room.",
+      "on": "Its red light is on. It's watching.",
+      "off": "Its red light is out.",
+      "damaged": "Something's over its lens.",
+      "words": { "on": "watching", "off": "off" },
+      "break": { "label": "Cover the lens", "check": "stealth:easy", "damage": "covered", "unseen": true, "done": "You get a rag over the lens without it getting a look at you.", "failed": "You're too slow. The lens turns, and gets a good look at you." },
+      "fix": { "label": "Uncover the lens", "done": "The rag comes off, and the lens is on the room again." }
+    },
+    "speaker": {
+      "names": ["siren", "klaxon", "alarm", "bell"],
+      "look": "An alarm speaker on the wall, a round grille with a red lamp in the middle.",
+      "on": "It's quiet, and it's working.",
+      "off": "It's been switched off.",
+      "damaged": "Its wires are cut.",
+      "break": { "label": "Cut its wires", "check": "engineering:easy", "damage": "cut", "done": "The wires part. Whatever happens now, this room won't hear about it.", "failed": "The wires are behind a plate you can't get off." },
+      "fix": { "label": "Rewire it", "check": "engineering:easy", "done": "It crackles, and it's working again.", "failed": "You can't get the wires to meet." }
+    },
+    "relay": {
+      "names": ["comms relay", "transmitter", "antenna", "radio", "mast", "radio mast"],
+      "look": "A comms relay, a rack of boards with a light for every channel.",
+      "on": "Its lights are green. Calls are going in and out.",
+      "off": "It's been switched off, and nobody's calling anyone.",
+      "damaged": "It's jammed, and every channel is noise.",
+      "words": { "on": "on", "off": "jammed" },
+      "switch": { "off": "Switch it off", "on": "Switch it back on", "tampering": true },
+      "break": { "label": "Jam the relay", "check": "engineering:moderate", "damage": "jammed", "done": "Every light goes amber, and every channel fills with noise.", "failed": "It reroutes around whatever you do faster than you can do it." },
+      "fix": { "label": "Clear it", "check": "engineering:easy", "done": "The channels clear one by one.", "failed": "It's still jammed." }
+    },
+    "engines": {
+      "names": ["engine", "drive", "jump drive", "injectors"],
+      "look": "The drive's housing, too hot to touch, with the injector bank behind a grating.",
+      "on": "It's running.",
+      "off": "It's been shut down.",
+      "damaged": "An injector's missing, and it won't light.",
+      "break": { "label": "Pull an injector", "check": "engineering:hard", "damage": "crippled", "done": "The injector comes out hot. Nothing's jumping anywhere until it goes back in.", "failed": "The grating's locked, and the heat drives you back." },
+      "fix": { "label": "Refit the injector", "check": "engineering:moderate", "done": "It seats with a clunk, and the drive comes back.", "failed": "It won't seat." }
+    },
+    "nav core": {
+      "names": ["navigation", "nav computer", "navigation core", "astrogation"],
+      "look": "The navigation core, a stack of old boards that plot every jump.",
+      "on": "It's plotting.",
+      "off": "It's been locked out.",
+      "damaged": "Its alignment is scrambled.",
+      "break": { "label": "Scramble the alignment", "check": "engineering:moderate", "damage": "scrambled", "done": "The alignment drifts out of true. Every jump will be plotted by hand until someone fixes it.", "failed": "It corrects itself as fast as you can push it." },
+      "fix": { "label": "Realign it", "check": "engineering:moderate", "done": "It settles back into true.", "failed": "It won't hold its alignment yet." }
+    },
+    "docking clamps": {
+      "names": ["clamps", "docking control", "berth clamps"],
+      "look": "The docking clamps' control, a heavy lever behind a cage.",
+      "on": "The clamps are released, and ships come and go.",
+      "off": "The clamps are locked, and nobody's leaving.",
+      "words": { "on": "released", "off": "locked" },
+      "switch": { "off": "Lock the clamps", "on": "Release the clamps", "tampering": true }
+    },
+    "console": {
+      "names": ["terminal", "control console", "watch console", "security console"],
+      "look": "A console, its screen glowing.",
+      "on": "Its screen is on.",
+      "off": "Its screen is dark."
+    },
+    "machine": {
+      "names": ["pump", "windpump", "pumps"],
+      "look": "A machine on the wall, doing whatever it does.",
+      "on": "It's running.",
+      "off": "It's been switched off.",
+      "damaged": "It's broken.",
+      "switch": { "off": "Switch it off", "on": "Switch it on", "tampering": true },
+      "break": { "label": "Break it", "check": "engineering:easy", "damage": "broken", "done": "Something inside gives, and it stops.", "failed": "It's tougher than it looks." },
+      "fix": { "label": "Fix it", "check": "engineering:easy", "done": "It runs again.", "failed": "It still won't run." }
+    }
+  },
+  "doors": {
+    "look": "The door to {room}.",
+    "locked": "It's locked, and the panel beside it is red.",
+    "forced": "It's been forced, and it won't lock any more.",
+    "force": { "label": "Force the door", "check": "athletics:moderate", "done": "The door gives, and stays open. It won't lock again until someone fixes it.", "failed": "The door doesn't give." },
+    "hack": { "label": "Hack the door panel", "class": "easy" }
+  }
+}

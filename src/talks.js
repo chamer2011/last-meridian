@@ -11,6 +11,7 @@ import { HELPERS, StoryError, loadScenes, matchChoice, openChoices, partText, ru
 import { newTurnLimits, runTool } from "./tools.js";
 import { seedFrom, talkHeard, walkView } from "./walk.js";
 import { ROOM_TALK } from "./world.js";
+import { systemsTalk } from "./systems.js";
 
 const helpersFor = (talk) => ({ ...HELPERS, seen: talk.written?.seen ?? [] });
 
@@ -34,6 +35,9 @@ export function stockTalk(game, talk) {
   if (role && asks.work && stock.work) answers.push(["work", asks.work, `@${talk.name}: "${fill(pick(stock.work, seed), values)}"`]);
   if (talk.doing && asks.doing && stock.doing) answers.push(["doing", asks.doing, `@${talk.name}: "${fill(pick(stock.doing, seed + 1), values)}"`]);
   if (values.desc && asks.place && stock.place) answers.push(["place", asks.place, fill(pick(stock.place, seed + 2), values)]);
+  // When the alarm's ringing or the lights are out, that's what everyone wants to talk about.
+  const news = systemsTalk(game);
+  if (news) answers.push(["systems", asks.systems ?? "What's going on?", `@${talk.name}: "${news}"`]);
   const choices = answers.map(([id, say]) => ({ say, to: id, if: `not seen ${id}` }));
   const greet = fill(pick(stock.greet?.[feeling] ?? stock.greet?.neutral ?? ['"Yes?"'], seed + 3), values);
   const parts = { start: { text: [`@${talk.name}: ${greet}`], choices } };

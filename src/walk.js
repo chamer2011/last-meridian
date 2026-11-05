@@ -10,6 +10,8 @@
 
 import { allCharacters, campaignRooms, findCampaignRoom, findCharacter, fullName, saveCampaignRoom } from "./campaign.js";
 import { startCheck, startChoiceCheck } from "./checks.js";
+import { useComputer } from "./computers.js";
+import { doorActions, doorLook, exitLocked, partSquares, partThings, roomView, systemsOf, workOnDoor, workOnPart } from "./systems.js";
 import { ITEMS, LOCATIONS } from "./data.js";
 import { hasADay, livesHere, peopleAboard } from "./life.js";
 import { isCaptain, toOutsider } from "./role.js";
@@ -142,9 +144,17 @@ export function mapFor(place) {
     } catch (err) {
       console.error(`The levels for ${place} can't be used: ${err.message}`);
     }
+    if (map) map.place = place;
     maps.set(place, map);
+    // The place's systems stand some of their parts on the floor, where nobody can walk, so they're placed now.
+    if (map) systemsOf(place);
   }
   return maps.get(place);
+}
+
+// Made again from the files, after the story board saves a place's systems.
+export function clearMaps() {
+  maps.clear();
 }
 
 export const canStand = (level, x, y) => Boolean(level.open[y]?.[x]) && !level.solid.has(spotKey(x, y));
@@ -153,7 +163,9 @@ export const canStand = (level, x, y) => Boolean(level.open[y]?.[x]) && !level.s
 
 // Some ways in are for the story to decide: a guard, a locked door, a picket line. The player can
 // ask at the door, which is a normal AI turn. Once the story has taken the captain in, it stays open.
-const isClosed = (game, exit) => Boolean(exit.closed) && !game.opened?.[game.location]?.includes(exit.to);
+const storyClosed = (game, exit) => Boolean(exit.closed) && !game.opened?.[game.location]?.includes(exit.to);
+// Closed to walking: a door only the story opens, or one the place's systems have locked (see src/systems.js).
+const isClosed = (game, exit, levelId) => storyClosed(game, exit) || exitLocked(game, game.location, levelId, exit);
 
 function openDoorsTo(game, id) {
   game.opened ??= {};
@@ -167,7 +179,7 @@ export function askAtDoor(game, key) {
   const walk = walkOf(game);
   const level = levelOf(game, walk, mapFor(game.location));
   const exit = level.exits.find((one) => one.key === key);
-  if (!exit || !isClosed(game, exit)) throw new Error("That door isn't closed.");
+  if (!exit || !storyClosed(game, exit)) throw new Error(exit && isClosed(game, exit, level.id) ? "It's locked. Force it, or get into its panel." : "That door isn't closed.");
   const rule = exit.closed.ask ?? {};
   const open = (said) => {
     openDoorsTo(game, exit.to);
@@ -207,6 +219,8 @@ export function answerDoor(game, success) {
 export function useThing(game, key) {
   const walk = walkOf(game);
   const level = levelOf(game, walk, mapFor(game.location));
+  // A part of the place's systems is worked by hand instead, and a console among them is a computer.
+  if (String(key).startsWith("part:")) return workOnPart(game, key, "use");
   const thing = level.things.find((one) => one.id === key);
   if (!thing) throw new Error("That isn't here.");
   if (thing.item && !game.inventory?.[thing.item]) {
@@ -214,7 +228,11 @@ export function useThing(game, key) {
     return { said: `[ITEM] Received: ${ITEMS[thing.item]?.name ?? thing.item}. ${thing.used ?? ""}`.trim() };
   }
   if (thing.item) return { said: "You've already got one." };
+  // A thing with a computer file of its own is a computer: the player sits down at it, or hacks it. A console or
+  // a panel nobody has written is one too, unless the map file already says what using it does.
   const written = (!isCaptain(game) && thing.usedOther) || thing.used;
+  const inside = useComputer(game, { place: game.location, levelId: walk.level, thing, look: thing.look ?? null, generic: !written });
+  if (inside) return inside;
   return { said: written ?? "Nothing more comes of it, for now." };
 }
 
@@ -222,7 +240,7 @@ export function useThing(game, key) {
 function roomsInReach(game, walk, map) {
   const reach = new Set([walk.level]);
   for (const id of reach) {
-    for (const exit of map.levels[id]?.exits ?? []) if (!isClosed(game, exit)) reach.add(exit.to);
+    for (const exit of map.levels[id]?.exits ?? []) if (!isClosed(game, exit, id)) reach.add(exit.to);
   }
   return reach;
 }
@@ -434,6 +452,8 @@ function markAt(game, walk, level, x, y) {
   if (person) return { kind: "person", key: keyOf(person), x, y, passing: person.walking };
   const thing = level.things.find((one) => one.x === x && one.y === y);
   if (thing) return { kind: "thing", key: thing.id, x, y };
+  const part = partsOn(game, walk, level).find((one) => one.x === x && one.y === y);
+  if (part) return { kind: "thing", key: `part:${part.id}`, x, y };
   const exit = level.exits.find((one) => one.x === x && one.y === y);
   return exit ? { kind: "exit", key: exit.key, x, y, exit } : null;
 }
@@ -449,8 +469,15 @@ function findMark(game, walk, level, target) {
     const exit = level.exits.find((one) => one.key === key);
     return exit ? { kind, key, x: exit.x, y: exit.y, exit } : null;
   }
-  const thing = kind === "thing" ? level.things.find((one) => one.id === key) : null;
+  const thing = kind === "thing" ? level.things.find((one) => one.id === key) ?? partsOn(game, walk, level).find((one) => `part:${one.id}` === key) : null;
   return thing ? { kind, key, x: thing.x, y: thing.y } : null;
+}
+
+// The parts of the place's systems in this room, which aren't in the map file: src/systems.js places them.
+function partsOn(game, walk, level) {
+  if (walk.room || level.id === "room") return [];
+  const model = systemsOf(game.location);
+  return (model?.partsIn[level.id] ?? []).map((id) => model.parts[id]).filter((part) => part && !part.unplaced);
 }
 
 const isWhole = (cell, level) => Number.isInteger(cell?.x) && Number.isInteger(cell?.y) && canStand(level, cell.x, cell.y);
@@ -501,7 +528,7 @@ export function walkCommand(game, body) {
   const goToMark = (mark, path = route(level, people, from, (here) => nextTo(here, mark))) => {
     if (!path) return stand([], null, "You can't find a way there.");
     if (mark.kind !== "exit") return stand(path, { kind: mark.kind, key: mark.key });
-    if (isClosed(game, mark.exit)) return stand(path, { kind: "door", key: mark.key });
+    if (isClosed(game, mark.exit, level.id)) return stand(path, { kind: "door", key: mark.key });
     takeExit(game, walk, map, mark.exit);
     return answer(path, { kind: "exit", key: mark.key });
   };
@@ -552,6 +579,14 @@ export function walkCommand(game, body) {
       return useThing(game, String(body.key ?? ""));
     case "ask":
       return askAtDoor(game, String(body.key ?? ""));
+    // Working a part of the place's systems by hand, or a locked door: free, or a check in its own window.
+    case "work": {
+      const key = String(body.key ?? "");
+      if (key.startsWith("part:")) return workOnPart(game, key, String(body.how ?? ""));
+      const exit = level.exits.find((one) => one.key === key);
+      if (!exit) throw new Error("That isn't here.");
+      return workOnDoor(game, level.id, exit, String(body.how ?? ""));
+    }
     default:
       throw new Error("Unknown order.");
   }
@@ -592,6 +627,7 @@ function standNear(game, level, entry, people) {
   const taken = new Set([
     ...[...level.homes.filter((home) => !moved.has(home.id) && atPost(game, home.id)), ...living].flatMap((home) => markSquares(game, home, home.x, home.y)),
     ...level.things.map((thing) => spotKey(thing.x, thing.y)),
+    ...partSquares(game.location, level.id),
     ...level.exits.flatMap((exit) => runSquares(exit.x, exit.y, exit.label.length, exit.side)),
     ...level.labels.flatMap((label) => runSquares(label.x, label.y, label.text.length - 2)),
     ...level.layers.writing.flatMap((row, y) => [...row].flatMap((ch, x) => (ch === " " ? [] : [spotKey(x, y)]))),
@@ -802,10 +838,13 @@ const thingView = (game, thing) => ({
   written: Boolean(thing.item || thing.used || (!isCaptain(game) && thing.usedOther)),
 });
 
-function exitView(game, exit) {
+function exitView(game, exit, levelId) {
   const { key, x, y, label, glyph, side } = exit;
-  if (!isClosed(game, exit)) return { key, x, y, label, glyph, side };
-  return { key, x, y, label, glyph: "x", side, closed: true, look: exit.closed.look, use: exit.closed.use, written: Boolean(exit.closed.ask) };
+  if (storyClosed(game, exit)) return { key, x, y, label, glyph: "x", side, closed: true, look: exit.closed.look, use: exit.closed.use, written: Boolean(exit.closed.ask) };
+  if (!exitLocked(game, game.location, levelId, exit)) return { key, x, y, label, glyph, side };
+  // A door the place's systems have locked: forced, or opened from its panel.
+  const actions = doorActions(game, game.location, levelId, exit).map(({ id, label: words, detail }) => ({ id, label: words, detail }));
+  return { key, x, y, label, glyph: "x", side, closed: true, locked: true, look: doorLook(game, game.location, levelId, exit), written: true, actions };
 }
 
 function overviewView(game, walk, map) {
@@ -862,8 +901,9 @@ export function walkView(game) {
     captain: { x: spot.x, y: spot.y },
     here: { id: walk.room ? walk.room.name : level.id, name: level.name, desc: level.desc },
     people: peopleOnLevel(game, walk, level).map((entry) => personView(game, entry)),
-    things: level.things.map((thing) => thingView(game, thing)),
-    exits: level.exits.map((exit) => exitView(game, exit)),
+    things: [...level.things.map((thing) => thingView(game, thing)), ...(walk.room ? [] : partThings(game, game.location, level.id))],
+    exits: level.exits.map((exit) => exitView(game, exit, level.id)),
+    ...(walk.room ? {} : { room: roomView(game, game.location, level.id) }),
     overview: overviewView(game, walk, map),
     ...(livesHere(walk.place) ? { life: true } : {}),
   };
@@ -878,8 +918,11 @@ function peopleNow(game) {
 
 // The clock running by itself, while the player explores somewhere people live their days. It waits
 // for anything with its own window, because time stands still for those, and everywhere else it stays still.
+// Checks that come from the room itself, on its parts, things, doors and computers, let the clock run on. The story's own
+// checks, talks, fights, computers and raids hold it.
+export const ROOM_CHECKS = ["part", "thing", "door", "computer"];
 export function walkTick(game, body) {
-  if (game.combat || game.check || game.talk || game.fleet?.raid) return { held: true };
+  if (game.combat || game.talk || game.computer || game.fleet?.raid || (game.check && !ROOM_CHECKS.includes(game.check.source))) return { held: true };
   if (!walkAt(game) || !livesHere(game.location)) return { still: true };
   if (!CLOCK_RATES.includes(body.rate)) throw new Error("That isn't one of the clock's speeds.");
   const ms = Math.max(0, Math.min(Number(body.ms) || 0, LONGEST_TICK));

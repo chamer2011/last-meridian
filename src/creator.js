@@ -11,6 +11,7 @@ import {
 import { CAREERS, FALL_CHOICES, GENERAL_EVENTS, GENERAL_MISHAPS } from "./life-data.js";
 import { CORE_FACTIONS, FACTIONS, ITEMS, LOCATIONS, PERKS, STARTING_FACTIONS, STATS, STAT_INFO } from "./data.js";
 import { LORE } from "./lore.js";
+import { hackingClasses } from "./checks.js";
 import { START_GROUPS, START_LIST } from "./role.js";
 import {
   DIFFICULTY, activeConvictions, assembleGame, beliefAffinity, checkParts, clamp, crewContacts, defense,
@@ -861,6 +862,7 @@ export function creatorSetup() {
     },
     contexts: CONTEXTS,
     difficulty: DIFFICULTY,
+    hackingClasses: hackingClasses(),
     lore: LORE,
   };
 }

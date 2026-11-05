@@ -72,6 +72,18 @@ Things in square brackets before the words are tags, which the player sees:
                                  second colon when they're the one being persuaded, deceived or led,
                                  and how they feel about the player changes the odds. A choice with
                                  a check leads two ways: the part if it passes | the part if it fails.
+                                 For hacking, the difficulty says what kind of computer it is, and
+                                 the window shows it: easy is a door panel, moderate a crew terminal,
+                                 hard a ship's main system (two passwords), very_hard a Ministry or
+                                 Navy server, nearly_impossible the Beacon or the Choir (three).
+                                 A hack has no roll: getting in is the pass, the trace completing
+                                 or disconnecting is the fail. A completed trace on a ship's main
+                                 system or worse leaves a fact on the record, traced_on_<class>,
+                                 which a condition can ask about: ? flag traced_on_ships_main_system.
+                                 A third word names the computer the hack gets into when it passes,
+                                 by its file in world/computers: [hacking:moderate:haven_berth_board].
+                                 Without one, it lands on this place's computer of that class, or one
+                                 the game makes up. Getting in opens the computer's own system.
     [+Voss] or [-Tarrow]         Someone who would clearly approve or disapprove.
     [reason]                     The belief the choice expresses: order, freedom, community, self,
                                  mercy, iron, reason, faith, purity or ascension.
@@ -109,6 +121,15 @@ Lines starting with * happen when the part begins, and the player sees each as a
                                             the record. Put failed before the colon if the player lost it)
     * fuel 6: The reason                    (the fleet's fuel, which jumps use; a minus sign burns it)
     * act 2                                 (the main story moves on to that act)
+    * door sublevels                        (opens the door to that room, by the room's id in the map file,
+                                            in the place the player is at)
+    * password haven_berth_board ORBIT      (the player learns that computer's password, and gets in with
+                                            no hack; the computers are files in world/computers)
+    * computer haven_berth_board            (sits the player down at that computer, as if they'd got in)
+    * power off in The Docks                (the place's systems: power, lights, air, cameras, alarm, comms,
+    * alarm ringing in The Docks             engines, navigation, docking, door locked or unlocked, fix and
+    * door locked The Hook                   break. world/systems/_how-to-write-systems.txt has them all, and
+    * fix everything                         what each one does)
     * raw add_lore {"term": "The Rim", "kind": "place", "text": "What the player would know."}
 
 The last one does anything the AI can do, with the fields from src/tools.js. The rules are the
@@ -137,6 +158,10 @@ and join several with "and":
     captain                          The player is the captain.
     life engine_hand                 The player started as that life. The ids are in starts.json.
     at haven                         The player is at that place.
+    power off here                   The place's systems: power, lights, air (good, thin, bad, on, off),
+    alarm ringing at haven           cameras, alarm (ringing, quiet, on, off), door locked and a room,
+    door locked The Hook             comms, engines, navigation, docking, and system and a name. Add
+                                     here, or in and a room, and at and a place. world/systems has the rest.
     act < 2                          The main story's act, with the same comparisons as credits.
     chance 30                        True 30 times in 100, at random.
 

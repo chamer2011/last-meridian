@@ -1,0 +1,27 @@
+# Reactor gauges
+class: hard
+owner: fleet
+yours: yes
+place: meridian
+room: Engineering
+thing: Reactor gauges
+login: engineer
+flavor: yours
+
+What the player sees:
+A bank of gauges older than anyone aboard, with the readings that matter circled in grease pencil: reactor load, coolant, the air plant, and the tanks.
+
+Files:
+maintenance.txt: What was fixed, what was patched, and what was written down as fixed and patched. Marrow's hand on most of it, and a few entries in a hand that stops the day of the Fall.
+air_plant.txt: The air plant's numbers, by deck. Nine hundred people breathing on a ship built for three hundred, and the plant running at a hundred and forty percent of what it was built for. There's a note in the margin: "it will do this as long as it does this".
+
+Logs:
+- readouts
+- news
+
+Programs:
+Vent the aft coolant loop: The loop vents with a sound like a kettle, and the reactor's needle drops back under the red line, for now. -> * flag coolant_vented: The Meridian's aft coolant loop was vented
+Reroute power to the bridge: The lights in Engineering dim, and the bridge's gauges come up full. -> * flag power_to_bridge: The Meridian's power is routed to the bridge
+
+Network:
+meridian_plot_table: The bridge.

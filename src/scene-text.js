@@ -8,6 +8,52 @@ import { START_LIST } from "./role.js";
 import { endedWith } from "./record.js";
 import { DIFFICULTY, attr, maxHp, skillRank } from "./rules.js";
 import { WORLD_THREADS, endingsOf } from "./world.js";
+import { systemHolds } from "./systems.js";
+import { systemIdOf } from "../public/systems-text.js";
+
+// The place's systems, in conditions and effects: "power off in The Docks", "alarm ringing at haven", "door locked
+// The Hook". What each one's state can be, asked about and made so.
+const SYSTEM_STATES = {
+  power: ["on", "off"], lights: ["on", "off"], air: ["good", "thin", "bad", "on", "off"], cameras: ["on", "off"], alarm: ["ringing", "quiet", "on", "off"],
+  comms: ["on", "jammed", "off"], engines: ["on", "off"], navigation: ["on", "off"], docking: ["locked", "released"], door: ["locked", "open"], system: ["on", "off"],
+};
+const SYSTEM_SETS = {
+  power: ["on", "off"], lights: ["on", "off"], air: ["on", "off"], cameras: ["on", "off"], alarm: ["ringing", "quiet", "on", "off"],
+  comms: ["on", "jammed"], engines: ["on", "off"], navigation: ["on", "off"], docking: ["locked", "released"], door: ["locked", "unlocked"], system: ["on", "off"],
+};
+const SYSTEM_WORDS = new Set(["power", "lights", "air", "cameras", "camera", "alarm", "comms", "engines", "navigation", "docking", "system"]);
+function systemWords(kind, words, raw, setting = false) {
+  let system = kind === "camera" ? "cameras" : kind;
+  let rest = [...words];
+  if (system === "system") {
+    system = systemIdOf(rest.shift() ?? "");
+    if (!system) return { problem: `"system" needs the system's name, as its file has it: "${raw}"` };
+  }
+  const states = (setting ? SYSTEM_SETS : SYSTEM_STATES)[kind === "camera" ? "cameras" : kind] ?? ["on", "off"];
+  const state = rest.shift()?.toLowerCase();
+  if (!states.includes(state)) return { problem: `${kind} needs one of ${states.join(", ")}: "${raw}"` };
+  let place = null;
+  if (rest.length >= 2 && rest.at(-2).toLowerCase() === "at") {
+    place = rest.at(-1);
+    rest = rest.slice(0, -2);
+    if (!LOCATIONS[place]) return { problem: `there's no place called ${place}` };
+  }
+  let room = null;
+  if (rest[0]?.toLowerCase() === "here") {
+    room = "here";
+    rest.shift();
+  } else if (rest[0]?.toLowerCase() === "in") {
+    room = rest.slice(1).join(" ");
+    rest = [];
+    if (!room) return { problem: `"in" needs a room's name after it: "${raw}"` };
+  } else if (system === "door" && rest.length) {
+    room = rest.join(" ");
+    rest = [];
+  }
+  if (system === "door" && !room) return { problem: `door needs the room the door leads into: "${raw}"` };
+  if (rest.length) return { problem: `"${raw}" has words the game doesn't follow: ${rest.join(" ")}` };
+  return { system, state, room, place };
+}
 
 const ATTITUDES = ["hostile", "wary", "neutral", "friendly", "ally"];
 const QUEST_STATES = { active: "active", done: "completed", completed: "completed", failed: "failed", none: "none" };
@@ -105,6 +151,23 @@ export function parseCondition(text) {
         Object.assign(term, { op, amount: Number(amount) });
         break;
       }
+      case "power":
+      case "lights":
+      case "air":
+      case "cameras":
+      case "camera":
+      case "alarm":
+      case "comms":
+      case "engines":
+      case "navigation":
+      case "docking":
+      case "door":
+      case "system": {
+        const found = systemWords(term.kind, rest, raw.trim());
+        if (found.problem) problems.push(found.problem);
+        else Object.assign(term, found, { kind: "system" });
+        break;
+      }
       default:
         problems.push(`"${raw.trim()}" isn't a condition the game knows`);
     }
@@ -146,6 +209,7 @@ function termHolds(game, term, helpers) {
     case "captain": result = game.role?.captain !== false; break;
     case "life": result = (game.role?.id ?? "captain") === term.id; break;
     case "at": result = game.location === term.id; break;
+    case "system": result = systemHolds(game, term); break;
     case "quest": {
       const quest = game.quests?.find((one) => one.id === term.id);
       result = term.state === "none" ? !quest : quest?.status === term.state;
@@ -249,6 +313,51 @@ export function parseEffect(text) {
     case "act": {
       const act = Number(words[1]);
       return Number.isInteger(act) && act >= 1 && words.length === 2 && !after ? { do: { tool: "update_story", act } } : { problem: "act needs the act's number and nothing else: * act 2" };
+    }
+    case "power":
+    case "lights":
+    case "air":
+    case "cameras":
+    case "camera":
+    case "alarm":
+    case "comms":
+    case "engines":
+    case "navigation":
+    case "docking":
+    case "system": {
+      if (after) return { problem: `${verb} takes no colon: * ${verb} off in The Docks` };
+      const found = systemWords(verb, words.slice(1), line, true);
+      return found.problem ? { problem: found.problem } : { do: { systems: found } };
+    }
+    case "fix":
+    case "break": {
+      // * fix everything, * fix power in The Docks, * break engines at meridian
+      const rest = words.slice(1);
+      const what = rest[0] && !["in", "here", "at"].includes(rest[0].toLowerCase()) ? rest.shift().toLowerCase() : verb === "fix" ? "everything" : null;
+      if (!what) return { problem: "break needs the system to break: * break engines" };
+      const found = systemWords("system", ["x", "on", ...rest], line, true);
+      if (found.problem) return { problem: found.problem.replace(/"system"/, `"${verb}"`) };
+      return after ? { problem: `${verb} takes no colon` } : { do: { systems: { system: verb, what: what === "everything" ? "everything" : systemIdOf(what), room: found.room, place: found.place } } };
+    }
+    case "door": {
+      // Locks or unlocks a door the place's systems run: * door locked The Hook.
+      if (["locked", "unlocked"].includes(words[1]?.toLowerCase())) {
+        const found = systemWords("door", words.slice(1), line, true);
+        return found.problem ? { problem: found.problem } : { do: { systems: found } };
+      }
+      // Opens a door in this place: the one a computer controls, or the door to a room by its id.
+      const to = words[1] ?? "here";
+      return words.length <= 2 && !after ? { do: { door: to } } : { problem: "door is written * door here, or * door with the id of the room the door leads to" };
+    }
+    case "password": {
+      // The player learns a computer's password, and gets in without a hack from then on.
+      const [, computer, ...rest] = words;
+      const word = rest.join(" ");
+      return computer && word && !after ? { do: { password: computer, word } } : { problem: "password is written * password <the computer's id> <the word>" };
+    }
+    case "computer": {
+      // Sits the player down at a computer, as if they'd used it.
+      return words[1] && words.length === 2 && !after ? { do: { computer: words[1] } } : { problem: "computer is written * computer <the computer's id>" };
     }
     case "raw": {
       const tool = words[1];

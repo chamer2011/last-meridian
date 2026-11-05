@@ -1,0 +1,23 @@
+# The Ministry archive
+class: very_hard
+owner: none
+place: asterion
+login: archivist
+
+What the player sees:
+A Ministry archive server, racked and humming behind glass, with a brass plate that says it holds the register of every soul the Ministry has ever counted, and a smaller plate that says the counting is confidential.
+
+Files:
+fleet_register.txt: The fleet's forty-one ships, as the Ministry counts them: a number for each, a line for each captain, and a column headed DISPOSITION that's empty for all of them but the Meridian.
+manifests.txt: Refugee manifests, ship by ship, name by name. More names than the fleet has people, and the extra names are all marked the same way.
+
+Mail:
+From the archivist to the registrar: The fleet's file is being asked for again. I've said no again. If the Navy asks, that's different, and I'll want it in writing.
+
+Logs:
+- news
+- people
+
+Programs:
+Pull the fleet's file: It comes up slowly, page by page, and the last page is a disposition order with a date on it that hasn't come yet. -> * flag ministry_file_read: The Ministry's file on the fleet was read, and it has a disposition order in it
+Strike a name from the manifest: One name goes, and the count at the bottom doesn't change, which is the frightening part. -> * flag manifest_name_struck: A name was struck from the Ministry's manifest

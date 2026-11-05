@@ -656,6 +656,7 @@ test("someone who isn't the captain gets the smaller story, and can still make i
 
 const { openWrittenTalk, stockTalk, writtenTalkTurn } = await import("../src/talks.js");
 const { askAtDoor, useThing, walkCommand } = await import("../src/walk.js");
+const { computerCommand } = await import("../src/computer-use.js");
 
 // Says one thing in a talk the way the server does: the answer goes in the talk's log.
 function sayInTalk(game, text) {
@@ -758,9 +759,13 @@ test("using a thing with no AI: something to pick up is picked up, and a thing w
   assert.match(useThing(game, "bridge:d").said, /already got one/);
   assert.match(useThing(game, "bridge:c").said, /The chair takes your weight/);
   assert.throws(() => useThing(game, "bridge:zzz"), /isn't here/);
-  // Over the walk command, which is what the page calls.
+  // Over the walk command, which is what the page calls. The plot table has a computer file of its own, so Use sits
+  // the captain down at it instead of reading the map's line.
   const reply = walkCommand(game, { action: "use", key: "bridge:a" });
-  assert.match(reply.said, /Slow Harriet/);
+  assert.equal(reply.computer, true);
+  assert.equal(game.computer?.name, "The plot table");
+  computerCommand(game, { action: "logoff" });
+  assert.equal(game.computer, null);
   // Somewhere with nothing written yet, there's still an answer.
   walkCommand(game, { action: "room", to: "aft" });
   const aft = publicState(game).walk.things.find((thing) => /Coolant/.test(thing.name));

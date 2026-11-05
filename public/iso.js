@@ -118,7 +118,7 @@ export function buildScene(view) {
       if (marks[y][x] === "*" && (marks[y][x - 1] === "*" || marks[y][x + 1] === "*")) kinds[y][x] = "glow";
     }
   }
-  for (const thing of view.things ?? []) if (inPlan(thing.x, thing.y)) kinds[thing.y][thing.x] = "thing";
+  for (const thing of view.things ?? []) if (inPlan(thing.x, thing.y) && thing.part?.mount !== "wall") kinds[thing.y][thing.x] = "thing";
   for (const exit of view.exits ?? []) if (inPlan(exit.x, exit.y)) kinds[exit.y][exit.x] = "exit";
 
   const runs = [];
@@ -290,10 +290,11 @@ export function buildScene(view) {
   };
   const pick = (seed) => look.lights[Math.floor(seed * look.lights.length) % look.lights.length];
   const painted = (x, y) => runs.some((run) => run.y === y && x >= run.x && x < run.x + run.length);
+  const mounted = new Set((view.things ?? []).filter((thing) => thing.part?.mount === "wall").map((thing) => `${thing.x},${thing.y}`));
   const fixtures = [];
   for (let y = 0; y < lines; y += 1) {
     for (let x = 0; x < cols; x += 1) {
-      if (kinds[y][x] !== "wall" || heights[y][x] !== WALL_HEIGHT || painted(x, y)) continue;
+      if (kinds[y][x] !== "wall" || heights[y][x] !== WALL_HEIGHT || painted(x, y) || mounted.has(`${x},${y}`)) continue;
       const seed = hashOf(x, y);
       if (seeThrough(kindAt(x, y + 1)) && (x + y * 5) % 18 === 7) {
         fixtures.push({ x, y, face: "left", color: pick(seed) });
@@ -323,6 +324,14 @@ export function buildScene(view) {
   blocks.filter((block) => block.style === "lamp" && block.seed > 0.5).forEach((block) => addLight(block.x, block.y, pick(block.seed), 2.4, 0.8));
   blocks.filter((block) => block.style === "machine" && block.seed > 0.86).forEach((block) => addLight(block.x, block.y, look.glow, 1.5, 0.5));
   for (const exit of view.exits ?? []) addLight(exit.x, exit.y, exit.closed ? "#c86048" : "#d8d0b0", 1.8, 0.55);
+  const dark = Boolean(view.room?.dark);
+  if (dark) {
+    lights.length = 0;
+    glows.filter((cell) => cell.seed > 0.8).forEach((cell) => addLight(cell.x, cell.y, look.fire, 2.6, 0.9));
+    for (const exit of view.exits ?? []) addLight(exit.x, exit.y, "#c83a28", 2.4, 0.5);
+    for (const thing of view.things ?? []) if (thing.part?.works && ["console", "relay", "nav core", "engines"].includes(thing.part.kind)) addLight(thing.x, thing.y + (thing.part.face === "back" ? 1 : 0), thing.part.kind === "engines" ? "#d07038" : "#5fd0a0", 1.4, 0.4);
+    for (const fixture of fixtures) fixture.off = true;
+  }
 
   return {
     cols,
@@ -339,7 +348,8 @@ export function buildScene(view) {
     lights,
     fixtures,
     junk: ground.filter((cell) => cell.kind === "dim" && cell.seed > 0.68),
-    look,
+    look: dark ? { ...look, ambient: mix(hexOr(look.ambient, FALLBACK_LOOK.ambient), "#000000", 0.74) } : look,
+    dark,
     bounds: bounds ?? { minU: -1, maxU: 1, minV: -1, maxV: 1 },
     colors: { ...FALLBACK_COLORS, ...view.colors },
   };
@@ -1098,7 +1108,7 @@ function drawFixture(painter, fixture) {
   ctx.closePath();
   ctx.fillStyle = "#14130f";
   ctx.fill();
-  ctx.strokeStyle = "rgba(255,245,225,.3)";
+  ctx.strokeStyle = fixture.off ? "rgba(255,245,225,.08)" : "rgba(255,245,225,.3)";
   ctx.lineWidth = 1;
   ctx.stroke();
 }
@@ -1238,7 +1248,188 @@ function drawDoor(painter, item) {
   }
 }
 
+// What each kind of part looks like: how high on the wall it hangs, how much of the square it takes, and its colors.
+const PART_LOOKS = {
+  "junction box": { z0: 0.55, z1: 0.95, inset: 0.08, color: "#666a64", trim: "#d8b030" },
+  "air plant": { z0: 0.08, z1: 1.25, inset: 0, color: "#4c5450", trim: "#88a0a0" },
+  vent: { z0: 0.12, z1: 0.42, inset: 0.08, color: "#30343a", trim: "#8a9298" },
+  "light switch": { z0: 0.7, z1: 0.86, inset: 0.32, color: "#b8b0a0", trim: "#605848" },
+  camera: { z0: 1.32, z1: 1.52, inset: 0.24, color: "#242628", trim: "#9aa0a6" },
+  speaker: { z0: 1.16, z1: 1.42, inset: 0.2, color: "#463e3a", trim: "#a83228" },
+  relay: { z0: 0.35, z1: 1.2, inset: 0.06, color: "#2a3234", trim: "#60d090" },
+  console: { z0: 0.6, z1: 1.02, inset: 0.05, color: "#1c2220", trim: "#3fbf8f" },
+  engines: { z0: 0.06, z1: 1.4, inset: 0, color: "#58483a", trim: "#d07038" },
+  "nav core": { z0: 0.4, z1: 1.3, inset: 0.06, color: "#283240", trim: "#6aa0e0" },
+  "docking clamps": { z0: 0.3, z1: 1.1, inset: 0.06, color: "#5a5840", trim: "#c8b860" },
+  machine: { z0: 0.4, z1: 1, inset: 0.08, color: "#58584e", trim: "#a0a090" },
+};
+const PART_WORDS = { "junction box": "power", "air plant": "air plant", vent: "vent", "light switch": "lights", camera: "camera", speaker: "alarm", relay: "comms", console: "console", engines: "engines", "nav core": "nav", "docking clamps": "clamps", machine: "machine" };
+const partLook = (thing) => PART_LOOKS[thing.part.kind] ?? PART_LOOKS.machine;
+
+// The face a part is on: the front of its wall facing the room, or the front of the unit it stands on. Corners go
+// top left, top right, bottom right, bottom left, and point(u, v) finds a spot across and down it.
+function partFace(painter, thing, z0, z1, inset) {
+  const { at } = painter;
+  const { x, y } = thing;
+  let corners;
+  if (thing.part.mount === "wall" && thing.part.face === "side") {
+    const wx = (x + 1) * CELL_WIDTH;
+    corners = [at(wx, y + 1 - inset, z1), at(wx, y + inset, z1), at(wx, y + inset, z0), at(wx, y + 1 - inset, z0)];
+  } else {
+    const wy = thing.part.mount === "wall" ? y + 1 : y + 0.78;
+    const from = (x + Math.max(inset, thing.part.mount === "wall" ? 0 : 0.16)) * CELL_WIDTH;
+    const to = (x + 1 - Math.max(inset, thing.part.mount === "wall" ? 0 : 0.16)) * CELL_WIDTH;
+    corners = [at(from, wy, z1), at(to, wy, z1), at(to, wy, z0), at(from, wy, z0)];
+  }
+  const [tl, tr, br, bl] = corners;
+  const point = (u, v) => {
+    const top = [tl[0] + (tr[0] - tl[0]) * u, tl[1] + (tr[1] - tl[1]) * u];
+    const bottom = [bl[0] + (br[0] - bl[0]) * u, bl[1] + (br[1] - bl[1]) * u];
+    return [top[0] + (bottom[0] - top[0]) * v, top[1] + (bottom[1] - top[1]) * v];
+  };
+  return { corners, point };
+}
+
+function drawPart(painter, thing) {
+  const { ctx, at, unit } = painter;
+  const look = partLook(thing);
+  const { works, word, kind } = thing.part;
+  // Where there's no wall, the part stands on a squat unit of its own.
+  if (thing.part.mount === "floor") {
+    const x0 = thing.x * CELL_WIDTH + 0.08;
+    const x1 = x0 + CELL_WIDTH - 0.16;
+    const y0 = thing.y + 0.22;
+    const y1 = thing.y + 0.78;
+    const h = Math.min(1.1, Math.max(0.6, look.z1));
+    polygon(ctx, [at(x1, y0, h), at(x1, y1, h), at(x1, y1), at(x1, y0)], scaled(look.color, 0.62));
+    polygon(ctx, [at(x0, y1, h), at(x1, y1, h), at(x1, y1), at(x0, y1)], scaled(look.color, 0.85));
+    polygon(ctx, [at(x0, y0, h), at(x1, y0, h), at(x1, y1, h), at(x0, y1, h)], scaled(look.color, 1.15));
+  }
+  const z0 = thing.part.mount === "floor" ? Math.min(0.9, look.z0 * 0.6 + 0.12) : look.z0;
+  const z1 = thing.part.mount === "floor" ? Math.min(1.05, Math.max(z0 + 0.18, look.z1 * 0.7)) : look.z1;
+  const { corners, point } = partFace(painter, thing, z0, z1, look.inset);
+  polygon(ctx, corners, look.color);
+  ctx.strokeStyle = "rgba(0,0,0,.55)";
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  corners.forEach((one, i) => (i ? ctx.lineTo(...one) : ctx.moveTo(...one)));
+  ctx.closePath();
+  ctx.stroke();
+  const line = (u0, v0, u1, v1, color, width = 1) => {
+    ctx.strokeStyle = color;
+    ctx.lineWidth = width;
+    ctx.beginPath();
+    ctx.moveTo(...point(u0, v0));
+    ctx.lineTo(...point(u1, v1));
+    ctx.stroke();
+  };
+  const patch = (u0, v0, u1, v1, color) => polygon(ctx, [point(u0, v0), point(u1, v0), point(u1, v1), point(u0, v1)], color);
+  const dot = (u, v, radius, color) => {
+    const [px, py] = point(u, v);
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.arc(px, py, Math.max(1, radius * unit), 0, Math.PI * 2);
+    ctx.fill();
+  };
+  const broken = !works;
+  switch (kind) {
+    case "junction box":
+      patch(0, 0, 1, 0.22, word === "cut" ? "#4a3a20" : look.trim);
+      for (let i = 0; i < 4; i += 1) line(0.1 + i * 0.25, 0, 0.0 + i * 0.25, 0.22, "rgba(0,0,0,.6)", 1.5);
+      line(0.7, 0.4, 0.7, word === "off" ? 0.85 : 0.5, "#c8c0b0", 2);
+      dot(0.25, 0.6, 0.018, works ? "#60d070" : "#3a1a14");
+      if (word === "cut") line(0.15, 0.35, 0.85, 0.9, "#d04030", 2);
+      break;
+    case "vent":
+      if (word === "sealed") patch(0.05, 0.1, 0.95, 0.9, "#8a7a50");
+      else for (let i = 1; i <= 4; i += 1) line(0.1, i * 0.19, 0.9, i * 0.19, broken ? "#1a1c1e" : look.trim, 1.5);
+      break;
+    case "light switch":
+      line(0.5, 0.5, 0.5, word === "off" ? 0.8 : 0.2, look.trim, 2);
+      break;
+    case "camera":
+      if (word === "covered") patch(0, 0, 1, 1, "#7a7466");
+      dot(0.22, 0.5, 0.026, word === "covered" ? "#5a554a" : look.trim);
+      break;
+    case "speaker":
+      dot(0.5, 0.5, 0.05, "#2a2420");
+      dot(0.5, 0.5, 0.03, broken ? "#3a2420" : look.trim);
+      if (word === "cut") line(0.1, 0.9, 0.9, 0.1, "#c8c0b0", 1.5);
+      break;
+    case "relay":
+      for (let row = 0; row < 4; row += 1) for (let col = 0; col < 3; col += 1) dot(0.25 + col * 0.25, 0.18 + row * 0.2, 0.012, works ? look.trim : word === "jammed" ? "#d8a040" : "#2a2a26");
+      break;
+    case "console":
+      patch(0.1, 0.12, 0.9, 0.7, works ? scaled(look.trim, 0.8) : "#0c100e");
+      if (works) for (let i = 0; i < 3; i += 1) line(0.18, 0.24 + i * 0.13, 0.7 - i * 0.12, 0.24 + i * 0.13, "rgba(220,255,235,.55)", 1);
+      break;
+    case "air plant":
+      for (const u of [0.3, 0.72]) {
+        dot(u, 0.42, 0.11, "#2a302e");
+        dot(u, 0.42, 0.07, works ? "#6a7e7a" : "#3a403e");
+        line(u - 0.12, 0.42, u + 0.12, 0.42, "#1a1e1c", 1.5);
+      }
+      patch(0.08, 0.78, 0.92, 0.88, works ? look.trim : "#4a3a30");
+      break;
+    case "engines":
+      for (let i = 1; i <= 6; i += 1) line(i * 0.14, 0.1, i * 0.14, 0.9, "rgba(0,0,0,.5)", 1.5);
+      patch(0.1, 0.72, 0.9, 0.86, works ? look.trim : "#2a2420");
+      break;
+    case "nav core":
+      for (let i = 1; i <= 5; i += 1) line(0.08, i * 0.16, 0.92, i * 0.16, "rgba(0,0,0,.55)", 1.5);
+      for (let i = 0; i < 5; i += 1) dot(0.82, 0.08 + i * 0.16, 0.012, works ? look.trim : "#2a3038");
+      break;
+    case "docking clamps":
+      for (let i = 1; i <= 4; i += 1) line(i * 0.2, 0.05, i * 0.2, 0.95, "rgba(0,0,0,.6)", 1.5);
+      line(0.5, 0.75, word === "locked" ? 0.8 : 0.2, 0.3, word === "locked" ? "#d04030" : look.trim, 2.5);
+      break;
+    default:
+      dot(0.5, 0.4, 0.02, works ? "#60d070" : "#3a1a14");
+      if (broken) line(0.2, 0.8, 0.8, 0.2, "rgba(0,0,0,.7)", 2);
+  }
+}
+
+// What moves on a part: a watching camera's red light, a ringing speaker, a screen.
+function drawPartLights(painter, now, view) {
+  const { ctx, unit } = painter;
+  for (const thing of view.things ?? []) {
+    const part = thing.part;
+    if (!part || !part.works) continue;
+    const look = partLook(thing);
+    const floor = part.mount === "floor";
+    const z0 = floor ? Math.min(0.9, look.z0 * 0.6 + 0.12) : look.z0;
+    const z1 = floor ? Math.min(1.05, Math.max(z0 + 0.18, look.z1 * 0.7)) : look.z1;
+    const { corners, point } = partFace(painter, thing, z0, z1, look.inset);
+    if (part.kind === "camera") {
+      const on = iso.calm || Math.floor(now / 700 + thing.x) % 2 === 0;
+      const [px, py] = point(0.8, 0.4);
+      ctx.fillStyle = on ? "#ff3020" : "#5a1810";
+      ctx.beginPath();
+      ctx.arc(px, py, Math.max(1.2, unit * 0.014), 0, Math.PI * 2);
+      ctx.fill();
+    } else if (part.kind === "speaker" && part.ringing) {
+      const beat = iso.calm ? 0.6 : 0.5 + 0.5 * Math.sin(now / 160);
+      ctx.fillStyle = `rgba(255,40,24,${0.35 + beat * 0.5})`;
+      ctx.beginPath();
+      corners.forEach((one, i) => (i ? ctx.lineTo(...one) : ctx.moveTo(...one)));
+      ctx.closePath();
+      ctx.fill();
+    } else if (part.kind === "console") {
+      const flicker = iso.calm ? 0.12 : 0.08 + 0.08 * Math.abs(Math.sin(now / 900 + thing.y));
+      ctx.fillStyle = `rgba(120,255,200,${flicker})`;
+      ctx.beginPath();
+      [point(0.1, 0.12), point(0.9, 0.12), point(0.9, 0.7), point(0.1, 0.7)].forEach((one, i) => (i ? ctx.lineTo(...one) : ctx.moveTo(...one)));
+      ctx.closePath();
+      ctx.fill();
+    }
+  }
+}
+
 function drawThing(painter, thing) {
+  if (thing.part) {
+    drawPart(painter, thing);
+    return;
+  }
   const { ctx, at } = painter;
   const x0 = thing.x * CELL_WIDTH + 0.05;
   const x1 = x0 + CELL_WIDTH - 0.1;
@@ -1686,7 +1877,8 @@ const iso = {
 };
 
 function useScene(view) {
-  const id = `${view.here.id}|${view.cols}x${view.lines}|${closedKey(view)}`;
+  const parts = (view.things ?? []).filter((thing) => thing.part).map((thing) => `${thing.id}=${thing.part.word}`).join(",");
+  const id = `${view.here.id}|${view.cols}x${view.lines}|${closedKey(view)}|${view.room?.dark ? "dark" : "lit"}|${parts}`;
   if (iso.sceneId === id) return;
   const sameRoom = iso.sceneId?.split("|")[0] === view.here.id;
   iso.scene = buildScene(view);
@@ -1923,6 +2115,7 @@ function draw(now, dt) {
   ctx.drawImage(room.canvas, Math.round((ox + room.left) * ratio), Math.round((oy + room.top) * ratio));
   painter.flat();
   drawLights(painter, now);
+  drawPartLights(painter, now, view);
 
   // Where the mouse is, if that's somewhere to walk.
   if (iso.hover?.kind === "floor" && !iso.hooks.blocked() && !iso.hooks.reading?.()) {
@@ -2003,6 +2196,18 @@ function draw(now, dt) {
   ctx.fillStyle = edges;
   ctx.fillRect(0, 0, width, height);
 
+  // Bad air hangs in the room, and a ringing alarm washes it red.
+  const here = view.room;
+  if (here?.thin) {
+    ctx.fillStyle = `rgba(118,126,88,${Math.min(0.34, (100 - here.air) / 190)})`;
+    ctx.fillRect(0, 0, width, height);
+  }
+  if (here?.alarm) {
+    const beat = iso.calm ? 0.5 : 0.5 + 0.5 * Math.sin(now / 240);
+    ctx.fillStyle = `rgba(210,36,24,${(here.alarm.here ? 0.12 : 0.06) * (0.35 + beat * 0.65)})`;
+    ctx.fillRect(0, 0, width, height);
+  }
+
   // Names go on top of everything, so they can always be read, and only when they're wanted.
   const clip = { width, height };
   const writing = mix(hexOr(scene.colors.writing, FALLBACK_COLORS.writing), "#c8c4b0", 0.5);
@@ -2016,6 +2221,21 @@ function draw(now, dt) {
     hits.push({ kind: "exit", key: `exit:${exit.key}`, exit, ...rect });
   }
   for (const thing of view.things) {
+    if (thing.part) {
+      const part = thing.part;
+      const wall = part.mount === "wall";
+      const [x, y] = wall
+        ? part.face === "side" ? at((thing.x + 1) * CELL_WIDTH, thing.y + 0.5, partLook(thing).z1 + 0.15) : at((thing.x + 0.5) * CELL_WIDTH, thing.y + 1, partLook(thing).z1 + 0.15)
+        : at((thing.x + 0.5) * CELL_WIDTH, thing.y + 0.5, 1.15);
+      if (x < -8 || y < -8 || x > width + 8 || y > height + 8) continue;
+      const hovered = hoverKey === `thing:${thing.id}`;
+      const near = Math.abs(thing.x - iso.you.x) * CELL_WIDTH + Math.abs(thing.y - iso.you.y) < 5;
+      const tone = part.ringing ? "#ff6050" : part.works ? "#7fd8e0" : "#e0a050";
+      const text = hovered ? `${thing.name}: ${part.word}` : near ? PART_WORDS[part.kind] ?? "part" : "·";
+      const rect = chip(ctx, text, x, y, hovered ? BACKGROUND : tone, { background: hovered ? tone : "rgba(4,6,5,.5)", size: hovered || near ? 10 : 9, ...clip });
+      hits.push({ kind: "thing", key: `thing:${thing.id}`, thing, ...rect });
+      continue;
+    }
     const { wx, wy } = cellCentre(thing.x, thing.y);
     const bob = iso.calm ? 0 : Math.sin(now / 600 + thing.x) * unit * 0.02;
     const [x, y] = at(wx, wy, 0.5);
@@ -2054,6 +2274,9 @@ export function isoLook({ person = null, bottom = 0 } = {}) {
   iso.covered = bottom;
   iso.redraw = true;
 }
+
+// Where a thing, a part or a door was drawn, by its key (thing:<id> or exit:<key>), for putting a pane beside it.
+export const isoMark = (key) => iso.hits.find((hit) => hit.key === key) ?? null;
 
 // Where someone is in the view, for putting something over their head.
 export function isoSpot(key) {
@@ -2107,6 +2330,7 @@ function underPointer() {
 
 function titleFor(hit) {
   if (hit?.kind === "person") return `${hit.person.name}${hit.person.doing ? `, ${hit.person.doing}` : ""}. Click to walk over and talk.`;
+  if (hit?.kind === "thing" && hit.thing.part) return `${hit.thing.name}, ${hit.thing.part.word}. Click to walk over and work it.`;
   if (hit?.kind === "thing") return `${hit.thing.name}. Click to walk over and take a look.`;
   if (hit?.kind === "exit") return hit.exit.closed ? `${hit.exit.label}. It's closed. Click to walk over and ask.` : `${hit.exit.label}. Click to go through.`;
   return "";

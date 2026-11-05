@@ -1,0 +1,25 @@
+# Tessen Colony
+draft: the AI's, not yet edited by the owner
+guards: sorrel, Old Mercer
+engineers: Jess Mercer
+alarm rings: 15
+repairs take: 6
+
+Power:
+- generator in The Commons for The Commons, The Schoolhouse: A diesel generator in a lean-to, coughing, the only power for a day's ride.
+
+Water:
+- pump in The Well-Head: The well's pump, under the poured stone cap, that the whole colony drinks from.
+- windpump in The Far Homesteads: The homesteads' own windpump, creaking round.
+
+Lights:
+- light switch in The Commons, The Schoolhouse
+
+Doors:
+- door to The Well-Head: The gate in the fence around the well, with a padlock and a sign.
+
+Alarm:
+- bell in The Commons: The colony's bell, on a post outside the meeting barn. Ring it and the whole colony comes.
+
+Comms:
+- radio mast in The Commons: A radio mast guyed with fence wire, that can just about reach the fleet.

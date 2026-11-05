@@ -527,6 +527,43 @@ button.fighter:hover:not(:disabled), button.fighter:focus-visible { background: 
 .check-run { color: var(--c-bright); font-weight: 700; border: 1px solid var(--c); padding: 0 4px; white-space: nowrap; }
 .check-run:hover:not(:disabled), .check-run:focus-visible { background: var(--c); color: var(--c-bg); }
 .check-window button:not(.check-link):not(.check-command):not(.check-run):hover:not(:disabled) { background: var(--c); color: var(--c-bg); }
+/* The advisor beside the desk: hints by training, on a panel that slides in from the right and can be slid away. */
+.check-body { flex: 1 1 auto; min-height: 0; display: flex; align-items: stretch; }
+.check-body .check-desk { flex: 1 1 auto; min-width: 0; }
+.check-advisor { flex: none; position: relative; width: 0; display: flex; border-left: 0 solid var(--c-line); transition: width .25s ease-out, border-left-width .25s; }
+.check-advisor.in { width: 30ch; border-left-width: 1px; }
+.check-advisor-body { width: 30ch; min-height: 0; display: flex; flex-direction: column; background: var(--c-panel); opacity: 0; transform: translateX(16px); transition: opacity .2s, transform .25s ease-out; }
+.check-advisor.in .check-advisor-body { opacity: 1; transform: none; }
+.check-advisor-lines { flex: 1 1 auto; min-height: 0; overflow-y: auto; padding: 6px 8px; display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; line-height: 1.4; color: var(--c-bright); overflow-wrap: anywhere; }
+.check-advisor-lines .check-line { flex: none; }
+.check-advisor-tab { position: absolute; left: -16px; top: 50%; transform: translateY(-50%); z-index: 2; width: 16px; height: 44px; padding: 0; border: 1px solid var(--c-line); border-right: 0; background: var(--c-panel); color: var(--c); font: 700 11px/1 var(--mono); text-align: center; cursor: pointer; }
+.check-advisor-tab::before, .check-advisor-tab::after { content: none !important; }
+.check-window .check-advisor-tab:hover:not(:disabled), .check-advisor-tab:focus-visible { background: var(--c); color: var(--c-bg); }
+.practice-classes { flex-wrap: wrap; gap: 2px 6px; }
+/* The computer window: what's on it down the left, the screen in the middle, the advisor on the right, a console at the bottom. */
+.computer-window { width: min(100%, 132ch); }
+.computer-body { flex: 1 1 auto; min-height: 0; display: flex; align-items: stretch; }
+.computer-side { flex: none; width: 26ch; min-height: 0; overflow-y: auto; border-right: 1px solid var(--c-line); display: flex; flex-direction: column; }
+.computer-section { display: flex; flex-direction: column; }
+.computer-list { display: flex; flex-direction: column; padding: 3px 4px; }
+.computer-item { text-align: left; padding: 1px 4px; white-space: normal; overflow-wrap: anywhere; }
+.computer-item.done { color: var(--c-dim); }
+.computer-item.open { background: color-mix(in srgb, var(--c) 18%, transparent); }
+.computer-mark { display: inline-block; width: 1.2ch; color: var(--c-dim); }
+.computer-main { flex: 1 1 auto; min-width: 0; min-height: 0; display: flex; flex-direction: column; }
+.computer-screen { flex: 1 1 auto; min-height: 7em; overflow-y: auto; padding: 8px 10px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; line-height: 1.45; white-space: pre-wrap; overflow-wrap: anywhere; }
+.computer-screen-title { color: var(--c-bright); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+.computer-screen .check-line { white-space: pre-wrap; }
+.computer-console { flex: none; height: 7em; min-height: 0; max-height: none; border-top: 1px solid var(--c-line); overflow-y: auto; padding: 4px 8px; background: var(--c-panel); }
+@media (max-width: 860px) {
+  .computer-body { flex-direction: column; }
+  .computer-side { width: 100%; max-height: 9em; border-right: 0; border-bottom: 1px solid var(--c-line); }
+  .computer-console { height: 5em; }
+  .computer-body .check-advisor { width: 100%; height: 0; border-left: 0; border-top: 0 solid var(--c-line); transition: height .25s ease-out, border-top-width .25s; }
+  .computer-body .check-advisor.in { width: 100%; height: 7.5em; border-top-width: 1px; }
+  .computer-body .check-advisor-body { width: 100%; }
+  .computer-body .check-advisor-tab { left: auto; right: 10px; top: -15px; transform: none; width: 44px; height: 15px; border: 1px solid var(--c-line); border-bottom: 0; }
+}
 .check-result { width: min(100%, 76ch); cursor: default; }
 .check-verdict { padding: 18px 16px; display: flex; flex-direction: column; gap: 8px; overflow-y: auto; }
 .check-verdict-title { font-size: 26px; line-height: 1.2; font-weight: 700; letter-spacing: .12em; text-align: center; padding: 10px 0; border: 1px solid currentColor; }
@@ -537,11 +574,18 @@ button.fighter:hover:not(:disabled), button.fighter:focus-visible { background: 
 .check-verdict .option-label { color: var(--c-bright); }
 @media (prefers-reduced-motion: reduce) {
   .check-rain, .check-line.new { animation: none; }
+  .check-advisor, .check-advisor-body { transition: none; }
 }
 @media (max-width: 860px) {
   .check-desk { grid-template-columns: minmax(0, 1fr); }
   .check-desk:not([data-count="2"]) .check-panel.terminal { grid-row: auto; }
   .check-log { height: 9em; min-height: 6em; max-height: 24vh; }
+  /* With less room, the advisor goes under the desk instead of beside it. */
+  .check-body { flex-direction: column; }
+  .check-advisor { width: 100%; height: 0; border-left: 0; border-top: 0 solid var(--c-line); transition: height .25s ease-out, border-top-width .25s; }
+  .check-advisor.in { width: 100%; height: 7.5em; border-top-width: 1px; }
+  .check-advisor-body { width: 100%; }
+  .check-advisor-tab { left: auto; right: 10px; top: -15px; transform: none; width: 44px; height: 15px; border: 1px solid var(--c-line); border-bottom: 0; }
   .check-tab, .check-start, .check-spacer { display: none; }
   .check-taskbar { flex-wrap: wrap; justify-content: space-between; }
 }
@@ -946,3 +990,38 @@ button.fighter:hover:not(:disabled), button.fighter:focus-visible { background: 
   .pole { width: auto; }
   .axis-bar { font-size: 12px; letter-spacing: 0; }
 }
+
+/* ---- The place's systems -------------------------------------------------- */
+.walk-part { color: #7fd8e0; font-size: .9em; }
+.walk-part.down { color: #e0a050; }
+.walk-part.ringing { color: #ff6050; animation: part-ring .5s steps(2) infinite; }
+@keyframes part-ring { 50% { color: #ffe0d8; } }
+.walk-plan.dark { filter: brightness(.45) saturate(.6); }
+.walk-plan.thin { filter: sepia(.35) brightness(.85); }
+.walk-plan.dark.thin { filter: brightness(.42) sepia(.4); }
+.walk-plan.alarm { box-shadow: inset 0 0 0 2px rgba(220, 50, 30, .55), inset 0 0 40px rgba(220, 40, 20, .25); }
+.walk-here-part { color: #7fd8e0; }
+.walk-here-part.down { color: #e0a050; }
+.walk-room-note { margin-top: 4px; color: var(--warn, #e0b060); }
+.walk-room-note.bad { color: var(--bad, #ff7a6a); }
+.walk-thing-said { display: flex; flex-direction: column; gap: 4px; margin: 6px 10px 0; color: var(--c-bright); }
+.walk-part-word { text-transform: uppercase; }
+.walk-part-word.down { color: #ffb070; }
+.computer-rows { display: flex; flex-direction: column; gap: 8px; }
+.computer-row { border-left: 2px solid var(--c-line); padding: 2px 0 2px 8px; display: flex; flex-direction: column; gap: 2px; }
+.computer-row.down { border-left-color: #a5733e; }
+.computer-row-head { display: flex; gap: 10px; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+.computer-row-word { font-weight: 700; letter-spacing: .06em; }
+.computer-row-actions { display: flex; flex-wrap: wrap; gap: 4px 10px; }
+.ship-system-row { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
+.ship-system-name { flex: 1 1 14ch; min-width: 0; }
+
+/* ---- A thing's pane, beside it in the room ------------------------------------ */
+.walk-map { position: relative; }
+.walk-things { position: absolute; inset: 0; z-index: 24; pointer-events: none; container: things / size; }
+.walk-things .pop-balloon { pointer-events: auto; }
+.walk-thing-pane { width: clamp(24ch, 30cqw, 32ch); }
+.walk-thing-pane .walk-thing-words { display: flex; flex-direction: column; gap: 6px; padding: 12px 12px 8px; }
+.walk-thing-pane .walk-thing-said { margin: 0; gap: 2px; color: var(--c-bright); }
+.walk-thing-pane .walk-thing-look { color: var(--c); }
+.walk-thing-choices { width: clamp(22ch, 26cqw, 30ch); }

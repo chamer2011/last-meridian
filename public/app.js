@@ -9,6 +9,7 @@ import { openBoard } from "./board.js";
 import { MENUS, MENU_GROUPS, initMenus } from "./menus.js";
 import { choicesFor, dropStaleTooltip, initStory, loreCatalog, optionContent, setStoryContext, storyEntryNode, thinkingNode } from "./story-view.js";
 import { focusTalk, initTalk, resetTalk, startTalk, talkNode, talkOpen } from "./talk.js";
+import { computerNode, computerOpen, focusComputer, initComputer, resetComputer } from "./computer.js";
 import { beginScene, initPopups, openPopups, popupNext, popupsAttached, popupsOpen, updatePopups } from "./popups.js";
 import { INTERFACE_SIZES, interfaceZoom } from "./scene.js";
 import { focusThing, initWalk, popupsShown, renderWalk, resetWalk, showWholeStory, thingNode, thingOpen, walkShown, walkViewNode } from "./walk.js";
@@ -215,6 +216,7 @@ async function loadGame(slot) {
   resetRaid();
   resetWalk();
   resetTalk();
+  resetComputer();
   ui.game = game;
   ui.saves = saves;
   ui.screen = "game";
@@ -230,6 +232,7 @@ async function startNewGame(draft) {
   resetRaid();
   resetWalk();
   resetTalk();
+  resetComputer();
   ui.game = game;
   ui.saves = saves;
   ui.screen = "game";
@@ -274,7 +277,7 @@ function statusNode() {
 function currentOptions() {
   const g = ui.game;
   // A fight, a check, a raid or a talk has its own window, with its own choices.
-  if (ui.streaming || ui.waiting || g.combat || g.check || g.talk || g.fleet.raid) return [];
+  if (ui.streaming || ui.waiting || g.combat || g.check || g.talk || g.computer || g.fleet.raid) return [];
   // After a fight or a check, the game waits. The story only goes on when the player says to carry on.
   const written = g.mode === "written";
   const carryOn = [{ label: "Continue the story", detail: written || g.scene ? "the story picks it up from here" : "the game master picks it up from here", run: () => sendChat({ event: "continue" }) }];
@@ -361,7 +364,7 @@ function composerNode() {
           autocomplete: "off",
           spellcheck: "false",
           placeholder: hint,
-          disabled: ui.streaming || ui.waiting || Boolean(g.combat) || Boolean(g.check) || Boolean(g.talk) || Boolean(g.fleet.raid),
+          disabled: ui.streaming || ui.waiting || Boolean(g.combat) || Boolean(g.check) || Boolean(g.talk) || Boolean(g.computer) || Boolean(g.fleet.raid),
           value: ui.draft,
           oninput: (e) => { ui.draft = e.target.value; },
           onkeydown: (e) => {
@@ -555,6 +558,7 @@ function closeMenu() {
   else if (checkOpen()) focusCheck();
   else if (raidOpen()) focusRaid();
   else if (talkOpen()) focusTalk();
+  else if (computerOpen()) focusComputer();
   else if (thingOpen()) focusThing();
   else document.getElementById("composer")?.focus({ preventScroll: true });
 }
@@ -594,6 +598,7 @@ function render() {
     checkNode(),
     raidNode(),
     talkNode(),
+    computerNode(),
     thingNode(),
     railNode(),
     backdropNode(),
@@ -612,6 +617,8 @@ function render() {
     focusRaid();
   } else if (talkOpen() && !fightOpen() && !checkOpen()) {
     focusTalk();
+  } else if (computerOpen() && !fightOpen() && !checkOpen()) {
+    focusComputer();
   } else if (thingOpen()) {
     focusThing();
   } else if (!fightOpen() && !checkOpen() && !ui.streaming) {
@@ -662,7 +669,7 @@ initMenus({
   toTitle,
   openMenu,
   startSim: (enemy, followers) => runAction(() => startSim(enemy, followers))(),
-  startPractice: (skill) => runAction(() => startPractice(skill))(),
+  startPractice: (skill, difficulty) => runAction(() => startPractice(skill, difficulty))(),
   followLead: (lead) => {
     closeMenu();
     sendChat({ text: `I look into this: ${lead.title}`, thread: lead.id });
@@ -694,6 +701,7 @@ initPopups({
   },
 });
 initTalk({ ui, reading, render, openMenu, popupsShown });
+initComputer({ ui, render, openMenu });
 
 initCreator({
   render,

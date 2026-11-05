@@ -17,17 +17,24 @@ const check = {
   message: null,
   typed: [],
   typedAt: 0,
+  advisor: true,
 };
 
 // What the check window needs from the main screen. Set once, when the page loads.
 let app;
 
 const PREFERENCE_KEY = "meridian-checks";
+const ADVISOR_KEY = "meridian-advisor";
 const DIFFICULTIES = ["easy", "moderate", "hard", "very_hard", "nearly_impossible"];
 
 export function initCheck(hooks) {
   app = hooks;
   document.addEventListener("keydown", onKey);
+  try {
+    check.advisor = localStorage.getItem(ADVISOR_KEY) !== "off";
+  } catch {
+    check.advisor = true;
+  }
 }
 
 export const checkOpen = () => Boolean(check.view || check.outcome);
@@ -69,7 +76,7 @@ function sync() {
     closeCheck();
     check.id = live.id;
     // Practice is how a player tries a window out, so it always opens one.
-    if (checkStyle() === "roll" && !live.training) setTimeout(() => send("run"), 0);
+    if (checkStyle() === "roll" && !live.training) setTimeout(() => send("roll"), 0);
   }
   check.view = live;
 }
@@ -144,12 +151,13 @@ function inputNode(view) {
       type: "text",
       autocomplete: "off",
       spellcheck: "false",
-      placeholder: view.done ? "press Enter when you're ready" : "type a command, or click one",
+      placeholder: view.decided ? "type a word, or click one" : view.done ? "press Enter when you're ready" : "type a command, or click one",
       value: check.draft,
       oninput: (event) => { check.draft = event.target.value; },
       onkeydown: onInputKey,
     }),
-    el("button", {
+    // A decided game has no roll to make, so there's nothing to press.
+    !view.decided && el("button", {
       class: "check-run primary",
       disabled: check.sending,
       title: "Make the final roll, at the odds showing now",
@@ -160,20 +168,47 @@ function inputNode(view) {
     }, `${view.runLabel}: ${view.odds}%`));
 }
 
+// The advisor: hints by the player's training, on a panel that slides in from the right. Its tab
+// slides it away and back, and the choice is remembered on this computer.
+function toggleAdvisor() {
+  check.advisor = !check.advisor;
+  try {
+    localStorage.setItem(ADVISOR_KEY, check.advisor ? "on" : "off");
+  } catch {
+    // It still works, it just won't remember.
+  }
+  draw();
+}
+
+function advisorNode(view) {
+  if (!view.hints?.length) return null;
+  const shown = check.advisor;
+  return el("aside", { class: `check-advisor${shown ? " in" : ""}`, id: "check-advisor", "aria-label": "Hints" },
+    el("button", { class: "check-advisor-tab", title: shown ? "Slide the hints away" : "Bring the hints back", "aria-expanded": String(shown), onclick: (event) => { event.stopPropagation(); toggleAdvisor(); } }, shown ? ">" : "<"),
+    el("div", { class: "check-advisor-body" },
+      el("header", { class: "check-panel-title" }, el("span", {}, `ADVISOR: ${view.tierName.toUpperCase()}`), el("span", { class: "check-panel-marks", "aria-hidden": "true" }, "_ [] X")),
+      el("div", { class: "check-advisor-lines", id: "check-hints" }, view.hints.map((line) => el("div", { class: "check-line" }, line)))));
+}
+
+// What the title bar says about how hard this is: the class of computer for a hack, the difficulty word for the rest.
+const hardness = (view) => (view.classLabel ?? view.difficulty.replace("_", " ")).toUpperCase();
+
 function windowNode() {
   const view = check.view;
   const moved = view.odds !== view.baseOdds;
-  return el("div", { class: "check-window", id: "check-window", "data-theme": view.theme, role: "dialog", "aria-label": view.window, tabindex: "-1" },
+  return el("div", { class: `check-window${view.decided ? " decided" : ""}`, id: "check-window", "data-theme": view.theme, role: "dialog", "aria-label": view.window, tabindex: "-1" },
     el("pre", { class: "check-rain", "aria-hidden": "true" }, rainFor(view.id)),
     el("header", { class: "check-title" },
       el("span", { class: "check-name" }, view.window),
       el("span", { class: "check-skill" }, `${view.skillName}, ${view.tierName}`),
-      el("span", { class: "check-difficulty" }, view.training ? "PRACTICE" : view.difficulty.replace("_", " ").toUpperCase()),
+      el("span", { class: "check-difficulty", title: view.difficulty.replace("_", " ") }, view.training ? `PRACTICE: ${hardness(view)}` : hardness(view)),
       el("button", { class: "mobile-toggle", onclick: (event) => { event.stopPropagation(); app.openMenu(app.ui.tab); } }, "Menu")),
     el("div", { class: "check-situation" },
       el("div", { class: "tone-bright" }, `> ${view.reason}`),
       view.scene && el("div", { class: "check-scene" }, view.scene)),
-    el("div", { class: "check-desk", "data-count": String(view.panels.length) }, view.panels.map((panel) => panelNode(panel, view.log))),
+    el("div", { class: "check-body" },
+      el("div", { class: "check-desk", "data-count": String(view.panels.length) }, view.panels.map((panel) => panelNode(panel, view.log))),
+      advisorNode(view)),
     check.message && el("div", { class: "notice-inline fail" }, check.message),
     el("div", { class: "check-controls" }, commandsNode(view), inputNode(view)),
     el("footer", { class: "check-taskbar" },
@@ -181,7 +216,7 @@ function windowNode() {
       view.panels.map((panel) => el("span", { class: "check-tab" }, panel.title)),
       el("span", { class: "check-spacer" }),
       view.meters.map(meterNode),
-      el("span", { class: `check-odds tone-${toneForOdds(view.odds)}`, title: breakdownTitle(view) }, `ODDS ${moved ? `${view.baseOdds}% -> ` : ""}${view.odds}% ${oddsBar(view.odds)}`)));
+      !view.decided && el("span", { class: `check-odds tone-${toneForOdds(view.odds)}`, title: breakdownTitle(view) }, `ODDS ${moved ? `${view.baseOdds}% -> ` : ""}${view.odds}% ${oddsBar(view.odds)}`)));
 }
 
 // ---- How it came out -----------------------------------------------------
@@ -198,7 +233,7 @@ function resultNode() {
     el("pre", { class: "check-rain", "aria-hidden": "true" }, rainFor(outcome.id)),
     el("header", { class: "check-title" },
       el("span", { class: "check-name" }, outcome.window),
-      el("span", { class: "check-difficulty" }, outcome.training ? "PRACTICE" : outcome.difficulty.replace("_", " ").toUpperCase())),
+      el("span", { class: "check-difficulty" }, outcome.training ? `PRACTICE: ${hardness(outcome)}` : hardness(outcome))),
     el("div", { class: "check-situation" }, el("div", { class: "tone-bright" }, `> ${outcome.reason}`)),
     el("div", { class: "check-verdict" },
       settled
@@ -218,12 +253,13 @@ function resultNode() {
       ]));
 }
 
-// A little suspense before the result. A click skips it, and so does asking for less motion.
+// A little suspense before the result. A click skips it, and so does asking for less motion. A
+// decided game has no roll to wait for.
 function showResult(outcome) {
   check.outcome = outcome;
   check.view = null;
   const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (calm) {
+  if (calm || outcome.decided) {
     app.render();
     return;
   }
@@ -277,6 +313,12 @@ async function send(command) {
     app.ui.game = reply.game;
     check.sending = false;
     if (reply.over) {
+      // A hack that got in goes straight to the computer: the screen becomes the system's own.
+      if (reply.game.computer) {
+        closeCheck();
+        app.render();
+        return;
+      }
       showResult(reply.outcome);
       return;
     }

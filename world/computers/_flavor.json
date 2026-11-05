@@ -1,0 +1,51 @@
+{
+  "_help": "What computers say when nobody has written them a file of their own, and the advisor's hints inside one. A board, console or panel in a room, or a door with a hack on it, gets a generic computer made from this and from what the world knows about the place. {place} is the place's name, {room} the room's, {holder} who holds the place, {person} and {other} two people from the place, {user} the login name. Hints are by training level, from untrained to master, each level adding its lines to the ones below; {unread} and {unreadMail} count what's not been opened, {programs} lists the programs, {trace} is the trace in percent, {left} the actions left before it completes, {network} the other computers reachable from here.",
+  "users": ["custodian", "dockmaster", "sysop_4", "nightshift", "quartermaster", "ops_2", "maintenance", "admin"],
+  "motd": {
+    "default": ["All sessions are monitored. Have a safe and productive shift.", "This node hasn't been patched since the Fall. Nobody's left who knows how.", "Reminder: the manifests are confidential. Sharing them is an offense.", "Scheduled maintenance has been cancelled, due to the end of civilization."],
+    "yours": ["CFS Meridian. Nine hundred souls aboard a ship built for three hundred.", "Welcome back, Captain. The night watch left the kettle on.", "Every system on this board answers to the bridge, and the bridge answers to you."]
+  },
+  "kinds": {
+    "console": { "class": "moderate", "desc": "A terminal with a cracked bezel and a cursor that still blinks. Whoever used it last didn't log out.", "files": ["manifest", "roster", "note"], "logs": ["prices", "people", "news", "berths"], "mail": 2,
+      "programs": [
+        { "name": "Post a notice", "text": "You type a line onto the board that everyone here reads. It'll be there until someone takes it down." },
+        { "name": "Wipe the day's log", "text": "The day's entries go, one by one, and the counter at the bottom drops to zero. Somebody will notice the gap. -> * flag wiped_log_at_{place}: The day's log at {placeName} was wiped" }
+      ] },
+    "server": { "class": "hard", "desc": "A rack with its door open, humming, warm as a kitchen. Every record of this place goes through it.", "files": ["manifest", "roster", "note", "accounts"], "logs": ["prices", "people", "news", "berths"], "mail": 3,
+      "programs": [
+        { "name": "Read the accounts", "text": "Columns of what came in and what went out, and a column that doesn't add up, which somebody has initialled every week." },
+        { "name": "Move a little of the float", "text": "A rounding error in your favour, spread over forty entries. -> * credits 40: A rounding error on {placeName}'s books; * flag skimmed_{place}: You moved money off {placeName}'s books" }
+      ] },
+    "panel": { "class": "easy", "desc": "A door panel: a keypad, a light, and a speaker grille that crackles when you touch it.", "files": ["access"], "logs": ["people"], "mail": 0,
+      "programs": [
+        { "name": "Open the door", "text": "The lock thinks about it, then lets go. -> * door here" },
+        { "name": "Read the lock's log", "text": "Who's been through, and when. More names than you'd expect for a locked door." }
+      ] },
+    "power": { "class": "hard", "desc": "A power board: breakers in rows, half of them hand-labelled, one of them warm.", "files": ["load"], "logs": ["people"], "mail": 1,
+      "programs": [
+        { "name": "Cut the lights", "text": "The breaker goes over and the room drops to the emergency strips. -> * flag lights_cut_at_{place}: The lights were cut at {placeName}" },
+        { "name": "Bring the lights back", "text": "The breaker goes back, and the hum returns. -> * unflag lights_cut_at_{place} ? flag lights_cut_at_{place}" }
+      ] }
+  },
+  "files": {
+    "manifest": { "name": "manifest.txt", "text": "Stock on hand at {placeName}, by the day's count: {goods}." },
+    "roster": { "name": "roster.txt", "text": "On the books at {placeName}: {people}. {holder} signs for all of them." },
+    "note": { "name": "notes.txt", "text": "{note}" },
+    "accounts": { "name": "accounts.ldg", "text": "Receipts, fees and the float. A column of initials down the right-hand side, the same initials every week." },
+    "access": { "name": "access.log", "text": "Opened and closed, opened and closed. The last through: {person}, who didn't close it properly." },
+    "load": { "name": "load.txt", "text": "Power draw by section, all of it over the line someone drew in red ten years ago." }
+  },
+  "notes": ["\"Told the night shift the password. Do NOT write it down.\" Someone wrote it down.", "Reminder: the coffee machine is not a network device.", "If {person} asks, the shipment was late. If {other} asks, it was early.", "Count the crates twice. The second count is the one that goes in the book."],
+  "mail": [
+    { "from": "{person}", "to": "{other}", "subject": "The count", "text": "The count's short again. I didn't write it down this time. Come and see me before you tell anyone." },
+    { "from": "{other}", "to": "{person}", "subject": "Re: The count", "text": "Don't put it in a message. Don't put anything in a message. We'll talk." },
+    { "from": "{holder}", "to": "all hands", "subject": "Manifests", "text": "The manifests are confidential. Sharing them with the fleet, with the Ministry, or with anyone who asks nicely is an offense. You know who you are." }
+  ],
+  "hints": {
+    "0": ["Reading is safe on most computers. Running a program is what the trace notices.", "Each program says what it does before you run it."],
+    "1": ["{unread} files and {unreadMail} letters you haven't opened yet."],
+    "2": ["Programs here: {programs}."],
+    "3": ["The trace is at {trace}%: about {left} more actions before it completes."],
+    "4": ["Network: {network}."]
+  }
+}

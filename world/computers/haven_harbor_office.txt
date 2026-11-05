@@ -1,0 +1,23 @@
+# The harbor master's machine
+class: hard
+owner: haven
+place: haven
+login: harbormaster
+
+What the player sees:
+A machine that was expensive once, in an office that smells of the water the pipe is leaking. The harbor master's whole trade is in it: who owes, who paid, and who's allowed to forget.
+
+Files:
+debts.ldg: Every ship that's ever owed Haven for a berth, and what it still owes. The Sundial's line has been crossed out and written back three times.
+water.txt: The water contract, and the names of the three people who know what the pipe is actually for.
+
+Mail:
+From the harbor master to the council: The fleet pays or the fleet moves. I've said it to Halm and I'll say it to the captain. Forty-one ships of goodwill don't fill a tank.
+
+Logs:
+- berths
+- news
+
+Programs:
+Forgive the fleet's berth debts: The lines go grey one by one, forty-one of them, and the total at the bottom reads zero for the first time in a year. -> * faction fleet 2: The fleet's berth debts at Haven were forgiven; * flag haven_debts_forgiven: The fleet's berth debts at Haven were forgiven ? not flag haven_debts_forgiven
+Read what the pipe is for: Not water. The contract says water, and the deliveries say something heavier, and the three names on it are not people who deal in water. -> * flag haven_pipe_secret: The harbor master's water pipe at Haven carries something that isn't water

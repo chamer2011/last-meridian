@@ -1,0 +1,176 @@
+HOW TO WRITE A PLACE'S SYSTEMS
+==============================
+
+Every place has its own systems: its power, its air, its lights, its doors, its cameras, its alarm,
+its comms, and on a ship its engines and navigation, on a station its docking clamps. None of them
+reaches another place. Every part of them is a real thing in a room: a junction box on the wall, a
+vent in every room, a camera with a red light, a speaker, a relay. The player can walk up to any of
+them and work it by hand, or run them from a computer that runs them.
+
+A place's systems are one plain text file in this folder, world/systems/<place>.txt, named after the
+place (the file name of its map in world/maps). A place without a file gets systems made for it from
+its rooms and its things, the way _defaults.json says. The Story board shows any place's systems
+under Systems, its own or the ones it gets by default, and saving one there writes its file here.
+
+    npm run check-story
+
+checks these files too.
+
+
+THE FILE
+--------
+
+    # Haven Station
+    draft: the AI's, not yet edited by the owner
+    guards: Docker Renko, Docker Bo
+    engineers: Air Tech Neve
+    alarm rings: 30
+    air goes bad: 20
+    repairs take: 3
+
+    Power:
+    - junction box in The Manifest Docks for The Manifest Docks, The Hook
+    - junction box in The Neutral Ground for The Neutral Ground, The Consulate Row: The inner breakers.
+
+    Air:
+    - air plant in Tharel's Warm Room
+    - vent in every room
+
+    Lights:
+    - light switch in every room
+
+    Doors:
+    - door to The Consulate Row
+
+    Cameras:
+    - camera in The Manifest Docks, The Neutral Ground
+
+    Alarm:
+    - speaker in every room
+    - locks the door to The Consulate Row
+
+    Computers:
+    - haven_harbor_office: everything
+    - a watch console in The Neutral Ground: cameras, alarm, doors, class moderate
+
+The first line is the place's name. Then, all of them can be left out:
+
+    draft           Anything: the game doesn't read it. Say who wrote the file.
+    guards          Who comes running when the alarm rings: people's ids (the file names in
+                    world/characters), or the names of the people in the place's crowds in
+                    world/life. none for nobody. Left out, it's whoever's day has guard, patrol,
+                    security or sentry in it.
+    engineers       Who fixes what's broken, in time. The same, and left out it's whoever's day has
+                    engine, reactor, repair, pipes and the like in it. A place with no engineers
+                    stays broken until the player fixes it.
+    alarm rings     How many minutes the alarm rings before it stops by itself.
+    air goes bad    How many minutes a room's air takes to go bad once it stops moving.
+    repairs take    How many hours the engineers take to fix something.
+
+The numbers every place starts from are in _defaults.json, with how long air takes to come back and
+how long before the place's people switch back what the player switched off.
+
+
+THE SYSTEMS
+-----------
+
+Each system is a heading with a colon, and a line for each of its parts, starting with - and a space:
+
+    - the part in the room
+
+The part is its name: junction box, vent, camera, or anything else. The room is the room's name, as
+the map has it, or every room. Several rooms, separated by commas, mean one of the part in each.
+After a colon, a line of your own says how the part looks:
+
+    - camera in The Docks: A dome over the berth board, with a red light that never blinks.
+
+The game knows what these do:
+
+    Power        A junction box powers the room it's in, or the rooms after for. A room with no power
+                 goes dark, and everything in it that needs power stops: its cameras, its vents, its
+                 speakers, its screens, its door panels. A room no box powers always has power.
+    Air          An air plant, and a vent in each room. When the plant stops, or a room's vent is
+                 closed or sealed, or the room loses its power, the air there stops moving and goes
+                 bad over minutes. People leave for a room with good air, though people asleep only
+                 notice once it's bad. The player feels it: stress while it's thin, and harm once
+                 it's bad, never down to nothing, and they can't rest in it. A place with no Air
+                 has air anyway, like a planet with an atmosphere.
+    Lights       A light switch in a room. A room with its lights off, or no power, is dark: drawn
+                 dark, easier to sneak through, and harder to keep watch in.
+    Doors        door to and a room: the ways into that room can be locked, from a computer, by
+                 the alarm, or by the story. A locked door stops anyone walking through, both ways.
+                 It can be forced, or its panel hacked. A door only the story opens (closed in the
+                 map file) stays the story's, but a computer that runs it can open it.
+    Cameras      A camera in a room watches it. Tampering with anything where a camera can see
+                 raises the alarm. A camera on the player makes sneaking harder.
+    Alarm        A speaker in a room, and locks the door to, which the alarm locks while it rings.
+                 It rings where the player was seen, brings the guards to that room if comms are
+                 up, costs standing with whoever holds the place, and puts the fact on the record
+                 that the player was seen. It stops after a while, or from a computer.
+    Comms        A relay. With every relay down, the guards don't hear the alarm.
+    Engines      On the Meridian: with her engines down, the fleet can't jump.
+    Navigation   On the Meridian: with it down, every jump is plotted by hand, a fuel more and half
+                 as long again.
+    Docking      Docking clamps: locked, the fleet can't leave the place.
+
+Any other heading is a system of the place's own, like Water with a pump in it. It does nothing by
+itself, but its parts are there to work, the story can ask about it and change it, and the AI hears
+when it's down.
+
+Each kind of part has a look, and its own work by hand, in _defaults.json: a junction box's lever and
+its cables, a vent that can be sealed, a camera's lens that can be covered, a speaker's wires. A part
+whose name isn't there behaves like the system's own part (a "scrubber" under Air like a vent, a
+"generator" under Power like a junction box), or like a machine under a system of the place's own.
+
+Parts go on the walls of their room, where the room can see them, and stand on the floor where a
+room has no walls, always where they block nobody's way.
+
+
+COMPUTERS
+---------
+
+Under Computers, each line is a computer and what it runs:
+
+    - haven_harbor_office: everything
+    - haven_berth_board: docking, cameras in The Manifest Docks
+    - the plot table: navigation, doors
+    - a watch console in The Neutral Ground: cameras, alarm, class moderate
+
+The computer is one of the files in world/computers by its id, or a thing in one of the place's
+rooms by its name (with in and the room if two rooms have one), or a new console the game puts in
+the room you name, at the class you give it (easy, moderate, hard, very hard or nearly impossible).
+After the colon, the systems by their headings, or everything, and in and rooms to run them only
+there. A computer's screen gets a Systems list, with each part's state and buttons to switch it, and
+on a hacked computer each switch costs a point of trace, like a program. A computer that cuts its
+own room's power goes dark with it.
+
+Without a file, every console, panel or terminal at a place runs what's in its own room, and a
+server or a big computer runs everything.
+
+
+IN THE WRITTEN STORY
+--------------------
+
+A condition can ask about them (world/scenes/_how-to-write-a-scene.txt has the rest):
+
+    ? power off here                    ? lights off in The Docks
+    ? air bad in The Hook               ? air thin, ? air good, ? air off, ? air on
+    ? cameras off in The Docks          ? alarm ringing at haven, ? alarm quiet, ? alarm off
+    ? door locked The Hook              ? comms jammed
+    ? engines off at meridian           ? docking locked at haven
+    ? system water off at frontier
+
+and a part can change them:
+
+    * power off in The Docks            * lights on in The Hook
+    * air off                           (the air plant; * air off in a room closes its vent)
+    * cameras off in The Docks          * alarm ringing in The Docks, * alarm quiet, * alarm off
+    * door locked The Hook              * door unlocked The Hook
+    * comms jammed                      * engines off, * navigation off, * docking locked
+    * system water off at frontier
+    * fix everything                    * fix power in The Docks
+    * break engines at meridian
+
+What the story changes stays changed until the story changes it back. What the player switches off
+at someone else's place is switched back by its people after a while, and what they break is fixed
+by its engineers.

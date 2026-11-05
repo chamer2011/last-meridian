@@ -1,0 +1,46 @@
+# CFS Meridian
+draft: the AI's, not yet edited by the owner
+guards: tarrow
+engineers: marrow, Tech Sami, Tech Oona
+alarm rings: 20
+air goes bad: 25
+repairs take: 2
+
+Power:
+- junction box in Engineering for Engineering, The Aft Holds, The Crawlways: The main bus, a cabinet of breakers older than anyone aboard, with Marrow's handwriting on half the labels.
+- junction box in The Names Bulkhead for The Names Bulkhead, The Long Mess, The Hot Bunks, Medbay: The civilian deck's breakers, behind a panel someone has chalked a name on.
+- junction box in The Bridge for The Bridge: The bridge's own feed, on a breaker with a red tag that says DO NOT.
+
+Air:
+- air plant in Engineering: The air plant, breathing for nine hundred people on a ship built for three hundred, at a hundred and forty percent of what it was built for.
+- vent in every room
+
+Lights:
+- light switch in every room
+
+Doors:
+- door to The Bridge
+- door to Engineering
+- door to The Aft Holds
+- door to Medbay
+- door to The Hot Bunks
+
+Cameras:
+- camera in The Bridge, Engineering, The Aft Holds
+
+Alarm:
+- speaker in every room
+- locks the door to The Bridge, Engineering
+
+Comms:
+- relay in The Bridge: The comms board, where Sorel sits in the small hours with every channel open.
+
+Engines:
+- engines in Engineering: The drive, behind the reactor, with the injector bank behind a grating that's never been locked.
+
+Navigation:
+- nav core in The Bridge: The navigation core under the plot table, plotting every jump on boards older than the war.
+
+Computers:
+- meridian_plot_table: navigation, comms, cameras, doors, alarm
+- meridian_reactor_gauges: power, air, lights, engines

@@ -1,0 +1,105 @@
+HOW TO WRITE A COMPUTER
+=======================
+
+A computer is one plain text file in this folder, world/computers/<id>.txt. The player gets into it
+by hacking it (the Intrusion Console), by sitting at it when it's theirs, or with a password the
+story has given them. Once in, they read its files, mail and logs, run its programs, and can reach
+other computers on its network. Nothing on a computer uses the AI.
+
+    npm run check-story
+
+checks these files too, and the Story board shows them under Computers.
+
+Computers nobody has written still exist: a console, terminal, repeater, readout, relay, transmitter,
+server, mainframe, archive, keypad, panel, power board, restart board, breakers or power meter in a
+room (going by the thing's name), and any door with a hack on it, gets a generic one made from
+_flavor.json and from what the world knows about the place, unless the map file already says what
+using the thing does (its used line), which it keeps. Write a file to replace either.
+
+
+THE FILE
+--------
+
+    # The berth board
+    class: moderate
+    owner: haven
+    place: haven
+    room: The Manifest Docks
+    thing: The berth board
+    login: dockmaster
+
+    What the player sees:
+    Forty berths and forty names, on a screen that someone has wiped and rewritten so often it's gone grey.
+
+    Files:
+    real_manifest.txt: The column headed REAL MANIFEST, kept by the hour. The Sundial's berth is
+    paid to the end of the month. Nobody else's is.
+    fees.txt: Berth fees by the hour, and who's behind on them.
+
+    Mail:
+    From Mott to the harbor master: The Sundial's steward asked about the water again. I told him
+    the pipe's being fixed. The pipe is not being fixed.
+
+    Logs:
+    - berths
+    - prices
+    - The harbor master logged in at 04:00, which he never does.
+
+    Programs:
+    Clear the Sundial's fees: The column of fees goes to zero, and a line of thanks appears
+    under it in a hand you don't know. -> * faction fleet 1: The Sundial's fees were cleared;
+    * flag sundial_fees_cleared: The Sundial's berth fees at Haven were cleared ? not flag sundial_fees_cleared
+    Rewrite a berth entry: One name becomes another. -> * flag berth_rewritten_at_haven
+
+    Network:
+    haven_harbor_office: The harbor master's own machine, upstairs.
+
+The first line is the name, written # The Name. Then, before the first part, one line each of:
+
+    class       easy, moderate, hard, very_hard or nearly_impossible: how hard it is to hack, and
+                what kind of computer the window says it is (a door panel, a crew terminal, a ship's
+                main system, a Ministry or Navy server, the Beacon or the Choir).
+    owner       Who it belongs to: a faction's id or a person's id, or none.
+    yours       yes when it's the player's own, such as aboard the Meridian: no hack, no trace.
+    place       The place it's at, by its id (the file name in world/places).
+    room        The room it's in, by the room's name.
+    thing       The thing in that room it is, by the thing's name. Using the thing opens it.
+    door        Instead of a thing, the door it controls: the id of the room the door leads to.
+                Asking at that door and passing its hack opens this computer.
+    login       The user name on the prompt.
+    password    A password the story can hand out. * password <this computer's id> <the word> in a
+                scene makes the player know it, and then they get in without a hack.
+    flavor      Which set of lines from _flavor.json it uses: default, or yours.
+
+Every one of them can be left out.
+
+The parts, each under its heading with a colon:
+
+    What the player sees    What they see when they sit down at it.
+    Files                   Each is "a_name: its text", and the text can go on for several lines.
+    Mail                    Each is "From someone to someone: the letter", over several lines if
+                            needed. Names link to lore, as they do in the story.
+    Logs                    Each line starting with - is a log. Four are made by the game from what
+                            it knows: berths (the fleet's ships, when the fleet is at this place),
+                            prices (today's supplies and prices here), people (who's here now) and
+                            news (what's been heard of this place). Any other line is a log of your
+                            own words.
+    Programs                Each is "Its name: what the screen says when it runs", then -> and the
+                            effects, separated by ;, then ? and a condition if it's only offered
+                            when that holds. The effects and conditions are the ones a scene can
+                            use (world/scenes/_how-to-write-a-scene.txt), plus:
+                                * door here            opens the door this computer controls
+                                * door <room id>       opens the door to that room, in this place
+                                * password <id> <word> gives the player another computer's password
+                            A program runs once. Write it twice if it should run twice.
+    Network                 Each is "another_computer_id: what it's called from here". Connecting
+                            to one is a hack of its own class, unless it's yours or you know its
+                            password.
+
+A computer can also run a place's systems: its power, lights, cameras, doors and the rest. That's
+written in the place's file in world/systems, under Computers, and the computer's screen gets a
+Systems list with a switch for each part.
+
+What reaches the player: the window never shows a password or a program's effects, only what each
+program says it does. A completed trace inside a ship's main system or worse leaves the same mark
+on the record as a failed hack: traced_on_<class>.

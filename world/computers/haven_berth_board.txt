@@ -1,0 +1,30 @@
+# The berth board
+class: moderate
+owner: haven
+place: haven
+room: The Manifest Docks
+thing: The berth board
+login: dockmaster
+
+What the player sees:
+Forty berths and forty names, on a screen that someone has wiped and rewritten so often it's gone grey. A column headed REAL MANIFEST has been chalked in and rubbed out more times than the board can remember.
+
+Files:
+real_manifest.txt: The column headed REAL MANIFEST, kept by the hour. The Sundial's berth is paid to the end of the month. Nobody else's is.
+fees.txt: Berth fees by the hour, and who's behind on them. Most of the fleet is behind on them.
+
+Mail:
+From Mott to the harbor master: The Sundial's steward asked about the water again. I told him the pipe's being fixed. The pipe is not being fixed.
+From the harbor master to Mott: Fix the pipe, or stop telling people it's being fixed. One or the other.
+
+Logs:
+- berths
+- prices
+- The harbor master logged in at 04:00, which he never does.
+
+Programs:
+Clear the Sundial's fees: The column of fees goes to zero, and a line of thanks appears under it in a hand you don't know. -> * faction fleet 1: The Sundial's fees at Haven were cleared; * flag sundial_fees_cleared: The Sundial's berth fees at Haven were cleared ? not flag sundial_fees_cleared
+Rewrite a berth entry: One name becomes another, and a ship that was here was never here. -> * flag berth_rewritten_at_haven: A berth entry at Haven was rewritten
+
+Network:
+haven_harbor_office: The harbor master's own machine, upstairs.

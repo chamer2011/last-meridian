@@ -1,0 +1,40 @@
+# Haven Station
+draft: the AI's, not yet edited by the owner
+guards: Docker Renko, Docker Bo
+engineers: Air Tech Neve, Signals Tech Harl
+alarm rings: 30
+air goes bad: 20
+repairs take: 3
+
+Power:
+- junction box in The Manifest Docks for The Manifest Docks, The Hook: A dockside breaker cabinet, salt-streaked, with a padlock that doesn't close.
+- junction box in The Neutral Ground for The Neutral Ground, The Consulate Row, Tharel's Warm Room: The station's inner breakers, behind the bar, where Sable can keep an eye on them.
+
+Air:
+- air plant in Tharel's Warm Room: The station's old scrubber, which is why the Warm Room is warm.
+- vent in every room
+
+Lights:
+- light switch in every room
+
+Doors:
+- door to The Consulate Row
+- door to The Hook
+
+Cameras:
+- camera in The Manifest Docks, The Neutral Ground, The Consulate Row
+
+Alarm:
+- speaker in The Manifest Docks, The Neutral Ground, The Consulate Row
+- locks the door to The Consulate Row
+
+Comms:
+- relay in The Consulate Row: The consulates' shared relay, which every one of them pretends is secure.
+
+Docking:
+- docking clamps in The Manifest Docks: The berth clamps' control, behind a cage, with Mott's key on a chain beside it.
+
+Computers:
+- haven_berth_board: docking, cameras in The Manifest Docks
+- haven_harbor_office: everything
+- a watch console in The Neutral Ground: cameras, alarm, doors, class moderate

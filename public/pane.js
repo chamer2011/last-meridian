@@ -22,7 +22,7 @@ function leaderNode() {
 // id and key say which pane this is and whose head it belongs over. tag is what goes on the tag,
 // body what goes on the pane, and extras anything that hangs off it, like a talk's choices. onTap
 // is what a plain click does, and opening makes it slide out from the head when it first appears.
-export function paneNode({ id, key, color, tag, body, extras = [], more = false, opening = false, onTap = null, className = "" }) {
+export function paneNode({ id, key, color, tag, body, extras = [], more = false, opening = false, onTap = null, className = "", place = null }) {
   const node = el("div", {
     class: `pop-balloon${more ? " more" : ""}${opening ? " opening" : ""}${className ? ` ${className}` : ""}`,
     id,
@@ -37,6 +37,8 @@ export function paneNode({ id, key, color, tag, body, extras = [], more = false,
   el("div", { class: "pop-pane pop-speaker" }, cornerNodes(), el("div", { class: "pop-tag" }, tag), body),
   extras);
   node.onTap = onTap;
+  // A pane that isn't one of the story's places itself, while it's pulled and while it slides back.
+  node.place = place;
   // A drag ends with a click the browser sends anyway, and that click mustn't open anything.
   node.addEventListener("click", (event) => {
     if (!node.dataset.swallow) return;
@@ -119,7 +121,7 @@ function moved(event) {
     on.node.classList.add("dragging");
   }
   offsets.set(on.node.id, { x: dx, y: dy });
-  drag.place();
+  (on.node.place ?? drag.place)();
 }
 
 function released(event) {
@@ -141,11 +143,12 @@ function released(event) {
   offsets.delete(node.id);
   // Back to its place, and the line to the head follows it there.
   node.classList.add("springing");
-  drag.place();
+  const place = node.place ?? drag.place;
+  place();
   const start = performance.now();
   const follow = (now) => {
     if (!node.isConnected) return;
-    drag.place();
+    place();
     if (now - start < 360) requestAnimationFrame(follow);
     else node.classList.remove("springing");
   };

@@ -1,0 +1,20 @@
+# The sublevel door panel
+class: hard
+owner: none
+place: foundry
+door: sublevels
+login: hollis
+
+What the player sees:
+A keypad and a very new lock, on a very old door, with a cable as thick as your arm running under it, warm to the touch. Somebody down there is drawing a great deal of power.
+
+Files:
+access.log: Opened and closed. One name, over and over, for a year: hollis-nine. Nobody else has been through.
+draw.txt: Power drawn through the cable, by the hour. More than this whole level uses. Whatever's below is running something that never sleeps.
+
+Logs:
+- people
+
+Programs:
+Open the sublevel door: The lock thinks about it, and the door swings a hand's width inward on its warm cable. -> * door here
+Read the lock's log: Hollis-Nine comes up at odd hours, and goes down again, and the door is never open more than a minute at a time.
