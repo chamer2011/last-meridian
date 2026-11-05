@@ -6,7 +6,9 @@ As it stands right now, AI is overwhelmingly present in every part of the projec
 
 The style I have in mind for the finality of the project is the games AGE OF DECADENCE, Colony Ship: A Post-Earth Role Playing Game, both excellent games from a passionate developer!
 
-MOREOVER : The description is written by AI. THIS WILL CHANGE SOON (and I will use my great skill of writing to do it!) as the project is merely 6 days old (as of 02/11/26 or 11/02/26) and I wanted to get the game out as soon as possible to get feedback. The code is MY PROPERTY now, like the story: it isn't open source anymore. I might have a patreon soon if you want to support me since I fear the cost of everything will slowly creep up
+MOREOVER : The description is written by AI. THIS WILL CHANGE SOON (and I will use my great skill of writing to do it!) as the project is merely 6 days old (as of 02/11/26 or 11/02/26) and I wanted to get the game out as soon as possible to get feedback. The code is not OPENSOURCE anymore as a friend told me this was a bad idea but what I can promise will not change is that the version will stay free and if the game reaches a stage where I feel I want to put it on Steam, I will adopt the same policies as Song Of Styx, the game could be at a price but the free version will always be 1-2 updates behind (depending on the size of the updates). I'm sorry for the change about the code.
+
+I might create a patreon soon if you want to support me since I fear the cost of everything will slowly creep up. 
 
 PS : English being my second language, please excuse the possible grammatical errors.
 
