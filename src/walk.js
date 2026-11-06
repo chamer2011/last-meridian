@@ -18,6 +18,7 @@ import { isCaptain, toOutsider } from "./role.js";
 import { addItem, audienceBonus, clockRuns } from "./rules.js";
 import { conditionHolds } from "./scene-text.js";
 import { recordFact } from "./record.js";
+import { attackPerson, isHurt, isWary, pickPocket, pocketDetail } from "./deeds.js";
 import { rumorsFrom } from "./story-library.js";
 import { colorForName, parseNarration } from "../public/story.js";
 import { COMBAT_ART, LOOKS, ROOM_KINDS, ROOM_TALK, WORLD_MAPS } from "./world.js";
@@ -193,7 +194,7 @@ export function askAtDoor(game, key) {
   }
   if (rule.check) {
     const [skill, difficulty, audience] = rule.check.split(":");
-    startCheck(game, { skill, difficulty, audience: audience ?? null, reason: rule.reason ?? `Get through: ${exit.label}`, scene: exit.closed.look, source: "door" });
+    startCheck(game, { skill, difficulty, audience: audience ?? null, reason: rule.reason ?? `Get through: ${exit.label}`, scene: exit.closed.look, source: "door", target: `exit:${exit.key}` });
     game.doorAsked = { place: game.location, to: exit.to, pass: rule.pass ?? "The way is open.", fail: rule.fail ?? "The way stays closed.", flag: rule.flag ?? null };
     return { check: true };
   }
@@ -396,7 +397,8 @@ function peopleOnLevel(game, walk, level) {
   const moved = new Set([...walk.with, ...(game.walk?.room?.people ?? [])].map(keyOf));
   const posted = level.homes.filter((home) => !moved.has(home.id) && atPost(game, home.id) && !hasADay(walk.place, home.id));
   const living = livesHere(walk.place) ? peopleAboard(game, walk.place, level.id).filter((one) => !moved.has(keyOf(one))) : [];
-  return [...posted, ...living, ...(walk.withLevel === level.id ? walk.with : [])];
+  // Someone the player has beaten in a fight is off getting patched up for a while.
+  return [...posted, ...living, ...(walk.withLevel === level.id ? walk.with : [])].filter((one) => !isHurt(game, walk.place, keyOf(one)));
 }
 
 const keyOf = (entry) => entry.id ?? entry.name;
@@ -548,6 +550,26 @@ export function walkCommand(game, body) {
       const path = route(level, people, from, (here) => here.x === target.x && here.y === target.y);
       return path ? stand(path) : stand([], null, "You can't find a way there.");
     }
+    // Walking freely, with the keys: the page says which square the player has walked onto, and the server keeps them
+    // there, if it can be walked to from where they were. A way out walked into is taken, or stops them at its door.
+    // Only the square goes back, unless the room has changed, because this is every square of every walk.
+    case "move": {
+      const x = Number(body.x);
+      const y = Number(body.y);
+      if (!Number.isInteger(x) || !Number.isInteger(y)) throw new Error("Choose somewhere to walk to.");
+      const at = { x: spot.x, y: spot.y };
+      const refused = { moved: false, captain: at };
+      const mark = markAt(game, walk, level, x, y);
+      if (mark?.kind === "exit") {
+        const path = route(level, [], at, (here) => nextTo(here, mark));
+        return path ? goToMark(mark, path) : refused;
+      }
+      if (!canStand(level, x, y)) return refused;
+      if ((x !== at.x || y !== at.y) && !route(level, [], at, (here) => here.x === x && here.y === y)) return refused;
+      spot.x = x;
+      spot.y = y;
+      return { moved: true, captain: { x, y } };
+    }
     case "step": {
       const dx = Math.sign(Number(body.dx) || 0);
       const dy = dx ? 0 : Math.sign(Number(body.dy) || 0);
@@ -586,6 +608,17 @@ export function walkCommand(game, body) {
       const exit = level.exits.find((one) => one.key === key);
       if (!exit) throw new Error("That isn't here.");
       return workOnDoor(game, level.id, exit, String(body.how ?? ""));
+    }
+    // The right-click menu's two deeds against someone in the room: a pocket picked, in the check window, or a fight.
+    case "pickpocket":
+    case "attack": {
+      const key = String(body.key ?? "").replace(/^person:/, "");
+      const entry = people.find((one) => keyOf(one) === key);
+      if (!entry) throw new Error("They aren't there any more.");
+      const shown = personView(game, entry);
+      const who = { key, id: entry.id ?? null, name: shown.name, short: shown.short, asleep: Boolean(entry.asleep), doing: entry.doing ?? null };
+      const where = { place: game.location, room: walk.room ? null : level.id };
+      return body.action === "pickpocket" ? pickPocket(game, who, where) : attackPerson(game, who, where);
     }
     default:
       throw new Error("Unknown order.");
@@ -811,8 +844,9 @@ export function walkFromOnePlan(game) {
 function personView(game, entry) {
   const person = entry.id ? findCharacter(game.campaign, entry.id) : null;
   const name = person ? fullName(person) : entry.name;
+  const key = keyOf(entry);
   return {
-    key: keyOf(entry),
+    key,
     name,
     short: shortName(game, entry),
     color: person?.color ?? colorForName(name),
@@ -823,6 +857,10 @@ function personView(game, entry) {
     ...(entry.walking ? { walking: true } : {}),
     ...(entry.asleep ? { asleep: true } : {}),
     ...(entry.crowd ? { crowd: true } : {}),
+    // What the right-click menu needs: how they look, how hard their pocket is, and whether they're wary of it now.
+    ...(person?.appearance ? { look: person.appearance } : {}),
+    pocket: pocketDetail(game, { id: entry.id ?? null, name, asleep: Boolean(entry.asleep) }),
+    ...(isWary(game, game.location, key) ? { wary: true } : {}),
   };
 }
 
@@ -884,6 +922,8 @@ export function lookOf(place, levelName) {
   return { ...LOOKS.default, ...general, ...levels[levelName] };
 }
 
+const floorOf = (level) => Array.from({ length: level.height }, (_, y) => Array.from({ length: level.width }, (_, x) => (canStand(level, x, y) ? "." : " ")).join(""));
+
 export function walkView(game) {
   const walk = walkAt(game);
   if (!walk) return null;
@@ -899,6 +939,9 @@ export function walkView(game) {
     colors: level.colors,
     look: lookOf(game.location, level.name),
     captain: { x: spot.x, y: spot.y },
+    // Where the player can walk, a row of the room to a line: "." for floor, a space for anything else. Ways out are
+    // under exits, and people under people, since they move.
+    floor: floorOf(level),
     here: { id: walk.room ? walk.room.name : level.id, name: level.name, desc: level.desc },
     people: peopleOnLevel(game, walk, level).map((entry) => personView(game, entry)),
     things: [...level.things.map((thing) => thingView(game, thing)), ...(walk.room ? [] : partThings(game, game.location, level.id))],
@@ -917,17 +960,41 @@ function peopleNow(game) {
 }
 
 // The clock running by itself, while the player explores somewhere people live their days. It waits
-// for anything with its own window, because time stands still for those, and everywhere else it stays still.
-// Checks that come from the room itself, on its parts, things, doors and computers, let the clock run on. The story's own
-// checks, talks, fights, computers and raids hold it.
-export const ROOM_CHECKS = ["part", "thing", "door", "computer"];
+// for talks, fights and raids, because time stands still for those, and everywhere else it stays still.
+// Every skill check lets it run on, the story's own as well as those on the room's parts, things, doors and people, and so
+// does a computer in use.
 export function walkTick(game, body) {
-  if (game.combat || game.talk || game.computer || game.fleet?.raid || (game.check && !ROOM_CHECKS.includes(game.check.source))) return { held: true };
+  if (game.combat || game.talk || game.fleet?.raid) return { held: true };
   if (!walkAt(game) || !livesHere(game.location)) return { still: true };
   if (!CLOCK_RATES.includes(body.rate)) throw new Error("That isn't one of the clock's speeds.");
   const ms = Math.max(0, Math.min(Number(body.ms) || 0, LONGEST_TICK));
   const notes = clockRuns(game, (ms / 60000) * body.rate);
   return { notes, ...peopleNow(game) };
+}
+
+// What a check from the story is about, when it can be told from the room: the person it's aimed at, or the first person
+// in the room it names, or a thing whose whole name is in it. A check from the room says for itself, and practice is about
+// nothing here.
+const escapedForRegExp = (text) => text.replace(/[.*+?^${}()|[\]\\]/g, (ch) => `\\${ch}`);
+const sayingName = (name, words) => Boolean(name) && new RegExp(`(^|[^\\p{L}])${escapedForRegExp(name)}($|[^\\p{L}])`, "u").test(words);
+export function checkTarget(game) {
+  const check = game.check;
+  if (!check || check.target || check.source === "practice") return check?.target ?? null;
+  const view = walkView(game);
+  if (!view) return null;
+  if (check.audience) {
+    const aimed = view.people.find((one) => one.key === check.audience || sayingName(check.audience, one.name));
+    if (aimed) return `person:${aimed.key}`;
+  }
+  const words = `${check.reason ?? ""}\n${check.scene ?? ""}`;
+  const named = view.people.find((one) => sayingName(one.short, words) || sayingName(one.name, words));
+  if (named) return `person:${named.key}`;
+  const lower = words.toLowerCase();
+  const thing = view.things.find((one) => {
+    const name = one.name.replace(/^the /i, "").toLowerCase();
+    return name.length > 3 && lower.includes(name);
+  });
+  return thing ? `thing:${thing.id}` : null;
 }
 
 // ---- Talking ------------------------------------------------------------

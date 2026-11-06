@@ -7,10 +7,10 @@
 
 import { findCharacter, findEnemy } from "./campaign.js";
 import { ATTITUDE_VALUES, CONDITIONS, FACTION_BELIEFS, NOTABLES, SKILLS } from "./character-data.js";
-import { ABILITIES, ENEMIES, FACTIONS, ITEMS, STATS } from "./data.js";
+import { ABILITIES, ENEMIES, ITEMS, STATS } from "./data.js";
 import { THREAT_LABELS } from "./npc.js";
 import {
-  addCondition, addFatigue, attrMod, beliefAffinity, changeStress, checkParts, clamp, defense, fxSum, grantXp, maxEnergy, maxHp, oddsFor, practice, roll, skillRank,
+  addCondition, addFatigue, attrMod, beliefAffinity, changeStanding, changeStress, checkParts, clamp, defense, fxSum, grantXp, maxEnergy, maxHp, oddsFor, practice, roll, skillRank,
   unlockedAbilities, useItem,
 } from "./rules.js";
 import { COMBAT_ART, COMBAT_TEXT, PARLEY } from "./world.js";
@@ -99,7 +99,7 @@ export function whyTheyFight(source, { why = null, reason = null, faction = null
   };
 }
 
-function newFighter(c, side, { source, called }) {
+function newFighter(c, side, { source, called, asName = false }) {
   // A fight saved before difficulties existed carries on with the numbers it started with.
   const numbers = side === "enemy" ? enemyNumbers(source, c.difficulty ?? "easy") : source;
   // Someone the story has renamed keeps their stats, and uses the general fight text instead of their own.
@@ -112,7 +112,8 @@ function newFighter(c, side, { source, called }) {
     id: source.id,
     base,
     name: sameName ? `${base} #${sameName + 1}` : base,
-    prose: named ? source.shortName : `the ${sameName ? `${ORDINALS[sameName]} ` : ""}${base}`,
+    // A name of someone's own, like Docker Pav, goes without "the".
+    prose: named ? source.shortName : asName && renamed ? renamed : `the ${sameName ? `${ORDINALS[sameName]} ` : ""}${base}`,
     named,
     hp: numbers.hp,
     maxHp: numbers.hp,
@@ -137,7 +138,8 @@ function newFighter(c, side, { source, called }) {
 }
 
 // Sets up a fight. Everyone is checked before anything changes, so a bad request leaves no fight behind.
-export function startCombat(game, enemyId, { training = false, called = null, followers = [], allies = [], arrivals = [], leadIn = null, why = null, reason = null, faction = null } = {}) {
+// asName says the main enemy's "as" is a person's own name, like "dock_thug as Docker Pav", not a kind of enemy.
+export function startCombat(game, enemyId, { training = false, called = null, followers = [], allies = [], arrivals = [], leadIn = null, why = null, reason = null, faction = null, asName = false } = {}) {
   if (game.combat) throw new Error("A fight is already underway.");
   const main = findFighter(game, enemyId);
   const foes = followers.map((who) => findFighter(game, who));
@@ -167,7 +169,7 @@ export function startCombat(game, enemyId, { training = false, called = null, fo
       snapshot: structuredClone({ hp: game.hp, energy: game.energy, needs: game.needs, conditions: game.conditions, inventory: game.inventory, skills: game.skills, skillXp: game.skillXp, credits: game.credits, xp: game.xp, level: game.level, perkPoints: game.perkPoints, statPoints: game.statPoints, skillPoints: game.skillPoints, traits: game.traits }),
     } : {}),
   };
-  c.enemies.push(newFighter(c, "enemy", { source: main.source, called: called ?? main.called }));
+  c.enemies.push(newFighter(c, "enemy", { source: main.source, called: called ?? main.called, asName }));
   for (const foe of foes) c.enemies.push(newFighter(c, "enemy", foe));
   for (const friend of friends) c.allies.push(newFighter(c, "ally", friend));
   c.intro = fill(enemyLines(c.enemies[0], "intro"), { enemy: c.enemies[0] });
@@ -497,10 +499,8 @@ function tryParley(game, c, target, id, log) {
     }
     target.out = id;
     log.push({ by: YOU, on: target.key, out: approach.out, text: parleyLine(target, id, "worked"), tone: "good", math: `${total} vs ${found.dc}${found.price !== null ? `, -${found.price} credits` : ""}` });
-    if (approach.standing && target.faction && FACTIONS[target.faction] && !c.training) {
-      game.factions[target.faction] = clamp((game.factions[target.faction] ?? 0) + approach.standing, -100, 100);
-      addNotes(c, log, [`[FACTION] ${FACTIONS[target.faction].name} ${withSign(approach.standing)}: you ${approach.standing > 0 ? "talked your way out of a fight with one of theirs" : "frightened off one of theirs"}`]);
-    }
+    const standing = c.training ? null : changeStanding(game, target.faction, approach.standing, `you ${approach.standing > 0 ? "talked your way out of a fight with one of theirs" : "frightened off one of theirs"}`);
+    if (standing) addNotes(c, log, [standing]);
   }
   addNotes(c, log, practice(game, approach.skill, worked ? 3 : 2));
 }

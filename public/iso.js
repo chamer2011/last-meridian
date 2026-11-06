@@ -1874,6 +1874,10 @@ const iso = {
   calm: false,
   focus: null,
   covered: 0,
+  // A floating window that's about something in the room, and how far the room has slid to keep it clear of the window.
+  clear: null,
+  nudge: { x: 0, y: 0 },
+  drawnNudge: { x: 0, y: 0 },
 };
 
 function useScene(view) {
@@ -1913,11 +1917,27 @@ function moveOne(shown, goal, dt, time) {
   return went > 0;
 }
 
+// The player is drawn right where they are, since their own walking is smooth already. A jump, such as the server
+// putting them somewhere, isn't a walk.
+function placeYou(you, spot) {
+  const dx = spot.x - you.x;
+  const dy = spot.y - you.y;
+  you.x = spot.x;
+  you.y = spot.y;
+  const went = Math.abs(dx) * CELL_WIDTH + Math.abs(dy);
+  you.walking = went > 0 && went < 2;
+  if (!you.walking) return went > 0;
+  you.step += went * 5;
+  faceAlong(you, dx, dy);
+  return true;
+}
+
 function moveEveryone(view, dt) {
   let moving = false;
   const spot = iso.hooks.spot();
   if (!iso.you || iso.calm) iso.you = { x: spot.x, y: spot.y, step: 0, back: false, flip: false };
-  if (moveOne(iso.you, spot, dt, 70)) moving = true;
+  iso.youMoving = placeYou(iso.you, spot);
+  if (iso.youMoving) moving = true;
   const here = new Set();
   for (const person of view.people) {
     here.add(person.key);
@@ -1975,8 +1995,40 @@ function aim(width, height, dt) {
   const by = 1 - Math.exp(-dt / 160);
   iso.camera.u += (goal.u - iso.camera.u) * by;
   iso.camera.v += (goal.v - iso.camera.v) * by;
+  // The room slides aside for a floating window, and back once it's gone, at the same pace.
+  const slide = clearNudge(width, seen);
+  if (iso.calm) iso.nudge = { ...slide };
+  iso.nudge.x += (slide.x - iso.nudge.x) * by;
+  iso.nudge.y += (slide.y - iso.nudge.y) * by;
+  if (Math.abs(slide.x - iso.nudge.x) < 0.5 && Math.abs(slide.y - iso.nudge.y) < 0.5) iso.nudge = { ...slide };
+  else iso.redraw = true;
+  iso.drawnNudge = { x: Math.round(iso.nudge.x), y: Math.round(iso.nudge.y) };
   // Whole pixels, so that the texture on the floor stays crisp while the camera moves.
-  return { ox: Math.round(width / 2 - iso.camera.u * unit), oy: Math.round(seen / 2 - iso.camera.v * unit) };
+  return { ox: Math.round(width / 2 - iso.camera.u * unit) + iso.drawnNudge.x, oy: Math.round(seen / 2 - iso.camera.v * unit) + iso.drawnNudge.y };
+}
+
+// How far to slide the room so that what a floating window is about shows beside it, not under it: the least of down,
+// up, left or right that puts it clear of the window and still in view, or nothing when it's already clear or can't be.
+// The strip along the top, where the clock and the notes sit, doesn't count as in view. Where it was last drawn says
+// where it is, less the slide it was drawn with.
+const CLEAR_MARGIN = 30;
+const CLEAR_EDGE = 24;
+const CLEAR_TOP = 110;
+function clearNudge(width, seen) {
+  const clear = iso.clear;
+  if (!clear) return { x: 0, y: 0 };
+  const hit = iso.hits.find((one) => one.key === clear.key);
+  if (!hit) return clear.last ?? { x: 0, y: 0 };
+  const p = { x: hit.x + hit.w / 2 - iso.drawnNudge.x, y: hit.y + hit.h / 2 - iso.drawnNudge.y };
+  const box = { left: clear.left - CLEAR_MARGIN, top: clear.top - CLEAR_MARGIN, right: clear.right + CLEAR_MARGIN, bottom: clear.bottom + CLEAR_MARGIN };
+  let slide = { x: 0, y: 0 };
+  if (p.x > box.left && p.x < box.right && p.y > box.top && p.y < box.bottom) {
+    const fits = (t) => p.x + t.x >= CLEAR_EDGE && p.x + t.x <= width - CLEAR_EDGE && p.y + t.y >= CLEAR_TOP && p.y + t.y <= seen - CLEAR_EDGE;
+    const options = [{ x: 0, y: box.bottom - p.y }, { x: 0, y: box.top - p.y }, { x: box.left - p.x, y: 0 }, { x: box.right - p.x, y: 0 }].filter(fits);
+    if (options.length) slide = options.reduce((best, t) => (Math.hypot(t.x, t.y) < Math.hypot(best.x, best.y) ? t : best));
+  }
+  clear.last = slide;
+  return slide;
 }
 
 function drawWater(painter, now) {
@@ -2275,6 +2327,23 @@ export function isoLook({ person = null, bottom = 0 } = {}) {
   iso.redraw = true;
 }
 
+// A window floating over the room that's about something in it, by its key, with the window's box in the canvas's own
+// measure: the room slides aside to keep that thing clear of it. Nothing, and the room slides back.
+export function isoKeepClear(key = null, box = null) {
+  const was = iso.clear;
+  if (!key || !box) {
+    if (was) {
+      iso.clear = null;
+      iso.redraw = true;
+    }
+    return;
+  }
+  const same = was && was.key === key && ["left", "top", "right", "bottom"].every((side) => Math.abs(was[side] - box[side]) < 1);
+  if (same) return;
+  iso.clear = { key, left: box.left, top: box.top, right: box.right, bottom: box.bottom, last: was?.key === key ? was.last : null };
+  iso.redraw = true;
+}
+
 // Where a thing, a part or a door was drawn, by its key (thing:<id> or exit:<key>), for putting a pane beside it.
 export const isoMark = (key) => iso.hits.find((hit) => hit.key === key) ?? null;
 
@@ -2300,7 +2369,8 @@ function loop(now) {
   const cameraMoving = iso.camera && iso.lastGoal !== `${Math.round(iso.camera.u * 50)},${Math.round(iso.camera.v * 50)}`;
   iso.lastGoal = iso.camera ? `${Math.round(iso.camera.u * 50)},${Math.round(iso.camera.v * 50)}` : "";
   // Nothing going on: just enough to keep the lights and the water moving.
-  const every = moving || cameraMoving || iso.redraw || now - iso.fadeFrom < 320 ? 1000 / 30 : 1000 / 8;
+  // Walking, every frame there is; anything else moving, thirty a second; nothing going on, eight.
+  const every = iso.youMoving ? 0 : moving || cameraMoving || iso.redraw || now - iso.fadeFrom < 320 ? 1000 / 30 : 1000 / 8;
   if (now - iso.lastDraw < every) return;
   const since = now - iso.lastDraw;
   iso.lastDraw = now;
@@ -2324,15 +2394,19 @@ function underPointer() {
     if (px >= hit.x && px <= hit.x + hit.w && py >= hit.y && py <= hit.y + hit.h) return hit;
   }
   if (!iso.lastOrigin) return null;
-  const { x, y } = cellAt((px - iso.lastOrigin.ox) / iso.unit, (py - iso.lastOrigin.oy) / iso.unit);
-  return x >= 0 && y >= 0 && x < iso.scene.cols && y < iso.scene.lines ? { kind: "floor", x, y, key: `floor:${x},${y}` } : null;
+  const u = (px - iso.lastOrigin.ox) / iso.unit;
+  const v = (py - iso.lastOrigin.oy) / iso.unit;
+  const { x, y } = cellAt(u, v);
+  // The very spot, as a position: its square's corner plus how far into it, less the half that puts a position at a middle.
+  const point = { x: (2 * v + u) / CELL_WIDTH - 0.5, y: 2 * v - u - 0.5 };
+  return x >= 0 && y >= 0 && x < iso.scene.cols && y < iso.scene.lines ? { kind: "floor", x, y, point, key: `floor:${x},${y}` } : null;
 }
 
 function titleFor(hit) {
-  if (hit?.kind === "person") return `${hit.person.name}${hit.person.doing ? `, ${hit.person.doing}` : ""}. Click to walk over and talk.`;
-  if (hit?.kind === "thing" && hit.thing.part) return `${hit.thing.name}, ${hit.thing.part.word}. Click to walk over and work it.`;
-  if (hit?.kind === "thing") return `${hit.thing.name}. Click to walk over and take a look.`;
-  if (hit?.kind === "exit") return hit.exit.closed ? `${hit.exit.label}. It's closed. Click to walk over and ask.` : `${hit.exit.label}. Click to go through.`;
+  if (hit?.kind === "person") return `${hit.person.name}${hit.person.doing ? `, ${hit.person.doing}` : ""}. Click to walk over and talk, or right-click for more.`;
+  if (hit?.kind === "thing" && hit.thing.part) return `${hit.thing.name}, ${hit.thing.part.word}. Click to walk over and work it, or right-click for more.`;
+  if (hit?.kind === "thing") return `${hit.thing.name}. Click to walk over and take a look, or right-click for more.`;
+  if (hit?.kind === "exit") return hit.exit.closed ? `${hit.exit.label}. It's closed. Click to walk over and ask, or right-click for more.` : `${hit.exit.label}. Click to go through.`;
   return "";
 }
 
@@ -2367,8 +2441,16 @@ function onClick(event) {
   if (iso.hooks.pressed?.()) return;
   const hit = underPointer();
   if (!hit || iso.hooks.blocked()) return;
-  if (hit.kind === "floor") iso.hooks.go({ action: "go", x: hit.x, y: hit.y });
+  if (hit.kind === "floor") iso.hooks.go({ action: "go", x: hit.x, y: hit.y }, null, hit.point);
   else iso.hooks.go({ action: "go", to: hit.key });
+}
+
+// A right-click opens the menu of what can be done with whatever's under the pointer, or with the floor there.
+function onContext(event) {
+  event.preventDefault();
+  iso.pointer = { x: event.clientX, y: event.clientY };
+  const hit = underPointer();
+  if (hit) iso.hooks.menu?.(hit.key, { x: event.clientX, y: event.clientY });
 }
 
 function onWheel(event) {
@@ -2386,6 +2468,7 @@ export function isoFrameNode(hooks) {
     role: "img",
     "aria-label": "The room you're in, drawn from an angle. The list beside it has everyone and everything in it.",
     onclick: onClick,
+    oncontextmenu: onContext,
     onpointermove: onMove,
     onpointerleave: onLeave,
     onwheel: onWheel,

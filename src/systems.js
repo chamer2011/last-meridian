@@ -13,19 +13,19 @@
 // from normal, under game.systems[place], and showing the game changes nothing.
 
 import { SKILLS } from "./character-data.js";
-import { FACTIONS, LOCATIONS } from "./data.js";
+import { LOCATIONS } from "./data.js";
 import { startCheck } from "./checks.js";
 import { genericKindOf, writtenAtThing } from "./computers.js";
 import { livesHere, peopleAboard } from "./life.js";
 import { recordFact } from "./record.js";
 import { isCaptain } from "./role.js";
-import { changeStress } from "./rules.js";
+import { changeStanding, changeStress, hoursNow } from "./rules.js";
+import { holderOf } from "./daily.js";
 import { atPost, mapFor } from "./walk.js";
 import { SYSTEMS_DEFAULTS, SYSTEMS_FILE_PROBLEMS, WORLD_CHARACTERS, WORLD_COMPUTERS, WORLD_LIFE, WORLD_SYSTEMS } from "./world.js";
 import { KNOWN_SYSTEMS, SYSTEM_TITLES, readComputerLine, readDoorLine, readLocksLine, readPartLine, slugOf } from "../public/systems-text.js";
 
 const D = () => SYSTEMS_DEFAULTS ?? {};
-const now = (game) => game.clock?.hours ?? 0;
 const NORMAL = Object.freeze({});
 const BIG_CLASSES = ["hard", "very_hard", "nearly_impossible"];
 // Parts that work with no power: the boxes the power comes through, and the clamps' levers.
@@ -457,7 +457,7 @@ const roomNameOf = (place, room) => mapFor(place)?.levels[room]?.name ?? room;
 function stateOf(game, place, make = false) {
   if (!make) return game.systems?.[place] ?? null;
   game.systems ??= {};
-  return (game.systems[place] ??= { at: now(game), parts: {}, doors: {}, air: {}, alarm: {}, noted: {} });
+  return (game.systems[place] ??= { at: hoursNow(game), parts: {}, doors: {}, air: {}, alarm: {}, noted: {} });
 }
 const partState = (game, place, id) => game.systems?.[place]?.parts?.[id] ?? NORMAL;
 const doorState = (game, place, room) => game.systems?.[place]?.doors?.[room] ?? NORMAL;
@@ -551,7 +551,7 @@ export function playerSpot(game) {
 
 // ---- Changing things ---------------------------------------------------------------------------------
 
-const backAfter = (game, place, model, by) => (by !== "player" || ownedBy(game, place) || (!model.guards.length && !model.engineers.length) ? null : now(game) + model.numbers.back);
+const backAfter = (game, place, model, by) => (by !== "player" || ownedBy(game, place) || (!model.guards.length && !model.engineers.length) ? null : hoursNow(game) + model.numbers.back);
 
 export function switchPart(game, place, id, on, { by = "player" } = {}) {
   const model = systemsOf(place);
@@ -562,7 +562,7 @@ export function switchPart(game, place, id, on, { by = "player" } = {}) {
     delete s.on;
     delete s.backAt;
   } else {
-    Object.assign(s, { on: false, by, since: now(game) });
+    Object.assign(s, { on: false, by, since: hoursNow(game) });
     const back = backAfter(game, place, model, by);
     if (back) s.backAt = back;
     else delete s.backAt;
@@ -575,8 +575,8 @@ export function damagePart(game, place, id, damage = "broken", { by = "player" }
   if (!model?.parts[id]) throw new Error("There's no such part.");
   const state = stateOf(game, place, true);
   const s = (state.parts[id] ??= {});
-  Object.assign(s, { damage, by, since: now(game) });
-  if (model.engineers.length) s.fixAt = now(game) + model.numbers.repair;
+  Object.assign(s, { damage, by, since: hoursNow(game) });
+  if (model.engineers.length) s.fixAt = hoursNow(game) + model.numbers.repair;
   else delete s.fixAt;
   return settleChange(game, place);
 }
@@ -602,7 +602,7 @@ export function setDoor(game, place, room, how, { by = "player" } = {}) {
   if (how === "locked") {
     if (s.forced) lines.push(`[DOOR] The door to ${name} has been forced, and won't lock.`);
     else {
-      Object.assign(s, { locked: true, by, since: now(game) });
+      Object.assign(s, { locked: true, by, since: hoursNow(game) });
       const back = backAfter(game, place, model, by);
       if (back) s.backAt = back;
       lines.push(`[DOOR] The door to ${name} is locked.`);
@@ -612,10 +612,10 @@ export function setDoor(game, place, room, how, { by = "player" } = {}) {
     delete s.backAt;
     lines.push(`[DOOR] The door to ${name} is unlocked.`);
   } else if (how === "forced") {
-    Object.assign(s, { forced: true, by, since: now(game) });
+    Object.assign(s, { forced: true, by, since: hoursNow(game) });
     delete s.locked;
     delete s.backAt;
-    if (model.engineers.length) s.fixAt = now(game) + model.numbers.repair;
+    if (model.engineers.length) s.fixAt = hoursNow(game) + model.numbers.repair;
   } else if (how === "fixed") {
     delete s.forced;
     delete s.fixAt;
@@ -634,12 +634,8 @@ export function setDoor(game, place, room, how, { by = "player" } = {}) {
 // Whoever holds the place hears about it, and it goes on the record for the stories.
 function seenCost(game, place, model) {
   const lines = [];
-  const holder = game.world?.places?.[place]?.holder ?? LOCATIONS[place]?.faction;
-  const cost = D().seen?.standing ?? -2;
-  if (holder && FACTIONS[holder] && game.factions?.[holder] !== undefined && cost) {
-    game.factions[holder] = Math.max(-100, Math.min(100, game.factions[holder] + cost));
-    lines.push(`[FACTION] ${FACTIONS[holder].name} ${cost}: You were seen tampering with the systems at ${model.name}.`);
-  }
+  const standing = changeStanding(game, holderOf(game, place), D().seen?.standing ?? -2, `You were seen tampering with the systems at ${model.name}.`);
+  if (standing) lines.push(standing);
   try {
     recordFact(game, { id: `seen_tampering_at_${place}`.slice(0, 40), text: `You were seen tampering with the systems at ${model.name}.`, from: "systems" });
   } catch {
@@ -658,13 +654,13 @@ export function soundAlarm(game, place, room, { seen = false, by = "player" } = 
   }
   const state = stateOf(game, place, true);
   const had = state.alarm.ringing;
-  state.alarm.ringing = { room: room ?? had?.room ?? null, since: had?.since ?? now(game), seen: Boolean(seen || had?.seen), by };
+  state.alarm.ringing = { room: room ?? had?.room ?? null, since: had?.since ?? hoursNow(game), seen: Boolean(seen || had?.seen), by };
   if (!had) {
     lines.push(`[ALARM] The alarm is ringing at ${model.name}${room ? `, in ${roomNameOf(place, room)}` : ""}.`);
     for (const to of model.alarmLocks) {
       const s = (state.doors[to] ??= {});
       if (s.forced || s.locked || !roomPowered(game, place, to)) continue;
-      Object.assign(s, { locked: true, by: "alarm", since: now(game) });
+      Object.assign(s, { locked: true, by: "alarm", since: hoursNow(game) });
       lines.push(`[DOOR] The door to ${roomNameOf(place, to)} locks.`);
     }
   }
@@ -721,7 +717,7 @@ const personName = (place, key) => Object.values(mapFor(place)?.levels ?? {}).fl
 export function advanceSystems(game) {
   const lines = [];
   if (!game.systems) return lines;
-  const t = now(game);
+  const t = hoursNow(game);
   for (const place of Object.keys(game.systems)) {
     const model = systemsOf(place);
     const state = game.systems[place];
@@ -833,7 +829,7 @@ export function detourFor(game, place) {
   const model = systemsOf(place);
   const state = game.systems?.[place];
   if (!model || !state) return null;
-  const t = now(game);
+  const t = hoursNow(game);
   const limits = airLimits();
   const ringing = state.alarm?.ringing?.room && commsUp(game, place) ? state.alarm.ringing.room : null;
   const due = Object.entries(state.parts).filter(([id, s]) => s.fixAt && s.fixAt - t <= 1 && model.parts[id]).sort((a, b) => a[1].fixAt - b[1].fixAt);
@@ -975,12 +971,15 @@ export function partActions(game, place, part) {
   return out;
 }
 
+// An alarm's part that works says it's ringing while the alarm rings, instead of saying it's quiet.
+const ringingNow = (game, place, part) => part.system === "alarm" && Boolean(alarmRinging(game, place));
+
 export function lookAt(game, place, part) {
   const spec = kindSpec(part.kind);
   const s = partState(game, place, part.id);
-  const state = s.damage ? spec.damaged ?? "It's broken." : s.on === false ? spec.off ?? "It's off." : partWorks(game, place, part) ? spec.on ?? "It's working." : "It's dead. There's no power in here.";
-  const ringing = part.system === "alarm" && alarmRinging(game, place) ? " It's ringing." : "";
-  return `${part.look ?? spec.look ?? `The ${part.name}.`} ${state}${ringing}`;
+  const works = partWorks(game, place, part);
+  const state = s.damage ? spec.damaged ?? "It's broken." : s.on === false ? spec.off ?? "It's off." : !works ? "It's dead. There's no power in here." : ringingNow(game, place, part) ? "It's ringing." : spec.on ?? "It's working.";
+  return `${part.look ?? spec.look ?? `The ${part.name}.`} ${state}`;
 }
 
 function stateWord(game, place, part) {
@@ -988,6 +987,7 @@ function stateWord(game, place, part) {
   if (s.damage) return s.damage;
   if (s.on === false) return wordFor(part.kind, "off");
   if (!partWorks(game, place, part)) return "no power";
+  if (ringingNow(game, place, part)) return "ringing";
   return wordFor(part.kind, "on");
 }
 
@@ -1026,11 +1026,13 @@ export function doorActions(game, place, levelId, exit) {
   return out.map((one) => ({ ...one, room, detail: detailOf(one) }));
 }
 
+// The locked door can be the one into the next room or the one into this room, and either way the player sees the way
+// out, so it's named by where it goes.
 export function doorLook(game, place, levelId, exit) {
   const doors = D().doors ?? {};
   const room = doorLocked(game, place, exit.to) ? exit.to : levelId;
   const door = systemsOf(place)?.doors[room];
-  return `${door?.look ?? String(doors.look ?? "The door to {room}.").replaceAll("{room}", roomNameOf(place, room))} ${doors.locked ?? "It's locked."}`;
+  return `${door?.look ?? String(doors.look ?? "The door to {room}.").replaceAll("{room}", roomNameOf(place, exit.to))} ${doors.locked ?? "It's locked."}`;
 }
 
 // The player works a part in the room they're in. Something free happens at once; anything else opens a check, and
@@ -1046,7 +1048,7 @@ export function workOnPart(game, key, how) {
   if (!action) throw new Error("That can't be done to it now.");
   if (action.check) {
     const [skill, difficulty] = action.check.split(":");
-    startCheck(game, { skill, difficulty, reason: `${action.label}: the ${part.name} in ${roomNameOf(place, room)}`, scene: lookAt(game, place, part), source: "part" });
+    startCheck(game, { skill, difficulty, reason: `${action.label}: the ${part.name} in ${roomNameOf(place, room)}`, scene: lookAt(game, place, part), source: "part", target: `thing:part:${part.id}` });
     game.partAsked = { place, part: part.id, how };
     return { check: true };
   }
@@ -1060,7 +1062,7 @@ export function workOnDoor(game, levelId, exit, how) {
   const action = doorActions(game, spot.place, levelId, exit).find((one) => one.id === how);
   if (!action) throw new Error("That door isn't locked.");
   const [skill, difficulty] = action.check.split(":");
-  startCheck(game, { skill, difficulty, reason: `${action.label}: the door to ${roomNameOf(spot.place, action.room)}`, scene: doorLook(game, spot.place, levelId, exit), source: "part" });
+  startCheck(game, { skill, difficulty, reason: `${action.label}: the door to ${roomNameOf(spot.place, action.room)}`, scene: doorLook(game, spot.place, levelId, exit), source: "part", target: `exit:${exit.key}` });
   game.partAsked = { place: spot.place, door: action.room, how, from: spot.room };
   return { check: true };
 }

@@ -212,19 +212,19 @@ export function useConsolePart(game, place, part) {
   if (!partWorks(game, place, part)) return { said: "Its screen is dark. There's no power to it." };
   const content = consoleContent(game, place, part);
   if (content.yours) {
-    openSession(game, content, { how: "sat down" });
+    openSession(game, content, { how: "sat down", at: `thing:part:${part.id}` });
     return { said: `You sit down at ${content.name}.`, computer: true };
   }
-  startCheck(game, { skill: "hacking", difficulty: content.classKey, reason: `Get into ${content.name}`, scene: null, source: "thing" });
+  startCheck(game, { skill: "hacking", difficulty: content.classKey, reason: `Get into ${content.name}`, scene: null, source: "thing", target: `thing:part:${part.id}` });
   game.computerAsked = { place, console: part.id };
   return { check: true };
 }
 
 // A door's panel that was hacked from the door itself: it opens as a computer that runs that door.
-export function enterDoorPanel(game, place, to, hack) {
+export function enterDoorPanel(game, place, to, hack, at = null) {
   const target = computerAtDoor(game, place, to, hack?.classKey ?? "easy");
   const content = target.id ? writtenContent(target.id) : target.generic;
-  return openSession(game, content, { hacked: true, trace: hack?.trace ?? 0, maxTrace: hack?.maxTrace ?? 0, how: "hacked" });
+  return openSession(game, content, { hacked: true, trace: hack?.trace ?? 0, maxTrace: hack?.maxTrace ?? 0, how: "hacked", at });
 }
 
 // The computer a hack at this place lands on when nothing says which: a written one of that class here,
@@ -241,7 +241,8 @@ export function computerForPlace(game, classKey) {
 
 export const knowsPassword = (game, id) => Boolean(id && game.passwords?.[id]);
 
-export function openSession(game, content, { hacked = false, trace = 0, maxTrace = 0, how = "sat down" }) {
+// at is what the player sat down at, as the room's marks name it, for the window's line to point at.
+export function openSession(game, content, { hacked = false, trace = 0, maxTrace = 0, how = "sat down", at = null }) {
   if (game.combat) throw new Error("Finish the fight first.");
   if (game.computer) throw new Error("Log off the computer you're on first.");
   game.computers ??= {};
@@ -268,6 +269,7 @@ export function openSession(game, content, { hacked = false, trace = 0, maxTrace
     ran: [],
     startedAt: game.clock?.hours ?? 0,
     roomId: content.roomId ?? null,
+    at,
   };
   const session = game.computer;
   const flavor = COMPUTER_FLAVOR?.motd?.[content.flavor] ?? COMPUTER_FLAVOR?.motd?.default ?? [];
@@ -292,16 +294,16 @@ export function useComputer(game, { place, levelId, thing, look = null, generic 
   const content = target.id ? writtenContent(target.id) : target.generic;
   if (!roomPowered(game, place, levelId)) return { said: "The screen's dead. There's no power in here." };
   if (content.yours || knowsPassword(game, target.id)) {
-    openSession(game, content, { how: content.yours ? "sat down" : "the password" });
+    openSession(game, content, { how: content.yours ? "sat down" : "the password", at: `thing:${thing.id}` });
     return { said: `You sit down at ${content.name}.`, computer: true };
   }
-  startCheck(game, { skill: "hacking", difficulty: content.classKey, reason: `Get into ${content.name}`, scene: look, source: "thing", computer: target.id ?? null });
+  startCheck(game, { skill: "hacking", difficulty: content.classKey, reason: `Get into ${content.name}`, scene: look, source: "thing", computer: target.id ?? null, target: `thing:${thing.id}` });
   game.computerAsked = { place, levelId, thing: thing.id, name: thing.name };
   return { check: true };
 }
 
 // After a hack that got in: the computer the check was for, the door's, the thing's, or this place's.
-export function enterAfterHack(game, hack) {
+export function enterAfterHack(game, hack, at = null) {
   const asked = game.computerAsked ?? null;
   game.computerAsked = null;
   let target = null;
@@ -315,7 +317,7 @@ export function enterAfterHack(game, hack) {
   } else target = computerForPlace(game, hack.classKey);
   if (!target) return null;
   const content = target.id ? writtenContent(target.id) : target.generic;
-  return openSession(game, content, { hacked: true, trace: hack.trace ?? 0, maxTrace: hack.maxTrace ?? 0, how: "hacked" });
+  return openSession(game, content, { hacked: true, trace: hack.trace ?? 0, maxTrace: hack.maxTrace ?? 0, how: "hacked", at });
 }
 
 // ---- What a session is looking at --------------------------------------------------------------
@@ -373,6 +375,7 @@ export function computerView(game) {
     trace: session.trace,
     maxTrace: session.maxTrace,
     theme: session.yours ? "green" : session.hacked ? "cyan" : "teal",
+    at: session.at ?? null,
     desc: content.desc,
     files: content.files.map((one) => ({ id: one.id, name: one.name, read: memory.read.includes(`file:${one.id}`) })),
     mail: content.mail.map((one) => ({ id: one.id, name: one.to ? `From ${one.from} to ${one.to}` : one.subject ?? one.from, read: memory.read.includes(`mail:${one.id}`) })),

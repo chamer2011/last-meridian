@@ -196,7 +196,9 @@ test("the popups are in the game's own windows, in its own font, and what's said
   assert.ok(popups.includes("paneNode({") && talk.includes("paneNode({"));
   assert.ok(talk.includes('id: "talk-choices"'));
   assert.match(css, /\.pop-corner\.tl \{/);
-  assert.match(css, /\.pop-balloon\.springing \{ transition: transform/);
+  // Panes, like the floating windows, are pulled aside and slide back by the one shared pull.
+  assert.ok(pane.includes("makePullable(node"));
+  assert.match(css, /\.pullable\.springing \{ transition: transform/);
   assert.match(css, /--pop-font: var\(--mono\)/);
   // And they stay under the windows that have to go over them.
   const zOf = (selector) => Number(css.match(new RegExp(`\\${selector} \\{[^}]*z-index: (\\d+)`))?.[1]);

@@ -249,6 +249,9 @@ function ranked(state) {
 export const inTrouble = (game, id) => Boolean(game.world?.places[id]?.events.some((event) => EVENTS.find((one) => one.id === event.id)?.trouble));
 
 // What's known about a place today. A place that isn't in the file has nothing to say.
+// Which faction holds a place now: whoever has taken it as the world's days went by, or whoever its file starts it with.
+export const holderOf = (game, place) => game.world?.places?.[place]?.holder ?? LOCATIONS[place]?.faction ?? null;
+
 export function placeNow(game, id) {
   const state = game.world?.places[id];
   if (!state) return null;

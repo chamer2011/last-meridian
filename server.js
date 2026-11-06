@@ -15,7 +15,7 @@ import { fleetCommand } from "./src/fleet.js";
 import { noteLoreSeen } from "./src/lore.js";
 import { openingFor } from "./src/role.js";
 import { migrateGame } from "./src/migrate.js";
-import { StoryError, choiceLine, followChoice, sceneBrief, storyTurnKind, withoutChoices, writtenTurn } from "./src/scenes.js";
+import { StoryError, choiceLine, followChoice, keepForAi, sceneBrief, storyTurnKind, switchStory, withoutChoices, writtenTurn } from "./src/scenes.js";
 import { followTalkChoice, openWrittenTalk, talkSceneBrief, talkTurnKind, writtenTalkTurn } from "./src/talks.js";
 import { dataDir, projectDir } from "./src/paths.js";
 import {
@@ -24,7 +24,8 @@ import {
 import { closeTalk, talkBrief, talkCommand, talkHeard, talkLineOver, talkSaid, walkCommand, walkTick } from "./src/walk.js";
 import { enterAfterHack, enterDoorPanel } from "./src/computers.js";
 import { airBadHere, controlSystem, settlePart, systemsOf } from "./src/systems.js";
-import { computerCommand } from "./src/computer-use.js";
+import { computerCommand, screenGoesDark } from "./src/computer-use.js";
+import { afterDeedFight, settleDeed } from "./src/deeds.js";
 
 const savesDir = path.join(dataDir(), "saves");
 const settingsFile = path.join(dataDir(), "settings.json");
@@ -293,16 +294,13 @@ async function fitTurn({ playerText, talk, emit }) {
   emit({ type: "state" });
 }
 
-// What the written story said, kept for the AI's next message, without the choices. A long run of written play is cut
-// to its latest parts: the journal and the quests say how the rest came out.
+// What the written story said, kept for the AI's next message, without the choices.
 function rememberForAi(game, playerText, pieces, talkingWith) {
   const said = pieces.filter((piece) => piece.role === "narrator").map((piece) => withoutChoices(piece.text)).filter(Boolean).join("\n\n");
   if (!said) return;
-  const written = (game.ai.written ??= []);
-  written.push(talkingWith
+  keepForAi(game, [talkingWith
     ? `In a talk with ${talkingWith}${playerText ? `, the player said: "${playerText}"` : ""}. ${said}`
-    : `${playerText ? `The player: ${playerText}\n` : ""}${said}`);
-  while (written.length > 1 && written.reduce((sum, entry) => sum + entry.length, 0) > 30000) written.shift();
+    : `${playerText ? `The player: ${playerText}\n` : ""}${said}`]);
 }
 
 // ---- Routes -------------------------------------------------------------
@@ -438,6 +436,28 @@ async function handleApi(req, res, route) {
       : { ok: false, message: `${settings.model} isn't installed in Ollama.` });
   }
 
+  // Who writes the story: new games, and the game being played, from its next turn. Handing a game to the AI needs one set up.
+  if (route === "/api/story") {
+    const mode = body.mode;
+    if (mode !== "written" && mode !== "ai") throw new Error("Choose the written story or the AI game master.");
+    if (mode === "ai" && !aiIsSetUp()) throw new Error("Set up an AI first: a key or a local model, under AI model below.");
+    if (game && (game.mode ?? "ai") !== mode) {
+      if (busy) throw new Error("The game master is still writing. Wait a moment.");
+      // A fight, a check or a talk hands its end to whoever's telling the story, so it finishes with the one it began with.
+      if (game.combat) throw new Error("Finish the fight first.");
+      if (game.check) throw new Error("Finish the check first.");
+      if (game.talk) throw new Error(TALK_WAITING);
+      switchStory(game, mode);
+      // The written story can't answer the AI's choices, so they stop being offered from here. A game that hasn't
+      // begun has nothing to hand over, and keeps its Start the story button.
+      if (game.transcript.length) game.transcript.push({ role: "notice", text: mode === "ai" ? "[STORY] From here, the AI game master runs this game. The written parts still play as written, for free." : "[STORY] From here, the written story runs this game, with no AI.", ...(mode === "written" ? { turnover: true } : {}) });
+      autosave();
+    }
+    settings.story = mode;
+    saveSettings();
+    return json(res, 200, { settings: await settingsView(), game: game ? publicState(game) : null });
+  }
+
   if (route === "/api/creator/preview") return json(res, 200, buildCharacter(body.draft).view);
   if (route === "/api/creator/random") {
     const draft = randomDraft({ archetype: body.archetype, keep: body.keep ?? {}, anyone: Boolean(body.anyone) });
@@ -497,6 +517,9 @@ async function handleApi(req, res, route) {
     if (outcome.over && !outcome.training) {
       game.transcript.push({ role: "combat", tag: "COMBAT", text: outcome.summary, tone: outcome.tone, ...(outcome.math ? { math: outcome.math } : {}) });
       for (const note of outcome.notes) log("notice", note);
+      // A fight the player started from the right-click menu: whoever was beaten goes off to get patched up.
+      const after = afterDeedFight(game, outcome);
+      if (after.length) log("notice", after.join("\n"));
     }
     autosave();
     return json(res, 200, { game: publicState(game), outcome });
@@ -520,12 +543,15 @@ async function handleApi(req, res, route) {
   if (route === "/api/check") {
     const reply = checkCommand(requireGame(), body.command);
     // Work on a part or a door by hand is settled by the place's systems; a door panel that was hacked opens as a computer.
-    const worked = reply.over ? settlePart(game, reply.outcome, (place, to, hack) => enterDoorPanel(game, place, to, hack)) : null;
+    const worked = reply.over ? settlePart(game, reply.outcome, (place, to, hack) => enterDoorPanel(game, place, to, hack, reply.outcome?.target ?? null)) : null;
     if (worked) reply.outcome.notes.push(...worked);
+    // A pocket picked from the right-click menu: credits, or what being caught costs.
+    const deed = reply.over ? settleDeed(game, reply.outcome) : null;
+    if (deed) reply.outcome.notes.push(...deed);
     // A hack that got in doesn't end at the result: the screen becomes the computer's own system.
     if (worked === null && reply.over && reply.outcome?.hack && reply.outcome.success && !reply.outcome.training) {
       try {
-        enterAfterHack(game, reply.outcome.hack);
+        enterAfterHack(game, reply.outcome.hack, reply.outcome.target ?? null);
       } catch (err) {
         reply.outcome.notes.push(`[COMPUTER] ${err.message}`);
       }
@@ -543,6 +569,7 @@ async function handleApi(req, res, route) {
     const all = [{ systems: systemsOf("meridian").systems.map((one) => one.id), rooms: null }];
     const notes = controlSystem(game, "meridian", all, String(body.row ?? ""), String(body.to ?? ""), { by: "owner" });
     if (notes.length) log("notice", notes.join("\n"));
+    screenGoesDark(game, "the power's off in here");
     autosave();
     return json(res, 200, { game: publicState(game), notes });
   }
@@ -588,10 +615,10 @@ async function handleApi(req, res, route) {
     if (game.computer) throw new Error(COMPUTER_WAITING);
     const reply = walkCommand(game, body);
     // Using a thing or asking at a door changes more than where the player stands, and the story keeps a line about it.
-    if (body.action === "use" || body.action === "ask" || body.action === "work") {
+    if (["use", "ask", "work", "pickpocket", "attack"].includes(body.action)) {
       if (reply.said) log("notice", reply.said);
       autosave();
-      return json(res, 200, { game: publicState(game), said: reply.said ?? null, check: Boolean(game.check), computer: Boolean(game.computer) });
+      return json(res, 200, { game: publicState(game), said: reply.said ?? null, check: Boolean(game.check), computer: Boolean(game.computer), combat: Boolean(game.combat) });
     }
     saveAfterWalking();
     return json(res, 200, reply);

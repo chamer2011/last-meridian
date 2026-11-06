@@ -21,7 +21,6 @@ const SYSTEM_SETS = {
   power: ["on", "off"], lights: ["on", "off"], air: ["on", "off"], cameras: ["on", "off"], alarm: ["ringing", "quiet", "on", "off"],
   comms: ["on", "jammed"], engines: ["on", "off"], navigation: ["on", "off"], docking: ["locked", "released"], door: ["locked", "unlocked"], system: ["on", "off"],
 };
-const SYSTEM_WORDS = new Set(["power", "lights", "air", "cameras", "camera", "alarm", "comms", "engines", "navigation", "docking", "system"]);
 function systemWords(kind, words, raw, setting = false) {
   let system = kind === "camera" ? "cameras" : kind;
   let rest = [...words];

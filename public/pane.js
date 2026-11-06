@@ -2,51 +2,48 @@
 // thin line down to the top of their head. The story's speech and talks both come up in one. It can
 // be pulled aside with the mouse to see what's under it, and it slides back when it's let go.
 
-import { el } from "./dom.js";
+import { el, lineAndDot, zoom } from "./dom.js";
+import { SPRING_MS, makePullable, pulledBy } from "./pull.js";
 
 // ---- Building one ---------------------------------------------------------
 
 const cornerNodes = () => ["tl", "tr", "bl", "br"].map((corner) => el("span", { class: `pop-corner ${corner}`, "aria-hidden": "true" }));
 
-function leaderNode() {
-  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  svg.setAttribute("class", "pop-leader");
-  svg.setAttribute("aria-hidden", "true");
-  const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-  const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-  dot.setAttribute("r", "2.5");
-  svg.append(line, dot);
-  return svg;
-}
-
 // id and key say which pane this is and whose head it belongs over. tag is what goes on the tag,
 // body what goes on the pane, and extras anything that hangs off it, like a talk's choices. onTap
 // is what a plain click does, and opening makes it slide out from the head when it first appears.
-export function paneNode({ id, key, color, tag, body, extras = [], more = false, opening = false, onTap = null, className = "", place = null }) {
+// A console frame is the game's old console window instead of the corners and the tag: body brings
+// its own bar.
+export function paneNode({ id, key, color, tag, body, extras = [], more = false, opening = false, onTap = null, className = "", place = null, frame = "corners" }) {
   const node = el("div", {
     class: `pop-balloon${more ? " more" : ""}${opening ? " opening" : ""}${className ? ` ${className}` : ""}`,
     id,
     "data-key": key,
-    style: `--speaker:${color}`,
-    onpointerdown: pressed,
-    onpointermove: moved,
-    onpointerup: released,
-    onpointercancel: released,
+    ...(color ? { style: `--speaker:${color}` } : {}),
   },
-  leaderNode(),
-  el("div", { class: "pop-pane pop-speaker" }, cornerNodes(), el("div", { class: "pop-tag" }, tag), body),
+  lineAndDot("pop-leader"),
+  frame === "console" ? el("div", { class: "pop-pane pop-console" }, body) : el("div", { class: "pop-pane pop-speaker" }, cornerNodes(), el("div", { class: "pop-tag" }, tag), body),
   extras);
-  node.onTap = onTap;
   // A pane that isn't one of the story's places itself, while it's pulled and while it slides back.
   node.place = place;
-  // A drag ends with a click the browser sends anyway, and that click mustn't open anything.
-  node.addEventListener("click", (event) => {
-    if (!node.dataset.swallow) return;
-    delete node.dataset.swallow;
-    event.stopPropagation();
-    event.preventDefault();
-  }, true);
-  return node;
+  return makePullable(node, { follow: (pane) => placeOf(pane)(), back: slideBack, tap: onTap });
+}
+
+// Puts a pane at its place in the room, plus however far it's being pulled aside, and draws its line to the head or the
+// thing from where the pane really is, which while it slides back is somewhere on the way. room is the element its
+// place is measured from, and to the point the line goes to, or null for none.
+export function putPane(node, room, { left, top, wide, tall, side }, to) {
+  node.placedAt = { left, top, wide, tall };
+  const pulled = paneOffset(node);
+  node.style.transform = `translate(${Math.round(left + pulled.x)}px, ${Math.round(top + pulled.y)}px)`;
+  let at = { left: left + pulled.x, top: top + pulled.y };
+  if (paneSpringing(node)) {
+    const here = node.getBoundingClientRect();
+    const there = room.getBoundingClientRect();
+    at = { left: (here.left - there.left) / zoom(), top: (here.top - there.top) / zoom() };
+  }
+  if (to) drawLeader(node, { ...at, wide, tall, side }, to);
+  node.classList.toggle("no-head", !to);
 }
 
 // The line from the pane's corner nearest the head to the head, and where the pane slides out
@@ -82,74 +79,27 @@ export function drawLeader(node, { left, top, wide, tall, side }, head) {
 // ---- Pulling a pane aside -------------------------------------------------
 
 const NONE = { x: 0, y: 0 };
-const offsets = new Map();
-const drag = { on: null, place: () => {} };
+let placer = () => {};
 
 // Whoever places the panes says how, and it's called again whenever one is pulled or let go.
 export function panesPlacedBy(place) {
-  drag.place = place;
+  placer = place;
 }
+const placeOf = (node) => node.place ?? placer;
 
 // How far a pane has been pulled from its place, in the room's own measure.
-export const paneOffset = (node) => offsets.get(node.id) ?? NONE;
+export const paneOffset = (node) => pulledBy(node.id) ?? NONE;
 export const paneSpringing = (node) => node.classList.contains("springing");
 
-// The screen's own measure, and the interface may be drawn bigger or smaller than that.
-const zoom = () => Number(document.documentElement.style.zoom) || 1;
-
-function pressed(event) {
-  const node = event.currentTarget;
-  if (event.button !== 0 || drag.on || event.target.closest("button, a, input, textarea, select, summary, details, [data-lore]")) return;
-  drag.on = { node, x: event.clientX, y: event.clientY, id: event.pointerId, moved: false };
-  node.classList.remove("springing");
-  try {
-    node.setPointerCapture(event.pointerId);
-  } catch {
-    // Some pointers can't be captured, and the pane still follows while it's over it.
-  }
-}
-
-function moved(event) {
-  const on = drag.on;
-  if (!on || event.pointerId !== on.id || event.currentTarget !== on.node) return;
-  const dx = (event.clientX - on.x) / zoom();
-  const dy = (event.clientY - on.y) / zoom();
-  // A hand that wobbles while clicking isn't pulling.
-  if (!on.moved) {
-    if (Math.hypot(dx, dy) < 4) return;
-    on.moved = true;
-    on.node.classList.add("dragging");
-  }
-  offsets.set(on.node.id, { x: dx, y: dy });
-  (on.node.place ?? drag.place)();
-}
-
-function released(event) {
-  const on = drag.on;
-  if (!on || event.pointerId !== on.id) return;
-  drag.on = null;
-  const { node } = on;
-  try {
-    node.releasePointerCapture(on.id);
-  } catch {
-    // It wasn't captured.
-  }
-  if (!on.moved) {
-    node.onTap?.(event);
-    return;
-  }
-  node.classList.remove("dragging");
-  node.dataset.swallow = "1";
-  offsets.delete(node.id);
-  // Back to its place, and the line to the head follows it there.
-  node.classList.add("springing");
-  const place = node.place ?? drag.place;
+// Back to its place, with the line to the head following it there.
+function slideBack(node) {
+  const place = placeOf(node);
   place();
   const start = performance.now();
   const follow = (now) => {
     if (!node.isConnected) return;
     place();
-    if (now - start < 360) requestAnimationFrame(follow);
+    if (now - start < SPRING_MS) requestAnimationFrame(follow);
     else node.classList.remove("springing");
   };
   requestAnimationFrame(follow);

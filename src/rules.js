@@ -21,7 +21,7 @@ import { START_LIST, inTheFleet, isCaptain, jobHere, roleBrief, startOf, toOutsi
 import { recordLines, recordView } from "./record.js";
 import { advanceStories, clockOf } from "./story-clock.js";
 import { emptyStory, storyView } from "./story-library.js";
-import { startInRoom, talkView, walkLine, walkView } from "./walk.js";
+import { checkTarget, startInRoom, talkView, walkLine, walkView } from "./walk.js";
 import { computerView } from "./computers.js";
 import { advanceSystems, jumpBlocked, roomEdge, shipSystemsView, systemsLine } from "./systems.js";
 import { buildLoreIndex, findLoreIds } from "../public/story.js";
@@ -35,6 +35,16 @@ export const TURN_LIMITS = {
 
 export const roll = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
 export const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
+// The hour of the game, counted from its start: what the timers and marks in the save count in.
+export const hoursNow = (game) => game.clock?.hours ?? 0;
+
+// The player's standing with a faction moves, within -100 to 100. Returns the line the story shows, saying by how much
+// and why, or null when nothing moved.
+export function changeStanding(game, faction, amount, why) {
+  if (!amount || !FACTIONS[faction] || !game.factions) return null;
+  game.factions[faction] = clamp((game.factions[faction] ?? 0) + amount, -100, 100);
+  return `[FACTION] ${FACTIONS[faction].name} ${amount > 0 ? "+" : ""}${amount}: ${why}`;
+}
 
 // ---- Passive effects ----------------------------------------------------
 
@@ -156,7 +166,7 @@ export function beliefAffinity(ideology, beliefs) {
   return weight ? clamp(total / (weight * IDEOLOGY_LIMIT * 0.6), -1, 1) : 0;
 }
 
-const findContact = (game, name) => game.contacts.find((c) => c.name.toLowerCase() === name.toLowerCase());
+export const findContact = (game, name) => game.contacts?.find((c) => c.name.toLowerCase() === name.toLowerCase());
 
 // The bonus or penalty on social checks with a faction or a notable person.
 export function audienceBonus(game, id) {
@@ -1006,7 +1016,7 @@ export function publicState(game) {
       holds: holdingsOf(game, id),
     })),
     combat: combatView(game),
-    check: checkView(game),
+    check: game.check ? { ...checkView(game), target: checkTarget(game) } : null,
     walk: walkView(game),
     talk: talkView(game),
     computer: computerView(game),

@@ -483,7 +483,7 @@ function reportWindow(g) {
 // Fights and checks come first, if something's started one at the same moment.
 export function raidNode() {
   const g = app.ui.game;
-  if (!raidOpen() || app.fightOrCheckOpen()) return null;
+  if (!raidOpen() || app.raidWaits()) return null;
   return el("div", { class: "check-overlay" }, raid.report ? reportWindow(g) : alarmWindow(g));
 }
 
@@ -492,7 +492,7 @@ export function focusRaid() {
 }
 
 function onKey(e) {
-  if (!raidOpen() || !app.ui.game || app.fightOrCheckOpen() || app.ui.sideOpen) return;
+  if (!raidOpen() || !app.ui.game || app.raidWaits() || app.ui.sideOpen) return;
   if (raid.report) {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();

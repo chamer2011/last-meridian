@@ -5,7 +5,7 @@
 
 import { el } from "./dom.js";
 import { isoLook, isoSpot } from "./iso.js";
-import { drawLeader, paneNode, paneOffset, paneSpringing, panesPlacedBy } from "./pane.js";
+import { paneNode, panesPlacedBy, putPane } from "./pane.js";
 import { latestSceneStart, personSpeaking, sceneOf } from "./scene.js";
 import { blockNode, sceneBlocks, speakerOf, storyEntryNode, thinkingNode, wordNodes } from "./story-view.js";
 import { talkPanesNode } from "./talk.js";
@@ -349,19 +349,7 @@ function placePane(node, key, { choices = false, anywhere = false } = {}) {
     const below = spot.y + spot.h + 12;
     if (crosses(top) && !crosses(below) && below + tall <= floor) top = below;
   }
-  node.placedAt = { left, top, wide, tall };
-  const pulled = paneOffset(node);
-  node.style.transform = `translate(${Math.round(left + pulled.x)}px, ${Math.round(top + pulled.y)}px)`;
-  // The line to the head is drawn from where the pane really is, which while it slides back is somewhere between.
-  let at = { left: left + pulled.x, top: top + pulled.y };
-  if (paneSpringing(node)) {
-    const zoom = Number(document.documentElement.style.zoom) || 1;
-    const here = node.getBoundingClientRect();
-    const there = box.getBoundingClientRect();
-    at = { left: (here.left - there.left) / zoom, top: (here.top - there.top) / zoom };
-  }
-  if (spot) drawLeader(node, { ...at, wide, tall, side }, { x: head.x, y: top > head.y ? spot.y + spot.h + 3 : head.y - 5 });
-  node.classList.toggle("no-head", !spot);
+  putPane(node, box, { left, top, wide, tall, side }, spot ? { x: head.x, y: top > head.y ? spot.y + spot.h + 3 : head.y - 5 } : null);
   if (choices) placeChoices(node, { left, top, wide, tall, width, floor, roof: Math.max(under(clock), under(notes)) });
   node.classList.add("placed");
 }

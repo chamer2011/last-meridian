@@ -740,9 +740,6 @@ test("the clock waits for anything with its own window", () => {
   const cases = {
     talk: (game) => talkCommand(game, { action: "open", person: "voss" }),
     fight: (game) => { game.combat = { id: 1 }; },
-    check: (game) => { game.check = { id: 1 }; },
-    "story check": (game) => { game.check = { id: 1, source: "choice" }; },
-    computer: (game) => { game.computer = { id: "x" }; },
     raid: (game) => { game.fleet.raid = { id: 1 }; },
   };
   for (const [name, start] of Object.entries(cases)) {
@@ -754,10 +751,11 @@ test("the clock waits for anything with its own window", () => {
   }
 });
 
-test("the clock runs on through the room's own checks: a part, a thing, a door, a computer's hack", () => {
-  for (const source of ["part", "thing", "door", "computer"]) {
+test("the clock runs on through every skill check: the room's own, a pocket, and the story's own and practice; and on a computer", () => {
+  for (const source of ["part", "thing", "door", "computer", "person", "choice", "tool", "practice", undefined, "a computer in use"]) {
     const game = newGame();
-    game.check = { id: 1, source };
+    if (source === "a computer in use") game.computer = { id: "x" };
+    else game.check = { id: 1, source };
     const clock = game.clock.hours;
     const reply = walkTick(game, { ms: 500, rate: 10 });
     assert.ok(!reply.held, source);

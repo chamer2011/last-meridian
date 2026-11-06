@@ -1,0 +1,27 @@
+{
+  "_help": [
+    "What happens when the player picks someone's pocket or attacks them, from the menu a right-click opens in a room. Restart the game after changing this file.",
+    "watchful is a list of words: someone without a file of their own whose name has one of them, such as Station Guard or Hunter, is harder to rob and fights as a soldier.",
+    "pickpocket: the check is the skill named here. Its difficulty comes from the person's Awareness in their file: awareness is a list of [up to this much, difficulty]. Someone without a file is anyone, or watchful. Asleep, it's one step easier. The difficulties are easy, moderate, hard, very_hard and nearly_impossible.",
+    "credits is what's in a pocket, from and to: named for people with a file, anyone for the rest. wary_hours is how long someone keeps a hand on their pocket after a try, caught or not.",
+    "caught is what it costs when they catch you: standing with whoever holds the place, or the fleet's morale when it's the Meridian and you're her captain. A camera that sees it rings the place's alarm.",
+    "attack: people with a file fight from their file. as says which enemy from world/enemies everyone else fights as, by name, and why is why they fight. standing and morale are what it costs, the same way. hurt_hours is how long someone beaten stays out of sight."
+  ],
+  "watchful": ["guard", "security", "marine", "enforcer", "officer", "hunter", "sergeant", "warden", "inquisitor", "trooper", "commando", "agent", "bouncer", "constable"],
+  "pickpocket": {
+    "skill": "stealth",
+    "awareness": [[1, "easy"], [3, "moderate"], [5, "hard"], [99, "very_hard"]],
+    "anyone": "easy",
+    "watchful": "moderate",
+    "credits": { "named": [5, 40], "anyone": [2, 18] },
+    "wary_hours": 24,
+    "caught": { "standing": -2, "morale": -2 }
+  },
+  "attack": {
+    "as": { "watchful": "customs_marine", "anyone": "dock_thug" },
+    "why": { "watchful": "orders", "anyone": "afraid" },
+    "standing": -5,
+    "morale": -5,
+    "hurt_hours": 12
+  }
+}

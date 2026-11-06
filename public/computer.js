@@ -4,6 +4,7 @@
 // advisor's hints slide in on the right, and a console at the bottom keeps what's been done.
 
 import { api, el } from "./dom.js";
+import { leaderNode, pullable } from "./float.js";
 
 const comp = { id: null, view: null, sending: false, draft: "", message: null, seen: 0, advisor: true };
 
@@ -224,6 +225,7 @@ function windowNode() {
         el("div", { class: "check-log computer-console", id: "computer-console", role: "log" }, view.log.map((entry, i) => lineNode(entry, i >= comp.seen)))),
       advisorNode(view)),
     comp.message && el("div", { class: "notice-inline fail" }, comp.message),
+    app.ui.game?.fleet?.raid && el("div", { class: "notice-inline fail" }, "The fleet's under attack. Log off to give your orders."),
     el("div", { class: "check-controls" }, inputNode(view)),
     el("footer", { class: "check-taskbar" },
       el("span", { class: "check-start" }, "Start"),
@@ -233,10 +235,12 @@ function windowNode() {
       view.hacked && el("span", { class: `check-meter tone-${pct >= 75 ? "bad" : "warn"}` }, `TRACE [${"#".repeat(Math.round(pct / 12.5))}${"-".repeat(8 - Math.round(pct / 12.5))}] ${pct}%`)));
 }
 
+// It floats over the room the way the check window does, with nothing dimmed behind it and the clock running on, can be
+// pulled aside and slides back, and a line runs from it to what the player sat down at.
 export function computerNode() {
   sync();
   if (!computerOpen()) return null;
-  return el("div", { class: "check-overlay", id: "computer" }, windowNode());
+  return el("div", { class: "check-float", id: "computer" }, leaderNode(comp.view?.at), pullable(windowNode()));
 }
 
 function draw() {

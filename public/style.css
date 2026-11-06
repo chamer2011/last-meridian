@@ -449,13 +449,15 @@ button.fighter:hover:not(:disabled), button.fighter:focus-visible { background: 
   background: var(--c-bg); color: var(--c); border: 1px solid var(--c); outline: 0; font: 13px/1.4 var(--mono);
   box-shadow: 0 0 22px color-mix(in srgb, var(--c) 28%, transparent), 0 16px 48px rgba(0, 0, 0, .7);
 }
-.check-window[data-theme="amber"] { --c: #ffc466; --c-dim: #a57f3e; --c-line: #6e5426; --c-bg: #120c03; --c-panel: rgba(32, 22, 6, .92); --c-bright: #fff0d4; }
-.check-window[data-theme="green"] { --c: #8df5ac; --c-dim: #4f9a68; --c-line: #2a6a43; --c-bg: #03110a; --c-panel: rgba(6, 30, 17, .92); --c-bright: #e6ffef; }
-.check-window[data-theme="violet"] { --c: #c8a8ff; --c-dim: #8267b3; --c-line: #54407f; --c-bg: #0b0616; --c-panel: rgba(22, 13, 41, .92); --c-bright: #f2e9ff; }
-.check-window[data-theme="blue"] { --c: #8ab8ff; --c-dim: #5779ad; --c-line: #33507f; --c-bg: #040a17; --c-panel: rgba(9, 20, 42, .92); --c-bright: #e6f0ff; }
-.check-window[data-theme="red"] { --c: #ff8f7f; --c-dim: #ad5a4e; --c-line: #753a31; --c-bg: #140504; --c-panel: rgba(36, 11, 8, .92); --c-bright: #ffe9e4; }
-.check-window[data-theme="gold"] { --c: #f5d76e; --c-dim: #a3904b; --c-line: #6c5f2e; --c-bg: #100d03; --c-panel: rgba(30, 25, 7, .92); --c-bright: #fff7d6; }
-.check-window[data-theme="teal"] { --c: #76ecd2; --c-dim: #479985; --c-line: #27695a; --c-bg: #03110e; --c-panel: rgba(6, 30, 25, .92); --c-bright: #e3fff8; }
+/* The console colours, one set for every window that has them: the check, computer, raid and talk windows, a thing's
+   window beside it in the room, and the right-click menu. */
+:is(.check-window, .walk-thing-pane, .walk-menu)[data-theme="amber"] { --c: #ffc466; --c-dim: #a57f3e; --c-line: #6e5426; --c-bg: #120c03; --c-panel: rgba(32, 22, 6, .92); --c-bright: #fff0d4; }
+:is(.check-window, .walk-thing-pane, .walk-menu)[data-theme="green"] { --c: #8df5ac; --c-dim: #4f9a68; --c-line: #2a6a43; --c-bg: #03110a; --c-panel: rgba(6, 30, 17, .92); --c-bright: #e6ffef; }
+:is(.check-window, .walk-thing-pane, .walk-menu)[data-theme="violet"] { --c: #c8a8ff; --c-dim: #8267b3; --c-line: #54407f; --c-bg: #0b0616; --c-panel: rgba(22, 13, 41, .92); --c-bright: #f2e9ff; }
+:is(.check-window, .walk-thing-pane, .walk-menu)[data-theme="blue"] { --c: #8ab8ff; --c-dim: #5779ad; --c-line: #33507f; --c-bg: #040a17; --c-panel: rgba(9, 20, 42, .92); --c-bright: #e6f0ff; }
+:is(.check-window, .walk-thing-pane, .walk-menu)[data-theme="red"] { --c: #ff8f7f; --c-dim: #ad5a4e; --c-line: #753a31; --c-bg: #140504; --c-panel: rgba(36, 11, 8, .92); --c-bright: #ffe9e4; }
+:is(.check-window, .walk-thing-pane, .walk-menu)[data-theme="gold"] { --c: #f5d76e; --c-dim: #a3904b; --c-line: #6c5f2e; --c-bg: #100d03; --c-panel: rgba(30, 25, 7, .92); --c-bright: #fff7d6; }
+:is(.check-window, .walk-thing-pane, .walk-menu)[data-theme="teal"] { --c: #76ecd2; --c-dim: #479985; --c-line: #27695a; --c-bg: #03110e; --c-panel: rgba(6, 30, 25, .92); --c-bright: #e3fff8; }
 /* Scanlines over the whole window. They don't catch clicks. */
 .check-window::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(to bottom, transparent 0 2px, rgba(0, 0, 0, .16) 2px 4px); }
 .check-rain {
@@ -565,6 +567,28 @@ button.fighter:hover:not(:disabled), button.fighter:focus-visible { background: 
   .computer-body .check-advisor-tab { left: auto; right: 10px; top: -15px; transform: none; width: 44px; height: 15px; border: 1px solid var(--c-line); border-bottom: 0; }
 }
 .check-result { width: min(100%, 76ch); cursor: default; }
+/* The check window floats over the room the way the game's other windows do: nothing behind it is dimmed, the room's
+   clock runs on, everything around it can still be seen, and it can be pulled aside and slides back when it's let go.
+   It's a little smaller than the desk it used to be, and it starts below the room's clock, so the time can be seen
+   going by. */
+.check-float {
+  position: absolute; top: 0; bottom: 0; left: 0; right: var(--rail-width); z-index: 28;
+  display: flex; align-items: flex-start; justify-content: center; padding: calc(max(10px, 3vh) + 5em) 16px 16px;
+  pointer-events: none;
+}
+.check-float > .check-window { width: min(100%, 112ch); pointer-events: auto; cursor: grab; }
+.check-float > .check-result { width: min(100%, 66ch); }
+.check-float .check-log { height: 12em; min-height: 7em; max-height: 30vh; }
+.check-float .check-verdict { padding: 14px 14px; }
+.check-float .check-verdict-title { font-size: 22px; padding: 8px 0; }
+/* The computer window floats the same way; its console keeps its own height. */
+.check-float .computer-console { height: 7em; min-height: 0; max-height: none; }
+/* The line from a floating window to what it's about in the room, in the window's own colour. It shows once there's
+   somewhere to draw it. */
+.float-leader { position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; opacity: 0; transition: opacity .2s; }
+.float-leader.shown { opacity: 1; }
+.float-leader line { stroke: var(--c, #8df5ac); stroke-width: 1.2; }
+.float-leader circle { fill: var(--c, #8df5ac); }
 .check-verdict { padding: 18px 16px; display: flex; flex-direction: column; gap: 8px; overflow-y: auto; }
 .check-verdict-title { font-size: 26px; line-height: 1.2; font-weight: 700; letter-spacing: .12em; text-align: center; padding: 10px 0; border: 1px solid currentColor; }
 .check-verdict-line { color: var(--c-bright); }
@@ -589,8 +613,23 @@ button.fighter:hover:not(:disabled), button.fighter:focus-visible { background: 
   .check-tab, .check-start, .check-spacer { display: none; }
   .check-taskbar { flex-wrap: wrap; justify-content: space-between; }
 }
+/* Floating, the check window keeps its consoles side by side while there's the room for them, so it doesn't cover the
+   whole room in a smaller window. */
+@media (max-width: 860px) and (min-width: 641px) {
+  .check-float .check-desk { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .check-float .check-desk[data-count="1"] { grid-template-columns: minmax(0, 1fr); }
+  .check-float .check-desk:not([data-count="2"]) .check-panel.terminal { grid-row: span 2; }
+}
+@media (max-width: 860px) {
+  .check-float .check-log { height: 9em; min-height: 6em; max-height: 24vh; }
+  .check-float .computer-console { height: 5em; min-height: 0; max-height: none; }
+}
+/* On a short screen the window needs the height more than the clock needs to be seen. */
+@media (max-height: 700px) {
+  .check-float { padding-top: max(10px, 3vh); }
+}
 @media (max-width: 560px) {
-  .check-overlay { padding: 0; }
+  .check-overlay, .check-float { padding: 0; }
   .check-window { border-width: 0 0 1px; box-shadow: none; }
 }
 
@@ -820,14 +859,16 @@ button.fighter:hover:not(:disabled), button.fighter:focus-visible { background: 
 .pop-balloon { position: absolute; left: 0; top: 0; z-index: 2; width: clamp(26ch, 36cqw, 34ch); visibility: hidden; font: var(--pop-size)/1.45 var(--pop-font); cursor: grab; touch-action: none; }
 .pop-balloon.placed { visibility: visible; }
 .pop-balloon.pop-talk { z-index: 3; }
-.pop-balloon.dragging { cursor: grabbing; }
-.pop-balloon.springing { transition: transform .32s cubic-bezier(.2, .9, .3, 1.08); }
+/* Anything pulled aside with the mouse (public/pull.js), while it's held and while it slides back. */
+.pullable.dragging { cursor: grabbing; user-select: none; }
+.pullable.springing { transition: transform .32s cubic-bezier(.2, .9, .3, 1.08); }
 .pop-balloon.more .pop-words { cursor: pointer; }
 .pop-balloon.no-head .pop-leader { display: none; }
 .pop-leader { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; }
 .pop-leader line { stroke: var(--speaker); stroke-width: 1.2; }
 .pop-leader circle { fill: var(--speaker); }
-.pop-speaker {
+/* Someone's pane, and their window and menu when they're looked at, are in their own colour. */
+.pop-speaker, :is(.walk-thing-pane, .walk-menu)[data-theme="person"] {
   --c: var(--speaker); --c-dim: color-mix(in srgb, var(--speaker) 62%, #000); --c-line: color-mix(in srgb, var(--speaker) 40%, #000);
   --c-bg: color-mix(in srgb, var(--speaker) 7%, #030403); --c-panel: color-mix(in srgb, var(--speaker) 12%, #030403); --c-bright: color-mix(in srgb, var(--speaker) 25%, #fff);
 }
@@ -909,7 +950,7 @@ button.fighter:hover:not(:disabled), button.fighter:focus-visible { background: 
 @media (prefers-reduced-motion: reduce) {
   .write-cursor::after { animation: none; }
   .pop-balloon.opening .pop-pane, .pop-balloon.opening .pop-leader line, .pop-balloon.opening .pop-corner { animation: none; }
-  .pop-balloon.springing, .pop-choices, .pop-mine { transition: none; }
+  .pullable.springing, .pop-choices, .pop-mine { transition: none; }
 }
 
 /* The talk window borrows the check window's look, in a color for how the person feels about you. */
@@ -1016,12 +1057,73 @@ button.fighter:hover:not(:disabled), button.fighter:focus-visible { background: 
 .ship-system-row { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
 .ship-system-name { flex: 1 1 14ch; min-width: 0; }
 
-/* ---- A thing's pane, beside it in the room ------------------------------------ */
+/* ---- A thing's window, beside it in the room ------------------------------------ */
+/* The game's console window on a line to its thing, in the console's colour for its kind, and its actions in a second
+   one glued to its far side under an Actions bar, sliding out from behind it the first time. */
 .walk-map { position: relative; }
 .walk-things { position: absolute; inset: 0; z-index: 24; pointer-events: none; container: things / size; }
 .walk-things .pop-balloon { pointer-events: auto; }
-.walk-thing-pane { width: clamp(24ch, 30cqw, 32ch); }
-.walk-thing-pane .walk-thing-words { display: flex; flex-direction: column; gap: 6px; padding: 12px 12px 8px; }
+.walk-thing-pane { width: clamp(26ch, 30cqw, 36ch); font: 13px/1.4 var(--mono); }
+/* The line from a thing's window to the thing is in the window's colour. */
+.walk-thing-pane .pop-leader line { stroke: var(--c); }
+.walk-thing-pane .pop-leader circle { fill: var(--c); }
+.walk-thing-pane .pop-pane.pop-console, .walk-thing-choices {
+  background: var(--c-bg); color: var(--c); border: 1px solid var(--c); overflow: hidden;
+  box-shadow: 0 0 22px color-mix(in srgb, var(--c) 28%, transparent), 0 16px 48px rgba(0, 0, 0, .7);
+}
+.walk-thing-pane .pop-pane.pop-console { z-index: 1; }
+.pop-console::after, .walk-thing-choices::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(to bottom, transparent 0 2px, rgba(0, 0, 0, .16) 2px 4px); }
+.walk-thing-pane .check-title { flex: none; }
+.walk-thing-pane .walk-thing-words { flex: 1 1 auto; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 6px; padding: 8px 10px; color: var(--c-bright); overflow-wrap: anywhere; }
 .walk-thing-pane .walk-thing-said { margin: 0; gap: 2px; color: var(--c-bright); }
-.walk-thing-pane .walk-thing-look { color: var(--c); }
-.walk-thing-choices { width: clamp(22ch, 26cqw, 30ch); }
+.walk-thing-pane .walk-thing-look { padding: 0; border: 0; color: var(--c-bright); }
+.walk-thing-pane .walk-thing-said + .walk-thing-look { color: var(--c); }
+.walk-thing-choices {
+  position: absolute; top: 0; z-index: 0; width: clamp(22ch, 26cqw, 30ch); display: flex; flex-direction: column; min-height: 0; cursor: default;
+  opacity: 0; pointer-events: none; transition: transform .22s ease-out, opacity .18s ease-out;
+}
+.walk-thing-choices.at-right { left: calc(100% - 1px); transform: translateX(-28px); }
+.walk-thing-choices.at-left { right: calc(100% - 1px); transform: translateX(28px); }
+.walk-thing-choices.below { left: 0; transform: translateY(-14px); }
+.walk-thing-choices.above { left: 0; transform: translateY(14px); }
+.walk-thing-choices.in { opacity: 1; pointer-events: auto; transform: none; }
+.walk-thing-choices .options { flex: 1 1 auto; min-height: 0; overflow-y: auto; gap: 2px; padding: 6px 8px 8px; }
+/* The number, the action and what it costs run on as one line of text, so a narrow window wraps the words, not the number. */
+.walk-thing-choices .options button { display: block; font-size: 14px; padding: 2px 4px; }
+.walk-thing-choices .options button > * { margin-right: 1ch; }
+.walk-thing-choices .option-number, .walk-thing-choices .option-detail { color: var(--c-dim); }
+.walk-thing-choices .option-label { color: var(--c-bright); }
+.walk-thing-choices .options button:hover:not(:disabled), .walk-thing-choices .options button:focus-visible { background: var(--c); }
+@media (prefers-reduced-motion: reduce) {
+  .walk-thing-choices { transition: none; }
+}
+
+/* ---- The right-click menu ------------------------------------------------------- */
+/* The console's window where the click was, sliding open down from it, or up when it opens upward, in the colour of
+   what it's for. */
+.walk-menus { position: absolute; inset: 0; z-index: 26; pointer-events: none; }
+.walk-menu {
+  --c: #8df5ac; --c-dim: #4f9a68; --c-line: #2a6a43; --c-bg: #03110a; --c-bright: #e6ffef;
+  position: absolute; left: 0; top: 0; min-width: 20ch; max-width: 36ch; display: flex; flex-direction: column; overflow: hidden;
+  visibility: hidden; pointer-events: auto; cursor: default;
+  background: var(--c-bg); color: var(--c); border: 1px solid var(--c); font: 13px/1.4 var(--mono);
+  box-shadow: 0 0 22px color-mix(in srgb, var(--c) 28%, transparent), 0 16px 48px rgba(0, 0, 0, .7);
+}
+.walk-menu.placed { visibility: visible; }
+.walk-menu::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(to bottom, transparent 0 2px, rgba(0, 0, 0, .16) 2px 4px); }
+.walk-menu .check-title { flex: none; }
+.walk-menu-ask { padding: 6px 10px 0; color: var(--c-bright); }
+.walk-menu .options { gap: 1px; padding: 4px 6px 6px; }
+.walk-menu .options button { display: block; font-size: 14px; padding: 2px 4px; }
+.walk-menu .options button > * { margin-right: 1ch; }
+.walk-menu .option-number, .walk-menu .option-detail { color: var(--c-dim); }
+.walk-menu .option-label { color: var(--c-bright); }
+.walk-menu .options button:hover:not(:disabled), .walk-menu .options button:focus-visible { background: var(--c); }
+.walk-menu .options button:disabled .option-label { color: var(--c-dim); }
+.walk-menu.opening { animation: walk-menu-down .18s ease-out both; }
+.walk-menu.opening.up { animation-name: walk-menu-up; }
+@keyframes walk-menu-down { from { clip-path: inset(0 0 100% 0); transform: translateY(-8px); } to { clip-path: inset(0 0 0 0); transform: none; } }
+@keyframes walk-menu-up { from { clip-path: inset(100% 0 0 0); transform: translateY(8px); } to { clip-path: inset(0 0 0 0); transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .walk-menu.opening { animation: none; }
+}

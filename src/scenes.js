@@ -381,6 +381,40 @@ export function writtenTurn({ game, playerText, event, threadId, emit, log, scen
 
 // ---- With an AI game master on top -------------------------------------------
 
+// What the written story told, kept for the AI's next message: each piece is what the player did, if anything, and what
+// the story said. A long run is cut to its latest, since the journal, the quests and the record say how the rest came out.
+const KEPT_FOR_AI = 30000;
+export function keepForAi(game, pieces) {
+  game.ai ??= { provider: null, messages: [] };
+  const written = (game.ai.written ??= []);
+  written.push(...pieces.filter(Boolean));
+  while (written.length > 1 && written.reduce((sum, entry) => sum + entry.length, 0) > KEPT_FOR_AI) written.shift();
+}
+
+// The game changes hands between the written story and the AI game master, at the player's word, from its next turn.
+// Handed to the AI, it gets what the story told since the AI last read it, from the record of play, the way it gets the
+// written parts in a game it runs: from the start, in a game that began written. Handed to the written story, the game
+// remembers how far the AI had read. Returns whether anything changed.
+export function switchStory(game, mode) {
+  if (mode !== "written" && mode !== "ai") throw new Error("Choose the written story or the AI game master.");
+  if ((game.mode ?? "ai") === mode) return false;
+  game.ai ??= { provider: null, messages: [] };
+  if (mode === "ai") {
+    const runs = [];
+    for (const entry of game.transcript.slice(game.ai.seenUpTo ?? 0)) {
+      if (entry.role === "player") runs.push({ player: entry.text, said: [] });
+      else if (entry.role === "narrator" || entry.role === "combat") {
+        if (!runs.length) runs.push({ player: null, said: [] });
+        const text = entry.role === "combat" ? `A fight: ${entry.text}` : withoutChoices(entry.text);
+        if (text) runs.at(-1).said.push(text);
+      }
+    }
+    keepForAi(game, runs.filter((run) => run.said.length).map((run) => `${run.player ? `The player: ${run.player}\n` : ""}${run.said.join("\n\n")}`));
+  } else game.ai.seenUpTo = game.transcript.length;
+  game.mode = mode;
+  return true;
+}
+
 // Who answers a turn of the story in a game with an AI game master: the written story, when it has this moment
 // ("written"); the AI by itself ("ai"); or the AI fitting the player's own words to the written part they're in
 // ("fit"). Without an AI it's always the written story. A file that can't be read goes to the written story too,

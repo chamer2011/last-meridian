@@ -1,8 +1,13 @@
 // The skill check window: a set of consoles over the story, themed to whichever skill is being
 // used. The game on the server decides everything, and this draws what it says. Everything
-// can be clicked as well as typed, and nothing here is ever a race against the clock.
+// can be clicked as well as typed, and nothing here is ever a race against the clock. It floats
+// over the room like the game's other windows, with nothing dimmed behind it and the room's clock
+// running on, it can be pulled aside with the mouse and slides back when it's let go, and a line
+// runs from it to what the check is about (float.js).
 
 import { api, el } from "./dom.js";
+import { leaderNode, pullable } from "./float.js";
+import { untagged } from "./story.js";
 
 const check = {
   id: null,
@@ -242,7 +247,7 @@ function resultNode() {
       settled && [
         outcome.line && el("div", { class: "check-verdict-line" }, outcome.line),
         el("div", { class: "check-verdict-math" }, `${outcome.label}: ${outcome.math}`),
-        outcome.notes?.map((note) => el("div", { class: "tone-good" }, note.replace(/^\[[A-Z]+\]\s*/, ""))),
+        outcome.notes?.map((note) => el("div", { class: "tone-good" }, untagged(note))),
         el("div", { class: "options" }, choices.map(([label, run, detail], i) => el("button", {
           "data-choice": String(i + 1),
           onclick: (event) => {
@@ -404,7 +409,9 @@ function rainFor(seed) {
 export function checkNode() {
   sync();
   if (!checkOpen()) return null;
-  return el("div", { class: "check-overlay", id: "check" }, check.outcome ? resultNode() : windowNode());
+  // The line points at what the check is about, through to its result.
+  const target = check.outcome ? check.outcome.target : check.view?.target;
+  return el("div", { class: "check-float", id: "check" }, leaderNode(target), pullable(check.outcome ? resultNode() : windowNode()));
 }
 
 function draw() {

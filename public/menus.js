@@ -615,15 +615,19 @@ function settingsMenu() {
         }, label))),
       muted("Stronger enemies get more health, hit more often and hit harder at Normal and Hard. Your followers stay the same. On Hard, anyone who can't fight will usually lose to anything above a minor threat, unless they bring help or run. It applies from your next fight.")),
     section("Who writes the story",
-      el("div", { class: "row small" }, "New games:",
+      el("div", { class: "row small" },
         [["written", "Written story"], ["ai", "AI game master"]].map(([id, label]) => el("button", {
-          class: s.storyApplies === id ? "primary" : "",
-          "aria-pressed": String(s.storyApplies === id),
-          onclick: runAction(async () => { ui.settings = await api("/api/settings", { story: id }); }),
+          class: (g?.mode ?? s.storyApplies) === id ? "primary" : "",
+          "aria-pressed": String((g?.mode ?? s.storyApplies) === id),
+          onclick: runAction(async () => {
+            const reply = await api("/api/story", { mode: id });
+            ui.settings = reply.settings;
+            if (reply.game) ui.game = reply.game;
+          }),
         }, label))),
       folded("settings-writers", "What the two mean",
         muted("Written story: the story is written in advance, so it's free and needs no AI. For now that's the openings for three lives, the arrival at Haven, the main story's whole first act and a story aboard the Meridian from the Leads menu, and the crew's conversations, and the rest is being written. AI game master: the written parts still play as written, for free, and the AI reads whatever you type or say in them and fits it to the story, plays everyone and everything that isn't written, and runs the stories that haven't been written out. It needs a key or a local model from below.")),
-      muted(`${s.story === null ? `Until you choose, it's the ${s.storyApplies === "written" ? "written story, because no AI is set up" : "AI game master, because an AI is set up"}. ` : ""}It applies to new games. This game has ${g.mode === "written" ? "the written story" : "an AI game master"}, and that can't change once a game has started.`)),
+      muted(`${s.story === null ? `Until you choose, new games get the ${s.storyApplies === "written" ? "written story, because no AI is set up" : "AI game master, because an AI is set up"}. ` : ""}It changes this game from its next turn, and new games too. Handed to the AI, a game's first turn sends it what the written story has told so far, so that one costs a little more.`)),
     folded("settings-model", "AI model",
       s.claudeModels.map((m) => choice("claude", m.id, m.name, m.note)),
       s.ollama.models.map((m) => choice("ollama", m, `Local: ${m}`, "Free and private. Runs on your graphics card.")),

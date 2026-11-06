@@ -1,5 +1,19 @@
 // Small helpers shared by the game screens.
 
+// How much bigger or smaller than the screen's own measure the interface is drawn, as Settings has it.
+export const zoom = () => Number(document.documentElement.style.zoom) || 1;
+
+// A thin line with a dot at its end, which the panes and the floating windows draw to what they're about.
+export function lineAndDot(className) {
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("class", className);
+  svg.setAttribute("aria-hidden", "true");
+  const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+  dot.setAttribute("r", "2.5");
+  svg.append(document.createElementNS("http://www.w3.org/2000/svg", "line"), dot);
+  return svg;
+}
+
 export function el(tag, props = {}, ...children) {
   const node = document.createElement(tag);
   for (const [key, value] of Object.entries(props)) {

@@ -161,7 +161,8 @@ export function parseOptions(text, vocab = {}) {
 export function latestOptions(transcript, vocab = {}) {
   for (let i = transcript.length - 1; i >= 0; i -= 1) {
     const entry = transcript[i];
-    if (entry.role === "player" || entry.role === "combat") return [];
+    // Once the game's changed hands, what was offered before isn't on offer any more.
+    if (entry.role === "player" || entry.role === "combat" || entry.turnover) return [];
     if (entry.role === "narrator") {
       const options = parseOptions(entry.text, vocab);
       if (options.length) return options;
@@ -225,6 +226,7 @@ function toneFor(tag, body) {
       return /\+\d/.test(body) && !/-\d/.test(body) ? "good" : "bad";
     case "TIME": return "dim";
     case "HACK": return /GRANTED/.test(body) ? "good" : "bad";
+    case "STEALTH": return /catches|caught/.test(body) ? "bad" : "good";
     case "ALARM": return /stops|armed\.$|is armed/.test(body) && !/disarmed/.test(body) ? "info" : "bad";
     case "AIR": return /good again/.test(body) ? "good" : /bad/.test(body) ? "bad" : "warn";
     case "SYSTEMS": return /fixed|working again|back on/.test(body) ? "good" : "info";
@@ -234,6 +236,9 @@ function toneFor(tag, body) {
 }
 
 // A game message can be several lines. Each comes back with its label and a good or bad tone.
+// A line the game wrote, like "[SYSTEMS] The lights are off.", without its tag in front.
+export const untagged = (line) => String(line).replace(/^\[[A-Z]+\]\s*/, "");
+
 export function parseNotice(text) {
   return text.split("\n").map((line) => line.trim()).filter(Boolean).map((raw) => {
     // Older saves have an emoji at the start of these lines.

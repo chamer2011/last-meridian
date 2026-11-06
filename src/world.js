@@ -125,6 +125,7 @@ export const DAILY = readFile("daily.json");
 export const STORY_CLOCK = { ...readFile("story-clock.json"), threads: {} };
 export const STARTS = readFile("starts.json");
 export const CHECK_TEXT = readFile("checks.json");
+export const DEEDS = readFile("deeds.json");
 export const ROOM_KINDS = readFile("rooms.json").kinds ?? {};
 export const ROOM_TALK = readFile("rooms.json").talk ?? {};
 // The game can't run without these, so a mistake in one gets a plain explanation.

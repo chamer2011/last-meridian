@@ -620,6 +620,58 @@ test("the arrow keys move one square, stop at walls, and walking into someone me
   assert.equal(walkCommand(game, { action: "step", dx: 0, dy: -1 }).arrived.kind, "thing");
 });
 
+test("the room says where the player can walk, square by square, the same as the server decides it", () => {
+  const game = newGame();
+  for (const id of LEVEL_IDS) {
+    const view = enter(game, id);
+    assert.equal(view.floor.length, view.lines, `${id}: a row of the floor for each line`);
+    assert.ok(view.floor.every((row) => row.length === view.cols && /^[. ]*$/.test(row)), `${id}: only floor and not`);
+    assert.equal(view.floor[view.captain.y][view.captain.x], ".", `${id}: the player stands on floor`);
+    for (const one of view.things) if (!one.part || one.part.mount !== "wall") assert.notEqual(view.floor[one.y]?.[one.x], ".", `${id}: ${one.name} isn't walked through`);
+  }
+});
+
+test("walking freely: a square at a time it's kept, through a wall or out of reach it isn't, and a way out walked into is taken", () => {
+  const game = newGame();
+  const view = walkView(game);
+  const from = view.captain;
+  const next = [[1, 0], [-1, 0], [0, 1], [0, -1]].map(([dx, dy]) => ({ x: from.x + dx, y: from.y + dy })).find((one) => view.floor[one.y]?.[one.x] === ".");
+  const moved = walkCommand(game, { action: "move", x: next.x, y: next.y });
+  assert.deepEqual(moved, { moved: true, captain: next });
+  assert.deepEqual(spot(game), next);
+  assert.equal(moved.walk, undefined, "only the square comes back");
+  // Not into a wall, and not anywhere that can't be walked to from here.
+  const wall = { x: 0, y: 0 };
+  assert.equal(view.floor[wall.y][wall.x], " ");
+  assert.deepEqual(walkCommand(game, { action: "move", ...wall }), { moved: false, captain: next });
+  assert.throws(() => walkCommand(game, { action: "move", x: 1.5, y: 2 }), /somewhere to walk/);
+  // A few squares on, as a quick walk can be by the time the page says so, is fine if it's the same floor.
+  const further = walkCommand(game, { action: "go", x: next.x + 6, y: next.y }).walk.captain;
+  standOn(game, next.x, next.y);
+  assert.deepEqual(walkCommand(game, { action: "move", ...further }).captain, further);
+  // A way out walked into goes through, and the room comes back with it.
+  const door = view.exits.find((one) => one.key === "1");
+  standOn(game, door.x, door.y - 1);
+  const through = walkCommand(game, { action: "move", x: door.x, y: door.y });
+  assert.equal(through.arrived.kind, "exit");
+  assert.equal(through.walk.here.id, "names");
+  assert.match(walkLine(game), /walked to The Names Bulkhead/);
+});
+
+test("walking freely into a door only the story opens stops beside it, the same as clicking it", () => {
+  // The Great Wheel's way into the Velvet Deck is the story's to open.
+  const game = at("wheel");
+  walkCommand(game, { action: "room", to: "great" });
+  const closed = { id: walkView(game).here.id, exit: walkView(game).exits.find((one) => one.closed) };
+  assert.ok(closed.exit, "the Great Wheel has a door only the story opens");
+  const beside = [[1, 0], [-1, 0], [0, 1], [0, -1]].map(([dx, dy]) => ({ x: closed.exit.x + dx, y: closed.exit.y + dy })).find((one) => walkView(game).floor[one.y]?.[one.x] === ".");
+  standOn(game, beside.x, beside.y);
+  const bump = walkCommand(game, { action: "move", x: closed.exit.x, y: closed.exit.y });
+  assert.deepEqual(bump.arrived, { kind: "door", key: closed.exit.key });
+  assert.equal(bump.walk.here.id, closed.id, "still in the same room");
+  assert.deepEqual(spot(game), beside);
+});
+
 test("clicking someone walks up beside them, and clicking a thing does the same", () => {
   const game = newGame();
   enter(game, "engineering");

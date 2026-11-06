@@ -1,7 +1,7 @@
 // Draws the story in the main window: who's speaking, lore links and their
 // tooltips, consequences, and what each choice involves.
 
-import { el, signed } from "./dom.js";
+import { el, signed, zoom } from "./dom.js";
 import {
   attributeSpeech, buildLoreIndex, buildVocab, colorForName, combatTone, findLoreEntry, latestOptions, loreEntries, oddsFor,
   parseNarration, parseNotice, segmentLore,
@@ -95,9 +95,8 @@ function showTooltip(target) {
   const below = box.bottom + 6;
   const top = below + size.height > window.innerHeight - 8 ? Math.max(8, box.top - size.height - 6) : below;
   // The screen's own measure, and the interface may be drawn bigger or smaller than that.
-  const zoom = Number(document.documentElement.style.zoom) || 1;
-  tooltip.style.left = `${left / zoom}px`;
-  tooltip.style.top = `${top / zoom}px`;
+  tooltip.style.left = `${left / zoom()}px`;
+  tooltip.style.top = `${top / zoom()}px`;
 }
 
 const isTouch = () => window.matchMedia("(hover: none)").matches;

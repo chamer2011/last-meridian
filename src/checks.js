@@ -86,8 +86,9 @@ function refreshEdge(check, ctx) {
 }
 
 // Opens the window for a check. source says where it came from: a tagged choice the player
-// clicked, the game master asking for one, or practice, which doesn't count for anything.
-export function startCheck(game, { skill = null, attribute = null, difficulty, context = [], audience = null, reason, scene = null, choice = null, source = "tool", computer = null }) {
+// clicked, the game master asking for one, or practice, which doesn't count for anything. target
+// is what it's about in the room, as the room's marks name it, for the window's line to point at.
+export function startCheck(game, { skill = null, attribute = null, difficulty, context = [], audience = null, reason, scene = null, choice = null, source = "tool", computer = null, target = null }) {
   if (game.check) throw new Error("Finish the check you're in the middle of first.");
   if (game.combat) throw new Error("Finish the fight first.");
   if (game.computer) throw new Error("Log off the computer first.");
@@ -119,6 +120,7 @@ export function startCheck(game, { skill = null, attribute = null, difficulty, c
     decided: Boolean(CHECK_GAMES[text.game]?.decided),
     played: false,
     computer,
+    target,
   };
   const ctx = contextFor(game, check);
   const engine = gameFor(check);
@@ -220,6 +222,7 @@ function finishCheck(game) {
     theme: ctx.text.theme,
     window: ctx.text.window,
     notes: r.notes,
+    target: check.target ?? null,
     // A hack that got in opens the computer: which one, and how much of the trace is left for inside.
     hack: decided && check.skill === "hacking" ? { computer: check.computer ?? null, source: check.source, classKey: check.difficulty, trace: check.state.trace, maxTrace: check.state.maxTrace } : null,
   };
@@ -320,6 +323,7 @@ export function checkView(game) {
     decided: Boolean(check.decided),
     training: check.source === "practice",
     source: check.source,
+    target: check.target ?? null,
     tier: check.tier,
     tierName: (CHECK_TEXT.tierNames ?? ["untrained", "novice", "trained", "expert", "master"])[check.tier],
     dc,

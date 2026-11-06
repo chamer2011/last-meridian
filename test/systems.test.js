@@ -15,7 +15,7 @@ const sys = await import("../src/systems.js");
 const { clearMaps, mapFor, walkCommand, walkView } = await import("../src/walk.js");
 const { aiSnapshot, checkParts, passTime, publicState, travel } = await import("../src/rules.js");
 const { checkCommand } = await import("../src/checks.js");
-const { computerCommand } = await import("../src/computer-use.js");
+const { computerCommand, screenGoesDark } = await import("../src/computer-use.js");
 const { enterComputer, enterDoorPanel, useComputer } = await import("../src/computers.js");
 const { conditionHolds, parseCondition, parseEffect } = await import("../src/scene-text.js");
 const { peopleAboard } = await import("../src/life.js");
@@ -197,6 +197,36 @@ test("tampering where a camera sees it rings the alarm, costs standing, goes on 
   assert.equal(sys.doorLocked(game, "haven", "row"), false);
 });
 
+test("a ringing alarm's speaker says it's ringing, and a door locked from inside is named by where it goes", () => {
+  const game = newGame();
+  standIn(game, "meridian", "bridge");
+  const speakerNow = () => walkView(game).things.find((thing) => thing.part?.kind === "speaker");
+  assert.equal(speakerNow().part.word, "on");
+  assert.match(speakerNow().look, /It's quiet, and it's working\.$/);
+  sys.soundAlarm(game, "meridian", "bridge", { by: "story" });
+  const speaker = speakerNow();
+  assert.equal(speaker.part.word, "ringing");
+  assert.equal(speaker.part.ringing, true);
+  assert.match(speaker.look, /a red lamp in the middle\. It's ringing\.$/);
+  assert.doesNotMatch(speaker.look, /quiet/);
+  // The alarm locks the bridge's own door, and from inside, each way out is named by where it goes, not "the door to
+  // The Bridge".
+  const locked = walkView(game).exits.filter((exit) => exit.locked);
+  assert.ok(locked.length > 0, "the alarm locks the bridge");
+  for (const exit of locked) {
+    assert.ok(exit.look.startsWith(`The door to ${exit.label}. It's locked`), exit.look);
+    assert.doesNotMatch(exit.look, /The Bridge/);
+  }
+  // With the power cut, a speaker is dead, and says so instead of ringing.
+  const box = partNamed("meridian", "junction box", "bridge");
+  walkCommand(game, { action: "work", key: `part:${box.id}`, how: "off" });
+  assert.equal(speakerNow().part.word, "no power");
+  assert.doesNotMatch(speakerNow().look, /ringing/);
+  walkCommand(game, { action: "work", key: `part:${box.id}`, how: "on" });
+  sys.silenceAlarm(game, "meridian");
+  assert.equal(speakerNow().part.word, "on");
+});
+
 test("the captain's own ship doesn't call the captain a tamperer, and covering a camera unseen works", () => {
   const game = newGame();
   standIn(game, "meridian", "bridge");
@@ -344,6 +374,29 @@ test("a computer runs what the place's file says, and one that cuts its own powe
   // The Ship menu runs everything aboard, for the captain.
   const ship = publicState(game).shipSystems;
   assert.ok(ship.find((one) => one.id === "power").rows.some((row) => row.word === "off" && row.actions.some((action) => action.to === "on")));
+});
+
+test("a computer goes dark when its room's power is cut from the Ship menu, and logging off counts only time the clock hasn't run", () => {
+  const game = newGame();
+  standIn(game, "meridian", "engineering");
+  enterComputer(game, { id: "meridian_reactor_gauges" });
+  assert.equal(screenGoesDark(game, "the power's off in here"), null, "still on");
+  const all = [{ systems: sys.systemsOf("meridian").systems.map((one) => one.id), rooms: null }];
+  const power = publicState(game).computer.systems.find((one) => one.id === "power").rows.find((row) => /Engineering/.test(row.name));
+  sys.controlSystem(game, "meridian", all, power.id, "off", { by: "owner" });
+  assert.equal(screenGoesDark(game, "the power's off in here").over, true);
+  assert.equal(game.computer, null);
+  assert.match(game.transcript.at(-1).text, /The screen goes dark: the power's off in here/);
+  sys.controlSystem(game, "meridian", all, power.id, "on", { by: "owner" });
+  // Ten things done take twenty minutes at least. Half an hour on the running clock covers them; five minutes leaves fifteen.
+  for (const [ran, added] of [[0.5, 0], [5 / 60, 15 / 60]]) {
+    enterComputer(game, { id: "meridian_reactor_gauges" });
+    game.computer.actions = 10;
+    game.clock.hours += ran;
+    const before = game.clock.hours;
+    computerCommand(game, { action: "logoff" });
+    assert.ok(Math.abs(game.clock.hours - before - added) < 1e-9, `${ran * 60} minutes on the clock adds ${added * 60} more`);
+  }
 });
 
 test("someone else's place puts back what the player switched off, and what the story did stays", () => {

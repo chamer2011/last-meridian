@@ -13,6 +13,7 @@ import { startCheck } from "./checks.js";
 import { closest } from "./check-games/kit.js";
 import { WORLD_COMPUTERS, WORLD_PLACES } from "./world.js";
 import { applySystemsEffect, controlSystem, controlsView, roomPowered } from "./systems.js";
+import { untagged } from "../public/story.js";
 import { MAX_LOG, MINUTES_PER_ACTION, classKeys, contentOf, knowsPassword, levelNamed, line, memoryOf, openSession, peopleAt, programOffered, sameName, slug, writtenContent } from "./computers.js";
 
 // What a completed trace inside leaves on the record, the same mark a failed hack leaves.
@@ -206,10 +207,10 @@ function connectTo(game, session, content, id) {
   const next = writtenContent(id);
   const summary = finish(game, session, [`[COMPUTER] From ${session.name} you reached for ${next.name}.`]);
   if (next.yours || knowsPassword(game, id)) {
-    openSession(game, next, { how: "connected" });
+    openSession(game, next, { how: "connected", at: session.at ?? null });
     return { over: true, summary, computer: true };
   }
-  startCheck(game, { skill: "hacking", difficulty: next.classKey, reason: `Reach ${next.name} from ${session.name}`, scene: entry.desc || null, source: "computer", computer: id });
+  startCheck(game, { skill: "hacking", difficulty: next.classKey, reason: `Reach ${next.name} from ${session.name}`, scene: entry.desc || null, source: "computer", computer: id, target: session.at ?? null });
   return { over: true, summary, check: true };
 }
 
@@ -221,7 +222,9 @@ function finish(game, session, notes = []) {
   const summary = `[COMPUTER] On ${session.name}: ${read ? `read ${read} ${read === 1 ? "thing" : "things"}` : "read nothing"}${ran.length ? `, ran ${ran.join(", ")}` : ""}.${session.hacked && pct !== null && !notes.some((note) => /TRACE COMPLETE/.test(note)) ? ` Logged off with the trace at ${pct}%.` : ""}`;
   game.transcript?.push({ role: "notice", text: [summary, ...notes].join("\n") });
   game.pendingEvents?.push(`The player used a computer, ${session.name} (${session.className.toLowerCase()}), ${session.how === "hacked" ? "after hacking into it" : session.how === "the password" ? "with a password they'd learned" : "which is theirs"}. ${read ? `They read: ${session.read.join("; ")}.` : "They read nothing."}${ran.length ? ` They ran: ${ran.join("; ")}.` : ""}${notes.some((note) => /TRACE COMPLETE/.test(note)) ? " The trace completed and threw them out." : ""} Bring it into the story only if it matters.`);
-  if (session.actions) passTime(game, (session.actions * MINUTES_PER_ACTION) / 60);
+  // Each thing done takes a couple of minutes at least. Where the clock has been running meanwhile, that's already gone by.
+  const owed = (session.actions * MINUTES_PER_ACTION) / 60 - Math.max(0, (game.clock?.hours ?? 0) - (session.startedAt ?? game.clock?.hours ?? 0));
+  if (owed > 0) passTime(game, owed);
   game.computer = null;
   return { over: true, summary };
 }
@@ -307,15 +310,22 @@ function runSystem(game, session, content, body) {
   const notes = controlSystem(game, session.place, content.controls ?? [], String(body.row ?? ""), String(body.to ?? ""), { by, room: session.roomId });
   const system = String(body.system ?? "");
   session.screen = { kind: "system", id: system, title: session.screen?.title ?? system };
-  for (const note of notes) session.log.push(line(note.replace(/^\[[A-Z]+\]\s*/, ""), /ALARM/.test(note) ? "bad" : "good"));
+  for (const note of notes) session.log.push(line(untagged(note), /ALARM/.test(note) ? "bad" : "good"));
   if (session.log.length > MAX_LOG) session.log.splice(0, session.log.length - MAX_LOG);
-  const done = notes[0]?.replace(/^\[[A-Z]+\]\s*/, "").replace(/\.$/, "") ?? "a system";
+  const done = notes[0] ? untagged(notes[0]).replace(/\.$/, "") : "a system";
   if (!session.ran.includes(done)) session.ran.push(done);
   if (notes.length) game.transcript?.push({ role: "notice", text: notes.join("\n") });
   const out = act(game, session, session.hacked ? 1 : 0);
   if (out) return out;
-  if (session.roomId && !roomPowered(game, session.place, session.roomId)) return finish(game, session, ["[COMPUTER] The screen goes dark: you've cut its own power."]);
-  return { over: false };
+  return screenGoesDark(game, "you've cut its own power") ?? { over: false };
+}
+
+// The computer the player's on, if its room has just lost its power, goes dark and they're logged off. Returns null if
+// it's still on.
+export function screenGoesDark(game, why) {
+  const session = game.computer;
+  if (!session?.roomId || roomPowered(game, session.place, session.roomId)) return null;
+  return finish(game, session, [`[COMPUTER] The screen goes dark: ${why}.`]);
 }
 
 export function computerCommand(game, body) {

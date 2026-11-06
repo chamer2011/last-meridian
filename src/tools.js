@@ -14,7 +14,7 @@ import { MYSTERY_TOPICS, beginThread, mysteryNotes, noteThreadEnded, noteThreadS
 import { FACTS_PER_TURN, endStory, endingOf, recordEnding, recordFact } from "./record.js";
 import { NPC_ARCHETYPES, THREAT_LABELS } from "./npc.js";
 import {
-  DIFFICULTY, TURN_LIMITS, addCondition, addItem, clamp, clockLabel, changeStress, grantXp, maxHp, passTime, practice,
+  DIFFICULTY, TURN_LIMITS, addCondition, addItem, changeStanding, clamp, clockLabel, changeStress, findContact, grantXp, maxHp, passTime, practice,
   removeCondition, removeItem, shiftIdeology, startCombat, travel,
 } from "./rules.js";
 import { setScene } from "./walk.js";
@@ -572,9 +572,8 @@ const handlers = {
     return { result: setScene(game, input.area, input.people ?? [], { kind: input.kind ?? null, things: input.things ?? [] }) };
   },
   change_faction(game, input) {
-    const amount = clamp(input.amount, -15, 15);
-    game.factions[input.faction] = clamp(game.factions[input.faction] + amount, -100, 100);
-    return { result: `${FACTIONS[input.faction].name} standing is now ${game.factions[input.faction]}.`, notice: `[FACTION] ${FACTIONS[input.faction].name} ${amount >= 0 ? "+" : ""}${amount}: ${input.reason}` };
+    const notice = changeStanding(game, input.faction, clamp(input.amount, -15, 15), input.reason);
+    return { result: `${FACTIONS[input.faction].name} standing is now ${game.factions[input.faction]}.`, ...(notice ? { notice } : {}) };
   },
   add_quest(game, input) {
     if (game.quests.some((q) => q.id === input.id)) throw new Error(`A quest with the id ${input.id} already exists. Use update_quest.`);
@@ -598,7 +597,7 @@ const handlers = {
     if (input.name.trim().length > 60) throw new Error("That's too long for a name. Use what people call them, and put the rest in the note.");
     // Someone with a file is always listed under their full name, whatever the AI called them.
     const name = findCharacter(game.campaign, input.name)?.name ?? input.name;
-    const existing = game.contacts.find((c) => c.name.toLowerCase() === name.toLowerCase());
+    const existing = findContact(game, name);
     if (existing) {
       const before = existing.attitude;
       const statusBefore = existing.status ?? "alive";
